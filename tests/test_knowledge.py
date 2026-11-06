@@ -120,7 +120,8 @@ class LintTests(unittest.TestCase):
 class LintGamingTests(unittest.TestCase):
     def test_reworded_hedges_and_unverified_calls_are_caught(self):
         from wclr.cmd_lint import lint_text
-        text = LintTests.GOOD.replace('首领血量一样。', '首领血量一样，能不能断尚待确认，2:45 不能全部当成可节省时间。') \
+        text = LintTests.GOOD.replace('超时 40 秒。', '超时 40 秒，能不能断尚待确认。') \
+            .replace('首领血量一样。', '首领血量一样，2:45 不能全部当成可节省时间。') \
             .replace('复验：首领战 ≤ 2:20。', '执行前先跑 `wcl ability`。复验：首领战 ≤ 2:20。')
         out = '\n'.join(lint_text(text))
         self.assertIn('尚待', out)
