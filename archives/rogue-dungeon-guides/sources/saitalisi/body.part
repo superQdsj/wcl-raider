@@ -1,0 +1,417 @@
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">TEMPLE OF SETHRALISS · MYTHIC+ · ROGUE FIELD CARD</div>
+    <h1><span class="cls">潜行者</span><span class="dot">·</span>塞塔里斯神庙 应对手册</h1>
+    <p class="lede">这个副本全是<b>雷电和毒的法术伤害</b>，外加一堆击退。贼的核心仍是<b>暗影斗篷</b>：阿德里斯的惊雷、米利克萨的毒蛇风暴、加瓦兹特的尖塔光束、宝珠守望者的蚀骨践踏，都交斗篷。被击飞就<b>暗影步</b>回到怪身后，大范围伤害交佯攻。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+24 限时敏锐贼 ×3</b></span>
+      <span class="chip">英雄天赋 <b>欺诈者</b></span>
+      <span class="chip">适用 <b>斗篷 / 佯攻 / 暗影步 / 闪避 / 致盲 三系通用</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里斗篷交在哪</h2>
+  <p class="sub">一整场 +24 里，暗影斗篷每次交给了谁。每个首领一次，最后一段小怪留一次给蚀骨践踏。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+      <div class="tl">
+        <div class="band trash" style="left:0.8%;width:4.8%">小怪</div>
+        <div class="band boss"  style="left:5.6%;width:13.3%">阿斯匹克斯</div>
+        <div class="band trash" style="left:19.6%;width:19.8%">小怪 · 毒蛇区</div>
+        <div class="band boss"  style="left:39.7%;width:12.9%">米利克萨</div>
+        <div class="band trash" style="left:52.8%;width:9.4%">小怪 · 雷云</div>
+        <div class="band boss"  style="left:62.6%;width:12.6%">加瓦兹特</div>
+        <div class="band trash" style="left:76.2%;width:12.2%">小怪 · 宝珠守望者</div>
+        <div class="band boss"  style="left:88.5%;width:11.5%">塞塔里斯的化身</div>
+
+        <div class="axis" style="left:0;transform:none">0:00</div>
+        <div class="axis" style="left:16.3%">5:00</div>
+        <div class="axis" style="left:32.6%">10:00</div>
+        <div class="axis" style="left:48.9%">15:00</div>
+        <div class="axis" style="left:65.2%">20:00</div>
+        <div class="axis" style="left:81.5%">25:00</div>
+
+        <div class="mk up" style="left:9.0%"><span class="lab">免疫惊雷</span><span class="t">2:46</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+        <div class="mk dn" style="left:47.3%"><span class="lab">免疫毒蛇风暴</span><span class="t">14:30</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+        <div class="mk up" style="left:70.8%"><span class="lab">光束里免伤</span><span class="t">21:43</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+        <div class="mk dn" style="left:80.5%"><span class="lab">免疫蚀骨践踏</span><span class="t">24:41</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+        <div class="mk up end" style="left:96.5%"><span class="lab">免疫不稳定腐化</span><span class="t">29:35</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(242,210,75,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个操作。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 1 · 阿德里斯与阿斯匹克斯</div>
+      <div class="sig">看到<b>阿德里斯电闪雷鸣冲刺</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+      <p>冲刺之后约 5 秒落下一记 20 码惊雷，冲刺打中你之后马上开斗篷，惊雷打过来是 0。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 2 · 米利克萨</div>
+      <div class="sig">看到<b>毒蛇风暴读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+      <p>4 秒读条，读到最后一秒开。首击和后面 8 秒的毒都不上身。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 化身前一段</div>
+      <div class="sig">看到<b>宝珠守望者蚀骨践踏读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+      <p>全场承伤最高的技能，约 27 秒一次。斗篷挡掉首击和整段 10 秒毒，没斗篷时佯攻接闪避。</p>
+    </article>
+    <article class="mo">
+      <div class="where">全程</div>
+      <div class="sig">看到<b>自己被击飞落地</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+      <p>狂风之力、震地、毒蛇风暴都会把人吹走。落地就暗影步回到目标身后，不用走回来，输出断不了。敏锐的暗影步有多次充能，留一次给击退。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>加瓦兹特：开着斗篷接光束</h2>
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:266923}}" alt="">镀流 + 暗影斗篷</h3>
+      <p>闪电尖塔的光束打在谁身上，就<b>充不到加瓦兹特</b>。站进光束的人每 0.5 秒吃一跳镀流，一跳十几万，两秒就能掉一半血。</p>
+      <p>贼来接光束最合适：<b>站进去、血量掉到一半左右开斗篷</b>，然后接着站。斗篷的 5 秒里镀流还挂在身上，但一跳伤害都不吃，光束照样被你挡住。</p>
+      <p>斗篷没好时，开<b>闪避</b>再站：光束躲不掉，开闪避是为了天赋「飘忽不定」的 20% 全伤害减免，掉血了再接猩红之瓶。</p>
+      <p>镀流期间受到的物理伤害提高 250%，接光束时别站在会挨打的近战位前面。</p>
+    </div>
+    <div class="bars" role="img" aria-label="站在光束里 5 秒承伤：不开斗篷约 154 万，开斗篷 0">
+      <div class="cap">站在光束里 5 秒（10 跳）的承伤</div>
+      <div class="bar-row"><span>不开斗篷</span><div class="bar"><span class="off" style="width:100%">154 万</span></div></div>
+      <div class="bar-row"><span>开斗篷</span><div class="bar"><span class="on thin"></span><span class="zero">0</span></div></div>
+      <div class="delta">−100%<small>光束仍然被你挡住</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 阿德里斯与阿斯匹克斯</h3><span class="kind">TRASH · 第 1 波</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:265966}}" alt=""><div><div class="n">震地</div><div class="s">石拳战士读条 <span class="tag">全团</span><span class="tag">击退</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，顶住 60 码范围伤害</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:265966}}" alt=""><div><div class="n">震地</div><div class="s">被击飞落地</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">直接回到目标身后</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308113}}" alt=""><div><div class="n">箭雨</div><div class="s">流沙猎手引导 <span class="tag">点名</span><span class="tag">9 秒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:2094}}" alt="">致盲 <span class="pill p-mv">控制</span></div>
+          <div class="why">打断引导，箭雨停下</div>
+        </div>
+        <div class="note">箭雨是 9 秒引导、每 0.8 秒一箭的物理伤害，斗篷挡不住。脚踢在冷却就交<b>致盲</b>，比让治疗硬刷划算。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>阿德里斯与阿斯匹克斯</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1288092}}" alt=""><div><div class="n">电闪雷鸣</div><div class="s">阿德里斯冲刺后 <span class="tag">20 码</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">免疫随后的惊雷</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1288092}}" alt=""><div><div class="n">电闪雷鸣</div><div class="s">斗篷在冷却</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:2983}}" alt="">疾跑 <span class="pill p-mv">位移</span></div>
+          <div class="why">跑出惊雷的 20 码</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1310712}}" alt=""><div><div class="n">狂风之力</div><div class="s">阿斯匹克斯 <span class="tag">全团</span><span class="tag">击退</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">被吹走后瞬回首领身后</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1288457}}" alt=""><div><div class="n">阵风</div><div class="s">被点名 <span class="tag">4 秒持续</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">飘忽不定让佯攻也减单体伤害</div>
+        </div>
+        <div class="note">斗篷<b>留给惊雷</b>：先被冲刺打中，再开斗篷，惊雷大约 5 秒后才落。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>阿斯匹克斯 → 米利克萨</h3><span class="kind">TRASH · 第 3–5 波</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308148}}" alt=""><div><div class="n">细胞毒素</div><div class="s">剧毒蝰蛇 <span class="tag poison">中毒</span><span class="tag">10 秒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">自解</span></div>
+          <div class="why">治疗驱不过来时自己清</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1291399}}" alt=""><div><div class="n">锯齿冲锋</div><div class="s">倒刺三叶虫冲脸 <span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:5277}}" alt="">闪避 <span class="pill p-dr">减伤</span></div>
+          <div class="why">躲后续物理攻击，流血再减 20%</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308113}}" alt=""><div><div class="n">箭雨</div><div class="s">流沙猎手引导 <span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:2094}}" alt="">致盲 <span class="pill p-mv">控制</span></div>
+          <div class="why">停掉引导</div>
+        </div>
+        <div class="note">细胞毒素奶骑能驱。先看治疗有没有交清洁术，斗篷<b>留给米利克萨的毒蛇风暴</b>更值。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>米利克萨</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1293048}}" alt=""><div><div class="n">毒蛇风暴</div><div class="s">4 秒读条 <span class="tag">全团</span><span class="tag">击退</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">首击和 8 秒毒都不上身</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1293048}}" alt=""><div><div class="n">毒蛇风暴</div><div class="s">没开斗篷被击飞</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">躲开场上的风暴打击，回到首领身后</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300227}}" alt=""><div><div class="n">钻地之震</div><div class="s">首领钻地穿行 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">顶住每秒一跳的震地伤害</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300227}}" alt=""><div><div class="n">钻地之震</div><div class="s">首领换位置钻出</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:2983}}" alt="">疾跑 <span class="pill p-mv">位移</span></div>
+          <div class="why">尽快贴回首领</div>
+        </div>
+        <div class="note">雷霆喷吐点到你时，闪电会连劈脚下 4 秒、留下萦绕风暴，<b>斗篷挡不住地面</b>，直接走开。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>米利克萨 → 加瓦兹特</h3><span class="kind">TRASH · 第 7 波</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1293475}}" alt=""><div><div class="n">释放电荷</div><div class="s">暴怒云气 3 秒读条 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，顶住全团雷击</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1296052}}" alt=""><div><div class="n">灌能传导</div><div class="s">唤雷者 <span class="tag magic">魔法</span><span class="tag">结束时击晕</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">自解</span></div>
+          <div class="why">治疗没驱时自己清，免得被晕</div>
+        </div>
+        <div class="note">这一段斗篷能不交就不交，<b>留给加瓦兹特的光束</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>加瓦兹特</h3><span class="kind">BOSS 3</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:266923}}" alt=""><div><div class="n">镀流</div><div class="s">接尖塔光束 <span class="tag">每 0.5 秒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">掉到半血时开，再站 5 秒不掉血</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:266923}}" alt=""><div><div class="n">镀流</div><div class="s">斗篷没好仍要接</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:5277}}" alt="">闪避 <span class="pill p-dr">减伤</span></div>
+          <div class="why">飘忽不定减 20%，再接猩红之瓶</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1290531}}" alt=""><div><div class="n">诱导</div><div class="s">3 秒读条 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">顶住电能脉冲，然后走出诱导力场</div>
+        </div>
+        <div class="note">接光束可以和队友轮流：<b>贼斗篷一轮、闪避加猩红之瓶一轮</b>，中间让别人接。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>加瓦兹特 → 塞塔里斯的化身</h3><span class="kind">TRASH · 第 9 波</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1303486}}" alt=""><div><div class="n">蚀骨践踏</div><div class="s">3.5 秒读条 <span class="tag">60 码</span><span class="tag">10 秒毒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">读条最后一秒开，首击和毒全免</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1303486}}" alt=""><div><div class="n">蚀骨践踏</div><div class="s">斗篷在冷却</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 + 闪避 <span class="pill p-dr">减伤</span></div>
+          <div class="why">范围减伤叠飘忽不定，再接猩红之瓶</div>
+        </div>
+        <div class="note warn"><b>注意：</b>两只宝珠守望者一起拉时，践踏约 27 秒一次、连着来七次，是全场承伤最高的一段。佯攻只有 6 秒，盖不住 10 秒的毒，<b>斗篷要留到这里</b>，别在前面的小怪上交掉。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>塞塔里斯的化身</h3><span class="kind">BOSS 4</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1302761}}" alt=""><div><div class="n">不稳定腐化</div><div class="s">堕落的守护者爆发 <span class="tag">20 码</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">近战位躲不开时免疫爆炸</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1302618}}" alt=""><div><div class="n">邪恶冲锋</div><div class="s">守护者冲向你 <span class="tag">8 秒持续</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">飘忽不定让佯攻也减单体伤害</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300877}}" alt=""><div><div class="n">腐化</div><div class="s">可叠加 <span class="tag">治疗 −33%</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:185311}}" alt="">猩红之瓶 <span class="pill p-heal">治疗</span></div>
+          <div class="why">叠着腐化时治疗吃亏，自己补血</div>
+        </div>
+        <div class="note">腐化在身上时受到的物理伤害提高 250%，<b>别站在守护者正面</b>挨污秽打击。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:31224}}" alt=""><div><div class="nm">暗影斗篷</div><span class="pill p-imm">免疫 · 自解</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>惊雷、毒蛇风暴、镀流光束、蚀骨践踏、不稳定腐化</dd><dt>时机</dt><dd>读条最后一秒预开；接光束时半血开</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:36554}}" alt=""><div><div class="nm">暗影步</div><span class="pill p-mv">位移</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>狂风之力、震地、毒蛇风暴的击退</dd><dt>时机</dt><dd>被击飞落地后</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1966}}" alt=""><div><div class="nm">佯攻</div><span class="pill p-dr">减伤</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>震地、释放电荷、诱导、钻地之震、阵风、邪恶冲锋</dd><dt>时机</dt><dd>范围读条时，几乎常驻</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:5277}}" alt=""><div><div class="nm">闪避</div><span class="pill p-dr">减伤</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>镀流光束、蚀骨践踏、锯齿冲锋</dd><dt>时机</dt><dd>斗篷没好又要吃大伤害时</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:185311}}" alt=""><div><div class="nm">猩红之瓶</div><span class="pill p-heal">治疗</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>镀流光束、腐化、蚀骨践踏</dd><dt>时机</dt><dd>掉血时，常紧跟佯攻</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:2094}}" alt=""><div><div class="nm">致盲</div><span class="pill p-mv">控制</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>流沙猎手的箭雨</dd><dt>时机</dt><dd>箭雨引导开始、脚踢没好时</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:2983}}" alt=""><div><div class="nm">疾跑</div><span class="pill p-mv">位移</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>惊雷范围、米利克萨换位、雷霆喷吐落点</dd><dt>时机</dt><dd>需要跑位时</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>身上常中的减益</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>减益</th><th>类型</th><th>自己能解吗</th><th>一般怎么处理</th></tr></thead>
+      <tbody>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1303486}}" alt="">蚀骨践踏</div></td><td><span class="tag">全团</span><span class="tag poison">自然</span></td><td class="yes">✓ 暗影斗篷</td><td>读条时预开斗篷；没斗篷就佯攻、闪避硬顶</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1308148}}" alt="">细胞毒素</div></td><td><span class="tag poison">中毒</span></td><td class="yes">✓ 暗影斗篷</td><td>奶骑清洁术、萨满清毒</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1296052}}" alt="">灌能传导</div></td><td><span class="tag magic">魔法</span><span class="tag">结束时击晕</span></td><td class="yes">✓ 暗影斗篷</td><td>奶骑清洁术、萨满净化术</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:266923}}" alt="">镀流</div></td><td><span class="tag">接光束</span></td><td><span class="no">✗</span> 斗篷期间不掉血</td><td>接光束的人轮换，治疗跟刷</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1291399}}" alt="">锯齿冲锋</div></td><td><span class="tag bleed">流血</span></td><td><span class="no">✗</span> 闪避减伤</td><td>6 秒，治疗跟刷；奶骑可用圣盾术自解</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1308113}}" alt="">箭雨</div></td><td><span class="tag">点名</span><span class="tag">引导</span></td><td><span class="no">✗</span> 致盲施法者</td><td>打断或控制流沙猎手</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1300877}}" alt="">腐化</div></td><td><span class="tag">可叠加</span><span class="tag">治疗降低</span></td><td class="no">✗</td><td>佯攻、猩红之瓶顶住，治疗刷</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1288457}}" alt="">阵风</div></td><td><span class="tag">点名</span></td><td class="no">✗</td><td>只持续 4 秒，佯攻顶住</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">07</span>天赋</h2>
+  <p class="sub">+24 高手同款敏锐天赋，英雄天赋欺诈者。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{T:79008}}" alt=""><div><b>飘忽不定</b><span>闪避期间受到的伤害降低 20%，佯攻额外减非范围伤害 20%</span></div></div>
+      <div class="tal key"><img class="ic" src="{{T:394931}}" alt=""><div><b>蹈厉奋发</b><span>暗影步多 1 次充能，被击飞随时能步回去</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:423647}}" alt=""><div><b>优雅诡谋</b><span>佯攻 2 次充能，范围伤害段随时有</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:1267220}}" alt=""><div><b>危险感知</b><span>20% 几率让受到的伤害降低 20%</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:231719}}" alt=""><div><b>麻木神经</b><span>受到的物理伤害降低 5%</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:280716}}" alt=""><div><b>吸血药膏</b><span>致命药膏附带吸血</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:2094}}" alt=""><div><b>致盲</b><span>停掉流沙猎手的箭雨引导</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:231691}}" alt=""><div><b>强化疾跑</b><span>疾跑冷却缩短 60 秒</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:441247}}" alt=""><div><b>烟雾</b>（欺诈者）<span>惊慌的目标对你造成的伤害降低 5%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1">Speedamn 30:46</a>
+      <a href="https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1">叶落初冬 31:00</a>
+      <a href="https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24">黑川茜贼贼 31:14</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">潜行者 · 塞塔里斯神庙 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

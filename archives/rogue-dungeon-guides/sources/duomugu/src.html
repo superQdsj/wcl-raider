@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>潜行者 · 夺目谷</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* 布局：一张贼的作战卡。顶部关键技能时间轴 → 必会时刻 → 践踏节奏 → 按路线逐段 → 工具箱 → 减益 → 天赋。单一暗色主题（谷地夜色，次色取光绽青），潜行者金为唯一强调色。 */
+:root{
+  --bg:#0c1113; --panel:#131a1c; --panel-2:#192225; --line:#263236;
+  --ink:#ebe7da; --mute:#96a3a2; --faint:#5d6b6c;
+  --gold:#f2d24b; --gold-dim:#8a7a2c;
+  --venom:#7fd1bd; --blood:#e46a5e; --arcane:#79a9f2;
+  --display:"Noto Serif SC","Songti SC","STSong",serif;
+  --body:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+img.ic{width:28px;height:28px;border-radius:6px;border:1px solid #000;box-shadow:0 0 0 1px var(--line);flex:none;display:block}
+img.ic.lg{width:44px;height:44px;border-radius:9px}
+img.ic.sm{width:22px;height:22px;border-radius:5px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.01em}
+h2{font-size:24px;font-weight:900;display:flex;align-items:baseline;gap:14px}
+h2 .k{font:700 12px var(--mono);color:var(--gold);letter-spacing:.12em}
+.sub{color:var(--mute);font-size:14px;margin:6px 0 0}
+section{padding:44px 0 8px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* hero */
+header{border-bottom:1px solid var(--line);background:
+  radial-gradient(900px 300px at 85% -40%,rgba(242,210,75,.13),transparent 70%),
+  radial-gradient(700px 260px at 0% 120%,rgba(127,209,189,.08),transparent 70%)}
+header .wrap{padding-top:44px;padding-bottom:34px;display:grid;gap:18px}
+.eyebrow{font:700 12px var(--mono);letter-spacing:.16em;color:var(--mute)}
+h1{font-size:clamp(32px,6vw,52px);font-weight:900;line-height:1.1}
+h1 .cls{color:var(--gold)}
+h1 .dot{color:var(--faint);margin:0 .2em}
+.lede{max-width:62ch;color:#d6d2c4;font-size:16px;margin:0}
+.lede b{color:var(--gold);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mute)}
+.chip b{color:var(--ink);font-weight:500}
+
+/* timeline */
+.tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
+.tl-scroll{overflow-x:auto;padding-bottom:6px}
+.tl{position:relative;min-width:780px;height:232px}
+.band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
+.band.trash{background:var(--panel-2);color:var(--faint);border:1px dashed var(--line)}
+.band.boss{background:rgba(242,210,75,.12);color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:84px}
+.mk .stem{width:2px;background:var(--gold)}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold)}
+.mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink)}
+.mk .t{font:500 11px var(--mono);color:var(--mute)}
+.mk.up{top:4px}
+.mk.up .stem{height:20px}
+.mk.dn{top:114px}
+.mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
+.mk.dn .stem{height:14px}
+.mk.muted .stem{background:var(--faint)}
+.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}
+.mk.muted .lab{color:var(--mute)}
+.mk.end{transform:translateX(-80%)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+/* key moments */
+.moments{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:20px}
+.mo{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:16px;display:grid;gap:10px;align-content:start}
+.mo .where{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.mo .sig{font-size:14px;color:var(--mute)}
+.mo .sig b{color:var(--ink);font-size:16px;font-weight:700;display:block}
+.mo .act{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
+.mo .act .arrow{color:var(--gold);font-size:18px}
+.mo p{margin:0;font-size:14px;color:#cfcbbd}
+
+/* pills */
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:5px;line-height:18px;white-space:nowrap}
+.p-imm{background:rgba(242,210,75,.16);color:var(--gold)}
+.p-clr{background:rgba(127,209,189,.16);color:var(--venom)}
+.p-dr{background:rgba(121,169,242,.16);color:var(--arcane)}
+.p-mv{background:rgba(255,255,255,.07);color:var(--mute)}
+.p-heal{background:rgba(228,106,94,.15);color:var(--blood)}
+.tag{display:inline-block;font-size:11px;color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-right:4px;line-height:17px;white-space:nowrap}
+.tag.poison{color:var(--venom);border-color:rgba(127,209,189,.35)}
+.tag.magic{color:var(--arcane);border-color:rgba(121,169,242,.35)}
+.tag.bleed{color:var(--blood);border-color:rgba(228,106,94,.35)}
+
+/* evasion finding */
+.finding{margin-top:20px;display:grid;grid-template-columns:1.1fr 1fr;gap:22px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.finding h3{font-size:20px;font-weight:900;display:flex;gap:10px;align-items:center}
+.finding p{margin:10px 0 0;color:#d2cec0;font-size:14.5px}
+.finding p b{color:var(--gold)}
+.bars{display:grid;gap:14px;align-content:center}
+.bar-row{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;font-size:13px;color:var(--mute)}
+.bar{height:30px;background:var(--panel-2);border-radius:6px;position:relative;overflow:hidden}
+.bar span{position:absolute;inset:0 auto 0 0;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font:700 13px var(--mono);color:#14110a}
+.bar .off{background:#8f9a93}
+.bar .on{background:var(--gold)}
+.bars .cap{font-size:12px;color:var(--faint);line-height:1.5}
+.bars .delta{font:700 28px var(--mono);color:var(--gold)}
+.bars .delta small{font:500 13px var(--body);color:var(--mute);margin-left:8px}
+
+/* stomp cycle chart */
+.cyc{position:relative;height:206px;margin:4px 0 0}
+.lane{position:absolute;height:26px;border-radius:5px;display:flex;align-items:center;padding:0 9px;font-size:12px;white-space:nowrap;overflow:hidden}
+.lane.enemy{background:rgba(228,106,94,.16);color:var(--blood);border:1px solid rgba(228,106,94,.35)}
+.lane.fe{background:rgba(242,210,75,.16);color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.lane.mv{background:rgba(255,255,255,.06);color:var(--mute);border:1px dashed var(--line)}
+.vl{position:absolute;top:0;height:112px;width:2px;transform:translateX(-1px)}
+.vl.hit{background:var(--blood)}
+.vl.step{background:var(--gold)}
+.vl.root{background:var(--venom)}
+.vl b{position:absolute;top:116px;left:50%;transform:translateX(-50%);font:700 11.5px var(--body);white-space:nowrap;padding:1px 6px;border-radius:4px;background:var(--panel)}
+.vl.hit b{color:var(--blood)}.vl.step b{color:var(--gold);top:140px}.vl.root b{color:var(--venom)}
+.vl.hit b{transform:translateX(-80%)}
+.cyc .tick{position:absolute;top:184px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.cyc .base{position:absolute;left:0;right:0;top:178px;border-top:1px solid var(--line)}
+
+/* route */
+.route{margin-top:22px;position:relative;display:grid;gap:18px}
+.route::before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--line),var(--gold-dim),var(--line))}
+.stop{display:grid;grid-template-columns:40px 1fr;gap:14px}
+.node{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:900 16px var(--display);position:relative;z-index:1}
+.stop.boss .node{background:var(--gold);color:#17140a}
+.stop.trash .node{background:var(--panel-2);border:2px solid var(--line);color:var(--faint);font-size:12px}
+.stop-body{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stop.boss .stop-body{border-color:#3a3a25}
+.stop-head{padding:12px 16px;display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.stop-head h3{font-size:18px;font-weight:900}
+.stop.trash .stop-head h3{font-size:16px;font-weight:600;color:#cfcbbd}
+.stop-head .kind{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.row{display:grid;grid-template-columns:minmax(170px,1.15fr) 24px minmax(150px,1fr) minmax(130px,1fr);gap:12px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--line)}
+.row:last-of-type{border-bottom:0}
+.mech{display:flex;gap:10px;align-items:center}
+.mech .n{font-weight:700}
+.mech .s{font-size:12.5px;color:var(--mute)}
+.row .to{color:var(--gold);text-align:center;font-weight:700}
+.skill{display:flex;gap:9px;align-items:center;font-weight:700}
+.skill .pill{margin-left:2px}
+.row .why{font-size:13.5px;color:#cfcbbd}
+.note{padding:10px 16px;font-size:13.5px;background:rgba(242,210,75,.06);color:#d9d0a6;border-top:1px solid var(--line)}
+.note.warn{background:rgba(228,106,94,.08);color:#f0b6ae}
+.note b{color:var(--gold)}
+.note.warn b{color:var(--blood)}
+
+/* toolbox */
+.tools{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.tool{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:8px;align-content:start}
+.tool .top{display:flex;gap:10px;align-items:center}
+.tool .nm{font-weight:700;font-size:16px}
+.tool .dl{display:grid;grid-template-columns:44px 1fr;gap:3px 8px;font-size:13px}
+.tool .dl dt{color:var(--faint)}
+.tool .dl dd{margin:0;color:#d2cec0}
+.tool.star{border-color:var(--gold-dim);background:linear-gradient(180deg,rgba(242,210,75,.07),var(--panel) 60%)}
+
+/* debuffs */
+.tbl-wrap{margin-top:18px;overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:620px;background:var(--panel)}
+th{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute);text-align:left;padding:10px 14px;background:var(--panel-2);border-bottom:1px solid var(--line)}
+td{padding:10px 14px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
+tr:last-child td{border-bottom:0}
+.dname{display:flex;gap:10px;align-items:center;font-weight:700}
+.yes{color:var(--venom);font-weight:700}
+.no{color:var(--faint)}
+
+/* unclear + sources */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.box h3{font-size:16px;font-weight:900;margin-bottom:8px}
+.box ul{margin:0;padding-left:18px;display:grid;gap:8px;font-size:13.5px;color:#cfcbbd}
+.box li b{color:var(--ink)}
+.runs{display:grid;gap:8px;font-size:13px}
+.runs a{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel-2)}
+.runs a:hover{border-color:var(--gold-dim)}
+.runs .tm{font-family:var(--mono);color:var(--gold);font-weight:700}
+.runs .ix{font:700 12px var(--mono);color:var(--faint)}
+.small{font-size:12px;color:var(--faint);margin-top:10px;line-height:1.6}
+.talent{margin-top:18px;background:var(--panel);border:1px solid var(--gold-dim);border-radius:14px;padding:18px;display:grid;gap:16px}
+.code-row{display:flex;gap:10px;align-items:stretch}
+.code-row code{flex:1;min-width:0;font:500 13px/1.5 var(--mono);color:var(--gold);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;word-break:break-all;user-select:all}
+.code-row button{flex:none;font:700 14px var(--body);color:#17140a;background:var(--gold);border:0;border-radius:8px;padding:0 20px;cursor:pointer}
+.code-row button:hover{filter:brightness(1.08)}
+.code-row button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.tal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.tal{display:flex;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);font-size:13px}
+.tal b{font-size:14px;margin-right:4px}
+.tal span{display:block;color:var(--mute)}
+.tal.key{border-color:var(--gold-dim)}
+.tal.key b{color:var(--gold)}
+.refs{font-size:12.5px;color:var(--faint);display:flex;flex-wrap:wrap;gap:6px 14px}
+.refs a{color:var(--mute);border-bottom:1px dotted var(--faint)}
+.refs a:hover{color:var(--gold)}
+footer{padding:40px 0 56px;color:var(--faint);font-size:12px}
+
+@media (max-width:760px){
+  .finding,.two{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:6px}
+  .row .to{display:none}
+  .row .skill::before{content:"→";color:var(--gold);margin-right:2px}
+  .route::before{left:15px}
+  .stop{grid-template-columns:32px 1fr;gap:10px}
+  .node{width:32px;height:32px;font-size:14px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .mo,.tool{transition:border-color .2s}
+  .mo:hover,.tool:hover{border-color:var(--gold-dim)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">THE BLINDING VALE · MYTHIC+ · ROGUE FIELD CARD</div>
+    <h1><span class="cls">潜行者</span><span class="dot">·</span>夺目谷 应对手册</h1>
+    <p class="lede">这个副本的伤害大多是<b>全团的自然和神圣范围伤害</b>，外加一串击退。贼要做好三件事：<b>佯攻几乎常驻</b>，顶住践踏、咆哮和渗流木质；<b>被击退就暗影步</b>回到目标身后；<b>暗影斗篷</b>留给基岩涌动、光狂疯乱后的唤棘者咆哮和叠高的光绽之力。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+24 限时敏锐贼 ×3</b></span>
+      <span class="chip">英雄天赋 <b>欺诈者</b></span>
+      <span class="chip">适用 <b>佯攻 / 斗篷 / 暗影步 / 闪避 / 疾跑 三系通用</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里关键技能交在哪</h2>
+  <p class="sub">一整场 +24 里，暗影斗篷和几个关键减伤、位移交在了哪里。金色是斗篷，灰色是其他技能。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+      <div class="tl">
+        <div class="band trash" style="left:0.8%;width:15%">小怪 · 开场</div>
+        <div class="band boss"  style="left:15.9%;width:15.8%">莱克希议会</div>
+        <div class="band trash" style="left:32.1%;width:4.8%">小怪</div>
+        <div class="band boss"  style="left:37%;width:15.3%">伊库兹</div>
+        <div class="band boss"  style="left:54.1%;width:17.4%">鲁伊亚</div>
+        <div class="band trash" style="left:72.7%;width:14%">小怪 · 薯身蟾</div>
+        <div class="band boss"  style="left:86.7%;width:13.2%">兹欧凯特</div>
+
+        <div class="axis" style="left:0;transform:none">0:00</div>
+        <div class="axis" style="left:17.86%">5:00</div>
+        <div class="axis" style="left:35.71%">10:00</div>
+        <div class="axis" style="left:53.57%">15:00</div>
+        <div class="axis" style="left:71.43%">20:00</div>
+        <div class="axis" style="left:89.29%">25:00</div>
+
+        <div class="mk dn" style="left:16.43%"><span class="lab">清基岩涌动</span><span class="t">4:36</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+        <div class="mk up muted" style="left:19.35%"><span class="lab">低血消失</span><span class="t">5:25</span><span class="stem"></span><img src="{{I:1856}}" alt=""></div>
+        <div class="mk dn" style="left:24.48%"><span class="lab">清基岩涌动</span><span class="t">6:51</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+        <div class="mk up muted" style="left:37.62%"><span class="lab">每次践踏后暗影步</span><span class="t">10:32 起</span><span class="stem"></span><img src="{{I:36554}}" alt=""></div>
+        <div class="mk dn" style="left:46.13%"><span class="lab">免疫咆哮 + 光狂疯乱</span><span class="t">12:55</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+        <div class="mk up muted" style="left:50%"><span class="lab">闪避顶咆哮</span><span class="t">14:00</span><span class="stem"></span><img src="{{I:5277}}" alt=""></div>
+        <div class="mk up" style="left:77.26%"><span class="lab">清喷毒</span><span class="t">21:38</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+        <div class="mk dn muted" style="left:90.82%"><span class="lab">疾跑接光球</span><span class="t">25:25</span><span class="stem"></span><img src="{{I:2983}}" alt=""></div>
+        <div class="mk up end" style="left:97.62%"><span class="lab">免疫渗流木质</span><span class="t">27:20</span><span class="stem"></span><img src="{{I:31224}}" alt=""></div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(242,210,75,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span><i style="background:var(--gold);border-radius:50%"></i>暗影斗篷</span>
+      <span><i style="background:var(--faint);border-radius:50%"></i>其他技能</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个按键。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 1 · 莱克希议会</div>
+      <div class="sig">看到<b>梅提克的基岩猛击砸下</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">自解</span></div>
+      <p>猛击落地后全团上 8 秒的基岩涌动。开斗篷一次清掉，顺带免疫地上的肥沃壤土。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 2 · 伊库兹</div>
+      <div class="sig">看到<b>青翠践踏读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:1966}}" alt="">佯攻 → <img class="ic lg" src="{{I:36554}}" alt="">暗影步</div>
+      <p>读条末尾开佯攻顶践踏，被击退落地马上暗影步回首领背后。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 2 · 伊库兹 · 光狂疯乱后</div>
+      <div class="sig">看到<b>唤棘者咆哮读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+      <p>首领吸收光绽后，咆哮和光狂疯乱的脉冲叠在一起，第一跳下来就开斗篷，后面几跳全免疫。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 4 · 兹欧凯特</div>
+      <div class="sig">看到<b>光绽精华光球飘向首领</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:2983}}" alt="">疾跑 <span class="pill p-mv">接球</span></div>
+      <p>光球碰到首领会触发荧光迸发。疾跑过去用身体接住，换一层光绽之力（增伤 10%）。叠太高就用斗篷清掉。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>伊库兹：践踏的 4 秒节奏</h2>
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:36554}}" alt="">佯攻 → 践踏 → 暗影步</h3>
+      <p>伊库兹的<b>青翠践踏</b>读条 3.5 秒，落地对全团造成物理伤害并把人击退。读条最后半秒按<b>佯攻</b>：6 秒的范围减伤正好盖住这一下，后面接着的咆哮也能吃到。</p>
+      <p>被击退一落地就<b>暗影步</b>回到首领背后，不用跑回去，输出不断。天赋「蹈厉奋发」给暗影步多一次充能，每次践踏都有得用。</p>
+      <p>践踏 4 秒后，你所在的位置会长出<b>血棘之根</b>。真被定住就交斗篷（魔法效果，直接清掉），斗篷在冷却就用消失（解除移动限制）。</p>
+    </div>
+    <div class="bars" role="img" aria-label="青翠践踏一轮：读条 3.5 秒，结束前半秒开佯攻，落地击退后 0.4 秒暗影步，4 秒后长出血棘之根">
+      <div class="cap">一次青翠践踏（以践踏落地为 0 秒）</div>
+      <div class="cyc">
+        <div class="lane enemy" style="top:0;left:5.56%;width:38.89%">青翠践踏 读条 3.5 秒</div>
+        <div class="lane fe" style="top:34px;left:38.89%;width:61.11%">佯攻 6 秒 · 范围伤害 −40%</div>
+        <div class="lane mv" style="top:68px;left:48.89%;width:22.22%">暗影步 移速 +70%</div>
+        <div class="vl hit" style="left:44.44%"><b>践踏 + 击退</b></div>
+        <div class="vl step" style="left:48.89%"><b>落地即暗影步</b></div>
+        <div class="vl root" style="left:88.89%"><b>脚下长根</b></div>
+        <div class="base"></div>
+        <span class="tick" style="left:11.11%">−3</span>
+        <span class="tick" style="left:22.22%">−2</span>
+        <span class="tick" style="left:33.33%">−1</span>
+        <span class="tick" style="left:44.44%">0</span>
+        <span class="tick" style="left:55.56%">+1</span>
+        <span class="tick" style="left:66.67%">+2</span>
+        <span class="tick" style="left:77.78%">+3</span>
+        <span class="tick" style="left:88.89%">+4 秒</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 莱克希议会</h3><span class="kind">TRASH · 鞭笞者大波</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1255205}}" alt=""><div><div class="n">拔根而起</div><div class="s">读条，你脚下冒根须 <span class="tag poison">自然</span><span class="tag">击退</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">斗篷好的时候读条中预开，这一下直接不吃</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1255205}}" alt=""><div><div class="n">拔根而起</div><div class="s">已被击退</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">落地立刻回到怪堆里</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1263628}}" alt=""><div><div class="n">喷涌之花</div><div class="s">花朵读条 6 秒 <span class="tag magic">神圣</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">60 码范围伤害，躲不开只能减</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1235865}}" alt=""><div><div class="n">荆棘之刃</div><div class="s">被背刺、低血 <span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:5277}}" alt="">闪避 <span class="pill p-dr">减伤</span></div>
+          <div class="why">流血是单体伤害，靠飘忽不定的 20% 减伤顶</div>
+        </div>
+        <div class="note">这一大波拉得很长，佯攻有两次充能，<b>拔根而起和喷涌之花一来就按</b>，不用省。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>莱克希议会</h3><span class="kind">BOSS 1 · 莱克希 / 科兹齐特 / 梅提克</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1276586}}" alt=""><div><div class="n">基岩涌动</div><div class="s">基岩猛击落地后 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">自解</span></div>
+          <div class="why">清掉 8 秒持续伤害，顺带免疫肥沃壤土</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1276586}}" alt=""><div><div class="n">基岩涌动</div><div class="s">斗篷在冷却</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 + <img class="ic sm" src="{{I:5277}}" alt="">闪避</div>
+          <div class="why">佯攻减 40%，闪避再叠飘忽不定的 20%</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1276586}}" alt=""><div><div class="n">基岩涌动 + 荆棘之刃</div><div class="s">血量掉到两成</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1856}}" alt="">消失 <span class="pill p-dr">减伤</span></div>
+          <div class="why">天赋隐匿无踪：消失后 8 秒受到伤害降低 10%</div>
+        </div>
+        <div class="note">基岩涌动每轮猛击都来。斗篷 2 分钟一次，<b>一轮交斗篷、下一轮交佯攻 + 闪避</b>，交替着顶。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>莱克希 → 伊库兹</h3><span class="kind">TRASH · 短波</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1255205}}" alt=""><div><div class="n">拔根而起</div><div class="s">被击退 <span class="tag">击退</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">和开场一样，落地就回</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1263628}}" alt=""><div><div class="n">喷涌之花</div><div class="s">花朵读条 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">顶范围伤害</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>圣光猎手伊库兹</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1236746}}" alt=""><div><div class="n">青翠践踏</div><div class="s">读条 3.5 秒 <span class="tag">全团</span><span class="tag">击退</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条最后半秒开，盖住践踏</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1236746}}" alt=""><div><div class="n">青翠践踏</div><div class="s">被击退落地</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">瞬间回到首领背后</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1236709}}" alt=""><div><div class="n">唤棘者咆哮</div><div class="s">6 秒每 2 秒一跳 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 + <img class="ic sm" src="{{I:5277}}" alt="">闪避</div>
+          <div class="why">一跳比一跳疼，两层减伤一起叠</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1237073}}" alt=""><div><div class="n">光狂疯乱 + 咆哮</div><div class="s">首领吸收光绽后 <span class="tag magic">神圣</span><span class="tag">脉冲</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">5 秒内咆哮和脉冲全免疫</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1259365}}" alt=""><div><div class="n">血棘之根</div><div class="s">被定在原地 <span class="tag magic">魔法</span><span class="tag">定身</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">斗篷 / <img class="ic sm" src="{{I:1856}}" alt="">消失</div>
+          <div class="why">斗篷连伤害一起清，消失只解定身</div>
+        </div>
+        <div class="note warn"><b>注意：</b>斗篷<b>留到光狂疯乱阶段的咆哮</b>。这时候咆哮一跳能打掉半管血，前面的普通咆哮用佯攻 + 闪避顶。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>护光者鲁伊亚</h3><span class="kind">BOSS 3 · 含门口的脊盾甲虫</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238581}}" alt=""><div><div class="n">尖刺盾牌</div><div class="s">脊盾甲虫开盾 <span class="tag magic">魔法</span><span class="tag">反伤</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">每一击的反伤都免疫，放心 AOE 打盾</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1239825}}" alt=""><div><div class="n">光明之火</div><div class="s">被光束点名 6 秒 <span class="tag magic">神圣</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:5277}}" alt="">闪避 <span class="pill p-dr">减伤</span></div>
+          <div class="why">单体持续伤害，飘忽不定减 20%，盖满 6 秒</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1241058}}" alt=""><div><div class="n">凶残痛击</div><div class="s">挥击后叠流血 <span class="tag bleed">流血</span><span class="tag">叠加</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">有飘忽不定，佯攻也减 20% 单体伤害</div>
+        </div>
+        <div class="note">光明之火结束时会在你脚下留一道射线，<b>6 秒快到时先走开</b>。凶残痛击的流血要血量回满才停，层数一多就开佯攻，等治疗把血刷满。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>鲁伊亚 → 兹欧凯特</h3><span class="kind">TRASH · 薯身蟾主母</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1250937}}" alt=""><div><div class="n">喷毒</div><div class="s">主母读条 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">顶住首击</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1250937}}" alt=""><div><div class="n">喷毒</div><div class="s">9 秒毒液上身</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">自解</span></div>
+          <div class="why">清掉后面 6 跳毒伤，治疗省一次驱散</div>
+        </div>
+        <div class="note">斗篷在这里交掉没关系，<b>到兹欧凯特的光球阶段正好转好</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>兹欧凯特</h3><span class="kind">BOSS 4</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1247644}}" alt=""><div><div class="n">渗流木质</div><div class="s">每 3 秒一跳 <span class="tag magic">神圣</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">整场的底伤，两次充能轮着按</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1246858}}" alt=""><div><div class="n">光绽精华</div><div class="s">光球飘向首领 <span class="tag">接球</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:2983}}" alt="">疾跑 <span class="pill p-mv">位移</span></div>
+          <div class="why">抢在光球碰到首领前接住，换增伤</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1247052}}" alt=""><div><div class="n">光绽之力</div><div class="s">层数叠高、低血 <span class="tag magic">神圣</span><span class="tag">叠加</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">自解</span></div>
+          <div class="why">清掉所有层，同时免疫渗流木质</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1247669}}" alt=""><div><div class="n">光孢射击</div><div class="s">光诞鞭笞者喷吐 <span class="tag magic">神圣</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:5277}}" alt="">闪避 / <img class="ic sm" src="{{I:2094}}" alt="">致盲</div>
+          <div class="why">叠光绽之力时闪避减伤，致盲先控住一只</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1247746}}" alt=""><div><div class="n">棘刺</div><div class="s">被刺穿击退 <span class="tag bleed">流血</span><span class="tag">击退</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">落地回到首领身边</div>
+        </div>
+        <div class="note">光绽之力每层都有持续伤害。<b>接球前看一眼层数</b>，叠到吃不消再接就先斗篷清空。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1966}}" alt=""><div><div class="nm">佯攻</div><span class="pill p-dr">减伤</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>青翠践踏、唤棘者咆哮、渗流木质、喷涌之花、喷毒、凶残痛击</dd><dt>时机</dt><dd>范围伤害读条末尾，两次充能几乎常驻</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:31224}}" alt=""><div><div class="nm">暗影斗篷</div><span class="pill p-imm">免疫 · 自解</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>基岩涌动、光狂疯乱后的咆哮、光绽之力、喷毒、血棘之根、尖刺盾牌</dd><dt>时机</dt><dd>持续伤害上身后清，或大读条预开</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:36554}}" alt=""><div><div class="nm">暗影步</div><span class="pill p-mv">位移</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>青翠践踏、拔根而起、棘刺的击退</dd><dt>时机</dt><dd>被击退一落地</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:5277}}" alt=""><div><div class="nm">闪避</div><span class="pill p-dr">减伤</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>光明之火、唤棘者咆哮、基岩涌动、荆棘之刃、光孢射击</dd><dt>时机</dt><dd>斗篷没好、或单体持续伤害上身</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:2983}}" alt=""><div><div class="nm">疾跑</div><span class="pill p-mv">位移</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>兹欧凯特的光绽精华光球</dd><dt>时机</dt><dd>光球刚刷出来</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1856}}" alt=""><div><div class="nm">消失</div><span class="pill p-dr">减伤 · 解定身</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>基岩涌动下的低血、血棘之根</dd><dt>时机</dt><dd>血量见底，或被定身而斗篷在冷却</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:2094}}" alt=""><div><div class="nm">致盲</div><span class="pill p-mv">控制</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>兹欧凯特场上的光诞鞭笞者</dd><dt>时机</dt><dd>鞭笞者开始喷光孢射击</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>身上常中的减益</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>减益</th><th>类型</th><th>自己能解吗</th><th>一般怎么处理</th></tr></thead>
+      <tbody>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1276586}}" alt="">基岩涌动</div></td><td><span class="tag poison">自然</span><span class="tag">全团</span></td><td class="yes">✓ 暗影斗篷</td><td>8 秒每秒一跳，驱散不掉，治疗刷</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1259365}}" alt="">血棘之根</div></td><td><span class="tag magic">魔法</span><span class="tag">定身</span></td><td class="yes">✓ 暗影斗篷 <span class="no">/ 消失只解定身</span></td><td>奶骑清洁术、自由祝福，战士冲锋脱出</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1250937}}" alt="">喷毒</div></td><td><span class="tag poison">中毒</span></td><td class="yes">✓ 暗影斗篷</td><td>奶骑清洁术、萨满清毒</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1247052}}" alt="">光绽之力</div></td><td><span class="tag magic">神圣</span><span class="tag">叠加</span></td><td class="yes">✓ 暗影斗篷</td><td>接光球换增伤，层数太高时清掉</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1239825}}" alt="">光明之火</div></td><td><span class="tag magic">神圣</span><span class="tag">点名</span></td><td><span class="no">✗</span> 闪避减伤</td><td>6 秒后脚下留射线，结束前走开</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1235865}}" alt="">荆棘之刃</div></td><td><span class="tag bleed">流血</span></td><td><span class="no">✗</span> 闪避减伤</td><td>12 秒流血，治疗跟刷</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1241058}}" alt="">凶残痛击</div></td><td><span class="tag bleed">流血</span><span class="tag">叠加</span></td><td class="no">✗</td><td>佯攻减伤，血量回满自动消失</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">07</span>天赋</h2>
+  <p class="sub">+24 高手同款敏锐天赋，英雄天赋欺诈者。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{T:79008}}" alt=""><div><b>飘忽不定</b><span>闪避期间受到的伤害降低 20%，佯攻额外减非范围伤害 20%</span></div></div>
+      <div class="tal key"><img class="ic" src="{{T:423647}}" alt=""><div><b>优雅诡谋</b><span>佯攻 2 次充能，践踏、咆哮、渗流木质轮着顶</span></div></div>
+      <div class="tal key"><img class="ic" src="{{T:394931}}" alt=""><div><b>蹈厉奋发</b><span>暗影步多 1 次充能，每次击退都能步回去</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:382514}}" alt=""><div><b>隐匿无踪</b><span>消失后 8 秒受到的伤害降低 10%</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:1267220}}" alt=""><div><b>危险感知</b><span>20% 几率让受到的伤害降低 20%</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:231719}}" alt=""><div><b>麻木神经</b><span>受到的物理伤害降低，顶践踏和流血</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:280716}}" alt=""><div><b>吸血药膏</b><span>致命药膏附带吸血</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:231691}}" alt=""><div><b>强化疾跑</b><span>疾跑冷却缩短 60 秒，接光球更勤</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:423683}}" alt=""><div><b>轻若鸿毛</b><span>疾跑再快 30%、多 4 秒</span></div></div>
+      <div class="tal"><img class="ic" src="{{T:441247}}" alt=""><div><b>烟雾</b>（欺诈者）<span>惊慌的目标对你造成的伤害降低 5%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/CG3RbAdqgMvt7nP4#fight=1">叶落初冬 28:22</a>
+      <a href="https://www.warcraftlogs.com/reports/KYLq6BtVQvcfkGhd#fight=10">Qingxinlucky 28:42</a>
+      <a href="https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=14">Paparan 28:52</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">潜行者 · 夺目谷 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>
