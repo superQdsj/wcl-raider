@@ -119,6 +119,9 @@ def cmd_overview(run: Run) -> str:
     note = run.other_runs_note()
     if note:
         lines.append(note)
+    prior = run.prior_attempts_note()
+    if prior:
+        lines += ["", "## 这一把之前"] + prior
     lines += ["", "## 计时"] + _timing_lines(run, len(deaths))
 
     rows = []

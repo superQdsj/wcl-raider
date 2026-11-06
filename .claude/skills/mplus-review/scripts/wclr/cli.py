@@ -26,6 +26,7 @@ COMMANDS = {
     "compare": "与同副本同层高分记录对比：用时结构、死亡、技能命中、打断率",
     "spec": "与同专精顶尖玩家对比技能施放频率（CPM）与活跃时间",
     "events": "原始事件钻取：按时间窗口/波次/类型/玩家/技能过滤",
+    "ability": "技能画像：点谁、能否打断/驱散、减益多久、单体还是群体、致死次数（本场 vs 参考）+ Wowhead 说明",
     "score": "评分卡：团队与个人的数据分（0.0–10.0，附计算依据）",
     "query": "执行任意 GraphQL（调试/补充查询用）",
     "points": "查看 WCL API 本小时点数余量",
@@ -95,6 +96,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--level", type=_positive, help="参考记录的钥石层数（默认与本场相同）")
     p.add_argument("--ref", action="append", metavar="报告",
                    help="指定参考记录（链接或 CODE#fight，可重复），例如自己上一把限时的记录")
+    p = add("ability")
+    p.add_argument("name", help="敌方技能：技能 ID 或名称片段（同名的施放/减益/伤害 ID 会一起统计）")
+    p.add_argument("--refs", type=_positive, default=3, help="参考记录数量（默认 3，和 splits 选同一批）")
+    p.add_argument("--ref", action="append", metavar="报告", help="指定参考记录（链接或 CODE#fight，可重复）")
+    p.add_argument("--no-web", action="store_true", help="不查 Wowhead 说明")
     p = add("danger")
     p.add_argument("--threshold", type=float, default=35.0, help="个人险情的血量阈值（%%，默认 35）")
     p.add_argument("--team-below", type=float, default=50.0, help="团队险情：多人同时低于这个血量（%%，默认 50）")
@@ -223,6 +229,9 @@ def dispatch(client: Client, args: argparse.Namespace) -> str:
     if cmd == "events":
         from .cmd_events import cmd_events
         return cmd_events(run, args)
+    if cmd == "ability":
+        from .cmd_ability import cmd_ability
+        return cmd_ability(run, args.name, refs=args.refs, explicit=args.ref, web=not args.no_web)
     if cmd == "score":
         from .cmd_score import cmd_score
         return cmd_score(run, use_compare=not args.no_compare, judgments=args.judgments)

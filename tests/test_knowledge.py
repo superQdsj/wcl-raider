@@ -5,6 +5,7 @@ from unittest.mock import patch
 import support  # noqa: F401  (设置 sys.path)
 from wclr.cmd_splits import BossDamage, boss_damage_from_entries, boss_hint
 from wclr.spells import res_kind
+from wclr.cmd_ability import Profile, _strip, summarize
 
 
 def setUpModule():
@@ -52,6 +53,37 @@ class SpellTests(unittest.TestCase):
         self.assertEqual(res_kind(20608, 2, 2), '自我复活')
         self.assertEqual(res_kind(2006, 1, 2), '脱战复活')
         self.assertEqual(res_kind(999, 1, 2), '复活')
+
+
+class AbilityProfileTests(unittest.TestCase):
+    def profiles(self, our_kills=1, ref_kills=0, dispelled=0, interrupted=0):
+        ours = Profile('本场', begins=7, interrupted=interrupted, debuffs=7, debuff_roles={'治疗': 7},
+                       durations=[4.0] * 7, dispelled=dispelled, hits=35, hit_bursts=[1] * 7, kills=our_kills,
+                       kill_names=['小妤'] * our_kills)
+        refs = [Profile(f'参考{i}', begins=5, debuffs=5, debuff_roles={'治疗': 5}, durations=[4.0] * 5, hits=25,
+                        hit_bursts=[1] * 5, kills=ref_kills) for i in range(3)]
+        return [ours] + refs
+
+    def test_healer_only_not_dispellable_not_interruptible(self):
+        text = '\n'.join(summarize(self.profiles()))
+        self.assertIn('只点治疗', text)
+        self.assertIn('22/22', text)
+        self.assertIn('0 次被打断', text)
+        self.assertIn('0 次被驱散', text)
+        self.assertIn('持续满时长', text)
+        self.assertIn('参考吃了同样的技能却没人死', text)
+
+    def test_dispellable_and_interruptible_when_seen(self):
+        text = '\n'.join(summarize(self.profiles(dispelled=2, interrupted=3)))
+        self.assertIn('可以驱散', text)
+        self.assertIn('可以打断', text)
+
+    def test_mixed_targets_not_called_fixed(self):
+        p = Profile('本场', debuffs=6, debuff_roles={'治疗': 3, '输出': 3})
+        self.assertIn('没有固定职责', '\n'.join(summarize([p])))
+
+    def test_strip_wowhead_html(self):
+        self.assertEqual(_strip('<div class="q">持续4秒<br />被移除时 &amp; 爆炸<!--x--></div>'), '持续4秒\n被移除时 & 爆炸')
 
 
 if __name__ == '__main__':
