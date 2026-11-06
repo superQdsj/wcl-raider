@@ -183,6 +183,8 @@ def cmd_ability(run: Run, query: str, refs: int = 3, explicit: Optional[List[str
                 web: bool = True) -> str:
     ids = set(_ability_ids(run, query))
     names = sorted({run.ab(i) for i in ids})
+    # 同一技能的读条、减益、伤害往往是不同 ID：按名称把本场的同名 ID 一起统计（只给了一个 ID 时尤其重要）
+    ids |= {gid for gid, a in run.abilities.items() if (a.get("name") or "") in names}
     lines = [f"# 技能画像：{'、'.join(names)}（{', '.join(str(i) for i in sorted(ids))}）— {run.header()}"]
 
     from .cmd_splits import pick_refs

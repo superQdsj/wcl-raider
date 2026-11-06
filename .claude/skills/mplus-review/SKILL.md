@@ -42,7 +42,7 @@ argument-hint: <WCL 报告链接> [关注点：如 某玩家 / 坦克 / 治疗 /
 所有报告命令都接受 `--fight N` 和 `--max-chars N`。数据口径见 `references/data-notes.md`。
 
 ## 预算
-WCL API 每小时 1000 点，stderr 会打印已用点数，拉过的数据有缓存。一次标准复盘约 60–100 点（`splits` 首次约 20–30 点，`danger` 约 5 点）。本小时剩余不足 100 点时，停止大范围查询，用已有数据完成报告，并写明哪些没核实。
+WCL API 每小时 1000 点，stderr 会打印已用点数，拉过的数据有缓存。一次标准复盘约 80–150 点（`splits` 首次约 20–30 点，`danger` 约 5 点，`ability` 每个技能约 5–15 点）。`ability` 只给致死技能和反复造成团队险情的技能做画像，一般 2–4 个就够。本小时剩余不足 100 点时，停止大范围查询，用已有数据完成报告，并写明哪些没核实。
 
 ## 流程
 开始前读 `references/playbook.md`（怎么看、怎么判断），写报告时按 `references/report-template.md`。
