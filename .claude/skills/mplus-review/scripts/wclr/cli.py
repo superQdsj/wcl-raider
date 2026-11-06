@@ -26,11 +26,13 @@ COMMANDS = {
     "compare": "与同副本同层高分记录对比：用时结构、死亡、技能命中、打断率",
     "spec": "与同专精顶尖玩家对比技能施放频率（CPM）与活跃时间",
     "events": "原始事件钻取：按时间窗口/波次/类型/玩家/技能过滤",
+    "ability": "技能画像：点谁、能否打断/驱散、减益多久、单体还是群体、致死次数（本场 vs 参考）+ Wowhead 说明",
     "score": "评分卡：团队与个人的数据分（0.0–10.0，附计算依据）",
     "tactics": "应对技巧：常规循环之外的技能在什么情境下使用、应对了哪些敌方机制（驱散/消除/免疫/反射/伴随）",
     "spell": "查技能资料（Wowhead）：名称、驱散类型、说明文字",
     "find": "按副本名（可加职业）找带日志的高分记录，给出链接（不需要报告）",
     "render": "把应对技巧报告 JSON 排成本地 HTML（可导出 PDF / PNG / Markdown）",
+    "lint": "话术检查：交付前检查复盘报告正文里的不确定措辞、空话、口令有没有数字和复验",
     "query": "执行任意 GraphQL（调试/补充查询用）",
     "points": "查看 WCL API 本小时点数余量",
 }
@@ -99,6 +101,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--level", type=_positive, help="参考记录的钥石层数（默认与本场相同）")
     p.add_argument("--ref", action="append", metavar="报告",
                    help="指定参考记录（链接或 CODE#fight，可重复），例如自己上一把限时的记录")
+    p = add("ability")
+    p.add_argument("name", help="敌方技能：技能 ID 或名称片段（同名的施放/减益/伤害 ID 会一起统计）")
+    p.add_argument("--refs", type=_positive, default=3, help="参考记录数量（默认 3，和 splits 选同一批）")
+    p.add_argument("--ref", action="append", metavar="报告", help="指定参考记录（链接或 CODE#fight，可重复）")
+    p.add_argument("--no-web", action="store_true", help="不查 Wowhead 说明")
     p = add("danger")
     p.add_argument("--threshold", type=float, default=35.0, help="个人险情的血量阈值（%%，默认 35）")
     p.add_argument("--team-below", type=float, default=50.0, help="团队险情：多人同时低于这个血量（%%，默认 50）")
@@ -123,7 +130,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--target", help="目标名（任意单位名称，精确匹配）")
     p.add_argument("--ability", help="技能 ID 或名称片段")
     p.add_argument("--filter", help="原生 WCL filterExpression（与其他过滤条件取 AND）")
-    p.add_argument("--limit", type=_positive, default=150, help="最多输出多少条（默认 150）")
+    p.add_argument("--limit", type=_positive, default=400, help="最多输出多少条（默认 400；繁忙窗口加大到 1000–2000）")
     p = add("score")
     p.add_argument("--judgments", help="已核实的结构化判断 JSON 文件（可躲技能、死亡归因、技能运用；格式见 references/scoring.md）")
     p.add_argument("--no-compare", action="store_true", help="不拉取同层高分记录（关键打断为 N/A，不给出暴露偏离候选）")
@@ -153,6 +160,8 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--png", help="同时导出整页 PNG 到这个路径（不含附录）")
     p.add_argument("--md", help="同时导出 Markdown 到这个路径")
     p.add_argument("--force", action="store_true", help="检查不通过也照样渲染（只在确有必要时用）")
+    p = add("lint", report=False)
+    p.add_argument("file", help="复盘报告的 Markdown 文件路径")
     p = add("query", report=False)
     p.add_argument("graphql", help="GraphQL 查询文本，或 @文件路径")
     p.add_argument("--vars", help="JSON 变量")
@@ -182,7 +191,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 130
     sys.stdout.write(out.rstrip() + "\n")
     sys.stdout.flush()
-    stderr(f"— {client.footer()}")
+    if client.live or client.cached:
+        stderr(f"— {client.footer()}")
     return 0
 
 
@@ -223,6 +233,9 @@ def dispatch(client: Client, args: argparse.Namespace) -> str:
         from .report import cmd_render
         return cmd_render(args.json, out=args.out, pdf=args.pdf, png=args.png, md=args.md, force=args.force,
                           lang=client.lang)
+    if cmd == "lint":
+        from .cmd_lint import cmd_lint
+        return cmd_lint(args.file)
     if cmd == "runs":
         from .cmd_overview import cmd_runs
         return cmd_runs(client, args.report)
@@ -262,6 +275,9 @@ def dispatch(client: Client, args: argparse.Namespace) -> str:
     if cmd == "events":
         from .cmd_events import cmd_events
         return cmd_events(run, args)
+    if cmd == "ability":
+        from .cmd_ability import cmd_ability
+        return cmd_ability(run, args.name, refs=args.refs, explicit=args.ref, web=not args.no_web)
     if cmd == "score":
         from .cmd_score import cmd_score
         return cmd_score(run, use_compare=not args.no_compare, judgments=args.judgments)

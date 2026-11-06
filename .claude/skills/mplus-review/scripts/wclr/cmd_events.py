@@ -134,5 +134,7 @@ def cmd_events(run: Run, args: argparse.Namespace) -> str:
     shown = evs[: args.limit]
     lines += [_line(run, e) for e in shown]
     if truncated or len(evs) > len(shown):
-        lines.append(f"…（已达到 --limit {args.limit}，缩小时间窗口或增加过滤条件查看更多）")
+        lines.append(f"…（**输出被截断**：只显示了前 {args.limit} 条，到 {run.t(shown[-1]['timestamp'], True)} 为止。"
+                     f"加 `--limit {max(1000, args.limit * 4)}`，或者缩小时间窗口、加 `--type`/`--player` 过滤后再查。"
+                     "被截断的窗口不能用来判断\"某个技能没交\"。）")
     return "\n".join(lines)

@@ -34,6 +34,9 @@ def parse_ref(ref: str) -> Tuple[str, Optional[str]]:
         raise WCLError("请提供 Warcraft Logs 报告链接或 16 位报告代码。")
     if CODE_RE.match(text):
         return text, None
+    m = re.match(r"^((?:a:)?[A-Za-z0-9]{16})#(?:fight=)?(\d+|last)$", text)
+    if m:
+        return m.group(1), m.group(2)
     try:
         url = urllib.parse.urlparse(text if "://" in text else "https://" + text)
         host = (url.hostname or "").lower()
@@ -393,6 +396,30 @@ class Run:
         name = self.dungeon if self.dungeon == self.dungeon_en else f"{self.dungeon} {self.dungeon_en}"
         return (f"{name} +{self.level} · {self.result} · 报告 {self.code} fight {self.fight_id} · "
                 f"{region} · {when}")
+
+    def prior_attempts(self) -> List[Dict[str, Any]]:
+        """同一份报告里、这一把之前的同副本记录（任何层数、任何结果），按时间顺序。"""
+        return [f for f in self.mplus_fights
+                if f.get("encounterID") == self.encounter_id and f["startTime"] < self.fight["startTime"]]
+
+    def prior_attempts_note(self) -> List[str]:
+        prior = self.prior_attempts()
+        if not prior:
+            return []
+        same = [f for f in prior if f.get("keystoneLevel") == self.level]
+        failed = [f for f in same if not f.get("kill")]
+        out = [f"- 这一把之前，本报告里同副本还有 {len(prior)} 条记录"
+               + (f"（同层 +{self.level} 的 {len(same)} 条里 {len(failed)} 条没打完）" if same else "") + "："]
+        for f in prior:
+            dur = f["endTime"] - f["startTime"]
+            req, got = f.get("countRequired"), f.get("countReached")
+            out.append(f"  - fight {f['id']} +{f.get('keystoneLevel')} {result_label(f)}，"
+                       f"{fmt.clock(f.get('keystoneTime'), True) if f.get('kill') and f.get('keystoneTime') else fmt.clock(dur) + '（实际）'}"
+                       + (f"，进度 {fmt.pct(got, req, 1)}" if req else ""))
+        if failed:
+            out.append(f"- 同一把钥石连续 {len(failed)} 次没打完才打出这一把：复盘时要讲这件事（之前倒在哪里、这把是不是还在同一处险些出事）。"
+                       f"用 `wcl pulls <链接> --fight N` 看之前那几次停在哪一波。")
+        return out
 
     def other_runs_note(self) -> str:
         if len(self.mplus_fights) <= 1:
