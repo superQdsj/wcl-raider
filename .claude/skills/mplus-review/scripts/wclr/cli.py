@@ -28,6 +28,7 @@ COMMANDS = {
     "events": "原始事件钻取：按时间窗口/波次/类型/玩家/技能过滤",
     "ability": "技能画像：点谁、能否打断/驱散、减益多久、单体还是群体、致死次数（本场 vs 参考）+ Wowhead 说明",
     "score": "评分卡：团队与个人的数据分（0.0–10.0，附计算依据）",
+    "lint": "话术检查：交付前检查复盘报告正文里的不确定措辞、空话、口令有没有数字和复验",
     "query": "执行任意 GraphQL（调试/补充查询用）",
     "points": "查看 WCL API 本小时点数余量",
 }
@@ -125,10 +126,12 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--target", help="目标名（任意单位名称，精确匹配）")
     p.add_argument("--ability", help="技能 ID 或名称片段")
     p.add_argument("--filter", help="原生 WCL filterExpression（与其他过滤条件取 AND）")
-    p.add_argument("--limit", type=_positive, default=150, help="最多输出多少条（默认 150）")
+    p.add_argument("--limit", type=_positive, default=400, help="最多输出多少条（默认 400；繁忙窗口加大到 1000–2000）")
     p = add("score")
     p.add_argument("--judgments", help="已核实的结构化判断 JSON 文件（可躲技能、死亡归因、技能运用；格式见 references/scoring.md）")
     p.add_argument("--no-compare", action="store_true", help="不拉取同层高分记录（关键打断为 N/A，不给出暴露偏离候选）")
+    p = add("lint", report=False)
+    p.add_argument("file", help="复盘报告的 Markdown 文件路径")
     p = add("query", report=False)
     p.add_argument("graphql", help="GraphQL 查询文本，或 @文件路径")
     p.add_argument("--vars", help="JSON 变量")
@@ -158,7 +161,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 130
     sys.stdout.write(out.rstrip() + "\n")
     sys.stdout.flush()
-    stderr(f"— {client.footer()}")
+    if client.live or client.cached:
+        stderr(f"— {client.footer()}")
     return 0
 
 
@@ -190,6 +194,9 @@ def dispatch(client: Client, args: argparse.Namespace) -> str:
             note = f"\n…（已截断，共 {len(out)} 字符；用 --max-chars 0 查看全部）"
             out = out[:max(0, args.max_chars - len(note))] + note[:args.max_chars]
         return out
+    if cmd == "lint":
+        from .cmd_lint import cmd_lint
+        return cmd_lint(args.file)
     if cmd == "runs":
         from .cmd_overview import cmd_runs
         return cmd_runs(client, args.report)

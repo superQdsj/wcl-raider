@@ -655,6 +655,8 @@ def cmd_splits(run: Run, refs: int = 3, candidates: int = 8, level: Optional[int
         for r in chosen:
             rs = ref_seg(r, seg)
             per_ref.append(mob_costs(rs, weight) if rs else None)
+        seg_rows = []
+        trash_adj = 0.0
         for w in seg.waves:
             content = (f"首领 {boss_names.get(w.encounter, w.encounter)}" + ("" if w.kill else "（未击杀）")
                        if w.encounter else _mob_text(w.raw, names, weight))
@@ -680,8 +682,15 @@ def cmd_splits(run: Run, refs: int = 3, candidates: int = 8, level: Optional[int
                 ref_txt = diff = adj = "—"
             else:
                 ref_txt, diff, adj = fmt.clock(ref_med), _signed(w.dur - ref_med), _signed(w.dur - ref_med * pace)
-            wrows.append([f"{k + 1}", f"#{w.idx}", fmt.clock(w.start), content, fmt.clock(w.dur), ref_txt, diff, adj,
-                          matched])
+                if not w.encounter:
+                    trash_adj += w.dur - ref_med * pace
+            seg_rows.append((w, [f"{k + 1}", f"#{w.idx}", fmt.clock(w.start), content, fmt.clock(w.dur), ref_txt, diff,
+                                 adj, matched]))
+        n_trash = sum(1 for w, _ in seg_rows if not w.encounter)
+        for w, row in seg_rows:
+            if not w.encounter and n_trash >= 2 and trash_adj <= 0 and row[7].startswith("+"):
+                row[7] += "（本段小怪合计不慢，是拆拉/合拉的分摊差异，不算丢时间）"
+            wrows.append(row)
     lines += ["", "## 波次对照（本场每一波 vs 参考拉同样这些怪大约用多久，取中位）",
               fmt.table(["段", "波", "开始", "内容", "本场用时", "参考估计", "差", "扣掉整体快慢后", "可比参考"], wrows),
               f"- 扣掉整体快慢后 = 本场用时 − 参考估计 × {pace:.2f}（本场总时长 ÷ 参考总时长，取中位）。"
@@ -690,7 +699,8 @@ def cmd_splits(run: Run, refs: int = 3, candidates: int = 8, level: Optional[int
               "再按本场这一波拉的怪加总。参考拆拉或合拉都能比；只算战斗时间，不含波与波之间的脱战。",
               "- 覆盖 = 本场这一波的怪，参考同一段也拉了的比例（按进度），低于 50% 不比较。"
               "之前出现过的怪（灭团后重拉）参考估计为 0，整波都算多花的时间。",
-              "- 差值只用来指出\"可能慢在这一波\"，原因要回到 `pulls`/`deaths`/`events` 核实。"]
+              "- 差值只用来指出\"可能慢在这一波\"，原因要回到 `pulls`/`deaths`/`events` 核实。"
+              "标了\"不算丢时间\"的波不要写进\"时间丢在哪里\"。"]
 
     # 路线差异
     rlines = []

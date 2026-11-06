@@ -88,3 +88,30 @@ class AbilityProfileTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class LintTests(unittest.TestCase):
+    GOOD = """# 标题
+## 一句话
+超时 40 秒。
+## 时间丢在哪里
+1. **首领甲：多花 0:58。** 首领血量一样。
+## 下一把怎么打
+1. **开怪 2:20 内打死首领甲。** 复验：首领战 ≤ 2:20。
+## 还没看清的
+- 某技能能不能驱散未核实。
+"""
+
+    def test_good_report_passes_and_open_section_may_hedge(self):
+        from wclr.cmd_lint import lint_text
+        self.assertEqual(lint_text(self.GOOD), [])
+
+    def test_flags_hedges_fillers_missing_check_and_offset_items(self):
+        from wclr.cmd_lint import lint_text
+        bad = self.GOOD.replace('首领血量一样。', '首领血量一样，不能断言是谁的问题。两波合计 2:27，比参考快 0:21。') \
+                       .replace('复验：首领战 ≤ 2:20。', '注意减伤。')
+        text = '\n'.join(lint_text(bad))
+        self.assertIn('不能断言', text)
+        self.assertIn('注意减伤', text)
+        self.assertIn('没有写复验', text)
+        self.assertIn('合起来并不慢', text)
