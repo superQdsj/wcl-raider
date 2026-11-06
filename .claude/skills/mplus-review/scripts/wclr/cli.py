@@ -21,6 +21,8 @@ COMMANDS = {
     "interrupts": "打断：敌方读条的打断率与读完时间点、每人打断与施放计数",
     "damage": "承伤：按来源技能的伤害、命中、每人分布与标记",
     "player": "单人深挖：施法/CPM、伤害构成、承伤、增益覆盖、低频技能时间轴",
+    "splits": "分段计时：按首领分段，逐段与路线相近的参考记录比用时、时间构成与拉怪差异",
+    "danger": "险情：没死但血线很低的时刻、多人同时低血的团队险情，按波次汇总",
     "compare": "与同副本同层高分记录对比：用时结构、死亡、技能命中、打断率",
     "spec": "与同专精顶尖玩家对比技能施放频率（CPM）与活跃时间",
     "events": "原始事件钻取：按时间窗口/波次/类型/玩家/技能过滤",
@@ -86,6 +88,17 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("name", help="玩家名（支持前缀/片段；也可用 坦克/治疗）")
     p.add_argument("--top", type=_positive, default=15, help="各表列出的行数（默认 15）")
     p.add_argument("--ability", help="只看该玩家指定技能的每次施放、波次与最短/最长间隔（ID 或名称片段）")
+    p = add("splits")
+    p.add_argument("--refs", type=_positive, default=3, help="选用的参考记录数量（默认 3）")
+    p.add_argument("--candidates", type=_positive, default=8,
+                   help="从排名里拉取多少条候选记录来挑路线最像的（默认 8，每条约 1–3 点）")
+    p.add_argument("--level", type=_positive, help="参考记录的钥石层数（默认与本场相同）")
+    p.add_argument("--ref", action="append", metavar="报告",
+                   help="指定参考记录（链接或 CODE#fight，可重复），例如自己上一把限时的记录")
+    p = add("danger")
+    p.add_argument("--threshold", type=float, default=35.0, help="个人险情的血量阈值（%%，默认 35）")
+    p.add_argument("--team-below", type=float, default=50.0, help="团队险情：多人同时低于这个血量（%%，默认 50）")
+    p.add_argument("--top", type=_positive, default=25, help="列出的险情数量（默认 25）")
     p = add("compare")
     p.add_argument("--runs", type=_positive, default=3, help="对比的高分记录数量（默认 3，每条约消耗 3 点）")
     p.add_argument("--level", type=_positive, help="对比的钥石层数（默认与本场相同）")
@@ -195,6 +208,12 @@ def dispatch(client: Client, args: argparse.Namespace) -> str:
     if cmd == "player":
         from .cmd_player import cmd_player
         return cmd_player(run, args.name, top=args.top, ability=args.ability)
+    if cmd == "splits":
+        from .cmd_splits import cmd_splits
+        return cmd_splits(run, refs=args.refs, candidates=args.candidates, level=args.level, explicit=args.ref)
+    if cmd == "danger":
+        from .cmd_danger import cmd_danger
+        return cmd_danger(run, threshold=args.threshold, team_below=args.team_below, top=args.top)
     if cmd == "compare":
         from .cmd_compare import cmd_compare
         return cmd_compare(run, runs=args.runs, level=args.level, top=args.top)

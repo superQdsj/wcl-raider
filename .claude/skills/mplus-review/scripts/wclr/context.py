@@ -184,7 +184,8 @@ class Run:
             if actor.get("type") == "Pet" and owner in self.players:
                 self.pet_owner[actor["id"]] = owner
                 self.players[owner].pets.append(actor["id"])
-        self.pulls: List[Pull] = self._pulls(fd.get("dungeonPulls") or [])
+        self.raw_pulls: List[Dict[str, Any]] = fd.get("dungeonPulls") or []
+        self.pulls: List[Pull] = self._pulls(self.raw_pulls)
         self._timer: Optional[int] = None
         self._timer_loaded = False
 
