@@ -115,3 +115,18 @@ class LintTests(unittest.TestCase):
         self.assertIn('注意减伤', text)
         self.assertIn('没有写复验', text)
         self.assertIn('合起来并不慢', text)
+
+
+class LintGamingTests(unittest.TestCase):
+    def test_reworded_hedges_and_unverified_calls_are_caught(self):
+        from wclr.cmd_lint import lint_text
+        text = LintTests.GOOD.replace('首领血量一样。', '首领血量一样，能不能断尚待确认，2:45 不能全部当成可节省时间。') \
+            .replace('复验：首领战 ≤ 2:20。', '执行前先跑 `wcl ability`。复验：首领战 ≤ 2:20。')
+        out = '\n'.join(lint_text(text))
+        self.assertIn('尚待', out)
+        self.assertIn('不能全部当成', out)
+        self.assertIn('还不是口令', out)
+
+    def test_code_hash_fight_shorthand(self):
+        from wclr.context import parse_ref
+        self.assertEqual(parse_ref('Zb4gAkpMnQ8LPcd1#4'), ('Zb4gAkpMnQ8LPcd1', '4'))

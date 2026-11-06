@@ -408,14 +408,23 @@ def _boss_damage(run: Run, code: str, fid: int, windows: Dict[int, Tuple[float, 
     return out
 
 
-def boss_hint(ours: BossDamage, refs: Sequence[BossDamage]) -> str:
-    """根据首领本体伤害、其他目标伤害和用时，给出"慢在哪"的客观线索（不是结论）。"""
+def boss_hint(ours: BossDamage, refs: Sequence[BossDamage], pace: float = 1.0) -> str:
+    """根据首领本体伤害、其他目标伤害和用时，给出"慢在哪"的客观线索（不是结论）。
+
+    pace = 本场总时长 ÷ 参考总时长。整场都慢同样比例时，首领慢只是整体输出差距的一部分，不是这个首领特有的问题。"""
     if not refs:
         return ""
     med_dur = fmt.median([r.dur for r in refs]) or 0
     if ours.dur - med_dur < 10000:
         return ""
     tips = []
+    if pace > 1.05 and ours.dur - med_dur * pace < 10000:
+        return (f"慢 {fmt.clock(ours.dur - med_dur)}，但按本场整体节奏（比参考慢 {(pace - 1) * 100:.0f}%）折算后只差 "
+                f"{_signed(ours.dur - med_dur * pace)}：这是整体输出差距的一部分，不是这个首领特有的问题，"
+                "不要单独为它写口令（除非嗜血、爆发明显没交在这里）。")
+    if pace > 1.05:
+        tips.append(f"按本场整体节奏（比参考慢 {(pace - 1) * 100:.0f}%）折算后仍多 {_signed(ours.dur - med_dur * pace)}，"
+                    "是这个首领特有的慢。")
     fast = [r for r in refs if r.dur < ours.dur * 0.9]
     slow = [r for r in refs if r.dur >= ours.dur * 0.9]
     med_boss = fmt.median([r.boss for r in refs]) or 0
@@ -444,6 +453,10 @@ def boss_hint(ours: BossDamage, refs: Sequence[BossDamage]) -> str:
         need = ours.boss / (f_dur / 1000.0) if f_dur else 0
         tips.append(f"要做到快的参考的用时 {fmt.clock(f_dur)}，打首领本体的团队 DPS 需要约 {fmt.num(need)}"
                     f"（本场 {fmt.num(ours.boss_dps)}，快的参考 {fmt.num(f_dps)}）。")
+        if pace > 1.1 and f_dur:
+            p_dur = f_dur * pace
+            tips.append(f"按本队整体节奏，现实一点的目标是 {fmt.clock(p_dur)}（打首领本体 DPS 约 "
+                        f"{fmt.num(ours.boss / (p_dur / 1000.0))}）：口令写这个数，参考的数字只作对照。")
     return " ".join(tips)
 
 
@@ -633,7 +646,7 @@ def cmd_splits(run: Run, refs: int = 3, candidates: int = 8, level: Optional[int
                          f"{fmt.num(o.boss)} / {fmt.num(m_boss) if m_boss else '—'}" if o.boss else "无可伤害本体",
                          f"{fmt.num(o.boss_dps)} / {fmt.num(m_dps) if m_dps else '—'}" if o.boss else "—",
                          f"{fmt.num(o.other_total)} / {fmt.num(m_other) if m_other is not None else '—'}"])
-            hint = boss_hint(o, refs_bd)
+            hint = boss_hint(o, refs_bd, fmt.median([our_total / r.duration for r in chosen if r.duration]) or 1.0)
             if hint:
                 hints.append(f"- **{name}**（本场 {fmt.clock(o.dur)}，参考中位 {fmt.clock(m_dur) if m_dur else '—'}）：{hint}")
                 tot = o.boss or 1.0
@@ -688,6 +701,9 @@ def cmd_splits(run: Run, refs: int = 3, candidates: int = 8, level: Optional[int
                                  adj, matched]))
         n_trash = sum(1 for w, _ in seg_rows if not w.encounter)
         for w, row in seg_rows:
+            died = sum(1 for t in deaths_ts if w.start <= t - run.start <= w.start + w.dur + 3000)
+            if not w.encounter and died >= 3:
+                row[3] += f"（**团灭/多人死亡 {died} 人**：怪很可能没清完，参考估计不可比；没清完的怪会在后面补，代价看后面的波和收尾段）"
             if not w.encounter and n_trash >= 2 and trash_adj <= 0 and row[7].startswith("+"):
                 row[7] += "（本段小怪合计不慢，是拆拉/合拉的分摊差异，不算丢时间）"
             wrows.append(row)

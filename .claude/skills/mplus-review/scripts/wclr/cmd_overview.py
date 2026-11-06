@@ -26,8 +26,8 @@ def cmd_runs(client: Client, ref: str) -> str:
         return "\n".join(lines)
     done = [f for f in mplus if f.get("kill")]
     default = (done or mplus)[-1]["id"]
-    lines.append(f"共 {len(mplus)} 条大秘境记录；默认分析 fight {default}" +
-                 (f"（链接中指定了 fight={hint}）" if hint else "") + "。")
+    lines.append(f"共 {len(mplus)} 条大秘境记录；" +
+                 (f"**本次分析 fight {hint}**（链接里指定的）。" if hint else f"链接没有指定 fight，默认分析 fight {default}（最后一条完成的）。"))
     rows = []
     for f in mplus:
         dur = f["endTime"] - f["startTime"]
@@ -41,6 +41,38 @@ def cmd_runs(client: Client, ref: str) -> str:
         ])
     lines.append(fmt.table(["fight", "副本", "层数", "结果", "用时", "进度", "平均装等"], rows))
     return "\n".join(lines)
+
+
+SATED_MS = 600_000  # 嗜血类效果的力竭/心满意足：10 分钟内不能再吃
+
+
+def lust_boss_lines(run: Run, lust_ts: List[float]) -> List[str]:
+    """每个首领战的嗜血情况：交了没有；没交时，是没得用（被前面的小怪波用掉了）还是有但没交。"""
+    out = []
+    for p in run.pulls:
+        if not p.is_boss or not p.kill:
+            continue
+        name = "、".join(p.boss_names) or p.name
+        used = [t for t in lust_ts if p.start - 5000 <= t <= p.end]
+        if used:
+            out.append(f"- #{p.idx} {name}：交了（开怪后 {fmt.clock(used[0] - p.start) if used[0] > p.start else '0:00'}）")
+            continue
+        before = [t for t in lust_ts if t < p.start - 5000]
+        if not before or p.start - before[-1] >= SATED_MS:
+            out.append(f"- #{p.idx} {name}：**开怪时嗜血可用，但整场首领战没交**")
+            continue
+        ready = before[-1] + SATED_MS
+        src = run.pull_tag(before[-1])
+        if ready < p.end:
+            out.append(f"- #{p.idx} {name}：没交。上一次在 {run.t(before[-1])}（{src}），开怪后 {fmt.clock(ready - p.start)} 转好，"
+                       "转好后也没交")
+        else:
+            out.append(f"- #{p.idx} {name}：**没得用**。上一次在 {run.t(before[-1])}（{src}），要到 {run.t(ready)} 才转好，"
+                       f"比首领战结束还晚。如果 {src} 那次留到这里，这个首领就有嗜血")
+    if not out:
+        return []
+    return ["", "## 首领战的嗜血（力竭 10 分钟；按本场嗜血时间推算）"] + out + [
+        "没得用的首领，看是不是值得把前面那次嗜血留下来：对照 `splits` 里这个首领比参考慢多少、参考在哪里开的嗜血。"]
 
 
 # ---------------------------------------------------------------- overview
@@ -243,6 +275,8 @@ def cmd_pulls(run: Run) -> str:
              fmt.table(["波", "开始", "时长", "距上波", "内容", "进度", "团队DPS", "承伤/秒", "死亡", "嗜血"], rows)]
     if gap_deaths:
         lines.append(f"波次之间的死亡：{'、'.join(gap_deaths)}")
+    lust_ts = sorted(ts for ts, _, _ in (got.get("lust") or []))
+    lines += lust_boss_lines(run, lust_ts)
     if got["kills"][1]:
         lines.append("（敌方死亡事件已截断，各波进度仅为已获取部分）")
 

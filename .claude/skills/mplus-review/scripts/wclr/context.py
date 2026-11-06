@@ -34,6 +34,9 @@ def parse_ref(ref: str) -> Tuple[str, Optional[str]]:
         raise WCLError("请提供 Warcraft Logs 报告链接或 16 位报告代码。")
     if CODE_RE.match(text):
         return text, None
+    m = re.match(r"^((?:a:)?[A-Za-z0-9]{16})#(?:fight=)?(\d+|last)$", text)
+    if m:
+        return m.group(1), m.group(2)
     try:
         url = urllib.parse.urlparse(text if "://" in text else "https://" + text)
         host = (url.hostname or "").lower()

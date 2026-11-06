@@ -36,6 +36,10 @@ class Profile:
     hit_bursts: List[int] = field(default_factory=list)     # 同一时刻（1 秒内）被同一技能打中的人数
     kills: int = 0
     kill_names: List[str] = field(default_factory=list)
+    id_use: Dict[int, Set[str]] = field(default_factory=dict)  # 技能 ID -> {读条, 施放, 减益, 伤害, 致死}
+
+    def mark(self, gid: Any, use: str) -> None:
+        self.id_use.setdefault(int(gid or 0), set()).add(use)
 
 
 def _role(run: Run, pid: Optional[int]) -> Tuple[str, str]:
@@ -60,8 +64,10 @@ def profile_run(run: Run, ids: Set[int], label: str) -> Profile:
     for e in got["casts"]:
         if e.get("type") == "cast":
             pr.casts += 1
+            pr.mark(e.get("abilityGameID"), "施放")
         elif e.get("type") == "begincast":
             pr.begins += 1
+            pr.mark(e.get("abilityGameID"), "读条")
     pr.interrupted = sum(1 for e in got["interrupts"]
                          if e.get("type") == "interrupt" and int(e.get("extraAbilityGameID") or 0) in ids)
     pr.dispelled = sum(1 for e in got["dispels"]
@@ -75,6 +81,7 @@ def profile_run(run: Run, ids: Set[int], label: str) -> Profile:
         if e.get("type") == "applydebuff":
             name, role = _role(run, tid)
             pr.debuffs += 1
+            pr.mark(e.get("abilityGameID"), "减益")
             pr.debuff_roles[role] = pr.debuff_roles.get(role, 0) + 1
             pr.debuff_targets[name] = pr.debuff_targets.get(name, 0) + 1
             open_[key] = e["timestamp"]
@@ -86,6 +93,7 @@ def profile_run(run: Run, ids: Set[int], label: str) -> Profile:
         if e.get("type") != "damage" or tid not in run.players:
             continue
         pr.hits += 1
+        pr.mark(e.get("abilityGameID"), "持续伤害" if e.get("tick") else "伤害")
         pr.damage += (e.get("amount") or 0) + (e.get("absorbed") or 0)
         _, role = _role(run, tid)
         pr.hit_roles[role] = pr.hit_roles.get(role, 0) + 1
@@ -214,6 +222,14 @@ def cmd_ability(run: Run, query: str, refs: int = 3, explicit: Optional[List[str
                          "伤害命中", "伤害合计", "致死"], rows)]
     if failed:
         lines.append("（以下参考记录获取失败，未计入：" + "；".join(failed) + "）")
+    uses: Dict[int, Set[str]] = {}
+    for pf in profiles:
+        for gid, u in pf.id_use.items():
+            uses.setdefault(gid, set()).update(u)
+    if uses:
+        order = ["读条", "施放", "减益", "伤害", "持续伤害"]
+        lines.append("各技能 ID 是什么（查 `events --ability` 时用对 ID）：" + "；".join(
+            f"{gid} {'/'.join(x for x in order if x in u)}" for gid, u in sorted(uses.items())))
     if profiles[0].debuff_targets:
         lines.append("本场减益落在：" + "、".join(f"{n} {c} 次" for n, c in
                                                 sorted(profiles[0].debuff_targets.items(), key=lambda kv: -kv[1])))
