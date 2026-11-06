@@ -1,0 +1,10 @@
+# 本地凭据与缓存（WCL API 凭据请放在 ~/.config/wcl-raider/credentials.env 或 .env）
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+# 生成的复盘报告默认不入库（需要的话可以删掉这一行）
+reviews/
+.DS_Store

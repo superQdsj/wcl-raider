@@ -1,0 +1,110 @@
+[
+  {
+    "label": "eu12-all-16-deaths-expanded",
+    "observed": true,
+    "kind": "functional_check",
+    "evidence": "eu12-deaths-full.stdout.md"
+  },
+  {
+    "label": "default-deaths-truncation-explicit",
+    "observed": true,
+    "kind": "functional_check",
+    "evidence": "eu12-deaths.stdout.md"
+  },
+  {
+    "label": "eu11-timeout-not-abandoned",
+    "observed": true,
+    "kind": "functional_check",
+    "evidence": "eu11-overview.stdout.md"
+  },
+  {
+    "label": "eu11-inferred-five-second-penalty",
+    "observed": true,
+    "kind": "functional_check",
+    "evidence": "eu11-overview.stdout.md"
+  },
+  {
+    "label": "eu12-inferred-fifteen-second-penalty",
+    "observed": true,
+    "kind": "functional_check",
+    "evidence": "eu12-overview.stdout.md"
+  },
+  {
+    "label": "cn24-inferred-fifteen-second-penalty",
+    "observed": true,
+    "kind": "functional_check",
+    "evidence": "cn24-overview.stdout.md"
+  },
+  {
+    "label": "R2-S1-role-exclusion-still-perfect-score",
+    "observed": true,
+    "kind": "known_issue_reproduced",
+    "evidence": "historical-sol-judgments.json; eu12-score-judgments.stdout.md"
+  },
+  {
+    "label": "R2-S2-unqualified-cooldown-inference-retained",
+    "observed": true,
+    "kind": "known_document_issue_confirmed",
+    "evidence": ".claude/skills/mplus-review/references/playbook.md"
+  },
+  {
+    "label": "R2-S3-effective-trash-progress-between-boss-attempts",
+    "observed": true,
+    "kind": "known_issue_supporting_evidence",
+    "evidence": "eu12-pulls.stdout.md"
+  },
+  {
+    "label": "R2-S4-unknown-death-still-deducted",
+    "observed": true,
+    "kind": "known_issue_reproduced",
+    "evidence": "historical-sol-judgments.json; eu12-score-judgments.stdout.md"
+  },
+  {
+    "label": "R2-S5-team-median-and-unmatched-success-ratio-still-scored",
+    "observed": true,
+    "kind": "known_issue_reproduced",
+    "evidence": "eu12-score-judgments.stdout.md"
+  },
+  {
+    "label": "R2-S6-unnormalized-candidates-retained",
+    "observed": true,
+    "kind": "known_issue_supporting_evidence",
+    "evidence": "eu12-score-judgments.stdout.md; candidates are not proof of avoidability"
+  },
+  {
+    "label": "R2-S7-incomplete-usage-review-still-nine",
+    "observed": true,
+    "kind": "known_issue_reproduced",
+    "evidence": "historical-sol-judgments.json; eu12-score-judgments.stdout.md"
+  },
+  {
+    "label": "R2-S7-global-and-critical-window-differ",
+    "observed": true,
+    "kind": "known_issue_supporting_evidence",
+    "evidence": "eu12-score-judgments.stdout.md; eu12-interrupts-pull8.stdout.md"
+  },
+  {
+    "label": "R2-S8-raw-zero-percentile-still-scored",
+    "observed": true,
+    "kind": "known_issue_reproduced",
+    "evidence": "eu12-score-judgments.stdout.md; this check does not establish personal execution quality"
+  },
+  {
+    "label": "R2-S9-dispel-units-not-aligned",
+    "observed": true,
+    "kind": "known_issue_reproduced",
+    "evidence": "eu12-interrupts.stdout.md"
+  },
+  {
+    "label": "R2-S9-damage-summary-and-detail-differ",
+    "observed": true,
+    "kind": "known_issue_reproduced",
+    "evidence": "eu12-damage.stdout.md; eu12-damage-ability270928.stdout.md"
+  },
+  {
+    "label": "protected-implementation-documents-tests-unchanged",
+    "observed": true,
+    "kind": "scope_check",
+    "evidence": "archival-replay/results.json fingerprints_before"
+  }
+]

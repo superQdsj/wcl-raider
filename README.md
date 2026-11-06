@@ -1,5 +1,80 @@
 <img src="assets/icon.svg" width="64" height="64" alt="">
 
-# wcl-raider
+# wcl-raider · 大秘境战斗记录复盘
 
-Created in [T3 Code](https://t3.codes).
+把一条 Warcraft Logs 大秘境报告链接交给 Claude Code，它会像教练一样复盘这场钥石：时间花在了哪里、每次死亡的原因、哪些读条该断没断、哪些伤害本可以躲开、每个人可以怎么改进，并给团队和每位队员打分（0.0–10.0）。
+
+它的结构是一个 **Claude Code Skill + 一个零依赖的数据工具**：
+- **数据工具**（`scripts/wcl.py`）负责客观测量：通过 WCL v2 API 拉取数据，把几万条战斗事件压缩成计时、波次、死亡回放、打断、承伤、个人施法，以及与同副本同层高分记录、同专精顶尖玩家的对比，并按统一公式计算评分卡。
+- **Skill**（`SKILL.md` + `references/`）负责判断：教 agent 按复盘方法论定位问题、排序、核实证据，并写出具体可执行的建议。大秘境路线千变万化，所以判断标准用"与高分记录对比"，而不是写死的规则；换赛季、换副本都不需要改代码。
+
+## 快速开始
+
+1. **创建 WCL API 客户端**：打开 https://www.warcraftlogs.com/api/clients/ （需要登录 WCL），点 "Create Client"。名称随意，Redirect URL 填 `http://localhost`，不要勾选 Public Client。
+2. **保存凭据**到 `~/.config/wcl-raider/credentials.env`：
+   ```
+   WCL_CLIENT_ID=你的 Client ID
+   WCL_CLIENT_SECRET=你的 Client Secret
+   ```
+   （也可以用同名环境变量，或当前目录下的 `.env`。）
+3. **验证**：`python3 .claude/skills/mplus-review/scripts/wcl.py points`
+4. **在本仓库里启动 Claude Code**，输入：
+   ```
+   /mplus-review https://www.warcraftlogs.com/reports/XXXXXXXXXXXXXXXX#fight=5
+   ```
+   可以附加关注点，例如 `/mplus-review <链接> 我是坦克，重点看我`，或者 `/mplus-review <链接> 快速`。
+
+复盘报告会保存到 `reviews/` 目录，对话里给出结论摘要、最值得改进的 3 件事和评分表。
+
+### 在任意目录使用
+把 skill 链接到个人 skill 目录：
+```bash
+ln -s "$(pwd)/.claude/skills/mplus-review" ~/.claude/skills/mplus-review
+```
+
+## 数据工具
+
+需要 Python 3.9+，只用标准库。所有命令都接受完整链接（会自动识别 `#fight=N`）或 16 位报告代码。
+
+```bash
+W=.claude/skills/mplus-review/scripts/wcl.py
+python3 $W runs     <链接>            # 报告里的所有钥石记录
+python3 $W overview <链接>            # 计时/罚时/阵容/DPS/同层百分位/打断/药水石头
+python3 $W pulls    <链接>            # 波次时间线
+python3 $W deaths   <链接>            # 死亡回放（血线、承伤、死者施法、团灭归组）
+python3 $W interrupts <链接>          # 打断率、漏断时间点、每人打断
+python3 $W damage   <链接> [--ability 技能]   # 承伤构成与每人分布
+python3 $W compare  <链接>            # 与同层高分记录对比
+python3 $W player   <链接> <玩家>     # 单人深挖
+python3 $W spec     <链接> <玩家>     # 与同专精顶尖玩家对比 CPM
+python3 $W events   <链接> --pull 7 --type interrupts   # 原始事件钻取
+python3 $W score    <链接>            # 评分卡
+python3 $W --help
+```
+
+- **语言**：默认通过 `cn.warcraftlogs.com` 获取中文技能/怪物/副本名（任何地区的日志都适用）。`--lang en` 或 `WCL_LANG=en` 切换为英文。
+- **API 点数**：WCL 每个客户端每小时 1000 点。一次完整复盘大约消耗 40–80 点。数据会缓存在 `~/.cache/wcl-raider/`，重复查询不再消耗点数。每条命令都会在 stderr 打印本小时已用点数。
+- **限制**：只支持正式服大秘境；只能读取公开或未列出（unlisted）的报告，私密报告需要上传者修改可见性。
+
+## 评分体系
+
+0.0–10.0，保留一位小数：9.5+ 顶尖 · 8.5 优秀 · 7.5 良好 · 6.5 及格 · <6.5 不及格。
+- **团队**：计时、节奏（与同层高分对比）、存活、打断协作。
+- **个人**：生存、机制（可躲伤害）、打断、输出、执行（活跃时间），按坦克/治疗/输出各自的权重加权。
+- **数据分**由统一公式计算，可复现、可跨场比较；agent 复盘时可以在每个维度 ±1.0 内结合上下文修正，并写明理由。公式见 [`references/scoring.md`](.claude/skills/mplus-review/references/scoring.md)。
+
+## 目录结构
+
+```
+.claude/skills/mplus-review/
+├── SKILL.md                 # 复盘流程（agent 的工作说明）
+├── references/
+│   ├── playbook.md          # 复盘方法论：判断标准、优先级、诊断方法
+│   ├── scoring.md           # 评分公式与修正规则
+│   ├── data-notes.md        # 数据口径与 WCL API 备忘
+│   └── report-template.md   # 报告模板
+└── scripts/
+    ├── wcl.py               # 数据工具入口
+    └── wclr/                # API 客户端、上下文、各命令实现
+tests/                       # 离线单元测试：python3 -m unittest discover -s tests
+```

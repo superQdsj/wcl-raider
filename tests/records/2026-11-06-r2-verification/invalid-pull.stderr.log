@@ -1,0 +1,4 @@
+usage: wcl.py interrupts [-h] [--fight FIGHT] [--max-chars MAX_CHARS]
+                         [--times TIMES] [--pull PULL]
+                         report
+wcl.py interrupts: error: argument --pull: 必须大于 0

@@ -1,0 +1,933 @@
+{
+  "timestamp": "2026-11-06T06:31:16.235977+00:00",
+  "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "scope": "existing tests and cache-only replay; no optimization",
+  "network": "blocked at Client._post and urllib.request.urlopen; zero actual requests",
+  "cache_policy": "production TTL",
+  "unit_exit_code": 0,
+  "historical_artifacts": [
+    "sol-feedback.md",
+    "sol-dryrun.md",
+    "sol-judgments.json"
+  ],
+  "protected_files_unchanged": true,
+  "fingerprints_before": {
+    ".claude/skills/mplus-review/SKILL.md": "19cc221b5c75ca1b4c01550372d1e93d835208c69d1d35dd1e8ec7157e186c78",
+    ".claude/skills/mplus-review/references/data-notes.md": "7979afb482250099999e4446a5097220ad6f36dcb5f763385450a79897a96a7c",
+    ".claude/skills/mplus-review/references/playbook.md": "10439d6a9e6cbcbcb1b32386c48fcf56424c9c1f31df40d1df4e28d309a72ddf",
+    ".claude/skills/mplus-review/references/report-template.md": "1a706c70bc8b7ab21e9e8afc4516e6539c0bc22eeffb357934d9088d49e51d90",
+    ".claude/skills/mplus-review/references/scoring.md": "8eb5ba5a34d6797a1916f76f8e98e8e4b1e3a6ee6393407e17f7bd6fe5c04291",
+    ".claude/skills/mplus-review/scripts/wcl.py": "ca690aa04aee0e0847963ca4bba33597f95f628b272b56649bc7e0c852f83bfb",
+    ".claude/skills/mplus-review/scripts/wclr/__init__.py": "95966a463a96bdabe88702bb7f00976a69b78078f1c99a95ec9decf92d4926db",
+    ".claude/skills/mplus-review/scripts/wclr/api.py": "574f81ad719fb7fd751b317d87ac719f66a6d2cc0d8fd6b9d14fe02599f1cb8f",
+    ".claude/skills/mplus-review/scripts/wclr/cli.py": "d9248af673b464b356317054b0174dda66d69e924865e73c1e3ea3285eb9b640",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_compare.py": "56335581f8479184bbbd46f09302104b242e4942b033816bf64985ae3f43da49",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_damage.py": "b6bdf15fcf27a2c463176ac92e14e4f60cc957e7c402a1fa481ea9517633d5ff",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_deaths.py": "72dc80f9c84dfa42e3b14b11ba3d0d86f19d618ac2036089c10ee7af9ed2b75d",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_events.py": "d22127ab3832054fd1294ea5fc8654edac94019c15c1638b9d0abf6ca1efb0f9",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_interrupts.py": "770d7f08d0feeb74436b1d9ea1a148d7478d77dc110e82856f8ebf30db34f2e1",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_overview.py": "f21cd2f2bd43a0996c8d80e81e09f2fd743cb7ff22068464649ec05cf9f6c358",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_player.py": "d390ec7823f306e7ad0383127d89d55fac1cd98d97245d96c0223125e497a40b",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_score.py": "c94df23ff05fb5e7a86d68d5c0d8559d37501e52c49d6c7619d34474a3c7981e",
+    ".claude/skills/mplus-review/scripts/wclr/context.py": "969b143f7dffcd20c1c09ca20a2a9bcb00fc5a9e72819717bcaa4cc5e658ef77",
+    ".claude/skills/mplus-review/scripts/wclr/data.py": "8f8cb2721952eb052bb12a62ef4a8138d0dd3b1865c1cb0e9d80a6b2e66e05a1",
+    ".claude/skills/mplus-review/scripts/wclr/fmt.py": "09040cac0f932198cb9ca000c3ebd8545de6e2a51a062210eb98e090192275b5",
+    ".claude/skills/mplus-review/scripts/wclr/population.py": "76313632579238c9e2a67083b714c90bd81034f62f43ad3b77436c83c6c01495",
+    ".env.example": "3dcdeaaaa1b81f2c0855da9c0de963ec9cd5924ac948e01b16bbacce704cf50f",
+    ".gitignore": "2a050c60ca7d5808d0793fdd200b606eb5a848889970b39e9b336aeab2ace4a1",
+    "README.md": "dfac45d15984523ab50b921092868fa6e24a43c5c9d4f1ed40afad6c829d2bba",
+    "tests/corpus.md": "d58eaa3eb0a03009e7bd49a9c505d6c8abbf8c162f3d1b94d5f4cf54b1b5bea9",
+    "tests/support.py": "31da3fce8de53b753699d5e477e64cd43357af0a3ceb99844030db948fc551fe",
+    "tests/test_core.py": "3dd2cdeae9f26f221496046c5cfbd3d8e46bf9d7e35a39c138458ea3e136749c",
+    "tests/test_methodology.py": "f51ea97677171b84a5183cf0a49d3da068dc00139a694f9890ae4cb25cb9eb44",
+    "tests/test_regressions.py": "8f50f06894c5cd78afca894e48dda6ff40ab0a5b0d85b42b42c29cbbdae520af",
+    "tests/test_score.py": "3ef3d0c7f586b5a238fc25f248c342442d92e420af16c88ca55df82089f5ddfe"
+  },
+  "fingerprints_after": {
+    ".claude/skills/mplus-review/SKILL.md": "19cc221b5c75ca1b4c01550372d1e93d835208c69d1d35dd1e8ec7157e186c78",
+    ".claude/skills/mplus-review/references/data-notes.md": "7979afb482250099999e4446a5097220ad6f36dcb5f763385450a79897a96a7c",
+    ".claude/skills/mplus-review/references/playbook.md": "10439d6a9e6cbcbcb1b32386c48fcf56424c9c1f31df40d1df4e28d309a72ddf",
+    ".claude/skills/mplus-review/references/report-template.md": "1a706c70bc8b7ab21e9e8afc4516e6539c0bc22eeffb357934d9088d49e51d90",
+    ".claude/skills/mplus-review/references/scoring.md": "8eb5ba5a34d6797a1916f76f8e98e8e4b1e3a6ee6393407e17f7bd6fe5c04291",
+    ".claude/skills/mplus-review/scripts/wcl.py": "ca690aa04aee0e0847963ca4bba33597f95f628b272b56649bc7e0c852f83bfb",
+    ".claude/skills/mplus-review/scripts/wclr/__init__.py": "95966a463a96bdabe88702bb7f00976a69b78078f1c99a95ec9decf92d4926db",
+    ".claude/skills/mplus-review/scripts/wclr/api.py": "574f81ad719fb7fd751b317d87ac719f66a6d2cc0d8fd6b9d14fe02599f1cb8f",
+    ".claude/skills/mplus-review/scripts/wclr/cli.py": "d9248af673b464b356317054b0174dda66d69e924865e73c1e3ea3285eb9b640",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_compare.py": "56335581f8479184bbbd46f09302104b242e4942b033816bf64985ae3f43da49",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_damage.py": "b6bdf15fcf27a2c463176ac92e14e4f60cc957e7c402a1fa481ea9517633d5ff",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_deaths.py": "72dc80f9c84dfa42e3b14b11ba3d0d86f19d618ac2036089c10ee7af9ed2b75d",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_events.py": "d22127ab3832054fd1294ea5fc8654edac94019c15c1638b9d0abf6ca1efb0f9",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_interrupts.py": "770d7f08d0feeb74436b1d9ea1a148d7478d77dc110e82856f8ebf30db34f2e1",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_overview.py": "f21cd2f2bd43a0996c8d80e81e09f2fd743cb7ff22068464649ec05cf9f6c358",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_player.py": "d390ec7823f306e7ad0383127d89d55fac1cd98d97245d96c0223125e497a40b",
+    ".claude/skills/mplus-review/scripts/wclr/cmd_score.py": "c94df23ff05fb5e7a86d68d5c0d8559d37501e52c49d6c7619d34474a3c7981e",
+    ".claude/skills/mplus-review/scripts/wclr/context.py": "969b143f7dffcd20c1c09ca20a2a9bcb00fc5a9e72819717bcaa4cc5e658ef77",
+    ".claude/skills/mplus-review/scripts/wclr/data.py": "8f8cb2721952eb052bb12a62ef4a8138d0dd3b1865c1cb0e9d80a6b2e66e05a1",
+    ".claude/skills/mplus-review/scripts/wclr/fmt.py": "09040cac0f932198cb9ca000c3ebd8545de6e2a51a062210eb98e090192275b5",
+    ".claude/skills/mplus-review/scripts/wclr/population.py": "76313632579238c9e2a67083b714c90bd81034f62f43ad3b77436c83c6c01495",
+    ".env.example": "3dcdeaaaa1b81f2c0855da9c0de963ec9cd5924ac948e01b16bbacce704cf50f",
+    ".gitignore": "2a050c60ca7d5808d0793fdd200b606eb5a848889970b39e9b336aeab2ace4a1",
+    "README.md": "dfac45d15984523ab50b921092868fa6e24a43c5c9d4f1ed40afad6c829d2bba",
+    "tests/corpus.md": "d58eaa3eb0a03009e7bd49a9c505d6c8abbf8c162f3d1b94d5f4cf54b1b5bea9",
+    "tests/support.py": "31da3fce8de53b753699d5e477e64cd43357af0a3ceb99844030db948fc551fe",
+    "tests/test_core.py": "3dd2cdeae9f26f221496046c5cfbd3d8e46bf9d7e35a39c138458ea3e136749c",
+    "tests/test_methodology.py": "f51ea97677171b84a5183cf0a49d3da068dc00139a694f9890ae4cb25cb9eb44",
+    "tests/test_regressions.py": "8f50f06894c5cd78afca894e48dda6ff40ab0a5b0d85b42b42c29cbbdae520af",
+    "tests/test_score.py": "3ef3d0c7f586b5a238fc25f248c342442d92e420af16c88ca55df82089f5ddfe"
+  },
+  "cases": [
+    {
+      "label": "cn24-runs",
+      "argv": [
+        "runs",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.006,
+      "stdout_chars": 232,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn24-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 1490,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn24-pulls",
+      "argv": [
+        "pulls",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 1350,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn24-deaths",
+      "argv": [
+        "deaths",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.005,
+      "stdout_chars": 6065,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn24-interrupts",
+      "argv": [
+        "interrupts",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 2183,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn24-damage",
+      "argv": [
+        "damage",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.005,
+      "stdout_chars": 3127,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn24-compare",
+      "argv": [
+        "compare",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.007,
+      "stdout_chars": 1817,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn24-score",
+      "argv": [
+        "score",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.008,
+      "stdout_chars": 2579,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn24-deaths-full",
+      "argv": [
+        "deaths",
+        "https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1",
+        "--detail",
+        "100",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.004,
+      "stdout_chars": 6065,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-runs",
+      "argv": [
+        "runs",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-pulls",
+      "argv": [
+        "pulls",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-deaths",
+      "argv": [
+        "deaths",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-interrupts",
+      "argv": [
+        "interrupts",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-damage",
+      "argv": [
+        "damage",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-compare",
+      "argv": [
+        "compare",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.004,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-score",
+      "argv": [
+        "score",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu11-deaths-full",
+      "argv": [
+        "deaths",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=15",
+        "--detail",
+        "100",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-runs",
+      "argv": [
+        "runs",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-pulls",
+      "argv": [
+        "pulls",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-deaths",
+      "argv": [
+        "deaths",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-interrupts",
+      "argv": [
+        "interrupts",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-damage",
+      "argv": [
+        "damage",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-compare",
+      "argv": [
+        "compare",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-score",
+      "argv": [
+        "score",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-deaths-full",
+      "argv": [
+        "deaths",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--detail",
+        "100",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-interrupts-pull8",
+      "argv": [
+        "interrupts",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--pull",
+        "8",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-damage-ability270003",
+      "argv": [
+        "damage",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--ability",
+        "270003",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-damage-blade-storm",
+      "argv": [
+        "damage",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--ability",
+        "剑刃风暴",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-damage-ability270928",
+      "argv": [
+        "damage",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--ability",
+        "270928",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-player-Nikey",
+      "argv": [
+        "player",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "Nikey",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-player-Ysavia",
+      "argv": [
+        "player",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "Ysavia",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-player-Xervdh",
+      "argv": [
+        "player",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "Xervdh",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-player-ability",
+      "argv": [
+        "player",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "Nikey",
+        "--ability",
+        "193455",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-player-Hell-ability108271",
+      "argv": [
+        "player",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "Hêll",
+        "--ability",
+        "108271",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-events-pull8-enemy",
+      "argv": [
+        "events",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--pull",
+        "8",
+        "--type",
+        "enemy-casts",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-events-pull8-interrupts",
+      "argv": [
+        "events",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--pull",
+        "8",
+        "--type",
+        "interrupts",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.004,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-events-frontal",
+      "argv": [
+        "events",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--from",
+        "0:56",
+        "--to",
+        "1:10",
+        "--type",
+        "all",
+        "--ability",
+        "270003",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-events-disease",
+      "argv": [
+        "events",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--from",
+        "11:59",
+        "--to",
+        "12:10",
+        "--type",
+        "all",
+        "--ability",
+        "267763",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-score-no-compare",
+      "argv": [
+        "score",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--no-compare",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-spec-Nikey",
+      "argv": [
+        "spec",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "Nikey",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu12-score-judgments",
+      "argv": [
+        "score",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--judgments",
+        "/Users/xialiqun/.t3/projects/wcl-raider/tests/records/2026-11-06-r2-verification/historical-sol-judgments.json",
+        "--max-chars",
+        "0"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "us2-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/tgC7LXH1PJyRpKfj#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "eu5-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=29"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "kr9-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/2D6YH98bdKkqAMz1#fight=5"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "tw5-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/AhMVrbJgZxPWq7nQ#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "cn2-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/nQcvWw29qgzkFNyd#fight=1"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.002,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "abandoned-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/yWF7rmM2BTtzP41Q#fight=12"
+      ],
+      "expected_exit": 0,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.004,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "raid-overview",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/1WGqgPTy62FRwDnZ#fight=1"
+      ],
+      "expected_exit": 2,
+      "exit_code": 2,
+      "status": "PASS",
+      "elapsed_seconds": 0.001,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "cli-help",
+      "argv": [
+        "--help"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "status": "PASS",
+      "elapsed_seconds": 0.001,
+      "stdout_chars": 950,
+      "truncation_notice": false
+    },
+    {
+      "label": "invalid-report",
+      "argv": [
+        "overview",
+        "not-a-report"
+      ],
+      "expected_exit": 2,
+      "exit_code": 2,
+      "status": "PASS",
+      "elapsed_seconds": 0.001,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "invalid-pull",
+      "argv": [
+        "interrupts",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--pull",
+        "0"
+      ],
+      "expected_exit": 2,
+      "exit_code": 2,
+      "status": "PASS",
+      "elapsed_seconds": 0.001,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "invalid-max-chars",
+      "argv": [
+        "deaths",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--max-chars",
+        "-1"
+      ],
+      "expected_exit": 2,
+      "exit_code": 2,
+      "status": "PASS",
+      "elapsed_seconds": 0.001,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "invalid-window",
+      "argv": [
+        "deaths",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--window",
+        "nan"
+      ],
+      "expected_exit": 2,
+      "exit_code": 2,
+      "status": "PASS",
+      "elapsed_seconds": 0.001,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "missing-fight",
+      "argv": [
+        "overview",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--fight",
+        "99999"
+      ],
+      "expected_exit": 2,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "missing-player",
+      "argv": [
+        "player",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "NonexistentPlayerForVerification"
+      ],
+      "expected_exit": 2,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.004,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    },
+    {
+      "label": "missing-pull",
+      "argv": [
+        "interrupts",
+        "https://www.warcraftlogs.com/reports/QkyF9vA2hC7qJzGY#fight=3",
+        "--pull",
+        "99999"
+      ],
+      "expected_exit": 2,
+      "exit_code": 2,
+      "status": "CACHE_MISS",
+      "elapsed_seconds": 0.003,
+      "stdout_chars": 0,
+      "truncation_notice": false
+    }
+  ]
+}

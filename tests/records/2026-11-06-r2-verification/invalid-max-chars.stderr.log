@@ -1,0 +1,4 @@
+usage: wcl.py deaths [-h] [--fight FIGHT] [--max-chars MAX_CHARS]
+                     [--detail DETAIL] [--window WINDOW]
+                     report
+wcl.py deaths: error: argument --max-chars: 必须大于等于 0

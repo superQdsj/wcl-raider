@@ -1,0 +1,4 @@
+usage: wcl.py deaths [-h] [--fight FIGHT] [--max-chars MAX_CHARS]
+                     [--detail DETAIL] [--window WINDOW]
+                     report
+wcl.py deaths: error: argument --window: 秒数必须是大于 0 的有限数值
