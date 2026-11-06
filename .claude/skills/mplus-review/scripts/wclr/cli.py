@@ -27,6 +27,10 @@ COMMANDS = {
     "spec": "与同专精顶尖玩家对比技能施放频率（CPM）与活跃时间",
     "events": "原始事件钻取：按时间窗口/波次/类型/玩家/技能过滤",
     "score": "评分卡：团队与个人的数据分（0.0–10.0，附计算依据）",
+    "tactics": "应对技巧：常规循环之外的技能在什么情境下使用、应对了哪些敌方机制（驱散/消除/免疫/反射/伴随）",
+    "spell": "查技能资料（Wowhead）：名称、驱散类型、说明文字",
+    "find": "按副本名（可加职业）找带日志的高分记录，给出链接（不需要报告）",
+    "render": "把应对技巧报告 JSON 排成本地 HTML（可导出 PDF / PNG / Markdown）",
     "query": "执行任意 GraphQL（调试/补充查询用）",
     "points": "查看 WCL API 本小时点数余量",
 }
@@ -123,6 +127,32 @@ def build_parser() -> argparse.ArgumentParser:
     p = add("score")
     p.add_argument("--judgments", help="已核实的结构化判断 JSON 文件（可躲技能、死亡归因、技能运用；格式见 references/scoring.md）")
     p.add_argument("--no-compare", action="store_true", help="不拉取同层高分记录（关键打断为 N/A，不给出暴露偏离候选）")
+    p = add("tactics")
+    p.add_argument("--player", help="只看某名玩家（名称片段或 坦克/治疗）")
+    p.add_argument("--ability", help="逐次列出某个额外技能每次使用的情境（技能 ID 或名称片段）")
+    p.add_argument("--top", type=_positive, default=12, help="每名玩家列出的技能数、每张表的行数基数（默认 12）")
+    p.add_argument("--detail", type=_positive, default=40, help="--ability 时最多列出多少次使用（默认 40）")
+    p.add_argument("--no-wowhead", action="store_true", help="不向 Wowhead 查询驱散类型与技能说明")
+    p.add_argument("--refs", type=_nonnegative, default=0,
+                   help="再分析 N 场同副本同层的高分记录做多场对照（默认 0；每场首次约 20–40 点）")
+    p.add_argument("--ref", action="append", metavar="报告", help="指定对照记录（链接或 CODE#fight，可重复）")
+    p.add_argument("--class", dest="cls", metavar="职业",
+                   help="只看某职业/专精（法师、冰法、Mage、奶骑…）；配合 --refs 时从该职业的个人排名里取对照，并输出跨场职业汇总")
+    p.set_defaults(max_chars=60000)  # 几张汇总表一起看才有意义（含多场对照），默认放宽
+    p = add("spell", report=False)
+    p.add_argument("ids", nargs="+", help="技能 ID（可多个）")
+    p = add("find", report=False)
+    p.add_argument("dungeon", help="副本名（中/英文片段，例如 毒牙祭坛）或 encounter ID")
+    p.add_argument("--class", dest="cls", metavar="职业", help="只找有该职业/专精的记录（法师、冰法、Mage…）")
+    p.add_argument("--level", type=_positive, help="钥石层数（默认全部层数）")
+    p.add_argument("--limit", type=_positive, default=8, help="列出多少条（默认 8）")
+    p = add("render", report=False)
+    p.add_argument("json", help="报告 JSON（格式见 mplus-tactics/references/report-schema.md）")
+    p.add_argument("--out", help="HTML 输出路径（默认与 JSON 同名 .html）")
+    p.add_argument("--pdf", help="同时导出 PDF 到这个路径（含附录）")
+    p.add_argument("--png", help="同时导出整页 PNG 到这个路径（不含附录）")
+    p.add_argument("--md", help="同时导出 Markdown 到这个路径")
+    p.add_argument("--force", action="store_true", help="检查不通过也照样渲染（只在确有必要时用）")
     p = add("query", report=False)
     p.add_argument("graphql", help="GraphQL 查询文本，或 @文件路径")
     p.add_argument("--vars", help="JSON 变量")
@@ -184,6 +214,15 @@ def dispatch(client: Client, args: argparse.Namespace) -> str:
             note = f"\n…（已截断，共 {len(out)} 字符；用 --max-chars 0 查看全部）"
             out = out[:max(0, args.max_chars - len(note))] + note[:args.max_chars]
         return out
+    if cmd == "spell":
+        return cmd_spell(client, args.ids)
+    if cmd == "find":
+        from .cmd_find import cmd_find
+        return cmd_find(client, args.dungeon, args.cls, level=args.level, limit=args.limit)
+    if cmd == "render":
+        from .report import cmd_render
+        return cmd_render(args.json, out=args.out, pdf=args.pdf, png=args.png, md=args.md, force=args.force,
+                          lang=client.lang)
     if cmd == "runs":
         from .cmd_overview import cmd_runs
         return cmd_runs(client, args.report)
@@ -226,4 +265,27 @@ def dispatch(client: Client, args: argparse.Namespace) -> str:
     if cmd == "score":
         from .cmd_score import cmd_score
         return cmd_score(run, use_compare=not args.no_compare, judgments=args.judgments)
+    if cmd == "tactics":
+        from .cmd_tactics import cmd_tactics
+        return cmd_tactics(run, player=args.player, ability=args.ability, top=args.top, detail=args.detail,
+                           wowhead=not args.no_wowhead, refs=args.refs, explicit=args.ref, cls_text=args.cls)
     raise WCLError(f"未知命令：{cmd}")
+
+
+def cmd_spell(client: Client, ids: List[str]) -> str:
+    from .wowhead import spell
+    out = []
+    for raw in ids:
+        if not raw.strip().isdigit():
+            raise WCLError(f"技能 ID 必须是数字：{raw}")
+        info = spell(int(raw), client.lang)
+        if not info:
+            out.append(f"## {raw}\n（Wowhead 没有返回该技能，或网络不可用；可人工查看 https://www.wowhead.com/spell={raw}）")
+            continue
+        parts = [f"## {info['name']}（{raw}）" + (f" · 驱散类型：{info['dispel']}" if info.get("dispel") else ""),
+                 info.get("description") or "（无说明）"]
+        if info.get("aura"):
+            parts.append("减益/增益效果：" + info["aura"].replace("\n", " / "))
+        parts.append(f"https://www.wowhead.com/spell={raw}")
+        out.append("\n".join(parts))
+    return "\n\n".join(out)

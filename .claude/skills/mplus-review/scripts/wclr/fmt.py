@@ -29,6 +29,54 @@ SPEC_ZH = {
 
 ROLE_ZH = {"tank": "坦克", "healer": "治疗", "dps": "输出", "unknown": "未知"}
 
+CLASS_ALIASES = {
+    "DeathKnight": ["死亡骑士", "死骑", "dk", "deathknight", "death knight"],
+    "DemonHunter": ["恶魔猎手", "dh", "demonhunter", "demon hunter", "瞎子"],
+    "Druid": ["德鲁伊", "小德", "xd", "druid", "德"],
+    "Evoker": ["唤魔师", "龙人", "evoker"],
+    "Hunter": ["猎人", "lr", "hunter", "猎"],
+    "Mage": ["法师", "法爷", "fs", "mage", "法"],
+    "Monk": ["武僧", "ws", "monk"],
+    "Paladin": ["圣骑士", "骑士", "qs", "paladin", "骑"],
+    "Priest": ["牧师", "ms", "priest", "牧"],
+    "Rogue": ["潜行者", "盗贼", "贼", "dz", "rogue"],
+    "Shaman": ["萨满祭司", "萨满", "sm", "shaman", "萨"],
+    "Warlock": ["术士", "ss", "warlock", "术"],
+    "Warrior": ["战士", "zs", "warrior", "战"],
+}
+
+
+def parse_class(text: str) -> "tuple[str, Optional[str]]":
+    """'法师' / 'Mage' / '冰法' / '冰霜法师' / 'frost mage' -> ('Mage', 'Frost' 或 None)。认不出时抛 ValueError。"""
+    q = (text or "").strip().lower()
+    if not q:
+        raise ValueError("请指定职业")
+    best = None
+    for cls, names in CLASS_ALIASES.items():
+        for n in names:
+            if n in q and (best is None or len(n) > len(best[1])):
+                best = (cls, n)
+    specs = {sp: zh for (c, sp), zh in SPEC_ZH.items()}
+    if best is None:  # 只写了专精简称，例如"冰法""奶骑"由下面处理；纯专精名需带职业
+        short = {"奶骑": ("Paladin", "Holy"), "奶萨": ("Shaman", "Restoration"), "奶德": ("Druid", "Restoration"),
+                 "奶牧": ("Priest", "Holy"), "冰法": ("Mage", "Frost"), "火法": ("Mage", "Fire"), "奥法": ("Mage", "Arcane")}
+        for k, v in short.items():
+            if k in q:
+                return v
+        raise ValueError(f"认不出职业：{text}（可写 法师 / Mage / 冰法 / 冰霜法师）")
+    cls = best[0]
+    rest = q.replace(best[1], "")
+    for (c, sp), zh in SPEC_ZH.items():
+        if c != cls:
+            continue
+        if zh in rest or sp.lower() in rest or (rest and len(rest) <= 2 and rest[0] == zh[0]):
+            return cls, sp
+    if rest.startswith("奶") and cls in ("Paladin", "Shaman", "Druid", "Priest", "Monk", "Evoker"):
+        heal = {"Paladin": "Holy", "Shaman": "Restoration", "Druid": "Restoration", "Priest": "Holy",
+                "Monk": "Mistweaver", "Evoker": "Preservation"}
+        return cls, heal[cls]
+    return cls, None
+
 
 def class_spec(cls: str, spec: str) -> str:
     """职业-专精中文名；未知的新专精（如午夜的 DH Devourer）保留英文。"""

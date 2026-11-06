@@ -1,0 +1,86 @@
+{
+  "kind": "class",
+  "class": "Mage",
+  "class_name": "法师",
+  "title": "法师 · 毒牙祭坛 应对手册",
+  "dungeon": "毒牙祭坛",
+  "date": "2026-11-01",
+  "meta": [
+    {"label": "数据", "value": "3 场 +23 限时高分记录"},
+    {"label": "玩家", "value": "奥术 ×2 · 火焰 ×1（3 支队伍）"},
+    {"label": "日期", "value": "2026-11-01"}
+  ],
+  "summary": "这个副本法师没有硬解机制的技巧，关键是把减伤交在对的读条上：拉维的践踏、第 8 波的剧毒涌动、尾王的毒牙仪式。",
+  "highlights": [
+    {"signal": "拉维 践踏读条", "action": {"spell": "操控时间", "id": 342245, "type": "减伤"},
+     "note": "先开、吃完践踏再回溯，3 场法师都这样打。", "where": "首领 1"},
+    {"signal": "麻痹射击上身", "action": {"spell": "棱光护体", "id": 235450, "type": "自解"},
+     "note": "开盾顺手解掉减速（需天赋「充能护体」，奥术）。", "where": "开场小怪"},
+    {"signal": "剧毒涌动读条", "action": {"spell": "深寒凝冰", "id": 414658, "type": "减伤"},
+     "note": "和鲜血献祭叠在一起，是第 8 波最疼的一下。", "where": "第 8 波"}
+  ],
+  "toolbox": [
+    {"spell": "操控时间", "id": 342245, "type": "减伤", "handles": "践踏、剧毒涌动、毒牙仪式", "timing": "大伤害前开", "usage": 3},
+    {"spell": "棱光护体", "id": 235450, "type": "自解", "handles": "麻痹射击的减速", "timing": "上身后", "usage": 2, "spec": "奥术"},
+    {"spell": "深寒凝冰", "id": 414658, "type": "减伤", "handles": "鲜血献祭、剧毒涌动", "timing": "大伤害前", "usage": 3},
+    {"spell": "镜像", "id": 55342, "type": "减伤", "handles": "小怪段的零碎伤害", "timing": "冷却好就用", "usage": 3},
+    {"spell": "闪光术", "id": 212653, "type": "走位", "handles": "地面、正面技能", "timing": "走位", "usage": 3}
+  ],
+  "route": [
+    {"kind": "trash", "name": "小怪 · 开场 → 拉维", "rows": [
+      {"mechanic": "麻痹射击", "mechanic_id": 1294569, "tags": ["魔法", "减速"], "signal": "减益上身",
+       "action": {"spell": "棱光护体", "id": 235450, "type": "自解"}, "why": "开盾时移除减速"},
+      {"mechanic": "鲜血献祭", "mechanic_id": 1306550, "tags": ["全团"], "signal": "献祭读条",
+       "action": {"spell": "深寒凝冰", "id": 414658, "type": "减伤"}, "why": "顶住大段伤害"}
+    ]},
+    {"kind": "boss", "name": "首领 1 · 拉维", "rows": [
+      {"mechanic": "贪婪践踏", "mechanic_id": 1307894, "tags": ["全团", "读条"], "signal": "践踏读条",
+       "action": {"spell": "操控时间", "id": 342245, "type": "减伤"}, "why": "吃完伤害再回溯"},
+      {"mechanic": "三重喷吐", "mechanic_id": 1297876, "tags": ["点名", "不可驱散"], "signal": "被毒球点名",
+       "action": {"spell": "棱光护体", "id": 235450, "type": "减伤"}, "why": "吸收毒球伤害"}
+    ], "tip": {"kind": "tip", "text": "闪光术在这一段只是走位，不针对某个技能。"}},
+    {"kind": "trash", "name": "小怪 · 扭缠盘蛇 → 祖尔加", "rows": [
+      {"mechanic": "剧毒涌动", "mechanic_id": 1306852, "tags": ["全团", "读条"], "signal": "涌动读条",
+       "action": {"spell": "操控时间", "id": 342245, "type": "减伤"}, "why": "吃完伤害再回溯"},
+      {"mechanic": "剧毒涌动", "mechanic_id": 1306852, "tags": ["全团", "读条"], "signal": "操控时间没好",
+       "action": {"spell": "深寒凝冰", "id": 414658, "type": "减伤"}, "why": "备用减伤"}
+    ], "tip": {"kind": "warn", "text": "这一波剧毒涌动常和鲜血献祭一起来，减伤提前排好。"}},
+    {"kind": "boss", "name": "首领 3 · 祖尔加", "number": 3, "rows": [
+      {"mechanic": "毒牙仪式", "mechanic_id": 1300885, "tags": ["读条"], "signal": "仪式光束开始",
+       "action": {"spell": "操控时间", "id": 342245, "type": "减伤"}, "why": "吃完光束再回溯"},
+      {"mechanic": "切骨者", "mechanic_id": 1301508, "tags": ["正面"], "signal": "首领转向你",
+       "action": {"spell": "闪光术", "id": 212653, "type": "走位"}, "why": "闪出正面"}
+    ]}
+  ],
+  "debuffs": [
+    {"name": "麻痹射击", "id": 1294569, "tags": ["魔法", "减速"], "self": "棱光护体（需充能护体）", "handling": "治疗驱散"},
+    {"name": "毒伤", "id": 1307571, "tags": ["中毒"], "self": null, "handling": "萨满清毒图腾、骑士清洁术"},
+    {"name": "鲜血献祭", "id": 1306550, "tags": [], "self": null, "handling": "减伤顶住，治疗刷掉"},
+    {"name": "淬毒之刃", "id": 1308518, "tags": ["中毒"], "self": null, "handling": "持续很短，不用处理"}
+  ],
+  "unclear": [
+    {"title": "寒冰屏障", "text": "3 名法师都点了深寒凝冰，没人带寒冰屏障；它能免疫哪些机制，数据里看不到。"},
+    {"title": "强化隐形术", "text": "开场小怪段常在图腾附近用，图腾伤害很低，看不出是在应对什么。"},
+    {"title": "棱光护体", "text": "麻痹射击消失也可能来自护体缩短魔法效果，天赋看不到，只能推断。"}
+  ],
+  "appendix": {
+    "runs": [
+      {"code": "8TJn1BRPqLQdab2F", "fight": 16, "level": "+23", "result": "限时 +1", "players": "Khaelt（奥术）", "team": "A"},
+      {"code": "bVvgmyZ1FM6p9C8R", "fight": 1, "level": "+23", "result": "限时 +1", "players": "青山小法（火焰）", "team": "B"},
+      {"code": "wfk3x7Pb8CAMY9Vz", "fight": 9, "level": "+23", "result": "限时 +1", "players": "幽瑟天空（奥术）", "team": "C"}
+    ],
+    "runs_note": "三支队伍各一名法师；棱光护体、深寒凝冰只有奥术在用，常用度按奥术场次算。",
+    "evidence": [
+      {"mechanic": "贪婪践踏", "response": "操控时间", "evidence": "首领 1 段 3/3 场，15 次中 11 次在践踏读条后（4.9 倍）", "strength": "中"},
+      {"mechanic": "麻痹射击", "response": "棱光护体", "evidence": "推断消除 5 次，2/3 场（两名奥术）", "strength": "中"},
+      {"mechanic": "剧毒涌动", "response": "操控时间 / 深寒凝冰", "evidence": "3/3 场，读条后占 60% / 40%（7.3 / 4.9 倍），次数少", "strength": "弱"},
+      {"mechanic": "毒牙仪式", "response": "操控时间", "evidence": "2/3 场 11 次，被光束打中占 64%（2.1 倍）", "strength": "弱"},
+      {"mechanic": "切骨者", "response": "闪光术", "evidence": "3/3 场 16 次，被切骨者打中占 62%（1.6 倍）", "strength": "弱"}
+    ],
+    "verify": [
+      "wcl tactics https://www.warcraftlogs.com/reports/8TJn1BRPqLQdab2F#fight=16 --class 法师 --ability 操控时间",
+      "wcl tactics https://www.warcraftlogs.com/reports/8TJn1BRPqLQdab2F#fight=16 --class 法师 --ability 棱光护体"
+    ],
+    "notes": "数据来自 wcl tactics --class 法师 --refs 2；口径见 data-notes.md「应对技巧（tactics）」。天赋看不到，写「需天赋」的为行为推断。"
+  }
+}

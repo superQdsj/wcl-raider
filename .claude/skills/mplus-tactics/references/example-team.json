@@ -1,0 +1,50 @@
+{
+  "kind": "team",
+  "title": "毒牙祭坛 +24 · 高手怎么处理机制",
+  "dungeon": "毒牙祭坛",
+  "date": "2026-10-24",
+  "meta": [
+    {"label": "结果", "value": "限时 +1（29:50 / 30:00）"},
+    {"label": "阵容", "value": "鲜血 DK / 神圣骑 / 敏锐贼 / 元素萨 / 武器战"},
+    {"label": "对照", "value": "3 场高分记录，来自 2 支队伍"}
+  ],
+  "summary": "战士反读条、奶骑秒驱麻痹射击、奶骑牺牲接圣盾，是这个副本最值得抄的三件事。",
+  "highlights": [
+    {"who": "战士", "signal": "三重喷吐 / 同步毒液读条", "action": {"spell": "法术反射", "id": 23920, "type": "反射"},
+     "note": "同步毒液每次读条都能反掉，自己不吃长 DoT。", "where": "首领 1、2"},
+    {"who": "奶骑", "signal": "麻痹射击上身", "action": {"spell": "清洁术", "id": 4987, "type": "驱散"},
+     "note": "拖久了人会瘫在原地，优先驱正在挨打的人。", "where": "双牙蹂躏者"},
+    {"who": "奶骑", "signal": "大范围 DoT 来时", "action": {"spell": "圣盾术", "id": 642, "type": "免疫"},
+     "note": "先给队友牺牲祝福再开圣盾，转来的伤害全变 0。", "where": "全程"}
+  ],
+  "route": [
+    {"kind": "trash", "name": "小怪 · 开场 → 拉维", "rows": [
+      {"mechanic": "麻痹射击", "mechanic_id": 1294569, "tags": ["魔法", "减速"], "signal": "减益上身", "who": "奶骑",
+       "action": {"spell": "清洁术", "id": 4987, "type": "驱散"}, "why": "越拖减速越重"},
+      {"mechanic": "麻痹射击", "mechanic_id": 1294569, "tags": ["魔法", "减速"], "signal": "看到读条", "who": "奶骑",
+       "action": {"spell": "自由祝福", "id": 1044, "type": "外部"}, "why": "这一发直接免疫"},
+      {"mechanic": "毒素吐息", "mechanic_id": 1306669, "tags": ["正面"], "signal": "吐息读条", "who": "DK 坦克",
+       "action": {"spell": "反魔法护罩", "id": 48707, "type": "减伤"}, "why": "整段吐息免疫"}
+    ], "tip": {"kind": "warn", "text": "非坦克别站双牙正面，被吐中基本活不了。"}},
+    {"kind": "boss", "name": "首领 1 · 拉维", "rows": [
+      {"mechanic": "三重喷吐", "mechanic_id": 1297876, "tags": ["点名", "不可驱散"], "signal": "读条前半段", "who": "战士",
+       "action": {"spell": "法术反射", "id": 23920, "type": "反射"}, "why": "球直接反回去"},
+      {"mechanic": "三重喷吐", "mechanic_id": 1297876, "tags": ["点名", "不可驱散"], "signal": "被点中后", "who": "潜行者",
+       "action": {"spell": "暗影斗篷", "id": 31224, "type": "自解"}, "why": "DoT 当场消失"}
+    ]},
+    {"kind": "boss", "name": "首领 2 · 扭缠盘蛇", "rows": [
+      {"mechanic": "同步毒液", "mechanic_id": 1299189, "tags": ["全团", "读条"], "signal": "读条开始", "who": "战士",
+       "action": {"spell": "法术反射", "id": 23920, "type": "反射"}, "why": "不吃长 DoT"}
+    ], "tip": {"kind": "tip", "text": "藤蔓连上后全员往外散到 10 码，首领才会解除盘卷。"}}
+  ],
+  "unclear": [
+    {"title": "牺牲祝福驱毒伤", "text": "只见过一次，可能点了「正义保护」，还不能确定。"}
+  ],
+  "appendix": {
+    "evidence": [
+      {"mechanic": "同步毒液", "response": "战士·法术反射", "evidence": "反射 3/3；另一队 3/4 场", "strength": "强"},
+      {"mechanic": "麻痹射击", "response": "奶骑·清洁术", "evidence": "驱散 14 次；4/4 场", "strength": "强"}
+    ],
+    "notes": "天赋看不到，写「推断」的为行为推断。"
+  }
+}

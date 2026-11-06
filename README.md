@@ -30,6 +30,18 @@
 把 skill 链接到个人 skill 目录：
 ```bash
 ln -s "$(pwd)/.claude/skills/mplus-review" ~/.claude/skills/mplus-review
+ln -s "$(pwd)/.claude/skills/mplus-tactics" ~/.claude/skills/mplus-tactics   # 依赖同级的 mplus-review
+```
+
+## 应对技巧复盘（mplus-tactics）
+
+另一个 skill：从高水准记录里学习**各职业在常规循环之外用了哪些技能、什么时机、在应对哪个机制**——例如圣骑士自由祝福解定身、战士法术反射反掉读条、潜行者暗影斗篷清魔法、奶骑先牺牲祝福再圣盾术。工具会还原每一次使用时身上的减益、前后几秒的敌方读条、血线，以及之后发生了什么（驱散、减益消失、免疫/反射），再按"敌方机制 → 被什么技能应对"汇总，可选多场高分记录对照。
+
+```
+/mplus-tactics https://www.warcraftlogs.com/reports/XXXXXXXXXXXXXXXX#fight=5
+/mplus-tactics <链接> 多场对照            # 再拉 3 场同副本高分记录，看哪些做法是共识
+/mplus-tactics <高分链接> 我的记录 <链接>  # 对照自己的记录，找漏掉的技巧
+/mplus-tactics 法师在毒牙祭坛要在什么时机用哪些技能应对哪些机制？   # 职业专题：自动找有法师的高分记录
 ```
 
 ## 数据工具
@@ -51,6 +63,10 @@ python3 $W player   <链接> <玩家>     # 单人深挖
 python3 $W spec     <链接> <玩家>     # 与同专精顶尖玩家对比 CPM
 python3 $W events   <链接> --pull 7 --type interrupts   # 原始事件钻取
 python3 $W score    <链接>            # 评分卡
+python3 $W tactics  <链接> [--refs 3] [--ability 技能] [--player 玩家] [--class 职业]   # 应对技巧：额外技能的情境与效果
+python3 $W find     <副本名> [--class 职业] [--level N]   # 没有链接时找高分记录
+python3 $W render   <报告.json> [--pdf x.pdf] [--png x.png] [--md x.md]   # 报告排版：本地 HTML，可导出 PDF/PNG（需 playwright + Chrome）
+python3 $W spell    <技能ID…>         # Wowhead 技能说明与驱散类型
 python3 $W --help
 ```
 
@@ -68,6 +84,9 @@ python3 $W --help
 ## 目录结构
 
 ```
+.claude/skills/mplus-tactics/   # 应对技巧复盘（共用 mplus-review 的数据工具）
+├── SKILL.md
+└── references/              # 方法（method）、职业应对手段速查（class-counters）、报告模板
 .claude/skills/mplus-review/
 ├── SKILL.md                 # 复盘流程（agent 的工作说明）
 ├── references/
