@@ -10,6 +10,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from . import data, fmt
 from .context import Run
+from .spells import CHEAT_DEATH, CHEAT_DEATH_COOLDOWN
 
 
 @dataclass
@@ -22,6 +23,7 @@ class Dip:
     died: bool = False
     damage: Dict[int, float] = field(default_factory=dict)  # 跌到最低前 6 秒的承伤，按技能
     sources: Dict[int, str] = field(default_factory=dict)
+    cheat: str = ""   # 最低点前后 3 秒内触发的免死效果（名称）
 
 
 def hp_points(events: Sequence[Dict[str, Any]], players: Sequence[int]) -> Dict[int, List[Tuple[float, float]]]:
@@ -105,7 +107,12 @@ def cmd_danger(run: Run, threshold: float = 35.0, team_below: float = 50.0, top:
                                   limit=200000),
         "heal": lambda: data.events(run, data_type="Healing", hostility="Friendlies", include_resources=True,
                                     limit=200000),
+        "cheat": lambda: data.events(run, data_type="All", hostility="Friendlies", limit=2000,
+                                     expr="type in (\"applybuff\", \"applydebuff\", \"heal\") and ability.id in ("
+                                          + ", ".join(str(x) for x in sorted(CHEAT_DEATH)) + ")"),
     })
+    cheat_evs = sorted((e for e in (got.get("cheat") or ([], False))[0] if e.get("targetID") in run.players),
+                       key=lambda e: (e.get("abilityGameID") in CHEAT_DEATH_COOLDOWN, e["timestamp"]))
     evs, truncated = got["dt"]
     heals, heal_trunc = got["heal"]
     truncated = truncated or heal_trunc
@@ -132,6 +139,11 @@ def cmd_danger(run: Run, threshold: float = 35.0, team_below: float = 50.0, top:
                 dip.damage[gid] = dip.damage.get(gid, 0.0) + amt
                 dip.sources.setdefault(gid, run.actor_name(e.get("sourceID"), e.get("sourceInstance")))
 
+    for dip in dips:
+        for e in cheat_evs:
+            if e.get("targetID") == dip.pid and dip.low_ts - 3000 <= e["timestamp"] <= dip.low_ts + 3000:
+                dip.cheat = run.ab(e.get("abilityGameID"))
+                break
     alive = [d for d in dips if not d.died]
     alive.sort(key=lambda d: d.low_pct)
     lines = [f"# 险情 — {run.header()}",
@@ -176,7 +188,10 @@ def cmd_danger(run: Run, threshold: float = 35.0, team_below: float = 50.0, top:
             top_ab = sorted(abil.items(), key=lambda kv: -kv[1])[:3]
             dead_after = [run.players[pid].name for pid, _ in who
                           if any(ts - 2000 <= t <= ts + 10000 for t in death_ts.get(pid, []))]
-            trow.append([run.t(ts), run.pull_tag(ts), "、".join(f"{run.players[pid].name} {pct:.0f}%" for pid, pct in who),
+            def _cheat(pid: int) -> str:
+                hit = next((e for e in cheat_evs if e.get("targetID") == pid and ts - 6000 <= e["timestamp"] <= ts + 3000), None)
+                return f"（免死：{run.ab(hit.get('abilityGameID'))}）" if hit else ""
+            trow.append([run.t(ts), run.pull_tag(ts), "、".join(f"{run.players[pid].name} {pct:.0f}%{_cheat(pid)}" for pid, pct in who),
                          "、".join(f"{run.ab(g)}({g})" for g, _ in top_ab) or "—", "、".join(dead_after) or "—"])
         lines += ["", f"## 团队险情（{len(team)} 次）",
                   fmt.table(["时间", "波", "同时低血的人（最低血量）", "前 6 秒主要伤害", "随后死亡"], trow),
@@ -191,10 +206,11 @@ def cmd_danger(run: Run, threshold: float = 35.0, team_below: float = 50.0, top:
         top_ab = sorted(d.damage.items(), key=lambda kv: -kv[1])[:3]
         total = sum(d.damage.values()) or 1.0
         irow.append([run.t(d.low_ts, True), run.pull_tag(d.low_ts), p.name, fmt.ROLE_ZH.get(p.role, p.role),
-                     f"{d.low_pct:.0f}%", f"{max(0.1, (d.end - d.start) / 1000):.1f}s",
+                     f"{d.low_pct:.0f}%" + (f"（免死：{d.cheat}）" if d.cheat else ""), f"{max(0.1, (d.end - d.start) / 1000):.1f}s",
                      "、".join(f"{run.ab(g)}({g}) {100 * v / total:.0f}%" for g, v in top_ab) or "—"])
     lines += ["", f"## 个人险情（没死，最危险的 {min(top, len(alive))} 次 / 共 {len(alive)} 次）",
               fmt.table(["最低点", "波", "玩家", "职责", "最低血量", f"低于 {threshold:g}% 到回 50%", "前 6 秒伤害构成"], irow),
+              "标\"免死\"的 = 致死伤害被免死效果（炼狱、灸灼、欺诈死亡等）挡住了：这一下本该死人，免死下一次不一定转好，按\"差点死\"处理。"
               "持续时间按受击/受治疗事件计算，误差约为两次事件的间隔。"
               "持续很短 = 一下被打到低血（爆发伤害，要提前减伤或躲开）；持续长 = 治疗或自保有一段跟不上。"]
 

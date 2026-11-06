@@ -261,6 +261,15 @@ class RefRun:
     deaths: int
     source: str               # "排名第N" / "指定"
     similarity: float = 0.0
+    fight_start: float = 0.0  # 报告相对毫秒，用于把分段时间换回报告时间
+
+    def boss_window(self, enc: int) -> Optional[Tuple[float, float]]:
+        """该首领击杀那一次的 (开始, 结束)，报告相对毫秒。"""
+        for s in self.segs:
+            for w in s.waves:
+                if w.encounter == enc and w.kill:
+                    return self.fight_start + w.start, self.fight_start + w.start + w.dur
+        return None
 
     @property
     def label(self) -> str:
@@ -294,7 +303,7 @@ def _fetch_ref(run: Run, code: str, fid: int, team: str, source: str) -> Optiona
                   kill=bool(f.get("kill")), keystone_time=f.get("keystoneTime"),
                   duration=f["endTime"] - f["startTime"], ilvl=f.get("averageItemLevel"), team=team,
                   segs=segs, names=names, weight={int(k): float(v or 0) for k, v in npc_count.items()},
-                  deaths=len(death_ts), source=source)
+                  deaths=len(death_ts), source=source, fight_start=float(f["startTime"]))
 
 
 def _candidates(run: Run, level: int, want: int) -> Tuple[List[Dict[str, Any]], str]:
@@ -335,6 +344,104 @@ def _resolve_ref(run: Run, ref: str) -> Tuple[str, int]:
     if not same:
         raise WCLError(f"参考报告 {code} 里没有 {run.dungeon} 的大秘境记录；请用 CODE#fight 指定。")
     return code, (next((f for f in reversed(same) if f.get("kill")), same[-1]))["id"]
+
+
+
+# ---------------------------------------------------------------- 首领战伤害去向
+
+@dataclass
+class BossDamage:
+    dur: float                       # 击杀那一次的首领战用时（毫秒）
+    boss: float                      # 打在首领本体（WCL type = Boss）上的伤害
+    other: Dict[str, float]          # 其他目标（机制刷出的小怪、一起拉的小怪）名称 -> 伤害
+    players: Dict[str, float]        # 玩家名 -> 打在首领本体上的伤害
+
+    @property
+    def boss_dps(self) -> float:
+        return self.boss / (self.dur / 1000.0) if self.dur > 0 else 0.0
+
+    @property
+    def other_total(self) -> float:
+        return sum(self.other.values())
+
+
+def boss_damage_from_entries(entries: Sequence[Dict[str, Any]], dur: float,
+                             boss_names: Sequence[str] = ()) -> BossDamage:
+    """DamageDone(viewBy: Target) 的条目 -> 首领本体 / 其他目标的伤害拆分。
+
+    首领本体 = WCL 标为 Boss 的单位；没有标 Boss 的单位时，按首领名称匹配（有的首领在 WCL 里是普通 NPC）。
+    两者都没有 = 这场首领战没有可直接伤害的本体（例如只打小怪的首领），boss 为 0。"""
+    entries = list(entries or [])
+    has_boss_type = any(e.get("type") == "Boss" for e in entries)
+    names = set(boss_names)
+    boss, other, players = 0.0, {}, {}
+    for e in entries:
+        total = float(e.get("total") or 0)
+        if e.get("type") == "Boss" or (not has_boss_type and e.get("name") in names):
+            boss += total
+            for src in e.get("sources") or []:
+                players[src.get("name") or "?"] = players.get(src.get("name") or "?", 0.0) + float(src.get("total") or 0)
+        else:
+            name = e.get("name") or "?"
+            other[name] = other.get(name, 0.0) + total
+    return BossDamage(dur=dur, boss=boss, other=other, players=players)
+
+
+def _boss_damage(run: Run, code: str, fid: int, windows: Dict[int, Tuple[float, float]],
+                 boss_names: Dict[int, List[str]]) -> Dict[int, BossDamage]:
+    if not windows:
+        return {}
+    parts = [f"b{enc}: table(dataType: DamageDone, viewBy: Target, fightIDs: [{fid}], startTime: {s:.0f}, endTime: {e:.0f})"
+             for enc, (s, e) in windows.items()]
+    q = 'query { reportData { report(code: "%s") { %s } } %s }' % (code, " ".join(parts), RATE)
+    payload = run.client.gql(q, ttl=7 * DAY, partial=True)
+    rep = (payload.get("reportData") or {}).get("report") or {}
+    out = {}
+    for enc, (s, e) in windows.items():
+        tbl = rep.get(f"b{enc}")
+        if tbl is None:
+            continue
+        out[enc] = boss_damage_from_entries(table_data(tbl).get("entries") or [], e - s, boss_names.get(enc, []))
+    return out
+
+
+def boss_hint(ours: BossDamage, refs: Sequence[BossDamage]) -> str:
+    """根据首领本体伤害、其他目标伤害和用时，给出"慢在哪"的客观线索（不是结论）。"""
+    if not refs:
+        return ""
+    med_dur = fmt.median([r.dur for r in refs]) or 0
+    if ours.dur - med_dur < 10000:
+        return ""
+    tips = []
+    fast = [r for r in refs if r.dur < ours.dur * 0.9]
+    slow = [r for r in refs if r.dur >= ours.dur * 0.9]
+    med_boss = fmt.median([r.boss for r in refs]) or 0
+    if ours.boss <= 0:
+        tips.append("这个首领没有可直接伤害的本体（首领战打的全是小怪/机制单位），看其他目标的伤害和击杀顺序。")
+    elif med_boss > 0 and abs(ours.boss - med_boss) / med_boss <= 0.1:
+        tips.append(f"首领本体承伤和参考相同（{fmt.num(ours.boss)} vs {fmt.num(med_boss)}），首领血量一样，差别在打得多快。")
+    if fast and slow:
+        f_other = fmt.median([r.other_total for r in fast]) or 0
+        s_other = fmt.median([r.other_total for r in slow]) or 0
+        tips.append(f"参考里 {len(slow)}/{len(refs)} 场和本场一样慢（{', '.join(fmt.clock(r.dur) for r in slow)}），"
+                    f"{len(fast)} 场快（{', '.join(fmt.clock(r.dur) for r in fast)}）：很可能存在击杀时间门槛"
+                    "（在某次阶段转换/刷怪前打死就少一轮）。")
+        if f_other > 0 and ours.other_total > f_other * 1.2:
+            tips.append(f"快的参考打其他目标 {fmt.num(f_other)}，慢的参考 {fmt.num(s_other)}，本场 {fmt.num(ours.other_total)}："
+                        "慢的几场多打了一轮小怪，符合多经历一轮阶段。用 `events --pull N --type enemy-casts` 数首领的阶段技能次数，"
+                        "看快的参考在第几次阶段前打死。")
+    elif fast:
+        f_other = fmt.median([r.other_total for r in fast]) or 0
+        if f_other > 0 and ours.other_total > f_other * 1.2:
+            tips.append(f"打在其他目标上的伤害是参考的 {ours.other_total / f_other:.1f} 倍（{fmt.num(ours.other_total)} vs "
+                        f"{fmt.num(f_other)}）：本场很可能多经历了一轮刷怪/阶段，或者在小怪上花了太多输出。")
+    if ours.boss > 0 and fast:
+        f_dur = fmt.median([r.dur for r in fast]) or 0
+        f_dps = fmt.median([r.boss_dps for r in fast]) or 0
+        need = ours.boss / (f_dur / 1000.0) if f_dur else 0
+        tips.append(f"要做到快的参考的用时 {fmt.clock(f_dur)}，打首领本体的团队 DPS 需要约 {fmt.num(need)}"
+                    f"（本场 {fmt.num(ours.boss_dps)}，快的参考 {fmt.num(f_dps)}）。")
+    return " ".join(tips)
 
 
 # ---------------------------------------------------------------- 命令
@@ -476,8 +583,54 @@ def cmd_splits(run: Run, refs: int = 3, candidates: int = 8, level: Optional[int
               "- 小怪战斗 = 段内战斗时间 − 首领战；脱战 = 段用时 − 战斗时间（跑路、等冷却、喝水、跑尸都在这里）。",
               "- 几波连着拉、中间不脱战会被 WCL 合并成一波，所以\"波数\"少不一定是拉得少。"]
 
+    # 首领战：伤害打在了哪里
+    our_windows = {p.encounter_id: (p.start, p.end) for p in run.pulls if p.is_boss and p.kill}
+    bnames: Dict[int, List[str]] = {}
+    for p in run.pulls:
+        if p.is_boss:
+            bnames.setdefault(p.encounter_id, list(p.boss_names) + [p.name])
+    dmg_tasks = {"ours": lambda: _boss_damage(run, run.code, run.fight_id, our_windows, bnames)}
+    for i, r in enumerate(chosen):
+        wins = {enc: w for enc in our_windows if (w := r.boss_window(enc))}
+        dmg_tasks[f"r{i}"] = (lambda r=r, wins=wins: _boss_damage(run, r.code, r.fid, wins, bnames))
+    try:
+        bd = parallel(dmg_tasks, workers=4)
+    except WCLError as exc:
+        bd = {}
+        lines += ["", "## 首领战：伤害打在了哪里", f"（获取失败：{exc}）"]
+    if bd:
+        hrow, hints, who = [], [], []
+        for enc in [s.encounter for s in ours if s.encounter in our_windows]:
+            o = (bd.get("ours") or {}).get(enc)
+            refs_bd = [x[enc] for k, x in bd.items() if k != "ours" and x and enc in x]
+            if not o:
+                continue
+            name = boss_names.get(enc, enc)
+
+            def med(attr: str) -> Optional[float]:
+                vals = [getattr(x, attr) for x in refs_bd]
+                return fmt.median(vals) if vals else None
+            m_dur, m_boss, m_other, m_dps = med("dur"), med("boss"), med("other_total"), med("boss_dps")
+            hrow.append([name, fmt.clock(o.dur), " / ".join(fmt.clock(x.dur) for x in refs_bd) or "—",
+                         f"{fmt.num(o.boss)} / {fmt.num(m_boss) if m_boss else '—'}" if o.boss else "无可伤害本体",
+                         f"{fmt.num(o.boss_dps)} / {fmt.num(m_dps) if m_dps else '—'}" if o.boss else "—",
+                         f"{fmt.num(o.other_total)} / {fmt.num(m_other) if m_other is not None else '—'}"])
+            hint = boss_hint(o, refs_bd)
+            if hint:
+                hints.append(f"- **{name}**（本场 {fmt.clock(o.dur)}，参考中位 {fmt.clock(m_dur) if m_dur else '—'}）：{hint}")
+                tot = o.boss or 1.0
+                if o.boss > 0:
+                    who.append(f"- {name} 打首领本体的伤害（本场）：" + "、".join(
+                        f"{n} {fmt.num(v)}（{100 * v / tot:.0f}%）" for n, v in sorted(o.players.items(), key=lambda kv: -kv[1])))
+        lines += ["", "## 首领战：伤害打在了哪里（本场 / 参考中位）",
+                  fmt.table(["首领", "本场用时", "各参考用时", "首领本体承伤", "打首领本体的团队DPS", "打其他目标的伤害"], hrow),
+                  "- 首领本体承伤 ≈ 首领血量，同层同词缀时各场应当相近；DPS = 首领本体承伤 ÷ 首领战用时。"
+                  "其他目标 = 首领战期间打在非首领单位上的伤害（机制刷出的小怪、一起拉的小怪）。"]
+        lines += (["", "线索（客观推算，原因要用 `events` 核实）："] + hints + who) if hints else \
+            ["- 各首领用时与参考相差都在 10 秒以内。"]
+
     # 波次对照
-    pace = fmt.median([our_total / r.duration for r in chosen if r.duration]) or 1.0
+    pace =fmt.median([our_total / r.duration for r in chosen if r.duration]) or 1.0
     wrows = []
     for k, seg in enumerate(ours):
         per_ref = []

@@ -4,6 +4,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Tuple
 
 from . import data, fmt
+from .spells import res_kind
 from .context import Run, esc, fetch
 from .cmd_interrupts import KICK_SPELLS
 
@@ -285,12 +286,18 @@ def cmd_deaths(run: Run, detail: int = 12, window: float = 10.0) -> str:
         ab_id = d.get("killingAbilityGameID") or kb.get("guid")
         killer = run.actor_name(d.get("killerID"), d.get("killerInstance")) if d.get("killerID") else "—"
         rz = rez_after(d)
-        rez_txt = (f"+{(rz['timestamp'] - d['timestamp']) / 1000:.0f}s {run.ab(rz.get('abilityGameID'))}←{run.actor_name(rz.get('sourceID'))}"
-                   if rz else "未战复")
+        if rz:
+            kind = res_kind(rz.get("abilityGameID"), rz.get("sourceID"), rz.get("targetID"))
+            rez_txt = (f"{kind}：+{(rz['timestamp'] - d['timestamp']) / 1000:.0f}s {run.ab(rz.get('abilityGameID'))}"
+                       + ("" if kind == "自我复活" else f"←{run.actor_name(rz.get('sourceID'))}"))
+        else:
+            rez_txt = "没人复活 → 释放灵魂跑尸（推断）"
         page = returns.get(f"r{i - 1}")
         action = first_return(d, (page or {}).get("data") or [])
         return_text = (f"+{(action['timestamp'] - d['timestamp']) / 1000:.1f}秒（{run.ab(action.get('abilityGameID'))}）"
                        if action else "300 秒内无动作")
+        if action and not rz:
+            return_text += "，在墓地复活后的第一个动作，回到队伍还要跑路"
         if page is None or (not action and page.get("nextPageTimestamp")):
             return_text = "回归记录不全（未知）"
         rows.append([i, run.t(d["timestamp"], True), run.pull_tag(d["timestamp"]), p.label,
@@ -298,11 +305,18 @@ def cmd_deaths(run: Run, detail: int = 12, window: float = 10.0) -> str:
                      fmt.num(te.get("overkill")) if te.get("overkill") else "—",
                      group_of.get(id(d), "—"), rez_txt, return_text])
     lines += ["", "## 死亡列表", fmt.table(["#", "时间", "波次", "玩家", "致死技能", "来源", "过量", "串", "复活", "回归"], rows),
-              "说明：复活列只记录 resurrect 事件，可能漏掉非常规复活；回归为死后 1–300 秒内首次主动施法（不含普攻、不含被动增益），"
-              "是缺席时长的上界，不是精确复活时间；搜索止于本场记录结束，结束后是否有动作未知。"]
+              "说明：复活列按复活事件的技能分类（战复 / 脱战复活 / 自我复活）；没有复活事件 = 没人复活他，"
+              "他是释放灵魂、在墓地复活后跑回来的（WCL 不记录释放灵魂，所以是推断；没有复活事件的特殊复活方式可能漏掉非常规复活）。"
+              "回归 = 死后 1–300 秒内首次主动施法（不含普攻、不含被动增益），是缺席时长的上界。被复活时，回归≈回到战斗；"
+              "跑尸时，回归只是在墓地复活的时间，真正回到队伍还要加上跑路时间。搜索止于本场记录结束。"]
     if rezzes:
-        lines.append(f"战斗中复活共 {len(rezzes)} 次：" + "；".join(
-            f"{run.t(r['timestamp'])} {run.actor_name(r.get('sourceID'))} → {run.actor_name(r.get('targetID'))}（{run.ab(r.get('abilityGameID'))}）"
+        kinds: Dict[str, int] = {}
+        for r in rezzes:
+            k = res_kind(r.get("abilityGameID"), r.get("sourceID"), r.get("targetID"))
+            kinds[k] = kinds.get(k, 0) + 1
+        lines.append(f"复活共 {len(rezzes)} 次（" + "、".join(f"{k} {v}" for k, v in kinds.items()) + "）：" + "；".join(
+            f"{run.t(r['timestamp'])} {run.actor_name(r.get('sourceID'))} → {run.actor_name(r.get('targetID'))}"
+            f"（{run.ab(r.get('abilityGameID'))}，{res_kind(r.get('abilityGameID'), r.get('sourceID'), r.get('targetID'))}）"
             for r in rezzes))
 
     # 每人统计
