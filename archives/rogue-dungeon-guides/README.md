@@ -6,7 +6,6 @@
 ## 目录说明
 
 - `sources/`：毒牙祭坛的原稿、图标、分析与天赋数据，以及最初的共用构建脚本。
-- `sources/BRIEF.md`：原始任务要求与设计规范。
 - `sources/dl/talents.json`：原工作使用的天赋树数据快照。
 - `sources/<副本拼音>/`：其他七个副本的源稿、数据与构建素材。
 - `manifest.json`：所有归档源文件的大小和 SHA-256，用于核对归档完整性。
@@ -46,7 +45,7 @@ python3 archives/rogue-dungeon-guides/rebuild.py --output-dir /tmp/rogue-guides
 修改攻略时以表中主源稿为准，再运行统一重建器；分片文件仅作为历史材料保留。
 
 原 `build.py`、`enc.py`、`dec.py` 和 `edit1.py` 是历史快照，部分含绝对临时路径或写死的
-专精、英雄天赋节点；不要直接视为通用工具运行。原 `BRIEF.md` 中的路径也属于历史记录。
+专精、英雄天赋节点；不要直接视为通用工具运行。制作新的职业手册请使用 `mplus-class-guide` skill。
 统一重建入口不依赖这些临时路径，不重新推导或修改已保存的天赋配置。
 
 ## 完成状态

@@ -2,11 +2,6 @@
   "description": "Unmodified source snapshots from the original scratchpad; PNG screenshots, error logs, downloaded reference HTML (dl2), and absolute symlinks excluded.",
   "files": [
     {
-      "path": "BRIEF.md",
-      "bytes": 6268,
-      "sha256": "256c8948fbfd1045454f9bb229f582a653b9db06847469ebd3e2eb228eafa537"
-    },
-    {
       "path": "build.py",
       "bytes": 454,
       "sha256": "1a32e3b4f87c2af8468f9801367008beafd72b84aa563a4c5bc136c8122b055a"

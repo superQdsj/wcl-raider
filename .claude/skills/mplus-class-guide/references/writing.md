@@ -1,0 +1,55 @@
+# 写作规则与内容字段
+
+## 语气（用户明确要求）
+- 攻略不是报告：「信号 → 按什么（交给谁）→ 为什么」。
+- 不写证据和过程：「三名都这样打」「日志里 6 次全部命中」「没点这个天赋就没有…」、阵容、数据来源段落都不要。
+- 中文。数字带单位：「6 秒」「20 码」「36 万火焰」。
+- 每句「为什么」至少一个具体事实。不设字数上限，但一行说一件事（一般 40 字内，最多 60 字）。
+
+## 设计
+沿用 `archives/rogue-dungeon-guides` 的设计系统（`sources/design.css`）：深色、金色唯一强调色、Noto Serif SC / Noto Sans SC / JetBrains Mono，图标全部内嵌。不要用 `wcl render` 模板。职业色只做点缀。
+
+## guides.py 字段（第二版，以红玉新生法池为准）
+
+```python
+'副本名': {
+    'theme': '目录页一句话主题（≤16 字）',
+    'core': '页头「核心」标签：本本最重要的 2–3 个按钮',
+    'lede': '页头导语，<b> 标出 2–3 个关键技巧',
+    'combo': {                      # 03 深挖专题
+        'title': '技能 → 技能：一句话讲清目的',
+        'skills': [355, 23920],     # 标题里的技能
+        'intro': '为什么能这样做（机制事实）',
+        'steps': ['第 1 步…', '…'],  # 3–5 步，可用 <b>
+        'outro': '配合与边界',
+        'cap': '示意图说明',
+        'tracks': [(名称, 图标ID, 图标位置%, 线起点%, 线宽%, 右侧标注), ...],
+        'result': ['效果1', '效果2', '效果3'],
+    },
+    'route': [
+        stop('段名', 'trash' | 'boss', [
+            row('机制名', '信号：谁在做什么', [技能ID, ...], '为什么（含事实）',
+                tags=[('火焰', 'fire'), ('6 秒', '')], who='交给谁/丢谁'),
+        ], '可选：本段一条提醒'),
+    ],
+    'moments': [(段序号, 行序号) × 4],   # 02 先学这四招：本本最有特色的四条
+    'debuffs': [(名称, 类型, 能自解吗, 怎么处理), ...],  # 「否」以外的值显示为绿色
+    'tools': [技能ID, ...],              # 05 工具箱，只放本本用到的，6–8 个
+    'tool_stars': [技能ID, ...],         # 高亮
+    'tool_notes': {ID: (作用, 本本时机)}, # 覆盖通用说明
+    'talent_cards': [(ID, 说明), ...],   # 6 张，必须都在推荐配置里
+    'talent_keys': [ID, ...],            # 高亮的天赋卡
+}
+```
+
+- `mechanic` 必须是录像里出现过的敌方技能名；构建前用 `prepare.py` 的逻辑重生 `mechanics.json`，并确保 `spells.json` 里有每个 ID 的说明和图标（缺的用 `wclr.wowhead.spells` 补，图标从 zamimg 下载）。
+- `tags` 的 kind：`fire` `frost` `nature` `magic` `poison` `bleed` 或空字符串。
+- 段落：首领战按首领名；小怪段写「A → B」。一段 2–4 行，没有职业技巧的段可以只有 1 行。
+- `moments` 选四个不同机制，优先选组合技和破盾/控制这类职业特色，不选通用减伤。
+- 03 专题只讲一个技巧，选本本最有特色、最需要步骤说明的那个。
+
+## 新职业怎么起步
+复制 `archives/warrior-dungeon-guides/` 为 `archives/<职业>-dungeon-guides/`，然后改：
+- `talents.py` 的 specId；`build.py` 里的职业名、英雄天赋名与校验节点（战士是 123390 屠戮者）、文件名后缀、`TOOLS` / `TALENT_CARDS` 默认值、`action_pill` 的技能分类；
+- `research.py` 的职业与专精；`prepare.py` 的 `CORE` / `TALENTS`；
+- 测试复制一份 `tests/test_warrior_guides.py` 改名改断言。
