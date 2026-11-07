@@ -277,6 +277,10 @@ class CommandIntegrationTests(unittest.TestCase):
             data.window_table(make_run(), 'Interrupts', 90000, 300000)
         self.assertIn('startTime: 100000, endTime: 200000', fetch.call_args.args[1])
 
+    # make_run 的副本英文名是 'Test Dungeon'；限时 120 秒，官方用时 90 秒。
+    TIMERS = [{'name': 'Other Dungeon', 'short_name': 'OD', 'keystone_timer_seconds': 1800},
+              {'name': 'Test Dungeon', 'short_name': 'TD', 'keystone_timer_seconds': 120}]
+
     def test_overview_population_reliability_and_adjusted_time(self):
         run = make_run()
         keys = player_keys(run)
@@ -284,13 +288,36 @@ class CommandIntegrationTests(unittest.TestCase):
         for population, expected in [({'count': 4, 'more': False}, '12（样本 4 人，不可靠）'),
                                      ({'count': 20, 'more': False}, '12（样本 20 人）'),
                                      ({'count': 4, 'more': True}, '12（样本 4 人）')]:
-            with self.subTest(population=population), patch('wclr.cmd_overview.data.parallel', return_value={
-                    'dd': {}, 'intr': {}, 'rkd': ranks, 'rkh': [], 'populations': {keys[3]: population}}):
+            with self.subTest(population=population), \
+                    patch('wclr.context.rio_static_data', return_value=self.TIMERS), \
+                    patch('wclr.cmd_overview.data.parallel', return_value={
+                        'dd': {}, 'intr': {}, 'rkd': ranks, 'rkh': [], 'populations': {keys[3]: population}}):
                 output = cmd_overview(run)
-            self.assertIn(expected, output)
-            self.assertIn('样本小时百分位的噪声很大', output)
+                self.assertIn(expected, output)
+                self.assertIn('样本小时百分位的噪声很大', output)
         with patch.object(run, 'death_penalty', return_value=(5000, '测试')):
             self.assertIn('1:30.0 − 2 × 5 秒 = 1:20.0', '\n'.join(_timing_lines(run, 2)))
+
+    def test_overview_timer_matches_dungeon_and_computes_upgrade_lines(self):
+        run = make_run()
+        with patch('wclr.context.rio_static_data', return_value=self.TIMERS) as static:
+            lines = '\n'.join(_timing_lines(run, 0))
+            self.assertEqual(run.timer_ms(), 120000)
+            run.timer_ms()
+        static.assert_called_once()  # 限时只查一次，结果缓存在 Run 上
+        # 120 秒限时：+2 线 = 0.8 × 120 = 96 秒（90 秒已达成），+3 线 = 72 秒（差 18 秒）
+        self.assertIn('官方用时 1:30.0 / 限时 2:00 → 剩余 0:30.0', lines)
+        self.assertIn('+2 线 1:36（已达成）', lines)
+        self.assertIn('+3 线 1:12（差 0:18.0）', lines)
+
+    def test_overview_timer_unavailable_says_so_instead_of_guessing(self):
+        for static in ([], [{'name': 'Other Dungeon', 'keystone_timer_seconds': 1800}]):
+            with self.subTest(static=static), patch('wclr.context.rio_static_data', return_value=static):
+                run = make_run()
+                lines = '\n'.join(_timing_lines(run, 0))
+                self.assertIsNone(run.timer_ms())
+                self.assertIn('官方用时 1:30.0（未能从 Raider.IO 获取该副本限时）', lines)
+                self.assertNotIn('限时 30:00', lines)
 
     def test_player_ability_only_fetches_filtered_casts_and_shows_each_time(self):
         run = make_run()

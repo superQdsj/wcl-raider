@@ -14,6 +14,15 @@ DIRECTORY = Path(__file__).resolve().parent
 ROOT = DIRECTORY.parents[1]
 SOURCE = DIRECTORY / 'sources'
 DATE = '2026-11-07'
+# 职业色：战士褐色 #C69B6D（暴雪官方职业色）。design.css 是潜行者原稿，强调色写死为盗贼金，
+# 构建时整体替换成本职业色；换职业时只改这里。
+CLASS_ACCENT = {
+    '#f2d24b': '#c69b6d',          # --gold：主强调色
+    '#8a7a2c': '#7a5f42',          # --gold-dim：描边、弱化强调
+    'rgba(242,210,75,': 'rgba(198,155,109,',
+    '#d9d0a6': '#dccbb5',          # 提示条文字的暖色调
+    '#3a3a25': '#3d3226',          # 首领节点描边
+}
 DUNGEONS = ['毒牙祭坛', '夺目谷', '红玉新生法池', '密谋小径', '纳洛拉克的洞穴', '塞塔里斯神庙', '虚空之痕竞技场', '诸王之眠']
 
 TOOLS = [
@@ -272,7 +281,12 @@ def render_guide(name, guide, style, tooltips, tree):
     nodes = {node['id']: node for group in ['classNodes','specNodes','heroNodes','subTreeNodes'] for node in tree[group]}
     talent_cards = guide['talent_cards']
     talent_keys = guide['talent_keys']
-    required = {spell_id for spell_id, _ in talent_cards}
+    # 推荐配置必须包含正文用到的全部天赋技能，不只是六张卡：路线行、专题、工具箱里出现的技能，
+    # 只要是天赋树里的技能，都算进来。
+    tree_spells = {entry.get('spellId') for node in nodes.values() for entry in node['entries']}
+    body = {skill for stop in guide['route'] for row in stop['rows'] for skill in row['skills']}
+    body |= set(guide.get('combo', {}).get('skills', [])) | set(guide.get('tools', []))
+    required = {spell_id for spell_id, _ in talent_cards} | (body & tree_spells)
 
     def supports_guide(record):
         entries = {talent['id'] for talent in selections(record['combatant']).values()}
@@ -360,6 +374,8 @@ def build(output_dir, png=False):
     tooltips = read(SOURCE / 'spells.json')
     tree = read(SOURCE / 'arms-tree.json')
     style = (SOURCE / 'design.css').read_text() + EXTRA_CSS
+    for rogue, accent in CLASS_ACCENT.items():
+        style = style.replace(rogue, accent)
     output_dir.mkdir(parents=True, exist_ok=True)
     paths = []
     for name, guide in GUIDES.items():

@@ -1,4 +1,5 @@
-"""列出一个副本三场录像里的机制事实：敌方技能由谁施放、该职业技能的连用。
+"""列出一个副本三场录像里的机制事实：敌方技能由谁施放、该职业技能的连用、
+每个技能的实际最短施放间隔（技能说明里没有冷却，别凭记忆写），以及技能给了谁（职责）。
 
 用法：python3 mechanic_facts.py <guides/<职业-专精>/sources/<副本>> [--top 40]
 
@@ -32,6 +33,8 @@ def main():
     totals = Counter()
     runs_seen: dict[str, set] = {}
     chains = Counter()
+    gaps: dict[str, list] = {}
+    given: dict[str, Counter] = {}
     for row in selected:
         record = json.loads((directory / row['file']).read_text())
         run = load_run(client, record['code'], str(record['fight']))
@@ -46,6 +49,20 @@ def main():
             totals[name] += 1
             runs_seen.setdefault(name, set()).add(row['file'])
         uses = sorted(record['uses'], key=lambda use: use['ts'])
+        last = {}
+        for use in uses:
+            name = abilities.get(str(use['gid']), {}).get('name', use['gid'])
+            if use['gid'] in last:
+                gaps.setdefault(name, []).append(use['ts'] - last[use['gid']])
+            last[use['gid']] = use['ts']
+            target = run.players.get(use.get('target')) if use.get('target') is not None else None
+            if target is None:
+                label = '自己/无目标' if use.get('target') in (None, record['player']['id']) else '非玩家目标'
+            elif target.id == record['player']['id']:
+                label = '自己'
+            else:
+                label = f'{target.role}·{target.spec_zh}'
+            given.setdefault(name, Counter())[label] += 1
         for first, second in zip(uses, uses[1:]):
             if first['gid'] != second['gid'] and second['ts'] - first['ts'] <= 5000:
                 pair = (abilities.get(str(first['gid']), {}).get('name', first['gid']), abilities.get(str(second['gid']), {}).get('name', second['gid']))
@@ -60,6 +77,14 @@ def main():
     for (first, second), count in chains.most_common():
         if count >= 3:
             print(f'| {first} | {second} | {count} |')
+    print(f'\n# 本职业技能：最短施放间隔与给了谁（{len(selected)} 场合计）\n')
+    print('最短间隔是同一玩家两次施放的最小间隔，≈ 含天赋减冷却后的实际冷却上限；只施放过一次的不列间隔。')
+    print('目标列只区分职责和专精；近战/远程请按专精自己判断。\n')
+    print('| 技能 | 次数 | 最短间隔 | 给了谁 |\n|---|---|---|---|')
+    for name, counter in sorted(given.items(), key=lambda item: -sum(item[1].values())):
+        gap = f"{min(gaps[name]) / 1000:.0f} 秒" if gaps.get(name) else '—'
+        who = '、'.join(f'{label}×{n}' for label, n in counter.most_common(4))
+        print(f'| {name} | {sum(counter.values())} | {gap} | {who} |')
     print('\n下一步：对要写的技能跑 `wcl spell <ID>` 查打谁、持续、类型、能否驱散。')
 
 
