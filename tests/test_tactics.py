@@ -247,6 +247,18 @@ class HelperTests(unittest.TestCase):
         self.assertEqual(wowhead.classify({'description': '使你受到的伤害降低30%'}), '减伤')
         self.assertEqual(wowhead.classify({'description': '造成100点物理伤害'}), '伤害')
 
+    def test_wowhead_cooldown_charges_and_talent_overrides(self):
+        tip = ('<table><tr><td>瞬发</td><th><!--cooldownText-->5\u200b分钟 冷却<!--cooldownText-->'
+               '<!--baseCooldown:5\u200b分钟 冷却--></th></tr></table><!--baseCharges:1 次充能-->'
+               '<div class="q">免疫一切伤害。<!--cooldown:114154:3.5分钟冷却时间--></div>')
+        info = wowhead.parse_tooltip({'name': '圣盾术', 'tooltip': tip})
+        self.assertEqual(info['cooldown_ms'], 300000)
+        self.assertEqual(info['charges'], 1)
+        self.assertEqual(info['cooldown_mods'], {114154: 210000})
+        english = wowhead.parse_cooldown('<!--baseCooldown:25 sec cooldown-->')
+        self.assertEqual(english, (25000, None, {}))
+        self.assertEqual(wowhead.parse_cooldown('<td>瞬发</td>'), (None, None, {}))
+
 
 if __name__ == '__main__':
     unittest.main()

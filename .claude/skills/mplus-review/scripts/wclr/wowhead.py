@@ -1,4 +1,4 @@
-"""Wowhead 技能资料：名称、驱散类型、说明文字（tooltip 接口，磁盘缓存 30 天）。"""
+"""Wowhead 技能资料：名称、驱散类型、说明文字、冷却与充能（tooltip 接口，磁盘缓存 30 天）。"""
 from __future__ import annotations
 
 import html
@@ -54,8 +54,10 @@ def parse_tooltip(payload: Dict[str, Any]) -> Dict[str, Any]:
         label = _text(raw).strip()
         if label and aura.startswith(label):
             aura = aura[len(label):].strip()
+    cooldown, charges, mods = parse_cooldown(tip)
     return {"name": payload.get("name"), "dispel": dispel, "description": desc, "aura": aura,
-            "duration_ms": parse_duration(aura), "icon": payload.get("icon")}
+            "duration_ms": parse_duration(aura), "icon": payload.get("icon"),
+            "cooldown_ms": cooldown, "charges": charges, "cooldown_mods": mods}
 
 
 _DUR = [
@@ -63,6 +65,33 @@ _DUR = [
     (re.compile(r"(\d+(?:\.\d+)?)\s*seconds? remaining", re.I), 1000),
     (re.compile(r"(\d+(?:\.\d+)?)\s*min(?:ute)?s? remaining", re.I), 60000),
 ]
+
+
+_TIME = re.compile(r"(\d+(?:\.\d+)?)\s*(秒|分钟|小时|sec|min|hr|hour)", re.I)
+_TIME_UNIT = {"秒": 1000, "sec": 1000, "分钟": 60000, "min": 60000, "小时": 3600000, "hr": 3600000, "hour": 3600000}
+
+
+def _time_ms(text: str) -> Optional[float]:
+    m = _TIME.search((text or "").replace("\u200b", ""))
+    return float(m.group(1)) * _TIME_UNIT[m.group(2).lower()] if m else None
+
+
+def parse_cooldown(tip: str):
+    """tooltip 里的基础冷却、充能次数和天赋改写后的冷却。
+
+    Wowhead 把它们写在注释里：<!--baseCooldown:25 秒 冷却-->、<!--baseCharges:1 次充能-->，
+    天赋改写写成 <!--cooldown:<天赋技能ID>:3.5分钟冷却时间-->（点了该天赋后的冷却）。
+    返回 (cooldown_ms, charges, {天赋技能ID: cooldown_ms})；没有冷却的技能返回 (None, None, {})。
+    """
+    tip = (tip or "").replace("\u200b", "")
+    base = re.search(r"<!--baseCooldown:(.*?)-->", tip) or re.search(r"<!--cooldownText-->(.*?)<!--cooldownText-->", tip)
+    charges = re.search(r"<!--baseCharges:(\d+)", tip)
+    mods = {}
+    for spell_id, text in re.findall(r"<!--cooldown:(\d+):(.*?)-->", tip):
+        value = _time_ms(text)
+        if value:
+            mods[int(spell_id)] = value
+    return (_time_ms(base.group(1)) if base else None), (int(charges.group(1)) if charges else None), mods
 
 
 def parse_duration(aura: str) -> Optional[float]:

@@ -10,7 +10,11 @@ PNG_WIDTH = 1100
 
 
 def export(html_path: Path, pdf: Optional[str] = None, png: Optional[str] = None) -> List[Tuple[str, str]]:
-    """PDF 带附录（展开），PNG 不带附录（适合直接发图）。都强制浅色。"""
+    """PDF 带附录（展开），PNG 不带附录（适合直接发图）。
+
+    导出时请求浅色：加 light/export class 并模拟浅色配色。只对定义了浅色样式的页面（如 wcl render 的报告）
+    生效；职业手册的 design.css 只有深色，导出的 PNG 仍是深色，这是预期结果。
+    """
     try:
         from playwright.sync_api import Error as PWError, sync_playwright
     except ImportError:
