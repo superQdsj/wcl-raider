@@ -8,6 +8,12 @@
 - **数据工具**（`scripts/wcl.py`）负责客观测量：通过 WCL v2 API 拉取数据，把几万条战斗事件压缩成计时、波次、死亡回放、打断、承伤、个人施法，以及与同副本同层高分记录、同专精顶尖玩家的对比，并按统一公式计算评分卡。
 - **Skill**（`SKILL.md` + `references/`）负责判断：教 agent 先把这一把按时间线讲出来，再追丢时间的地方和险情的起因，最后给出能直接在语音里布置的改进。判断标准是"和路线相近的参考记录逐段比"，不是写死的规则，所以换赛季、换副本都不需要改代码。
 
+## 职业副本手册
+
+职业大秘境手册用 `mplus-class-guide` skill 制作：从三场高分限时录像里挑出该职业真正用来处理机制的技巧，写成「信号 → 按什么 → 为什么」的攻略页和长图，结尾附天赋导入字符串。
+
+武器战已完成[红玉新生法池](reviews/2026-11-07-红玉新生法池-武器战.html)，其余七本正在按 skill 重写（[目录](reviews/2026-11-07-武器战-八本手册.html)）。源材料与重建方法见[武器战手册归档说明](archives/warrior-dungeon-guides/README.md)。
+
 ## 快速开始
 
 1. **创建 WCL API 客户端**：打开 https://www.warcraftlogs.com/api/clients/ （需要登录 WCL），点 "Create Client"。名称随意，Redirect URL 填 `http://localhost`，不要勾选 Public Client。

@@ -1,0 +1,2540 @@
+{
+  "100": {
+    "name": "冲锋",
+    "dispel": null,
+    "description": "向一名敌人冲锋，造成([21% of Attack Power])点物理伤害，使其定身1秒 [战神: ，并昏迷直到主动取消]。\n产生20点怒气值。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warrior_charge",
+    "id": 100
+  },
+  "6544": {
+    "name": "英勇飞跃",
+    "dispel": null,
+    "description": "天赋 武器, 狂怒\n朝目标区域腾空跃起，同时以毁灭性的力量重击地面，对8码范围内的所有敌人造成([23.5% of Attack Power])点物理伤害。\n防护\n朝目标区域腾空跃起，同时以毁灭性的力量重击地面，对8码范围内的所有敌人造成([23.5% of Attack Power])点物理伤害并重置嘲讽的剩余冷却时间。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_heroicleap",
+    "id": 6544
+  },
+  "6552": {
+    "name": "拳击",
+    "dispel": null,
+    "description": "用拳头击打目标，打断其正在施放的法术，并使其在5秒内不能施放该系法术。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_gauntlets_04",
+    "id": 6552
+  },
+  "18499": {
+    "name": "狂暴之怒",
+    "dispel": "激怒",
+    "description": "变得狂暴，移除并免疫恐惧、闷棍和部分瘫痪效果，持续6秒。",
+    "aura": "免疫恐惧、闷棍和部分瘫痪效果。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "spell_nature_ancestralguardian",
+    "id": 18499
+  },
+  "23920": {
+    "name": "法术反射",
+    "dispel": null,
+    "description": "天赋 武器, 狂怒\n举起你的武器，反射第一个对你施放的法术，同时使你受到的魔法伤害降低20%，持续5秒。\n防护\n举起你的盾牌，反射第一个对你施放的法术，同时使你受到的魔法伤害降低20%，持续5秒。",
+    "aura": "反射对你施放的一个法术。\n持续5秒",
+    "duration_ms": 5000.0,
+    "icon": "ability_warrior_shieldreflection",
+    "id": 23920
+  },
+  "46968": {
+    "name": "震荡波",
+    "dispel": null,
+    "description": "天赋 向前方锥形区域释放一道能量波，造成([20% of Attack Power])点伤害，并使10码范围内的所有敌人昏迷，持续2秒。",
+    "aura": "昏迷。",
+    "duration_ms": null,
+    "icon": "ability_warrior_shockwave",
+    "id": 46968
+  },
+  "97462": {
+    "name": "集结呐喊",
+    "dispel": null,
+    "description": "天赋 释放集结呐喊，使40码范围内的所有小队或团队成员的当前生命值和最大生命值提高10%，持续10秒。\n不在团队中时，获得的生命值提高50%。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warrior_rallyingcry",
+    "id": 97462
+  },
+  "103827": {
+    "name": "再度冲锋",
+    "dispel": null,
+    "description": "天赋 冲锋可以额外使用1次，冷却时间缩短3秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_misc_horn_04",
+    "id": 103827
+  },
+  "107570": {
+    "name": "风暴之锤",
+    "dispel": null,
+    "description": "天赋 将你的武器掷向一名敌人，造成([28.5% of Attack Power])点物理伤害并使其昏迷4秒。 [风暴众锤: 额外击中附近的2名敌人，使其昏迷2秒。]",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "warrior_talent_icon_stormbolt",
+    "id": 107570
+  },
+  "107574": {
+    "name": "天神下凡",
+    "dispel": null,
+    "description": "天赋 防护\n化身为巨人，使你造成的所有伤害提高20%，受到的所有伤害降低3%持续20秒。\n武器\n化身为巨人，使你造成的所有伤害提高20%，受到的范围攻击伤害降低5%持续20秒。\n狂怒\n化身为巨人，使你造成的所有伤害提高20%，移动速度提高5%持续20秒。",
+    "aura": "造成的伤害提高20%。\n持续20秒",
+    "duration_ms": 20000.0,
+    "icon": "warrior_talent_icon_avatar",
+    "id": 107574
+  },
+  "118038": {
+    "name": "剑在人在",
+    "dispel": null,
+    "description": "天赋 使你的招架几率提高100%，并使你受到的所有伤害降低30%，持续8秒。",
+    "aura": "招架几率提高100%。\n受到的伤害降低30%。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "ability_warrior_challange",
+    "id": 118038
+  },
+  "192063": {
+    "name": "阵风",
+    "dispel": null,
+    "description": "天赋 一股强风吹动你向前。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_misc_volatileair",
+    "id": 192063
+  },
+  "202163": {
+    "name": "腾跃步伐",
+    "dispel": null,
+    "description": "天赋 英勇飞跃的冷却时间缩短15秒，并且在落地之后还会使你的移动速度提高70%，持续3秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_heroicleap",
+    "id": 202163
+  },
+  "202168": {
+    "name": "胜利在望",
+    "dispel": null,
+    "description": "天赋 立即攻击目标，造成([59% of Attack Power])点伤害，并为你恢复30%的最大生命值。\n杀死一个可为你提供经验值或荣誉值的敌人，将重置胜利在望的冷却时间并使其不消耗怒气。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_impending_victory",
+    "id": 202168
+  },
+  "227847": {
+    "name": "剑刃风暴",
+    "dispel": null,
+    "description": "天赋 武器\n化作一股具有毁灭性力量的旋转风暴，打击附近所有目标，在6秒内造成[7 * ([271.635% of Attack Power])%]点物理伤害。目标数量超过8个后造成的伤害降低。\n你将免疫所有的移动限制和失控效果，可以使用防御技能并躲避攻击。\n狂怒\n化作一股具有毁灭性力量的旋转风暴，打击附近所有目标，在6秒内造成[7 * ([271.635% of Attack Power])%]点物理伤害。目标数量超过8个后造成的伤害降低。\n你将免疫所有的移动限制和失控效果，可以使用防御技能并躲避攻击。\n每次打击产生5点怒气值。",
+    "aura": "狂怒 (狂怒战士)\n每1秒对附近所有敌人造成伤害。\n免疫群体控制效果。\n武器\n每1秒对附近所有敌人造成伤害。\n免疫群体控制效果。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "ability_warrior_bladestorm",
+    "id": 227847
+  },
+  "265773": {
+    "name": "吐金",
+    "dispel": null,
+    "description": "向随机玩家喷吐熔化的黄金，对冲击点5码范围内的玩家造成87284点火焰伤害，并在6秒内每2秒造成额外的77586点火焰伤害，随后在该玩家的位置制造一滩熔化的黄金。",
+    "aura": "每2秒受到77586点火焰伤害。\n效果被移除时，制造一滩熔化的黄金。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "ability_creature_amber_01",
+    "id": 265773
+  },
+  "265966": {
+    "name": "震地",
+    "dispel": null,
+    "description": "施法者猛击地面，其巨大的力量会将60码范围内的所有敌人击退，并造成156627点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_smash",
+    "id": 265966
+  },
+  "266231": {
+    "name": "斩首之斧",
+    "dispel": "流血",
+    "description": "库拉向随机玩家投掷飞斧，造成155172点物理伤害，并每2秒额外造成67888点物理伤害，持续8秒。",
+    "aura": "每2秒受到67888点物理伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "ability_hunter_swiftstrike",
+    "id": 266231
+  },
+  "266923": {
+    "name": "镀流",
+    "dispel": null,
+    "description": "加瓦兹特的尖塔每0.5秒造成24246点自然伤害，但无法对加瓦兹特施加充能。\n受此影响时，受害者受到的物理伤害提高250%。",
+    "aura": "每0.5秒造成24246点自然伤害。\n受到的物理伤害提高250%。",
+    "duration_ms": null,
+    "icon": "spell_shaman_staticshock",
+    "id": 266923
+  },
+  "266951": {
+    "name": "翻滚",
+    "dispel": null,
+    "description": "阿卡阿里朝一名锁定的玩家冲锋，造成872842点物理伤害，由冲击点7码范围内的玩家均摊。该攻击无视护甲。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_monk_clashingoxcharge",
+    "id": 266951
+  },
+  "267494": {
+    "name": "翻滚",
+    "dispel": null,
+    "description": "阿卡阿里朝一名锁定的玩家冲锋，造成872842点物理伤害，由冲击点7码范围内的玩家均摊。该攻击无视护甲。",
+    "aura": "成为翻滚的目标！\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "ability_monk_clashingoxcharge",
+    "id": 267494
+  },
+  "267618": {
+    "name": "排干体液",
+    "dispel": null,
+    "description": "通过排出目标的体液，进行木乃伊制作的准备，每2秒造成116379点自然伤害并触发爆炸酸液，持续6秒。在此效果结束后对目标施加干枯。",
+    "aura": "每2秒受到116379点自然伤害。\n在效果时间结束时造成干枯。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "inv_misc_volatilewater",
+    "id": 267618
+  },
+  "267874": {
+    "name": "燃烧之地",
+    "dispel": null,
+    "description": "对燃烧之地内的所有玩家每1秒造成145474点火焰伤害。",
+    "aura": "每1秒受到145474点火焰伤害。",
+    "duration_ms": null,
+    "icon": "ability_siege_engineer_purification_beam",
+    "id": 267874
+  },
+  "269976": {
+    "name": "先祖狂怒",
+    "dispel": "激怒",
+    "description": "造成的伤害提高150%。",
+    "aura": "造成的伤害提高150%。\n持续10秒",
+    "duration_ms": 10000.0,
+    "icon": "spell_totem_wardofdraining",
+    "id": 269976
+  },
+  "270293": {
+    "name": "净化打击",
+    "dispel": null,
+    "description": "对所有敌人造成174568点火焰伤害，并制造一片净化烈焰区域，每1秒对进入区域的玩家造成145474点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_shaman_lavasurge",
+    "id": 270293
+  },
+  "270499": {
+    "name": "冰霜震击",
+    "dispel": "魔法",
+    "description": "冰冻目标，造成58190点冰霜伤害，并使其移动速度降低25%，持续15秒。",
+    "aura": "移动速度降低25%。\n持续15秒",
+    "duration_ms": 15000.0,
+    "icon": "spell_frost_frostshock",
+    "id": 270499
+  },
+  "270889": {
+    "name": "过载",
+    "dispel": null,
+    "description": "每0.3秒引导闪电光束，环绕施法者，持续4秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_callstorm",
+    "id": 270889
+  },
+  "270891": {
+    "name": "过载",
+    "dispel": null,
+    "description": "对10码内的玩家造成101832点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_callstorm",
+    "id": 270891
+  },
+  "272388": {
+    "name": "暗影弹幕",
+    "dispel": null,
+    "description": "Inflicts 58190 Shadow damage to an enemy.\nInflicts 48491 Shadow damage to an enemy every 2 sec for 4秒.",
+    "aura": "48491 Shadow damage inflicted every 2 sec.\n持续4秒",
+    "duration_ms": 4000.0,
+    "icon": "spell_priest_mindspike",
+    "id": 272388
+  },
+  "371984": {
+    "name": "寒冰箭",
+    "dispel": null,
+    "description": "该生物对一名玩家造成116379点冰霜伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_frost_frostbolt02",
+    "id": 371984
+  },
+  "372851": {
+    "name": "霜风",
+    "dispel": null,
+    "description": "梅莉杜莎在一名玩家的位置召唤一阵冰霜风暴，将玩家拉向风暴之眼。\n风暴每1.5秒对所有玩家造成41218点冰霜伤害。\n7秒后风暴爆炸，对所有玩家造成67888点冰霜伤害并将其推开。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_shadow_soulleech_2",
+    "id": 372851
+  },
+  "372858": {
+    "name": "灼热打击",
+    "dispel": null,
+    "description": "柯姬雅在3秒内打击目标4次，每次打击造成150%的武器伤害并施加灼热伤口。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_shaman_lavalash",
+    "id": 372858
+  },
+  "372859": {
+    "name": "灼热打击",
+    "dispel": null,
+    "description": "柯姬雅在3秒内打击目标4次，每次打击造成150%的武器伤害并施加灼热伤口。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_shaman_lavalash",
+    "id": 372859
+  },
+  "372963": {
+    "name": "风暴之眼",
+    "dispel": null,
+    "description": "身处梅莉杜莎霜风风眼内的玩家，受到的冰霜伤害提高100%。",
+    "aura": "受到的冰霜伤害提高100%。",
+    "duration_ms": null,
+    "icon": "spell_nature_eyeofthestorm",
+    "id": 372963
+  },
+  "373692": {
+    "name": "地狱烈火",
+    "dispel": null,
+    "description": "施法者对60码范围内的所有玩家造成96982点火焰伤害，且每1秒额外造成38793点火焰伤害，持续5秒。",
+    "aura": "每1秒造成38793点火焰伤害。\n持续5秒",
+    "duration_ms": 5000.0,
+    "icon": "ability_warlock_inferno",
+    "id": 373692
+  },
+  "381516": {
+    "name": "阻断暴雨",
+    "dispel": null,
+    "description": "厄克哈特召唤一股洪流，对所有玩家造成96982点自然伤害并打断其施法，持续2秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_cyclone",
+    "id": 381516
+  },
+  "381602": {
+    "name": "烈焰喷吐",
+    "dispel": null,
+    "description": "基拉卡喷出一口烈焰，每1秒造成43642点火焰伤害，持续6秒。\n被移除时，这些烈焰会发生爆炸，对8码内的玩家造成43642点火焰伤害，并产生烈焰余烬。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_firebolt",
+    "id": 381602
+  },
+  "381605": {
+    "name": "烈焰喷吐",
+    "dispel": null,
+    "description": "基拉卡喷出一口烈焰，每1秒造成43642点火焰伤害，持续6秒。\n被移除时，这些烈焰会发生爆炸，对8码内的玩家造成43642点火焰伤害，并产生烈焰余烬。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_firebolt",
+    "id": 381605
+  },
+  "381862": {
+    "name": "烈焰喷吐",
+    "dispel": null,
+    "description": "基拉卡喷出一口烈焰，每1秒造成43642点火焰伤害，持续6秒。\n被移除时，这些烈焰会发生爆炸，对8码内的玩家造成43642点火焰伤害，并产生烈焰余烬。",
+    "aura": "每1秒造成43642点火焰伤害。\n被移除时会发生爆炸，对附近的玩家造成43642点火焰伤害，并产生烈焰余烬。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "spell_fire_firebolt",
+    "id": 381862
+  },
+  "381864": {
+    "name": "烈焰喷吐",
+    "dispel": null,
+    "description": "基拉卡喷出一口烈焰，每1秒造成43642点火焰伤害，持续6秒。\n被移除时，这些烈焰会发生爆炸，对8码内的玩家造成43642点火焰伤害，并产生烈焰余烬。",
+    "aura": "每1秒造成43642点火焰伤害。\n被移除时会发生爆炸，对附近的玩家造成43642点火焰伤害，并产生烈焰余烬。",
+    "duration_ms": null,
+    "icon": "spell_fire_firebolt",
+    "id": 381864
+  },
+  "382549": {
+    "name": "痛尽甘来",
+    "dispel": null,
+    "description": "天赋 当你受到任何伤害时，恢复2.0%的最大生命值。\n该效果每10秒只能触发一次。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_holy_painsupression",
+    "id": 382549
+  },
+  "383925": {
+    "name": "霜风",
+    "dispel": null,
+    "description": "梅莉杜莎在一名玩家的位置召唤一阵冰霜风暴，将玩家拉向风暴之眼。\n风暴每1.5秒对所有玩家造成41218点冰霜伤害。\n7秒后风暴爆炸，对所有玩家造成67888点冰霜伤害并将其推开。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_shadow_soulleech_2",
+    "id": 383925
+  },
+  "384024": {
+    "name": "冰雹炸弹",
+    "dispel": null,
+    "description": "冰霜地雷在接触玩家时爆炸，对4码内的玩家造成242456点自然伤害，并将其击飞。\n此外，这些地雷会使受害者的急速降低50%，持续20秒。",
+    "aura": "急速降低50%。\n持续20秒",
+    "duration_ms": 20000.0,
+    "icon": "inv_10_specialreagentfoozles_primalistrune_frost",
+    "id": 384024
+  },
+  "384823": {
+    "name": "地狱烈火",
+    "dispel": null,
+    "description": "炎缚火焰风暴对所有玩家造成87284点火焰伤害，并且每1秒额外造成29095点火焰伤害，持续8秒。该效果可叠加。",
+    "aura": "每1秒造成29095点火焰伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "ability_warlock_inferno",
+    "id": 384823
+  },
+  "385518": {
+    "name": "霜风",
+    "dispel": null,
+    "description": "梅莉杜莎在一名玩家的位置召唤一阵冰霜风暴，将玩家拉向风暴之眼。\n风暴每1.5秒对所有玩家造成41218点冰霜伤害。\n7秒后风暴爆炸，对所有玩家造成67888点冰霜伤害并将其推开。",
+    "aura": "你的周围正在形成霜风！\n持续1秒",
+    "duration_ms": 1000.0,
+    "icon": "spell_shadow_soulleech_2",
+    "id": 385518
+  },
+  "386208": {
+    "name": "防御姿态",
+    "dispel": null,
+    "description": "天赋 防护\n防御性的战斗姿态，使你受到的所有伤害降低15%。\n效果一直持续直到主动取消。\n武器, 狂怒\n防御性的战斗姿态，使你受到的所有伤害降低15%，造成的所有伤害降低10%。\n效果一直持续直到主动取消。",
+    "aura": "受到的伤害降低15%。\n武器, 狂怒\n造成的伤害降低10%。\n[当攻击造成的伤害高于你最大生命值的20%时，伤害降低15%。]",
+    "duration_ms": null,
+    "icon": "ability_warrior_defensivestance",
+    "id": 386208
+  },
+  "391723": {
+    "name": "烈焰吐息",
+    "dispel": null,
+    "description": "烈焰之咽向一名玩家喷吐烈焰，每0.5秒对前方锥形范围内的玩家造成96982点火焰伤害，持续3秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_mage_firestarter",
+    "id": 391723
+  },
+  "392406": {
+    "name": "雷霆践踏",
+    "dispel": null,
+    "description": "施法者对60码范围内的敌人造成43642点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_thunderclap",
+    "id": 392406
+  },
+  "392569": {
+    "name": "熔火血脉",
+    "dispel": null,
+    "description": "烈焰之咽在生命值低于50%时会渗出燃烧之血，每3秒对60码内的玩家造成48491点火焰伤害。该伤害每次施放都会提高15%，最多可叠加10层。",
+    "aura": "每3秒对玩家造成[48491 * (1 + ((1 - 1) * (15 / 100)))]点火焰伤害。",
+    "duration_ms": null,
+    "icon": "spell_nzinsanity_floorislava",
+    "id": 392569
+  },
+  "392570": {
+    "name": "熔火血脉",
+    "dispel": null,
+    "description": "烈焰之咽在生命值低于50%时会渗出燃烧之血，每3秒对60码内的玩家造成48491点火焰伤害。该伤害每次施放都会提高15%，最多可叠加10层。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nzinsanity_floorislava",
+    "id": 392570
+  },
+  "392576": {
+    "name": "雷霆冲击",
+    "dispel": null,
+    "description": "暴风引导者召唤雷霆打击其目标，造成387930点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_misc_stormlordsfavor",
+    "id": 392576
+  },
+  "397077": {
+    "name": "霜风",
+    "dispel": null,
+    "description": "梅莉杜莎在一名玩家的位置召唤一阵冰霜风暴，将玩家拉向风暴之眼。\n风暴每1.5秒对所有玩家造成41218点冰霜伤害。\n7秒后风暴爆炸，对所有玩家造成67888点冰霜伤害并将其推开。",
+    "aura": "每1.5秒造成41218点冰霜伤害。",
+    "duration_ms": null,
+    "icon": "spell_shadow_soulleech_2",
+    "id": 397077
+  },
+  "444770": {
+    "name": "夺命动力",
+    "dispel": null,
+    "description": "天赋 猝死造成的伤害的15%为你恢复生命值。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warrior_focusedrage",
+    "id": 444770
+  },
+  "444776": {
+    "name": "冷酷追杀",
+    "dispel": null,
+    "description": "天赋 冲锋使你的移动速度提高70%，持续3秒。\n冲锋会移除所有移动限制效果，该效果每30秒只能触发一次。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_rogue_sprint",
+    "id": 444776
+  },
+  "474197": {
+    "name": "魔化狂怒",
+    "dispel": null,
+    "description": "歼灭者萨祖克斯陷入魔化狂怒，对所有玩家造成145474点混乱伤害。当此效果激活时，萨祖克斯获得75%的攻击速度，受到的伤害提高30%，并获得燃烧脚步，持续15秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warlock_demonicempowerment",
+    "id": 474197
+  },
+  "474457": {
+    "name": "古尔丹之指",
+    "dispel": null,
+    "description": "利希尔·烬怒召唤恶魔魔法轰击每个附近的敌人，对每个目标6码范围内的所有敌人造成116379点暗影烈焰伤害。野生小鬼会从冲击点涌出并攻击附近的目标。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warlock_handofguldan",
+    "id": 474457
+  },
+  "474462": {
+    "name": "古尔丹之指",
+    "dispel": null,
+    "description": "利希尔·烬怒召唤恶魔魔法轰击每个附近的敌人，对每个目标6码范围内的所有敌人造成116379点暗影烈焰伤害。野生小鬼会从冲击点涌出并攻击附近的目标。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warlock_handofguldan",
+    "id": 474462
+  },
+  "474478": {
+    "name": "影舞步",
+    "dispel": null,
+    "description": "赞恩连续开火释放出密集的弹幕，在3秒内每0.5秒对所有玩家造成38793点物理伤害。该攻击无视护甲。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_112_rogue_betweentheeyes",
+    "id": 474478
+  },
+  "474483": {
+    "name": "影舞步",
+    "dispel": null,
+    "description": "赞恩连续开火释放出密集的弹幕，在3秒内每0.5秒对所有玩家造成38793点物理伤害。该攻击无视护甲。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_112_rogue_betweentheeyes",
+    "id": 474483
+  },
+  "1214352": {
+    "name": "火焰炸弹",
+    "dispel": null,
+    "description": "赞恩朝玩家投掷一颗定时炸弹。持续6秒后炸弹爆炸，对6码范围内的玩家造成116379点火焰伤害，并摧毁爆炸范围内的任何违禁的货物。",
+    "aura": "效果结束时对附近所有单位造成116379点火焰伤害并产生爆炸。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "inv_eng_bombfire",
+    "id": 1214352
+  },
+  "1214355": {
+    "name": "火焰炸弹",
+    "dispel": null,
+    "description": "赞恩朝玩家投掷一颗定时炸弹。持续6秒后炸弹爆炸，对6码范围内的玩家造成116379点火焰伤害，并摧毁爆炸范围内的任何违禁的货物。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_eng_bombfire",
+    "id": 1214355
+  },
+  "1214357": {
+    "name": "火焰炸弹",
+    "dispel": null,
+    "description": "赞恩朝玩家投掷一颗定时炸弹。持续6秒后炸弹爆炸，对6码范围内的玩家造成116379点火焰伤害，并摧毁爆炸范围内的任何违禁的货物。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_eng_bombfire",
+    "id": 1214357
+  },
+  "1214959": {
+    "name": "混沌爆裂",
+    "dispel": null,
+    "description": "灌注圣光使凯斯媞亚昏迷20秒，导致她的攻击停止，使她受到的所有伤害提高115%，并爆发出邪能魔法，每1秒对所有玩家造成48491点混乱伤害。\n此外，还会使凯斯媞亚的邪能护盾效果减弱。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_demonhunter_chaosnova",
+    "id": 1214959
+  },
+  "1216300": {
+    "name": "妙手空空",
+    "dispel": "流血",
+    "description": "施法者跃向附近敌人进行扒窃，造成38793点物理伤害，并在8秒内额外造成155172点流血伤害。",
+    "aura": "流血，每1秒造成19396点物理伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "ability_warrior_deepcuts",
+    "id": 1216300
+  },
+  "1216570": {
+    "name": "邪能飞弹",
+    "dispel": null,
+    "description": "朝敌人发射混乱飞弹，每1秒造成火焰伤害，持续5秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felrainoffire",
+    "id": 1216570
+  },
+  "1216571": {
+    "name": "邪能飞弹",
+    "dispel": null,
+    "description": "朝敌人发射混乱飞弹，每1秒造成火焰伤害，持续5秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felrainoffire",
+    "id": 1216571
+  },
+  "1216945": {
+    "name": "灼热邪焰",
+    "dispel": null,
+    "description": "利希尔·烬怒将自身包裹在邪能烈焰中，每1秒对敌人辐射19396点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felfirenova",
+    "id": 1216945
+  },
+  "1217099": {
+    "name": "邪能灌注货物",
+    "dispel": null,
+    "description": "货物中蕴含的不稳定魔法正在外泄，每3秒对所有玩家造成58189点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ember_fel",
+    "id": 1217099
+  },
+  "1217123": {
+    "name": "火焰炸弹",
+    "dispel": null,
+    "description": "赞恩朝玩家投掷一颗定时炸弹。持续6秒后炸弹爆炸，对6码范围内的玩家造成116379点火焰伤害，并摧毁爆炸范围内的任何违禁的货物。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_eng_bombfire",
+    "id": 1217123
+  },
+  "1217345": {
+    "name": "灾厄浪潮",
+    "dispel": null,
+    "description": "利希尔·烬怒召唤一面邪能护盾，随后发出一道邪能火焰波。受到冲击的玩家每1秒受到14547点火焰伤害，且受到的火焰伤害提高50%，持续1分钟。此效果可叠加。\n被灾厄浪潮击中的恶魔将获得灾厄强化。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_felarakkoa_feldetonation_green",
+    "id": 1217345
+  },
+  "1217384": {
+    "name": "灾厄浪潮",
+    "dispel": null,
+    "description": "利希尔·烬怒召唤一面邪能护盾，随后发出一道邪能火焰波。受到冲击的玩家每1秒受到14547点火焰伤害，且受到的火焰伤害提高50%，持续1分钟。此效果可叠加。\n被灾厄浪潮击中的恶魔将获得灾厄强化。",
+    "aura": "受到的火焰伤害提高50%。\n持续1分钟",
+    "duration_ms": 60000.0,
+    "icon": "ability_felarakkoa_feldetonation_green",
+    "id": 1217384
+  },
+  "1217633": {
+    "name": "腐蚀唾液",
+    "dispel": "魔法",
+    "description": "浮龙朝其当前目标吐出腐蚀液体，立即造成82435点火焰伤害，随后每3秒造成87284点火焰伤害，持续15秒。此效果可叠加。",
+    "aura": "每3秒造成87284点火焰伤害。\n持续15秒",
+    "duration_ms": 15000.0,
+    "icon": "inv_fabric_felcloth_ebon",
+    "id": 1217633
+  },
+  "1219631": {
+    "name": "邪能灌注货物",
+    "dispel": null,
+    "description": "货物中蕴含的不稳定魔法正在外泄，每3秒对所有玩家造成58189点火焰伤害。",
+    "aura": "货物中蕴含的不稳定魔法正在外泄，每3秒对所有玩家造成58189点火焰伤害。",
+    "duration_ms": null,
+    "icon": "inv_ember_fel",
+    "id": 1219631
+  },
+  "1222100": {
+    "name": "空灵冲刺",
+    "dispel": null,
+    "description": "虚灵之影冲向其目标，对击中的玩家造成116379点暗影伤害，此后每1秒额外造成29095点暗影伤害，持续15秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_mount_voidelfstridermount",
+    "id": 1222100
+  },
+  "1222103": {
+    "name": "空灵冲刺",
+    "dispel": null,
+    "description": "虚灵之影冲向其目标，对击中的玩家造成116379点暗影伤害，此后每1秒额外造成29095点暗影伤害，持续15秒。",
+    "aura": "每1秒造成29095点暗影伤害。\n持续15秒",
+    "duration_ms": 15000.0,
+    "icon": "ability_mount_voidelfstridermount",
+    "id": 1222103
+  },
+  "1222105": {
+    "name": "空灵冲刺",
+    "dispel": null,
+    "description": "虚灵之影冲向其目标，对击中的玩家造成116379点暗影伤害，此后每1秒额外造成29095点暗影伤害，持续15秒。",
+    "aura": "每1秒造成29095点暗影伤害。",
+    "duration_ms": null,
+    "icon": "ability_mount_voidelfstridermount",
+    "id": 1222105
+  },
+  "1222692": {
+    "name": "剧毒光环",
+    "dispel": null,
+    "description": "剧毒蠕行者释放出剧毒之云，每0.5秒对100码范围内的玩家造成17457点自然伤害。",
+    "aura": "每0.5秒造成17457点自然伤害。",
+    "duration_ms": null,
+    "icon": "spell_shadow_plaguecloud",
+    "id": 1222692
+  },
+  "1222693": {
+    "name": "剧毒光环",
+    "dispel": null,
+    "description": "剧毒蠕行者释放出剧毒之云，每0.5秒对100码范围内的玩家造成17457点自然伤害。",
+    "aura": "剧毒蠕行者释放出剧毒之云，每0.5秒对100码范围内的玩家造成17457点自然伤害。",
+    "duration_ms": null,
+    "icon": "spell_shadow_plaguecloud",
+    "id": 1222693
+  },
+  "1222795": {
+    "name": "毒伤",
+    "dispel": null,
+    "description": "赞恩将淬毒的利刃深深刺入当前目标，造成436421点物理伤害，并施加断心药膏。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_rogue_disembowel",
+    "id": 1222795
+  },
+  "1223939": {
+    "name": "毒伤",
+    "dispel": null,
+    "description": "赞恩将淬毒的利刃深深刺入当前目标，造成436421点物理伤害，并施加断心药膏。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_rogue_disembowel",
+    "id": 1223939
+  },
+  "1226120": {
+    "name": "毒液喷溅",
+    "dispel": null,
+    "description": "阿特洛苏斯向四周泼洒毒液，每1秒对所有敌人造成38793点自然伤害。\n毒液团命中玩家时会对受击玩家造成193965点自然伤害，并在接下来的5秒内每1秒额外造成58189点自然伤害。每次撞击都会制造出一滩毒液池，持续1分钟。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_corrosivebreath",
+    "id": 1226120
+  },
+  "1227197": {
+    "name": "星辰坠击",
+    "dispel": null,
+    "description": "煞戎努斯召唤虚空彗星坠向玩家位置，对冲击点8码范围内的玩家造成116379点暗影伤害，并在接下来的20秒内每1秒额外造成14547点暗影伤害，同时将其击退。",
+    "aura": "每5.2秒0点暗影伤害。",
+    "duration_ms": null,
+    "icon": "inv_cosmicvoid_groundsate",
+    "id": 1227197
+  },
+  "1228126": {
+    "name": "钉锤风暴",
+    "dispel": null,
+    "description": "冲向一个随机敌人，在6秒内每1秒对8码范围内的敌人造成77586点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_paladin_enlightenedjudgements",
+    "id": 1228126
+  },
+  "1228127": {
+    "name": "钉锤风暴",
+    "dispel": null,
+    "description": "冲向一个随机敌人，在6秒内每1秒对8码范围内的敌人造成77586点物理伤害。",
+    "aura": "对8码范围内的敌人造成77586点物理伤害。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "ability_paladin_enlightenedjudgements",
+    "id": 1228127
+  },
+  "1228198": {
+    "name": "腐蚀唾液",
+    "dispel": "魔法",
+    "description": "咬咬朝玩家吐出唾沫，立即造成58189点火焰伤害，并在接下来的30秒内每3秒造成106681点火焰伤害。",
+    "aura": "每3秒造成106681点火焰伤害。\n持续30秒",
+    "duration_ms": 30000.0,
+    "icon": "inv_fabric_felcloth_ebon",
+    "id": 1228198
+  },
+  "1230298": {
+    "name": "混沌弹幕",
+    "dispel": null,
+    "description": "凯斯媞亚对其当前目标释放毁灭性的混沌冲击，造成290947点混乱伤害，然后以衰减的效果跳跃至附近玩家身上。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felrainoffire",
+    "id": 1230298
+  },
+  "1234233": {
+    "name": "腐坏补给",
+    "dispel": null,
+    "description": "囤宝狂人在7秒内伸手从袋子里掏出腐烂的食物投掷出去，接触目标玩家时造成96982点自然伤害，或在竞技场各处散落腐烂的蘑菇。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_creature_disease_01",
+    "id": 1234233
+  },
+  "1234681": {
+    "name": "贪婪咆哮",
+    "dispel": null,
+    "description": "囤宝狂人发出一声震耳欲聋的咆哮，对所有玩家造成164870点物理伤害，并在接下来的10秒内每1秒额外造成29095点物理伤害。此伤害无视护甲。",
+    "aura": "每1秒造成29095点物理伤害。无视护甲。\n持续10秒",
+    "duration_ms": 10000.0,
+    "icon": "ability_druid_challangingroar",
+    "id": 1234681
+  },
+  "1234734": {
+    "name": "腐坏补给",
+    "dispel": null,
+    "description": "囤宝狂人在7秒内伸手从袋子里掏出腐烂的食物投掷出去，接触目标玩家时造成96982点自然伤害，或在竞技场各处散落腐烂的蘑菇。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_creature_disease_01",
+    "id": 1234734
+  },
+  "1234846": {
+    "name": "剧毒孢子",
+    "dispel": "中毒",
+    "description": "腐烂的蘑菇释放出毒性云雾，每2秒造成19396点自然伤害，持续12秒。此效果可叠加。",
+    "aura": "每2秒造成19396点自然伤害。\n持续12秒",
+    "duration_ms": 12000.0,
+    "icon": "ability_creature_poison_06",
+    "id": 1234846
+  },
+  "1234855": {
+    "name": "险恶光环",
+    "dispel": null,
+    "description": "每2秒对施法者100码范围内的所有敌人造成87284点自然伤害，持续8秒。",
+    "aura": "每2秒造成87284点自然伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "ability_warlock_burningembersgreen",
+    "id": 1234855
+  },
+  "1235125": {
+    "name": "饕餮怒吼",
+    "dispel": null,
+    "description": "囤宝狂人从他的肉堆中汲取力量，解锁了饕餮怒吼。\n囤宝狂人发出一声震耳欲聋的咆哮，对所有玩家造成164870点物理伤害并将其击退，同时在接下来的10秒内每1秒额外造成29095点物理伤害。此伤害无视护甲。",
+    "aura": "每1秒造成29095点物理伤害。无视护甲。\n持续10秒",
+    "duration_ms": 10000.0,
+    "icon": "ability_warrior_battleshout",
+    "id": 1235125
+  },
+  "1235623": {
+    "name": "狂怒的飑风",
+    "dispel": null,
+    "description": "寒冬哨兵召唤出数个狂怒的飑风，对冲击点4码范围内的玩家造成339439点冰霜伤害。这些飑风会在场地上游荡1.5分钟，对触碰到的玩家造成145474点冰霜伤害并将其击退。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_deathknight_frozencenter",
+    "id": 1235623
+  },
+  "1235635": {
+    "name": "狂怒的飑风",
+    "dispel": null,
+    "description": "寒冬哨兵召唤出数个狂怒的飑风，对冲击点4码范围内的玩家造成339439点冰霜伤害。这些飑风会在场地上游荡1.5分钟，对触碰到的玩家造成145474点冰霜伤害并将其击退。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_deathknight_frozencenter",
+    "id": 1235635
+  },
+  "1235640": {
+    "name": "荆棘之刃",
+    "dispel": null,
+    "description": "莱克希伏击一名玩家并从背后偷袭，对其造成96982点自然伤害，并使其流血，每2秒造成77586点物理伤害，持续12秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_thorns",
+    "id": 1235640
+  },
+  "1235641": {
+    "name": "狂怒的飑风",
+    "dispel": null,
+    "description": "寒冬哨兵召唤出数个狂怒的飑风，对冲击点4码范围内的玩家造成339439点冰霜伤害。这些飑风会在场地上游荡1.5分钟，对触碰到的玩家造成145474点冰霜伤害并将其击退。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_deathknight_frozencenter",
+    "id": 1235641
+  },
+  "1235642": {
+    "name": "荆棘之刃",
+    "dispel": null,
+    "description": "莱克希伏击一名玩家并从背后偷袭，对其造成96982点自然伤害，并使其流血，每2秒造成77586点物理伤害，持续12秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_thorns",
+    "id": 1235642
+  },
+  "1235656": {
+    "name": "寒冰暴雨",
+    "dispel": null,
+    "description": "寒冬哨兵唤出一场巨大的风暴，每1秒对所有玩家造成38793点冰霜伤害，并将他们向外推开。\n处于风暴之眼外的玩家每1秒会额外受到145474点冰霜伤害。",
+    "aura": "每1秒对所有玩家造成38793点冰霜伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "spell_frost_ring-of-frost",
+    "id": 1235656
+  },
+  "1235658": {
+    "name": "寒冰暴雨",
+    "dispel": null,
+    "description": "寒冬哨兵唤出一场巨大的风暴，每1秒对所有玩家造成38793点冰霜伤害，并将他们向外推开。\n处于风暴之眼外的玩家每1秒会额外受到145474点冰霜伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_frost_ring-of-frost",
+    "id": 1235658
+  },
+  "1235829": {
+    "name": "寒冬帷幕",
+    "dispel": null,
+    "description": "碎裂的震颤核心为玩家带来冬之严寒，对所有玩家造成96982点冰霜伤害，并使其受到的冰霜伤害提高10%，持续20秒。此效果可叠加。",
+    "aura": "受到的冰霜伤害提高10%。\n持续20秒",
+    "duration_ms": 20000.0,
+    "icon": "ability_deathknight_icygrip",
+    "id": 1235829
+  },
+  "1235865": {
+    "name": "荆棘之刃",
+    "dispel": "流血",
+    "description": "莱克希伏击一名玩家并从背后偷袭，对其造成96982点自然伤害，并使其流血，每2秒造成77586点物理伤害，持续12秒。",
+    "aura": "流血，每2秒造成77586点物理伤害。\n持续12秒",
+    "duration_ms": 12000.0,
+    "icon": "spell_nature_thorns",
+    "id": 1235865
+  },
+  "1236709": {
+    "name": "唤棘者咆哮",
+    "dispel": null,
+    "description": "伊库兹发出怒吼，每2秒对所有玩家造成82435点自然伤害，并在其周围引发血棘之根，持续6秒。",
+    "aura": "每2秒对所有玩家造成82435点自然伤害。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "inv_misc_herb_nightmarevine",
+    "id": 1236709
+  },
+  "1236731": {
+    "name": "唤棘者咆哮",
+    "dispel": null,
+    "description": "",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "trade_engineering",
+    "id": 1236731
+  },
+  "1236746": {
+    "name": "青翠践踏",
+    "dispel": null,
+    "description": "伊库兹践踏地面，对所有玩家造成145474点物理伤害并将其击退。4秒后，血棘之根将在玩家所在位置出现。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_raptortravelform",
+    "id": 1236746
+  },
+  "1236747": {
+    "name": "青翠践踏",
+    "dispel": null,
+    "description": "伊库兹践踏地面，对所有玩家造成145474点物理伤害并将其击退。4秒后，血棘之根将在玩家所在位置出现。",
+    "aura": "4秒后生成血棘之根。\n持续4秒",
+    "duration_ms": 4000.0,
+    "icon": "inv_raptortravelform",
+    "id": 1236747
+  },
+  "1237330": {
+    "name": "血棘之根",
+    "dispel": null,
+    "description": "地面涌出根须，每1秒对玩家造成5点自然伤害并将其定身在原地，直到根须被摧毁。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_-misc_herb_marrowroot_leaf",
+    "id": 1237330
+  },
+  "1238066": {
+    "name": "荆棘之刃",
+    "dispel": null,
+    "description": "施法者闪现至目标身后发动背刺，造成58189点自然伤害并使目标流血，每2秒额外造成38793点物理伤害，持续8秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_thorns",
+    "id": 1238066
+  },
+  "1238071": {
+    "name": "荆棘之刃",
+    "dispel": null,
+    "description": "施法者闪现至目标身后发动背刺，造成58189点自然伤害并使目标流血，每2秒额外造成38793点物理伤害，持续8秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_thorns",
+    "id": 1238071
+  },
+  "1238076": {
+    "name": "荆棘之刃",
+    "dispel": "流血",
+    "description": "施法者闪现至目标身后发动背刺，造成58189点自然伤害并使目标流血，每2秒额外造成38793点物理伤害，持续8秒。",
+    "aura": "流血，每2秒造成38793点物理伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "spell_nature_thorns",
+    "id": 1238076
+  },
+  "1238439": {
+    "name": "剃刀俯冲",
+    "dispel": "流血",
+    "description": "施法者跃向玩家并用喙撕扯，使其每1秒受到33944点物理伤害，持续10秒。此效果可叠加。",
+    "aura": "流血，每1秒造成33944点物理伤害。\n持续10秒",
+    "duration_ms": 10000.0,
+    "icon": "inv_10_specialreagentfoozles_tuskclaw_fire",
+    "id": 1238439
+  },
+  "1238440": {
+    "name": "剃刀俯冲",
+    "dispel": null,
+    "description": "施法者跃向玩家并用喙撕扯，使其每1秒受到33944点物理伤害，持续10秒。此效果可叠加。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_10_specialreagentfoozles_tuskclaw_fire",
+    "id": 1238440
+  },
+  "1238581": {
+    "name": "尖刺盾牌",
+    "dispel": "魔法",
+    "description": "施法者带刺的外壳可吸收500090点伤害，并对攻击者反弹4849点自然伤害。",
+    "aura": "吸收500090点伤害。\n对攻击者反弹4849点伤害。",
+    "duration_ms": null,
+    "icon": "inv_beetleprimal_purple",
+    "id": 1238581
+  },
+  "1238588": {
+    "name": "尖刺盾牌",
+    "dispel": null,
+    "description": "施法者带刺的外壳可吸收500090点伤害，并对攻击者反弹4849点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_beetleprimal_purple",
+    "id": 1238588
+  },
+  "1238687": {
+    "name": "苦难盛宴",
+    "dispel": null,
+    "description": "施法者汲取所有玩家的精华来满足饥渴，每1秒造成38793点暗影伤害，并恢复伤害值50%%的生命，持续5秒。",
+    "aura": "每1秒造成38793点暗影伤害，施法者吸取所造成伤害的50%的生命值。\n持续5秒",
+    "duration_ms": 5000.0,
+    "icon": "spell_shadow_lifedrain02_purple",
+    "id": 1238687
+  },
+  "1238725": {
+    "name": "苦难盛宴",
+    "dispel": null,
+    "description": "施法者汲取所有玩家的精华来满足饥渴，每1秒造成38793点暗影伤害，并恢复伤害值50%%的生命，持续5秒。",
+    "aura": "每1秒造成38793点暗影伤害，施法者吸取所造成伤害的50%的生命值。",
+    "duration_ms": null,
+    "icon": "spell_shadow_lifedrain02_purple",
+    "id": 1238725
+  },
+  "1239824": {
+    "name": "光明之火",
+    "dispel": null,
+    "description": "鲁伊亚向玩家射出一束能量光束，使其每1秒燃烧45339点光辉伤害，持续6秒。\n效果结束时，受影响玩家的位置会出现光明之火射线。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_holyfire_buff",
+    "id": 1239824
+  },
+  "1239825": {
+    "name": "光明之火",
+    "dispel": null,
+    "description": "鲁伊亚向玩家射出一束能量光束，使其每1秒燃烧45339点光辉伤害，持续6秒。\n效果结束时，受影响玩家的位置会出现光明之火射线。",
+    "aura": "每1秒受到45339点神圣火焰伤害。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "inv_ability_holyfire_buff",
+    "id": 1239825
+  },
+  "1239855": {
+    "name": "天空打击",
+    "dispel": null,
+    "description": "向附近的一名目标冲锋，对10码范围内的所有敌人造成872842点自然伤害（由受到冲击的敌人均摊）。该冲锋还会将所有受到冲击的敌人直接击飞。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_racial_wingbuffet",
+    "id": 1239855
+  },
+  "1239856": {
+    "name": "天空打击",
+    "dispel": null,
+    "description": "向附近的一名目标冲锋，对10码范围内的所有敌人造成872842点自然伤害（由受到冲击的敌人均摊）。该冲锋还会将所有受到冲击的敌人直接击飞。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_racial_wingbuffet",
+    "id": 1239856
+  },
+  "1241058": {
+    "name": "凶残痛击",
+    "dispel": "流血",
+    "description": "鲁伊亚疯狂挥击，对玩家造成145474点物理伤害，并使其流血，每1秒额外受到19396点物理伤害，持续40秒或直到生命值完全恢复。该效果可叠加。",
+    "aura": "流血，每1秒受到19396点物理伤害，持续40秒，或直到生命值完全恢复。\n持续40秒",
+    "duration_ms": 40000.0,
+    "icon": "spell_druid_bloodythrash",
+    "id": 1241058
+  },
+  "1241463": {
+    "name": "冰川之墓",
+    "dispel": null,
+    "description": "化身将所有玩家封入冰墓，每2秒造成38793点冰霜伤害，直至冰川之墓被摧毁。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_mage_coldasice",
+    "id": 1241463
+  },
+  "1241464": {
+    "name": "冰川之墓",
+    "dispel": null,
+    "description": "化身将所有玩家封入冰墓，每2秒造成38793点冰霜伤害，直至冰川之墓被摧毁。",
+    "aura": "被冻结在原地。\n每2秒受到38793点冰霜伤害，直至冰川之墓被摧毁。",
+    "duration_ms": null,
+    "icon": "ability_mage_coldasice",
+    "id": 1241464
+  },
+  "1242860": {
+    "name": "回响重击",
+    "dispel": null,
+    "description": "纳洛拉克标记玩家，持续4秒，随后在这些玩家的位置生成纳洛拉克的回响。所有纳洛拉克的回响会立即对8码范围内的玩家造成193965点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_druidoftheclawdruid_ravage",
+    "id": 1242860
+  },
+  "1242869": {
+    "name": "回响重击",
+    "dispel": null,
+    "description": "纳洛拉克标记玩家，持续4秒，随后在这些玩家的位置生成纳洛拉克的回响。所有纳洛拉克的回响会立即对8码范围内的玩家造成193965点自然伤害。",
+    "aura": "效果结束时，对8码范围内的敌人造成193965点自然伤害。\n持续4秒",
+    "duration_ms": 4000.0,
+    "icon": "inv_ability_druidoftheclawdruid_ravage",
+    "id": 1242869
+  },
+  "1242887": {
+    "name": "回响重击",
+    "dispel": null,
+    "description": "纳洛拉克标记玩家，持续4秒，随后在这些玩家的位置生成纳洛拉克的回响。所有纳洛拉克的回响会立即对8码范围内的玩家造成193965点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_druidoftheclawdruid_ravage",
+    "id": 1242887
+  },
+  "1242976": {
+    "name": "回响重击",
+    "dispel": null,
+    "description": "回响重击\n100 码范围\n4秒 施法时间",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_druidoftheclawdruid_ravage",
+    "id": 1242976
+  },
+  "1243569": {
+    "name": "压制强攻",
+    "dispel": null,
+    "description": "纳洛拉克向所有玩家发动一套毁灭性的攻击，在接下来的3秒内每1秒造成315193点物理伤害。这些攻击无视护甲。\n最后一击不仅会将所有玩家击退，还会使祖尔加拉昏迷。紧接着，纳洛拉克便会将目标转向祖尔加拉并施放强力猛击。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_druid_thrash",
+    "id": 1243569
+  },
+  "1246821": {
+    "name": "灼热岩浆",
+    "dispel": null,
+    "description": "熔岩图腾喷射灼热岩浆，每0.3秒对所有玩家造成36368点火焰伤害。",
+    "aura": "每0.3秒对一名随机玩家造成36368点火焰伤害。",
+    "duration_ms": null,
+    "icon": "spell_fire_selfdestruct",
+    "id": 1246821
+  },
+  "1246825": {
+    "name": "灼热岩浆",
+    "dispel": null,
+    "description": "熔岩图腾喷射灼热岩浆，每0.3秒对所有玩家造成36368点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_selfdestruct",
+    "id": 1246825
+  },
+  "1246957": {
+    "name": "原始回响",
+    "dispel": null,
+    "description": "施法者对60码范围内的玩家造成10点物理伤害，并在3秒内每1秒额外造成3点物理伤害。此效果可叠加且无视护甲。",
+    "aura": "每1秒造成3点物理伤害。\n持续3秒",
+    "duration_ms": 3000.0,
+    "icon": "spell_druid_stamedingroar",
+    "id": 1246957
+  },
+  "1247052": {
+    "name": "光绽之力",
+    "dispel": null,
+    "description": "玩家短暂借用光绽的力量，造成的伤害和治疗效果提高10%，同时每1秒受到14547点神圣伤害，持续12秒。此效果可叠加。",
+    "aura": "伤害提高10%。\n治疗效果提高10%。\n每1秒受到14547点神圣伤害。\n持续12秒",
+    "duration_ms": 12000.0,
+    "icon": "inv_ability_holyfire_buff",
+    "id": 1247052
+  },
+  "1247377": {
+    "name": "渗流木质",
+    "dispel": null,
+    "description": "兹欧凯特吞噬圣光能量，每3秒对所有玩家造成48491点神圣伤害。",
+    "aura": "每3秒对所有玩家造成48491点神圣伤害。",
+    "duration_ms": null,
+    "icon": "inv_ability_holyfire_nova",
+    "id": 1247377
+  },
+  "1247644": {
+    "name": "渗流木质",
+    "dispel": null,
+    "description": "兹欧凯特吞噬圣光能量，每3秒对所有玩家造成48491点神圣伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_holyfire_nova",
+    "id": 1247644
+  },
+  "1249737": {
+    "name": "苦难盛宴",
+    "dispel": null,
+    "description": "施法者汲取所有玩家的精华来满足饥渴，每1秒造成38793点暗影伤害，并恢复伤害值50%%的生命，持续5秒。",
+    "aura": "每1秒造成38793点暗影伤害，施法者吸取所造成伤害的50%的生命值。",
+    "duration_ms": null,
+    "icon": "spell_shadow_lifedrain02_purple",
+    "id": 1249737
+  },
+  "1250695": {
+    "name": "险恶光环",
+    "dispel": null,
+    "description": "每2秒对施法者100码范围内的所有敌人造成87284点自然伤害，持续8秒。",
+    "aura": "每2秒造成87284点自然伤害。",
+    "duration_ms": null,
+    "icon": "ability_warlock_burningembersgreen",
+    "id": 1250695
+  },
+  "1250937": {
+    "name": "喷毒",
+    "dispel": null,
+    "description": "薯身蟾主母喷吐腐蚀毒素，对所有玩家造成67888点自然伤害。毒液还会每1.5秒额外造成58189点自然伤害，持续9秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_corrosivebreath",
+    "id": 1250937
+  },
+  "1252406": {
+    "name": "恐惧咆哮",
+    "dispel": null,
+    "description": "哨兵释放黑暗咆哮，击退所有玩家，并在12秒内每1秒对其造成29095点暗影伤害。",
+    "aura": "每1秒造成29095点暗影伤害。\n持续12秒",
+    "duration_ms": 12000.0,
+    "icon": "spell_shadow_ragingscream",
+    "id": 1252406
+  },
+  "1255205": {
+    "name": "拔根而起",
+    "dispel": null,
+    "description": "施法者在玩家位置召唤巨型根须，造成116379点自然伤害并将其击退。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_herb_earthroot",
+    "id": 1255205
+  },
+  "1259365": {
+    "name": "血棘之根",
+    "dispel": "魔法",
+    "description": "地面涌出根须，每1秒对玩家造成48491点自然伤害并将其定身在原地，直到根须被摧毁。",
+    "aura": "被定身。\n每1秒造成48491点自然伤害。",
+    "duration_ms": null,
+    "icon": "inv_-misc_herb_marrowroot_leaf",
+    "id": 1259365
+  },
+  "1261276": {
+    "name": "荆棘之刃",
+    "dispel": null,
+    "description": "莱克希伏击一名玩家并从背后偷袭，对其造成96982点自然伤害，并使其流血，每2秒造成77586点物理伤害，持续12秒。",
+    "aura": "成为荆棘之刃的目标！\n持续2秒",
+    "duration_ms": 2000.0,
+    "icon": "spell_nature_thorns",
+    "id": 1261276
+  },
+  "1261645": {
+    "name": "钉锤风暴",
+    "dispel": null,
+    "description": "冲向一个随机敌人，在6秒内每1秒对8码范围内的敌人造成77586点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_paladin_enlightenedjudgements",
+    "id": 1261645
+  },
+  "1262497": {
+    "name": "巨响咆哮",
+    "dispel": null,
+    "description": "阿特洛苏斯发出震耳欲聋的咆哮，对所有玩家造成126077点物理伤害，此攻击无视护甲。\n咆哮会搅动附近的毒水池，导致一只剧毒蠕行者出现。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_racial_darkflight",
+    "id": 1262497
+  },
+  "1263628": {
+    "name": "喷涌之花",
+    "dispel": null,
+    "description": "施法者从花朵中喷射圣光能量，每2秒对60码范围内的玩家造成72737点神圣伤害，持续6秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_enchant_essenceastrallarge",
+    "id": 1263628
+  },
+  "1263983": {
+    "name": "凝缩物质",
+    "dispel": null,
+    "description": "引力宝珠锁定一名玩家，每1秒造成7759点暗影伤害并使移动速度降低2%。此效果可叠加。",
+    "aura": "每1秒造成3点暗影伤害。",
+    "duration_ms": null,
+    "icon": "inv_everburningignition_blue",
+    "id": 1263983
+  },
+  "1264106": {
+    "name": "邪能风暴",
+    "dispel": null,
+    "description": "凯斯媞亚的镜像释放邪火吞没场地，每1秒对附近所有玩家造成9698点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felcano",
+    "id": 1264106
+  },
+  "1264110": {
+    "name": "邪能风暴",
+    "dispel": null,
+    "description": "凯斯媞亚在附近制造自身的复制体，每个复制体都会施放邪能风暴。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felcano",
+    "id": 1264110
+  },
+  "1264188": {
+    "name": "不稳定奇点",
+    "dispel": null,
+    "description": "煞戎努斯在自己周身制造出多个奇点。每个奇点每1秒会对所有玩家造成7274点暗影伤害，并将他们缓慢拉向中心。\n被拉入奇点的玩家会被灰飞烟灭。",
+    "aura": "每1秒造成7274点暗影伤害。",
+    "duration_ms": null,
+    "icon": "inv_cosmicvoid_groundstate",
+    "id": 1264188
+  },
+  "1266241": {
+    "name": "货物爆炸",
+    "dispel": null,
+    "description": "如果违禁的货物被火焰炸弹或绝命凶径击中，则会在5秒后爆炸，对附近的玩家造成290947点火焰伤害并将其击退。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felflamering",
+    "id": 1266241
+  },
+  "1267754": {
+    "name": "野蛮飞跃",
+    "dispel": null,
+    "description": "扑向附近的一名敌人，用双手武器刺伤他们，造成77586点物理伤害，并使其流血，每1秒额外造成38793点物理伤害，持续5秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_druid_tigersroar",
+    "id": 1267754
+  },
+  "1267894": {
+    "name": "野蛮飞跃",
+    "dispel": "流血",
+    "description": "扑向附近的一名敌人，用双手武器刺伤他们，造成77586点物理伤害，并使其流血，每1秒额外造成38793点物理伤害，持续5秒。",
+    "aura": "每1秒造成38793点物理伤害。\n持续5秒",
+    "duration_ms": 5000.0,
+    "icon": "ability_druid_tigersroar",
+    "id": 1267894
+  },
+  "1271385": {
+    "name": "喷涌之花",
+    "dispel": null,
+    "description": "施法者从花朵中喷射圣光能量，每2秒对60码范围内的玩家造成72737点神圣伤害，持续6秒。",
+    "aura": "每2秒对玩家造成72737点神圣伤害。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "inv_enchant_essenceastrallarge",
+    "id": 1271385
+  },
+  "1271925": {
+    "name": "无所畏惧",
+    "dispel": null,
+    "description": "天赋 狂暴之怒的冷却时间缩短50%，且狂暴之怒会移除所有使移动速度降低的效果。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warrior_endlessrage",
+    "id": 1271925
+  },
+  "1271926": {
+    "name": "战场急救",
+    "dispel": null,
+    "description": "天赋 受到的治疗效果提高3%，所有自我治疗效果额外提高10%。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_misc_bandage_08",
+    "id": 1271926
+  },
+  "1276586": {
+    "name": "基岩涌动",
+    "dispel": null,
+    "description": "基岩猛击的冲击引发余震，在8秒内每1秒对所有玩家造成38793点自然伤害。",
+    "aura": "每1秒造成38793点自然伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "spell_sandexplosion",
+    "id": 1276586
+  },
+  "1280961": {
+    "name": "姿态掌握",
+    "dispel": null,
+    "description": "天赋 狂怒\n你的姿态会获得额外效果。\n狂暴姿态\n使你的自动攻击速度提高3%。\n防御姿态\n当一次攻击造成的伤害达到你最大生命值的20%或以上时，该次伤害会降低15%。\n武器, 防护\n你的姿态会获得额外效果。\n战斗姿态\n使你的技能造成的爆击伤害提高3%。\n防御姿态\n当一次攻击造成的伤害达到你最大生命值的20%或以上时，该次伤害会降低15%。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "crest_warrior",
+    "id": 1280961
+  },
+  "1287450": {
+    "name": "凝缩物质",
+    "dispel": null,
+    "description": "引力宝珠锁定一名玩家，每1秒造成7759点暗影伤害并使移动速度降低2%。此效果可叠加。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_everburningignition_blue",
+    "id": 1287450
+  },
+  "1287627": {
+    "name": "灼热邪焰",
+    "dispel": null,
+    "description": "利希尔·烬怒将自身包裹在邪能烈焰中，每1秒对敌人辐射19396点火焰伤害。",
+    "aura": "每1秒对所有敌人造成19396点火焰伤害。",
+    "duration_ms": null,
+    "icon": "spell_fire_felfirenova",
+    "id": 1287627
+  },
+  "1287811": {
+    "name": "解除盘卷",
+    "dispel": null,
+    "description": "扭缠盘蛇被硬生生撕裂成无数条小蛇，对所有玩家造成145474点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_hunter_snaketrap",
+    "id": 1287811
+  },
+  "1288087": {
+    "name": "电闪雷鸣",
+    "dispel": null,
+    "description": "阿德里斯挥舞着闪烁电弧的利刃向前冲刺，造成581895点自然伤害（由8码范围内的所有玩家均摊）。\n随后他会引导一记震耳欲聋的惊雷，对20码范围内的所有敌人造成387930点自然伤害。",
+    "aura": "阿德里斯挥舞着闪烁电弧的利刃向前冲刺，造成581895点自然伤害（由8码范围内的所有玩家均摊）。\n随后他会引导一记震耳欲聋的惊雷，对20码范围内的所有敌人造成387930点自然伤害。",
+    "duration_ms": null,
+    "icon": "warrior_talent_icon_thunderstruck",
+    "id": 1288087
+  },
+  "1288092": {
+    "name": "电闪雷鸣",
+    "dispel": null,
+    "description": "阿德里斯挥舞着闪烁电弧的利刃向前冲刺，造成581895点自然伤害（由8码范围内的所有玩家均摊）。\n随后他会引导一记震耳欲聋的惊雷，对20码范围内的所有敌人造成387930点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "warrior_talent_icon_thunderstruck",
+    "id": 1288092
+  },
+  "1288428": {
+    "name": "过载",
+    "dispel": null,
+    "description": "阿德里斯注入力量而发生过载，持续8秒，使他的攻击速度提高100%，并使他的每次近战攻击造成相当于其伤害25%的额外自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_thunderking_overcharge",
+    "id": 1288428
+  },
+  "1288457": {
+    "name": "阵风",
+    "dispel": null,
+    "description": "阿斯匹克斯爆破一名玩家，造成58189点自然伤害，此后每1秒额外造成24246点自然伤害，持续4秒。",
+    "aura": "每1秒造成24246点自然伤害。\n持续4秒",
+    "duration_ms": 4000.0,
+    "icon": "ability_skyreach_wind",
+    "id": 1288457
+  },
+  "1289062": {
+    "name": "狂风之力",
+    "dispel": null,
+    "description": "阿斯匹克斯向玩家释放狂风之力，造成77586点自然伤害并将其击退。",
+    "aura": "成为狂风之力的目标。",
+    "duration_ms": null,
+    "icon": "ability_skyreach_four_wind",
+    "id": 1289062
+  },
+  "1289109": {
+    "name": "雷霆喷吐",
+    "dispel": null,
+    "description": "米利克萨向玩家喷吐不稳定的能量，造成58189点自然伤害，并使闪电每1秒劈向其所在位置，持续4秒。\n每次雷击对冲击区域内的所有玩家造成290947点自然伤害并留下萦绕风暴。",
+    "aura": "成为雷霆喷吐的目标。\n持续3秒",
+    "duration_ms": 3000.0,
+    "icon": "ability_thunderking_thunderstruck",
+    "id": 1289109
+  },
+  "1289416": {
+    "name": "毒伤",
+    "dispel": null,
+    "description": "造成58189点自然伤害，此后每1秒额外造成24246点自然伤害，持续8秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_poison_missile",
+    "id": 1289416
+  },
+  "1289588": {
+    "name": "雷霆喷吐",
+    "dispel": null,
+    "description": "米利克萨向玩家喷吐不稳定的能量，造成58189点自然伤害，并使闪电每1秒劈向其所在位置，持续4秒。\n每次雷击对冲击区域内的所有玩家造成290947点自然伤害并留下萦绕风暴。",
+    "aura": "每1秒造成58189点自然伤害。\n持续4秒",
+    "duration_ms": 4000.0,
+    "icon": "ability_thunderking_thunderstruck",
+    "id": 1289588
+  },
+  "1289602": {
+    "name": "雷霆喷吐",
+    "dispel": null,
+    "description": "米利克萨向玩家喷吐不稳定的能量，造成58189点自然伤害，并使闪电每1秒劈向其所在位置，持续4秒。\n每次雷击对冲击区域内的所有玩家造成290947点自然伤害并留下萦绕风暴。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_thunderking_thunderstruck",
+    "id": 1289602
+  },
+  "1290531": {
+    "name": "诱导",
+    "dispel": null,
+    "description": "加瓦兹特释放出一道电能脉冲，对所有敌人造成145474点自然伤害，并产生一个诱导力场。",
+    "aura": "静电场每1秒对站在其中的玩家造成96982点自然伤害。\n持续1分钟",
+    "duration_ms": 60000.0,
+    "icon": "ability_thunderking_overcharge",
+    "id": 1290531
+  },
+  "1291399": {
+    "name": "锯齿冲锋",
+    "dispel": null,
+    "description": "该生物向一名敌人冲锋，造成58189点物理伤害，并使其流血，在6秒内每1秒额外造成38793点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_artifact_bloodoftheassassinated",
+    "id": 1291399
+  },
+  "1293048": {
+    "name": "毒蛇风暴",
+    "dispel": null,
+    "description": "米利克萨喷吐毒液，击退所有玩家并造成116379点自然伤害，随后在8秒内每1秒额外造成29095点自然伤害。\n风暴打击会出现在房间各处。",
+    "aura": "每1秒造成29095点自然伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "spell_nature_lightningoverload",
+    "id": 1293048
+  },
+  "1293475": {
+    "name": "释放电荷",
+    "dispel": null,
+    "description": "释放由积攒电荷积聚的所有能量，对所有玩家造成145474点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_chargenegative",
+    "id": 1293475
+  },
+  "1294567": {
+    "name": "麻痹射击",
+    "dispel": null,
+    "description": "双牙向玩家喷吐麻痹毒液，在命中时造成67888点自然伤害，并且每1秒额外造成38793点自然伤害，持续14秒。\n受影响的玩家会逐渐瘫痪，每一次受到伤害都会使移动速度降低10%。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_poisonsting",
+    "id": 1294567
+  },
+  "1294568": {
+    "name": "麻痹射击",
+    "dispel": null,
+    "description": "双牙向玩家喷吐麻痹毒液，在命中时造成67888点自然伤害，并且每1秒额外造成38793点自然伤害，持续14秒。\n受影响的玩家会逐渐瘫痪，每一次受到伤害都会使移动速度降低10%。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_poisonsting",
+    "id": 1294568
+  },
+  "1294569": {
+    "name": "麻痹射击",
+    "dispel": "魔法",
+    "description": "双牙向玩家喷吐麻痹毒液，在命中时造成67888点自然伤害，并且每1秒额外造成38793点自然伤害，持续14秒。\n受影响的玩家会逐渐瘫痪，每一次受到伤害都会使移动速度降低10%。",
+    "aura": "每1秒造成38793点自然伤害。\n移动速度降低10%。\n持续14秒",
+    "duration_ms": 14000.0,
+    "icon": "ability_poisonsting",
+    "id": 1294569
+  },
+  "1294849": {
+    "name": "振响",
+    "dispel": null,
+    "description": "扭缠摇响尾巴，每1秒造成43642点物理伤害，持续5秒。该效果无视护甲。",
+    "aura": "每1秒造成43642点物理伤害。该效果无视护甲。\n持续5秒",
+    "duration_ms": 5000.0,
+    "icon": "inv_sonic_wave",
+    "id": 1294849
+  },
+  "1294859": {
+    "name": "振响",
+    "dispel": null,
+    "description": "扭缠摇响尾巴，每1秒造成43642点物理伤害，持续5秒。该效果无视护甲。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_sonic_wave",
+    "id": 1294859
+  },
+  "1295453": {
+    "name": "地狱火碾压",
+    "dispel": null,
+    "description": "歼灭者萨苏克斯用注入邪能的巨斧猛击地面，使能量在目标玩家脚下喷发，造成96982点火焰伤害，并在8秒内每1秒额外造成29095点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_bossfellord_felspike",
+    "id": 1295453
+  },
+  "1295455": {
+    "name": "地狱火碾压",
+    "dispel": null,
+    "description": "歼灭者萨苏克斯用注入邪能的巨斧猛击地面，使能量在目标玩家脚下喷发，造成96982点火焰伤害，并在8秒内每1秒额外造成29095点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_bossfellord_felspike",
+    "id": 1295455
+  },
+  "1296045": {
+    "name": "灌能传导",
+    "dispel": null,
+    "description": "施法者向玩家体内输送电流，在20秒内每1秒造成42672点自然伤害。\n如果灌能传导结束，传导闪电将劈中受害者。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_lightning",
+    "id": 1296045
+  },
+  "1296052": {
+    "name": "灌能传导",
+    "dispel": "魔法",
+    "description": "施法者向玩家体内输送电流，在20秒内每1秒造成42672点自然伤害。\n如果灌能传导结束，传导闪电将劈中受害者。",
+    "aura": "每1秒造成42672点自然伤害。\n效果结束时击晕目标。\n持续20秒",
+    "duration_ms": 20000.0,
+    "icon": "spell_nature_stormreach",
+    "id": 1296052
+  },
+  "1296058": {
+    "name": "反刍",
+    "dispel": null,
+    "description": "拉维向一名敌人呈直线喷吐3道胃酸波，对10码范围内的敌人以及卷入波浪的敌人造成290947点自然伤害，并使其移动速度降低50%，造成的伤害降低50%。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_poison_wave",
+    "id": 1296058
+  },
+  "1296069": {
+    "name": "反刍",
+    "dispel": "疾病",
+    "description": "拉维向一名敌人呈直线喷吐3道胃酸波，对10码范围内的敌人以及卷入波浪的敌人造成290947点自然伤害，并使其移动速度降低50%，造成的伤害降低50%。",
+    "aura": "移动速度降低50%。造成的伤害降低50%。\n持续25秒",
+    "duration_ms": 25000.0,
+    "icon": "inv_ability_poison_wave",
+    "id": 1296069
+  },
+  "1296220": {
+    "name": "三重喷吐",
+    "dispel": null,
+    "description": "拉维向3名敌人发射毒液球，每个毒液球会造成116379点自然伤害，并在10秒内每1秒对5码内的敌人额外造成41218点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_corrosivebreath",
+    "id": 1296220
+  },
+  "1296518": {
+    "name": "隆隆结界",
+    "dispel": null,
+    "description": "施法者在自身周围制造一道护盾以吸收受到的伤害，并在接下来的1分钟内，每2秒对所有敌人造成24246点自然伤害。",
+    "aura": "吸收0点伤害。\n每2秒对所有敌人造成24246点自然伤害。\n持续1分钟",
+    "duration_ms": 60000.0,
+    "icon": "ability_gift_of_earth",
+    "id": 1296518
+  },
+  "1296519": {
+    "name": "隆隆结界",
+    "dispel": null,
+    "description": "施法者在自身周围制造一道护盾以吸收受到的伤害，并在接下来的1分钟内，每2秒对所有敌人造成24246点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_gift_of_earth",
+    "id": 1296519
+  },
+  "1296963": {
+    "name": "幽影破裂",
+    "dispel": null,
+    "description": "塔兹拉及其虚空残影撕开一道通往虚空的裂隙，对冲击点10码范围内的所有玩家造成290947点暗影伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_cosmicvoid_groundstate",
+    "id": 1296963
+  },
+  "1297682": {
+    "name": "吸取生命",
+    "dispel": null,
+    "description": "每1秒从目标身上吸取生命，并将其转移给施法者。",
+    "aura": "每1秒从目标身上吸取生命，并将其转移给施法者。\n持续7秒",
+    "duration_ms": 7000.0,
+    "icon": "spell_shadow_lifedrain02",
+    "id": 1297682
+  },
+  "1297683": {
+    "name": "吸取生命",
+    "dispel": null,
+    "description": "每1秒从目标身上吸取生命，并将其转移给施法者。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_shadow_lifedrain02",
+    "id": 1297683
+  },
+  "1297693": {
+    "name": "邪火轰炸",
+    "dispel": null,
+    "description": "",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felfire",
+    "id": 1297693
+  },
+  "1297695": {
+    "name": "邪火轰炸",
+    "dispel": null,
+    "description": "Inflicts 193965 Fire damage to enemies within 5 yards of the impact.",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_felfire",
+    "id": 1297695
+  },
+  "1297749": {
+    "name": "寒冰暴雨",
+    "dispel": null,
+    "description": "寒冬哨兵唤出一场巨大的风暴，每1秒对所有玩家造成38793点冰霜伤害，并将他们向外推开。\n处于风暴之眼外的玩家每1秒会额外受到145474点冰霜伤害。",
+    "aura": "每1秒造成145474点冰霜伤害。",
+    "duration_ms": null,
+    "icon": "spell_frost_ring-of-frost",
+    "id": 1297749
+  },
+  "1297781": {
+    "name": "骤裂",
+    "dispel": null,
+    "description": "撕裂目标，使其移动速度降低10%，并使其流血，每1秒受到24246点物理伤害，持续18秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_skeer_bloodletting",
+    "id": 1297781
+  },
+  "1297792": {
+    "name": "压制强攻",
+    "dispel": null,
+    "description": "纳洛拉克向所有玩家发动一套毁灭性的攻击，在接下来的3秒内每1秒造成315193点物理伤害。这些攻击无视护甲。\n最后一击不仅会将所有玩家击退，还会使祖尔加拉昏迷。紧接着，纳洛拉克便会将目标转向祖尔加拉并施放强力猛击。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_druid_thrash",
+    "id": 1297792
+  },
+  "1297793": {
+    "name": "压制强攻",
+    "dispel": null,
+    "description": "纳洛拉克向所有玩家发动一套毁灭性的攻击，在接下来的3秒内每1秒造成315193点物理伤害。这些攻击无视护甲。\n最后一击不仅会将所有玩家击退，还会使祖尔加拉昏迷。紧接着，纳洛拉克便会将目标转向祖尔加拉并施放强力猛击。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_druid_thrash",
+    "id": 1297793
+  },
+  "1297797": {
+    "name": "强力猛击",
+    "dispel": null,
+    "description": "纳洛拉克对祖尔加拉发动强力猛击。对冲击点6码内的所有玩家造成775859点物理伤害。如果没有命中任何玩家，祖尔加拉将承受猛击的全部力量，导致她释放出挫志怒吼。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_misc_bearpaw_red",
+    "id": 1297797
+  },
+  "1297876": {
+    "name": "三重喷吐",
+    "dispel": null,
+    "description": "拉维向3名敌人发射毒液球，每个毒液球会造成116379点自然伤害，并在10秒内每1秒对5码内的敌人额外造成41218点自然伤害。",
+    "aura": "每1秒受到41218点自然伤害。\n持续10秒",
+    "duration_ms": 10000.0,
+    "icon": "spell_nature_corrosivebreath",
+    "id": 1297876
+  },
+  "1298304": {
+    "name": "黑暗启示",
+    "dispel": null,
+    "description": "在5秒后释放黑暗启示，对20码范围内的敌人造成473120点暗影伤害。",
+    "aura": "效果结束时触发黑暗启示，对20码范围内的敌人造成135775点暗影伤害。\n持续5秒",
+    "duration_ms": 5000.0,
+    "icon": "ability_priest_clarityofpower",
+    "id": 1298304
+  },
+  "1298317": {
+    "name": "黑暗启示",
+    "dispel": null,
+    "description": "在5秒后释放黑暗启示，对20码范围内的敌人造成473120点暗影伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_priest_clarityofpower",
+    "id": 1298317
+  },
+  "1298329": {
+    "name": "雷霆喷吐",
+    "dispel": null,
+    "description": "米利克萨向玩家喷吐不稳定的能量，造成58189点自然伤害，并使闪电每1秒劈向其所在位置，持续4秒。\n每次雷击对冲击区域内的所有玩家造成290947点自然伤害并留下萦绕风暴。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_thunderking_thunderstruck",
+    "id": 1298329
+  },
+  "1299130": {
+    "name": "掘地冲锋",
+    "dispel": null,
+    "description": "扭缠盘蛇在地下穿行，对路径上的敌人造成387930点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_earthquake",
+    "id": 1299130
+  },
+  "1299135": {
+    "name": "掘地冲锋",
+    "dispel": null,
+    "description": "扭缠盘蛇在地下穿行，对路径上的敌人造成387930点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_earthquake",
+    "id": 1299135
+  },
+  "1299154": {
+    "name": "同步毒液",
+    "dispel": null,
+    "description": "扭缠盘蛇向所有敌人喷射毒液，造成87284点自然伤害，并在35秒内每1秒额外造成16972点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_poison_missile",
+    "id": 1299154
+  },
+  "1299155": {
+    "name": "同步毒液",
+    "dispel": null,
+    "description": "扭缠盘蛇向所有敌人喷射毒液，造成87284点自然伤害，并在35秒内每1秒额外造成16972点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_poison_missile",
+    "id": 1299155
+  },
+  "1299189": {
+    "name": "同步毒液",
+    "dispel": null,
+    "description": "扭缠盘蛇向所有敌人喷射毒液，造成87284点自然伤害，并在35秒内每1秒额外造成16972点自然伤害。",
+    "aura": "每1秒受到16972点自然伤害。\n持续35秒",
+    "duration_ms": 35000.0,
+    "icon": "inv_ability_poison_missile",
+    "id": 1299189
+  },
+  "1299913": {
+    "name": "虚无喷发",
+    "dispel": null,
+    "description": "对落点10码范围内的敌人造成145474点暗影伤害。\n随后每1秒对落点10码范围内的所有敌人造成38793点暗影伤害，持续5秒。",
+    "aura": "每1秒造成38793点暗影伤害。\n持续5秒",
+    "duration_ms": 5000.0,
+    "icon": "inv_cosmicvoid_orb",
+    "id": 1299913
+  },
+  "1300227": {
+    "name": "钻地之震",
+    "dispel": null,
+    "description": "米利克萨在地下穿行，导致地面剧烈震颤，每1秒对所有玩家造成24246点自然伤害。",
+    "aura": "每1秒造成24246点自然伤害。",
+    "duration_ms": null,
+    "icon": "spell_shaman_earthquake",
+    "id": 1300227
+  },
+  "1300259": {
+    "name": "黑暗绽放",
+    "dispel": null,
+    "description": "塔兹拉释放出一道虚空能量波，对所有玩家造成174568点暗影伤害，并使虚空裂隙喷发，对被击中的玩家造成242456点暗影伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_voidweaverpriest_entropicrift",
+    "id": 1300259
+  },
+  "1300262": {
+    "name": "黑暗绽放",
+    "dispel": null,
+    "description": "塔兹拉释放出一道虚空能量波，对所有玩家造成174568点暗影伤害，并使虚空裂隙喷发，对被击中的玩家造成242456点暗影伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_voidweaverpriest_entropicrift",
+    "id": 1300262
+  },
+  "1300351": {
+    "name": "毒液喷溅",
+    "dispel": null,
+    "description": "阿特洛苏斯向四周泼洒毒液，每1秒对所有敌人造成38793点自然伤害。\n毒液团命中玩家时会对受击玩家造成193965点自然伤害，并在接下来的5秒内每1秒额外造成58189点自然伤害。每次撞击都会制造出一滩毒液池，持续1分钟。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_corrosivebreath",
+    "id": 1300351
+  },
+  "1300372": {
+    "name": "星辰坠击",
+    "dispel": null,
+    "description": "煞戎努斯召唤虚空彗星坠向玩家位置，对冲击点8码范围内的玩家造成116379点暗影伤害，并在接下来的20秒内每1秒额外造成14547点暗影伤害，同时将其击退。",
+    "aura": "每5.2秒造成116379点暗影伤害。\n持续20秒",
+    "duration_ms": 20000.0,
+    "icon": "inv_cosmicvoid_groundsate",
+    "id": 1300372
+  },
+  "1300876": {
+    "name": "毒牙仪式",
+    "dispel": null,
+    "description": "祖尔加挥舞乌拉特克之牙，此时蛇头会将远古光束集中到他身上，持续8秒，使其获得毒牙强化。\n如果被玩家拦截，光束则转为每1秒造成38793点自然伤害，并施加仪式毒液。",
+    "aura": "挥舞乌拉特克之牙。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "inv_achievement_dungeon_altaroffangs",
+    "id": 1300876
+  },
+  "1300877": {
+    "name": "腐化",
+    "dispel": null,
+    "description": "黑暗能量每1秒造成38793点暗影伤害，使造成的治疗效果降低33%，并使受到的物理伤害提高250%，持续15秒。此效果可叠加。",
+    "aura": "每1秒造成38793点暗影伤害。\n造成的治疗效果降低33%。\n受到的物理伤害提高250%。\n持续15秒",
+    "duration_ms": 15000.0,
+    "icon": "inv_nullstone_shadow",
+    "id": 1300877
+  },
+  "1300885": {
+    "name": "毒牙仪式",
+    "dispel": null,
+    "description": "祖尔加挥舞乌拉特克之牙，此时蛇头会将远古光束集中到他身上，持续8秒，使其获得毒牙强化。\n如果被玩家拦截，光束则转为每1秒造成4点自然伤害，并施加仪式毒液。",
+    "aura": "每1秒造成4点自然伤害。",
+    "duration_ms": null,
+    "icon": "inv_achievement_dungeon_altaroffangs",
+    "id": 1300885
+  },
+  "1300886": {
+    "name": "毒牙仪式",
+    "dispel": null,
+    "description": "祖尔加挥舞乌拉特克之牙，此时蛇头会将远古光束集中到他身上，持续8秒，使其获得毒牙强化。\n如果被玩家拦截，光束则转为每1秒造成38793点自然伤害，并施加仪式毒液。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_achievement_dungeon_altaroffangs",
+    "id": 1300886
+  },
+  "1301413": {
+    "name": "切骨者",
+    "dispel": null,
+    "description": "祖尔加朝着一名玩家用力掷出飞斧，对路径上的所有玩家造成174568点物理伤害，并在接下来的7秒内每1秒额外造成43642点物理伤害。此效果无视护甲。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_hunter_swiftstrike",
+    "id": 1301413
+  },
+  "1301508": {
+    "name": "切骨者",
+    "dispel": null,
+    "description": "祖尔加朝着一名玩家用力掷出飞斧，对路径上的所有玩家造成174568点物理伤害，并在接下来的7秒内每1秒额外造成43642点物理伤害。此效果无视护甲。",
+    "aura": "每1秒造成43642点物理伤害。\n持续7秒",
+    "duration_ms": 7000.0,
+    "icon": "ability_hunter_swiftstrike",
+    "id": 1301508
+  },
+  "1301851": {
+    "name": "嗜血飞斧",
+    "dispel": "流血",
+    "description": "投掷一把锯齿飞斧，追踪最多两个目标，使其流血，每1秒受到29095点物理伤害，持续12秒。",
+    "aura": "每1秒造成29095点物理伤害。\n持续12秒",
+    "duration_ms": 12000.0,
+    "icon": "spell_druid_bloodythrash",
+    "id": 1301851
+  },
+  "1302007": {
+    "name": "刃舞",
+    "dispel": null,
+    "description": "施法者在接下来的1.2秒内，每0.4秒打击所有敌人，造成43642点火焰伤害。",
+    "aura": "每0.4秒造成43642点火焰伤害。\n持续1秒",
+    "duration_ms": 1000.0,
+    "icon": "ability_demonhunter_bladedance",
+    "id": 1302007
+  },
+  "1302010": {
+    "name": "刃舞",
+    "dispel": null,
+    "description": "施法者在接下来的1.2秒内，每0.4秒打击所有敌人，造成43642点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_demonhunter_bladedance",
+    "id": 1302010
+  },
+  "1302616": {
+    "name": "邪恶冲锋",
+    "dispel": null,
+    "description": "堕落的守护者冲向一名玩家并打击他们，造成67888点暗影伤害，并在接下来的8秒内每1秒额外造成38793点暗影伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_rogue_shadowstep",
+    "id": 1302616
+  },
+  "1302618": {
+    "name": "邪恶冲锋",
+    "dispel": null,
+    "description": "堕落的守护者冲向一名玩家并打击他们，造成67888点暗影伤害，并在接下来的8秒内每1秒额外造成38793点暗影伤害。",
+    "aura": "每1秒造成38793点暗影伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "ability_rogue_shadowstep",
+    "id": 1302618
+  },
+  "1302761": {
+    "name": "不稳定腐化",
+    "dispel": null,
+    "description": "污浊的能量从堕落的守护者体内爆发，对20码范围内的玩家造成484664点暗影伤害，并形成腐蚀生命力。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_mage_supernova_nightborne",
+    "id": 1302761
+  },
+  "1303267": {
+    "name": "镀金毁灭",
+    "dispel": null,
+    "description": "达萨王在永恒王座旁以熔金灌注自身，随后施放镀金猛击，对所有玩家造成155172点火焰伤害，并在接下来的15秒$?|diff2内额外造成24246点火焰伤害[。]。达萨王被灼金包裹",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_sword_2h_zandalarquest_b_01",
+    "id": 1303267
+  },
+  "1303324": {
+    "name": "震地之跃",
+    "dispel": null,
+    "description": "塔扎拉跃向目标玩家，对冲击点8码范围内的玩家造成164870点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_raptortravelform",
+    "id": 1303324
+  },
+  "1303326": {
+    "name": "震地之跃",
+    "dispel": null,
+    "description": "震地之跃\n无限范围\n瞬发",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_heroicleap",
+    "id": 1303326
+  },
+  "1303327": {
+    "name": "震地之跃",
+    "dispel": null,
+    "description": "塔扎拉跃向目标玩家，对冲击点8码范围内的玩家造成164870点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_heroicleap",
+    "id": 1303327
+  },
+  "1303486": {
+    "name": "蚀骨践踏",
+    "dispel": null,
+    "description": "该生物猛踏地面，喷发出一股烈毒新星，对60码范围内的玩家造成116379点自然伤害，并且每1秒额外造成33459点自然伤害，持续10秒。",
+    "aura": "每1秒造成33459点自然伤害。\n持续10秒",
+    "duration_ms": 10000.0,
+    "icon": "inv_ability_poison_nova",
+    "id": 1303486
+  },
+  "1305201": {
+    "name": "采掘冲击",
+    "dispel": null,
+    "description": "施法者对60码范围内的敌人造成106681点自然伤害，并每1秒额外造成33944点自然伤害，持续8秒。\n冲击会导致爆破碎片如雨般降下。",
+    "aura": "每1秒造成33944点自然伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "spell_nature_earthquake",
+    "id": 1305201
+  },
+  "1305945": {
+    "name": "暗影旋风斩",
+    "dispel": null,
+    "description": "Inflicts 164870 Shadow damage to enemies within 100 yards.",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_necro_deathsknell",
+    "id": 1305945
+  },
+  "1305955": {
+    "name": "火热冲击",
+    "dispel": null,
+    "description": "施法者对当前目标造成358835点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_mage_greaterpyroblast",
+    "id": 1305955
+  },
+  "1306366": {
+    "name": "闪电涌流",
+    "dispel": null,
+    "description": "施法者用电能轰击一名玩家，持续7秒，每1秒造成65463点自然伤害。",
+    "aura": "每1秒造成65463点自然伤害。\n持续7秒",
+    "duration_ms": 7000.0,
+    "icon": "spell_shaman_thunderstorm",
+    "id": 1306366
+  },
+  "1306381": {
+    "name": "恶臭喷吐",
+    "dispel": null,
+    "description": "造成58189点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_creature_poison_02",
+    "id": 1306381
+  },
+  "1306385": {
+    "name": "进化",
+    "dispel": null,
+    "description": "施法者尝试进化，每1秒恢复最大生命值的5%，持续6秒。\n进化一旦完成，施法者将获得一个能吸收接下来250045点伤害的护盾，并免疫控制效果。",
+    "aura": "每1秒恢复5%的最大生命值。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "inv_121_trinket_raid_ulatek_heart",
+    "id": 1306385
+  },
+  "1306517": {
+    "name": "鲜血献祭",
+    "dispel": null,
+    "description": "仪式首领召唤祭坛之灵来剖开玩家，造成87284点物理伤害并吸收下一次142526点治疗量。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warrior_bloodfrenzy",
+    "id": 1306517
+  },
+  "1306550": {
+    "name": "鲜血献祭",
+    "dispel": null,
+    "description": "仪式首领召唤祭坛之灵来剖开玩家，造成87284点物理伤害并吸收下一次142526点治疗量。",
+    "aura": "吸收142526点治疗量。\n持续1分钟",
+    "duration_ms": 60000.0,
+    "icon": "ability_warrior_bloodfrenzy",
+    "id": 1306550
+  },
+  "1306641": {
+    "name": "鲜血献祭",
+    "dispel": null,
+    "description": "仪式首领召唤祭坛之灵来剖开玩家，造成87284点物理伤害并吸收下一次142526点治疗量。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warrior_bloodfrenzy",
+    "id": 1306641
+  },
+  "1306657": {
+    "name": "鲜血献祭",
+    "dispel": null,
+    "description": "仪式首领召唤祭坛之灵来剖开玩家，造成87284点物理伤害并吸收下一次142526点治疗量。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warrior_bloodfrenzy",
+    "id": 1306657
+  },
+  "1306736": {
+    "name": "吐金",
+    "dispel": null,
+    "description": "向随机玩家喷吐熔化的黄金，对冲击点5码范围内的玩家造成87284点火焰伤害，并在6秒内每2秒造成额外的77586点火焰伤害，随后在该玩家的位置制造一滩熔化的黄金。",
+    "aura": "成为吐金的目标！\n持续2秒",
+    "duration_ms": 2000.0,
+    "icon": "ability_creature_amber_01",
+    "id": 1306736
+  },
+  "1306852": {
+    "name": "剧毒涌动",
+    "dispel": null,
+    "description": "毒术士卷起一场毒素风暴，每1秒造成29095点自然伤害，持续9秒，并触发剧毒射线。",
+    "aura": "每1秒造成29095点自然伤害。\n持续9秒",
+    "duration_ms": 9000.0,
+    "icon": "inv_ability_poison_wave",
+    "id": 1306852
+  },
+  "1306853": {
+    "name": "剧毒涌动",
+    "dispel": null,
+    "description": "毒术士卷起一场毒素风暴，每1秒造成29095点自然伤害，持续9秒，并触发剧毒射线。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_ability_poison_wave",
+    "id": 1306853
+  },
+  "1307205": {
+    "name": "地缚印记",
+    "dispel": null,
+    "description": "施法者对一名玩家造成53340点自然伤害，随后每1秒额外造成31519点自然伤害，持续8秒。",
+    "aura": "每1秒造成31519点自然伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "inv_ore_blackrock_ore",
+    "id": 1307205
+  },
+  "1307269": {
+    "name": "麻痹射击",
+    "dispel": null,
+    "description": "双牙向玩家喷吐麻痹毒液，在命中时造成67888点自然伤害，并且每1秒额外造成38793点自然伤害，持续14秒。\n受影响的玩家会逐渐瘫痪，每一次受到伤害都会使移动速度降低10%。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_poisonsting",
+    "id": 1307269
+  },
+  "1307488": {
+    "name": "闪电涌流",
+    "dispel": null,
+    "description": "施法者用电能轰击一名玩家，持续7秒，每1秒造成65463点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_shaman_thunderstorm",
+    "id": 1307488
+  },
+  "1307571": {
+    "name": "毒伤",
+    "dispel": "中毒",
+    "description": "造成58189点自然伤害，此后每1秒额外造成24246点自然伤害，持续8秒。",
+    "aura": "每1秒造成24246点自然伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "inv_ability_poison_missile",
+    "id": 1307571
+  },
+  "1307573": {
+    "name": "三重喷吐",
+    "dispel": null,
+    "description": "拉维向3名敌人发射毒液球，每个毒液球会造成116379点自然伤害，并在10秒内每1秒对5码内的敌人额外造成41218点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_corrosivebreath",
+    "id": 1307573
+  },
+  "1307602": {
+    "name": "进化",
+    "dispel": null,
+    "description": "施法者尝试进化，每1秒恢复最大生命值的5%，持续6秒。\n进化一旦完成，施法者将获得一个能吸收接下来250045点伤害的护盾，并免疫控制效果。",
+    "aura": "吸收250045点伤害。\n免疫控制效果。",
+    "duration_ms": null,
+    "icon": "inv_121_trinket_raid_ulatek_heart",
+    "id": 1307602
+  },
+  "1307700": {
+    "name": "腐肉喷发",
+    "dispel": null,
+    "description": "腐肉和内脏的恶臭萦绕在所有敌人身上，每3秒造成29095点自然伤害，持续9秒。该效果可叠加。",
+    "aura": "每3秒受到29095点自然伤害。\n持续9秒",
+    "duration_ms": 9000.0,
+    "icon": "ability_creature_disease_02",
+    "id": 1307700
+  },
+  "1308113": {
+    "name": "箭雨",
+    "dispel": null,
+    "description": "施法者朝一名玩家发射连珠箭，每0.8秒造成43642点物理伤害，持续9秒。",
+    "aura": "每0.8秒造成43642点物理伤害。\n持续9秒",
+    "duration_ms": 9000.0,
+    "icon": "inv_misc_ammo_arrow_05",
+    "id": 1308113
+  },
+  "1308116": {
+    "name": "箭雨",
+    "dispel": null,
+    "description": "施法者朝一名玩家发射连珠箭，每0.8秒造成43642点物理伤害，持续9秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_misc_ammo_arrow_05",
+    "id": 1308116
+  },
+  "1308148": {
+    "name": "细胞毒素",
+    "dispel": "中毒",
+    "description": "施法者向一名玩家注射细胞毒素，造成72737点自然伤害，并且每1秒额外造成38793点自然伤害，持续10秒。",
+    "aura": "每1秒造成38793点自然伤害。\n持续10秒",
+    "duration_ms": 10000.0,
+    "icon": "ability_hunter_cobrastrikes",
+    "id": 1308148
+  },
+  "1308738": {
+    "name": "过载",
+    "dispel": null,
+    "description": "阿德里斯注入力量而发生过载，持续8秒，使他的攻击速度提高100%，并使他的每次近战攻击造成相当于其伤害25%的额外自然伤害。",
+    "aura": "攻击速度提高100%。\n近战攻击会额外造成相当于其伤害25%的自然伤害。\n持续8秒",
+    "duration_ms": 8000.0,
+    "icon": "ability_thunderking_overcharge",
+    "id": 1308738
+  },
+  "1308740": {
+    "name": "过载",
+    "dispel": null,
+    "description": "阿德里斯注入力量而发生过载，持续8秒，使他的攻击速度提高100%，并使他的每次近战攻击造成相当于其伤害25%的额外自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_thunderking_overcharge",
+    "id": 1308740
+  },
+  "1309919": {
+    "name": "冰冷咆哮",
+    "dispel": null,
+    "description": "这只熊发出冰冷咆哮，使急速和移动速度降低50%。",
+    "aura": "移动速度降低50%。\n急速降低50%。\n持续15秒",
+    "duration_ms": 15000.0,
+    "icon": "inv_amanibearmount_witherbark",
+    "id": 1309919
+  },
+  "1310309": {
+    "name": "钉锤风暴",
+    "dispel": null,
+    "description": "冲向一个随机敌人，在6秒内每1秒对8码范围内的敌人造成77586点物理伤害。",
+    "aura": "成为钉锤风暴的目标！\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "ability_paladin_enlightenedjudgements",
+    "id": 1310309
+  },
+  "1310712": {
+    "name": "狂风之力",
+    "dispel": null,
+    "description": "阿斯匹克斯向玩家释放狂风之力，造成77586点自然伤害并将其击退。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_skyreach_four_wind",
+    "id": 1310712
+  },
+  "1310761": {
+    "name": "翻滚",
+    "dispel": null,
+    "description": "阿卡阿里朝一名锁定的玩家冲锋，造成872842点物理伤害，由冲击点7码范围内的玩家均摊。该攻击无视护甲。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_monk_clashingoxcharge",
+    "id": 1310761
+  },
+  "1311987": {
+    "name": "蛇之风",
+    "dispel": null,
+    "description": "黄金灵蛇制造一阵强大的狂风，持续5秒，每1秒对所有玩家造成58189点自然伤害，并将其击退。",
+    "aura": "每1秒对所有玩家造成58189点伤害，并将其击退。\n持续5秒",
+    "duration_ms": 5000.0,
+    "icon": "ability_skyreach_four_wind",
+    "id": 1311987
+  },
+  "1311988": {
+    "name": "蛇之风",
+    "dispel": null,
+    "description": "黄金灵蛇制造一阵强大的狂风，持续5秒，每1秒对所有玩家造成58189点自然伤害，并将其击退。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_skyreach_four_wind",
+    "id": 1311988
+  },
+  "1312104": {
+    "name": "吐金",
+    "dispel": null,
+    "description": "向随机玩家喷吐熔化的黄金，对冲击点5码范围内的玩家造成87284点火焰伤害，并在6秒内每2秒造成额外的77586点火焰伤害，随后在该玩家的位置制造一滩熔化的黄金。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_creature_amber_01",
+    "id": 1312104
+  },
+  "1312146": {
+    "name": "觉醒猛击",
+    "dispel": null,
+    "description": "姆沁巴用死疽能量猛击地面，对所有玩家造成193965点暗影伤害。这次猛击会导致随机墓穴打开，召唤出未完成的木乃伊。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_necro_deathsdoor",
+    "id": 1312146
+  },
+  "1312214": {
+    "name": "腐化",
+    "dispel": null,
+    "description": "黑暗能量每1秒造成4点暗影伤害，使造成的治疗效果降低33%，并使受到的物理伤害提高250%，持续15秒。此效果可叠加。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_nullstone_shadow",
+    "id": 1312214
+  },
+  "1314051": {
+    "name": "电闪雷鸣",
+    "dispel": null,
+    "description": "阿德里斯挥舞着闪烁电弧的利刃向前冲刺，造成581895点自然伤害（由8码范围内的所有玩家均摊）。\n随后他会引导一记震耳欲聋的惊雷，对20码范围内的所有敌人造成387930点自然伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_nature_unrelentingstorm",
+    "id": 1314051
+  },
+  "355": {
+    "name": "嘲讽",
+    "dispel": null,
+    "description": "嘲讽目标攻击你，并使你对其产生的威胁值提高800%，持续6秒。",
+    "aura": "被嘲讽。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "spell_nature_reincarnation",
+    "id": 355
+  },
+  "372749": {
+    "name": "寒冰壁垒",
+    "dispel": null,
+    "description": "施法者每3秒用一层寒冰护盾强化一名盟友，持续15秒。\n每层护盾可吸收相当于施法者最大生命值5%的伤害，并防止控制效果。",
+    "aura": "吸收0点伤害。\n免疫控制效果。\n持续10分钟",
+    "duration_ms": 600000.0,
+    "icon": "ability_mage_coldasice",
+    "id": 372749
+  },
+  "373614": {
+    "name": "燃尽",
+    "dispel": null,
+    "description": "当生命值耗尽时，施法者会发出一声巨响，对20码范围内的玩家造成484912点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_selfdestruct",
+    "id": 373614
+  },
+  "373688": {
+    "name": "冰霜过载",
+    "dispel": null,
+    "description": "梅莉杜莎散发冰霜能量脉冲，将自己包裹在寒冰壁垒中。\n在寒冰壁垒存在期间，她每1.5秒会对所有玩家造成45582点冰霜伤害，并使其受到该技能的伤害提高5%，持续3秒。该效果可叠加。",
+    "aura": "受到冰霜过载的伤害提高5%。\n持续3秒",
+    "duration_ms": 3000.0,
+    "icon": "spell_fire_blueflamering",
+    "id": 373688
+  },
+  "373693": {
+    "name": "活动炸弹",
+    "dispel": "魔法",
+    "description": "施法者每1秒造成52371点火焰伤害，持续6秒。\n该效果结束时会发生爆炸，对6码范围内的玩家造成69827点火焰伤害，并将其击飞到空中。",
+    "aura": "每1秒造成52371点火焰伤害。\n效果结束时，对附近的玩家造成69827点火焰伤害。\n持续6秒",
+    "duration_ms": 6000.0,
+    "icon": "inv_summerfest_firespirit",
+    "id": 373693
+  },
+  "381525": {
+    "name": "怒吼火息",
+    "dispel": null,
+    "description": "基拉卡向前方喷射烈焰，每1秒对目标造成290947点火焰伤害，持续4秒。",
+    "aura": "每1秒造成290947点火焰伤害。\n持续4秒",
+    "duration_ms": 4000.0,
+    "icon": "ability_warlock_inferno",
+    "id": 381525
+  },
+  "384110": {
+    "name": "破裂投掷",
+    "dispel": null,
+    "description": "天赋 向敌人投掷你的武器，造成([600% of Attack Power])点物理伤害，无视护甲。最多对吸收护盾造成额外500%的伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "warrior_talent_icon_mastercleaver",
+    "id": 384110
+  },
+  "384194": {
+    "name": "焰烬之箭",
+    "dispel": null,
+    "description": "该生物对一名玩家造成116379点火焰伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_firebolt",
+    "id": 384194
+  },
+  "385536": {
+    "name": "燃焰弹幕",
+    "dispel": null,
+    "description": "该生物每1秒向当前目标投掷烈焰飞刀，持续10秒，造成96982点火焰伤害和242456点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warlock_burningembers",
+    "id": 385536
+  },
+  "386164": {
+    "name": "战斗姿态",
+    "dispel": null,
+    "description": "天赋 平衡的战斗姿态，使你的技能爆击几率提高3%，并使移动限制效果的时间缩短10%。\n效果将一直持续直到取消。",
+    "aura": "爆击几率提高3%，[爆击伤害提高3%，]并使移动限制效果的持续时间缩短10%。",
+    "duration_ms": null,
+    "icon": "ability_warrior_offensivestance",
+    "id": 386164
+  },
+  "1305234": {
+    "name": "冰寒利爪",
+    "dispel": "魔法",
+    "description": "注能幼龙用注入冰霜的利爪攻击，施加一个效果，在20层时触发冻结。",
+    "aura": "在叠加至20层时触发冻结。\n移动速度降低2%。\n持续10秒",
+    "duration_ms": 10000.0,
+    "icon": "ability_mage_wintersgrasp",
+    "id": 1305234
+  },
+  "1310355": {
+    "name": "暴风骤雨之盾",
+    "dispel": null,
+    "description": "施法者用风暴魔法屏障保护自己，吸收相当于其最大生命值15%的伤害。在受到保护期间，施法者每1秒向所有玩家辐射29095点自然伤害。\n效果结束时，屏障会爆炸，使60码范围内的玩家昏迷4秒。",
+    "aura": "吸收0点伤害。\n效果结束时，使所有玩家昏迷4秒。\n持续15秒",
+    "duration_ms": 15000.0,
+    "icon": "inv_10_worlddroplevelingoptionalreagent_misc_orb_air",
+    "id": 1310355
+  },
+  "372743": {
+    "name": "寒冰壁垒",
+    "dispel": null,
+    "description": "施法者每3秒用一层寒冰护盾强化一名盟友，持续15秒。\n每层护盾可吸收相当于施法者最大生命值5%的伤害，并防止控制效果。",
+    "aura": "吸收0点伤害。\n免疫控制效果。\n持续15秒",
+    "duration_ms": 15000.0,
+    "icon": "ability_mage_coldasice",
+    "id": 372743
+  },
+  "372988": {
+    "name": "寒冰壁垒",
+    "dispel": null,
+    "description": "寒冰壁垒吸收相当于梅莉杜莎最大生命值10%的伤害。",
+    "aura": "吸收0点伤害。",
+    "duration_ms": null,
+    "icon": "ability_mage_coldasice",
+    "id": 372988
+  },
+  "373087": {
+    "name": "燃尽",
+    "dispel": null,
+    "description": "当生命值耗尽时，炎缚火焰风暴会发出一声巨响，对20码范围内的玩家造成484912点火焰伤害，并留下焦灼之土。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_selfdestruct",
+    "id": 373087
+  },
+  "373680": {
+    "name": "冰霜过载",
+    "dispel": null,
+    "description": "梅莉杜莎散发冰霜能量脉冲，将自己包裹在寒冰壁垒中。\n在寒冰壁垒存在期间，她每1.5秒会对所有玩家造成45582点冰霜伤害，并使其受到该技能的伤害提高5%，持续3秒。该效果可叠加。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "spell_fire_blueflamering",
+    "id": 373680
+  },
+  "384933": {
+    "name": "寒冰壁垒",
+    "dispel": null,
+    "description": "施法者每3秒用一层寒冰护盾强化一名盟友，持续15秒。\n每层护盾可吸收相当于施法者最大生命值5%的伤害，并防止控制效果。",
+    "aura": "吸收0点伤害。\n免疫控制效果。\n持续7天",
+    "duration_ms": null,
+    "icon": "ability_mage_coldasice",
+    "id": 384933
+  },
+  "385567": {
+    "name": "燃焰弹幕",
+    "dispel": null,
+    "description": "该生物每1秒向当前目标投掷烈焰飞刀，持续10秒，造成96982点火焰伤害和242456点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warlock_burningembers",
+    "id": 385567
+  },
+  "1305865": {
+    "name": "燃焰弹幕",
+    "dispel": null,
+    "description": "该生物每1秒向当前目标投掷烈焰飞刀，持续10秒，造成96982点火焰伤害和242456点物理伤害。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "ability_warlock_burningembers",
+    "id": 1305865
+  },
+  "1310363": {
+    "name": "暴风骤雨之盾",
+    "dispel": null,
+    "description": "施法者用风暴魔法屏障保护自己，吸收相当于其最大生命值15%的伤害。在受到保护期间，施法者每1秒向所有玩家辐射29095点自然伤害。\n效果结束时，屏障会爆炸，使60码范围内的玩家昏迷4秒。",
+    "aura": "",
+    "duration_ms": null,
+    "icon": "inv_10_worlddroplevelingoptionalreagent_misc_orb_air",
+    "id": 1310363
+  }
+}
