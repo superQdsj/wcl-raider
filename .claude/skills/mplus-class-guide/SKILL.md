@@ -16,13 +16,13 @@ argument-hint: <职业·专精> [副本名… 或 八本] [英雄天赋]
 
 - 数据：`python3 <仓库>/.claude/skills/mplus-review/scripts/wcl.py`（下文 `wcl`），命令用法见 `mplus-tactics` skill。常用：`find`、`tactics`、`spell`、`pulls`、`points`。
 - 施法者与连用：`python3 <本 skill>/scripts/mechanic_facts.py <副本源材料目录>`，列出每个敌方技能由哪种怪施放、打谁，以及该职业 5 秒内的技能连用。
-- 参考实现：`archives/warrior-dungeon-guides/`（`guides.py` 内容源、`build.py` 构建器、`talents.py` 天赋编码、`research.py` 选录像与存分析、`prepare.py` 技能说明与图标）。**红玉新生法池那本是第二版样板**，其余七本是第一版，不要照抄第一版写法。
+- 参考实现：`guides/warrior-arms/`（`guides.py` 内容源、`build.py` 构建器、`talents.py` 天赋编码、`research.py` 选录像与存分析、`prepare.py` 技能说明与图标）。**红玉新生法池那本是第二版样板**，其余七本是第一版，不要照抄第一版写法。
 - 每小时 API 点数有限（全局 1000）。大批量拉取前先 `wcl points`；已保存的 `sources/<副本>/*.json` 优先复用。
 
 ## 流程
 
 ### 1. 选三场录像
-同专精、同英雄天赋、限时、层数最高的三场，三场来自不同场次。新职业：复制 `research.py` 改职业/专精，存到 `archives/<职业>-dungeon-guides/sources/<副本>/`（`<报告>-<场次>.md` 分析、`.json` 记录、`selected.json`）。
+同专精、同英雄天赋、限时、层数最高的三场，三场来自不同场次。新职业：复制 `research.py` 改职业/专精，存到 `guides/<职业-专精>/sources/<副本>/`（目录名用英文，如 `warrior-arms`、`holy-paladin`）（`<报告>-<场次>.md` 分析、`.json` 记录、`selected.json`）。
 
 ### 2. 从数据挑行（核心）
 按 [references/row-selection.md](references/row-selection.md) 做，产出一张「机制 → 技能」候选表：
@@ -40,7 +40,7 @@ argument-hint: <职业·专精> [副本名… 或 八本] [英雄天赋]
 推荐三名玩家之一的实际配置，**必须包含正文用到的天赋技能**（例如正文写破裂投掷，就不能推荐没点它的那套）。用 `guide['talent_cards']` 列与本本相关的 6 张卡，`talent_require` 由卡片自动推出。编码后解码回验。
 
 ### 5. 构建与自查
-- 构建：`python3 archives/<职业>-dungeon-guides/build.py --output-dir <scratchpad>`，满意后只把改动的那几本复制进 `reviews/` 并导出 PNG（`wclr.export.export`）。
+- 构建：`python3 guides/<职业-专精>/build.py --output-dir <scratchpad>`，满意后只把改动的那几本复制进 `guides/<职业-专精>/`（成品与源材料同目录）并导出 PNG（`wclr.export.export`）。
 - 看图：用 Playwright 截 1100px 桌面和 390px 手机（`sips` 的裁剪偏移不可靠），检查 02 卡片、03 专题、04 路线、天赋区。
 - 跑测试：`python3 -m unittest discover -s tests`。
 - 过一遍下面的清单再交付。

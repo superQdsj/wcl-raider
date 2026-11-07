@@ -389,7 +389,7 @@ def build(output_dir, png=False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='离线重建武器战八本攻略；--png 额外需要 Playwright 与 Chrome。')
-    parser.add_argument('--output-dir', type=Path, default=ROOT / 'reviews')
+    parser.add_argument('--output-dir', type=Path, default=DIRECTORY)
     parser.add_argument('--png', action='store_true')
     args = parser.parse_args()
     build(args.output_dir.resolve(), png=args.png)

@@ -36,7 +36,7 @@
 仅需 Python 3 标准库。从仓库根目录执行：
 
 ```sh
-python3 archives/rogue-dungeon-guides/rebuild.py --output-dir /tmp/rogue-guides
+python3 guides/rogue/rebuild.py --output-dir /tmp/rogue-guides
 ```
 
 默认重建已交付的七份 HTML，输出到指定目录；已存在的文件会被覆盖。
@@ -50,5 +50,5 @@ python3 archives/rogue-dungeon-guides/rebuild.py --output-dir /tmp/rogue-guides
 
 ## 完成状态
 
-`reviews/` 中的七份成品已经包含全部图标和天赋字符串。归档和重建不代表攻略机制准确性、
+本目录下的七份成品（`2026-10-28-<副本>-潜行者.html`）已经包含全部图标和天赋字符串。归档和重建不代表攻略机制准确性、
 页面排版或交互已经通过最终审核。毒牙祭坛可从源材料重建，但本次归档不另行发布其成品。

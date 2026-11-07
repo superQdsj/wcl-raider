@@ -12,7 +12,10 @@
 
 职业大秘境手册用 `mplus-class-guide` skill 制作：从三场高分限时录像里挑出该职业真正用来处理机制的技巧，写成「信号 → 按什么 → 为什么」的攻略页和长图，结尾附天赋导入字符串。
 
-武器战已完成[红玉新生法池](reviews/2026-11-07-红玉新生法池-武器战.html)，其余七本正在按 skill 重写（[目录](reviews/2026-11-07-武器战-八本手册.html)）。源材料与重建方法见[武器战手册归档说明](archives/warrior-dungeon-guides/README.md)。
+所有手册都在 [`guides/`](guides/README.md)，一个职业专精一个目录，成品和源材料放在一起：
+- 武器战：已完成[红玉新生法池](guides/warrior-arms/2026-11-07-红玉新生法池-武器战.html)，其余七本正在按 skill 重写（[目录](guides/warrior-arms/2026-11-07-武器战-八本手册.html)）
+- 潜行者：七本（`guides/rogue/`）
+- 神圣骑士：八本（`guides/holy-paladin/`）
 
 ## 快速开始
 
@@ -30,7 +33,7 @@
    ```
    可以附加关注点，例如 `/mplus-review <链接> 我是坦克，重点看我`，或者 `/mplus-review <链接> 快速`。
 
-复盘报告会保存到 `reviews/` 目录，对话里给出一句话结论、分段用时表、时间丢在哪里和下一把怎么打。想和自己上一把比，就加上参考链接：`/mplus-review <链接> 参考 <上一把的链接>`。
+复盘报告会保存到 `reviews/` 目录（本地输出，不入库），对话里给出一句话结论、分段用时表、时间丢在哪里和下一把怎么打。想和自己上一把比，就加上参考链接：`/mplus-review <链接> 参考 <上一把的链接>`。
 
 ### 在任意目录使用
 把 skill 链接到个人 skill 目录：
@@ -90,18 +93,21 @@ python3 $W --help
 ## 目录结构
 
 ```
-.claude/skills/mplus-tactics/   # 应对技巧复盘（共用 mplus-review 的数据工具）
-├── SKILL.md
-└── references/              # 方法（method）、职业应对手段速查（class-counters）、报告模板
-.claude/skills/mplus-review/
-├── SKILL.md                 # 复盘流程（agent 的工作说明）
-├── references/
-│   ├── playbook.md          # 复盘方法论：讲故事 → 时间丢在哪 → 险情 → 下一把怎么打
-│   ├── scoring.md           # 评分公式与修正规则
-│   ├── data-notes.md        # 数据口径与 WCL API 备忘
-│   └── report-template.md   # 报告模板
-└── scripts/
-    ├── wcl.py               # 数据工具入口
-    └── wclr/                # API 客户端、上下文、各命令实现
+.claude/skills/
+├── mplus-review/            # 战斗记录复盘
+│   ├── SKILL.md             # 复盘流程（agent 的工作说明）
+│   ├── references/          # playbook / scoring / data-notes / report-template
+│   └── scripts/
+│       ├── wcl.py           # 数据工具入口（三个 skill 共用）
+│       └── wclr/            # API 客户端、上下文、各命令实现
+├── mplus-tactics/           # 应对技巧复盘（共用 mplus-review 的数据工具）
+└── mplus-class-guide/       # 职业副本手册的制作方法
+guides/                      # 职业副本手册：一个职业专精一个目录，成品 + 源材料
+├── warrior-arms/            # 武器战（进行中，也是 class-guide skill 的参考实现）
+├── rogue/                   # 潜行者（归档，可离线重建）
+└── holy-paladin/            # 神圣骑士（只有成品）
+reviews/                     # 复盘 / 应对技巧报告的本地输出，不入库
 tests/                       # 离线单元测试：python3 -m unittest discover -s tests
+docs/verification/           # 历次人工验证记录（数据工具的回放与证据核对）
+assets/                      # README 图标
 ```

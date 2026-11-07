@@ -10,7 +10,7 @@ import unittest
 from unittest.mock import patch
 
 
-GUIDE_DIRECTORY = Path(__file__).resolve().parents[1] / 'archives/warrior-dungeon-guides'
+GUIDE_DIRECTORY = Path(__file__).resolve().parents[1] / 'guides/warrior-arms'
 sys.path.insert(0, str(GUIDE_DIRECTORY))
 import build as warrior_build
 from guides import GUIDES
@@ -143,7 +143,7 @@ class WarriorGuideTests(unittest.TestCase):
 
     def test_original_design_is_not_overridden(self):
         self.assertNotRegex(warrior_build.EXTRA_CSS, r'\.(?:lede|row|mo|finding|tool|wrap|tbl-wrap)\b')
-        original = (GUIDE_DIRECTORY.parent / 'rogue-dungeon-guides/sources/rogue.src.html').read_text()
+        original = (GUIDE_DIRECTORY.parent / 'rogue/sources/rogue.src.html').read_text()
         original_css = re.search(r'<style>(.*?)</style>', original, re.S).group(1)
         original_css = re.sub(r'/\*.*?\*/', '', original_css, flags=re.S)
         self.assertEqual(original_css.strip(), (warrior_build.SOURCE / 'design.css').read_text().strip())

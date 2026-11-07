@@ -72,9 +72,9 @@
 从仓库根目录执行（仅使用本机已有缓存；在其他机器不保证能重放）：
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 python3 tests/records/2026-11-06-r2-verification/run_verification.py
-PYTHONDONTWRITEBYTECODE=1 python3 tests/records/2026-11-06-r2-verification/run_verification.py --archival
-PYTHONDONTWRITEBYTECODE=1 python3 tests/records/2026-11-06-r2-verification/verify_evidence.py
+PYTHONDONTWRITEBYTECODE=1 python3 docs/verification/2026-11-06-r2/run_verification.py
+PYTHONDONTWRITEBYTECODE=1 python3 docs/verification/2026-11-06-r2/run_verification.py --archival
+PYTHONDONTWRITEBYTECODE=1 python3 docs/verification/2026-11-06-r2/verify_evidence.py
 ```
 
 重跑会覆盖本目录对应模式的测试产物。缓存失效会增加正常TTL模式的CACHE_MISS；不含所需缓存的机器无法复现历史回放。测试驱动会完整记录命令失败，但自身退出码不汇总全部命令状态，应查看 `results.json`；证据检查脚本在任一断言不成立时返回非零。

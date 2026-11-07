@@ -6,10 +6,10 @@
 
 | 副本 | 状态 |
 | --- | --- |
-| 红玉新生法池 | 第二版完成：[手册](../../reviews/2026-11-07-红玉新生法池-武器战.html) · [长图](../../reviews/2026-11-07-红玉新生法池-武器战.png)。也是 skill 的样板 |
+| 红玉新生法池 | 第二版完成：[手册](2026-11-07-红玉新生法池-武器战.html) · [长图](2026-11-07-红玉新生法池-武器战.png)。也是 skill 的样板 |
 | 其余七本 | 第一版内容套模板、质量低，已删除，待按 skill 重写。三场录像的源材料仍保留在 `sources/<副本>/` |
 
-[目录页](../../reviews/2026-11-07-武器战-八本手册.html)会列出全部八本，未完成的标为「重写中」。
+[目录页](2026-11-07-武器战-八本手册.html)会列出全部八本，未完成的标为「重写中」。
 
 ## 文件说明
 
@@ -65,13 +65,13 @@
 只重建 HTML 需要 Python 3 标准库；支持从任意工作目录执行：
 
 ```sh
-python3 archives/warrior-dungeon-guides/build.py --output-dir <临时目录>
+python3 guides/warrior-arms/build.py --output-dir <临时目录>
 ```
 
-重建到项目 `reviews/` 并为已完成的每本导出 PNG：
+重建到本目录（默认输出位置）并为已完成的每本导出 PNG：
 
 ```sh
-python3 archives/warrior-dungeon-guides/build.py --png
+python3 guides/warrior-arms/build.py --png
 ```
 
 PNG 复用项目现有 `wclr.export.export`，需要 Playwright 与 Chrome 或 Chromium。全部图标均为内嵌 JPEG。字体与潜行者原版一致，使用 Noto Serif SC、Noto Sans SC 和 JetBrains Mono；无法加载在线字体时回退系统字体，正文仍可离线阅读。

@@ -26,10 +26,10 @@ def save(path, data):
 
 def prepare():
     source = DIRECTORY / 'sources'
-    trees = json.loads((ROOT / 'archives/rogue-dungeon-guides/sources/dl/talents.json').read_text())
+    trees = json.loads((ROOT / 'guides/rogue/sources/dl/talents.json').read_text())
     tree = next(tree for tree in trees if tree['specId'] == 71)
     save(source / 'arms-tree.json', tree)
-    base = (ROOT / 'archives/rogue-dungeon-guides/sources/rogue.src.html').read_text()
+    base = (ROOT / 'guides/rogue/sources/rogue.src.html').read_text()
     style = re.search(r'<style>(.*?)</style>', base, re.S).group(1)
     (source / 'design.css').write_text(re.sub(r'/\*.*?\*/', '', style, flags=re.S).strip() + '\n', encoding='utf-8')
     identifiers = set(CORE + TALENTS)

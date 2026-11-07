@@ -7,7 +7,7 @@
 - 每句「为什么」至少一个具体事实。不设字数上限，但一行说一件事（一般 40 字内，最多 60 字）。
 
 ## 设计
-沿用 `archives/rogue-dungeon-guides` 的设计系统（`sources/design.css`）：深色、金色唯一强调色、Noto Serif SC / Noto Sans SC / JetBrains Mono，图标全部内嵌。不要用 `wcl render` 模板。职业色只做点缀。
+沿用 `guides/rogue` 的设计系统（`sources/design.css`）：深色、金色唯一强调色、Noto Serif SC / Noto Sans SC / JetBrains Mono，图标全部内嵌。不要用 `wcl render` 模板。职业色只做点缀。
 
 ## guides.py 字段（第二版，以红玉新生法池为准）
 
@@ -49,7 +49,7 @@
 - 03 专题只讲一个技巧，选本本最有特色、最需要步骤说明的那个。
 
 ## 新职业怎么起步
-复制 `archives/warrior-dungeon-guides/` 为 `archives/<职业>-dungeon-guides/`，然后改：
+复制 `guides/warrior-arms/` 为 `guides/<职业-专精>/`，然后改：
 - `talents.py` 的 specId；`build.py` 里的职业名、英雄天赋名与校验节点（战士是 123390 屠戮者）、文件名后缀、`TOOLS` / `TALENT_CARDS` 默认值、`action_pill` 的技能分类；
 - `research.py` 的职业与专精；`prepare.py` 的 `CORE` / `TALENTS`；
 - 测试复制一份 `tests/test_warrior_guides.py` 改名改断言。

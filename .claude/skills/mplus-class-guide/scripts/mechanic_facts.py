@@ -1,6 +1,6 @@
 """列出一个副本三场录像里的机制事实：敌方技能由谁施放、该职业技能的连用。
 
-用法：python3 mechanic_facts.py <archives/<职业>-dungeon-guides/sources/<副本>> [--top 40]
+用法：python3 mechanic_facts.py <guides/<职业-专精>/sources/<副本>> [--top 40]
 
 读取该目录的 selected.json 与对应记录 JSON（research.py 的产物），
 用 WCL 报告的 actors 把 enemy_casts 的 sourceID 换成怪物名（走本地缓存，首次需要 API 点数）。
