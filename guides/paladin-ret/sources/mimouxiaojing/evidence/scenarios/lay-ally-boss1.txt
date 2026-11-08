@@ -1,0 +1,12 @@
+5:19.373 damage 凯斯媞亚·魔力之心->Swordish 邪能风暴(1264110) amount=41769 absorbed= overheal= hit=1 stack= HP=581565/1053360
+5:19.682 damage 径巷流氓->Swordish 妙手空空(1216300) amount=103345 absorbed= overheal= hit=1 stack= HP=478220/1053360
+5:19.863 damage 凯斯媞亚·魔力之心->Swordish 邪能风暴(1264110) amount=39764 absorbed= overheal= hit=1 stack= HP=497235/1053360
+5:20.338 damage 凯斯媞亚·魔力之心->Swordish 邪能风暴(1264110) amount=41768 absorbed= overheal= hit=1 stack= HP=496148/1053360
+5:20.666 damage 径巷流氓->Swordish 妙手空空(1216300) amount=103344 absorbed= overheal= hit=1 stack= HP=409469/1053360
+5:20.784 damage 凯斯媞亚·魔力之心->Swordish 混沌弹幕(1230298) amount=328321 absorbed=57938 overheal= hit=1 stack= HP=182937/1053360
+5:21.351 damage 凯斯媞亚·魔力之心->Swordish 邪能风暴(1264110) amount=41769 absorbed= overheal= hit=1 stack= HP=171364/1053360
+5:21.679 damage 径巷流氓->Swordish 妙手空空(1216300) amount=103344 absorbed= overheal= hit=1 stack= HP=218877/1053360
+5:22.310 cast Tracer->Swordish 圣疗术(633) amount= absorbed= overheal= hit= stack= HP=939355/1094588
+5:22.310 applydebuff Tracer->Swordish 自律(25771) amount= absorbed= overheal= hit= stack=
+5:22.310 heal Tracer->Swordish 圣疗术(633) amount=827607 absorbed= overheal=266981 hit=1 stack= HP=1053360/1053360
+5:22.667 damage 径巷流氓->Swordish 妙手空空(1216300) amount=103832 absorbed= overheal= hit=1 stack= HP=949528/1053360

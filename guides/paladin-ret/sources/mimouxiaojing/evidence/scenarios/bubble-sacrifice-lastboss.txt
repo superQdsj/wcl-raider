@@ -1,0 +1,62 @@
+26:53.116 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=95804 absorbed= overheal= hit=1 stack= HP=503424/1053316
+26:53.116 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=84895 absorbed= overheal= hit=1 stack= HP=802379/1088758
+26:54.121 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=89752 absorbed= overheal= hit=1 stack= HP=750877/1088758
+26:54.121 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=95353 absorbed= overheal= hit=1 stack= HP=453112/1053316
+26:55.118 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=95354 absorbed= overheal= hit=1 stack= HP=635819/1053316
+26:55.118 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=76631 absorbed=13122 overheal= hit=1 stack= HP=736109/1088758
+26:56.111 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=88837 absorbed= overheal= hit=1 stack= HP=655690/1088758
+26:56.111 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=95354 absorbed= overheal= hit=1 stack= HP=624980/1053316
+26:56.982 applybuff 天下第一骑->天下第一骑 牺牲祝福(6940) amount= absorbed= overheal= hit= stack=
+26:56.984 cast 天下第一骑->等我买杯奶茶 牺牲祝福(6940) amount= absorbed= overheal= hit= stack= HP=697695/1088758
+26:56.984 applybuff 天下第一骑->等我买杯奶茶 牺牲祝福(6940) amount= absorbed= overheal= hit= stack=
+26:57.117 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=60878 absorbed=27959 overheal= hit=1 stack= HP=636817/1088758
+26:57.117 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=66748 absorbed=28605 overheal= hit=1 stack= HP=587868/1053316
+26:57.130 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=28605 absorbed= overheal= hit=1 stack= HP=608212/1088758
+26:58.118 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=75833 absorbed=13004 overheal= hit=1 stack= HP=727589/1088758
+26:58.118 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=66748 absorbed=28605 overheal= hit=1 stack= HP=844726/1053316
+26:58.130 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=28605 absorbed= overheal= hit=1 stack= HP=698984/1088758
+26:58.973 applybuff 天下第一骑->天下第一骑 圣盾术(642) amount= absorbed= overheal= hit= stack=
+26:58.974 cast 天下第一骑->Environment 圣盾术(642) amount= absorbed= overheal= hit= stack= HP=727603/1088758
+26:58.975 applydebuff 天下第一骑->天下第一骑 自律(25771) amount= absorbed= overheal= hit= stack=
+26:59.111 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=0 absorbed= overheal= hit=10 stack=
+26:59.112 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=66748 absorbed=28606 overheal= hit=1 stack= HP=803992/1053316
+26:59.124 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=727603/1088758
+27:00.110 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=0 absorbed= overheal= hit=10 stack=
+27:00.113 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=66748 absorbed=28605 overheal= hit=1 stack= HP=791720/1053316
+27:00.127 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=737910/1088758
+27:01.123 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=0 absorbed= overheal= hit=10 stack=
+27:01.123 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=63411 absorbed=27175 overheal= hit=1 stack= HP=854605/1053316
+27:01.132 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=977600/1088758
+27:02.111 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=0 absorbed= overheal= hit=10 stack=
+27:02.112 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=63710 absorbed=27304 overheal= hit=1 stack= HP=830291/1053316
+27:02.124 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=991786/1088758
+27:03.114 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=0 absorbed= overheal= hit=10 stack=
+27:03.115 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=63710 absorbed=27304 overheal= hit=1 stack= HP=899758/1053316
+27:03.125 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1020516/1088758
+27:03.861 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1037798/1088758
+27:04.119 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=0 absorbed= overheal= hit=10 stack=
+27:04.119 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=50356 absorbed=40658 overheal= hit=1 stack= HP=497836/1053316
+27:04.119 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1040319/1088758
+27:04.855 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1057952/1088758
+27:05.114 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=0 absorbed= overheal= hit=10 stack=
+27:05.115 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=63710 absorbed=27304 overheal= hit=1 stack= HP=514843/1053316
+27:05.134 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1057952/1088758
+27:05.875 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1080105/1088758
+27:06.117 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=0 absorbed= overheal= hit=10 stack=
+27:06.118 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=63710 absorbed=27304 overheal= hit=1 stack= HP=579858/1053316
+27:06.139 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1088758/1088758
+27:06.485 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1088758/1088758
+27:06.485 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1088758/1088758
+27:06.485 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1088758/1088758
+27:06.868 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed= overheal= hit=1 stack= HP=1088758/1088758
+27:06.996 removebuff 天下第一骑->天下第一骑 圣盾术(642) amount= absorbed= overheal= hit= stack=
+27:07.105 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=84427 absorbed=13004 overheal= hit=1 stack= HP=1004331/1088758
+27:07.105 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=63710 absorbed=27304 overheal= hit=1 stack= HP=131999/1053316
+27:07.122 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=27304 absorbed= overheal= hit=1 stack= HP=977027/1088758
+27:07.867 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=0 absorbed=217 overheal= hit=1 stack= HP=1008113/1088758
+27:08.116 damage 利希尔·烬怒->天下第一骑 灼热邪焰(1216945) amount=79526 absorbed=12059 overheal= hit=1 stack= HP=928587/1088758
+27:08.116 damage 利希尔·烬怒->等我买杯奶茶 灼热邪焰(1216945) amount=50676 absorbed=21718 overheal= hit=1 stack= HP=309476/1053316
+27:08.136 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=21718 absorbed= overheal= hit=1 stack= HP=906869/1088758
+27:08.879 damage 等我买杯奶茶->天下第一骑 牺牲祝福(6940) amount=217 absorbed= overheal= hit=1 stack= HP=998103/1088758
+27:08.984 removebuff 天下第一骑->等我买杯奶茶 牺牲祝福(6940) amount= absorbed= overheal= hit= stack=
+27:08.984 removebuff 天下第一骑->天下第一骑 牺牲祝福(6940) amount= absorbed= overheal= hit= stack=

@@ -1,0 +1,593 @@
+{
+  "casts": 96,
+  "route_sections": [
+    "approach",
+    "boss1",
+    "boss2",
+    "boss3",
+    "boss4",
+    "golem",
+    "interlude",
+    "legion1",
+    "legion2"
+  ],
+  "mapping": [
+    {
+      "id": "A01",
+      "phase": "approach",
+      "time": "0:19.6",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A02",
+      "phase": "approach",
+      "time": "0:32.2",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "A03",
+      "phase": "approach",
+      "time": "0:36.1",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "A04",
+      "phase": "approach",
+      "time": "0:55.0",
+      "spell": "清毒术"
+    },
+    {
+      "id": "A05",
+      "phase": "approach",
+      "time": "1:04.2",
+      "spell": "清毒术"
+    },
+    {
+      "id": "A06",
+      "phase": "approach",
+      "time": "1:16.0",
+      "spell": "清毒术"
+    },
+    {
+      "id": "A07",
+      "phase": "approach",
+      "time": "2:00.9",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "A08",
+      "phase": "approach",
+      "time": "2:22.6",
+      "spell": "清毒术"
+    },
+    {
+      "id": "A09",
+      "phase": "approach",
+      "time": "2:31.0",
+      "spell": "清毒术"
+    },
+    {
+      "id": "A10",
+      "phase": "approach",
+      "time": "3:50.0",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A11",
+      "phase": "approach",
+      "time": "3:54.2",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "A12",
+      "phase": "approach",
+      "time": "3:56.9",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "A13",
+      "phase": "approach",
+      "time": "4:02.3",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "A14",
+      "phase": "approach",
+      "time": "4:32.9",
+      "spell": "清毒术"
+    },
+    {
+      "id": "A15",
+      "phase": "approach",
+      "time": "4:46.8",
+      "spell": "清毒术"
+    },
+    {
+      "id": "A16",
+      "phase": "boss1",
+      "time": "5:34.6",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A17",
+      "phase": "boss1",
+      "time": "6:42.0",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A18",
+      "phase": "boss2",
+      "time": "8:38.3",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A19",
+      "phase": "boss2",
+      "time": "10:04.9",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A20",
+      "phase": "boss2",
+      "time": "10:19.4",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "A21",
+      "phase": "boss2",
+      "time": "11:15.6",
+      "spell": "保护祝福"
+    },
+    {
+      "id": "A22",
+      "phase": "legion1",
+      "time": "12:16.1",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "A23",
+      "phase": "legion1",
+      "time": "12:48.2",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A24",
+      "phase": "legion1",
+      "time": "13:46.7",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "A25",
+      "phase": "legion1",
+      "time": "14:48.6",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A26",
+      "phase": "boss3",
+      "time": "16:38.4",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A27",
+      "phase": "boss3",
+      "time": "18:29.9",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A28",
+      "phase": "legion2",
+      "time": "20:10.4",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A29",
+      "phase": "legion2",
+      "time": "20:44.5",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "A30",
+      "phase": "legion2",
+      "time": "21:14.3",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A31",
+      "phase": "legion2",
+      "time": "21:27.6",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "A32",
+      "phase": "golem",
+      "time": "23:07.2",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A33",
+      "phase": "boss4",
+      "time": "24:20.9",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A34",
+      "phase": "boss4",
+      "time": "26:03.3",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "A35",
+      "phase": "boss4",
+      "time": "26:57.0",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "A36",
+      "phase": "boss4",
+      "time": "26:59.0",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "B01",
+      "phase": "approach",
+      "time": "0:30.0",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B02",
+      "phase": "approach",
+      "time": "2:15.5",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B03",
+      "phase": "approach",
+      "time": "3:20.4",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B04",
+      "phase": "approach",
+      "time": "3:33.9",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "B05",
+      "phase": "boss1",
+      "time": "5:03.5",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B06",
+      "phase": "boss1",
+      "time": "5:22.3",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "B07",
+      "phase": "boss1",
+      "time": "5:47.7",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "B08",
+      "phase": "boss1",
+      "time": "6:14.3",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B09",
+      "phase": "boss2",
+      "time": "8:05.8",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B10",
+      "phase": "boss2",
+      "time": "8:26.7",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "B11",
+      "phase": "boss2",
+      "time": "9:04.6",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "B12",
+      "phase": "boss2",
+      "time": "9:18.1",
+      "spell": "保护祝福"
+    },
+    {
+      "id": "B13",
+      "phase": "boss2",
+      "time": "9:41.8",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B14",
+      "phase": "legion1",
+      "time": "12:04.1",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B15",
+      "phase": "legion1",
+      "time": "13:05.2",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "B16",
+      "phase": "legion1",
+      "time": "14:23.2",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B17",
+      "phase": "legion1",
+      "time": "14:52.8",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "B18",
+      "phase": "legion1",
+      "time": "14:54.5",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "B19",
+      "phase": "boss3",
+      "time": "16:12.1",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B20",
+      "phase": "boss3",
+      "time": "17:15.3",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B21",
+      "phase": "boss3",
+      "time": "18:04.3",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "B22",
+      "phase": "boss3",
+      "time": "18:04.8",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "B23",
+      "phase": "boss3",
+      "time": "19:00.1",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B24",
+      "phase": "legion2",
+      "time": "19:53.0",
+      "spell": "保护祝福"
+    },
+    {
+      "id": "B25",
+      "phase": "legion2",
+      "time": "21:12.4",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B26",
+      "phase": "legion2",
+      "time": "21:40.3",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "B27",
+      "phase": "boss4",
+      "time": "23:47.7",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "B28",
+      "phase": "boss4",
+      "time": "25:40.4",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C01",
+      "phase": "approach",
+      "time": "0:31.7",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C02",
+      "phase": "approach",
+      "time": "1:13.6",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "C03",
+      "phase": "approach",
+      "time": "3:10.5",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C04",
+      "phase": "boss1",
+      "time": "5:51.3",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "C05",
+      "phase": "boss1",
+      "time": "6:11.9",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C06",
+      "phase": "boss2",
+      "time": "8:29.9",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "C07",
+      "phase": "boss2",
+      "time": "8:44.5",
+      "spell": "保护祝福"
+    },
+    {
+      "id": "C08",
+      "phase": "boss2",
+      "time": "8:58.0",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C09",
+      "phase": "boss2",
+      "time": "9:53.7",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "C10",
+      "phase": "boss2",
+      "time": "10:20.8",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C11",
+      "phase": "legion1",
+      "time": "11:42.0",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C12",
+      "phase": "legion1",
+      "time": "13:08.1",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "C13",
+      "phase": "legion1",
+      "time": "14:09.3",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C14",
+      "phase": "legion1",
+      "time": "14:19.4",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "C15",
+      "phase": "legion1",
+      "time": "14:21.9",
+      "spell": "保护祝福"
+    },
+    {
+      "id": "C16",
+      "phase": "legion1",
+      "time": "15:26.2",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C17",
+      "phase": "boss3",
+      "time": "16:34.8",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C18",
+      "phase": "boss3",
+      "time": "17:38.7",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "C19",
+      "phase": "boss3",
+      "time": "17:50.6",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C20",
+      "phase": "boss3",
+      "time": "19:34.8",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C21",
+      "phase": "boss3",
+      "time": "19:46.7",
+      "spell": "圣盾术"
+    },
+    {
+      "id": "C22",
+      "phase": "legion2",
+      "time": "20:32.3",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "C23",
+      "phase": "legion2",
+      "time": "20:55.5",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C24",
+      "phase": "legion2",
+      "time": "22:46.7",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C25",
+      "phase": "legion2",
+      "time": "24:32.5",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "C26",
+      "phase": "legion2",
+      "time": "24:53.2",
+      "spell": "保护祝福"
+    },
+    {
+      "id": "C27",
+      "phase": "boss4",
+      "time": "25:35.8",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C28",
+      "phase": "boss4",
+      "time": "27:28.3",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C29",
+      "phase": "boss4",
+      "time": "28:32.1",
+      "spell": "圣佑术"
+    },
+    {
+      "id": "C30",
+      "phase": "boss4",
+      "time": "28:34.0",
+      "spell": "圣疗术"
+    },
+    {
+      "id": "C31",
+      "phase": "boss4",
+      "time": "28:38.2",
+      "spell": "牺牲祝福"
+    },
+    {
+      "id": "C32",
+      "phase": "boss4",
+      "time": "28:40.4",
+      "spell": "圣盾术"
+    }
+  ],
+  "note": "逐次核对只保留在源材料。附近施法不是因果证明；无明确机制的间隔期使用不写成固定攻略。"
+}

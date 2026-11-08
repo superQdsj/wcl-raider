@@ -1,0 +1,11 @@
+8:41.913 removebuff Âra->Âra 牺牲祝福(6940) amount= absorbed= overheal= hit= stack=
+8:41.913 removebuff Âra->Doxorsw 牺牲祝福(6940) amount= absorbed= overheal= hit= stack=
+8:43.045 applydebuff 赞恩·刃悲->Doxorsw 绝命凶径(474545) amount= absorbed= overheal= hit= stack=
+8:43.140 applydebuff 赞恩·刃悲->Âra 绝命凶径(474545) amount= absorbed= overheal= hit= stack=
+8:44.460 cast Âra->Doxorsw 保护祝福(1022) amount= absorbed= overheal= hit= stack= HP=1079848/1079848
+8:44.460 applybuff Âra->Doxorsw 保护祝福(1022) amount= absorbed= overheal= hit= stack=
+8:44.482 applydebuff Âra->Doxorsw 自律(25771) amount= absorbed= overheal= hit= stack=
+8:46.225 removedebuff 赞恩·刃悲->Âra 绝命凶径(474545) amount= absorbed= overheal= hit= stack=
+8:48.535 removedebuff 赞恩·刃悲->Doxorsw 绝命凶径(474545) amount= absorbed= overheal= hit= stack=
+8:48.831 damage 赞恩·刃悲->Doxorsw 绝命凶径(474763) amount=0 absorbed= overheal= hit=10 stack=
+8:54.462 removebuff Âra->Doxorsw 保护祝福(1022) amount= absorbed= overheal= hit= stack=

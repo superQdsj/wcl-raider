@@ -1,0 +1,428 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">MURDER ROW · MYTHIC+ · RETRIBUTION PALADIN FIELD CARD</div>
+    <h1><span class="cls">惩戒骑</span><span class="dot">·</span>密谋小径 应对手册</h1>
+    <p class="lede">惩戒在这条街最值钱的是三个祝福。<b>牺牲祝福</b>点了「正义保护」后让目标免疫中毒：赞恩的<b>毒伤</b>整刀打 0，扒手的断心药膏也上不去。<b>保护祝福</b>免疫绝命凶径，<b>圣盾术</b>一开就掐断吸取生命。每个首领的大群伤交<b>圣佑术</b>，复仇之盾跟着一起出来。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时惩戒骑 ×3</b></span>
+      <span class="chip">英雄天赋 <b>烈日先驱</b></span>
+      <span class="chip">核心 <b>牺牲祝福 / 保护祝福 / 圣盾术 / 圣佑术</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里保命技能交在哪</h2>
+  <p class="sub">一整场 +22 里，几个祝福和防御技能分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(243,156,195,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:633}}" alt="">圣疗术</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:213644}}" alt="">清毒术</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 2 · 赞恩·刃悲</div>
+      <div class="sig">看到<b>货物爆炸开始读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:6940}}" alt="">牺牲祝福 → 坦克 <span class="pill p-imm">免疫</span></div>
+      <p>紧跟着的毒伤是一刀淬毒大刀，打当前目标。牺牲祝福带着「正义保护」让目标免疫中毒，这一刀直接打 0，断心药膏也不上身。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 腐化的术士</div>
+      <div class="sig">看到<b>吸取生命连到自己身上</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:642}}" alt="">圣盾术 <span class="pill p-clr">清除</span></div>
+      <p>吃完第一跳就开，吸取生命当场从身上消失，后面 7 秒不再吸。圣盾每清掉一个减益还会回 10% 血。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 2 · 赞恩·刃悲</div>
+      <div class="sig">看到<b>绝命凶径开始瞄准</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:1022}}" alt="">保护祝福 → 被瞄准的人 <span class="pill p-imm">免疫</span></div>
+      <p>射击一下就是八九十万物理伤害，挂上流血整套能到两百多万。瞄准期间给保护，射击和流血都打不进来。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 1 · 凯斯媞亚·魔力之心</div>
+      <div class="sig">看到<b>混沌爆裂开始跳伤</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+      <p>光明灌注把首领打昏后，混沌爆裂 20 秒每秒烧全队。圣佑一开，复仇之盾先吃掉开头一两跳，再减 30% 伤害撑过 8 秒。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>三个关键处理</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:6940}}" alt="">赞恩的毒伤：牺牲给吃刀的人</h3>
+      <p><b>毒伤</b>是赞恩打当前目标的 3 秒读条大刀，未减免两百多万物理伤害，还附带断心药膏。它算中毒效果，被<b>正义保护</b>挡掉：目标身上挂着牺牲祝福，这一刀记成免疫，转移到你身上的部分也是 0。</p>
+      <p>赞恩每 42 秒一轮：影舞步 → 火焰炸弹 → <b>货物爆炸 + 毒伤</b> → 绝命凶径。看到货物爆炸开始读条就给牺牲，牺牲持续 12 秒，提前两三秒给也盖得住。给谁看当前目标：平时是坦克，队里战士嘲讽过去接刀时就给战士。</p>
+      <p>点了「正义牺牲」后牺牲 60 秒一次，一场赞恩 4 刀能接<b>第 1、3 刀</b>。第 2、4 刀让坦克交自己的减伤，或者让战士开剑在人在嘲讽招架。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1266241}}" alt=""><div><b>货物爆炸读条</b><span>信号</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:6940}}" alt=""><div><b>牺牲祝福</b><span>给当前目标</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1223939}}" alt=""><div><b>毒伤读条</b><span>3 秒</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1216590}}" alt=""><div><b>毒伤落地</b><span>免疫 · 0 伤害</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一次毒伤：未减免约 206 万；目标挂着牺牲祝福时免疫，0 伤害">
+      <div class="cap">一次毒伤的伤害</div>
+      <div class="bar-row"><span>毒伤本体</span><div class="bar"><span class="off" style="width:100%">206 万</span></div></div>
+      <div class="bar-row"><span>挂着牺牲</span><div class="bar"><span class="on" style="width:1.5%"></span><em class="em" style="left:calc(1.5% + 8px)">0 · 免疫</em></div></div>
+      <div class="delta">−100%<small>断心药膏也不上</small></div>
+      <div class="cap">开场街头扒手给坦克叠断心药膏时也是同一招：牺牲给坦克，已有的毒当场清掉，12 秒内不再上毒。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1297682}}" alt="">吸取生命：圣盾掐断，圣疗不行</h3>
+      <p><b>腐化的术士</b>引导 7 秒吸取生命，每秒从目标身上吸一大口给自己回血。圣盾术免疫有害效果，开出来的那一刻吸取生命就从身上消失，只吃第一跳。</p>
+      <p>圣疗术解决不了这个机制。圣疗能把血一下抬满，但吸取生命照跳，一直吸到 7 秒结束。圣疗之后会挂自律，不过点了<b>圣光决断</b>，自律期间照样能开圣盾，先圣疗救急、再圣盾掐断也来得及。</p>
+      <p>术士在三号前的大波和尾王前的小鬼区各有一只。圣盾点了「不败之魂」三分半一次，三号前那波<b>别在开怪时就把圣盾交掉</b>，留给吸取生命；交早了只能硬吃整整 7 秒。</p>
+    </div>
+    <div class="bars" role="img" aria-label="一轮吸取生命：被吸满约 160 万；吃完第一跳开圣盾约 30 万">
+      <div class="cap">一轮吸取生命打在惩戒身上</div>
+      <div class="bar-row"><span>被吸满 7 秒</span><div class="bar"><span class="off" style="width:100%">约 160 万</span></div></div>
+      <div class="bar-row"><span>第一跳后圣盾</span><div class="bar"><span class="on" style="width:19%">30 万</span></div></div>
+      <div class="delta">−80%<small>还回 10% 血</small></div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:642}}" alt="">牺牲 + 圣盾：替队友扛不掉血</h3>
+      <p>牺牲祝福把队友受到的 30% 伤害转到你身上。先给牺牲，紧接着开圣盾，转过来的伤害全被免疫：队友减伤 30%，你自己一点不掉。</p>
+      <p>适合交在全队都在掉血的时刻：萨祖克斯的<b>魔化狂怒</b>、利希尔的<b>古尔丹之指</b>和最后一段灾厄浪潮。牺牲给坦克或治疗。</p>
+      <p>牺牲 12 秒，圣盾 8 秒。圣盾结束后还有几秒转移伤害要自己吃，这时首领群伤还在，血线低就补圣佑。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:6940}}" alt=""><div><b>牺牲祝福</b><span>给坦克或治疗</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:642}}" alt=""><div><b>圣盾术</b><span>1–2 秒内</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:474457}}" alt=""><div><b>群伤落地</b><span>你 0 · 队友减 30%</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:403876}}" alt=""><div><b>圣佑术</b><span>圣盾结束后补</span></div></div>
+      </div>
+    </div>
+    <div class="bars">
+      <div class="cap">开着圣盾时，自己受到的</div>
+      <div class="bar-row"><span>首领群伤</span><div class="bar"><span class="on" style="width:1.5%"></span><em class="em" style="left:calc(1.5% + 8px)">0 · 免疫</em></div></div>
+      <div class="bar-row"><span>牺牲转移</span><div class="bar"><span class="on" style="width:1.5%"></span><em class="em" style="left:calc(1.5% + 8px)">0 · 免疫</em></div></div>
+      <div class="cap">圣盾结束、牺牲还在的最后几秒，转移伤害恢复，记得留意血线。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 凯斯媞亚</h3><span class="kind">TRASH · 第 1–3 波</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1216300}}" alt=""><div><div class="n">妙手空空 + 邪能飞弹</div><div class="s">径巷流氓跳脸，法师连读 <span class="tag bleed">流血</span><span class="tag fel">火焰</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">开场第一大波就交，盾先吃，再减 30%</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1216590}}" alt=""><div><div class="n">断心药膏</div><div class="s">街头扒手给坦克叠毒 <span class="tag poison">中毒</span><span class="tag">降最大生命</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福 → 坦克 <span class="pill p-imm">免毒</span></div>
+          <div class="why">已有的层数清掉，12 秒内一层都上不去</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1216590}}" alt=""><div><div class="n">断心药膏 · 牺牲在冷却</div><div class="s">坦克叠到三四层 <span class="tag poison">中毒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:213644}}" alt="">清毒术 → 坦克 <span class="pill p-clr">清除</span></div>
+          <div class="why">扒手活着就会接着叠，层数起来再清</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297667}}" alt=""><div><div class="n">燃烧邪能</div><div class="s">巨大的邪能浮龙，50 码一直脉冲 <span class="tag fel">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 → 圣盾术 <span class="pill p-dr">减伤 · 免疫</span></div>
+          <div class="why">这只活着全队一直掉血，圣佑先交，结束了还在烧就接圣盾</div>
+        </div>
+        <div class="note">自己身上同时挂着<b>妙手空空和断心药膏</b>时，圣盾一次全清，每清一个回 10% 血。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>凯斯媞亚·魔力之心</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1230298}}" alt=""><div><div class="n">混沌弹幕 + 邪能风暴</div><div class="s">弹幕从坦克跳到附近，镜像放风暴 <span class="tag magic">混乱</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">近战贴着坦克容易被跳到，两样叠上来就开</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1216590}}" alt=""><div><div class="n">断心药膏</div><div class="s">扒手被带进首领战 <span class="tag poison">中毒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福 → 坦克 <span class="pill p-imm">免毒</span></div>
+          <div class="why">坦克同时扛弹幕和毒，牺牲减伤加免毒</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1214959}}" alt=""><div><div class="n">混沌爆裂</div><div class="s">光明灌注后 20 秒每秒烧全队 <span class="tag magic">混乱</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">一开始跳就交，首领这时昏迷易伤，别停手</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1216300}}" alt=""><div><div class="n">队友被弹幕 + 流血压残</div><div class="s">弹幕跳到身上，妙手空空还在跳 <span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:633}}" alt="">圣疗术 → 队友 <span class="pill p-heal">治疗</span></div>
+          <div class="why">按你的最大生命值治疗，一下拉满；流血还在，治疗接着刷</div>
+        </div>
+        <div class="note">圣佑开怪交一次，到<b>混沌爆裂时正好转好</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>赞恩·刃悲</h3><span class="kind">BOSS 2 · 每 42 秒一轮</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:474483}}" alt=""><div><div class="n">影舞步</div><div class="s">3 秒弹幕 <span class="tag">全团</span><span class="tag">无视护甲</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">每轮第一个大伤害，圣佑好了就交在这</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1223939}}" alt=""><div><div class="n">毒伤</div><div class="s">货物爆炸时读条，打当前目标 <span class="tag">物理</span><span class="tag poison">断心药膏</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福 → 当前目标 <span class="pill p-imm">免疫</span></div>
+          <div class="why">整刀打 0，交第 1、3 刀</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:474740}}" alt=""><div><div class="n">绝命凶径</div><div class="s">先瞄准，再射击加 15 秒流血 <span class="tag">物理</span><span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福 → 被瞄准的人 <span class="pill p-imm">免疫</span></div>
+          <div class="why">瞄准期间给，射击和流血都打不进来</div>
+        </div>
+        <div class="note warn"><b>保护挡不住火焰。</b>邪能灌注货物每 3 秒烧全队，货物爆炸也是火焰伤害，这两样还是靠圣佑。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>赞恩 → 萨祖克斯</h3><span class="kind">TRASH · 术士、魔蝇和掠夺者</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297682}}" alt=""><div><div class="n">吸取生命</div><div class="s">腐化的术士引导 7 秒 <span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:642}}" alt="">圣盾术 <span class="pill p-clr">清除</span></div>
+          <div class="why">吃完第一跳就开，后面 7 秒全免</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1295427}}" alt=""><div><div class="n">剥离 + 魔化狂乱</div><div class="s">掠夺者流血，惩罚者狂暴每秒烧 <span class="tag bleed">流血</span><span class="tag fel">火焰</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">两样叠在一起时交，这一波长，能交三次</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1295427}}" alt=""><div><div class="n">剥离叠高</div><div class="s">物理流血压在自己身上 <span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福 → 自己 <span class="pill p-clr">清除</span></div>
+          <div class="why">流血当场清掉，掠夺者的劈砍也打不进来</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294774}}" alt=""><div><div class="n">魔化狂乱 · 坦克吃紧</div><div class="s">整波怪围着坦克 <span class="tag fel">火焰</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福 → 坦克 <span class="pill p-dr">减伤</span></div>
+          <div class="why">分走坦克 30% 伤害，赞恩打完正好转好</div>
+        </div>
+        <div class="note">保护会给自己挂 30 秒自律，这段时间没有圣疗；圣盾有圣光决断，照样能开。吸取生命落在<b>队友</b>身上时，圣疗给他救急，吸血要靠打断或控制术士才停。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>歼灭者萨祖克斯</h3><span class="kind">BOSS 3 · 每 57 秒一轮</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:474197}}" alt=""><div><div class="n">地狱火碾压 → 魔化狂怒</div><div class="s">碾压灼烧 8 秒还没完，狂怒又读 <span class="tag fel">火焰</span><span class="tag magic">混乱</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">狂怒读条时开，盾先吃碾压剩下的灼烧，再吃狂怒</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1295455}}" alt=""><div><div class="n">碾压灼烧挂身上 · 圣佑在冷却</div><div class="s">狂怒马上落地 <span class="tag fel">火焰</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:642}}" alt="">圣盾术 <span class="pill p-clr">清除 · 免疫</span></div>
+          <div class="why">灼烧清掉，紧跟着的魔化狂怒也免疫</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:474197}}" alt=""><div><div class="n">开着圣盾时的狂怒</div><div class="s">治疗和坦克同样在吃 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福 → 治疗 <span class="pill p-dr">减伤</span></div>
+          <div class="why">转移过来的伤害被圣盾吃掉，等于白送 30% 减伤</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1214650}}" alt=""><div><div class="n">魔能闪电</div><div class="s">利斧投掷后，斧头每秒放电 <span class="tag magic">混乱</span><span class="tag">叠层</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:633}}" alt="">圣疗术 → 自己 <span class="pill p-heal">治疗</span></div>
+          <div class="why">层数叠高时拉满血，争取时间把斧头打掉</div>
+        </div>
+        <div class="note">这个首领是<b>利斧 → 碾压 → 狂怒</b>一组一组来。每轮狂怒都要有防御：圣佑好了交圣佑，圣佑没好的那一轮交圣盾，顺手牺牲给治疗。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>萨祖克斯 → 利希尔</h3><span class="kind">TRASH · 小鬼群和亵渎傀儡</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1223204}}" alt=""><div><div class="n">邪火爆裂 + 剥离</div><div class="s">不羁的小鬼一大群连发 <span class="tag fel">火焰</span><span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">小鬼群一拉上来就交，好了再交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297682}}" alt=""><div><div class="n">吸取生命</div><div class="s">又一只腐化的术士 <span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:642}}" alt="">圣盾术 <span class="pill p-clr">清除</span></div>
+          <div class="why">同上，第一跳后开</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294827}}" alt=""><div><div class="n">亵渎猛击</div><div class="s">亵渎傀儡 4 秒一下，连砸三下 <span class="tag fel">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">每下六七十万，第一下前开，盾和减伤盖住三下</div>
+        </div>
+        <div class="note">圣佑交在傀儡上没关系，<b>进利希尔前能转好</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>利希尔·烬怒</h3><span class="kind">BOSS 4 · 每 58 秒一轮</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:474457}}" alt=""><div><div class="n">古尔丹之指</div><div class="s">召唤邪犬之后读条 <span class="tag fel">暗影烈焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，爆炸和灼热邪焰一起减</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:474457}}" alt=""><div><div class="n">古尔丹之指 · 后半场</div><div class="s">邪焰底压越来越高 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:6940}}" alt="">牺牲 → 圣盾 <span class="pill p-imm">免疫</span></div>
+          <div class="why">牺牲给坦克或战士，两秒内开圣盾，转移伤害全免</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1216945}}" alt=""><div><div class="n">灼热邪焰</div><div class="s">首领常驻光环每秒烧全队 <span class="tag fel">火焰</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:633}}" alt="">圣疗术 → 自己，再圣盾 <span class="pill p-heal">治疗 · 免疫</span></div>
+          <div class="why">掉到危险线先圣疗，圣光决断让你自律中还能接圣盾</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1217345}}" alt=""><div><div class="n">灾厄浪潮</div><div class="s">召出邪能护盾后放波 <span class="tag fel">火焰</span><span class="tag">易伤 1 分钟</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1214675}}" alt="">恶魔传送门 <span class="pill p-mv">副本按钮</span></div>
+          <div class="why">穿门，免疫首波伤害和火焰易伤</div>
+        </div>
+        <div class="note">灼热邪焰是这场<b>全队承伤最大的一项</b>，躲不掉。圣佑每轮都交在古尔丹之指上。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:6940}}" alt=""><div><div class="nm">牺牲祝福</div><span class="pill p-imm">免毒 · 减伤 30%</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>赞恩的毒伤、扒手的断心药膏、魔化狂怒和古尔丹之指时给坦克或治疗</dd><dt>时机</dt><dd>货物爆炸读条时；60 秒一次</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1022}}" alt=""><div><div class="nm">保护祝福</div><span class="pill p-imm">物理免疫</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>绝命凶径；自己身上的剥离</dd><dt>时机</dt><dd>瞄准期间给；目标挂 30 秒自律</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:642}}" alt=""><div><div class="nm">圣盾术</div><span class="pill p-clr">清除 · 免疫</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>吸取生命、碾压灼烧、燃烧邪能；配牺牲替队友扛</dd><dt>时机</dt><dd>减益上身后开；自律中也能开</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:403876}}" alt=""><div><div class="nm">圣佑术 + 复仇之盾</div><span class="pill p-dr">减伤 30% · 吸收盾</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>混沌爆裂、影舞步、魔化狂怒、亵渎猛击、古尔丹之指</dd><dt>时机</dt><dd>群伤读条时；好了就找下一个</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:633}}" alt=""><div><div class="nm">圣疗术</div><span class="pill p-heal">一下拉满</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>弹幕加流血压残的队友、魔能闪电叠高、尾王邪焰</dd><dt>时机</dt><dd>危险线才按；不清任何减益</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:213644}}" alt=""><div><div class="nm">清毒术</div><span class="pill p-clr">清中毒</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>坦克身上的断心药膏</dd><dt>时机</dt><dd>牺牲在冷却、层数叠起来时</dd></dl>
+    </div>
+  </div>
+  <div class="note" style="margin-top:12px;border:1px solid var(--line);border-radius:10px"><b>自律</b>：圣疗、保护、圣盾都会给目标挂 30 秒自律。有自律的人不能再吃圣疗和保护；圣盾有圣光决断，不受影响。所以顺序是<b>先圣疗或保护，再圣盾</b>，反过来就接不上。</div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+22 高手同款惩戒天赋，英雄天赋烈日先驱。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:469321}}" alt=""><div><b>正义保护</b><span>牺牲祝福移除并防止中毒，赞恩的毒伤靠它打 0</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:384820}}" alt=""><div><b>正义牺牲</b><span>牺牲祝福冷却缩短 60 秒，一场赞恩能接两刀</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:146956}}" alt=""><div><b>圣光决断</b><span>自律中也能开圣盾，每清一个减益回 10% 血</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:184662}}" alt=""><div><b>复仇之盾</b><span>圣佑术再减 10% 并附带 30% 血量的吸收盾</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:114154}}" alt=""><div><b>不败之魂</b><span>圣盾、圣佑、圣疗冷却缩短 30%，圣盾三分半一次</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:326734}}" alt=""><div><b>治疗之手</b><span>目标掉血越多，圣疗冷却缩得越多</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:469439}}" alt=""><div><b>奋发卫士</b><span>圣佑期间受到的治疗提高 15%</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1241945}}" alt=""><div><b>黄昏祝福</b><span>血越低减伤越多，最多 10%</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:213644}}" alt=""><div><b>清毒术</b><span>清掉坦克身上的断心药膏</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/tAYXZrKG4HcbVpkf#fight=1">天下第一骑 27:41</a>
+      <a href="https://www.warcraftlogs.com/reports/r1ChwFYjNM7XkWp9#fight=33">Tracer 26:46</a>
+      <a href="https://www.warcraftlogs.com/reports/BjYy6LNJAwnDbrK8#fight=42">Âra 28:46</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">惩戒骑 · 密谋小径 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

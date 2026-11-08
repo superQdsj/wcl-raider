@@ -1,0 +1,8 @@
+19:50.902 damage 愤怒卫士掠夺者->Tracer 剥离(1295427) amount=213717 absorbed= overheal= hit=1 stack= HP=880871/1094588
+19:50.902 applydebuff 愤怒卫士掠夺者->Tracer 剥离(1295427) amount= absorbed= overheal= hit= stack=
+19:51.905 damage 愤怒卫士掠夺者->Tracer 剥离(1295427) amount=240829 absorbed= overheal= hit=1 stack= HP=429853/1094588
+19:52.887 damage 愤怒卫士掠夺者->Tracer 剥离(1295427) amount=231098 absorbed= overheal= hit=1 stack= HP=228577/1094588
+19:52.952 removedebuff 愤怒卫士掠夺者->Tracer 剥离(1295427) amount= absorbed= overheal= hit= stack=
+19:52.952 applybuff Tracer->Tracer 保护祝福(1022) amount= absorbed= overheal= hit= stack=
+19:52.953 cast Tracer->Tracer 保护祝福(1022) amount= absorbed= overheal= hit= stack= HP=228577/1094588
+19:52.953 applydebuff Tracer->Tracer 自律(25771) amount= absorbed= overheal= hit= stack=

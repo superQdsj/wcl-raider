@@ -1,0 +1,7 @@
+13:07.522 applydebuff 腐化的术士->Âra 吸取生命(1297682) amount= absorbed= overheal= hit= stack=
+13:07.750 damage 腐化的术士->Âra 吸取生命(1297683) amount=301489 absorbed= overheal= hit=1 stack= HP=503717/1079848
+13:08.083 removedebuff 腐化的术士->Âra 吸取生命(1297682) amount= absorbed= overheal= hit= stack=
+13:08.083 applybuff Âra->Âra 圣盾术(642) amount= absorbed= overheal= hit= stack=
+13:08.084 cast Âra->Environment 圣盾术(642) amount= absorbed= overheal= hit= stack= HP=1079848/1079848
+13:08.084 applydebuff Âra->Âra 自律(25771) amount= absorbed= overheal= hit= stack=
+13:10.388 damage 愤怒卫士掠夺者->Âra 剥离(1295426) amount=0 absorbed= overheal= hit=10 stack=

@@ -1,0 +1,8 @@
+9:16.089 applydebuff 赞恩·刃悲->Tracer 绝命凶径(474545) amount= absorbed= overheal= hit= stack=
+9:16.593 removebuff Tracer->Swordish 牺牲祝福(6940) amount= absorbed= overheal= hit= stack=
+9:16.593 removebuff Tracer->Tracer 牺牲祝福(6940) amount= absorbed= overheal= hit= stack=
+9:18.132 applybuff Tracer->Tracer 保护祝福(1022) amount= absorbed= overheal= hit= stack=
+9:18.133 cast Tracer->Tracer 保护祝福(1022) amount= absorbed= overheal= hit= stack= HP=1094588/1094588
+9:18.133 applydebuff Tracer->Tracer 自律(25771) amount= absorbed= overheal= hit= stack=
+9:21.593 removedebuff 赞恩·刃悲->Tracer 绝命凶径(474545) amount= absorbed= overheal= hit= stack=
+9:21.724 damage 赞恩·刃悲->Tracer 绝命凶径(474763) amount=0 absorbed= overheal= hit=10 stack=

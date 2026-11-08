@@ -1,0 +1,4304 @@
+[
+  {
+    "id": "A01",
+    "run": 1,
+    "time": "0:19.6",
+    "timestamp": 7601140,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "断心药膏",
+      "盾击",
+      "邪能谵狂",
+      "邪能飞弹",
+      "飞刃"
+    ],
+    "enemy_ids": [
+      1216300,
+      1216529,
+      1216571,
+      1216589,
+      1229433,
+      1295035
+    ],
+    "damage": [
+      {
+        "name": "邪能飞弹",
+        "amount": 771541
+      }
+    ],
+    "self_debuffs": [],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A02",
+    "run": 1,
+    "time": "0:32.2",
+    "timestamp": 7613753,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "盾击",
+      "邪能飞弹",
+      "飞刃"
+    ],
+    "enemy_ids": [
+      1216300,
+      1216529,
+      1216571,
+      1295035
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 829839
+      },
+      {
+        "name": "妙手空空",
+        "amount": 475279
+      },
+      {
+        "name": "断心药膏",
+        "amount": 277031
+      },
+      {
+        "name": "邪能飞弹",
+        "amount": 111062
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 1976
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "邪能飞弹"
+    ],
+    "self_removed": [
+      "妙手空空",
+      "断心药膏"
+    ],
+    "healing": []
+  },
+  {
+    "id": "A03",
+    "run": 1,
+    "time": "0:36.1",
+    "timestamp": 7617629,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "妙手空空",
+      "盾击",
+      "邪能飞弹",
+      "飞刃"
+    ],
+    "enemy_ids": [
+      1216300,
+      1216529,
+      1216571,
+      1295035
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 6770361
+      },
+      {
+        "name": "邪能引爆",
+        "amount": 973783
+      },
+      {
+        "name": "邪能飞弹",
+        "amount": 951670
+      },
+      {
+        "name": "飞刃",
+        "amount": 724193
+      },
+      {
+        "name": "断心药膏",
+        "amount": 600724
+      },
+      {
+        "name": "盾击",
+        "amount": 365771
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A04",
+    "run": 1,
+    "time": "0:55.0",
+    "timestamp": 7636543,
+    "spell_id": 213644,
+    "spell": "清毒术",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "盾击",
+      "邪能谵狂",
+      "邪能飞弹",
+      "飞刃"
+    ],
+    "enemy_ids": [
+      1216529,
+      1216571,
+      1229433,
+      1295035
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 1529837
+      },
+      {
+        "name": "断心药膏",
+        "amount": 1269851
+      },
+      {
+        "name": "邪能飞弹",
+        "amount": 525857
+      },
+      {
+        "name": "飞刃",
+        "amount": 393378
+      },
+      {
+        "name": "盾击",
+        "amount": 211836
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 4433
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "自律",
+      "妙手空空",
+      "邪能飞弹"
+    ],
+    "self_removed": [
+      "妙手空空"
+    ],
+    "healing": []
+  },
+  {
+    "id": "A05",
+    "run": 1,
+    "time": "1:04.2",
+    "timestamp": 7645734,
+    "spell_id": 213644,
+    "spell": "清毒术",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "断心药膏",
+      "邪能谵狂",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1216571,
+      1216589,
+      1229433
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 1247190
+      },
+      {
+        "name": "邪能飞弹",
+        "amount": 677438
+      },
+      {
+        "name": "断心药膏",
+        "amount": 425957
+      },
+      {
+        "name": "飞刃",
+        "amount": 82226
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 1975
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A06",
+    "run": 1,
+    "time": "1:16.0",
+    "timestamp": 7657517,
+    "spell_id": 213644,
+    "spell": "清毒术",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "断心药膏",
+      "盾击",
+      "邪能谵狂",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1216529,
+      1216571,
+      1216589,
+      1229433
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 979352
+      },
+      {
+        "name": "断心药膏",
+        "amount": 628471
+      },
+      {
+        "name": "邪能飞弹",
+        "amount": 146964
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A07",
+    "run": 1,
+    "time": "2:00.9",
+    "timestamp": 7702419,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "诱惑",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1201554,
+      1216571
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 4191036
+      },
+      {
+        "name": "断心药膏",
+        "amount": 501070
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A08",
+    "run": 1,
+    "time": "2:22.6",
+    "timestamp": 7724156,
+    "spell_id": 213644,
+    "spell": "清毒术",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "盾击",
+      "诱惑",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1201554,
+      1216529,
+      1216571
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 4537278
+      },
+      {
+        "name": "断心药膏",
+        "amount": 970096
+      },
+      {
+        "name": "邪能飞弹",
+        "amount": 353915
+      },
+      {
+        "name": "盾击",
+        "amount": 346594
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 7902
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A09",
+    "run": 1,
+    "time": "2:31.0",
+    "timestamp": 7732519,
+    "spell_id": 213644,
+    "spell": "清毒术",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "断心药膏",
+      "诱惑",
+      "邪能飞弹",
+      "飞刃"
+    ],
+    "enemy_ids": [
+      1201554,
+      1216571,
+      1216589,
+      1295035
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 3486973
+      },
+      {
+        "name": "飞刃",
+        "amount": 336096
+      },
+      {
+        "name": "断心药膏",
+        "amount": 316822
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 3118
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A10",
+    "run": 1,
+    "time": "3:50.0",
+    "timestamp": 7811513,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "断心药膏",
+      "腐蚀唾液",
+      "邪能灌注",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1214966,
+      1216300,
+      1216571,
+      1216589,
+      1217633
+    ],
+    "damage": [
+      {
+        "name": "妙手空空",
+        "amount": 890876
+      },
+      {
+        "name": "燃烧邪能",
+        "amount": 612800
+      },
+      {
+        "name": "邪能飞弹",
+        "amount": 489827
+      },
+      {
+        "name": "腐蚀唾液",
+        "amount": 352639
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 190534
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 5419
+      },
+      {
+        "name": "Melee",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "妙手空空"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A11",
+    "run": 1,
+    "time": "3:54.2",
+    "timestamp": 7815695,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "断心药膏",
+      "腐蚀唾液",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1216300,
+      1216571,
+      1216589,
+      1217633
+    ],
+    "damage": [
+      {
+        "name": "邪能飞弹",
+        "amount": 928856
+      },
+      {
+        "name": "燃烧邪能",
+        "amount": 589900
+      },
+      {
+        "name": "妙手空空",
+        "amount": 571642
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 391445
+      },
+      {
+        "name": "腐蚀唾液",
+        "amount": 352639
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 6624
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "妙手空空",
+      "邪能飞弹",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 7815694,
+        "type": "heal",
+        "sourceID": 3,
+        "targetID": 3,
+        "abilityGameID": 633,
+        "fight": 1,
+        "buffs": "61295.156322.207400.382024.1229746.1264426.1287665.",
+        "hitType": 1,
+        "amount": 455473,
+        "overheal": 633285,
+        "resourceActor": 1,
+        "classResources": [
+          {
+            "amount": 250000,
+            "max": 250000,
+            "type": 0
+          }
+        ],
+        "hitPoints": 1088758,
+        "maxHitPoints": 1088758,
+        "attackPower": 4929,
+        "spellPower": 643,
+        "armor": 3171,
+        "absorb": 1,
+        "x": 478399,
+        "y": 877092,
+        "facing": -355,
+        "mapID": 2433,
+        "versatility": 494,
+        "avoidance": 777,
+        "itemLevel": 338
+      }
+    ]
+  },
+  {
+    "id": "A12",
+    "run": 1,
+    "time": "3:56.9",
+    "timestamp": 7818391,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "妙手空空",
+      "断心药膏",
+      "腐蚀唾液",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1216300,
+      1216571,
+      1216589,
+      1217633
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 4760768
+      },
+      {
+        "name": "燃烧邪能",
+        "amount": 544044
+      },
+      {
+        "name": "断心药膏",
+        "amount": 108101
+      },
+      {
+        "name": "妙手空空",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "妙手空空",
+      "自律"
+    ],
+    "self_removed": [
+      "妙手空空"
+    ],
+    "healing": []
+  },
+  {
+    "id": "A13",
+    "run": 1,
+    "time": "4:02.3",
+    "timestamp": 7823804,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "召唤浮龙",
+      "妙手空空",
+      "断心药膏",
+      "腐蚀唾液",
+      "邪能灌注",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1214966,
+      1216300,
+      1216571,
+      1216589,
+      1217633,
+      1258537
+    ],
+    "damage": [
+      {
+        "name": "邪能飞弹",
+        "amount": 439029
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 200911
+      },
+      {
+        "name": "燃烧邪能",
+        "amount": 179789
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 942
+      },
+      {
+        "name": "妙手空空",
+        "amount": 0
+      },
+      {
+        "name": "腐蚀唾液",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "自律",
+      "邪能飞弹"
+    ],
+    "self_removed": [
+      "曙光意志",
+      "邪能飞弹"
+    ],
+    "healing": []
+  },
+  {
+    "id": "A14",
+    "run": 1,
+    "time": "4:32.9",
+    "timestamp": 7854405,
+    "spell_id": 213644,
+    "spell": "清毒术",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "断心药膏",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1216571,
+      1216589
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 1464430
+      },
+      {
+        "name": "断心药膏",
+        "amount": 806948
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A15",
+    "run": 1,
+    "time": "4:46.8",
+    "timestamp": 7868376,
+    "spell_id": 213644,
+    "spell": "清毒术",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "断心药膏"
+    ],
+    "enemy_ids": [
+      1216589
+    ],
+    "damage": [
+      {
+        "name": "断心药膏",
+        "amount": 1182049
+      },
+      {
+        "name": "Melee",
+        "amount": 570795
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 6541
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A16",
+    "run": 1,
+    "time": "5:34.6",
+    "timestamp": 7916085,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss1",
+    "target": "自己",
+    "enemy": [
+      "混沌弹幕",
+      "腐蚀唾液",
+      "邪能新星",
+      "邪能风暴",
+      "镜像"
+    ],
+    "enemy_ids": [
+      1223906,
+      1228198,
+      1230298,
+      1264095,
+      1264106
+    ],
+    "damage": [
+      {
+        "name": "邪能风暴",
+        "amount": 450829
+      },
+      {
+        "name": "混沌弹幕",
+        "amount": 387580
+      },
+      {
+        "name": "腐蚀唾液",
+        "amount": 325448
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A17",
+    "run": 1,
+    "time": "6:42.0",
+    "timestamp": 7983529,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss1",
+    "target": "自己",
+    "enemy": [],
+    "enemy_ids": [],
+    "damage": [
+      {
+        "name": "混沌爆裂",
+        "amount": 2281999
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A18",
+    "run": 1,
+    "time": "8:38.3",
+    "timestamp": 8099837,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "当日送达",
+      "影舞步",
+      "货物爆炸",
+      "锋利之甲"
+    ],
+    "enemy_ids": [
+      474478,
+      474766,
+      1266241,
+      1311136
+    ],
+    "damage": [
+      {
+        "name": "影舞步",
+        "amount": 943714
+      },
+      {
+        "name": "锋利之甲",
+        "amount": 345328
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 5863
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "五星好评！"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A19",
+    "run": 1,
+    "time": "10:04.9",
+    "timestamp": 8186439,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "回去干活！",
+      "当日送达",
+      "影舞步"
+    ],
+    "enemy_ids": [
+      474478,
+      474766,
+      1216970
+    ],
+    "damage": [
+      {
+        "name": "影舞步",
+        "amount": 1092245
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 7211
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "五星好评！"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A20",
+    "run": 1,
+    "time": "10:19.4",
+    "timestamp": 8200901,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss2",
+    "target": "队友",
+    "enemy": [
+      "回去干活！",
+      "当日送达",
+      "毒伤",
+      "货物爆炸"
+    ],
+    "enemy_ids": [
+      474766,
+      1216970,
+      1222795,
+      1266241
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 794020
+      },
+      {
+        "name": "毒伤",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "五星好评！",
+      "邪能灌注货物",
+      "火焰炸弹"
+    ],
+    "self_removed": [
+      "筋疲力尽"
+    ],
+    "healing": []
+  },
+  {
+    "id": "A21",
+    "run": 1,
+    "time": "11:15.6",
+    "timestamp": 8257126,
+    "spell_id": 1022,
+    "spell": "保护祝福",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "绝命凶径",
+      "货物爆炸"
+    ],
+    "enemy_ids": [
+      734276,
+      1218347,
+      1266241
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 861740
+      },
+      {
+        "name": "绝命凶径",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "五星好评！",
+      "绝命凶径",
+      "自律"
+    ],
+    "self_removed": [
+      "邪能灌注货物"
+    ],
+    "healing": []
+  },
+  {
+    "id": "A22",
+    "run": 1,
+    "time": "12:16.1",
+    "timestamp": 8317648,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "旋风斩",
+      "生命通道",
+      "邪火爆裂",
+      "邪火轰炸"
+    ],
+    "enemy_ids": [
+      1214980,
+      1223204,
+      1295426,
+      1295427,
+      1297691,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "邪火轰炸",
+        "amount": 0
+      },
+      {
+        "name": "邪火爆裂",
+        "amount": 0
+      },
+      {
+        "name": "剥离",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "五星好评！",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A23",
+    "run": 1,
+    "time": "12:48.2",
+    "timestamp": 8349747,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "旋风斩",
+      "邪能之怒"
+    ],
+    "enemy_ids": [
+      1214922,
+      1295426,
+      1295427,
+      1297691
+    ],
+    "damage": [
+      {
+        "name": "魔化狂乱",
+        "amount": 951610
+      },
+      {
+        "name": "剥离",
+        "amount": 769587
+      }
+    ],
+    "self_debuffs": [
+      "五星好评！",
+      "筋疲力尽",
+      "剥离"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A24",
+    "run": 1,
+    "time": "13:46.7",
+    "timestamp": 8408244,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "厄运诅咒",
+      "吸取生命",
+      "邪能之怒",
+      "邪能冲刺"
+    ],
+    "enemy_ids": [
+      1214922,
+      1217973,
+      1293022,
+      1295426,
+      1295427,
+      1297682
+    ],
+    "damage": [
+      {
+        "name": "吸取生命",
+        "amount": 2388692
+      },
+      {
+        "name": "邪能冲刺",
+        "amount": 854338
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 9827
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "吸取生命",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 8408243,
+        "type": "heal",
+        "sourceID": 3,
+        "targetID": 3,
+        "abilityGameID": 633,
+        "fight": 1,
+        "buffs": "8936.61295.207400.382024.1264426.1278914.",
+        "hitType": 1,
+        "amount": 621977,
+        "overheal": 466781,
+        "resourceActor": 1,
+        "classResources": [
+          {
+            "amount": 249179,
+            "max": 250000,
+            "type": 0
+          }
+        ],
+        "hitPoints": 1088758,
+        "maxHitPoints": 1088758,
+        "attackPower": 3965,
+        "spellPower": 643,
+        "armor": 3171,
+        "absorb": 1,
+        "x": 492978,
+        "y": 881701,
+        "facing": -604,
+        "mapID": 2434,
+        "versatility": 300,
+        "avoidance": 777,
+        "itemLevel": 338
+      }
+    ]
+  },
+  {
+    "id": "A25",
+    "run": 1,
+    "time": "14:48.6",
+    "timestamp": 8470137,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "诱惑",
+      "邪能冲刺"
+    ],
+    "enemy_ids": [
+      1201554,
+      1293022
+    ],
+    "damage": [
+      {
+        "name": "邪能冲刺",
+        "amount": 505304
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 5524
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A26",
+    "run": 1,
+    "time": "16:38.4",
+    "timestamp": 8579902,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "军团打击",
+      "燃烧脚步",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      473898,
+      474197,
+      474231
+    ],
+    "damage": [
+      {
+        "name": "地狱火碾压",
+        "amount": 704057
+      },
+      {
+        "name": "魔化狂怒",
+        "amount": 491277
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志",
+      "地狱火碾压"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A27",
+    "run": 1,
+    "time": "18:29.9",
+    "timestamp": 8691476,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "地狱火碾压",
+      "燃烧脚步",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      474197,
+      474231,
+      1295453
+    ],
+    "damage": [
+      {
+        "name": "地狱火碾压",
+        "amount": 1170312
+      },
+      {
+        "name": "魔化狂怒",
+        "amount": 494075
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 1932
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "地狱火碾压"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A28",
+    "run": 1,
+    "time": "20:10.4",
+    "timestamp": 8791949,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion2",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "生命通道",
+      "邪火爆裂",
+      "邪火轰炸",
+      "邪能之怒"
+    ],
+    "enemy_ids": [
+      1214922,
+      1214980,
+      1223204,
+      1295426,
+      1295427,
+      1297693
+    ],
+    "damage": [],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A29",
+    "run": 1,
+    "time": "20:44.5",
+    "timestamp": 8826058,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "legion2",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "厄运诅咒",
+      "吸取生命",
+      "生命通道",
+      "邪火爆裂",
+      "邪火轰炸",
+      "邪能之怒"
+    ],
+    "enemy_ids": [
+      1214922,
+      1214980,
+      1217973,
+      1223204,
+      1295426,
+      1295427,
+      1297682,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "剥离",
+        "amount": 920921
+      },
+      {
+        "name": "邪火爆裂",
+        "amount": 917111
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "剥离",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 8826057,
+        "type": "heal",
+        "sourceID": 3,
+        "targetID": 3,
+        "abilityGameID": 633,
+        "fight": 1,
+        "buffs": "8936.156322.207400.382024.431907.1229746.1264426.1278914.",
+        "hitType": 1,
+        "amount": 586426,
+        "overheal": 502332,
+        "resourceActor": 1,
+        "classResources": [
+          {
+            "amount": 250000,
+            "max": 250000,
+            "type": 0
+          }
+        ],
+        "hitPoints": 1088758,
+        "maxHitPoints": 1088758,
+        "attackPower": 4156,
+        "spellPower": 643,
+        "armor": 3171,
+        "absorb": 0,
+        "x": 501760,
+        "y": 888716,
+        "facing": -457,
+        "mapID": 2434,
+        "versatility": 383,
+        "avoidance": 777,
+        "itemLevel": 338
+      }
+    ]
+  },
+  {
+    "id": "A30",
+    "run": 1,
+    "time": "21:14.3",
+    "timestamp": 8855803,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion2",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "生命通道",
+      "邪火爆裂",
+      "邪火轰炸",
+      "邪能之怒",
+      "黑暗契约"
+    ],
+    "enemy_ids": [
+      1214922,
+      1214980,
+      1223204,
+      1295426,
+      1295427,
+      1297684,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "剥离",
+        "amount": 696061
+      },
+      {
+        "name": "邪火爆裂",
+        "amount": 226400
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "自律",
+      "曙光意志"
+    ],
+    "self_removed": [
+      "自律"
+    ],
+    "healing": []
+  },
+  {
+    "id": "A31",
+    "run": 1,
+    "time": "21:27.6",
+    "timestamp": 8869093,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "legion2",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "厄运诅咒",
+      "吸取生命",
+      "邪火轰炸",
+      "邪能之怒"
+    ],
+    "enemy_ids": [
+      1214922,
+      1217973,
+      1295426,
+      1295427,
+      1297682,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "吸取生命",
+        "amount": 903971
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [
+      "吸取生命",
+      "曙光意志"
+    ],
+    "healing": []
+  },
+  {
+    "id": "A32",
+    "run": 1,
+    "time": "23:07.2",
+    "timestamp": 8968727,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "golem",
+    "target": "自己",
+    "enemy": [
+      "亵渎猛击",
+      "召唤地狱火",
+      "邪火轰炸"
+    ],
+    "enemy_ids": [
+      1220899,
+      1294824,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "亵渎猛击",
+        "amount": 1063004
+      }
+    ],
+    "self_debuffs": [],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A33",
+    "run": 1,
+    "time": "24:20.9",
+    "timestamp": 9042415,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "恶魔传送门",
+      "灾厄浪潮",
+      "邪火爆裂",
+      "邪能护盾"
+    ],
+    "enemy_ids": [
+      1214675,
+      1214740,
+      1217345,
+      1217415,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 819646
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 6958
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A34",
+    "run": 1,
+    "time": "26:03.3",
+    "timestamp": 9144854,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "古尔丹之指",
+      "召唤邪犬",
+      "恶魔传送门",
+      "灾厄浪潮",
+      "邪火爆裂",
+      "邪能护盾"
+    ],
+    "enemy_ids": [
+      474408,
+      474457,
+      474462,
+      1214675,
+      1214740,
+      1217345,
+      1217415,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 862045
+      },
+      {
+        "name": "古尔丹之指",
+        "amount": 407487
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 2622
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A35",
+    "run": 1,
+    "time": "26:57.0",
+    "timestamp": 9198515,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss4",
+    "target": "队友",
+    "enemy": [
+      "古尔丹之指",
+      "召唤邪犬",
+      "恶魔传送门",
+      "邪火爆裂"
+    ],
+    "enemy_ids": [
+      474408,
+      474457,
+      474462,
+      1214675,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 1126906
+      },
+      {
+        "name": "古尔丹之指",
+        "amount": 580954
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 911
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "A36",
+    "run": 1,
+    "time": "26:59.0",
+    "timestamp": 9200505,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "古尔丹之指",
+      "召唤邪犬",
+      "恶魔传送门",
+      "邪火爆裂"
+    ],
+    "enemy_ids": [
+      474408,
+      474457,
+      474462,
+      1214675,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 356264
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 57210
+      },
+      {
+        "name": "古尔丹之指",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B01",
+    "run": 2,
+    "time": "0:30.0",
+    "timestamp": 28832429,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "盾击",
+      "邪能飞弹",
+      "飞刃"
+    ],
+    "enemy_ids": [
+      1216300,
+      1216529,
+      1216571,
+      1295035
+    ],
+    "damage": [
+      {
+        "name": "邪能飞弹",
+        "amount": 1226520
+      },
+      {
+        "name": "飞刃",
+        "amount": 278907
+      },
+      {
+        "name": "妙手空空",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "邪能飞弹"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B02",
+    "run": 2,
+    "time": "2:15.5",
+    "timestamp": 28937937,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "盾击",
+      "诱惑",
+      "邪能飞弹",
+      "飞刃"
+    ],
+    "enemy_ids": [
+      1201554,
+      1216300,
+      1216529,
+      1216571,
+      1295035
+    ],
+    "damage": [
+      {
+        "name": "邪能飞弹",
+        "amount": 541848
+      },
+      {
+        "name": "飞刃",
+        "amount": 310251
+      }
+    ],
+    "self_debuffs": [
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B03",
+    "run": 2,
+    "time": "3:20.4",
+    "timestamp": 29002846,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "召唤浮龙",
+      "妙手空空",
+      "断心药膏",
+      "腐蚀唾液",
+      "邪能谵狂",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1216300,
+      1216571,
+      1216589,
+      1217633,
+      1229433,
+      1258537
+    ],
+    "damage": [
+      {
+        "name": "妙手空空",
+        "amount": 1035005
+      },
+      {
+        "name": "燃烧邪能",
+        "amount": 407934
+      },
+      {
+        "name": "Melee",
+        "amount": 232300
+      }
+    ],
+    "self_debuffs": [
+      "妙手空空",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B04",
+    "run": 2,
+    "time": "3:33.9",
+    "timestamp": 29016349,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "断心药膏",
+      "腐蚀唾液",
+      "邪能灌注",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1214966,
+      1216300,
+      1216571,
+      1216589,
+      1217633
+    ],
+    "damage": [
+      {
+        "name": "燃烧邪能",
+        "amount": 188346
+      },
+      {
+        "name": "腐蚀唾液",
+        "amount": 0
+      },
+      {
+        "name": "妙手空空",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [],
+    "self_removed": [
+      "曙光意志"
+    ],
+    "healing": []
+  },
+  {
+    "id": "B05",
+    "run": 2,
+    "time": "5:03.5",
+    "timestamp": 29106008,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss1",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "断心药膏",
+      "混沌弹幕",
+      "腐蚀唾液",
+      "邪能新星",
+      "邪能飞溅"
+    ],
+    "enemy_ids": [
+      474240,
+      1216300,
+      1216589,
+      1223906,
+      1228198,
+      1230298,
+      1253811
+    ],
+    "damage": [
+      {
+        "name": "妙手空空",
+        "amount": 795911
+      },
+      {
+        "name": "混沌弹幕",
+        "amount": 545656
+      },
+      {
+        "name": "腐蚀唾液",
+        "amount": 320215
+      }
+    ],
+    "self_debuffs": [
+      "妙手空空",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B06",
+    "run": 2,
+    "time": "5:22.3",
+    "timestamp": 29124774,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "boss1",
+    "target": "队友",
+    "enemy": [
+      "妙手空空",
+      "断心药膏",
+      "混沌弹幕",
+      "腐蚀唾液",
+      "邪能新星",
+      "邪能风暴"
+    ],
+    "enemy_ids": [
+      474240,
+      1216300,
+      1216589,
+      1223906,
+      1228198,
+      1230298,
+      1264106
+    ],
+    "damage": [
+      {
+        "name": "混沌弹幕",
+        "amount": 842828
+      },
+      {
+        "name": "妙手空空",
+        "amount": 517210
+      },
+      {
+        "name": "腐蚀唾液",
+        "amount": 328239
+      },
+      {
+        "name": "邪能风暴",
+        "amount": 165070
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 4552
+      }
+    ],
+    "self_debuffs": [
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 29124774,
+        "type": "heal",
+        "sourceID": 458,
+        "targetID": 459,
+        "abilityGameID": 633,
+        "fight": 33,
+        "buffs": "61295.207400.382024.1229746.1264426.1295582.",
+        "hitType": 1,
+        "amount": 827607,
+        "overheal": 266981,
+        "resourceActor": 2,
+        "classResources": [
+          {
+            "amount": 1000,
+            "max": 1000,
+            "type": 1
+          }
+        ],
+        "hitPoints": 1053360,
+        "maxHitPoints": 1053360,
+        "attackPower": 4184,
+        "spellPower": 422,
+        "armor": 2783,
+        "absorb": 0,
+        "x": 482803,
+        "y": 886211,
+        "facing": -695,
+        "mapID": 2433,
+        "versatility": 300,
+        "avoidance": 633,
+        "itemLevel": 335
+      }
+    ]
+  },
+  {
+    "id": "B07",
+    "run": 2,
+    "time": "5:47.7",
+    "timestamp": 29150205,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss1",
+    "target": "队友",
+    "enemy": [
+      "断心药膏",
+      "混沌弹幕",
+      "腐蚀唾液",
+      "邪能新星",
+      "邪能风暴",
+      "镜像"
+    ],
+    "enemy_ids": [
+      474240,
+      1216589,
+      1223906,
+      1228198,
+      1230298,
+      1264095,
+      1264106
+    ],
+    "damage": [
+      {
+        "name": "混沌弹幕",
+        "amount": 2009332
+      },
+      {
+        "name": "断心药膏",
+        "amount": 865583
+      },
+      {
+        "name": "Melee",
+        "amount": 858727
+      },
+      {
+        "name": "邪能风暴",
+        "amount": 146239
+      },
+      {
+        "name": "腐蚀唾液",
+        "amount": 125918
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 3359
+      }
+    ],
+    "self_debuffs": [
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B08",
+    "run": 2,
+    "time": "6:14.3",
+    "timestamp": 29176789,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss1",
+    "target": "自己",
+    "enemy": [],
+    "enemy_ids": [],
+    "damage": [
+      {
+        "name": "混沌爆裂",
+        "amount": 2145510
+      }
+    ],
+    "self_debuffs": [
+      "心满意足"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B09",
+    "run": 2,
+    "time": "8:05.8",
+    "timestamp": 29288232,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "当日送达",
+      "影舞步",
+      "货物爆炸",
+      "锋利之甲"
+    ],
+    "enemy_ids": [
+      474478,
+      474766,
+      1266241,
+      1311136
+    ],
+    "damage": [
+      {
+        "name": "影舞步",
+        "amount": 1006319
+      },
+      {
+        "name": "锋利之甲",
+        "amount": 394048
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "五星好评！",
+      "锋利之甲"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B10",
+    "run": 2,
+    "time": "8:26.7",
+    "timestamp": 29309178,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "回去干活！",
+      "当日送达",
+      "毒伤",
+      "绝命凶径",
+      "货物爆炸",
+      "锋利之甲"
+    ],
+    "enemy_ids": [
+      474766,
+      734276,
+      1216970,
+      1218347,
+      1222795,
+      1266241,
+      1311136
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 562950
+      },
+      {
+        "name": "锋利之甲",
+        "amount": 495462
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "五星好评！",
+      "邪能灌注货物",
+      "锋利之甲",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 29309178,
+        "type": "heal",
+        "sourceID": 458,
+        "targetID": 458,
+        "abilityGameID": 633,
+        "fight": 33,
+        "buffs": "8936.156322.207400.1264426.1295582.1317581.",
+        "hitType": 1,
+        "amount": 338396,
+        "overheal": 756192,
+        "resourceActor": 1,
+        "classResources": [
+          {
+            "amount": 250000,
+            "max": 250000,
+            "type": 0
+          }
+        ],
+        "hitPoints": 1094588,
+        "maxHitPoints": 1094588,
+        "attackPower": 4157,
+        "spellPower": 644,
+        "armor": 3205,
+        "absorb": 0,
+        "x": 473217,
+        "y": 890874,
+        "facing": -745,
+        "mapID": 2435,
+        "versatility": 300,
+        "avoidance": 630,
+        "itemLevel": 338
+      }
+    ]
+  },
+  {
+    "id": "B11",
+    "run": 2,
+    "time": "9:04.6",
+    "timestamp": 29347054,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss2",
+    "target": "队友",
+    "enemy": [
+      "回去干活！",
+      "当日送达",
+      "毒伤",
+      "货物爆炸"
+    ],
+    "enemy_ids": [
+      474766,
+      1216970,
+      1222795,
+      1266241
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 760146
+      },
+      {
+        "name": "火焰炸弹",
+        "amount": 477181
+      },
+      {
+        "name": "毒伤",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "五星好评！",
+      "曙光意志",
+      "邪能灌注货物"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B12",
+    "run": 2,
+    "time": "9:18.1",
+    "timestamp": 29360597,
+    "spell_id": 1022,
+    "spell": "保护祝福",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "回去干活！",
+      "绝命凶径",
+      "货物爆炸"
+    ],
+    "enemy_ids": [
+      734276,
+      1216970,
+      1218347,
+      1266241
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 880917
+      },
+      {
+        "name": "绝命凶径",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "五星好评！",
+      "曙光意志",
+      "绝命凶径",
+      "自律"
+    ],
+    "self_removed": [
+      "邪能灌注货物"
+    ],
+    "healing": []
+  },
+  {
+    "id": "B13",
+    "run": 2,
+    "time": "9:41.8",
+    "timestamp": 29384238,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "毒伤",
+      "火焰炸弹",
+      "货物爆炸"
+    ],
+    "enemy_ids": [
+      1214357,
+      1217123,
+      1222795,
+      1266241
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 692424
+      },
+      {
+        "name": "火焰炸弹",
+        "amount": 386781
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "五星好评！",
+      "曙光意志",
+      "自律",
+      "邪能灌注货物",
+      "火焰炸弹"
+    ],
+    "self_removed": [
+      "曙光意志"
+    ],
+    "healing": []
+  },
+  {
+    "id": "B14",
+    "run": 2,
+    "time": "12:04.1",
+    "timestamp": 29526536,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "旋风斩",
+      "邪火爆裂",
+      "邪能之怒",
+      "邪能冲刺"
+    ],
+    "enemy_ids": [
+      1214922,
+      1223204,
+      1293022,
+      1295426,
+      1295427,
+      1297691
+    ],
+    "damage": [
+      {
+        "name": "魔化狂乱",
+        "amount": 1350117
+      },
+      {
+        "name": "剥离",
+        "amount": 647595
+      },
+      {
+        "name": "邪能冲刺",
+        "amount": 165355
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "五星好评！"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B15",
+    "run": 2,
+    "time": "13:05.2",
+    "timestamp": 29587661,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "厄运诅咒",
+      "吸取生命",
+      "邪能之怒",
+      "邪能冲刺",
+      "黑暗契约"
+    ],
+    "enemy_ids": [
+      1214922,
+      1217973,
+      1293022,
+      1295426,
+      1295427,
+      1297682,
+      1297684
+    ],
+    "damage": [
+      {
+        "name": "吸取生命",
+        "amount": 305396
+      },
+      {
+        "name": "邪能冲刺",
+        "amount": 172246
+      },
+      {
+        "name": "剥离",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "心满意足"
+    ],
+    "self_removed": [
+      "吸取生命"
+    ],
+    "healing": []
+  },
+  {
+    "id": "B16",
+    "run": 2,
+    "time": "14:23.2",
+    "timestamp": 29665694,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "旋风斩",
+      "诱惑",
+      "邪能之怒",
+      "邪能冲刺",
+      "魔化狂乱"
+    ],
+    "enemy_ids": [
+      1201554,
+      1214922,
+      1293022,
+      1294770,
+      1295426,
+      1295427,
+      1297691
+    ],
+    "damage": [
+      {
+        "name": "剥离",
+        "amount": 702899
+      },
+      {
+        "name": "邪能冲刺",
+        "amount": 487105
+      },
+      {
+        "name": "魔化狂乱",
+        "amount": 96665
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "剥离"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B17",
+    "run": 2,
+    "time": "14:52.8",
+    "timestamp": 29695298,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "legion1",
+    "target": "队友",
+    "enemy": [
+      "诱惑",
+      "邪能冲刺"
+    ],
+    "enemy_ids": [
+      1201554,
+      1293022
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 2485337
+      },
+      {
+        "name": "暗影撕咬",
+        "amount": 718146
+      },
+      {
+        "name": "魔化狂乱",
+        "amount": 572655
+      },
+      {
+        "name": "邪能冲刺",
+        "amount": 104146
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 5141
+      }
+    ],
+    "self_debuffs": [
+      "心满意足"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B18",
+    "run": 2,
+    "time": "14:54.5",
+    "timestamp": 29696995,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "诱惑",
+      "邪能冲刺"
+    ],
+    "enemy_ids": [
+      1201554,
+      1293022
+    ],
+    "damage": [
+      {
+        "name": "魔化狂乱",
+        "amount": 977324
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 180598
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 29696995,
+        "type": "heal",
+        "sourceID": 458,
+        "targetID": 458,
+        "abilityGameID": 633,
+        "fight": 33,
+        "buffs": "156322.207400.382024.445206.1287665.1295582.",
+        "hitType": 1,
+        "amount": 620300,
+        "overheal": 474288,
+        "resourceActor": 1,
+        "classResources": [
+          {
+            "amount": 250000,
+            "max": 250000,
+            "type": 0
+          }
+        ],
+        "hitPoints": 1094588,
+        "maxHitPoints": 1094588,
+        "attackPower": 3749,
+        "spellPower": 644,
+        "armor": 3205,
+        "absorb": 0,
+        "x": 496924,
+        "y": 876215,
+        "facing": -161,
+        "mapID": 2434,
+        "versatility": 501,
+        "avoidance": 630,
+        "itemLevel": 338
+      }
+    ]
+  },
+  {
+    "id": "B19",
+    "run": 2,
+    "time": "16:12.1",
+    "timestamp": 29774605,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "军团打击",
+      "地狱火碾压",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      473898,
+      474197,
+      1295453
+    ],
+    "damage": [
+      {
+        "name": "地狱火碾压",
+        "amount": 999043
+      },
+      {
+        "name": "魔能闪电",
+        "amount": 291129
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B20",
+    "run": 2,
+    "time": "17:15.3",
+    "timestamp": 29837791,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "地狱火碾压",
+      "燃烧脚步",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      474197,
+      474231,
+      1295453
+    ],
+    "damage": [
+      {
+        "name": "地狱火碾压",
+        "amount": 1303344
+      },
+      {
+        "name": "魔化狂怒",
+        "amount": 512769
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "地狱火碾压"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B21",
+    "run": 2,
+    "time": "18:04.3",
+    "timestamp": 29886785,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "军团打击",
+      "地狱火碾压",
+      "燃烧脚步",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      473898,
+      474197,
+      474234,
+      1295453
+    ],
+    "damage": [
+      {
+        "name": "燃烧脚步",
+        "amount": 0
+      },
+      {
+        "name": "地狱火碾压",
+        "amount": 0
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B22",
+    "run": 2,
+    "time": "18:04.8",
+    "timestamp": 29887267,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss3",
+    "target": "队友",
+    "enemy": [
+      "军团打击",
+      "地狱火碾压",
+      "燃烧脚步",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      473898,
+      474197,
+      474234,
+      1295453
+    ],
+    "damage": [
+      {
+        "name": "地狱火碾压",
+        "amount": 823694
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B23",
+    "run": 2,
+    "time": "19:00.1",
+    "timestamp": 29942545,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "军团打击",
+      "地狱火碾压",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      473898,
+      474197,
+      1295453
+    ],
+    "damage": [
+      {
+        "name": "魔能闪电",
+        "amount": 1736469
+      },
+      {
+        "name": "地狱火碾压",
+        "amount": 664187
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "魔能闪电",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B24",
+    "run": 2,
+    "time": "19:53.0",
+    "timestamp": 29995417,
+    "spell_id": 1022,
+    "spell": "保护祝福",
+    "phase": "legion2",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "邪火爆裂",
+      "邪火轰炸"
+    ],
+    "enemy_ids": [
+      1223204,
+      1295426,
+      1295427,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "邪火爆裂",
+        "amount": 896004
+      },
+      {
+        "name": "剥离",
+        "amount": 685644
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "曙光意志",
+      "自律"
+    ],
+    "self_removed": [
+      "剥离"
+    ],
+    "healing": []
+  },
+  {
+    "id": "B25",
+    "run": 2,
+    "time": "21:12.4",
+    "timestamp": 30074846,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion2",
+    "target": "自己",
+    "enemy": [
+      "邪火爆裂"
+    ],
+    "enemy_ids": [
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "邪火爆裂",
+        "amount": 1452599
+      }
+    ],
+    "self_debuffs": [
+      "心满意足"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B26",
+    "run": 2,
+    "time": "21:40.3",
+    "timestamp": 30102802,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "legion2",
+    "target": "队友",
+    "enemy": [
+      "厄运诅咒",
+      "吸取生命",
+      "生命通道",
+      "邪火轰炸",
+      "邪能之怒"
+    ],
+    "enemy_ids": [
+      1214922,
+      1214980,
+      1217973,
+      1297682,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "剥离",
+        "amount": 650662
+      },
+      {
+        "name": "吸取生命",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "心满意足"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 30102803,
+        "type": "heal",
+        "sourceID": 458,
+        "targetID": 8,
+        "abilityGameID": 633,
+        "fight": 33,
+        "hitType": 1,
+        "amount": 540649,
+        "overheal": 454431,
+        "resourceActor": 2,
+        "classResources": [
+          {
+            "amount": 54,
+            "max": 100,
+            "type": 3
+          }
+        ],
+        "hitPoints": 976316,
+        "maxHitPoints": 887560,
+        "attackPower": 3627,
+        "spellPower": 421,
+        "armor": 1185,
+        "absorb": 0,
+        "x": 499032,
+        "y": 888540,
+        "facing": -673,
+        "mapID": 2434,
+        "versatility": 527,
+        "avoidance": 418,
+        "itemLevel": 336
+      }
+    ]
+  },
+  {
+    "id": "B27",
+    "run": 2,
+    "time": "23:47.7",
+    "timestamp": 30230116,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "古尔丹之指",
+      "恶魔传送门",
+      "混乱之箭",
+      "灾厄浪潮",
+      "邪火爆裂",
+      "邪能护盾"
+    ],
+    "enemy_ids": [
+      474375,
+      474457,
+      474462,
+      1214675,
+      1214740,
+      1217345,
+      1217415,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 870839
+      },
+      {
+        "name": "古尔丹之指",
+        "amount": 395192
+      }
+    ],
+    "self_debuffs": [
+      "心满意足"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "B28",
+    "run": 2,
+    "time": "25:40.4",
+    "timestamp": 30342845,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "古尔丹之指",
+      "召唤邪犬",
+      "恶魔传送门",
+      "灾厄浪潮",
+      "邪火爆裂",
+      "邪能护盾"
+    ],
+    "enemy_ids": [
+      474408,
+      474457,
+      474462,
+      1214675,
+      1214740,
+      1217345,
+      1217415,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 858460
+      },
+      {
+        "name": "古尔丹之指",
+        "amount": 399125
+      }
+    ],
+    "self_debuffs": [
+      "心满意足",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C01",
+    "run": 3,
+    "time": "0:31.7",
+    "timestamp": 27832198,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "断心药膏",
+      "盾击",
+      "邪能飞弹",
+      "飞刃"
+    ],
+    "enemy_ids": [
+      1216300,
+      1216529,
+      1216571,
+      1216589,
+      1295035
+    ],
+    "damage": [
+      {
+        "name": "邪能飞弹",
+        "amount": 720212
+      },
+      {
+        "name": "飞刃",
+        "amount": 316103
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 7164
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C02",
+    "run": 3,
+    "time": "1:13.6",
+    "timestamp": 27874170,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "approach",
+    "target": "队友",
+    "enemy": [
+      "断心药膏",
+      "邪能谵狂",
+      "邪能飞弹"
+    ],
+    "enemy_ids": [
+      1216571,
+      1216589,
+      1229433
+    ],
+    "damage": [
+      {
+        "name": "断心药膏",
+        "amount": 2180829
+      },
+      {
+        "name": "Melee",
+        "amount": 1568196
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C03",
+    "run": 3,
+    "time": "3:10.5",
+    "timestamp": 27990987,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "approach",
+    "target": "自己",
+    "enemy": [
+      "妙手空空",
+      "腐蚀唾液"
+    ],
+    "enemy_ids": [
+      1216300,
+      1217633
+    ],
+    "damage": [
+      {
+        "name": "妙手空空",
+        "amount": 708652
+      },
+      {
+        "name": "燃烧邪能",
+        "amount": 282940
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 3768
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C04",
+    "run": 3,
+    "time": "5:51.3",
+    "timestamp": 28151787,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss1",
+    "target": "队友",
+    "enemy": [
+      "断心药膏",
+      "混沌弹幕",
+      "邪能新星",
+      "邪能飞溅"
+    ],
+    "enemy_ids": [
+      474240,
+      1216589,
+      1223906,
+      1230298,
+      1253811
+    ],
+    "damage": [
+      {
+        "name": "混沌弹幕",
+        "amount": 3664283
+      },
+      {
+        "name": "Melee",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C05",
+    "run": 3,
+    "time": "6:11.9",
+    "timestamp": 28172460,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss1",
+    "target": "自己",
+    "enemy": [
+      "不稳定",
+      "光明灌注",
+      "断心药膏",
+      "混沌弹幕",
+      "邪能风暴"
+    ],
+    "enemy_ids": [
+      1216589,
+      1230298,
+      1230304,
+      1264106,
+      1265412
+    ],
+    "damage": [
+      {
+        "name": "混沌爆裂",
+        "amount": 1856662
+      },
+      {
+        "name": "邪能风暴",
+        "amount": 148827
+      },
+      {
+        "name": "混沌弹幕",
+        "amount": 30864
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C06",
+    "run": 3,
+    "time": "8:29.9",
+    "timestamp": 28310428,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss2",
+    "target": "队友",
+    "enemy": [
+      "当日送达",
+      "毒伤",
+      "货物爆炸",
+      "锋利之甲"
+    ],
+    "enemy_ids": [
+      474766,
+      1222795,
+      1266241,
+      1311136
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 806189
+      },
+      {
+        "name": "锋利之甲",
+        "amount": 513199
+      },
+      {
+        "name": "毒伤",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "五星好评！",
+      "曙光意志",
+      "邪能灌注货物"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C07",
+    "run": 3,
+    "time": "8:44.5",
+    "timestamp": 28324982,
+    "spell_id": 1022,
+    "spell": "保护祝福",
+    "phase": "boss2",
+    "target": "队友",
+    "enemy": [
+      "绝命凶径",
+      "货物爆炸",
+      "锋利之甲"
+    ],
+    "enemy_ids": [
+      734276,
+      1218347,
+      1266241,
+      1311136
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 914824
+      },
+      {
+        "name": "锋利之甲",
+        "amount": 0
+      },
+      {
+        "name": "绝命凶径",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "五星好评！",
+      "曙光意志",
+      "邪能灌注货物",
+      "绝命凶径"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C08",
+    "run": 3,
+    "time": "8:58.0",
+    "timestamp": 28338524,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "回去干活！",
+      "当日送达",
+      "影舞步"
+    ],
+    "enemy_ids": [
+      474478,
+      474766,
+      1216970
+    ],
+    "damage": [
+      {
+        "name": "影舞步",
+        "amount": 1090867
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 3169
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "五星好评！",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C09",
+    "run": 3,
+    "time": "9:53.7",
+    "timestamp": 28394219,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss2",
+    "target": "队友",
+    "enemy": [
+      "回去干活！",
+      "当日送达",
+      "毒伤",
+      "货物爆炸"
+    ],
+    "enemy_ids": [
+      474766,
+      1216970,
+      1222795,
+      1266241
+    ],
+    "damage": [
+      {
+        "name": "邪能灌注货物",
+        "amount": 1077204
+      },
+      {
+        "name": "毒伤",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "五星好评！",
+      "邪能灌注货物"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C10",
+    "run": 3,
+    "time": "10:20.8",
+    "timestamp": 28421364,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss2",
+    "target": "自己",
+    "enemy": [
+      "当日送达",
+      "影舞步",
+      "货物爆炸"
+    ],
+    "enemy_ids": [
+      474478,
+      474766,
+      1266241
+    ],
+    "damage": [
+      {
+        "name": "影舞步",
+        "amount": 908309
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 5402
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "五星好评！"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C11",
+    "run": 3,
+    "time": "11:42.0",
+    "timestamp": 28502562,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "召唤仪式",
+      "生命通道",
+      "邪火爆裂",
+      "邪火轰炸",
+      "邪能之怒"
+    ],
+    "enemy_ids": [
+      1214922,
+      1214980,
+      1219523,
+      1223204,
+      1295426,
+      1295427,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "剥离",
+        "amount": 821550
+      },
+      {
+        "name": "邪火爆裂",
+        "amount": 728433
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 2986
+      }
+    ],
+    "self_debuffs": [
+      "五星好评！",
+      "剥离",
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C12",
+    "run": 3,
+    "time": "13:08.1",
+    "timestamp": 28588606,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "厄运诅咒",
+      "吸取生命",
+      "邪能之怒",
+      "邪能冲刺"
+    ],
+    "enemy_ids": [
+      1214922,
+      1217973,
+      1293022,
+      1295426,
+      1295427,
+      1297682
+    ],
+    "damage": [
+      {
+        "name": "邪能冲刺",
+        "amount": 350376
+      },
+      {
+        "name": "吸取生命",
+        "amount": 301489
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 1980
+      },
+      {
+        "name": "剥离",
+        "amount": 0
+      },
+      {
+        "name": "厄运诅咒",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "自律"
+    ],
+    "self_removed": [
+      "吸取生命",
+      "曙光意志"
+    ],
+    "healing": []
+  },
+  {
+    "id": "C13",
+    "run": 3,
+    "time": "14:09.3",
+    "timestamp": 28649806,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "旋风斩",
+      "生命通道",
+      "邪能之怒",
+      "邪能冲刺"
+    ],
+    "enemy_ids": [
+      1214922,
+      1214980,
+      1293022,
+      1295426,
+      1295427,
+      1297691
+    ],
+    "damage": [
+      {
+        "name": "剥离",
+        "amount": 787295
+      },
+      {
+        "name": "邪能冲刺",
+        "amount": 697259
+      },
+      {
+        "name": "Melee",
+        "amount": 220865
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 6549
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志",
+      "剥离"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C14",
+    "run": 3,
+    "time": "14:19.4",
+    "timestamp": 28659924,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "legion1",
+    "target": "队友",
+    "enemy": [
+      "剥离",
+      "邪能之怒",
+      "邪能冲刺",
+      "魔化狂乱"
+    ],
+    "enemy_ids": [
+      1214922,
+      1293022,
+      1294770,
+      1295426,
+      1295427
+    ],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 2947950
+      },
+      {
+        "name": "魔化狂乱",
+        "amount": 812213
+      },
+      {
+        "name": "暗影撕咬",
+        "amount": 556941
+      },
+      {
+        "name": "剥离",
+        "amount": 498925
+      },
+      {
+        "name": "邪能冲刺",
+        "amount": 276426
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C15",
+    "run": 3,
+    "time": "14:21.9",
+    "timestamp": 28662465,
+    "spell_id": 1022,
+    "spell": "保护祝福",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "旋风斩",
+      "邪能冲刺",
+      "魔化狂乱"
+    ],
+    "enemy_ids": [
+      1293022,
+      1294770,
+      1295426,
+      1295427,
+      1297691
+    ],
+    "damage": [
+      {
+        "name": "魔化狂乱",
+        "amount": 1413365
+      },
+      {
+        "name": "邪能冲刺",
+        "amount": 1007293
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 560411
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C16",
+    "run": 3,
+    "time": "15:26.2",
+    "timestamp": 28726740,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion1",
+    "target": "自己",
+    "enemy": [
+      "刃舞",
+      "眼棱"
+    ],
+    "enemy_ids": [
+      1216954,
+      1302007
+    ],
+    "damage": [
+      {
+        "name": "刃舞",
+        "amount": 1128166
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C17",
+    "run": 3,
+    "time": "16:34.8",
+    "timestamp": 28795301,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "利斧投掷",
+      "诱惑"
+    ],
+    "enemy_ids": [
+      1201554,
+      1214641
+    ],
+    "damage": [
+      {
+        "name": "魔能闪电",
+        "amount": 886081
+      },
+      {
+        "name": "利斧投掷",
+        "amount": 882974
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 2084
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "魔能闪电"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C18",
+    "run": 3,
+    "time": "17:38.7",
+    "timestamp": 28859212,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "军团打击",
+      "地狱火碾压"
+    ],
+    "enemy_ids": [
+      473898,
+      1295453
+    ],
+    "damage": [
+      {
+        "name": "魔能闪电",
+        "amount": 1359709
+      },
+      {
+        "name": "地狱火碾压",
+        "amount": 569272
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 9328
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志",
+      "魔能闪电",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 28859212,
+        "type": "heal",
+        "sourceID": 3,
+        "targetID": 3,
+        "abilityGameID": 633,
+        "fight": 42,
+        "buffs": "974.8936.61295.207400.382024.445206.1264426.1287665.1317581.",
+        "hitType": 1,
+        "amount": 614945,
+        "overheal": 464903,
+        "resourceActor": 1,
+        "classResources": [
+          {
+            "amount": 250000,
+            "max": 250000,
+            "type": 0
+          }
+        ],
+        "hitPoints": 1079848,
+        "maxHitPoints": 1079848,
+        "attackPower": 3929,
+        "spellPower": 643,
+        "armor": 3191,
+        "absorb": 1,
+        "x": 502187,
+        "y": 861904,
+        "facing": -474,
+        "mapID": 2434,
+        "versatility": 300,
+        "avoidance": 630,
+        "itemLevel": 335
+      }
+    ]
+  },
+  {
+    "id": "C19",
+    "run": 3,
+    "time": "17:50.6",
+    "timestamp": 28871129,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "军团打击",
+      "燃烧脚步",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      473898,
+      474197,
+      474231
+    ],
+    "damage": [
+      {
+        "name": "地狱火碾压",
+        "amount": 775835
+      },
+      {
+        "name": "魔化狂怒",
+        "amount": 481608
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "自律",
+      "地狱火碾压"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C20",
+    "run": 3,
+    "time": "19:34.8",
+    "timestamp": 28975277,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "军团打击",
+      "地狱火碾压"
+    ],
+    "enemy_ids": [
+      473898,
+      1295453
+    ],
+    "damage": [
+      {
+        "name": "魔能闪电",
+        "amount": 1105834
+      },
+      {
+        "name": "地狱火碾压",
+        "amount": 593939
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 7749
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "魔能闪电"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C21",
+    "run": 3,
+    "time": "19:46.7",
+    "timestamp": 28987181,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "boss3",
+    "target": "自己",
+    "enemy": [
+      "燃烧脚步",
+      "魔化狂怒"
+    ],
+    "enemy_ids": [
+      474197,
+      474231
+    ],
+    "damage": [
+      {
+        "name": "地狱火碾压",
+        "amount": 531369
+      },
+      {
+        "name": "魔化狂怒",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "自律"
+    ],
+    "self_removed": [
+      "地狱火碾压"
+    ],
+    "healing": []
+  },
+  {
+    "id": "C22",
+    "run": 3,
+    "time": "20:32.3",
+    "timestamp": 29032821,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "legion2",
+    "target": "队友",
+    "enemy": [],
+    "enemy_ids": [],
+    "damage": [
+      {
+        "name": "Melee",
+        "amount": 743706
+      },
+      {
+        "name": "暗影撕咬",
+        "amount": 217460
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C23",
+    "run": 3,
+    "time": "20:55.5",
+    "timestamp": 29056047,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion2",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "生命通道",
+      "邪火爆裂",
+      "邪火轰炸",
+      "邪能之怒"
+    ],
+    "enemy_ids": [
+      1214922,
+      1214980,
+      1223204,
+      1295426,
+      1295427,
+      1297693
+    ],
+    "damage": [
+      {
+        "name": "邪火爆裂",
+        "amount": 1292216
+      },
+      {
+        "name": "Melee",
+        "amount": 55174
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 5191
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C24",
+    "run": 3,
+    "time": "22:46.7",
+    "timestamp": 29167212,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "legion2",
+    "target": "自己",
+    "enemy": [
+      "剥离",
+      "邪火爆裂",
+      "邪能之怒"
+    ],
+    "enemy_ids": [
+      1214922,
+      1223204,
+      1295426,
+      1295427
+    ],
+    "damage": [
+      {
+        "name": "邪火爆裂",
+        "amount": 1026724
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 3242
+      }
+    ],
+    "self_debuffs": [
+      "曙光意志"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C25",
+    "run": 3,
+    "time": "24:32.5",
+    "timestamp": 29273069,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "legion2",
+    "target": "队友",
+    "enemy": [
+      "吸取生命"
+    ],
+    "enemy_ids": [
+      1297682
+    ],
+    "damage": [
+      {
+        "name": "吸取生命",
+        "amount": 1267455
+      }
+    ],
+    "self_debuffs": [],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C26",
+    "run": 3,
+    "time": "24:53.2",
+    "timestamp": 29293758,
+    "spell_id": 1022,
+    "spell": "保护祝福",
+    "phase": "legion2",
+    "target": "队友",
+    "enemy": [],
+    "enemy_ids": [],
+    "damage": [
+      {
+        "name": "Falling",
+        "amount": 153347
+      },
+      {
+        "name": "Melee",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C27",
+    "run": 3,
+    "time": "25:35.8",
+    "timestamp": 29336327,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "古尔丹之指",
+      "恶魔传送门",
+      "灾厄浪潮",
+      "邪火爆裂",
+      "邪能护盾"
+    ],
+    "enemy_ids": [
+      474457,
+      474462,
+      1214675,
+      1214740,
+      1217345,
+      1217415,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 858040
+      },
+      {
+        "name": "古尔丹之指",
+        "amount": 399694
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 3396
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C28",
+    "run": 3,
+    "time": "27:28.3",
+    "timestamp": 29448833,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "古尔丹之指",
+      "召唤邪犬",
+      "恶魔传送门",
+      "灾厄浪潮",
+      "邪火爆裂",
+      "邪能护盾"
+    ],
+    "enemy_ids": [
+      474408,
+      474457,
+      474462,
+      1214675,
+      1214740,
+      1217345,
+      1217415,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 816380
+      },
+      {
+        "name": "古尔丹之指",
+        "amount": 336342
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 3713
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C29",
+    "run": 3,
+    "time": "28:32.1",
+    "timestamp": 29512625,
+    "spell_id": 403876,
+    "spell": "圣佑术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "古尔丹之指",
+      "恶魔传送门",
+      "灾厄浪潮",
+      "邪火爆裂",
+      "邪能护盾"
+    ],
+    "enemy_ids": [
+      474457,
+      474462,
+      1214675,
+      1214740,
+      1217345,
+      1217415,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 839868
+      },
+      {
+        "name": "古尔丹之指",
+        "amount": 557117
+      },
+      {
+        "name": "邪火爆裂",
+        "amount": 414599
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 7300
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志",
+      "恶魔传送门",
+      "恶魔传送门"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C30",
+    "run": 3,
+    "time": "28:34.0",
+    "timestamp": 29514521,
+    "spell_id": 633,
+    "spell": "圣疗术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "恶魔传送门",
+      "灾厄浪潮",
+      "邪火爆裂",
+      "邪能护盾"
+    ],
+    "enemy_ids": [
+      1214675,
+      1214740,
+      1217345,
+      1217415,
+      1223204
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 669808
+      },
+      {
+        "name": "邪火爆裂",
+        "amount": 414599
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 6388
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志",
+      "恶魔传送门",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": [
+      {
+        "timestamp": 29514521,
+        "type": "heal",
+        "sourceID": 3,
+        "targetID": 3,
+        "abilityGameID": 633,
+        "fight": 42,
+        "buffs": "974.8936.207400.382024.431907.1229746.1264426.",
+        "hitType": 1,
+        "amount": 929204,
+        "overheal": 150644,
+        "resourceActor": 1,
+        "classResources": [
+          {
+            "amount": 250000,
+            "max": 250000,
+            "type": 0
+          }
+        ],
+        "hitPoints": 1079848,
+        "maxHitPoints": 1079848,
+        "attackPower": 4044,
+        "spellPower": 643,
+        "armor": 3191,
+        "absorb": 220998,
+        "x": 491347,
+        "y": 910454,
+        "facing": -315,
+        "mapID": 2434,
+        "versatility": 359,
+        "avoidance": 630,
+        "itemLevel": 335
+      }
+    ]
+  },
+  {
+    "id": "C31",
+    "run": 3,
+    "time": "28:38.2",
+    "timestamp": 29518699,
+    "spell_id": 6940,
+    "spell": "牺牲祝福",
+    "phase": "boss4",
+    "target": "队友",
+    "enemy": [
+      "混乱之箭",
+      "灾厄浪潮"
+    ],
+    "enemy_ids": [
+      474375,
+      1217345
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 724933
+      },
+      {
+        "name": "暗影撕咬",
+        "amount": 490901
+      },
+      {
+        "name": "灾厄浪潮",
+        "amount": 145467
+      },
+      {
+        "name": "Melee",
+        "amount": 143592
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "曙光意志",
+      "恶魔传送门",
+      "自律"
+    ],
+    "self_removed": [],
+    "healing": []
+  },
+  {
+    "id": "C32",
+    "run": 3,
+    "time": "28:40.4",
+    "timestamp": 29520948,
+    "spell_id": 642,
+    "spell": "圣盾术",
+    "phase": "boss4",
+    "target": "自己",
+    "enemy": [
+      "混乱之箭",
+      "灾厄浪潮"
+    ],
+    "enemy_ids": [
+      474375,
+      1217345
+    ],
+    "damage": [
+      {
+        "name": "灼热邪焰",
+        "amount": 259982
+      },
+      {
+        "name": "虚空侵染外壳符文",
+        "amount": 1358
+      },
+      {
+        "name": "灾厄浪潮",
+        "amount": 0
+      },
+      {
+        "name": "牺牲祝福",
+        "amount": 0
+      }
+    ],
+    "self_debuffs": [
+      "筋疲力尽",
+      "恶魔传送门",
+      "自律"
+    ],
+    "self_removed": [
+      "曙光意志"
+    ],
+    "healing": []
+  }
+]

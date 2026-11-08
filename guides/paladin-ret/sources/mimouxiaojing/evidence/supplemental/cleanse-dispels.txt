@@ -1,0 +1,9 @@
+Command: python3 .claude/skills/mplus-review/scripts/wcl.py events https://www.warcraftlogs.com/reports/tAYXZrKG4HcbVpkf#fight=1 --type dispels --player 天下第一骑 --ability 213644 --from 0:40 --to 4:55 --limit 40
+
+# 事件 dispels 0:40.0–4:55.0 过滤：source.name = "天下第一骑" and ability.id in (213644) — 密谋小径 Murder Row +22 · 限时 +1 · 报告 tAYXZrKG4HcbVpkf fight 1 · CN · 2026-11-04
+0:55.0 #1 驱散 天下第一骑 → Vsvfasknmcxz 用 清毒术(213644) 驱散了 断心药膏
+1:04.2 #1 驱散 天下第一骑 → Vsvfasknmcxz 用 清毒术(213644) 驱散了 断心药膏
+1:16.0 #1 驱散 天下第一骑 → Vsvfasknmcxz 用 清毒术(213644) 驱散了 断心药膏
+2:22.6 #2 驱散 天下第一骑 → Vsvfasknmcxz 用 清毒术(213644) 驱散了 断心药膏
+4:32.9 #3 驱散 天下第一骑 → Vsvfasknmcxz 用 清毒术(213644) 驱散了 断心药膏
+4:46.8 #3 驱散 天下第一骑 → Vsvfasknmcxz 用 清毒术(213644) 驱散了 断心药膏

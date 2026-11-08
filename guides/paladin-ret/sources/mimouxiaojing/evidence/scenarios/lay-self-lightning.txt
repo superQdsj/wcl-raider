@@ -1,0 +1,23 @@
+17:33.712 applydebuffstack 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=3
+17:33.726 damage 军团大斧->Âra 魔能闪电(1214650) amount=77117 absorbed= overheal= hit=1 stack= HP=334859/1079848
+17:34.718 applydebuffstack 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=4
+17:34.735 damage 军团大斧->Âra 魔能闪电(1214650) amount=105985 absorbed= overheal= hit=1 stack= HP=416730/1079848
+17:35.723 applydebuffstack 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=5
+17:35.723 damage 军团大斧->Âra 魔能闪电(1214650) amount=138849 absorbed= overheal= hit=1 stack= HP=341885/1079848
+17:36.712 applydebuffstack 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=6
+17:36.727 damage 军团大斧->Âra 魔能闪电(1214650) amount=152095 absorbed=19078 overheal= hit=1 stack= HP=263893/1079848
+17:36.750 damage Âra->Âra 虚空侵染外壳符文(1287955) amount=914 absorbed= overheal= hit=1 stack= HP=262979/1079848
+17:37.715 applydebuffstack 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=7
+17:37.738 damage 军团大斧->Âra 魔能闪电(1214650) amount=181801 absorbed= overheal= hit=1 stack= HP=365600/1079848
+17:37.739 damage Âra->Âra 虚空侵染外壳符文(1287955) amount=934 absorbed= overheal= hit=1 stack= HP=364666/1079848
+17:38.690 applydebuff Âra->Âra 自律(25771) amount= absorbed= overheal= hit= stack=
+17:38.690 heal Âra->Âra 圣疗术(633) amount=614945 absorbed= overheal=464903 hit=1 stack= HP=1079848/1079848
+17:38.690 cast Âra->Âra 圣疗术(633) amount= absorbed= overheal= hit= stack= HP=1079848/1079848
+17:38.711 applydebuffstack 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=8
+17:38.739 damage 军团大斧->Âra 魔能闪电(1214650) amount=223035 absorbed= overheal= hit=1 stack= HP=856813/1079848
+17:38.739 damage Âra->Âra 虚空侵染外壳符文(1287955) amount=914 absorbed= overheal= hit=1 stack= HP=855899/1079848
+17:39.720 applydebuffstack 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=9
+17:39.742 damage 军团大斧->Âra 魔能闪电(1214650) amount=257613 absorbed= overheal= hit=1 stack= HP=610353/1079848
+17:40.725 applydebuffstack 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=10
+17:40.748 damage 军团大斧->Âra 魔能闪电(1214650) amount=281253 absorbed= overheal= hit=1 stack= HP=616453/1079848
+17:41.720 removedebuff 军团大斧->Âra 魔能闪电(1214650) amount= absorbed= overheal= hit= stack=

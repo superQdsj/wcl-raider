@@ -1,0 +1,14 @@
+16:33.683 damage 歼灭者萨祖克斯->天下第一骑 地狱火碾压(1295455) amount=113753 absorbed=12914 overheal= hit=1 stack= HP=975005/1088758
+16:34.682 damage 歼灭者萨祖克斯->天下第一骑 地狱火碾压(1295455) amount=130625 absorbed= overheal= hit=1 stack= HP=907061/1088758
+16:35.680 damage 歼灭者萨祖克斯->天下第一骑 地狱火碾压(1295455) amount=130625 absorbed= overheal= hit=1 stack= HP=865205/1088758
+16:36.685 damage 歼灭者萨祖克斯->天下第一骑 地狱火碾压(1295455) amount=129306 absorbed= overheal= hit=1 stack= HP=878098/1088758
+16:37.674 damage 歼灭者萨祖克斯->天下第一骑 地狱火碾压(1295455) amount=130626 absorbed= overheal= hit=1 stack= HP=775616/1088758
+16:38.369 applybuff 天下第一骑->天下第一骑 复仇之盾(184662) amount= absorbed= overheal= hit= stack=
+16:38.370 applybuff 天下第一骑->天下第一骑 圣佑术(403876) amount= absorbed= overheal= hit= stack=
+16:38.371 cast 天下第一骑->Environment 圣佑术(403876) amount= absorbed= overheal= hit= stack= HP=1004252/1088758
+16:38.690 damage 歼灭者萨祖克斯->天下第一骑 地狱火碾压(1295455) amount=0 absorbed=90514 overheal= hit=1 stack=
+16:39.450 damage 歼灭者萨祖克斯->天下第一骑 魔化狂怒(474197) amount=239014 absorbed=252263 overheal= hit=1 stack= HP=849744/1088758
+16:39.450 removebuff 天下第一骑->天下第一骑 复仇之盾(184662) amount= absorbed= overheal= hit= stack=
+16:39.686 damage 歼灭者萨祖克斯->天下第一骑 地狱火碾压(1295455) amount=92361 absorbed= overheal= hit=1 stack= HP=798594/1088758
+16:39.686 removedebuff 歼灭者萨祖克斯->天下第一骑 地狱火碾压(1295455) amount= absorbed= overheal= hit= stack=
+16:46.367 removebuff 天下第一骑->天下第一骑 圣佑术(403876) amount= absorbed= overheal= hit= stack=

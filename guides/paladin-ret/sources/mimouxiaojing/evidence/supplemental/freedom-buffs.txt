@@ -1,0 +1,7 @@
+Command: python3 .claude/skills/mplus-review/scripts/wcl.py events https://www.warcraftlogs.com/reports/r1ChwFYjNM7XkWp9#fight=33 --type buffs --ability 1044 --from 1:38 --to 1:55 --limit 40
+
+# 事件 buffs 1:38.0–1:55.0 过滤：ability.id in (1044) — 密谋小径 Murder Row +22 · 限时 +1 · 报告 r1ChwFYjNM7XkWp9 fight 33 · US · 2026-10-24
+1:42.8 #1 获得增益 Tracer → Tracer 自由祝福(1044)
+1:42.8 #1 获得增益 Tracer → Vaesarir 自由祝福(1044)
+1:50.8 #1 增益消失 Tracer → Tracer 自由祝福(1044)
+1:50.8 #1 增益消失 Tracer → Vaesarir 自由祝福(1044)

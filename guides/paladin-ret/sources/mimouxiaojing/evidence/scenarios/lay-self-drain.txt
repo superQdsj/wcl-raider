@@ -1,0 +1,19 @@
+13:43.976 damage 魔蝇->天下第一骑 邪能冲刺(1293022) amount=172246 absorbed= overheal= hit=1 stack= HP=896653/1088758
+13:44.989 damage 天下第一骑->天下第一骑 虚空侵染外壳符文(1287955) amount=0 absorbed=993 overheal= hit=1 stack=
+13:45.115 damage 魔蝇->天下第一骑 邪能冲刺(1293022) amount=152438 absorbed=18085 overheal= hit=1 stack= HP=828547/1088758
+13:45.246 damage 魔蝇->天下第一骑 邪能冲刺(1293022) amount=170523 absorbed= overheal= hit=1 stack= HP=658024/1088758
+13:45.903 applydebuff 腐化的术士->天下第一骑 吸取生命(1297682) amount= absorbed= overheal= hit= stack=
+13:46.002 damage 天下第一骑->天下第一骑 虚空侵染外壳符文(1287955) amount=972 absorbed= overheal= hit=1 stack= HP=681608/1088758
+13:46.051 damage 腐化的术士->天下第一骑 吸取生命(1297683) amount=296234 absorbed= overheal= hit=1 stack= HP=385374/1088758
+13:46.712 applydebuff 天下第一骑->天下第一骑 自律(25771) amount= absorbed= overheal= hit= stack=
+13:46.712 heal 天下第一骑->天下第一骑 圣疗术(633) amount=621977 absorbed= overheal=466781 hit=1 stack= HP=1088758/1088758
+13:46.713 cast 天下第一骑->天下第一骑 圣疗术(633) amount= absorbed= overheal= hit= stack= HP=1088758/1088758
+13:46.989 damage 天下第一骑->天下第一骑 虚空侵染外壳符文(1287955) amount=953 absorbed= overheal= hit=1 stack= HP=1087805/1088758
+13:47.051 damage 腐化的术士->天下第一骑 吸取生命(1297683) amount=290126 absorbed= overheal= hit=1 stack= HP=797679/1088758
+13:48.108 damage 腐化的术士->天下第一骑 吸取生命(1297683) amount=299288 absorbed= overheal= hit=1 stack= HP=524677/1088758
+13:49.116 damage 腐化的术士->天下第一骑 吸取生命(1297683) amount=305396 absorbed= overheal= hit=1 stack= HP=694962/1088758
+13:50.138 damage 腐化的术士->天下第一骑 吸取生命(1297683) amount=268590 absorbed=27644 overheal= hit=1 stack= HP=462794/1088758
+13:51.172 damage 腐化的术士->天下第一骑 吸取生命(1297683) amount=0 absorbed=299288 overheal= hit=1 stack=
+13:52.159 damage 腐化的术士->天下第一骑 吸取生命(1297683) amount=0 absorbed=298022 overheal= hit=1 stack=
+13:52.893 removedebuff 腐化的术士->天下第一骑 吸取生命(1297682) amount= absorbed= overheal= hit= stack=
+13:53.084 damage 腐化的术士->天下第一骑 吸取生命(1297683) amount=122721 absorbed=181383 overheal= hit=1 stack= HP=905049/1088758

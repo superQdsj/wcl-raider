@@ -1,0 +1,18 @@
+6:10.354 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=247456 absorbed= overheal= hit=1 stack= HP=817770/1079848
+6:11.367 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=242507 absorbed= overheal= hit=1 stack= HP=688884/1079848
+6:11.938 applybuff Âra->Âra 复仇之盾(184662) amount= absorbed= overheal= hit= stack=
+6:11.938 applybuff Âra->Âra 圣佑术(403876) amount= absorbed= overheal= hit= stack=
+6:11.938 cast Âra->Environment 圣佑术(403876) amount= absorbed= overheal= hit= stack= HP=704908/1079848
+6:12.347 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=0 absorbed=168022 overheal= hit=1 stack=
+6:13.361 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=5836 absorbed=165651 overheal= hit=1 stack= HP=1148989/1263422
+6:13.361 removebuff Âra->Âra 复仇之盾(184662) amount= absorbed= overheal= hit= stack=
+6:14.367 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=173219 absorbed= overheal= hit=1 stack= HP=1090203/1263422
+6:15.362 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=171487 absorbed= overheal= hit=1 stack= HP=979599/1263422
+6:16.366 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=85744 absorbed=85743 overheal= hit=1 stack= HP=984263/1263422
+6:17.348 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=84878 absorbed=84877 overheal= hit=1 stack= HP=1014849/1263422
+6:18.350 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=85744 absorbed=85743 overheal= hit=1 stack= HP=978217/1263422
+6:19.362 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=84878 absorbed=84877 overheal= hit=1 stack= HP=994905/1263422
+6:19.947 removebuff Âra->Âra 圣佑术(403876) amount= absorbed= overheal= hit= stack=
+6:20.352 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=160641 absorbed=81866 overheal= hit=1 stack= HP=912277/1263422
+6:21.357 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=242507 absorbed= overheal= hit=1 stack= HP=826515/1263422
+6:22.362 damage 凯斯媞亚·魔力之心->Âra 混沌爆裂(1214959) amount=240032 absorbed= overheal= hit=1 stack= HP=781550/1263422
