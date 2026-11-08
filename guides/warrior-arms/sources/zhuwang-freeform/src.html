@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>武器战 · 诸王之眠</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* 一张武器战作战卡：诸王之眠是赞达拉王陵——黑曜石底色、陪葬金、战士棕。蓝色只留给"魔法"（反射能处理的东西），钢灰留给防御姿态。 */
+:root{
+  --bg:#100e0b; --panel:#17140f; --panel-2:#1e1a14; --line:#2e281f;
+  --ink:#eee6d6; --mute:#a39886; --faint:#6b6152;
+  --war:#d0a26f; --war-dim:#7d6142;
+  --gold:#f0c75e;
+  --arcane:#7fb0f5; --steel:#9fb3c3; --blood:#e46a5e; --nature:#8fcf86;
+  --display:"Noto Serif SC","Songti SC","STSong",serif;
+  --body:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--war);outline-offset:2px;border-radius:4px}
+img.ic{width:28px;height:28px;border-radius:6px;border:1px solid #000;box-shadow:0 0 0 1px var(--line);flex:none;display:block}
+img.ic.lg{width:44px;height:44px;border-radius:9px}
+img.ic.sm{width:22px;height:22px;border-radius:5px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.01em}
+h2{font-size:24px;font-weight:900;display:flex;align-items:baseline;gap:14px}
+h2 .k{font:700 12px var(--mono);color:var(--war);letter-spacing:.12em}
+.sub{color:var(--mute);font-size:14px;margin:6px 0 0}
+section{padding:44px 0 8px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* hero */
+header{border-bottom:1px solid var(--line);background:
+  radial-gradient(900px 320px at 88% -40%,rgba(240,199,94,.14),transparent 70%),
+  radial-gradient(700px 260px at 0% 130%,rgba(127,176,245,.07),transparent 70%)}
+header .wrap{padding-top:44px;padding-bottom:34px;display:grid;gap:18px}
+.eyebrow{font:700 12px var(--mono);letter-spacing:.16em;color:var(--mute)}
+h1{font-size:clamp(32px,6vw,52px);font-weight:900;line-height:1.1}
+h1 .cls{color:var(--war)}
+h1 .dot{color:var(--faint);margin:0 .2em}
+.lede{max-width:64ch;color:#ddd3c0;font-size:16px;margin:0}
+.lede b{color:var(--war);font-weight:700}
+.lede em{font-style:normal;color:var(--arcane);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mute)}
+.chip b{color:var(--ink);font-weight:500}
+
+/* swimlane timeline */
+.tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
+.tl-scroll{overflow-x:auto;padding-bottom:6px}
+.tl{--l1:74px;--l2:112px;--l3:150px;position:relative;min-width:860px;height:212px;margin-left:68px}
+.band{position:absolute;top:34px;height:26px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
+.band.trash{background:var(--panel-2);color:var(--faint);border:1px dashed var(--line)}
+.band.boss{background:rgba(208,162,111,.13);color:var(--war);border:1px solid var(--war-dim);font-weight:700}
+.call{position:absolute;top:0;height:26px;border-bottom:2px solid var(--war-dim);display:flex;align-items:flex-end;justify-content:center}
+.call span{font-size:11.5px;color:var(--ink);white-space:nowrap;padding-bottom:3px;background:var(--panel);padding-inline:4px}
+.lane{position:absolute;left:0;right:0;height:22px;border-radius:4px;background:rgba(255,255,255,.025)}
+.lane-label{position:absolute;left:-68px;width:60px;height:22px;display:flex;align-items:center;justify-content:flex-end;font-size:12px;color:var(--mute)}
+.rf{position:absolute;top:var(--l1);width:4px;height:22px;border-radius:2px;transform:translateX(-50%)}
+.rf.a{background:var(--arcane);opacity:.55}
+.rf.b{background:var(--gold);box-shadow:0 0 6px rgba(240,199,94,.6)}
+.st{position:absolute;top:calc(var(--l2) + 4px);height:14px;border-radius:3px;background:var(--steel);opacity:.75}
+img.bg{position:absolute;top:calc(var(--l3) - 1px);width:24px;height:24px;border-radius:50%;border:2px solid var(--war);transform:translateX(-50%)}
+.axis{position:absolute;top:188px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+/* key moments */
+.moments{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:20px}
+.mo{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--war);border-radius:12px;padding:16px;display:grid;gap:10px;align-content:start}
+.mo .where{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.mo .sig{font-size:14px;color:var(--mute)}
+.mo .sig b{color:var(--ink);font-size:16px;font-weight:700;display:block}
+.mo .act{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px}
+.mo .act{flex-wrap:wrap}
+.mo .act .nm{white-space:nowrap}
+.mo .act .arrow{color:var(--war);font-size:18px}
+.mo p{margin:0;font-size:14px;color:#d3c9b6}
+
+/* pills & tags */
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:5px;line-height:18px;white-space:nowrap}
+.p-ref{background:rgba(240,199,94,.16);color:var(--gold)}
+.p-mag{background:rgba(127,176,245,.16);color:var(--arcane)}
+.p-dr{background:rgba(159,179,195,.16);color:var(--steel)}
+.p-grp{background:rgba(208,162,111,.16);color:var(--war)}
+.p-clr{background:rgba(143,207,134,.16);color:var(--nature)}
+.tag{display:inline-block;font-size:11px;color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-right:4px;line-height:17px;white-space:nowrap}
+.tag.magic{color:var(--arcane);border-color:rgba(127,176,245,.35)}
+.tag.bleed{color:var(--blood);border-color:rgba(228,106,94,.35)}
+.tag.phys{color:var(--steel);border-color:rgba(159,179,195,.35)}
+
+/* findings */
+.finding{margin-top:20px;display:grid;grid-template-columns:1.1fr 1fr;gap:24px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.finding+.finding{margin-top:16px}
+.finding h3{font-size:20px;font-weight:900;display:flex;gap:10px;align-items:center}
+.finding p{margin:10px 0 0;color:#d6ccb9;font-size:14.5px}
+.finding p b{color:var(--war)}
+.finding p em{font-style:normal;color:var(--gold);font-weight:700}
+.viz{display:grid;gap:14px;align-content:center}
+.viz .cap{font-size:12px;color:var(--faint);line-height:1.5}
+.dots-row{display:grid;grid-template-columns:104px 1fr;gap:10px;align-items:center;font-size:13px;color:var(--mute)}
+.dots{display:flex;flex-wrap:wrap;gap:5px}
+.dots i{width:14px;height:14px;border-radius:50%;border:2px solid var(--faint)}
+.dots i.hit{background:var(--blood);border-color:var(--blood)}
+.dots i.safe{border-color:var(--gold)}
+.dots-row .n{display:block;font:700 13px var(--mono);color:var(--ink)}
+.big{font:700 28px var(--mono);color:var(--gold)}
+.big small{font:500 13px var(--body);color:var(--mute);margin-left:8px}
+/* stance rhythm */
+.rhythm{position:relative;height:118px;margin:6px 8px 0}
+.rhythm .track{position:absolute;left:0;right:0;top:52px;height:4px;background:var(--line);border-radius:2px}
+.rhythm .win{position:absolute;top:44px;height:20px;border-radius:4px;background:var(--steel);opacity:.8}
+.rhythm .pt{position:absolute;top:0;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;width:92px;text-align:center}
+.rhythm .pt .lab{font-size:12px;line-height:1.3;color:var(--ink)}
+.rhythm .pt .s{font:500 11px var(--mono);color:var(--mute)}
+.rhythm .pt .tick{width:2px;height:16px;background:var(--war)}
+.rhythm .pt.dn{top:68px}
+.rhythm .pt.dn .tick{order:-1}
+.rhythm .pt.hit .tick{background:var(--blood)}
+
+/* route */
+.route{margin-top:22px;position:relative;display:grid;gap:18px}
+.route::before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--line),var(--war-dim),var(--line))}
+.stop{display:grid;grid-template-columns:40px 1fr;gap:14px}
+.node{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:900 16px var(--display);position:relative;z-index:1}
+.stop.boss .node{background:var(--war);color:#1a130a}
+.stop.trash .node{background:var(--panel-2);border:2px solid var(--line);color:var(--faint);font-size:12px}
+.stop-body{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stop.boss .stop-body{border-color:#3d3224}
+.stop-head{padding:12px 16px;display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.stop-head h3{font-size:18px;font-weight:900}
+.stop.trash .stop-head h3{font-size:16px;font-weight:600;color:#d3c9b6}
+.stop-head .kind{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.row{display:grid;grid-template-columns:minmax(180px,1.15fr) 24px minmax(150px,1fr) minmax(140px,1fr);gap:12px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--line)}
+.row:last-of-type{border-bottom:0}
+.mech{display:flex;gap:10px;align-items:center}
+.mech .n{font-weight:700}
+.mech .s{font-size:12.5px;color:var(--mute)}
+.row .to{color:var(--war);text-align:center;font-weight:700}
+.skill{display:flex;gap:9px;align-items:center;font-weight:700;flex-wrap:wrap}
+.row .why{font-size:13.5px;color:#d3c9b6}
+.note{padding:10px 16px;font-size:13.5px;background:rgba(208,162,111,.07);color:#dccfb3;border-top:1px solid var(--line)}
+.note.warn{background:rgba(228,106,94,.08);color:#f0b6ae}
+.note b{color:var(--war)}
+.note.warn b{color:var(--blood)}
+
+/* toolbox */
+.tools{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.tool{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:8px;align-content:start}
+.tool .top{display:flex;gap:10px;align-items:center}
+.tool .nm{font-weight:700;font-size:16px}
+.tool .dl{display:grid;grid-template-columns:44px 1fr;gap:3px 8px;font-size:13px}
+.tool .dl dt{color:var(--faint)}
+.tool .dl dd{margin:0;color:#d6ccb9}
+.tool.star{border-color:var(--war-dim);background:linear-gradient(180deg,rgba(208,162,111,.08),var(--panel) 60%)}
+
+/* debuffs */
+.tbl-wrap{margin-top:18px;overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:640px;background:var(--panel)}
+th{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute);text-align:left;padding:10px 14px;background:var(--panel-2);border-bottom:1px solid var(--line)}
+td{padding:10px 14px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
+tr:last-child td{border-bottom:0}
+.dname{display:flex;gap:10px;align-items:center;font-weight:700}
+.yes{color:var(--nature);font-weight:700}
+.no{color:var(--faint)}
+
+/* talents */
+.talent{margin-top:18px;background:var(--panel);border:1px solid var(--war-dim);border-radius:14px;padding:18px;display:grid;gap:16px}
+.code-row{display:flex;gap:10px;align-items:stretch}
+.code-row code{flex:1;min-width:0;font:500 13px/1.5 var(--mono);color:var(--war);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;word-break:break-all;user-select:all}
+.code-row button{flex:none;font:700 14px var(--body);color:#1a130a;background:var(--war);border:0;border-radius:8px;padding:0 20px;cursor:pointer}
+.code-row button:hover{filter:brightness(1.08)}
+.code-row button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.tal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.tal{display:flex;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);font-size:13px}
+.tal b{font-size:14px;margin-right:4px}
+.tal span{display:block;color:var(--mute)}
+.tal.key{border-color:var(--war-dim)}
+.tal.key b{color:var(--war)}
+.refs{font-size:12.5px;color:var(--faint);display:flex;flex-wrap:wrap;gap:6px 14px}
+.refs a{color:var(--mute);border-bottom:1px dotted var(--faint)}
+.refs a:hover{color:var(--war)}
+footer{padding:40px 0 56px;color:var(--faint);font-size:12px}
+
+@media (max-width:760px){
+  .finding{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:6px}
+  .row .to{display:none}
+  .row .skill::before{content:"→";color:var(--war);margin-right:2px}
+  .route::before{left:15px}
+  .stop{grid-template-columns:32px 1fr;gap:10px}
+  .node{width:32px;height:32px;font-size:14px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .mo,.tool{transition:border-color .2s}
+  .mo:hover,.tool:hover{border-color:var(--war-dim)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">KINGS' REST · MYTHIC+ · ARMS WARRIOR FIELD CARD</div>
+    <h1><span class="cls">武器战</span><span class="dot">·</span>诸王之眠 应对手册</h1>
+    <p class="lede">诸王之眠到处是<em>魔法范围伤害</em>和<em>点人的法术</em>，武器战的核心是<b>法术反射</b>：约 22 秒一次，几乎每次转好都有东西可交。范围法术交给它减 20% 魔法伤害，电弧、暗影弹幕、叉状闪电这类单体法术直接反掉。物理大伤害靠<b>切防御姿态</b>，流血怪交<b>剑在人在</b>。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时武器战 ×3（欧 / 国 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>屠戮者</b></span>
+      <span class="chip">核心 <b>法术反射 · 防御姿态 · 剑在人在 · 集结呐喊</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里的反射和姿态</h2>
+  <p class="sub">一整场 +22 里，法术反射、防御姿态和大减伤分别交在哪。反射几乎不停，每段都有它的固定目标。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--gold)"></i>反射 · 反掉单体法术</span>
+      <span><i style="background:var(--arcane);opacity:.6"></i>反射 · 范围魔法减伤</span>
+      <span><i style="background:var(--steel)"></i>防御姿态</span>
+      <span><i style="border:2px solid var(--war);border-radius:50%"></i>剑在人在 / 集结呐喊</span>
+      <span><i style="background:rgba(208,162,111,.25);border:1px solid var(--war-dim)"></i>首领战</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个动作。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 1 · 黄金风蛇</div>
+      <div class="sig">看到<b>蛇之风读条结束</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:23920}}" alt=""><span class="nm">法术反射</span> <span class="pill p-mag">魔法减伤</span></div>
+      <p>每一阵风都交。5 秒反射正好盖住整阵 6 跳中的 5 跳，每跳少吃两成。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 部族议会</div>
+      <div class="sig">看到<b>扎纳扎尔读电弧</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:23920}}" alt=""><span class="nm">法术反射</span> <span class="pill p-ref">反掉</span></div>
+      <p>电弧打坦克后弹射，开着反射它不会弹到你。一次就是七十多万伤害。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 部族议会</div>
+      <div class="sig">看到<b>翻滚点名，撞击前 1.5 秒</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:386208}}" alt=""><span class="nm">防御姿态</span> <span class="pill p-dr">减伤</span></div>
+      <p>进去分摊之前切防御姿态，撞完立刻切回战斗姿态。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 血誓刺客</div>
+      <div class="sig">身上有骤裂，看到<b>鲜血吸取读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:118038}}" alt=""><span class="nm">剑在人在</span> <span class="pill p-dr">减伤</span></div>
+      <p>阿库尔大王抽所有流血的人。30% 减伤同时盖住抽血和骤裂的流血。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>两个关键细节</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:23920}}" alt="">反射能反掉的单体法术</h3>
+      <p>法术反射会<b>反弹第一个对你施放的法术</b>，同时 5 秒内魔法伤害减 20%。诸王之眠有三个能直接反掉的法术：</p>
+      <p><em>电弧</em>（议会·扎纳扎尔）：打坦克后弹射，读条只有 1 秒，一出读条就开。<br><em>暗影弹幕</em>（祖尔之影）：读条点到你时开，首击和后面的暗影持续伤害都不吃。<br><em>叉状闪电</em>（拉胡艾大王）：读条点到你时开。</p>
+      <p>反射约 22 秒一次，电弧约 7 秒一次，所以只能每三发反一发。转好就交，别留。</p>
+    </div>
+    <div class="viz" role="img" aria-label="电弧：没开反射时 26 次里被弹到 21 次，开着反射时 10 次一次都没被弹到">
+      <div class="cap">电弧每读一次，武器战有没有被弹到</div>
+      <div class="dots-row"><span>没开反射<span class="n">21 / 26</span></span><div class="dots">
+        <i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i class="hit"></i><i></i><i></i><i></i><i></i><i></i>
+      </div></div>
+      <div class="dots-row"><span>开着反射<span class="n">0 / 10</span></span><div class="dots">
+        <i class="safe"></i><i class="safe"></i><i class="safe"></i><i class="safe"></i><i class="safe"></i><i class="safe"></i><i class="safe"></i><i class="safe"></i><i class="safe"></i><i class="safe"></i>
+      </div></div>
+      <div class="big">≈75 万<small>每次被弹到的伤害，+22 下接近半管血</small></div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:386208}}" alt="">防御姿态：撞击前切，撞完切回</h3>
+      <p>防御姿态减伤 15%，配天赋<b>「姿态掌握」</b>，单次超过 20% 血量的大伤害再减 15%。代价是输出降低 10%，所以不常驻，只在大伤害落地前后开几秒。</p>
+      <p>阿卡阿里的<b>翻滚</b>点名后约 6 秒撞击，冲击点 7 码内的人分摊。撞击前 1.5 秒切防御，撞完 1.5 秒切回。达萨大王阶段<b>提扎拉的震地之跃</b>会在 3 秒内连跳 4 下，看到她起跳就切，跳完切回。</p>
+    </div>
+    <div class="viz">
+      <div class="cap">一次翻滚的节奏（秒，从点名开始算）</div>
+      <div class="rhythm" role="img" aria-label="0 秒翻滚点名，4.7 秒切防御姿态，6.2 秒撞击，7.8 秒切回战斗姿态">
+        <div class="track"></div>
+        <div class="win" style="left:52%;width:34%"></div>
+        <div class="pt" style="left:0;transform:none;align-items:flex-start;text-align:left"><span class="lab">翻滚点名</span><span class="s">0</span><span class="tick"></span></div>
+        <div class="pt" style="left:52%"><span class="lab">切防御姿态</span><span class="s">4.7</span><span class="tick"></span></div>
+        <div class="pt hit dn" style="left:69%"><span class="tick"></span><span class="s">6.2</span><span class="lab">撞击分摊</span></div>
+        <div class="pt" style="left:86%"><span class="lab">切回战斗姿态</span><span class="s">7.8</span><span class="tick"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 黄金风蛇</h3><span class="kind">TRASH · 影裔勇士 / 黯影战士</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1305945}}" alt=""><div><div class="n">暗影旋风斩</div><div class="s">影裔勇士读条 <span class="tag">全团</span><span class="tag magic">暗影</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:23920}}" alt="">法术反射 <span class="pill p-mag">魔法减伤</span></div>
+          <div class="why">读条到一半开，每一发都交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1305945}}" alt=""><div><div class="n">暗影旋风斩</div><div class="s">叠上重力猛击、全团掉血</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:97462}}" alt="">集结呐喊 <span class="pill p-grp">团队</span></div>
+          <div class="why">全队血量上限 +10%，接住这一下</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:276031}}" alt=""><div><div class="n">绝望深渊</div><div class="s">被恐惧 <span class="tag magic">魔法</span><span class="tag">6 秒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:18499}}" alt="">狂暴之怒 <span class="pill p-clr">自解</span></div>
+          <div class="why">立刻解掉恐惧，不用等治疗驱散</div>
+        </div>
+        <div class="note">黯影战士的<b>重力猛击</b>是近战带出的全团物理伤害，反射管不到它。这段反射专门留给暗影旋风斩。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>黄金风蛇</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1311988}}" alt=""><div><div class="n">蛇之风</div><div class="s">读条结束、第一跳 <span class="tag">全团</span><span class="tag magic">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:23920}}" alt="">法术反射 <span class="pill p-mag">魔法减伤</span></div>
+          <div class="why">每跳约 29 万降到 22 万</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1311988}}" alt=""><div><div class="n">蛇之风</div><div class="s">第一阵 / 身上有吐金</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:118038}}" alt="">剑在人在 <span class="pill p-dr">减伤</span><img class="ic sm" src="{{I:23920}}" alt="">反射</div>
+          <div class="why">两个一起按，30% 叠 20%</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1311988}}" alt=""><div><div class="n">蛇之风</div><div class="s">全队血线偏低</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:97462}}" alt="">集结呐喊 <span class="pill p-grp">团队</span></div>
+          <div class="why">给治疗多一口气</div>
+        </div>
+        <div class="note">蛇之风约 27–38 秒一阵，反射 22 秒就转好，<b>每一阵都有反射可交</b>。这场别把反射交在别处。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>黄金风蛇 → 姆沁巴</h3><span class="kind">TRASH · 拉胡艾大王 / 血誓刺客</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1296719}}" alt=""><div><div class="n">叉状闪电</div><div class="s">拉胡艾大王读条点你 <span class="tag magic">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:23920}}" alt="">法术反射 <span class="pill p-ref">反掉</span></div>
+          <div class="why">点到自己时开，直接反回去</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297970}}" alt=""><div><div class="n">鲜血吸取</div><div class="s">身上有骤裂时读条 <span class="tag bleed">流血</span><span class="tag phys">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:118038}}" alt="">剑在人在 <span class="pill p-dr">减伤</span></div>
+          <div class="why">盖住抽血和 18 秒流血</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297781}}" alt=""><div><div class="n">骤裂</div><div class="s">血誓刺客上流血 <span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:386208}}" alt="">防御姿态 <span class="pill p-dr">减伤</span><img class="ic sm" src="{{I:97462}}" alt="">集结</div>
+          <div class="why">剑在人在之外再补一层</div>
+        </div>
+        <div class="note warn"><b>注意：</b>血誓刺客这波是这段路上最疼的。骤裂流血会让<b>每一次鲜血吸取</b>都打到你，剑在人在要留到这里，别在前面的小怪上交掉。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>殓尸者姆沁巴</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1312146}}" alt=""><div><div class="n">觉醒猛击</div><div class="s">3 秒读条 <span class="tag">全团</span><span class="tag magic">暗影</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:23920}}" alt="">法术反射 <span class="pill p-mag">魔法减伤</span></div>
+          <div class="why">读条后半段开，每次都交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:267618}}" alt=""><div><div class="n">排干体液</div><div class="s">点名上身 <span class="tag magic">自然</span><span class="tag">6 秒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:118038}}" alt="">剑在人在 <span class="pill p-dr">减伤</span></div>
+          <div class="why">每 2 秒一跳，血会掉得很快</div>
+        </div>
+        <div class="note">觉醒猛击约一分钟一次，中间反射空着，可以先交给<b>排干体液</b>（自然伤害，反射减两成），转好后再留给下一次觉醒猛击。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>姆沁巴 → 部族议会</h3><span class="kind">TRASH · 皇家狂战士 / 迅猛龙</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301851}}" alt=""><div><div class="n">嗜血飞斧</div><div class="s">被追踪 <span class="tag bleed">流血</span><span class="tag">12 秒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:386208}}" alt="">防御姿态 <span class="pill p-dr">减伤</span></div>
+          <div class="why">12 秒流血期间切防御</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301851}}" alt=""><div><div class="n">嗜血飞斧</div><div class="s">叠上狩猎跃击、血线见底</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:118038}}" alt="">剑在人在 <span class="pill p-dr">减伤</span><img class="ic sm" src="{{I:97462}}" alt="">集结</div>
+          <div class="why">两次飞斧叠在一起时保命</div>
+        </div>
+        <div class="note">飞斧最多追两个人，武器战经常被选中。这段反射没用，防御姿态和剑在人在才是主力。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>部族议会</h3><span class="kind">BOSS 3 · 阿卡阿里 / 扎纳扎尔 / 库拉</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:267494}}" alt=""><div><div class="n">翻滚</div><div class="s">阿卡阿里点名，约 6 秒后撞 <span class="tag phys">物理</span><span class="tag">分摊</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:386208}}" alt="">防御姿态 <span class="pill p-dr">减伤</span></div>
+          <div class="why">撞前 1.5 秒切，撞完切回</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1305810}}" alt=""><div><div class="n">电弧</div><div class="s">扎纳扎尔 1 秒读条 <span class="tag">弹射</span><span class="tag magic">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:23920}}" alt="">法术反射 <span class="pill p-ref">反掉</span></div>
+          <div class="why">不会弹到你，免掉约 75 万</div>
+        </div>
+        <div class="note">反射 CD 只够每三发电弧挡一发，<b>转好就交</b>。翻滚是物理伤害，反射挡不了，两件事互不冲突。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>部族议会 → 达萨大王</h3><span class="kind">TRASH · 祖尔之影</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:272388}}" alt=""><div><div class="n">暗影弹幕</div><div class="s">祖尔之影读条点你 <span class="tag magic">暗影</span><span class="tag">持续伤害</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:23920}}" alt="">法术反射 <span class="pill p-ref">反掉</span></div>
+          <div class="why">首击和 4 秒持续伤害都不吃</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1298317}}" alt=""><div><div class="n">黑暗启示</div><div class="s">点到自己，5 秒后爆炸 <span class="tag magic">暗影</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:386208}}" alt="">防御姿态 <span class="pill p-dr">减伤</span><img class="ic sm" src="{{I:23920}}" alt="">或反射</div>
+          <div class="why">爆炸前 1 秒开，自己也会被炸到</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>达萨大王</h3><span class="kind">BOSS 4 · 达萨大王 / 提扎拉</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1303267}}" alt=""><div><div class="n">镀金毁灭</div><div class="s">达萨灌注熔金 <span class="tag">全团</span><span class="tag magic">火焰</span><span class="tag">15 秒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:23920}}" alt="">法术反射 <span class="pill p-mag">魔法减伤</span></div>
+          <div class="why">提前约 1 秒开，盖住重击和前 5 跳</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1303327}}" alt=""><div><div class="n">震地之跃</div><div class="s">提扎拉连跳 4 下 <span class="tag phys">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:386208}}" alt="">防御姿态 <span class="pill p-dr">减伤</span></div>
+          <div class="why">一起跳就切，跳完切回</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1302945}}" alt=""><div><div class="n">震地之跃 + 穿刺之矛</div><div class="s">叠在一起 <span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:118038}}" alt="">剑在人在 <span class="pill p-dr">减伤</span></div>
+          <div class="why">物理叠流血，留着保命</div>
+        </div>
+        <div class="note">镀金毁灭约 47–65 秒一次，<b>反射全部留给它</b>。提扎拉的连跳卡在两次镀金毁灭中间，正好交给防御姿态。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:23920}}" alt=""><div><div class="nm">法术反射</div><span class="pill p-ref">反掉 · 魔法减伤</span></div></div>
+      <dl class="dl"><dt>反掉</dt><dd>电弧、暗影弹幕、叉状闪电</dd><dt>减伤</dt><dd>蛇之风、暗影旋风斩、觉醒猛击、镀金毁灭</dd><dt>时机</dt><dd>约 22 秒一次，转好就交</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:386208}}" alt=""><div><div class="nm">防御姿态</div><span class="pill p-dr">减伤 15%（大伤害 +15%）</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>翻滚、震地之跃、嗜血飞斧、骤裂</dd><dt>时机</dt><dd>落地前切，落地后切回战斗姿态</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:118038}}" alt=""><div><div class="nm">剑在人在</div><span class="pill p-dr">减伤 30%</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>鲜血吸取 + 骤裂、第一阵蛇之风、排干体液、嗜血飞斧</dd><dt>时机</dt><dd>流血叠爆发时</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:97462}}" alt=""><div><div class="nm">集结呐喊</div><span class="pill p-grp">团队</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>开场暗影旋风斩、蛇之风、血誓刺客</dd><dt>时机</dt><dd>全队一起掉血前</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:18499}}" alt=""><div><div class="nm">狂暴之怒</div><span class="pill p-clr">自解</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>绝望深渊的恐惧</dd><dt>时机</dt><dd>被恐惧立刻按</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:202168}}" alt=""><div><div class="nm">胜利在望</div><span class="pill p-clr">自疗 30%</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>蛇之风后、镀金毁灭持续伤害</dd><dt>时机</dt><dd>血量掉到一半以下</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>身上常中的减益</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>减益</th><th>类型</th><th>自己能处理吗</th><th>一般怎么处理</th></tr></thead>
+      <tbody>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:276031}}" alt="">绝望深渊</div></td><td><span class="tag magic">魔法</span><span class="tag">恐惧</span></td><td class="yes">✓ 狂暴之怒</td><td>奶骑清洁术也能驱</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1297781}}" alt="">骤裂</div></td><td><span class="tag bleed">流血</span><span class="tag">18 秒</span></td><td class="no">✗ 剑在人在减伤</td><td>流血期间会被鲜血吸取额外抽一口</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1301851}}" alt="">嗜血飞斧</div></td><td><span class="tag bleed">流血</span><span class="tag">12 秒</span></td><td class="no">✗ 防御姿态减伤</td><td>保护祝福、圣盾术能清</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1303267}}" alt="">镀金毁灭</div></td><td><span class="tag">全团</span><span class="tag magic">火焰</span><span class="tag">15 秒</span></td><td class="no">✗ 反射减前 5 秒</td><td>治疗团刷，后半段胜利在望</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:265773}}" alt="">吐金</div></td><td><span class="tag magic">火焰</span><span class="tag">6 秒</span></td><td class="no">✗</td><td>结束时脚下留金池，提前走到边上</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:267618}}" alt="">排干体液</div></td><td><span class="tag magic">自然</span><span class="tag">6 秒</span></td><td class="no">✗ 剑在人在 / 反射</td><td>结束后再上干枯，治疗盯紧</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:267494}}" alt="">翻滚</div></td><td><span class="tag">点名</span><span class="tag phys">物理</span></td><td class="no">✗ 防御姿态</td><td>冲击点 7 码内人越多越好</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">07</span>天赋</h2>
+  <p class="sub">+22 高手同款武器天赋，英雄天赋屠戮者。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:391271}}" alt=""><div><b>干练反射</b><span>法术反射、剑在人在冷却缩短 10%，反射约 22 秒一次</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1280961}}" alt=""><div><b>姿态掌握</b><span>防御姿态下，超过 20% 血量的单次伤害再降 15%</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1271925}}" alt=""><div><b>无所畏惧</b><span>狂暴之怒冷却减半，还能解减速</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:424742}}" alt=""><div><b>战地统帅</b><span>集结呐喊自己额外 +2% 生命，持续多 3 秒</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1243660}}" alt=""><div><b>震音回荡</b><span>怒吼技能持续时间延长 20%</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:382549}}" alt=""><div><b>痛尽甘来</b><span>受到伤害时回复 2% 生命，10 秒一次</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:29838}}" alt=""><div><b>复苏之风</b><span>脱离伤害后快速回血</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:382896}}" alt=""><div><b>双手武器专精</b><span>受到的范围伤害减少 2%</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:444776}}" alt=""><div><b>冷酷追杀</b>（屠戮者）<span>冲锋解除移动限制并加速 70%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/DGtXrcbpV3YhN81A#fight=9">Yarrgiwr +22 28:15</a>
+      <a href="https://www.warcraftlogs.com/reports/Z4WCnjBGyMzKfwdb#fight=2">一戰成名 +22 28:24</a>
+      <a href="https://www.warcraftlogs.com/reports/vxWqaMdprBXmcHPG#fight=14">Ptz +22 28:48</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">武器战 · 诸王之眠 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>
