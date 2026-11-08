@@ -8,7 +8,8 @@
 | --- | --- |
 | 红玉新生法池 | 第二版完成：[手册](2026-11-07-红玉新生法池-武器战.html) · [长图](2026-11-07-红玉新生法池-武器战.png)。参考录像：[Mjtwarrior](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=13) · [人艰不拆战](https://www.warcraftlogs.com/reports/Kzg6XDw3V2FnWZcd#fight=1) · [Rosebankk](https://www.warcraftlogs.com/reports/TFfB8XRw6HPVLjN2#fight=4) |
 | 毒牙祭坛 | 完成：[手册](2026-11-07-毒牙祭坛-武器战.html) · [长图](2026-11-07-毒牙祭坛-武器战.png)。参考录像：[末诚](https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=36) · [Mjtwarrior](https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=44) · [暗夜白昼](https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1) |
-| 其余六本 | 第一版质量低，内容和源材料都已删除，待按 skill 从采集开始重做 |
+| 塞塔里斯神庙 | 完成（不用 skill，手写）：[手册](2026-11-07-塞塔里斯神庙-武器战.html) · [长图](2026-11-07-塞塔里斯神庙-武器战.png)；源文件 `sources/sethraliss/`（`python3 sources/sethraliss/build.py sources/sethraliss <输出.html>`）。参考录像（+22）：[Diffw](https://www.warcraftlogs.com/reports/4Ab97gnVjKhZP1Nf#fight=8) · [Swordish](https://www.warcraftlogs.com/reports/r1ChwFYjNM7XkWp9#fight=20) · [咙咚哐咙咚哐](https://www.warcraftlogs.com/reports/XtNDVkrqb8LaK36M#fight=7) |
+| 其余五本 | 第一版质量低，内容和源材料都已删除，待按 skill 从采集开始重做 |
 
 ## 文件
 
