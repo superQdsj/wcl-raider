@@ -10,11 +10,11 @@
 
 ## 职业副本手册
 
-职业大秘境手册用 `mplus-class-guide` skill 制作：从三场高分限时录像里挑出该职业真正用来处理机制的技巧，写成「信号 → 按什么 → 为什么」的攻略页和长图，结尾附天赋导入字符串。
+职业大秘境手册不用 skill，按 [`guides/tools/README.md`](guides/tools/README.md) 的两段式流程制作：便宜模型跑 `evidence.py` 采集证据包，强模型从三场高分限时录像里找出该职业真正用来处理机制的技巧，手写成「信号 → 按什么 → 为什么」的攻略页，结尾附天赋导入字符串。
 
 所有手册都在 [`guides/`](guides/README.md)，一个职业专精一个目录，成品和源材料放在一起：
-- 武器战：已完成[红玉新生法池](guides/warrior-arms/2026-11-07-红玉新生法池-武器战.html)，其余七本正在按 skill 重写（[目录](guides/warrior-arms/2026-11-07-武器战-八本手册.html)）
-- 潜行者：七本（`guides/rogue/`）
+- 武器战：八本（`guides/warrior-arms/`）
+- 潜行者：七本第一版（`guides/rogue/`），正在按新流程重做，已完成诸王之眠、夺目谷
 - 神圣骑士：八本（`guides/holy-paladin/`）
 
 ## 快速开始
@@ -100,10 +100,10 @@ python3 $W --help
 │   └── scripts/
 │       ├── wcl.py           # 数据工具入口（三个 skill 共用）
 │       └── wclr/            # API 客户端、上下文、各命令实现
-├── mplus-tactics/           # 应对技巧复盘（共用 mplus-review 的数据工具）
-└── mplus-class-guide/       # 职业副本手册的制作方法
+└── mplus-tactics/           # 应对技巧复盘（共用 mplus-review 的数据工具）
 guides/                      # 职业副本手册：一个职业专精一个目录，成品 + 源材料
-├── warrior-arms/            # 武器战（进行中，也是 class-guide skill 的参考实现）
+├── tools/                   # 手册制作工具：evidence.py 证据包、timeline.py 时间轴、派发模板
+├── warrior-arms/            # 武器战
 ├── rogue/                   # 潜行者（归档，可离线重建）
 └── holy-paladin/            # 神圣骑士（只有成品）
 reviews/                     # 复盘 / 应对技巧报告的本地输出，不入库

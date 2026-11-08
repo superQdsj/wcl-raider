@@ -45,7 +45,7 @@ python3 guides/rogue/rebuild.py --output-dir /tmp/rogue-guides
 修改攻略时以表中主源稿为准，再运行统一重建器；分片文件仅作为历史材料保留。
 
 原 `build.py`、`enc.py`、`dec.py` 和 `edit1.py` 是历史快照，部分含绝对临时路径或写死的
-专精、英雄天赋节点；不要直接视为通用工具运行。制作新的职业手册请使用 `mplus-class-guide` skill。
+专精、英雄天赋节点；不要直接视为通用工具运行。制作新的职业手册见 `../tools/README.md`。
 统一重建入口不依赖这些临时路径，不重新推导或修改已保存的天赋配置。
 
 ## 完成状态

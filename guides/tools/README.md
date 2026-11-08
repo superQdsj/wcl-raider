@@ -40,7 +40,7 @@ python3 guides/tools/evidence.py --class guides/tools/classes/<职业>.json --ou
 ### 写作（Opus 5.5 medium）
 
 要点：
-- 不用 skill。
+- 不用 skill（`mplus-class-guide` 已于 2026-11-08 删除）。
 - **写攻略，不写统计报告**。直接告诉读者看到什么、按什么、为什么，语气照金标准（潜行者·毒牙祭坛：`python3 guides/rogue/rebuild.py --output-dir <临时目录> --include-original` 生成后看）。正文不出现参考玩家的名字，不写「3/3 人」「三场」「中位数」「共 N 次命中」「一场按 X–Y 次」这类数据口吻；路线逐段的行里不加灰色数据小字。数字只在能直接说明「为什么这样按」时用一个，比如「只吃一跳」「伤害砍半」。参考录像链接只放在页尾。
 - **时间轴用单轨**：选一场有代表性的录像，用 `guides/tools/timeline.py` 生成（标签写「免疫蛇之风」「清排干体液」这种动作），不要三名玩家并排的多轨图。
 - 先读证据包；`wcl.py events` 补查控制在十来次以内，每次都要带 `--ability` 和 `--from/--to`。

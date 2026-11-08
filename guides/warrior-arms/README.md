@@ -1,6 +1,6 @@
 # 武器战副本手册
 
-职业为战士，专精为武器，英雄天赋为屠戮者。制作流程与写作规范见 `mplus-class-guide` skill（`.claude/skills/mplus-class-guide/`）。
+职业为战士，专精为武器，英雄天赋为屠戮者。制作流程见 [`../tools/README.md`](../tools/README.md)。
 
 ## 状态（2026-11-08，八本齐）
 
@@ -17,17 +17,8 @@
 
 ## 文件
 
-- `profile.py`：职业常量与本职业技能表（`SKILLS`）。
-- `guides.py`：逐本内容，只放已完成的副本。
-- `sources/guide.db`：SQLite 证据库，存三场录像的本职业施放与情境、敌方读条、身上减益、技能说明和图标。离线构建只需要它。
-
-脚本都在 skill 里（`.claude/skills/mplus-class-guide/scripts/`）：
-
-```sh
-S=.claude/skills/mplus-class-guide/scripts
-python3 $S/evidence.py warrior-arms 红玉新生法池                 # 证据表
-python3 $S/build.py warrior-arms --dungeon 红玉新生法池 --png    # 构建并导出长图
-```
+- 塞塔里斯神庙、虚空之痕竞技场、诸王之眠的源码在 `sources/<副本>/`，能离线重建。
+- 其余几本（含旧 skill 生成的红玉新生法池、毒牙祭坛和八本目录页）只保留成品 HTML。
 
 ## 关键核对与边界
 

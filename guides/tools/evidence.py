@@ -91,7 +91,8 @@ class RunData:
                 out.append((d["name"], t0, t0 + d.get("dur", 5) * 1000))
             if not got:
                 for e in self.casts:
-                    if e["type"] == "cast" and e.get("abilityGameID") == d["cast"]:
+                    if (e["type"] == "cast" and e.get("abilityGameID") == d["cast"]
+                            and e.get("targetID") in (None, -1, self.pid)):  # 给别人的不算自己的窗口
                         out.append((d["name"], e["timestamp"], e["timestamp"] + d.get("dur", 5) * 1000))
         return out
 

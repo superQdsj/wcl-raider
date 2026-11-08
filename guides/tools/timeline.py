@@ -17,7 +17,7 @@ GOLD_TL_CSS = """/* timeline (same as the gold rogue card) */
 .mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:80px;z-index:1}
 .mk .stem{width:2px;background:var(--gold)}
 .mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:#000}
-.mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink)}
+.mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
 .mk .t{font:500 11px var(--mono);color:var(--mute)}
 .mk.up{top:4px}
 .mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
