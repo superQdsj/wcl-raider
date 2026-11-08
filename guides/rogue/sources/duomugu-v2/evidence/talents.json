@@ -1,0 +1,2385 @@
+{
+ "r1_Qingxinlucky": {
+  "name": "Qingxinlucky",
+  "id": 3,
+  "guid": 96790794,
+  "type": "Rogue",
+  "server": "冰风岗",
+  "region": "CN",
+  "icon": "Rogue-Subtlety",
+  "specs": [
+   {
+    "spec": "Subtlety",
+    "count": 1
+   }
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 0,
+  "healthstoneUse": 0,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 90,
+     "max": 90
+    },
+    "Agility": {
+     "min": 2816,
+     "max": 2816
+    },
+    "Mastery": {
+     "min": 3196,
+     "max": 3196
+    },
+    "Crit": {
+     "min": 1085,
+     "max": 1085
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Stamina": {
+     "min": 45305,
+     "max": 45305
+    },
+    "Avoidance": {
+     "min": 0,
+     "max": 0
+    },
+    "Haste": {
+     "min": 721,
+     "max": 721
+    },
+    "Versatility": {
+     "min": -124,
+     "max": -124
+    },
+    "Leech": {
+     "min": 249,
+     "max": 249
+    }
+   },
+   "talents": [],
+   "talentTree": [
+    {
+     "id": 112523,
+     "rank": 1,
+     "nodeID": 90638
+    },
+    {
+     "id": 112525,
+     "rank": 2,
+     "nodeID": 90639
+    },
+    {
+     "id": 112526,
+     "rank": 1,
+     "nodeID": 90640
+    },
+    {
+     "id": 112574,
+     "rank": 1,
+     "nodeID": 90686
+    },
+    {
+     "id": 112575,
+     "rank": 1,
+     "nodeID": 90687
+    },
+    {
+     "id": 112580,
+     "rank": 1,
+     "nodeID": 90692
+    },
+    {
+     "id": 112583,
+     "rank": 1,
+     "nodeID": 90695
+    },
+    {
+     "id": 112521,
+     "rank": 1,
+     "nodeID": 90636
+    },
+    {
+     "id": 112572,
+     "rank": 1,
+     "nodeID": 90684
+    },
+    {
+     "id": 112578,
+     "rank": 1,
+     "nodeID": 90690
+    },
+    {
+     "id": 112588,
+     "rank": 1,
+     "nodeID": 90700
+    },
+    {
+     "id": 112591,
+     "rank": 1,
+     "nodeID": 90703
+    },
+    {
+     "id": 112597,
+     "rank": 1,
+     "nodeID": 90709
+    },
+    {
+     "id": 112598,
+     "rank": 1,
+     "nodeID": 90710
+    },
+    {
+     "id": 112603,
+     "rank": 1,
+     "nodeID": 90715
+    },
+    {
+     "id": 112609,
+     "rank": 1,
+     "nodeID": 90721
+    },
+    {
+     "id": 112610,
+     "rank": 1,
+     "nodeID": 90722
+    },
+    {
+     "id": 112611,
+     "rank": 1,
+     "nodeID": 90723
+    },
+    {
+     "id": 112614,
+     "rank": 1,
+     "nodeID": 90726
+    },
+    {
+     "id": 112615,
+     "rank": 1,
+     "nodeID": 90727
+    },
+    {
+     "id": 112618,
+     "rank": 1,
+     "nodeID": 90730
+    },
+    {
+     "id": 112619,
+     "rank": 1,
+     "nodeID": 90731
+    },
+    {
+     "id": 112620,
+     "rank": 2,
+     "nodeID": 90732
+    },
+    {
+     "id": 112621,
+     "rank": 1,
+     "nodeID": 90733
+    },
+    {
+     "id": 112623,
+     "rank": 1,
+     "nodeID": 90734
+    },
+    {
+     "id": 112625,
+     "rank": 1,
+     "nodeID": 90735
+    },
+    {
+     "id": 112629,
+     "rank": 1,
+     "nodeID": 90739
+    },
+    {
+     "id": 112633,
+     "rank": 1,
+     "nodeID": 90743
+    },
+    {
+     "id": 112638,
+     "rank": 1,
+     "nodeID": 90747
+    },
+    {
+     "id": 112639,
+     "rank": 1,
+     "nodeID": 90748
+    },
+    {
+     "id": 112642,
+     "rank": 1,
+     "nodeID": 90750
+    },
+    {
+     "id": 112643,
+     "rank": 2,
+     "nodeID": 90751
+    },
+    {
+     "id": 112644,
+     "rank": 1,
+     "nodeID": 90752
+    },
+    {
+     "id": 112646,
+     "rank": 1,
+     "nodeID": 90754
+    },
+    {
+     "id": 112650,
+     "rank": 1,
+     "nodeID": 90758
+    },
+    {
+     "id": 112652,
+     "rank": 1,
+     "nodeID": 90760
+    },
+    {
+     "id": 112654,
+     "rank": 1,
+     "nodeID": 90762
+    },
+    {
+     "id": 112655,
+     "rank": 1,
+     "nodeID": 90763
+    },
+    {
+     "id": 112657,
+     "rank": 1,
+     "nodeID": 90764
+    },
+    {
+     "id": 117145,
+     "rank": 1,
+     "nodeID": 94562
+    },
+    {
+     "id": 117168,
+     "rank": 1,
+     "nodeID": 94580
+    },
+    {
+     "id": 117170,
+     "rank": 1,
+     "nodeID": 94582
+    },
+    {
+     "id": 117708,
+     "rank": 1,
+     "nodeID": 95111
+    },
+    {
+     "id": 117712,
+     "rank": 1,
+     "nodeID": 95115
+    },
+    {
+     "id": 117713,
+     "rank": 1,
+     "nodeID": 95116
+    },
+    {
+     "id": 117715,
+     "rank": 1,
+     "nodeID": 95118
+    },
+    {
+     "id": 117718,
+     "rank": 1,
+     "nodeID": 95121
+    },
+    {
+     "id": 117725,
+     "rank": 1,
+     "nodeID": 95128
+    },
+    {
+     "id": 117730,
+     "rank": 1,
+     "nodeID": 95133
+    },
+    {
+     "id": 117731,
+     "rank": 1,
+     "nodeID": 95134
+    },
+    {
+     "id": 112592,
+     "rank": 1,
+     "nodeID": 90704
+    },
+    {
+     "id": 112594,
+     "rank": 2,
+     "nodeID": 90706
+    },
+    {
+     "id": 112604,
+     "rank": 1,
+     "nodeID": 90716
+    },
+    {
+     "id": 112628,
+     "rank": 1,
+     "nodeID": 90738
+    },
+    {
+     "id": 112606,
+     "rank": 1,
+     "nodeID": 90718
+    },
+    {
+     "id": 112630,
+     "rank": 1,
+     "nodeID": 90740
+    },
+    {
+     "id": 112632,
+     "rank": 1,
+     "nodeID": 90742
+    },
+    {
+     "id": 112612,
+     "rank": 1,
+     "nodeID": 90724
+    },
+    {
+     "id": 112635,
+     "rank": 1,
+     "nodeID": 90745
+    },
+    {
+     "id": 112636,
+     "rank": 1,
+     "nodeID": 90746
+    },
+    {
+     "id": 112640,
+     "rank": 2,
+     "nodeID": 90749
+    },
+    {
+     "id": 117734,
+     "rank": 1,
+     "nodeID": 95137
+    },
+    {
+     "id": 117738,
+     "rank": 1,
+     "nodeID": 95141
+    },
+    {
+     "id": 117740,
+     "rank": 1,
+     "nodeID": 90741
+    },
+    {
+     "id": 123370,
+     "rank": 1,
+     "nodeID": 99842
+    },
+    {
+     "id": 125615,
+     "rank": 1,
+     "nodeID": 101714
+    },
+    {
+     "id": 125619,
+     "rank": 1,
+     "nodeID": 101715
+    },
+    {
+     "id": 136021,
+     "rank": 1,
+     "nodeID": 109763
+    },
+    {
+     "id": 136022,
+     "rank": 1,
+     "nodeID": 109764
+    },
+    {
+     "id": 136023,
+     "rank": 1,
+     "nodeID": 109765
+    },
+    {
+     "id": 136807,
+     "rank": 1,
+     "nodeID": 90701
+    },
+    {
+     "id": 136881,
+     "rank": 1,
+     "nodeID": 110323
+    },
+    {
+     "id": 137062,
+     "rank": 1,
+     "nodeID": 110432
+    },
+    {
+     "id": 137063,
+     "rank": 2,
+     "nodeID": 110432
+    },
+    {
+     "id": 137064,
+     "rank": 1,
+     "nodeID": 110432
+    },
+    {
+     "id": 117737,
+     "rank": 1,
+     "nodeID": 95140
+    },
+    {
+     "id": 112585,
+     "rank": 1,
+     "nodeID": 90697
+    },
+    {
+     "id": 136883,
+     "rank": 1,
+     "nodeID": 110325
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271510,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Spirit Shroud",
+     "itemLevel": 344,
+     "permanentEnchant": 7961,
+     "permanentEnchantName": "Enchant Helm - Empowered Hex of Leeching",
+     "bonusIDs": [
+      6652,
+      13335,
+      13696,
+      13847,
+      13848,
+      13692,
+      13698,
+      1597,
+      13695
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271508,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Voodoo Guards",
+     "itemLevel": 334,
+     "permanentEnchant": 8031,
+     "permanentEnchantName": "Enchant Shoulders - Silvermoon's Mending",
+     "bonusIDs": [
+      6652,
+      13335,
+      13694,
+      13697,
+      12854
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271513,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Banded Poncho",
+     "itemLevel": 334,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      14049,
+      13690,
+      13698,
+      12854
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268256,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_leather_raiddruidulatek_d_01.jpg",
+     "name": "Sash of the Forlorn Vessel",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13696,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271509,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Reinforced Pants",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      13335,
+      42,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 244569,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_leather_questbloodelf_b_01.jpg",
+     "name": "Silvermoon Agent's Sneakers",
+     "itemLevel": 331,
+     "permanentEnchant": 7993,
+     "permanentEnchantName": "Enchant Boots - Shaladrassil's Roots",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836
+     ]
+    },
+    {
+     "id": 244576,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_leather_questbloodelf_b_01.jpg",
+     "name": "Silvermoon Agent's Deflectors",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      12715,
+      8791,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271511,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Fanged Grips",
+     "itemLevel": 334,
+     "bonusIDs": [
+      6652,
+      13335,
+      13691,
+      13697,
+      12854
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268249,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Vile Alchemist's Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 240949,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_12_profession_jewelcrafting_ring4_gold.jpg",
+     "name": "Masterwork Sin'dorei Band",
+     "itemLevel": 331,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8791,
+      13836
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 12,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271093,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_knife_1h_ulatekfang_d_01_poison.jpg",
+     "name": "Zatha'tek, Breath of Corruption",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 237837,
+     "slot": 16,
+     "quality": 4,
+     "icon": "inv_knife_1h_questbloodelf_b_02.jpg",
+     "name": "Farstrider's Mercy",
+     "itemLevel": 337,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      12214,
+      13667,
+      13852,
+      12497,
+      13751,
+      14001,
+      13771,
+      8960,
+      8791,
+      13836
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    261
+   ],
+   "factionID": 1
+  }
+ },
+ "r2_Tacokekw": {
+  "name": "Tacokekw",
+  "id": 5,
+  "guid": 210623581,
+  "type": "Rogue",
+  "server": "Hyjal",
+  "region": "EU",
+  "icon": "Rogue-Subtlety",
+  "specs": [
+   {
+    "spec": "Subtlety",
+    "count": 1
+   }
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 0,
+  "healthstoneUse": 0,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 67,
+     "max": 67
+    },
+    "Agility": {
+     "min": 3555,
+     "max": 3555
+    },
+    "Mastery": {
+     "min": 1511,
+     "max": 1511
+    },
+    "Crit": {
+     "min": 840,
+     "max": 840
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Stamina": {
+     "min": 45306,
+     "max": 45306
+    },
+    "Avoidance": {
+     "min": 167,
+     "max": 167
+    },
+    "Haste": {
+     "min": 810,
+     "max": 810
+    },
+    "Versatility": {
+     "min": 230,
+     "max": 230
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "talentTree": [
+    {
+     "id": 112521,
+     "rank": 1,
+     "nodeID": 90636
+    },
+    {
+     "id": 112523,
+     "rank": 1,
+     "nodeID": 90638
+    },
+    {
+     "id": 112525,
+     "rank": 2,
+     "nodeID": 90639
+    },
+    {
+     "id": 112526,
+     "rank": 1,
+     "nodeID": 90640
+    },
+    {
+     "id": 112572,
+     "rank": 1,
+     "nodeID": 90684
+    },
+    {
+     "id": 112574,
+     "rank": 1,
+     "nodeID": 90686
+    },
+    {
+     "id": 112575,
+     "rank": 1,
+     "nodeID": 90687
+    },
+    {
+     "id": 112578,
+     "rank": 1,
+     "nodeID": 90690
+    },
+    {
+     "id": 112580,
+     "rank": 1,
+     "nodeID": 90692
+    },
+    {
+     "id": 112583,
+     "rank": 1,
+     "nodeID": 90695
+    },
+    {
+     "id": 112588,
+     "rank": 1,
+     "nodeID": 90700
+    },
+    {
+     "id": 112591,
+     "rank": 1,
+     "nodeID": 90703
+    },
+    {
+     "id": 112592,
+     "rank": 1,
+     "nodeID": 90704
+    },
+    {
+     "id": 112594,
+     "rank": 2,
+     "nodeID": 90706
+    },
+    {
+     "id": 112597,
+     "rank": 1,
+     "nodeID": 90709
+    },
+    {
+     "id": 112598,
+     "rank": 1,
+     "nodeID": 90710
+    },
+    {
+     "id": 112603,
+     "rank": 1,
+     "nodeID": 90715
+    },
+    {
+     "id": 112604,
+     "rank": 1,
+     "nodeID": 90716
+    },
+    {
+     "id": 112606,
+     "rank": 1,
+     "nodeID": 90718
+    },
+    {
+     "id": 112609,
+     "rank": 1,
+     "nodeID": 90721
+    },
+    {
+     "id": 112610,
+     "rank": 1,
+     "nodeID": 90722
+    },
+    {
+     "id": 112611,
+     "rank": 1,
+     "nodeID": 90723
+    },
+    {
+     "id": 112612,
+     "rank": 1,
+     "nodeID": 90724
+    },
+    {
+     "id": 112614,
+     "rank": 1,
+     "nodeID": 90726
+    },
+    {
+     "id": 112615,
+     "rank": 1,
+     "nodeID": 90727
+    },
+    {
+     "id": 112618,
+     "rank": 1,
+     "nodeID": 90730
+    },
+    {
+     "id": 112619,
+     "rank": 1,
+     "nodeID": 90731
+    },
+    {
+     "id": 112620,
+     "rank": 2,
+     "nodeID": 90732
+    },
+    {
+     "id": 112621,
+     "rank": 1,
+     "nodeID": 90733
+    },
+    {
+     "id": 112623,
+     "rank": 1,
+     "nodeID": 90734
+    },
+    {
+     "id": 112625,
+     "rank": 1,
+     "nodeID": 90735
+    },
+    {
+     "id": 112628,
+     "rank": 1,
+     "nodeID": 90738
+    },
+    {
+     "id": 112629,
+     "rank": 1,
+     "nodeID": 90739
+    },
+    {
+     "id": 112632,
+     "rank": 1,
+     "nodeID": 90742
+    },
+    {
+     "id": 112633,
+     "rank": 1,
+     "nodeID": 90743
+    },
+    {
+     "id": 112635,
+     "rank": 1,
+     "nodeID": 90745
+    },
+    {
+     "id": 112636,
+     "rank": 1,
+     "nodeID": 90746
+    },
+    {
+     "id": 112639,
+     "rank": 1,
+     "nodeID": 90748
+    },
+    {
+     "id": 112640,
+     "rank": 2,
+     "nodeID": 90749
+    },
+    {
+     "id": 112642,
+     "rank": 1,
+     "nodeID": 90750
+    },
+    {
+     "id": 112643,
+     "rank": 2,
+     "nodeID": 90751
+    },
+    {
+     "id": 112644,
+     "rank": 1,
+     "nodeID": 90752
+    },
+    {
+     "id": 112646,
+     "rank": 1,
+     "nodeID": 90754
+    },
+    {
+     "id": 112650,
+     "rank": 1,
+     "nodeID": 90758
+    },
+    {
+     "id": 112652,
+     "rank": 1,
+     "nodeID": 90760
+    },
+    {
+     "id": 112654,
+     "rank": 1,
+     "nodeID": 90762
+    },
+    {
+     "id": 112655,
+     "rank": 1,
+     "nodeID": 90763
+    },
+    {
+     "id": 112657,
+     "rank": 1,
+     "nodeID": 90764
+    },
+    {
+     "id": 117145,
+     "rank": 1,
+     "nodeID": 94562
+    },
+    {
+     "id": 117168,
+     "rank": 1,
+     "nodeID": 94580
+    },
+    {
+     "id": 117170,
+     "rank": 1,
+     "nodeID": 94582
+    },
+    {
+     "id": 117708,
+     "rank": 1,
+     "nodeID": 95111
+    },
+    {
+     "id": 117712,
+     "rank": 1,
+     "nodeID": 95115
+    },
+    {
+     "id": 117713,
+     "rank": 1,
+     "nodeID": 95116
+    },
+    {
+     "id": 117715,
+     "rank": 1,
+     "nodeID": 95118
+    },
+    {
+     "id": 117718,
+     "rank": 1,
+     "nodeID": 95121
+    },
+    {
+     "id": 117725,
+     "rank": 1,
+     "nodeID": 95128
+    },
+    {
+     "id": 117730,
+     "rank": 1,
+     "nodeID": 95133
+    },
+    {
+     "id": 117731,
+     "rank": 1,
+     "nodeID": 95134
+    },
+    {
+     "id": 117734,
+     "rank": 1,
+     "nodeID": 95137
+    },
+    {
+     "id": 117738,
+     "rank": 1,
+     "nodeID": 95141
+    },
+    {
+     "id": 117740,
+     "rank": 1,
+     "nodeID": 90741
+    },
+    {
+     "id": 123370,
+     "rank": 1,
+     "nodeID": 99842
+    },
+    {
+     "id": 125615,
+     "rank": 1,
+     "nodeID": 101714
+    },
+    {
+     "id": 125619,
+     "rank": 1,
+     "nodeID": 101715
+    },
+    {
+     "id": 136021,
+     "rank": 1,
+     "nodeID": 109763
+    },
+    {
+     "id": 136022,
+     "rank": 1,
+     "nodeID": 109764
+    },
+    {
+     "id": 136023,
+     "rank": 1,
+     "nodeID": 109765
+    },
+    {
+     "id": 136881,
+     "rank": 1,
+     "nodeID": 110323
+    },
+    {
+     "id": 136882,
+     "rank": 1,
+     "nodeID": 110324
+    },
+    {
+     "id": 137062,
+     "rank": 1,
+     "nodeID": 110432
+    },
+    {
+     "id": 137063,
+     "rank": 2,
+     "nodeID": 110432
+    },
+    {
+     "id": 137064,
+     "rank": 1,
+     "nodeID": 110432
+    },
+    {
+     "id": 117737,
+     "rank": 1,
+     "nodeID": 95140
+    },
+    {
+     "id": 112585,
+     "rank": 1,
+     "nodeID": 90697
+    },
+    {
+     "id": 117146,
+     "rank": 1,
+     "nodeID": 94563
+    },
+    {
+     "id": 112522,
+     "rank": 1,
+     "nodeID": 90637
+    },
+    {
+     "id": 136807,
+     "rank": 1,
+     "nodeID": 90701
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271510,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Spirit Shroud",
+     "itemLevel": 344,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      6652,
+      13335,
+      13696,
+      13847,
+      13848,
+      13692,
+      13698,
+      1597,
+      13695
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      },
+      {
+       "id": 240918,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271508,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Voodoo Guards",
+     "itemLevel": 334,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      13335,
+      13694,
+      6652,
+      13697,
+      12854
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 44694,
+     "slot": 3,
+     "quality": 2,
+     "icon": "inv_misc_bandage_08.jpg",
+     "name": "Antiseptic-Soaked Dressing",
+     "itemLevel": 1
+    },
+    {
+     "id": 271513,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Banded Poncho",
+     "itemLevel": 334,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      13334,
+      6652,
+      12854,
+      14049,
+      13690,
+      13698,
+      1587
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268256,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_leather_raiddruidulatek_d_01.jpg",
+     "name": "Sash of the Forlorn Vessel",
+     "itemLevel": 344,
+     "bonusIDs": [
+      42,
+      13696,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271509,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Reinforced Pants",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 244569,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_leather_questbloodelf_b_01.jpg",
+     "name": "Silvermoon Agent's Sneakers",
+     "itemLevel": 331,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836
+     ]
+    },
+    {
+     "id": 244576,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_leather_questbloodelf_b_01.jpg",
+     "name": "Silvermoon Agent's Deflectors",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      12715,
+      8791,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271511,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Fanged Grips",
+     "itemLevel": 334,
+     "bonusIDs": [
+      13335,
+      13691,
+      6652,
+      13697,
+      12854
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 281029,
+     "slot": 10,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240967,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_orange.jpg"
+      }
+     ]
+    },
+    {
+     "id": 268249,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Vile Alchemist's Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 13,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271093,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_knife_1h_ulatekfang_d_01_poison.jpg",
+     "name": "Zatha'tek, Breath of Corruption",
+     "itemLevel": 341,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 237837,
+     "slot": 16,
+     "quality": 4,
+     "icon": "inv_knife_1h_questbloodelf_b_02.jpg",
+     "name": "Farstrider's Mercy",
+     "itemLevel": 337,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      12214,
+      13667,
+      13852,
+      12497,
+      13751,
+      14001,
+      13771,
+      8960,
+      8791,
+      13836
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    261
+   ],
+   "factionID": 1
+  }
+ },
+ "r3_Charrend": {
+  "name": "Charrend",
+  "id": 5,
+  "guid": 249396146,
+  "type": "Rogue",
+  "server": "Mal'Ganis",
+  "region": "US",
+  "icon": "Rogue-Subtlety",
+  "specs": [
+   {
+    "spec": "Subtlety",
+    "count": 1
+   }
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 0,
+  "healthstoneUse": 0,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Agility": {
+     "min": 2809,
+     "max": 2809
+    },
+    "Mastery": {
+     "min": 1524,
+     "max": 1524
+    },
+    "Crit": {
+     "min": 940,
+     "max": 940
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Stamina": {
+     "min": 45480,
+     "max": 45480
+    },
+    "Avoidance": {
+     "min": 154,
+     "max": 154
+    },
+    "Haste": {
+     "min": 820,
+     "max": 820
+    },
+    "Versatility": {
+     "min": 123,
+     "max": 123
+    },
+    "Leech": {
+     "min": 221,
+     "max": 221
+    }
+   },
+   "talents": [],
+   "talentTree": [
+    {
+     "id": 112521,
+     "rank": 1,
+     "nodeID": 90636
+    },
+    {
+     "id": 112523,
+     "rank": 1,
+     "nodeID": 90638
+    },
+    {
+     "id": 112525,
+     "rank": 2,
+     "nodeID": 90639
+    },
+    {
+     "id": 112526,
+     "rank": 1,
+     "nodeID": 90640
+    },
+    {
+     "id": 112572,
+     "rank": 1,
+     "nodeID": 90684
+    },
+    {
+     "id": 112574,
+     "rank": 1,
+     "nodeID": 90686
+    },
+    {
+     "id": 112575,
+     "rank": 1,
+     "nodeID": 90687
+    },
+    {
+     "id": 112578,
+     "rank": 1,
+     "nodeID": 90690
+    },
+    {
+     "id": 112580,
+     "rank": 1,
+     "nodeID": 90692
+    },
+    {
+     "id": 112583,
+     "rank": 1,
+     "nodeID": 90695
+    },
+    {
+     "id": 112588,
+     "rank": 1,
+     "nodeID": 90700
+    },
+    {
+     "id": 112592,
+     "rank": 1,
+     "nodeID": 90704
+    },
+    {
+     "id": 112594,
+     "rank": 2,
+     "nodeID": 90706
+    },
+    {
+     "id": 112597,
+     "rank": 1,
+     "nodeID": 90709
+    },
+    {
+     "id": 112598,
+     "rank": 1,
+     "nodeID": 90710
+    },
+    {
+     "id": 112603,
+     "rank": 1,
+     "nodeID": 90715
+    },
+    {
+     "id": 112604,
+     "rank": 1,
+     "nodeID": 90716
+    },
+    {
+     "id": 112609,
+     "rank": 1,
+     "nodeID": 90721
+    },
+    {
+     "id": 112610,
+     "rank": 1,
+     "nodeID": 90722
+    },
+    {
+     "id": 112611,
+     "rank": 1,
+     "nodeID": 90723
+    },
+    {
+     "id": 112612,
+     "rank": 1,
+     "nodeID": 90724
+    },
+    {
+     "id": 112614,
+     "rank": 1,
+     "nodeID": 90726
+    },
+    {
+     "id": 112615,
+     "rank": 1,
+     "nodeID": 90727
+    },
+    {
+     "id": 112618,
+     "rank": 1,
+     "nodeID": 90730
+    },
+    {
+     "id": 112619,
+     "rank": 1,
+     "nodeID": 90731
+    },
+    {
+     "id": 112620,
+     "rank": 2,
+     "nodeID": 90732
+    },
+    {
+     "id": 112621,
+     "rank": 1,
+     "nodeID": 90733
+    },
+    {
+     "id": 112623,
+     "rank": 1,
+     "nodeID": 90734
+    },
+    {
+     "id": 112625,
+     "rank": 1,
+     "nodeID": 90735
+    },
+    {
+     "id": 112628,
+     "rank": 1,
+     "nodeID": 90738
+    },
+    {
+     "id": 112629,
+     "rank": 1,
+     "nodeID": 90739
+    },
+    {
+     "id": 112630,
+     "rank": 1,
+     "nodeID": 90740
+    },
+    {
+     "id": 112632,
+     "rank": 1,
+     "nodeID": 90742
+    },
+    {
+     "id": 112633,
+     "rank": 1,
+     "nodeID": 90743
+    },
+    {
+     "id": 112634,
+     "rank": 1,
+     "nodeID": 90744
+    },
+    {
+     "id": 112635,
+     "rank": 1,
+     "nodeID": 90745
+    },
+    {
+     "id": 112636,
+     "rank": 1,
+     "nodeID": 90746
+    },
+    {
+     "id": 112639,
+     "rank": 1,
+     "nodeID": 90748
+    },
+    {
+     "id": 112640,
+     "rank": 2,
+     "nodeID": 90749
+    },
+    {
+     "id": 112642,
+     "rank": 1,
+     "nodeID": 90750
+    },
+    {
+     "id": 112643,
+     "rank": 2,
+     "nodeID": 90751
+    },
+    {
+     "id": 112644,
+     "rank": 1,
+     "nodeID": 90752
+    },
+    {
+     "id": 112646,
+     "rank": 1,
+     "nodeID": 90754
+    },
+    {
+     "id": 112652,
+     "rank": 1,
+     "nodeID": 90760
+    },
+    {
+     "id": 112654,
+     "rank": 1,
+     "nodeID": 90762
+    },
+    {
+     "id": 112655,
+     "rank": 1,
+     "nodeID": 90763
+    },
+    {
+     "id": 112657,
+     "rank": 1,
+     "nodeID": 90764
+    },
+    {
+     "id": 117145,
+     "rank": 1,
+     "nodeID": 94562
+    },
+    {
+     "id": 117168,
+     "rank": 1,
+     "nodeID": 94580
+    },
+    {
+     "id": 117170,
+     "rank": 1,
+     "nodeID": 94582
+    },
+    {
+     "id": 117708,
+     "rank": 1,
+     "nodeID": 95111
+    },
+    {
+     "id": 117712,
+     "rank": 1,
+     "nodeID": 95115
+    },
+    {
+     "id": 117715,
+     "rank": 1,
+     "nodeID": 95118
+    },
+    {
+     "id": 117718,
+     "rank": 1,
+     "nodeID": 95121
+    },
+    {
+     "id": 117725,
+     "rank": 1,
+     "nodeID": 95128
+    },
+    {
+     "id": 117730,
+     "rank": 1,
+     "nodeID": 95133
+    },
+    {
+     "id": 117731,
+     "rank": 1,
+     "nodeID": 95134
+    },
+    {
+     "id": 117734,
+     "rank": 1,
+     "nodeID": 95137
+    },
+    {
+     "id": 117738,
+     "rank": 1,
+     "nodeID": 95141
+    },
+    {
+     "id": 123370,
+     "rank": 1,
+     "nodeID": 99842
+    },
+    {
+     "id": 125619,
+     "rank": 1,
+     "nodeID": 101715
+    },
+    {
+     "id": 136021,
+     "rank": 1,
+     "nodeID": 109763
+    },
+    {
+     "id": 136022,
+     "rank": 1,
+     "nodeID": 109764
+    },
+    {
+     "id": 136023,
+     "rank": 1,
+     "nodeID": 109765
+    },
+    {
+     "id": 136807,
+     "rank": 1,
+     "nodeID": 90701
+    },
+    {
+     "id": 136881,
+     "rank": 1,
+     "nodeID": 110323
+    },
+    {
+     "id": 136882,
+     "rank": 1,
+     "nodeID": 110324
+    },
+    {
+     "id": 136883,
+     "rank": 1,
+     "nodeID": 110325
+    },
+    {
+     "id": 137062,
+     "rank": 1,
+     "nodeID": 110432
+    },
+    {
+     "id": 137063,
+     "rank": 2,
+     "nodeID": 110432
+    },
+    {
+     "id": 137064,
+     "rank": 1,
+     "nodeID": 110432
+    },
+    {
+     "id": 117172,
+     "rank": 1,
+     "nodeID": 90703
+    },
+    {
+     "id": 120132,
+     "rank": 1,
+     "nodeID": 95116
+    },
+    {
+     "id": 117737,
+     "rank": 1,
+     "nodeID": 95140
+    },
+    {
+     "id": 112585,
+     "rank": 1,
+     "nodeID": 90697
+    },
+    {
+     "id": 112606,
+     "rank": 1,
+     "nodeID": 90718
+    },
+    {
+     "id": 112650,
+     "rank": 1,
+     "nodeID": 90758
+    },
+    {
+     "id": 112522,
+     "rank": 1,
+     "nodeID": 90637
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271510,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Spirit Shroud",
+     "itemLevel": 344,
+     "permanentEnchant": 7961,
+     "permanentEnchantName": "Enchant Helm - Empowered Hex of Leeching",
+     "bonusIDs": [
+      6652,
+      13335,
+      13696,
+      13847,
+      13848,
+      13692,
+      13698,
+      1597
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240967,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_orange.jpg"
+      },
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271508,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Voodoo Guards",
+     "itemLevel": 334,
+     "permanentEnchant": 8031,
+     "permanentEnchantName": "Enchant Shoulders - Silvermoon's Mending",
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      13694,
+      13697,
+      1587
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 3428,
+     "slot": 3,
+     "quality": 2,
+     "icon": "inv_shirt_grey_01.jpg",
+     "name": "Common Gray Shirt",
+     "itemLevel": 1
+    },
+    {
+     "id": 271513,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Banded Poncho",
+     "itemLevel": 334,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      13334,
+      6652,
+      12854,
+      14049,
+      13690,
+      13698,
+      1587
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268256,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_leather_raiddruidulatek_d_01.jpg",
+     "name": "Sash of the Forlorn Vessel",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13696,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271509,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Reinforced Pants",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      13335,
+      43,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268261,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_leather_raidmonkulatek_d_01.jpg",
+     "name": "Bespittled Slitherslippers",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      12854
+     ]
+    },
+    {
+     "id": 244576,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_leather_questbloodelf_b_01.jpg",
+     "name": "Silvermoon Agent's Deflectors",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240906,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271511,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_leather_raidrogueulatek_d_01.jpg",
+     "name": "Chosen Bloodslayer's Fanged Grips",
+     "itemLevel": 334,
+     "bonusIDs": [
+      6652,
+      13335,
+      13691,
+      13697,
+      12854
+     ],
+     "setID": 2064
+    },
+    {
+     "id": 268249,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Vile Alchemist's Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      40,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240918,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281029,
+     "slot": 11,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 13,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      40,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271093,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_knife_1h_ulatekfang_d_01_poison.jpg",
+     "name": "Zatha'tek, Breath of Corruption",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 237837,
+     "slot": 16,
+     "quality": 4,
+     "icon": "inv_knife_1h_questbloodelf_b_02.jpg",
+     "name": "Farstrider's Mercy",
+     "itemLevel": 337,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      12214,
+      13852,
+      12497,
+      13751,
+      14001,
+      13771,
+      8960,
+      8791,
+      13836
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    261
+   ],
+   "factionID": 1
+  }
+ }
+}

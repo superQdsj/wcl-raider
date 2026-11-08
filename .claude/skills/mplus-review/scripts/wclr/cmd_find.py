@@ -55,7 +55,8 @@ def resolve_dungeon(client: Client, query: str) -> Tuple[int, str]:
 def find_runs(client: Client, eid: int, cls: Optional[str] = None, spec: Optional[str] = None,
               level: Optional[int] = None, want: int = 8) -> Tuple[List[Dict[str, Any]], str]:
     """返回 [{code, fid, level, duration, region, who: [(名字, 专精中文)], team}]；第二项说明取自哪个层数段。"""
-    brackets = [level, 0] if level else [0]
+    # WCL 大秘境排名的 bracket 比钥石层数小 1（bracket 22 返回的是 +23）
+    brackets = [level - 1, 0] if level else [0]
     for bracket in brackets:
         out: List[Dict[str, Any]] = []
         seen = set()
@@ -81,7 +82,7 @@ def find_runs(client: Client, eid: int, cls: Optional[str] = None, spec: Optiona
                             row["who"] += who
                     continue
                 seen.add(key)
-                out.append({"code": key[0], "fid": key[1], "level": r.get("bracketData") or r.get("hardModeLevel"),
+                out.append({"code": key[0], "fid": key[1], "level": r.get("hardModeLevel") or r.get("bracketData"),
                             "duration": r.get("duration"), "region": (r.get("server") or {}).get("region") or "",
                             "who": who, "team": [fmt.class_spec(t.get("class", ""), t.get("spec", ""))
                                                  for t in r.get("team") or []]})
