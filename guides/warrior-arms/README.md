@@ -8,7 +8,8 @@
 | --- | --- |
 | 红玉新生法池 | 第二版完成：[手册](2026-11-07-红玉新生法池-武器战.html) · [长图](2026-11-07-红玉新生法池-武器战.png)。参考录像：[Mjtwarrior](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=13) · [人艰不拆战](https://www.warcraftlogs.com/reports/Kzg6XDw3V2FnWZcd#fight=1) · [Rosebankk](https://www.warcraftlogs.com/reports/TFfB8XRw6HPVLjN2#fight=4) |
 | 毒牙祭坛 | 完成：[手册](2026-11-07-毒牙祭坛-武器战.html) · [长图](2026-11-07-毒牙祭坛-武器战.png)。参考录像：[末诚](https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=36) · [Mjtwarrior](https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=44) · [暗夜白昼](https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1) |
-| 其余六本 | 第一版质量低，内容和源材料都已删除，待按 skill 从采集开始重做 |
+| 密谋小径 | 完成（不用 skill，手工分析 +23）：[手册](2026-11-07-密谋小径-武器战.html) · [长图](2026-11-07-密谋小径-武器战.png)。参考录像：[Иутир](https://www.warcraftlogs.com/reports/vbq6AXY4ByjVgx2D#fight=29) · [Madenianarch](https://www.warcraftlogs.com/reports/fWtc3hx6GZaJTmbD#fight=39) · [Yarrgiwr](https://www.warcraftlogs.com/reports/tg6k3ZvFd24pJrhT#fight=4) |
+| 其余五本 | 第一版质量低，内容和源材料都已删除，待按 skill 从采集开始重做 |
 
 ## 文件
 
