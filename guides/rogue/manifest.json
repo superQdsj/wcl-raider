@@ -1,5 +1,5 @@
 {
-  "description": "Unmodified source snapshots from the original scratchpad; PNG screenshots, error logs, downloaded reference HTML (dl2), and absolute symlinks excluded.",
+  "description": "Unmodified source snapshots from the original scratchpad; PNG screenshots, error logs, downloaded reference HTML (dl2), and absolute symlinks excluded. 2026-11-08: timeline CSS fix (.mk.up stem below icon) applied to the HTML sources; hashes updated.",
   "files": [
     {
       "path": "build.py",
@@ -68,8 +68,8 @@
     },
     {
       "path": "duomugu/src.html",
-      "bytes": 44964,
-      "sha256": "81e0992b9ad75b9546f94397af044d81eb42e998b63645d6569df2f6ad2abfaf"
+      "bytes": 45054,
+      "sha256": "144c39c1618fe3d37cba5f089207682872a8f365099c19265a24dd0a26754c2a"
     },
     {
       "path": "duomugu/t.md",
@@ -213,8 +213,8 @@
     },
     {
       "path": "hongyu/rogue.src.html",
-      "bytes": 44579,
-      "sha256": "16ac3570fc2c26351cb6e4aad0e636435d52120ed50d786125fde9a63952bc7f"
+      "bytes": 44669,
+      "sha256": "a03ad5f22feae00ffcd809a1219d8dd62020cbdec79cdc84148b4580505638e2"
     },
     {
       "path": "hongyu/t.md",
@@ -458,8 +458,8 @@
     },
     {
       "path": "mimouxiaojing/head.html",
-      "bytes": 12923,
-      "sha256": "97746217b8d8e5717aae360b9c7a9be6d12f67d30e366fc1d8dc26779bd5cf2d"
+      "bytes": 13013,
+      "sha256": "a15f98f4cf81c08df8c11ea7b6df369b7da68b45c488ef2ce96b102712445a80"
     },
     {
       "path": "mimouxiaojing/icons.json",
@@ -468,8 +468,8 @@
     },
     {
       "path": "mimouxiaojing/src.html",
-      "bytes": 44224,
-      "sha256": "c8013efa726a00279a21f163296a9c9c43b3194f03f05f7d83f7b6150c7dc205"
+      "bytes": 44314,
+      "sha256": "3938ad43666fc93c8aefd9203ff8f39f0f209203528a66eee5dede1530b2174e"
     },
     {
       "path": "mimouxiaojing/tactics.md",
@@ -593,8 +593,8 @@
     },
     {
       "path": "naluolake/src.html",
-      "bytes": 44751,
-      "sha256": "12e86d1bf05204954321f06c79802b3e4f36d733484236244342a141231bac5b"
+      "bytes": 44841,
+      "sha256": "6db4694259183c82a7686a2b825148a011e33f6fd504b59a7d1db09738c9d1ea"
     },
     {
       "path": "naluolake/tactics.md",
@@ -678,8 +678,8 @@
     },
     {
       "path": "rogue.src.html",
-      "bytes": 36165,
-      "sha256": "cd3b8618a2ac132364556d183c7a6fb081bb738d62f012271f2b3648b28d126d"
+      "bytes": 36255,
+      "sha256": "aa5616f7152bfddf7392fc01f1e09430d8fef2e2cdef22fd1103a4beceae83dc"
     },
     {
       "path": "saitalisi/body.part",
@@ -838,8 +838,8 @@
     },
     {
       "path": "saitalisi/rogue.src.html",
-      "bytes": 42130,
-      "sha256": "0725f08c5c1a5bddc87dd01942fb9c3b49eabc9d2800676d1cc9653c9355f449"
+      "bytes": 42220,
+      "sha256": "2e3d983bccbb47fd529ae6508b8bcdc5a8577d82a55f17ae8a11084f1989b5eb"
     },
     {
       "path": "saitalisi/t.md",
@@ -1148,8 +1148,8 @@
     },
     {
       "path": "xukong/head.html",
-      "bytes": 13023,
-      "sha256": "9c6dbc9146d3f1e246ab3889faebf61a218bfbb4ef82cc4e76ffb520fb414519"
+      "bytes": 13113,
+      "sha256": "700f084d1e6600858586491cc6e5ae6546464a2139612a7979b9ad905f10f416"
     },
     {
       "path": "xukong/icons.json",
@@ -1163,8 +1163,8 @@
     },
     {
       "path": "xukong/src.html",
-      "bytes": 43894,
-      "sha256": "17ba789d751b2ea0b8c2c9f3481f8cb3b0fadd4b51289d533c3e7a77e7a74f5b"
+      "bytes": 43984,
+      "sha256": "d6006690455671cf1d8d5a300a3b653a152bc91b6d6ef62019a068bc6a0fa6cd"
     },
     {
       "path": "xukong/tactics.md",
@@ -1278,8 +1278,8 @@
     },
     {
       "path": "zhuwang/rogue.src.html",
-      "bytes": 43487,
-      "sha256": "4b1109939441f13035254e6c3a180d1c4a7d7272c6712eb1b89a0a96dacd4fcb"
+      "bytes": 43577,
+      "sha256": "9797062977301f1ece3df23609c4264ec7222d7d9a8d0f3721a735913248c527"
     },
     {
       "path": "zhuwang/t.md",
