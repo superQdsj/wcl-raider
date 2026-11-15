@@ -1,0 +1,440 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">KINGS' REST · MYTHIC+ · DEVOURER DEMON HUNTER FIELD CARD</div>
+    <h1><span class="cls">噬灭恶魔猎手</span><span class="dot">·</span>诸王之眠 应对手册</h1>
+    <p class="lede">噬灭在诸王之眠主要靠<b>两层疾影</b>。蛇之风、觉醒猛击、翻滚、震地之跃都是点得到全队或者必须去接的大伤害，看到读条就交一层。暗夜精灵另有一招：<b>影遁</b>能让姆沁巴的排干体液断掉，也能让阿卡阿里的翻滚直接取消。<b>瓦解</b>主要用来断木乃伊的恶疾排放，<b>吞噬魔法</b>偷掉爪牙身上的暗影束缚，爪牙当场消失。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时噬灭 ×3</b></span>
+      <span class="chip">英雄天赋 <b>Void-Scarred</b></span>
+      <span class="chip">核心 <b>疾影 / 黑暗 / 影遁 / 瓦解 / 吞噬魔法</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里保命技能交在哪</h2>
+  <p class="sub">一整场 +22 里，疾影、黑暗、影遁、瓦解和吞噬魔法分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(163,48,201,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:198589}}" alt="">疾影</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:196718}}" alt="">黑暗</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:58984}}" alt="">影遁（青圈，暗夜精灵）</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 / <img class="ic sm" src="{{I:278326}}" alt="">吞噬魔法（绿圈）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 1 · 黄金风蛇</div>
+      <div class="sig">看到<b>蛇之风开始读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+      <p>2 秒读条，之后 5 秒每秒一跳自然伤害打全队，还一直把人往外吹。读条时开疾影，10 秒正好盖住整阵风。疾影有两层，每一轮风都交得起。</p>
+    </article>
+    <article class="mo">
+      <div class="where">墓室 · 首领 2 殓尸者姆沁巴</div>
+      <div class="sig">看到<b>未完成的木乃伊读恶疾排放</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+      <p>恶疾排放让全队染病，12 秒里每 2 秒一跳自然伤害。墓室里和姆沁巴放出来的木乃伊都会读。点了诡计瓦解多 20 码射程，站在后排就能断。断成了还有恶魔笼头，自己受到的魔法伤害降低 15%。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 部族议会</div>
+      <div class="sig">看到<b>阿卡阿里施放翻滚</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 · 进 7 码 <span class="pill p-dr">减伤</span></div>
+      <p>阿卡阿里 6 秒后冲向被锁定的人，伤害由落点 7 码内的人平摊，无视护甲。全队都要站进去分，你也要进去，3 秒后开疾影。如果被锁定的是你，并且你是暗夜精灵，就开影遁，这次冲锋直接取消。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 祖尔之影</div>
+      <div class="sig">看到<b>祖尔的爪牙身上出现暗影束缚</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:278326}}" alt="">吞噬魔法 → 爪牙 <span class="pill p-imm">秒杀</span></div>
+      <p>祖尔之影隔一阵召出两只爪牙，身上带着暗影束缚：吸收伤害，造成的伤害提高 20%。这是魔法效果，<b>被移除时爪牙会直接消失</b>。偷掉一只，另一只交给队友打。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>三个关键处理</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1310761}}" alt="">部族议会的翻滚：进圈分摊，疾影和黑暗轮流</h3>
+      <p><b>翻滚</b>是征服者阿卡阿里的冲锋。他先锁定一名玩家，6 秒后冲过去，一下物理伤害由落点 7 码内的人平摊，无视护甲。站进去的人越多每人分得越少，全队五个人都要挤进去，每人还要吃九十多万。</p>
+      <p>阿卡阿里活着的阶段里翻滚一轮接一轮，<b>疾影两层</b>正好拿来接。第一下进圈后开一层，下一下还有就再开；两层都在冷却时交<b>黑暗</b>，8 码范围正好罩住挤在一起的全队。</p>
+      <p>被锁定的人是你，并且你是<b>暗夜精灵</b>：被锁定后开<b>影遁</b>。阿卡阿里丢了目标，这次翻滚不会落下来，全队都不用分摊。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:267494}}" alt=""><div><b>翻滚锁定</b><span>信号 · 6 秒后冲锋</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>进 7 码 + 疾影</b><span>3 秒左右按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1310761}}" alt=""><div><b>冲锋落地</b><span>五人平摊</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:196718}}" alt=""><div><b>下一轮</b><span>疾影没有就黑暗</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一次翻滚分到你身上：不开减伤约 96 万，开疾影约 74 万，影遁取消冲锋为 0">
+      <div class="cap">一次翻滚分到你身上的伤害</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">96 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:77%">74 万</span></div></div>
+      <div class="bar-row"><span>被点名后影遁</span><div class="bar"><span class="on" style="width:1.5%"></span><em class="em" style="left:calc(1.5% + 8px)">0 · 冲锋取消</em></div></div>
+      <div class="delta">−100%<small>影遁那次全队都是 0</small></div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1312146}}" alt="">殓尸者姆沁巴：猛击开疾影，木乃伊必断，排干体液影遁</h3>
+      <p>姆沁巴这场有三样东西要按键。<b>觉醒猛击</b>是 3 秒读条，落地对全队一下暗影伤害，并打开随机墓穴放出未完成的木乃伊。读条时开疾影。</p>
+      <p>放出来的<b>未完成的木乃伊</b>会读恶疾排放，全队染病 12 秒。木乃伊一出来就盯着它的读条，用瓦解断掉。</p>
+      <p><b>排干体液</b>是姆沁巴对单人的 6 秒引导，每 2 秒一跳自然伤害并引爆酸液，吃满四跳在两百万上下。暗夜精灵吃完第一跳就开<b>影遁</b>，姆沁巴丢了目标，引导当场断掉，后面三跳和爆炸酸液都没有了。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1312146}}" alt=""><div><b>觉醒猛击读条</b><span>3 秒 · 全队暗影</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>读条时按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:267763}}" alt=""><div><b>木乃伊读恶疾排放</b><span>瓦解断掉</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:58984}}" alt=""><div><b>排干体液点你</b><span>第一跳后影遁</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一轮排干体液：吃满四跳约 200 万，第一跳后影遁约 60 万">
+      <div class="cap">一轮排干体液打在身上</div>
+      <div class="bar-row"><span>吃满四跳</span><div class="bar"><span class="off" style="width:100%">约 200 万</span></div></div>
+      <div class="bar-row"><span>第一跳后影遁</span><div class="bar"><span class="on" style="width:30%">60 万</span></div></div>
+      <div class="delta">−70%<small>也不会再炸酸液</small></div>
+      <div class="cap">觉醒猛击：不开减伤约 83 万，开疾影约 62 万。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1303324}}" alt="">达萨大王：震地之跃交疾影，镀金毁灭用第二层</h3>
+      <p>达萨的阶段是两样东西交替来。<b>镀金毁灭</b>读 6 秒，落地对全队一下火焰伤害，再跟 15 秒灼烧。之后提扎拉读 4 秒<b>震地之跃</b>，接着连跳五次，每次落在一名玩家身上，8 码内的人都吃物理伤害，五跳里常有一跳落到你。</p>
+      <p>疾影优先给震地之跃：看到读条就开，10 秒盖住五连跳。镀金毁灭读条时手里还有一层疾影，就一起交掉；两层都在冷却就留着，先保证下一轮震地之跃有疾影。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1303267}}" alt=""><div><b>镀金毁灭读条</b><span>6 秒 · 有第二层就交</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1303324}}" alt=""><div><b>震地之跃读条</b><span>4 秒</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>读条时按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1303327}}" alt=""><div><b>五连跳</b><span>落到你的那一下</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="震地之跃落到你身上：不开减伤约 90 万，开疾影约 71 万">
+      <div class="cap">震地之跃落到你身上的一下</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">90 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:79%">71 万</span></div></div>
+      <div class="delta">−25%<small>疾影两层轮着用</small></div>
+      <div class="cap">镀金毁灭落地那一下七八十万，后面 15 秒灼烧还在跳，别在这时把两层疾影都交光。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 黄金风蛇</h3><span class="kind">TRASH · 爪牙、影裔勇士、复活的妖术师</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:269936}}" alt=""><div><div class="n">锁定</div><div class="s">祖尔的爪牙开怪就盯人追 <span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:207684}}" alt="">悲苦咒符 <span class="pill p-cc">控制</span></div>
+          <div class="why">开怪丢在爪牙堆里，迷惑 15 秒，追不了人</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1305945}}" alt=""><div><div class="n">暗影旋风斩</div><div class="s">影裔勇士读 4 秒，100 码 <span class="tag magic">暗影</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">躲不开，读条时开，两层轮着交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1258431}}" alt=""><div><div class="n">暗影箭</div><div class="s">复活的妖术师读条 <span class="tag magic">暗影</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">妖术师站在后面，远程瓦解够得着</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:269972}}" alt=""><div><div class="n">妖术齐射</div><div class="s">妖术师群体读条，挂 12 秒 <span class="tag magic">暗影</span><span class="tag">诅咒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1241937}}" alt="">灵魂献祭 <span class="pill p-clr">清除</span></div>
+          <div class="why">点了灵魂净化，献祭移除一个诅咒，顺手回血</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>黄金风蛇</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1311987}}" alt=""><div><div class="n">蛇之风</div><div class="s">2 秒读条，5 秒每秒一跳并击退 <span class="tag fel">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+          <div class="why">读条时开，10 秒盖住五跳；每轮都交</div>
+        </div>
+        <div class="note">风蛇这场全队承伤最大的就是蛇之风。疾影两层，<b>每一轮风都交一层</b>，不用给别的留。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>风蛇 → 墓室</h3><span class="kind">TRASH · 帕特拉女王、阿库尔大王、议事厅、提玛吉和沃希</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297970}}" alt=""><div><div class="n">骤裂 → 鲜血吸取</div><div class="s">血誓刺客上 18 秒流血，阿库尔读 2.5 秒抽所有流血的人 <span class="tag bleed">流血</span><span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:196718}}" alt="">黑暗 / 疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">刺客会给好几个人上流血，抽血时黑暗罩全队；自己在流血就再开疾影</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:270901}}" alt=""><div><div class="n">邪恶愈合</div><div class="s">总管姆巴拉引导，10 秒每 2 秒回 7% <span class="tag">治疗</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">10 秒回血引导，一读就断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294972}}" alt=""><div><div class="n">灵魂之箭</div><div class="s">沃希女王一直读 <span class="tag magic">暗影</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">沃希一直读，看到就断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>墓室</h3><span class="kind">TRASH · 防腐液、未完成的木乃伊、葬礼构造体</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:267763}}" alt=""><div><div class="n">恶疾排放</div><div class="s">未完成的木乃伊读条，全队染病 12 秒 <span class="tag fel">自然</span><span class="tag">疾病</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">木乃伊一读就断，断成了恶魔笼头再减 15% 魔法伤害</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:271555}}" alt=""><div><div class="n">埋葬 · 防腐液成团</div><div class="s">构造体把人埋进墓穴，防腐液和木乃伊挤成一堆 <span class="tag">多目标</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">昏迷</span></div>
+          <div class="why">一下晕住整堆，给队友腾出救人的时间</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>殓尸者姆沁巴</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1312146}}" alt=""><div><div class="n">觉醒猛击</div><div class="s">3 秒读条，打开墓穴放出木乃伊 <span class="tag magic">暗影</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">每一下猛击都交，两层够用</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:267763}}" alt=""><div><div class="n">恶疾排放</div><div class="s">猛击放出来的木乃伊读条 <span class="tag fel">自然</span><span class="tag">疾病</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">猛击放出一只就断一只</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:267618}}" alt=""><div><div class="n">排干体液</div><div class="s">姆沁巴对单人引导 6 秒，每 2 秒一跳并引爆酸液 <span class="tag fel">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">断引导</span></div>
+          <div class="why">暗夜精灵吃完第一跳就开，只吃一跳，后面不再炸酸液</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>姆沁巴 → 部族议会</h3><span class="kind">TRASH · 皇家狂战士、幻影妖术祭司、萨满祭司</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301851}}" alt=""><div><div class="n">嗜血飞斧</div><div class="s">皇家狂战士的飞斧追两个人，流血 12 秒 <span class="tag bleed">流血</span><span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">被追到就开，10 秒疾影盖住大半段流血</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1295125}}" alt=""><div><div class="n">幽灵弹</div><div class="s">幻影妖术祭司读条 <span class="tag magic">暗影</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">妖术祭司也读妖术，看到读条就断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>部族议会</h3><span class="kind">BOSS 3 · 阿卡阿里 / 扎纳扎尔 / 库拉</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1310761}}" alt=""><div><div class="n">翻滚</div><div class="s">阿卡阿里 6 秒后冲向锁定的人，7 码平摊 <span class="tag">物理</span><span class="tag">无视护甲</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">进圈 + 疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">全队都要进来分，3 秒左右开疾影</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1310761}}" alt=""><div><div class="n">翻滚 · 疾影两层都在冷却</div><div class="s">全队挤在落点 <span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:196718}}" alt="">黑暗 <span class="pill p-dr">减伤</span></div>
+          <div class="why">8 码罩住挤在一起的五个人</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:267494}}" alt=""><div><div class="n">翻滚锁定的是你</div><div class="s">身上出现「成为翻滚的目标」 <span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:58984}}" alt="">影遁 <span class="pill p-imm">取消</span></div>
+          <div class="why">暗夜精灵专用，冲锋不会落下来，全队都不吃</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:267273}}" alt=""><div><div class="n">毒性新星</div><div class="s">智者扎纳扎尔读条，全队中毒 12 秒 <span class="tag poison">自然</span><span class="tag poison">中毒</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">扎纳扎尔阶段每一个都断，漏一个就是 12 秒全队毒</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>部族议会 → 达萨</h3><span class="kind">TRASH · 祖尔之影和爪牙</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:269935}}" alt=""><div><div class="n">暗影束缚</div><div class="s">祖尔之影召出两只爪牙，身上带吸收盾、增伤 20% <span class="tag magic">魔法</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:278326}}" alt="">吞噬魔法 → 爪牙 <span class="pill p-imm">秒杀</span></div>
+          <div class="why">束缚被移除时爪牙直接消失，不用打穿那层盾</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1298317}}" alt=""><div><div class="n">黑暗启示</div><div class="s">点名 5 秒后爆炸，20 码 <span class="tag magic">暗影</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">离开人群 + 疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">点到自己先跑出 20 码别炸到队友，再开疾影</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>达萨大王 · 提扎拉</h3><span class="kind">BOSS 4</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:269369}}" alt=""><div><div class="n">致命咆哮</div><div class="s">莱班读条，全队暗影伤害 + 恐惧 4 秒 <span class="tag magic">暗影</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">一断就省掉全队四秒失控</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1303324}}" alt=""><div><div class="n">震地之跃</div><div class="s">提扎拉读 4 秒后连跳五次，落点 8 码 <span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，盖住整串五连跳</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1303267}}" alt=""><div><div class="n">镀金毁灭</div><div class="s">达萨读 6 秒，落地一下 + 15 秒灼烧 <span class="tag fel">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">第二层疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">手里还有一层才交，下一轮震地之跃要用</div>
+        </div>
+        <div class="note">这场是<b>镀金毁灭 → 震地之跃</b>一组一组来。疾影两层：震地之跃每次都交一层，镀金毁灭看还有没有。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:198589}}" alt=""><div><div class="nm">疾影</div><span class="pill p-dr">减伤 25% · 两层</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>暗影旋风斩、蛇之风、觉醒猛击、翻滚、震地之跃、嗜血飞斧</dd><dt>时机</dt><dd>读条时按；点了恶魔韧性有两层</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:58984}}" alt=""><div><div class="nm">影遁（暗夜精灵）</div><span class="pill p-imm">断引导 · 取消冲锋</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>姆沁巴的排干体液、阿卡阿里锁定你的翻滚</dd><dt>时机</dt><dd>排干体液吃完第一跳；翻滚冲锋落下之前</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:183752}}" alt=""><div><div class="nm">瓦解</div><span class="pill p-clr">打断 · 远程</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>恶疾排放、毒性新星、幽灵弹、灵魂之箭、邪恶愈合、暗影箭、致命咆哮</dd><dt>时机</dt><dd>木乃伊和扎纳扎尔优先；断成了魔法伤害再降 15%</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:278326}}" alt=""><div><div class="nm">吞噬魔法</div><span class="pill p-imm">偷增益</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>祖尔的爪牙身上的暗影束缚，偷掉爪牙直接消失</dd><dt>时机</dt><dd>祖尔之影每次召出爪牙后</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:196718}}" alt=""><div><div class="nm">黑暗</div><span class="pill p-dr">8 码 · 全队</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>阿库尔的鲜血吸取、疾影在冷却时的翻滚</dd><dt>时机</dt><dd>全队挤在一起吃同一下时</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1234195}}" alt=""><div><div class="nm">虚空新星</div><span class="pill p-cc">群体昏迷 2 秒</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>墓室里挤成一堆的防腐液和木乃伊</dd><dt>时机</dt><dd>有人被埋葬、怪成团时</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:207684}}" alt=""><div><div class="nm">悲苦咒符</div><span class="pill p-cc">迷惑 15 秒</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>开场盯人的祖尔的爪牙</dd><dt>时机</dt><dd>开怪丢进爪牙堆；2 秒后生效</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1241937}}" alt=""><div><div class="nm">灵魂献祭</div><span class="pill p-clr">清诅咒 · 回血</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>复活的妖术师的妖术齐射</dd><dt>时机</dt><dd>诅咒上身后；点了灵魂净化才清</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+22 高手同款噬灭天赋，英雄天赋 Void-Scarred。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1266307}}" alt=""><div><b>恶魔韧性</b><span>疾影多一层充能，蛇之风、翻滚、震地之跃都靠它轮着接</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:278326}}" alt=""><div><b>吞噬魔法</b><span>偷掉爪牙身上的暗影束缚，爪牙当场消失</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1266329}}" alt=""><div><b>恶魔笼头</b><span>瓦解打断成功后 12 秒魔法伤害降低 15%</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1223171}}" alt=""><div><b>诡计</b><span>瓦解、吞噬魔法施法距离多 20 码，站后排就能断木乃伊</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389783}}" alt=""><div><b>漆黑</b><span>黑暗冷却缩短 120 秒，鲜血吸取和翻滚都能交</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1266496}}" alt=""><div><b>灵魂净化</b><span>灵魂献祭移除一个诅咒，清掉妖术齐射</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1234195}}" alt=""><div><b>虚空新星</b><span>群体昏迷 2 秒，墓室里晕住防腐液</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:207684}}" alt=""><div><b>悲苦咒符</b><span>开场控住盯人的爪牙</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389696}}" alt=""><div><b>伊利达雷的知识</b><span>受到的魔法伤害降低 3%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/ZHN1DnYbw8JhAfQ7#fight=5">虚空小土豆 29:37</a>
+      <a href="https://www.warcraftlogs.com/reports/p6YJvzqaQFLwDTW2#fight=2">Daysixx 29:56（时间轴和天赋）</a>
+      <a href="https://www.warcraftlogs.com/reports/qbnM1QjXAVJm6KNd#fight=1">Yamatekudasi 30:09</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">噬灭恶魔猎手 · 诸王之眠 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

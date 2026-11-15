@@ -1,0 +1,383 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">DEN OF NALORAKK · MYTHIC+ · DEVOURER DEMON HUNTER FIELD CARD</div>
+    <h1><span class="cls">噬灭恶魔猎手</span><span class="dot">·</span>纳洛拉克的洞穴 应对手册</h1>
+    <p class="lede">纳洛拉克的洞穴里，噬灭主要靠<b>两层疾影</b>，留给全队一起吃的大伤害：囤宝狂人的咆哮、决意化身的冰川之墓、老练的战争使者的原始回响，还有纳洛拉克点到你的回响重击。<b>瓦解</b>这本很忙：地语看护者、酷寒重殴者、寒冬哨兵战里的碎裂的震颤核心、雷缚秘法师和纳尼亚，全程都有要断的读条。点了灵魂净化，<b>灵魂献祭</b>还能清掉饥荒雕像的诅咒。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时噬灭 ×3</b></span>
+      <span class="chip">英雄天赋 <b>Void-Scarred</b></span>
+      <span class="chip">核心 <b>疾影 / 瓦解 / 灵魂献祭 / 黑暗</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里技能交在哪</h2>
+  <p class="sub">一整场 +22 里，疾影、黑暗和瓦解分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(163,48,201,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:198589}}" alt="">疾影</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:196718}}" alt="">黑暗</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:183752}}" alt="">瓦解（绿圈）</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:1261776}}" alt="">防御姿态（青圈，首领机制）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 1 · 囤宝狂人</div>
+      <div class="sig">看到<b>贪婪咆哮 / 饕餮怒吼开始读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+      <p>3 秒读条，落地对全队一下物理伤害，之后 10 秒每秒一跳，全部无视护甲。读条时开疾影，10 秒正好盖住落地那一下和整段持续伤害。</p>
+    </article>
+    <article class="mo">
+      <div class="where">开场小怪 · 饥荒雕像</div>
+      <div class="sig">看到<b>身上挂着饥肠辘辘</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:1241937}}" alt="">灵魂献祭 <span class="pill p-clr">清诅咒</span></div>
+      <p>饥荒雕像读 6 秒，全队最大生命值降低 15%，持续 25 秒，还会叠层。这是诅咒。点了<b>灵魂净化</b>，灵魂献祭每按一次清掉一层，血量上限马上回来。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 2 · 寒冬哨兵</div>
+      <div class="sig">看到<b>碎裂的震颤核心读寒冬帷幕</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+      <p>4 秒读条，读完全队吃一下冰霜伤害，并且受到的冰霜伤害提高 10%，持续 20 秒，可以叠加。寒冬哨兵这场几乎全是冰霜伤害，漏一个后面每一下都更疼。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 纳洛拉克</div>
+      <div class="sig">看到<b>身上出现回响重击标记</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">离开人群 + 疾影 <span class="pill p-dr">减伤</span></div>
+      <p>标记 4 秒后，纳洛拉克的回响落在你脚下，8 码内的人都吃自然伤害。带着标记走开，别和其他被点的人叠在一起，标记期间开疾影。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>三个关键处理</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1242860}}" alt="">纳洛拉克：回响重击交疾影，压制强攻躲到祖尔加拉身后</h3>
+      <p>纳洛拉克的技能是成组来的：先<b>回响重击</b>，8 秒后<b>压制强攻</b>，算一组。25 秒后再来一组，之后停 40 秒左右，进下一轮。</p>
+      <p>第一步，回响重击读条的同时就会点人，被点的人身上挂 4 秒标记。标记到你，就带着它走出人群，离别的被点名的人 8 码以上，再按疾影。每次被点都交一层，两层轮着用。</p>
+      <p>第二步，压制强攻读 7 秒，然后 3 秒里每秒一跳物理伤害，打全队，无视护甲。读条时跑到<b>祖尔加拉身后</b>，身上会出现<b>防御姿态</b>，这一招的伤害降低 80%。一直站到第三跳打完再动，提前离开，那一跳就是九十多万。疾影不交给压制强攻，留给回响重击。</p>
+      <p>第三步，最后一跳把全队击退，祖尔加拉被打晕，纳洛拉克接着对她放强力猛击。回到位置，等下一次回响重击。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1242860}}" alt=""><div><b>回响重击标记你</b><span>4 秒后落地</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>走出 8 码 + 疾影</b><span>标记期间按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1297792}}" alt=""><div><b>压制强攻读条</b><span>7 秒</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1261776}}" alt=""><div><b>祖尔加拉身后</b><span>防御姿态 · 站满三跳</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一下回响重击：不开减伤约 83 万，开疾影约 66 万">
+      <div class="cap">一下回响重击打在你身上</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">83 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:79%">66 万</span></div></div>
+      <div class="delta">−21%<small>每次被点交一层</small></div>
+      <div class="cap">压制强攻一跳：站在祖尔加拉身后三十多万，提前离开的那一跳 92 万。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1235125}}" alt="">囤宝狂人：六轮咆哮，疾影轮着交，接不上用黑暗</h3>
+      <p>囤宝狂人每 40 秒左右咆哮一次，前两轮是<b>贪婪咆哮</b>，之后是<b>饕餮怒吼</b>，饕餮怒吼还会把人击退。两种都是 3 秒读条，落地一下物理伤害打全队，再跟 10 秒每秒一跳，全部无视护甲，躲不掉。</p>
+      <p>第一步，看到读条就开疾影。10 秒疾影刚好覆盖落地那一下和后面 10 秒的持续伤害，比落地后再开多挡好几跳。</p>
+      <p>第二步，第二层留给下一轮咆哮。中间的腐坏补给和剧毒孢子不交疾影。</p>
+      <p>第三步，连着几轮都交了疾影，总会碰上一轮两层都在充能。这一轮交<b>黑暗</b>，全队站在一起吃咆哮，8 码正好罩住。下一轮疾影又回来了。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1234681}}" alt=""><div><b>咆哮读条</b><span>3 秒 · 全队</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>读条时按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1235125}}" alt=""><div><b>落地 + 10 秒持续</b><span>疾影全程覆盖</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:196718}}" alt=""><div><b>没有疾影那一轮</b><span>黑暗</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="咆哮落地那一下：不开减伤约 83 万，开疾影约 65 万">
+      <div class="cap">咆哮落地那一下打在你身上</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">83 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:78%">65 万</span></div></div>
+      <div class="delta">−22%<small>后面 10 秒每跳也少 25%</small></div>
+      <div class="cap">咆哮之后紧跟着 10 秒每秒一跳，疾影晚开就只挡得住后半段。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1235829}}" alt="">冰川到寒冬哨兵：瓦解冰冷咆哮和寒冬帷幕，冰川之墓开疾影</h3>
+      <p>这一段要断的读条最多。走进冰川，先盯<b>酷寒重殴者</b>：它读 3.5 秒冰冷咆哮，吃到的人急速和移动速度都降低 50%。急速砍半，你的输出和读条都慢一半，每一个都用瓦解断掉。</p>
+      <p><b>决意化身</b>读 2 秒冰川之墓，把全队封进冰墓，每 2 秒一跳冰霜伤害，直到冰墓被打碎。看到读条就开疾影，冰墓里的每一跳都少 25%。</p>
+      <p>到了寒冬哨兵，<b>碎裂的震颤核心</b>读 4 秒寒冬帷幕：全队吃一下冰霜伤害，冰霜易伤 10%，持续 20 秒，还会叠。哨兵的寒冰暴雨和冰川折磨都是冰霜伤害，易伤叠上去整场都疼。核心一出来就盯着读条，瓦解断掉。点了恶魔笼头，断成以后 12 秒受到的魔法伤害再降低 15%。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1309919}}" alt=""><div><b>冰冷咆哮</b><span>酷寒重殴者 · 瓦解</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1241463}}" alt=""><div><b>冰川之墓</b><span>决意化身 · 疾影</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1235829}}" alt=""><div><b>寒冬帷幕</b><span>震颤核心 · 瓦解</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一次寒冬帷幕：漏断全队每人约 39 万并冰霜易伤，断掉为 0">
+      <div class="cap">一次寒冬帷幕打在每个人身上</div>
+      <div class="bar-row"><span>漏断</span><div class="bar"><span class="off" style="width:100%">39 万 · 易伤 20 秒</span></div></div>
+      <div class="bar-row"><span>瓦解断掉</span><div class="bar"><span class="on" style="width:1.5%"></span><em class="em" style="left:calc(1.5% + 8px)">0</em></div></div>
+      <div class="delta">−100%<small>五个人都不用吃</small></div>
+      <div class="cap">冰川之墓每一跳：不开减伤约 19 万，开疾影约 14 万。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 囤宝狂人</h3><span class="kind">TRASH · 锐眼掠击鹰、地语看护者、饥荒雕像、棘爪收集者</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238440}}" alt=""><div><div class="n">剃刀俯冲</div><div class="s">锐眼掠击鹰跳到玩家身上，10 秒每秒流血，可叠加 <span class="tag bleed">流血</span><span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:217832}}" alt="">禁锢 <span class="pill p-cc">控制</span></div>
+          <div class="why">开怪先关一只鹰，少一个往身上叠流血的</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1241214}}" alt=""><div><div class="n">大地之箭</div><div class="s">地语看护者读 2.5 秒 <span class="tag fel">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">单发接近 50 万，一读就断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297696}}" alt=""><div><div class="n">治疗之风</div><div class="s">地语看护者读 3.5 秒，给周围的怪每 2 秒回血 <span class="tag">治疗</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">和大地之箭轮着读，两样都断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238801}}" alt=""><div><div class="n">饥肠辘辘</div><div class="s">饥荒雕像读 6 秒，最大生命值 −15%，25 秒，可叠加 <span class="tag">诅咒</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1241937}}" alt="">灵魂献祭 <span class="pill p-clr">清除</span></div>
+          <div class="why">点了灵魂净化，按一次清一层，顺手回血</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238687}}" alt=""><div><div class="n">苦难盛宴</div><div class="s">饥渴之灵读 1.5 秒，之后 5 秒每秒一跳并吸血 <span class="tag magic">暗影</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">身上还叠着剃刀俯冲时开，一起盖住</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>囤宝狂人</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1235125}}" alt=""><div><div class="n">贪婪咆哮 / 饕餮怒吼</div><div class="s">3 秒读条，落地一下 + 10 秒每秒一跳 <span class="tag">物理</span><span class="tag">无视护甲</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+          <div class="why">读条时开，10 秒盖住落地和整段持续伤害</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1235125}}" alt=""><div><div class="n">饕餮怒吼 · 疾影两层都在冷却</div><div class="s">连交几轮后总有一轮接不上 <span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:196718}}" alt="">黑暗 <span class="pill p-dr">减伤</span></div>
+          <div class="why">8 码罩住全队，补上没有疾影的那一轮</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1241214}}" alt=""><div><div class="n">大地之箭 / 治疗之风</div><div class="s">首领战里的地语看护者 <span class="tag fel">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">看护者活着就一直读，看到就断</div>
+        </div>
+        <div class="note">前两轮是贪婪咆哮，之后四轮饕餮怒吼，大约 40 秒一轮。<b>疾影每一轮都交</b>，轮不上的那一轮用黑暗。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>囤宝狂人 → 冰川</h3><span class="kind">TRASH · 领地主母、地语看护者、棘爪收集者、锐眼掠击鹰</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1241214}}" alt=""><div><div class="n">大地之箭</div><div class="s">几只地语看护者轮着读 <span class="tag fel">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">这一波看护者多，专门盯一只断到死</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>冰川</h3><span class="kind">TRASH · 霜牙、酷寒重殴者、决意化身、冰川亡魂</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1309919}}" alt=""><div><div class="n">冰冷咆哮</div><div class="s">酷寒重殴者读 3.5 秒，急速和移动速度 −50% <span class="tag">减速</span><span class="tag">减急速</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">急速砍半，输出和读条都慢一半，每个都断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1241463}}" alt=""><div><div class="n">冰川之墓</div><div class="s">决意化身读 2 秒，全队冻进冰墓，每 2 秒一跳直到打碎 <span class="tag frost">冰霜</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">躲不掉，读条时开，冰墓里每跳少 25%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>寒冬哨兵</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1235829}}" alt=""><div><div class="n">寒冬帷幕</div><div class="s">碎裂的震颤核心读 4 秒，全队一下 + 冰霜易伤 10%，20 秒，可叠加 <span class="tag frost">冰霜</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">哨兵全是冰霜伤害，易伤一叠整场都疼</div>
+        </div>
+        <div class="note">核心一个接一个出来，<b>瓦解优先留给寒冬帷幕</b>，别在别的读条上把它交掉。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>寒冬哨兵 → 纳尼亚</h3><span class="kind">TRASH · 老练的战争使者、雷缚秘法师、羁绊驯兽师、图腾召唤者</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1246957}}" alt=""><div><div class="n">原始回响</div><div class="s">老练的战争使者读 3 秒，60 码，之后 3 秒每秒一跳，可叠加 <span class="tag">物理</span><span class="tag">无视护甲</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">60 码跑不出去，读条时开，几轮连着来就两层轮着交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297778}}" alt=""><div><div class="n">闪电箭 / 电弧</div><div class="s">雷缚秘法师读条；电弧 4 秒，弹 3 个人 <span class="tag fel">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">秘法师站在后面，诡计多 20 码，远远就能断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>神灵代言人纳尼亚</h3><span class="kind">TRASH · 纳尼亚、动荡图腾</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1290205}}" alt=""><div><div class="n">闪电箭</div><div class="s">纳尼亚读 2.5 秒 <span class="tag fel">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">纳尼亚一直读，轮到你就断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>纳洛拉克</h3><span class="kind">BOSS 3 · 祖尔加拉协助</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1242860}}" alt=""><div><div class="n">回响重击</div><div class="s">标记 4 秒，回响落在你脚下，8 码 <span class="tag fel">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">走开 + 疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">离开其他被点的人，标记期间开疾影</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297792}}" alt=""><div><div class="n">压制强攻</div><div class="s">7 秒读条，之后 3 秒每秒一跳，最后一下击退 <span class="tag">物理</span><span class="tag">无视护甲</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1261776}}" alt="">站到祖尔加拉身后 <span class="pill p-imm">−80%</span></div>
+          <div class="why">拿到防御姿态，站满三跳；这一招不用疾影</div>
+        </div>
+        <div class="note">回响重击和压制强攻一组一组来。<b>疾影两层都留给回响重击</b>，压制强攻靠祖尔加拉。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:198589}}" alt=""><div><div class="nm">疾影</div><span class="pill p-dr">减伤 25% · 两层</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>贪婪咆哮、饕餮怒吼、冰川之墓、原始回响、回响重击、苦难盛宴</dd><dt>时机</dt><dd>读条时按；点了恶魔韧性有两层</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:183752}}" alt=""><div><div class="nm">瓦解</div><span class="pill p-clr">打断 · 远程</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>寒冬帷幕、冰冷咆哮、大地之箭、治疗之风、雷缚秘法师和纳尼亚的闪电箭、电弧</dd><dt>时机</dt><dd>寒冬哨兵战优先寒冬帷幕；断成了魔法伤害再降 15%</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1241937}}" alt=""><div><div class="nm">灵魂献祭</div><span class="pill p-clr">清诅咒 · 回血</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>饥荒雕像的饥肠辘辘</dd><dt>时机</dt><dd>挂上就按，一次一层；要点灵魂净化</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:196718}}" alt=""><div><div class="nm">黑暗</div><span class="pill p-dr">8 码 · 全队</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>疾影两层都在冷却时的饕餮怒吼</dd><dt>时机</dt><dd>全队挤在一起吃同一下时</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:217832}}" alt=""><div><div class="nm">禁锢</div><span class="pill p-cc">控制 1 分钟</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>开场叠流血的锐眼掠击鹰</dd><dt>时机</dt><dd>开怪第一下；受到伤害可能解除</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1261776}}" alt=""><div><div class="nm">防御姿态（首领机制）</div><span class="pill p-imm">压制强攻 −80%</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>纳洛拉克的压制强攻</dd><dt>时机</dt><dd>读条时站到祖尔加拉身后，站满三跳</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+22 高手同款噬灭天赋，英雄天赋 Void-Scarred。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1266307}}" alt=""><div><b>恶魔韧性</b><span>疾影多一层充能，咆哮、冰川之墓、回响重击都靠它轮着接</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1266496}}" alt=""><div><b>灵魂净化</b><span>灵魂献祭移除一个诅咒，清掉饥肠辘辘</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1266329}}" alt=""><div><b>恶魔笼头</b><span>瓦解打断成功后 12 秒魔法伤害降低 15%</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1223171}}" alt=""><div><b>诡计</b><span>瓦解施法距离多 20 码，后排的看护者和秘法师都够得着</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389783}}" alt=""><div><b>漆黑</b><span>黑暗冷却缩短 120 秒，囤宝狂人战能交上</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:217832}}" alt=""><div><b>禁锢</b><span>开场关掉一只锐眼掠击鹰</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389696}}" alt=""><div><b>伊利达雷的知识</b><span>受到的魔法伤害降低 3%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/pdgvX8ZzcMBV63Hn#fight=9">誒你怎么似了 27:19（天赋）</a>
+      <a href="https://www.warcraftlogs.com/reports/4Fqyp8WKLbGTw3gx#fight=58">Isirys 27:11（时间轴）</a>
+      <a href="https://www.warcraftlogs.com/reports/3M8czvm9DpqHb4yQ#fight=15">Pve 27:10</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">噬灭恶魔猎手 · 纳洛拉克的洞穴 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

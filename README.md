@@ -16,6 +16,7 @@
 - 武器战：八本（`guides/warrior-arms/`）
 - 潜行者：七本第一版（`guides/rogue/`），正在按新流程重做，已完成诸王之眠、夺目谷
 - 神圣骑士：八本（`guides/holy-paladin/`）
+- 噬灭恶魔猎手：六本：诸王之眠、纳洛拉克的洞穴、塞塔里斯神庙、毒牙祭坛、红玉新生法池、夺目谷（`guides/demonhunter-devourer/`）
 
 ## 快速开始
 

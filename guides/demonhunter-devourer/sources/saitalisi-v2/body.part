@@ -1,0 +1,426 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">TEMPLE OF SETHRALISS · MYTHIC+ · DEVOURER DEMON HUNTER FIELD CARD</div>
+    <h1><span class="cls">噬灭恶魔猎手</span><span class="dot">·</span>塞塔里斯神庙 应对手册</h1>
+    <p class="lede">塞塔里斯神庙全是雷电和毒的法术伤害，噬灭靠<b>两层疾影</b>一路接：开场的震地、雷云的释放电荷、加瓦兹特的尖塔光束、化身的腐化。<b>吞噬魔法</b>在这里有专门的活：偷掉暴怒云气身上的积攒电荷，下一发释放电荷就没那么疼。<b>禁锢</b>点住流沙猎手，箭雨当场停；<b>瓦解</b>带诡计多 20 码射程，后排就能断闪电箭、毒箭和扰乱心智。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时噬灭 ×3</b></span>
+      <span class="chip">英雄天赋 <b>Annihilator</b></span>
+      <span class="chip">核心 <b>疾影 / 吞噬魔法 / 禁锢 / 瓦解</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里保命和控制交在哪</h2>
+  <p class="sub">一整场 +22 里，疾影、黑暗、禁锢、吞噬魔法、瓦解和虚空新星分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(163,48,201,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:198589}}" alt="">疾影</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:196718}}" alt="">黑暗</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:217832}}" alt="">禁锢 / <img class="ic sm" src="{{I:278326}}" alt="">吞噬魔法 / <img class="ic sm" src="{{I:183752}}" alt="">瓦解 / <img class="ic sm" src="{{I:1234195}}" alt="">虚空新星（绿圈）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理，按出现顺序排。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">开场小怪 · 沙怒石拳战士</div>
+      <div class="sig">看到<b>石拳战士读震地</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+      <p>震地是 60 码内全吃的物理重击，还把人震飞。读条时开疾影，一下从八十多万降到六十万上下。开场这一波连读好几次，两层疾影轮着交。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 毒蛇与三叶虫</div>
+      <div class="sig">看到<b>流沙猎手开始箭雨</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:217832}}" alt="">禁锢 → 流沙猎手 <span class="pill p-cc">停引导</span></div>
+      <p>箭雨是对一名玩家 9 秒的引导，每 0.8 秒一箭物理伤害。箭雨一出来就禁锢猎手，引导当场停，被点的队友只吃一两箭。禁锢挨打会断，别对着它丢范围技能。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 雷云（米利克萨 → 加瓦兹特）</div>
+      <div class="sig">看到<b>暴怒云气身上叠起积攒电荷</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:278326}}" alt="">吞噬魔法 → 云气 <span class="pill p-imm">偷增益</span></div>
+      <p>积攒电荷每层让云气伤害提高 8%，最多 3 层，攒满后读<b>释放电荷</b>一次放给全队。电荷是魔法增益，读完积攒电荷就偷掉，下一发释放电荷少吃一截。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 加瓦兹特</div>
+      <div class="sig">轮到你<b>站进尖塔光束</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 / 黑暗 <span class="pill p-dr">减伤</span></div>
+      <p>光束打在谁身上就充不到加瓦兹特，代价是每 0.5 秒一跳镀流。进光束就开疾影，10 秒盖住一轮站位；疾影刚交过的那一轮换黑暗。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>三个关键处理</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1293475}}" alt="">雷云段：先偷电荷，再疾影接释放电荷</h3>
+      <p>米利克萨之后这段是暴怒云气、灌注能量的唤雷者和静电异常体。云气会反复读<b>积攒电荷</b>给自己叠增伤，然后读 3 秒左右的<b>释放电荷</b>，把攒下的能量一次打给全队，躲不开。</p>
+      <ol class="steps">
+        <li><b>云气读完积攒电荷</b>：吞噬魔法点它，把电荷偷掉。云气有好几只时，偷层数最多的那只。</li>
+        <li><b>唤雷者读闪电箭</b>：瓦解断掉。这一段闪电箭读得最勤，一发十几万自然伤害打单人。</li>
+        <li><b>云气读释放电荷</b>：读条时开疾影。两层轮着交，这一段几乎每一发释放电荷都有一层。</li>
+        <li><b>疾影都在冷却</b>：释放电荷读条时开黑暗，全队站在一起都罩得到。</li>
+      </ol>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1293464}}" alt=""><div><b>积攒电荷</b><span>每层 +8% · 最多 3 层</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:278326}}" alt=""><div><b>吞噬魔法</b><span>偷掉电荷</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>释放电荷读条时</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1293475}}" alt=""><div><b>释放电荷</b><span>全队一下</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一发释放电荷打在你身上：不开减伤约 61 万，开疾影约 50 万">
+      <div class="cap">一发释放电荷打在你身上</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">61 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:82%">50 万</span></div></div>
+      <div class="delta">−18%<small>电荷偷掉还能再低</small></div>
+      <div class="cap">释放电荷的伤害来自积攒电荷，偷掉的层数越多，这一下越轻。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:266923}}" alt="">加瓦兹特：拦光束时疾影和黑暗轮流</h3>
+      <p>加瓦兹特靠房间里的尖塔光束充能。光束照到玩家身上就充不到首领，站进去的人挂上<b>镀流</b>：每 0.5 秒一跳自然伤害，受到的物理伤害提高 250%。噬灭是远程，拦光束很顺手，一场里要站好几轮。</p>
+      <ol class="steps">
+        <li><b>轮到你拦光束</b>：走进光束的同时开疾影，10 秒盖住一整轮站位。</li>
+        <li><b>下一轮疾影刚交过</b>：开黑暗再进去，8 秒里每一跳也少一成。</li>
+        <li><b>站在光束里</b>：别站到首领面前或会挨近战的地方，镀流期间物理伤害 +250%。</li>
+        <li><b>诱导</b>读完全队吃一下，地上留下诱导力场，走出力场再接着拦光束。</li>
+      </ol>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:266923}}" alt=""><div><b>进光束</b><span>挂上镀流</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>进去就按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:196718}}" alt=""><div><b>下一轮</b><span>疾影刚交就黑暗</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1290531}}" alt=""><div><b>诱导</b><span>走出力场</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="镀流每一跳：不开减伤约 11 万，黑暗中约 10 万，疾影中约 9 万">
+      <div class="cap">站在光束里每一跳镀流</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">11.2 万</span></div></div>
+      <div class="bar-row"><span>开着黑暗</span><div class="bar"><span class="on" style="width:89%">10.0 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:79%">8.9 万</span></div></div>
+      <div class="delta">−21%<small>一秒两跳，越站越值</small></div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1300877}}" alt="">塞塔里斯的化身：碰完球疾影，折磨者虚空新星</h3>
+      <p>化身这场有三样东西要按键。三团<b>生命之力</b>要有人去碰，碰完身上挂 15 秒<b>腐化</b>：每秒一跳暗影伤害，造成的治疗降低 33%，受到的物理伤害提高 250%，还能叠加。中间还会刷出成批的<b>无信折磨者</b>和读烈焰震击的<b>扭曲的妖术师</b>。</p>
+      <ol class="steps">
+        <li><b>碰完生命之力、腐化上身</b>：马上开疾影。腐化 15 秒比疾影长，后半段留给治疗。</li>
+        <li><b>疾影开着血线还往下掉</b>：再补黑暗，两样叠着顶过腐化前几跳。</li>
+        <li><b>无信折磨者锁定治疗</b>：它们挤成一团跑向最近的治疗，在怪堆里放虚空新星晕 2 秒，让坦克接住。</li>
+        <li><b>扭曲的妖术师读烈焰震击</b>：瓦解断掉，一发二十多万火焰伤害再加 8 秒灼烧。</li>
+        <li><b>堕落的守护者邪恶冲锋冲到你</b>：开疾影顶 8 秒暗影持续伤害。</li>
+      </ol>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1300877}}" alt=""><div><b>碰球 → 腐化</b><span>15 秒</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>上身就按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1234195}}" alt=""><div><b>折磨者成团</b><span>虚空新星</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1302158}}" alt=""><div><b>烈焰震击</b><span>瓦解</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="腐化每一跳：不开减伤约 19 万，疾影中约 13 万">
+      <div class="cap">腐化每一跳打在身上</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">18.7 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:71%">13.3 万</span></div></div>
+      <div class="bar-row"><span>疾影 + 黑暗</span><div class="bar"><span class="on" style="width:67%">12.6 万</span></div></div>
+      <div class="delta">−29%<small>腐化期间治疗少三成</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 阿德里斯与阿斯匹克斯</h3><span class="kind">TRASH · 沙怒石拳战士、流沙猎手、风暴能手、倒刺三叶虫</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:265966}}" alt=""><div><div class="n">震地</div><div class="s">沙怒石拳战士读条，60 码击退 <span class="tag">物理</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">躲不开，读条时开，八十多万降到六十万</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1291262}}" alt=""><div><div class="n">闪电箭</div><div class="s">风暴能手单体读条 <span class="tag fel">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">风暴能手站在后面，诡计多 20 码，原地就能断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1291399}}" alt=""><div><div class="n">锯齿冲锋</div><div class="s">倒刺三叶虫冲向一名玩家，6 秒流血，没有读条 <span class="tag bleed">流血</span><span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">被冲中就开，10 秒盖住整段流血</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>阿德里斯与阿斯匹克斯</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1288457}}" alt=""><div><div class="n">阵风</div><div class="s">阿斯匹克斯读条点一名玩家，首击 + 4 秒持续 <span class="tag fel">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">点到你就开，首击和后面四跳一起减</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1291262}}" alt=""><div><div class="n">闪电箭</div><div class="s">风暴能手跟首领一起拉进来时 <span class="tag fel">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">首领战里全团掉血已经很多，小怪的读条别放</div>
+        </div>
+        <div class="note">这场阵风一直在点人，<b>疾影优先给点到自己的阵风</b>。电闪雷鸣冲刺要进 8 码分摊，惊雷落下前跑出 20 码。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>阿斯匹克斯 → 米利克萨</h3><span class="kind">TRASH · 倒刺三叶虫、流沙猎手、育巢者、无信征服者、剧毒蝰蛇</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308113}}" alt=""><div><div class="n">箭雨</div><div class="s">流沙猎手对一名玩家引导 9 秒，每 0.8 秒一箭 <span class="tag">物理</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:217832}}" alt="">禁锢 <span class="pill p-cc">停引导</span></div>
+          <div class="why">箭雨一出来就点住猎手，引导当场停</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1293307}}" alt=""><div><div class="n">扰乱心智</div><div class="s">无信征服者引导，群体迷惑 5 秒 <span class="tag magic">魔法</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">优先级最高，迷惑 5 秒这一波等于白打</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1310683}}" alt=""><div><div class="n">毒箭</div><div class="s">育巢者反复读，一发十几万 <span class="tag fel">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">没有征服者时，瓦解转好就给育巢者</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1291399}}" alt=""><div><div class="n">锯齿冲锋</div><div class="s">三叶虫成群冲人，冲中就是 6 秒流血 <span class="tag bleed">流血</span><span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">这一段冲锋最密，身上挂着流血就开一层</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>米利克萨</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1298329}}" alt=""><div><div class="n">雷霆喷吐</div><div class="s">点一名玩家，之后 4 秒闪电每秒劈脚下，留下萦绕风暴 <span class="tag fel">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 + 走开 <span class="pill p-dr">减伤</span></div>
+          <div class="why">点到你就开疾影，带着落点离开人群</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:267027}}" alt=""><div><div class="n">毒素喷吐</div><div class="s">剧毒蝰蛇读条，8 秒中毒 <span class="tag poison">自然</span><span class="tag poison">中毒</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">首领战里蝰蛇一直在读，钻地之震全团掉血时少一个毒</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>米利克萨 → 加瓦兹特</h3><span class="kind">TRASH · 暴怒云气、灌注能量的唤雷者、静电异常体</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1293464}}" alt=""><div><div class="n">积攒电荷</div><div class="s">暴怒云气给自己叠增伤，每层 8%，最多 3 层 <span class="tag magic">魔法增益</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:278326}}" alt="">吞噬魔法 <span class="pill p-imm">偷增益</span></div>
+          <div class="why">读完就偷，下一发释放电荷变轻</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1293475}}" alt=""><div><div class="n">释放电荷</div><div class="s">云气读条，攒下的能量一次打全队 <span class="tag fel">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 / 黑暗 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，疾影两层都在冷却就黑暗</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1291262}}" alt=""><div><div class="n">闪电箭</div><div class="s">灌注能量的唤雷者读条 <span class="tag fel">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">这一段打断全给唤雷者</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>加瓦兹特</h3><span class="kind">BOSS 3</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:266923}}" alt=""><div><div class="n">镀流 · 拦尖塔光束</div><div class="s">站进光束挡住充能，每 0.5 秒一跳，物理易伤 250% <span class="tag fel">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">进光束就开，10 秒盖住一轮站位</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:266923}}" alt=""><div><div class="n">镀流 · 疾影刚交过</div><div class="s">下一轮光束又轮到你 <span class="tag fel">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:196718}}" alt="">黑暗 <span class="pill p-dr">减伤</span></div>
+          <div class="why">每一跳少一成，和疾影轮着开</div>
+        </div>
+        <div class="note">这一关疾影和黑暗<b>全给拦光束</b>。诱导读完全队吃一下，地上的力场每秒一跳，先走出来再进光束。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>加瓦兹特 → 塞塔里斯的化身</h3><span class="kind">TRASH · 宝珠守望者、神庙干扰者、无信援兵、不羁的火花</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1303486}}" alt=""><div><div class="n">蚀骨践踏</div><div class="s">宝珠守望者读条，60 码新星 + 10 秒持续伤害 <span class="tag fel">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 / 黑暗 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，首击从六十万降到四十五万</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:217832}}" alt=""><div><div class="n">神庙干扰者</div><div class="s">四只跟着宝珠守望者一起来，只打近战 <span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:217832}}" alt="">禁锢 <span class="pill p-cc">瘫痪</span></div>
+          <div class="why">点住一只，坦克少挨一份近战</div>
+        </div>
+        <div class="note">两只宝珠守望者一起拉时践踏连着来，<b>疾影两层加黑暗都留给践踏</b>，一下首击六十万，后面还有 10 秒毒。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>塞塔里斯的化身</h3><span class="kind">BOSS 4</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300877}}" alt=""><div><div class="n">腐化</div><div class="s">碰生命之力后 15 秒，治疗 −33%，物理易伤 250%，可叠加 <span class="tag magic">暗影</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 · 黑暗 <span class="pill p-dr">减伤</span></div>
+          <div class="why">碰完马上疾影；血线还压不住就补黑暗</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1302618}}" alt=""><div><div class="n">邪恶冲锋</div><div class="s">堕落的守护者冲向一名玩家，8 秒持续伤害 <span class="tag magic">暗影</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">冲到你就开，10 秒盖住整段</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300704}}" alt=""><div><div class="n">锁定</div><div class="s">一批无信折磨者锁定最近的治疗跑过去 <span class="tag">点名</span><span class="tag">多目标</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">昏迷 2 秒</span></div>
+          <div class="why">它们挤成一团，一下晕住好几只，坦克好接</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1302158}}" alt=""><div><div class="n">烈焰震击</div><div class="s">扭曲的妖术师读条，一发 + 8 秒灼烧 <span class="tag fel">火焰</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">这一场的打断都给妖术师</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:198589}}" alt=""><div><div class="nm">疾影</div><span class="pill p-dr">减伤 25% · 两层</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>震地、阵风、锯齿冲锋、雷霆喷吐、释放电荷、镀流光束、蚀骨践踏、腐化、邪恶冲锋</dd><dt>时机</dt><dd>全团技能读条时按，点名技能上身就按；点了恶魔韧性有两层</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:278326}}" alt=""><div><div class="nm">吞噬魔法</div><span class="pill p-imm">偷增益</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>暴怒云气身上的积攒电荷</dd><dt>时机</dt><dd>云气读完积攒电荷就偷，雷云段转好就用</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:217832}}" alt=""><div><div class="nm">禁锢</div><span class="pill p-cc">瘫痪 · 挨打会断</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>流沙猎手的箭雨引导；宝珠守望者身边的神庙干扰者</dd><dt>时机</dt><dd>箭雨一出来就点猎手</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:183752}}" alt=""><div><div class="nm">瓦解</div><span class="pill p-clr">打断 · 远程</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>扰乱心智、闪电箭、毒箭、毒素喷吐、烈焰震击</dd><dt>时机</dt><dd>扰乱心智最优先；断成了魔法伤害再降 15%</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:196718}}" alt=""><div><div class="nm">黑暗</div><span class="pill p-dr">8 码 · 全队</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>疾影刚交过的那一轮光束、蚀骨践踏、释放电荷、压不住的腐化</dd><dt>时机</dt><dd>和疾影错开用</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1234195}}" alt=""><div><div class="nm">虚空新星</div><span class="pill p-cc">群体昏迷 2 秒</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>化身那场成批跑向治疗的无信折磨者</dd><dt>时机</dt><dd>它们锁定治疗、挤成一团时</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+22 高手同款噬灭天赋，英雄天赋 Annihilator。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1266307}}" alt=""><div><b>恶魔韧性</b><span>疾影多一层充能，释放电荷和光束轮着接</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:278326}}" alt=""><div><b>吞噬魔法</b><span>偷掉暴怒云气的积攒电荷</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:217832}}" alt=""><div><b>禁锢</b><span>停掉流沙猎手的箭雨</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1223171}}" alt=""><div><b>诡计</b><span>瓦解、吞噬魔法施法距离多 20 码，后排够得着风暴能手和云气</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1266329}}" alt=""><div><b>恶魔笼头</b><span>瓦解打断成功后 12 秒魔法伤害降低 15%</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389783}}" alt=""><div><b>漆黑</b><span>黑暗冷却缩短，光束和践踏都能和疾影错开交</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1234195}}" alt=""><div><b>虚空新星</b><span>群体昏迷 2 秒，晕住无信折磨者</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389696}}" alt=""><div><b>伊利达雷的知识</b><span>受到的魔法伤害降低，这本几乎全是法术伤害</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/rL6J8cZhbHQ2zxVD#fight=10">Midnightmess 28:08（时间轴）</a>
+      <a href="https://www.warcraftlogs.com/reports/MgwRWBNCxrp1nPAq#fight=12">蟆蛤小 29:06（天赋）</a>
+      <a href="https://www.warcraftlogs.com/reports/VwyZq2zBgH9mTvL4#fight=15">Isirys 29:14</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">噬灭恶魔猎手 · 塞塔里斯神庙 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

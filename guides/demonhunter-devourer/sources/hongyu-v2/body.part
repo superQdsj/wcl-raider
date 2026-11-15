@@ -1,0 +1,371 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">RUBY LIFE POOLS · MYTHIC+ · DEVOURER DEMON HUNTER FIELD CARD</div>
+    <h1><span class="cls">噬灭恶魔猎手</span><span class="dot">·</span>红玉新生法池 应对手册</h1>
+    <p class="lede">噬灭在红玉新生法池最要紧的是<b>停读条</b>：<b>瓦解</b>断梅莉杜莎的冷冽飞弹、火焰风暴的烈焰狂轰、暴风引导者的雷霆冲击和织烬者的焰烬之箭，<b>虚空新星</b>一晕就断掉烈焰鞭笞者的燃焰弹幕。<b>疾影</b>两层留给全队吃的大伤害：柯姬雅的火焰风暴、基拉卡的烈焰喷吐和紧跟的阻断暴雨。暗夜精灵被闪电涌流点到，开<b>影遁</b>，引导当场断掉。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时噬灭 ×3</b></span>
+      <span class="chip">英雄天赋 <b>Void-Scarred</b></span>
+      <span class="chip">核心 <b>瓦解 / 虚空新星 / 疾影 / 影遁</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里关键技能交在哪</h2>
+  <p class="sub">一整场 +22 里，疾影、瓦解、虚空新星和影遁分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(163,48,201,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:198589}}" alt="">疾影 / <img class="ic sm" src="{{I:1234195}}" alt="">虚空新星</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:183752}}" alt="">瓦解（绿圈）</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:58984}}" alt="">影遁（青圈，暗夜精灵）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">小怪 · 梅莉杜莎 → 柯姬雅</div>
+      <div class="sig">看到<b>烈焰鞭笞者开始燃焰弹幕</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">晕断引导</span></div>
+      <p>灰烬先知烈焰鞭笞者引导 10 秒，每秒朝当前目标丢一把烈焰飞刀，一把就是火焰加物理三十多万，坦克扛不住整段。虚空新星晕 2 秒，引导当场断掉，后面的飞刀都不来了。鞭笞者总和织烬者、灼烧元素挤在一起，一下全晕住。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 2 · 柯姬雅·焰蹄</div>
+      <div class="sig">看到<b>炎缚火焰风暴读烈焰狂轰</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:183752}}" alt="">瓦解 → 风暴 <span class="pill p-clr">打断</span></div>
+      <p>每轮缚焰仪式召出一团火焰风暴，风暴活着就一直读烈焰狂轰，落地打全队。场上风暴一多，读条一个接一个，瓦解每次都交给它。点了诡计瓦解多 20 码，站在远处也够得着。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 柯姬雅 → 基拉卡</div>
+      <div class="sig">看到<b>暴风引导者的闪电涌流点到你</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">断引导</span></div>
+      <p>闪电涌流对一人引导 7 秒，每秒一跳自然伤害，吃满两百多万。暗夜精灵被点到马上开影遁，引导者丢了目标，引导当场断掉，只吃一两跳。影遁还在冷却，就开疾影。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 基拉卡与厄克哈特·风脉</div>
+      <div class="sig">看到<b>烈焰喷吐挂到你身上</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+      <p>喷吐是 6 秒火焰持续伤害，紧接着厄克哈特读 5 秒阻断暴雨，落地全队一下自然伤害。喷吐上身就开疾影，10 秒正好把喷吐和这一下暴雨都盖住。疾影两层，每次被喷都交得起。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>三个关键处理</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:372863}}" alt="">柯姬雅·焰蹄：火焰风暴的地狱烈火交疾影，烈焰狂轰全断</h3>
+      <p>柯姬雅能量满了就读 5 秒<b>缚焰仪式</b>，在一名玩家脚下召出一团<b>炎缚火焰风暴</b>，12 码内一下火焰伤害。风暴出来 3 秒后读第一次<b>地狱烈火</b>，十几秒后再读一次：全队一下火焰伤害，再挂 8 秒灼烧，而且能叠。四十秒左右一轮。</p>
+      <p>疾影交给地狱烈火。仪式点到的是你，就在仪式读条时开，一层盖住仪式落地和风暴的第一次地狱烈火；没点到你，就在风暴读地狱烈火时开。两层轮着交，每一轮都有。</p>
+      <p>风暴活着时还一直读<b>烈焰狂轰</b>，全队一下火焰伤害。读条一出就用<b>瓦解</b>断掉，场上风暴不止一团就一团一团断。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:372863}}" alt=""><div><b>缚焰仪式读条</b><span>5 秒 · 点到你就开</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>盖住仪式和地狱烈火</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:384823}}" alt=""><div><b>风暴读地狱烈火</b><span>全队 · 8 秒灼烧</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:183752}}" alt=""><div><b>风暴读烈焰狂轰</b><span>瓦解断掉</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="风暴的地狱烈火落地一下：不开减伤约 38 万，开疾影约 29 万">
+      <div class="cap">风暴的地狱烈火落地那一下</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">38 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:76%">29 万</span></div></div>
+      <div class="delta">−25%<small>后面 8 秒灼烧也一起少</small></div>
+      <div class="cap">缚焰仪式落在你脚下：不开减伤约 61 万，开疾影约 52 万。漏断一次烈焰狂轰，全队每人四五十万。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1306366}}" alt="">暴风引导者：雷霆冲击断掉，闪电涌流影遁</h3>
+      <p>柯姬雅之后的风暴区，暴风引导者带着风暴战士和原始雷云。它有两样东西要按键。</p>
+      <p><b>雷霆冲击</b>读条打当前目标，一下三十九万自然伤害，落在坦克身上。看到读条就用<b>瓦解</b>断掉。</p>
+      <p><b>闪电涌流</b>是瞬发的引导，点一名玩家，7 秒每秒一跳自然伤害。被点到的是你，并且你是<b>暗夜精灵</b>：马上开<b>影遁</b>，引导者丢了目标，引导当场断掉。影遁两分钟一次，下一次点到你时还在冷却，就开<b>疾影</b>，剩下每跳少四分之一。后面的大引导者莱瓦迪也放闪电涌流，一样处理。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:392576}}" alt=""><div><b>雷霆冲击读条</b><span>瓦解断掉</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1306366}}" alt=""><div><b>闪电涌流点你</b><span>7 秒引导</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:58984}}" alt=""><div><b>影遁</b><span>点到马上按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>下一次</b><span>影遁没好就疾影</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一轮闪电涌流：吃满约 220 万，被点到就影遁约 30 万">
+      <div class="cap">一轮闪电涌流打在身上</div>
+      <div class="bar-row"><span>吃满 7 秒</span><div class="bar"><span class="off" style="width:100%">约 220 万</span></div></div>
+      <div class="bar-row"><span>点到就影遁</span><div class="bar"><span class="on" style="width:14%">30 万</span></div></div>
+      <div class="delta">−85%<small>按得越早吃得越少</small></div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:381602}}" alt="">基拉卡与厄克哈特：烈焰喷吐上身就开疾影</h3>
+      <p>两只首领一起打。基拉卡读 2 秒<b>烈焰喷吐</b>，喷到的人挂 6 秒火焰持续伤害，结束时在身边 8 码炸开并留下余烬。几秒后厄克哈特读 5 秒<b>阻断暴雨</b>，落地全队一下自然伤害，还会打断施法 2 秒。这两样几乎总是连着来。</p>
+      <p>喷吐挂到你身上就开<b>疾影</b>：6 秒灼烧和随后落地的暴雨都在这 10 秒里。疾影两层，每被喷一次交一层。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:381602}}" alt=""><div><b>烈焰喷吐上身</b><span>6 秒灼烧</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>上身就按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:381516}}" alt=""><div><b>阻断暴雨落地</b><span>5 秒读条 · 全队</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="阻断暴雨一下：不开减伤约 45 万，开疾影约 33 万">
+      <div class="cap">阻断暴雨落地那一下</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">45 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:73%">33 万</span></div></div>
+      <div class="delta">−25%<small>一层盖两样</small></div>
+      <div class="cap">喷吐每一跳：不开减伤约 21 万，开疾影约 15 万。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 梅莉杜莎</h3><span class="kind">TRASH · 原始主宰、亵渎者德拉加尔、闪霜织寒者、缚地守护者</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1305201}}" alt=""><div><div class="n">采掘冲击</div><div class="s">原始主宰读 3.5 秒，60 码一下再跟 8 秒持续伤害 <span class="tag fel">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，10 秒盖住落地和大半段持续伤害</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:372047}}" alt=""><div><div class="n">钢铁弹幕</div><div class="s">亵渎者德拉加尔 3 秒连击坦克，每一下引发 60 码烈焰新星 <span class="tag fire">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条 1 秒就开打，看到读条就按，第二层留给下一轮</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:372743}}" alt=""><div><div class="n">寒冰壁垒 / 寒冰箭</div><div class="s">闪霜织寒者给同伴套盾、读箭点人 <span class="tag frost">冰霜</span><span class="tag">免控</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">壁垒让同伴吸收伤害又免控，寒冰箭一下十一万多；两样都断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>梅莉杜莎·寒妆</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:372808}}" alt=""><div><div class="n">冷冽飞弹</div><div class="s">一直读，砸当前目标七十多万 <span class="tag">物理</span><span class="tag">坦克</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">打断轮到你就断，坦克少吃一发大的</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:373680}}" alt=""><div><div class="n">冰霜过载</div><div class="s">唤醒雏龙后套上寒冰壁垒，约 15 秒每 1.5 秒全队一跳，还叠易伤 <span class="tag frost">冰霜</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">越往后越疼，一层盖住大半段</div>
+        </div>
+        <div class="note">冰霜过载一场两次，<b>两次都留一层疾影</b>。其余时间只管断冷冽飞弹。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>梅莉杜莎 → 柯姬雅</h3><span class="kind">TRASH · 炎缚毁灭者、灰烬先知烈焰鞭笞者、拜荒织烬者、灼烧元素、烈焰之咽</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:385536}}" alt=""><div><div class="n">燃焰弹幕</div><div class="s">烈焰鞭笞者引导 10 秒，每秒朝当前目标丢飞刀 <span class="tag fire">火焰</span><span class="tag">物理</span><span class="tag">引导</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">晕断引导</span></div>
+          <div class="why">引导一开就晕，后面的飞刀都不来；整堆一起晕住</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1305955}}" alt=""><div><div class="n">火热冲击</div><div class="s">炎缚毁灭者读条，打当前目标三十六万 <span class="tag fire">火焰</span><span class="tag">坦克</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">毁灭者一直读，看到就断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:384194}}" alt=""><div><div class="n">焰烬之箭</div><div class="s">拜荒织烬者一直读，点一名玩家 <span class="tag fire">火焰</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">织烬者读条最多，打断轮里一定要有人盯它</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:373692}}" alt=""><div><div class="n">地狱烈火</div><div class="s">炎缚毁灭者读 3.5 秒，60 码一下再跟 5 秒灼烧 <span class="tag fire">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，落地那一下最疼</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:392570}}" alt=""><div><div class="n">熔火血脉</div><div class="s">烈焰之咽半血后每 3 秒打全队，每次比上一次疼 15% <span class="tag fire">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">层数越叠越高，后半段再开</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>柯姬雅·焰蹄</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:372863}}" alt=""><div><div class="n">缚焰仪式点到你</div><div class="s">5 秒读条，在你脚下召出火焰风暴，12 码一下 <span class="tag fire">火焰</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，一层盖住仪式落地和风暴的第一次地狱烈火</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:384823}}" alt=""><div><div class="n">地狱烈火</div><div class="s">火焰风暴读 3 秒，全队一下再挂 8 秒灼烧，可叠加 <span class="tag fire">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">没被仪式点到的轮次，就在风暴读条时开</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:373017}}" alt=""><div><div class="n">烈焰狂轰</div><div class="s">火焰风暴一直读，落地打全队 <span class="tag fire">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 → 风暴 <span class="pill p-clr">打断</span></div>
+          <div class="why">漏一个全队每人四五十万；风暴多了一团一团断</div>
+        </div>
+        <div class="note">这场疾影两层<b>全给火焰风暴</b>，瓦解<b>全给烈焰狂轰</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>柯姬雅 → 基拉卡</h3><span class="kind">TRASH · 暴风引导者、风暴战士、原始雷云、大引导者莱瓦迪</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:392576}}" alt=""><div><div class="n">雷霆冲击</div><div class="s">暴风引导者读条，打当前目标三十九万 <span class="tag fel">自然</span><span class="tag">坦克</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">坦克吃一发就掉一大截，读就断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306366}}" alt=""><div><div class="n">闪电涌流点你</div><div class="s">引导者对一人引导 7 秒，每秒一跳 <span class="tag fel">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">断引导</span></div>
+          <div class="why">暗夜精灵点到马上开，引导断掉，只吃一两跳</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306366}}" alt=""><div><div class="n">闪电涌流 · 影遁在冷却</div><div class="s">引导者或莱瓦迪又点到你 <span class="tag fel">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">10 秒盖住整段引导，每跳少四分之一</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1310355}}" alt=""><div><div class="n">暴风骤雨之盾</div><div class="s">莱瓦迪套盾，盾在时每秒打全队，破盾时 60 码昏迷 4 秒 <span class="tag fel">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 / 黑暗 <span class="pill p-dr">减伤</span></div>
+          <div class="why">盾在的那几秒全队一起掉血，手里有哪个交哪个</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>基拉卡与厄克哈特·风脉</h3><span class="kind">BOSS 3</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:381602}}" alt=""><div><div class="n">烈焰喷吐</div><div class="s">基拉卡读 2 秒，喷到的人挂 6 秒灼烧，结束时 8 码炸开 <span class="tag fire">火焰</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">上身就开，连后面的阻断暴雨一起盖住</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:381516}}" alt=""><div><div class="n">阻断暴雨</div><div class="s">厄克哈特读 5 秒，全队一下并打断施法 2 秒 <span class="tag fel">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影（同一层） <span class="pill p-dr">减伤</span></div>
+          <div class="why">喷吐上身时开的疾影正好赶上落地</div>
+        </div>
+        <div class="note">这场是<b>喷吐 → 暴雨</b>一组一组来。疾影两层，<b>被喷一次交一层</b>，不用给别的留。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:183752}}" alt=""><div><div class="nm">瓦解</div><span class="pill p-clr">打断 · 远程</span></div></div>
+      <dl class="dl"><dt>断什么</dt><dd>冷冽飞弹、烈焰狂轰、雷霆冲击、焰烬之箭、火热冲击、寒冰箭、寒冰壁垒</dd><dt>时机</dt><dd>柯姬雅这场全给烈焰狂轰；断成了魔法伤害再降 15%</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1234195}}" alt=""><div><div class="nm">虚空新星</div><span class="pill p-cc">群体昏迷 2 秒</span></div></div>
+      <dl class="dl"><dt>停什么</dt><dd>烈焰鞭笞者的燃焰弹幕</dd><dt>时机</dt><dd>鞭笞者开始引导就按，整堆一起晕住</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:198589}}" alt=""><div><div class="nm">疾影</div><span class="pill p-dr">减伤 25% · 两层</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>采掘冲击、钢铁弹幕、冰霜过载、毁灭者的地狱烈火、熔火血脉、缚焰仪式、风暴的地狱烈火、烈焰喷吐 + 阻断暴雨</dd><dt>时机</dt><dd>读条时按；点了恶魔韧性有两层</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:58984}}" alt=""><div><div class="nm">影遁（暗夜精灵）</div><span class="pill p-clr">断引导</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>暴风引导者、莱瓦迪点你的闪电涌流</dd><dt>时机</dt><dd>点到马上按；两分钟一次，没好就疾影</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:196718}}" alt=""><div><div class="nm">黑暗</div><span class="pill p-dr">8 码 · 全队</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>疾影两层都在冷却时的全队伤害，比如暴风骤雨之盾</dd><dt>时机</dt><dd>全队挤在一起吃同一波时</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+22 高手同款噬灭天赋，英雄天赋 Void-Scarred。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1266307}}" alt=""><div><b>恶魔韧性</b><span>疾影多一层充能，火焰风暴、烈焰喷吐每一轮都交得起</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1234195}}" alt=""><div><b>虚空新星</b><span>群体昏迷 2 秒，晕断燃焰弹幕</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1266329}}" alt=""><div><b>恶魔笼头</b><span>瓦解打断成功后 12 秒魔法伤害降低 15%；这个本的火焰、冰霜、自然伤害都算</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1223171}}" alt=""><div><b>诡计</b><span>瓦解施法距离多 20 码，远处的风暴和织烬者也断得到</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389783}}" alt=""><div><b>漆黑</b><span>黑暗冷却缩短 120 秒，疾影没层时有东西补</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389696}}" alt=""><div><b>伊利达雷的知识</b><span>受到的魔法伤害降低 3%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/3zYvgJWbqCmADFNL#fight=12">Yamatekudasi 25:02（时间轴和天赋）</a>
+      <a href="https://www.warcraftlogs.com/reports/pzW3BkTFC2Mq8Jm9#fight=1">丶御弟哥哥 25:15</a>
+      <a href="https://www.warcraftlogs.com/reports/2KGWqFa1n4RdfMNg#fight=5">Meyame 25:59</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">噬灭恶魔猎手 · 红玉新生法池 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

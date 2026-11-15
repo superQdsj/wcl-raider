@@ -1,0 +1,360 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">ALTAR OF FANGS · MYTHIC+ · DEVOURER DEMON HUNTER FIELD CARD</div>
+    <h1><span class="cls">噬灭恶魔猎手</span><span class="dot">·</span>毒牙祭坛 应对手册</h1>
+    <p class="lede">毒牙祭坛几乎全是<b>自然伤害和持续毒</b>，噬灭在这里主要靠<b>两层疾影</b>。开场仪式首领的鲜血献祭、拉维的三重喷吐、扭缠蛇的振响、晋升之蛇的感染、神选者的剧毒涌动，看到读条或者被点到就交一层。<b>瓦解</b>专断原始毒蛇的刺耳嘶鸣和高阶进化者的毒伤。尾王祖尔加有一招要记住：拦完光束身上挂着仪式毒液，<b>切骨者读条时开疾影，站进飞斧的路径</b>，流血会把毒液清掉。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时噬灭 ×3</b></span>
+      <span class="chip">英雄天赋 <b>Void-Scarred</b></span>
+      <span class="chip">核心 <b>疾影 / 瓦解 / 黑暗</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里保命技能交在哪</h2>
+  <p class="sub">一整场 +22 里，疾影、黑暗和瓦解分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(163,48,201,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:198589}}" alt="">疾影</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:196718}}" alt="">黑暗</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:183752}}" alt="">瓦解（绿圈）</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:1300876}}" alt="">副本机制（灰圈）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">小怪 · 开场</div>
+      <div class="sig">看到<b>仪式首领读鲜血献祭</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+      <p>3 秒读条，读完祭坛之灵挨个剖开全队，一下物理伤害，还吸收你接下来的治疗。读条时开疾影。两层都在冷却就交<b>黑暗</b>，全队挤在一起时 8 码正好罩住。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 1 · 拉维</div>
+      <div class="sig">看到<b>三重喷吐点到你</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+      <p>拉维读 2 秒，朝三个人各吐一颗毒球。砸中先吃一大下，之后 10 秒每秒一跳自然伤害。被点到就开，10 秒疾影正好盖住整段毒。这场疾影优先给毒球。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 第 5 波起</div>
+      <div class="sig">看到<b>高阶进化者读毒伤</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+      <p>3 秒读条，读完是一发自然伤害加 8 秒持续毒。进化者从第 5 波一直出现到尾王前，每一个都断。点了诡计瓦解多 20 码，站后排也够得着；断成了恶魔笼头再减 15% 魔法伤害，这个副本的毒都算在里面。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 祖尔加</div>
+      <div class="sig">看到<b>身上挂着仪式毒液，切骨者开始读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 · 进飞斧路径 <span class="pill p-clr">清毒液</span></div>
+      <p>拦光束会挂上 50 秒的仪式毒液，到时间自己炸开。祖尔加的物理技能带出的放血会移除它。切骨者是 5 秒读条，开疾影站到飞斧的路线上，挨一斧加 7 秒流血，毒液就清掉了。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>三个关键处理</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1301413}}" alt="">祖尔加：拦光束，再用切骨者清掉仪式毒液</h3>
+      <p>祖尔加一轮的顺序是固定的：<b>毒牙仪式</b>读 5 秒，蛇头把光束聚到他身上 8 秒。要有人站进去拦，拦的人每秒吃一跳自然伤害，并叠上<b>仪式毒液</b>。毒液挂 50 秒，到时间会喷发。</p>
+      <p>光束之后，祖尔加会连着读两次<b>切骨者</b>，每次 5 秒读条，朝一名玩家掷出飞斧，路径上的人都挨一下物理伤害，再流血 7 秒，无视护甲。祖尔加的物理技能会让人大出血，<b>大出血移除仪式毒液</b>。所以拦过光束的人要主动进飞斧路径：飞斧点的不是你，就站到祖尔加和被点的人中间。流血每跳去掉一层毒液，7 秒后清空。</p>
+      <p>读条一开始就开<b>疾影</b>，10 秒盖住首击和整段流血。第二把飞斧落下时，离毒液喷发只剩三秒左右，<b>最晚这一把必须进</b>。疾影两层，一轮一层，每一轮都交得起。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1300876}}" alt=""><div><b>毒牙仪式</b><span>5 秒读条 · 进光束拦</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1300894}}" alt=""><div><b>挂上仪式毒液</b><span>50 秒后喷发</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>切骨者读条 · 疾影</b><span>站进飞斧路径</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1301231}}" alt=""><div><b>流血 7 秒</b><span>毒液清空</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="切骨者首击：不开减伤约 100 万，开疾影约 78 万">
+      <div class="cap">切骨者砍中的那一下</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">约 100 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:78%">78 万</span></div></div>
+      <div class="delta">−25%<small>后面 7 秒流血一样少</small></div>
+      <div class="cap">首击之后还有 7 跳流血，开着疾影一整次也在两百万上下。先开疾影再进路径。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1294849}}" alt="">拉维 → 扭缠盘蛇：振响开疾影，毒伤全断</h3>
+      <p>这一段是两条<b>振响的扭缠蛇</b>带着高阶进化者、放血者和幼体。扭缠蛇读 3 秒<b>振响</b>，摇尾巴 5 秒，每秒一跳物理伤害打全队，无视护甲，读一次每人要掉一百多万。读条时开疾影，10 秒盖住五跳。</p>
+      <p>扭缠蛇会读好几轮振响，疾影两层轮着交；两层都在冷却的那一轮交<b>黑暗</b>。同一时间<b>高阶进化者</b>在读毒伤，瓦解留给它，这一段振响和毒伤常常叠在一起来。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1294849}}" alt=""><div><b>振响读条</b><span>3 秒 · 之后 5 跳</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>读条时按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1289416}}" alt=""><div><b>进化者读毒伤</b><span>瓦解断掉</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:196718}}" alt=""><div><b>下一轮振响</b><span>疾影没有就黑暗</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="振响每跳：不开减伤约 23 万，开疾影约 18 万">
+      <div class="cap">振响打在你身上的每一跳</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">23 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:78%">18 万</span></div></div>
+      <div class="delta">−22%<small>一次振响五跳</small></div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1306852}}" alt="">扭缠盘蛇 → 祖尔加：感染、淬毒之刃、剧毒涌动轮流交疾影</h3>
+      <p>盘蛇之后到尾王前是全场最长的一段小怪，三样伤害轮着来，疾影两层都要用上：</p>
+      <p><b>感染</b>：晋升之蛇给全队种下蛇卵，5 秒每秒一跳自然伤害，结束时在 8 码内炸开，再钻出幼体。看到蛇卵上身就开。<b>淬毒之刃</b>：祭坛利刃瞬移到人身后砍一刀，再跟 4 秒毒，被连着砍到血线往下掉时开。<b>剧毒涌动</b>：乌拉特克神选者读 2 秒，卷起 9 秒毒素风暴打全队，读条时开。</p>
+      <p>打断照旧：进化者的<b>毒伤</b>、神选者的<b>群体毒伤</b>、原始毒蛇的<b>刺耳嘶鸣</b>都用瓦解断。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1308864}}" alt=""><div><b>感染上身</b><span>疾影一层</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1308518}}" alt=""><div><b>淬毒之刃连砍</b><span>第二层</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1307567}}" alt=""><div><b>群体毒伤</b><span>瓦解断掉</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1306852}}" alt=""><div><b>剧毒涌动读条</b><span>疾影回来就交</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="剧毒涌动每跳：不开减伤约 14 万，开疾影约 10 万；感染每跳：约 17 万对约 12 万">
+      <div class="cap">剧毒涌动打在你身上的每一跳</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">14 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:72%">10 万</span></div></div>
+      <div class="cap">感染每跳</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">17 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:74%">12 万</span></div></div>
+      <div class="delta">−25%<small>九秒风暴、五秒蛇卵都盖得住</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 拉维</h3><span class="kind">TRASH · 仪式首领、原始毒蛇、双牙蹂躏者、毒液水蛭</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306517}}" alt=""><div><div class="n">鲜血献祭</div><div class="s">仪式首领读 3 秒，祭坛之灵剖开全队并吸收治疗 <span class="tag">物理</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，两层轮着交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306517}}" alt=""><div><div class="n">鲜血献祭 · 疾影两层都在冷却</div><div class="s">全队挤在一起打首领 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:196718}}" alt="">黑暗 <span class="pill p-dr">15% 躲开</span></div>
+          <div class="why">8 码罩住全队，补上疾影的空档</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294557}}" alt=""><div><div class="n">刺耳嘶鸣</div><div class="s">原始毒蛇读条，急速降低 30% <span class="tag">物理</span><span class="tag">无视护甲</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">毒蛇隔二十来秒读一次，每只都盯着断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>拉维</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1296220}}" alt=""><div><div class="n">三重喷吐</div><div class="s">2 秒读条，毒球砸三个人，之后 10 秒每秒一跳 <span class="tag poison">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">被点到就开，10 秒盖住整段毒</div>
+        </div>
+        <div class="note">拉维这场疾影<b>优先给三重喷吐</b>，两层轮着用，一被点到就交。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>拉维 → 扭缠盘蛇</h3><span class="kind">TRASH · 振响的扭缠蛇、高阶进化者、放血者、幼体</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294849}}" alt=""><div><div class="n">振响</div><div class="s">扭缠蛇读 3 秒，5 秒每秒一跳 <span class="tag">物理</span><span class="tag">无视护甲</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，10 秒盖住五跳</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294849}}" alt=""><div><div class="n">振响 · 疾影两层都在冷却</div><div class="s">扭缠蛇又读一轮 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:196718}}" alt="">黑暗 <span class="pill p-dr">15% 躲开</span></div>
+          <div class="why">接住疾影接不上的那一轮</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n">毒伤</div><div class="s">高阶进化者读 3 秒，一发加 8 秒持续毒 <span class="tag poison">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">每一个都断，断成了魔法伤害再降 15%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>扭缠盘蛇</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1299053}}" alt=""><div><div class="n">濒死喘息</div><div class="s">5 秒读条，之后响尾声每秒叠一层，直到盘蛇被撕裂 <span class="tag">物理</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1287798}}" alt="">藤蔓之握 <span class="pill p-mv">副本按钮</span></div>
+          <div class="why">读条快结束时点，被藤蔓连上后跑出 10 码，盘蛇当场解除盘卷，响尾不再叠</div>
+        </div>
+        <div class="note">藤蔓之握是副本给的按钮，不是职业技能。撕开时全队会吃一下<b>解除盘卷</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>扭缠盘蛇 → 祖尔加</h3><span class="kind">TRASH · 高阶进化者、祭坛利刃、晋升之蛇、乌拉特克神选者、活体毒液</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n">毒伤</div><div class="s">高阶进化者读 3 秒 <span class="tag poison">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">和前一段一样，见一个断一个</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308864}}" alt=""><div><div class="n">感染</div><div class="s">晋升之蛇给全队种蛇卵，5 秒后 8 码爆开、钻出幼体 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">蛇卵上身就开，盖住五跳和爆开那一下</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308518}}" alt=""><div><div class="n">淬毒之刃</div><div class="s">祭坛利刃瞬移到身后砍一刀，再跟 4 秒毒 <span class="tag poison">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">利刃好几只，被连着砍到就开</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306852}}" alt=""><div><div class="n">剧毒涌动</div><div class="s">乌拉特克神选者读 2 秒，9 秒毒素风暴 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，风暴九秒都在疾影里</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1307567}}" alt=""><div><div class="n">群体毒伤</div><div class="s">乌拉特克神选者读条，一发加 8 秒持续毒 <span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">这管怪伤害本来就满，少一轮毒治疗轻松很多</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294557}}" alt=""><div><div class="n">刺耳嘶鸣</div><div class="s">尾王前那波原始毒蛇又出现 <span class="tag">物理</span><span class="tag">无视护甲</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">同开场，每只都断</div>
+        </div>
+        <div class="note warn">这一段<b>感染、淬毒之刃、剧毒涌动</b>常在同一管怪里叠着来，疾影两层别在一样东西上连着交光。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>祖尔加</h3><span class="kind">BOSS 3</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300876}}" alt=""><div><div class="n">毒牙仪式</div><div class="s">5 秒读条，光束聚到祖尔加身上 8 秒 <span class="tag poison">自然</span><span class="tag">拦截</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1300894}}" alt="">进光束拦截 <span class="pill p-mv">站位</span></div>
+          <div class="why">不拦祖尔加会被毒牙强化；拦了身上叠仪式毒液</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301413}}" alt=""><div><div class="n">切骨者 · 身上挂着仪式毒液</div><div class="s">5 秒读条，飞斧砍路径上所有人，流血 7 秒 <span class="tag bleed">流血</span><span class="tag">物理</span><span class="tag">无视护甲</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 + 进飞斧路径 <span class="pill p-clr">清毒液</span></div>
+          <div class="why">大出血移除仪式毒液；疾影盖住首击和流血</div>
+        </div>
+        <div class="note">每轮光束后有两把切骨者。<b>第二把是最后的机会</b>，落下时毒液只剩三秒左右就要喷发。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:198589}}" alt=""><div><div class="nm">疾影</div><span class="pill p-dr">减伤 25% · 两层</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>鲜血献祭、三重喷吐、振响、感染、淬毒之刃、剧毒涌动、切骨者</dd><dt>时机</dt><dd>读条时按，或被点到时按；点了恶魔韧性有两层</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:183752}}" alt=""><div><div class="nm">瓦解</div><span class="pill p-clr">打断 · 远程</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>原始毒蛇的刺耳嘶鸣、高阶进化者的毒伤、乌拉特克神选者的群体毒伤</dd><dt>时机</dt><dd>毒蛇和进化者一读就断；断成了魔法伤害再降 15%</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:196718}}" alt=""><div><div class="nm">黑暗</div><span class="pill p-dr">8 码 · 全队</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>开场的鲜血献祭、第 5 波的振响</dd><dt>时机</dt><dd>疾影两层都在冷却、全队挤在一起吃同一下时</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1301413}}" alt=""><div><div class="nm">切骨者（祖尔加的技能）</div><span class="pill p-clr">清仪式毒液</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>拦光束挂上的仪式毒液</dd><dt>时机</dt><dd>读条时开疾影，站到祖尔加和被点的人之间</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1287798}}" alt=""><div><div class="nm">藤蔓之握（副本按钮）</div><span class="pill p-mv">撕开盘蛇</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>扭缠盘蛇的濒死喘息叠层</dd><dt>时机</dt><dd>濒死喘息读条快结束时点，连上后跑出 10 码</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+22 高手同款噬灭天赋，英雄天赋 Void-Scarred。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1266307}}" alt=""><div><b>恶魔韧性</b><span>疾影多一层充能，三重喷吐、振响、感染、切骨者都靠它轮着接</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1266329}}" alt=""><div><b>恶魔笼头</b><span>瓦解打断成功后 12 秒魔法伤害降低 15%，这里的毒全是自然伤害</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1223171}}" alt=""><div><b>诡计</b><span>瓦解施法距离多 20 码，后排也能断进化者和毒蛇</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389783}}" alt=""><div><b>漆黑</b><span>黑暗冷却缩短 120 秒，鲜血献祭和振响都交得上</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389696}}" alt=""><div><b>伊利达雷的知识</b><span>受到的魔法伤害降低 3%，整本副本都是自然伤害</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1266497}}" alt=""><div><b>陷阵殿后</b><span>变换给一个 6% 最大生命值的护盾</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:204909}}" alt=""><div><b>灵魂劈裂</b><span>吸血提高 6%，变形时再加 6%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/myKVjGMJZ68DRp1w#fight=68">Isirys 27:03（时间轴和天赋）</a>
+      <a href="https://www.warcraftlogs.com/reports/tKMrqH8P7ZfGaN1X#fight=2">瞎少爷您来啦 27:06</a>
+      <a href="https://www.warcraftlogs.com/reports/dqJtvz4VHQR7rank#fight=19">Streakdh 27:33</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">噬灭恶魔猎手 · 毒牙祭坛 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

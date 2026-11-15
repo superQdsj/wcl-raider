@@ -1,0 +1,382 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">THE BLINDING VALE · MYTHIC+ · DEVOURER DEMON HUNTER FIELD CARD</div>
+    <h1><span class="cls">噬灭恶魔猎手</span><span class="dot">·</span>夺目谷 应对手册</h1>
+    <p class="lede">噬灭在夺目谷靠<b>两层疾影</b>。莱克希的荆棘之刃点到你、鲁伊亚的光明之火点到你，看到就开；伊库兹的青翠践踏和唤棘者咆哮、兹欧凯特身上叠起来的光绽之力，也是疾影的位置。<b>瓦解</b>是这个副本里最忙的键：光耀播法者、科兹齐特的光芒箭、光羽瓣翼鸟、多叶林莽爬行者、光诞鞭笞者都要断。光箭雨踢不到就交<b>虚空新星</b>。暗夜精灵被血棘之根定住时，<b>影遁</b>当场脱身。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时噬灭 ×3</b></span>
+      <span class="chip">英雄天赋 <b>Annihilator</b></span>
+      <span class="chip">核心 <b>疾影 / 瓦解 / 虚空新星 / 黑暗 / 影遁</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里保命技能交在哪</h2>
+  <p class="sub">一整场 +22 里，疾影、黑暗、影遁、瓦解和虚空新星分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(163,48,201,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:198589}}" alt="">疾影</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:196718}}" alt="">黑暗</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:58984}}" alt="">影遁（青圈，暗夜精灵）</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 / <img class="ic sm" src="{{I:1234195}}" alt="">虚空新星（绿圈）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 1 · 莱克希 / 科兹齐特 / 梅提克</div>
+      <div class="sig">看到<b>「成为荆棘之刃的目标！」挂在你身上</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+      <p>点名 3 秒后莱克希闪到你身后背刺，再挂 12 秒流血，每 2 秒一跳四十多万。点名总是和梅提克的基岩猛击同时出来，后面还跟着全队 8 秒的基岩涌动。一被点就开疾影，10 秒把背刺、大半段流血和基岩涌动一起盖住。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 1 · 科兹齐特</div>
+      <div class="sig">看到<b>科兹齐特读光芒箭</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+      <p>科兹齐特整场一直在读光芒箭，每一发打一名玩家一下神圣伤害。和队友排好轮次，轮到你就断。断成了还有恶魔笼头，12 秒里受到的魔法伤害降低 15%，基岩涌动是自然伤害，正好吃这个减伤。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 护光者鲁伊亚</div>
+      <div class="sig">看到<b>光明之火点到你</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+      <p>光束点人，6 秒里每秒一跳光辉伤害，结束时在你脚下留一道光明之火射线，站在里面会被沉默。上身一两秒内开疾影，结束前离开人群，别把射线放在队友脚下。鲁伊亚变成幽灵枭兽以后还会再点。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 光耀播法者</div>
+      <div class="sig">看到<b>光耀播法者读光箭雨</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:183752}}" alt="">瓦解 · <img class="ic lg" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">打断 / 昏迷</span></div>
+      <p>播法者平时读光芒箭，光箭雨是打全队的那个，一发都不能让它读完。瓦解在手就断；瓦解刚交掉、或者两只播法者同时读，就丢虚空新星，晕住读条的那只。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>三个关键处理</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1261276}}" alt="">莱克希三人组：点名开疾影，光芒箭轮着断</h3>
+      <p>这场的节奏是固定的：梅提克大约 45 秒一次<b>基岩猛击</b>砸坦克，砸完全队吃 8 秒<b>基岩涌动</b>，每秒一跳。同一时刻莱克希给一名玩家挂上<b>「成为荆棘之刃的目标！」</b>，3 秒后背刺，接 12 秒流血。</p>
+      <p>点名落在你身上，就是全场你最疼的十几秒：基岩涌动、背刺、流血叠在一起。<b>一看到点名就开疾影</b>，不用等背刺。没被点的那几轮，疾影留着，下一次点名可能就是你。</p>
+      <p>同时<b>科兹齐特</b>一直在读光芒箭。噬灭的瓦解射程够远（点了诡计再多 20 码），站在后排也能断。和队友排好，轮到你就交。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1234773}}" alt=""><div><b>基岩猛击</b><span>信号 · 同时出点名</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>点到你：疾影</b><span>点名一出就按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1235642}}" alt=""><div><b>背刺 + 12 秒流血</b><span>和基岩涌动叠在一起</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:183752}}" alt=""><div><b>光芒箭</b><span>轮到你就瓦解</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="荆棘之刃流血每跳：不开减伤约 45 万，开疾影约 33 万">
+      <div class="cap">荆棘之刃流血，每一跳打在你身上</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">45 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:74%">33 万</span></div></div>
+      <div class="delta">−25%<small>基岩涌动每跳也从 16 万降到 12 万</small></div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1263420}}" alt="">圣光猎手伊库兹：践踏和咆哮开疾影，狂乱阶段补黑暗</h3>
+      <p>伊库兹交替读两样东西。<b>青翠践踏</b>读 3 秒，对全队一下物理伤害并击退，4 秒后每个人脚下长出血棘之根。<b>唤棘者咆哮</b>读 2 秒，打全队几跳。看到读条就开疾影，两层轮着交。</p>
+      <p>打到一半伊库兹进入<b>光狂疯乱</b>，之后每 2 秒对全队脉冲一次神圣伤害，一直到死。这一段践踏和咆哮叠在脉冲上最疼，疾影两层都交在这里；接不上的那一下交<b>黑暗</b>，8 码罩住全队。</p>
+      <p><b>血棘之根</b>把你定在原地，每秒一跳，直到根须被打掉或者伊库兹踩过去。暗夜精灵被定住、根须没有马上被处理，就开<b>影遁</b>，根须当场消失。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1236746}}" alt=""><div><b>青翠践踏 / 咆哮</b><span>读条</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>读条时按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1259365}}" alt=""><div><b>血棘之根定住</b><span>暗夜精灵影遁</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:196718}}" alt=""><div><b>光狂疯乱阶段</b><span>疾影接不上就黑暗</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一次青翠践踏：不开减伤约 63 万，开疾影约 45 万">
+      <div class="cap">一次青翠践踏打在你身上</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">63 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:72%">45 万</span></div></div>
+      <div class="delta">−28%<small>咆哮每跳 36 万 → 28 万</small></div>
+      <div class="cap">血棘之根每秒二十多万，定住几秒就是一百多万；影遁那一刻根须就没了。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1247052}}" alt="">兹欧凯特：第二层光绽之力开疾影，鞭笞者成堆交虚空新星</h3>
+      <p>兹欧凯特每 3 秒一跳<b>渗流木质</b>打全队，从头跳到尾。在这之上大约 50 秒一轮：<b>唤醒光绽</b>叫醒地上的光诞鞭笞者，10 秒后<b>光绽精华</b>，接着身上会叠<b>光绽之力</b>：伤害和治疗提高 10%，但每秒掉血，可以叠加。</p>
+      <p>身上叠到<b>第二层光绽之力</b>时开疾影，这时渗流木质和两层光绽之力一起在跳，是这场最疼的十秒。</p>
+      <p>被叫醒的<b>光诞鞭笞者</b>会读光孢射击。它们常常挤成一堆一起读，这时丢<b>虚空新星</b>，一下晕住一整堆；落单的一只就用瓦解断。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1247669}}" alt=""><div><b>唤醒光绽</b><span>鞭笞者醒来读光孢射击</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1234195}}" alt=""><div><b>虚空新星</b><span>成堆一起晕</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1247052}}" alt=""><div><b>光绽之力第二层</b><span>信号</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>每轮一层</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="渗流木质每跳：不开减伤约 22 万，开疾影约 16 万">
+      <div class="cap">渗流木质，每一跳打在你身上</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">22 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:74%">16 万</span></div></div>
+      <div class="delta">−25%<small>每 3 秒一跳，十秒里少吃二十万上下</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 首领 1</h3><span class="kind">TRASH · 翠绿林地守护者、灌林追猎者、孢荒喷射者、光耀播法者</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1255205}}" alt=""><div><div class="n">拔根而起 · 荆棘之刃</div><div class="s">守护者读条打全队并击退；追猎者背刺挂 8 秒流血 <span class="tag fel">自然</span><span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">开怪第一轮拔根而起读条时开，顺带盖住身上的流血</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1263628}}" alt=""><div><div class="n">喷涌之花</div><div class="s">孢荒喷射者读条，6 秒每 2 秒一跳，60 码 <span class="tag magic">神圣</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条结束时开，10 秒盖住整段；首领 1 后面那只喷射者照做</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238063}}" alt=""><div><div class="n">光芒箭</div><div class="s">光耀播法者一直读 <span class="tag magic">神圣</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">播法者站在后面，远程瓦解够得着，好了就断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301834}}" alt=""><div><div class="n">光箭雨</div><div class="s">光耀播法者的群体读条 <span class="tag magic">神圣</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">昏迷</span></div>
+          <div class="why">瓦解优先给它；瓦解在冷却就晕住，一发都别让它读完</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>莱克希 · 科兹齐特 · 梅提克</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1261276}}" alt=""><div><div class="n">荆棘之刃点你</div><div class="s">和基岩猛击同时出，3 秒后背刺 + 12 秒流血 <span class="tag bleed">流血</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">点名一出就开，背刺、流血、基岩涌动一起减</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238063}}" alt=""><div><div class="n">光芒箭</div><div class="s">科兹齐特整场在读 <span class="tag magic">神圣</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">和队友排轮次；断成了恶魔笼头再减 15% 魔法伤害</div>
+        </div>
+        <div class="note">这场疾影只等一件事：<b>荆棘之刃点到你</b>。基岩涌动每轮都有，但点名那一轮最疼，别在没被点的时候把两层都交光。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>首领 1 → 伊库兹</h3><span class="kind">TRASH · 孢荒喷射者、光羽瓣翼鸟</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238294}}" alt=""><div><div class="n">迷乱尖叫</div><div class="s">光羽瓣翼鸟读条，读完全队迷惑 <span class="tag">全团</span><span class="tag">控制</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">读出来全队都失控，必断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>圣光猎手伊库兹</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1236746}}" alt=""><div><div class="n">青翠践踏</div><div class="s">3 秒读条，全队重击并击退 <span class="tag">物理</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，这一下六十多万</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1236731}}" alt=""><div><div class="n">唤棘者咆哮</div><div class="s">2 秒读条，打全队几跳 <span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">和践踏轮着交，两层轮流用</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1263420}}" alt=""><div><div class="n">光狂疯乱阶段</div><div class="s">伊库兹每 2 秒脉冲全队，直到死 <span class="tag magic">神圣</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:196718}}" alt="">黑暗 <span class="pill p-dr">全队</span></div>
+          <div class="why">疾影两层都在冷却的那次践踏或咆哮，黑暗罩住全队</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1259365}}" alt=""><div><div class="n">血棘之根</div><div class="s">践踏 4 秒后脚下长根，定身，每秒一跳 <span class="tag fel">自然</span><span class="tag magic">魔法</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">脱身</span></div>
+          <div class="why">暗夜精灵专用：根须没马上被打掉就开，当场解开</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>伊库兹 → 鲁伊亚</h3><span class="kind">TRASH · 多叶林莽爬行者、脊盾甲虫、多刺的迅叶龙</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238232}}" alt=""><div><div class="n">种子射击</div><div class="s">多叶林莽爬行者读条 <span class="tag fel">自然</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">一发四十万上下，爬行者一直读，好了就断；鲁伊亚房间里的爬行者也一样</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>护光者鲁伊亚</h3><span class="kind">BOSS 3</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1239825}}" alt=""><div><div class="n">光明之火点你</div><div class="s">光束 6 秒每秒一跳，结束留射线 <span class="tag magic">光辉</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">上身就开；结束前走出人群，射线会沉默站在里面的人</div>
+        </div>
+        <div class="note">鲁伊亚前半场自己放光明之火，变成<b>幽灵枭兽</b>以后由枭兽接着点。两个阶段都是同一个处理：<b>点到就疾影</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>鲁伊亚 → 兹欧凯特</h3><span class="kind">TRASH · 薯身蟾主母、光羽瓣翼鸟、光耀播法者</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1238294}}" alt=""><div><div class="n">迷乱尖叫</div><div class="s">薯身蟾这一段的光羽瓣翼鸟又在读 <span class="tag">全团</span><span class="tag">控制</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">和前面一样，必断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301834}}" alt=""><div><div class="n">光芒箭 · 光箭雨</div><div class="s">首领 4 门口又有两只光耀播法者 <span class="tag magic">神圣</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 / 虚空新星 <span class="pill p-clr">打断</span></div>
+          <div class="why">同开场：光箭雨优先，瓦解没好就新星晕住</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>兹欧凯特</h3><span class="kind">BOSS 4</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1247052}}" alt=""><div><div class="n">光绽之力 · 第二层</div><div class="s">光绽精华之后叠在身上，每秒掉血 <span class="tag magic">神圣</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">叠到第二层就开，和渗流木质一起减</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1247669}}" alt=""><div><div class="n">光孢射击 · 成堆</div><div class="s">唤醒光绽叫醒的光诞鞭笞者一起读 <span class="tag magic">神圣</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">昏迷</span></div>
+          <div class="why">一下晕住六七只，新星好了就交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1247669}}" alt=""><div><div class="n">光孢射击 · 落单</div><div class="s">新星在冷却时 <span class="tag magic">神圣</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">远处单只鞭笞者用瓦解</div>
+        </div>
+        <div class="note">兹欧凯特大约 50 秒一轮：<b>唤醒光绽 → 光绽精华 → 光绽之力叠层</b>。鞭笞者醒了交新星，叠层时交疾影。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:198589}}" alt=""><div><div class="nm">疾影</div><span class="pill p-dr">减伤 25% · 两层</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>拔根而起、喷涌之花、荆棘之刃点名、青翠践踏、唤棘者咆哮、光明之火、光绽之力</dd><dt>时机</dt><dd>点名一出或读条时按；点了恶魔韧性有两层</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:183752}}" alt=""><div><div class="nm">瓦解</div><span class="pill p-clr">打断 · 远程</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>光箭雨、光芒箭（播法者和科兹齐特）、迷乱尖叫、种子射击、光孢射击</dd><dt>时机</dt><dd>光箭雨和迷乱尖叫优先；断成了魔法伤害再降 15%</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1234195}}" alt=""><div><div class="nm">虚空新星</div><span class="pill p-cc">群体昏迷 2 秒</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>瓦解交不上的光箭雨、兹欧凯特成堆的光诞鞭笞者</dd><dt>时机</dt><dd>光箭雨读条中；唤醒光绽之后鞭笞者挤在一起读时</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:58984}}" alt=""><div><div class="nm">影遁（暗夜精灵）</div><span class="pill p-clr">解定身</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>伊库兹的血棘之根</dd><dt>时机</dt><dd>被根住、根须没有马上被打掉时</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:196718}}" alt=""><div><div class="nm">黑暗</div><span class="pill p-dr">8 码 · 全队</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>伊库兹光狂疯乱阶段的践踏和咆哮</dd><dt>时机</dt><dd>疾影两层都在冷却、全队一起吃同一下时</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+22 高手同款噬灭天赋，英雄天赋 Annihilator；走 Void-Scarred 也行，下面这些防御和打断天赋两边一样。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1266307}}" alt=""><div><b>恶魔韧性</b><span>疾影多一层充能，荆棘之刃点名、践踏、光明之火都靠它轮着接</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1234195}}" alt=""><div><b>虚空新星</b><span>群体昏迷 2 秒，停光箭雨、晕兹欧凯特的鞭笞者</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1266329}}" alt=""><div><b>恶魔笼头</b><span>瓦解打断成功后 12 秒魔法伤害降低 15%，断科兹齐特时正好减基岩涌动</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1223171}}" alt=""><div><b>诡计</b><span>瓦解施法距离多 20 码，站后排也够得着播法者和科兹齐特</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389783}}" alt=""><div><b>漆黑</b><span>黑暗冷却缩短 120 秒</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389696}}" alt=""><div><b>伊利达雷的知识</b><span>受到的魔法伤害降低 3%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/gmFq6n4aVG3KHTZj#fight=18">Khalîsî 26:16（时间轴和天赋）</a>
+      <a href="https://www.warcraftlogs.com/reports/t1RWbDTFrZAMpnHY#fight=46">Yamatekudasi 26:38</a>
+      <a href="https://www.warcraftlogs.com/reports/49cMwTVZGxzW32Pn#fight=11">维什戴尔丶 26:43</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">噬灭恶魔猎手 · 夺目谷 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>
