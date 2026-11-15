@@ -13,6 +13,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "dist" / "site"
 TEMPLATE = ROOT / "site"
+ICONS = (ROOT / "guides" / "icons").resolve()  # shared spell icons, see guides/tools/icons.py
 # Display order. Every spec is named the same way: spec + class (敏锐 + 潜行者).
 # color is the in-game class color; icon is the in-game spec icon in site/img/icons/.
 CLASSES = {
@@ -125,7 +126,8 @@ def main():
             asset = (page.parent / link).resolve()
             if asset in files or asset in hubs:
                 continue
-            if (not asset.is_relative_to(page.parent.resolve())
+            # Images must sit next to the page or in the shared guides/icons/.
+            if (not (asset.is_relative_to(page.parent.resolve()) or asset.is_relative_to(ICONS))
                     or asset.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".ico"}
                     or not asset.is_file()):
                 raise SystemExit(f"Unsupported or missing local link: {page.relative_to(ROOT)} -> {link}")

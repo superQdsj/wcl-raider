@@ -23,3 +23,9 @@ s=s.replace('{{TALENT}}',json.load(open(N+'/tstring.json'))['string'])
 assert '{{' not in s
 open(N+'/src.html','w').write(head+open(N+'/body.part').read()+tail)
 open(out,'w').write(s); print(len(s))
+
+# Icons live in guides/icons/; the page links to them instead of embedding base64.
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.abspath(__file__).split("/guides/")[0], "guides", "tools"))
+from icons import externalize
+print("icons:", externalize(out))

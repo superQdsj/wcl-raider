@@ -36,3 +36,9 @@ assert '{{' not in s, re.findall(r'\{\{[^}]*\}\}', s)[:5]
 out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(H, '../../2026-11-15-虚空之痕竞技场-噬灭恶魔猎手.html')
 open(out, 'w', encoding='utf-8').write(s)
 print(out, len(s))
+
+# Icons live in guides/icons/; the page links to them instead of embedding base64.
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.abspath(__file__).split("/guides/")[0], "guides", "tools"))
+from icons import externalize
+print("icons:", externalize(out))
