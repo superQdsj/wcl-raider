@@ -58,6 +58,8 @@ python3 guides/rogue/rebuild.py --output-dir /tmp/rogue-guides
 | `sources/duomugu-v2/` | 夺目谷 | `2026-11-08-夺目谷-潜行者.html` | 3 场 |
 | `sources/duya-v2/` | 毒牙祭坛 | `2026-11-15-毒牙祭坛-潜行者.html` | 5 场 +24 / +23（证据包和 NOTES.md 在源目录） |
 
+`sources/duya-raycast-trial/` 是毒牙祭坛的 Raycast 风格试验版（2026-11-15，非正式、不发布），成品 `trial.html` 留在源目录里，说明见该目录的 `NOTES.md`。
+
 毒牙祭坛原先只有未发布的第一版源稿（`sources/rogue.src.html`）；v2 是第一本公开的毒牙祭坛潜行者手册。
 
 ## 完成状态

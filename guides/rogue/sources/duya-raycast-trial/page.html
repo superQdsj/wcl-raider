@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>潜行者 · 毒牙祭坛</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* v3 — Raycast vocabulary, applied with discipline.
+   ONE component: the launcher window (search bar → list → action footer), frosted glass over colored light.
+   Keycaps = things you press. Gold = cloak / must-do. Red = evasion. Glow behind windows is atmosphere only. */
+:root{
+  --bg:#060608;
+  --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.14);
+  --ink:#f5f5f7; --ink-2:#c7c8ce; --mute:#8d8e96; --faint:#5d5e66;
+  --yel:#FFF468; --red:#FF6363;
+  --sans:"Inter","PingFang SC","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{margin:0;color:var(--ink);font:15px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--yel);outline-offset:2px}
+h1,h2,h3,p{margin:0}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px;position:relative}
+
+/* ---------- light behind glass ---------- */
+.lit{position:relative;isolation:isolate}
+.aura{position:absolute;z-index:-1;inset:-60px -40px;pointer-events:none}
+.aura i{position:absolute;border-radius:50%;filter:blur(60px)}
+.a-y{background:rgba(255,244,104,.32)} .a-g{background:rgba(80,220,120,.28)} .a-r{background:rgba(255,90,90,.26)}
+.a-v{background:rgba(150,110,255,.30)} .a-c{background:rgba(60,210,230,.22)}
+
+/* ---------- the window ---------- */
+.win{position:relative;border-radius:16px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.02) 40%),rgba(20,20,24,.58);
+  -webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 0 1px rgba(0,0,0,.4),0 40px 90px -36px rgba(0,0,0,.95)}
+.search{display:flex;align-items:center;gap:12px;padding:15px 18px;border-bottom:1px solid var(--line)}
+.search .crumb{flex:none;font:600 12px/1 var(--sans);color:var(--ink-2);padding:6px 9px;border-radius:7px;background:rgba(255,255,255,.08);border:1px solid var(--line)}
+.search .crumb.boss{color:#1a1a08;background:var(--yel);border-color:transparent}
+.search h3{font-size:19px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+.search .hint{margin-left:auto;font-size:12.5px;color:var(--faint);text-align:right}
+.sect{padding:12px 20px 4px;font:600 11.5px/1.4 var(--sans);color:var(--mute);letter-spacing:.02em}
+.plan{padding:0 20px 8px;font-size:14px;line-height:1.7;color:var(--ink-2)}
+.plan b{color:var(--ink);font-weight:600}
+.list{padding:6px 8px 8px}
+.foot{display:flex;align-items:center;gap:16px;padding:10px 16px;border-top:1px solid var(--line);background:rgba(0,0,0,.22);font-size:12.5px;color:var(--mute);flex-wrap:wrap}
+.foot .sp{margin-left:auto;display:flex;align-items:center;gap:8px}
+.foot img{width:18px;height:18px;border-radius:5px;vertical-align:-4px;margin-right:6px}
+
+/* row: icon | title + subtitle / why | keys (accessory) */
+.row{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:4px 14px;align-items:center;padding:10px 12px;border-radius:10px}
+.row > .ic{grid-row:span 2;width:34px;height:34px;border-radius:8px;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 4px 10px -2px rgba(0,0,0,.7)}
+.row .t{font-weight:600;font-size:15px;line-height:1.35}
+.row .t small{font-weight:400;font-size:13px;color:var(--mute);margin-left:10px}
+.row .why{grid-column:2;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+.row .keys{grid-column:3;grid-row:1 / span 2;display:flex;align-items:center;gap:6px;justify-content:flex-end}
+.row.sel{background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.06));box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.must{font:700 11px/1 var(--sans);color:var(--yel);margin-right:4px;letter-spacing:.04em}
+.row .when{grid-row:span 2;font:700 12px/1 var(--mono);color:var(--mute);text-align:center;white-space:nowrap}
+.row.sel .when{color:var(--yel)}
+
+/* keycaps */
+.k{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font:600 13px/1 var(--sans);color:var(--ink);
+  padding:4px 10px 4px 4px;border-radius:8px;
+  background:linear-gradient(180deg,#3a3c43 0%,#27292e 50%,#1e1f24 100%);
+  border:1px solid rgba(255,255,255,.1);border-bottom-color:rgba(0,0,0,.6);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 2px 0 #0b0b0e,0 6px 12px -6px rgba(0,0,0,.8)}
+.k img{width:20px;height:20px;border-radius:5px;display:block}
+.k.cloak{box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 2px 0 #0b0b0e,0 0 0 1px rgba(255,244,104,.55),0 0 16px -3px rgba(255,244,104,.55)}
+.k.eva{box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 2px 0 #0b0b0e,0 0 0 1px rgba(255,99,99,.55),0 0 16px -3px rgba(255,99,99,.55)}
+.k.txt{padding:4px 9px;font:600 12px/1 var(--mono);color:var(--ink-2)}
+.or{color:var(--faint);font-size:12px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:120px 0 72px;isolation:isolate}
+.beams{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.beams .stripes{position:absolute;left:50%;top:-280px;width:1800px;height:1000px;transform:translateX(-50%) rotate(-8deg);
+  background:repeating-linear-gradient(118deg,transparent 0 54px,rgba(255,244,104,.6) 54px 86px,transparent 86px 150px,rgba(140,235,110,.5) 150px 168px,transparent 168px 230px);
+  -webkit-mask:radial-gradient(46% 44% at 64% 34%,#000,rgba(0,0,0,.4) 45%,transparent 75%);mask:radial-gradient(46% 44% at 64% 34%,#000,rgba(0,0,0,.4) 45%,transparent 75%);
+  filter:blur(5px) saturate(1.3);opacity:.9}
+.beams .g1{position:absolute;width:900px;height:520px;left:50%;top:-220px;background:radial-gradient(closest-side,rgba(255,244,104,.5),transparent);filter:blur(30px)}
+.beams .g2{position:absolute;width:760px;height:460px;left:4%;top:-120px;background:radial-gradient(closest-side,rgba(70,220,120,.4),transparent);filter:blur(40px)}
+.beams::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(6,6,8,.3) 50%,var(--bg) 96%)}
+.badge{display:inline-flex;align-items:center;gap:10px;font:600 12px/1 var(--sans);letter-spacing:.08em;color:var(--ink-2);
+  padding:8px 14px 8px 8px;border-radius:999px;background:rgba(10,10,12,.55);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border:1px solid var(--line-2);box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.badge img{width:20px;height:20px;border-radius:6px}
+h1{margin-top:26px;font-size:clamp(40px,7vw,76px);font-weight:900;line-height:1.05;letter-spacing:-.025em;
+  background:linear-gradient(180deg,#fff 30%,#c4c6cc);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .cls{background:linear-gradient(120deg,var(--yel),#d6f45a 45%,#5BE37D);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .dot{-webkit-text-fill-color:rgba(255,255,255,.28);margin:0 .14em;font-weight:400}
+.lede{margin-top:22px;max-width:660px;font-size:17px;line-height:1.8;color:var(--ink-2)}
+.lede b{color:var(--ink);font-weight:700}
+.hero .lit{margin-top:44px;max-width:720px}
+.meta{margin-top:18px;font-size:13px;color:var(--faint)}
+.meta b{color:var(--mute);font-weight:500}
+
+/* ---------- sections ---------- */
+section{padding-top:84px}
+.sh{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.sh .k{padding:6px 10px;font:700 13px/1 var(--mono);color:var(--ink-2)}
+h2{font-size:clamp(26px,3.4vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.2}
+.sh p{margin-left:auto;font-size:13.5px;color:var(--mute);text-align:right}
+.stack{display:grid;gap:30px}
+
+/* ---------- timeline inside a window ---------- */
+.tl-scroll{overflow-x:auto;padding:22px 24px 10px}
+.tl{position:relative;min-width:900px;height:240px}
+.gl{position:absolute;top:0;bottom:24px;width:1px;background:rgba(255,255,255,.06)}
+.band{position:absolute;top:94px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font:600 12px var(--sans);white-space:nowrap;overflow:hidden}
+.band span{overflow:hidden;text-overflow:ellipsis;padding:0 6px}
+.band.trash{color:var(--mute);border:1px dashed rgba(255,255,255,.14);background:rgba(255,255,255,.02)}
+.band.boss{color:var(--ink);font-weight:700;background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+.axis{position:absolute;top:222px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:90px;z-index:1;--c:var(--yel)}
+.mk .stem{width:1px;background:var(--c)}
+.mk .pin{line-height:0;border-radius:8px;padding:2px;background:var(--c);box-shadow:0 0 16px -2px var(--c)}
+.mk img{width:24px;height:24px;border-radius:6px;display:block;background:#000}
+.mk .lab{font:600 12px/1.3 var(--sans);color:var(--ink);white-space:nowrap}
+.mk .t{font:500 10.5px/1.5 var(--mono);color:var(--mute)}
+.mk.up{top:0}
+.mk.up .lab{order:0}.mk.up .t{order:1}.mk.up .pin{order:2;margin-top:3px}.mk.up .stem{order:3;height:22px}
+.mk.dn{top:126px}
+.mk.dn .stem{order:0;height:14px}.mk.dn .pin{order:1}.mk.dn .t{order:2;margin-top:3px}.mk.dn .lab{order:3}
+.mk.muted{--c:#4a4a52}.mk.muted .pin{box-shadow:none}.mk.muted .lab{color:var(--mute)}.mk.muted img{filter:grayscale(.5) brightness(.85)}
+.mk.e{--c:var(--red)}
+.mk.end{transform:translateX(-80%)}
+.mk.start{transform:translateX(-20%)}
+.lg{display:inline-flex;align-items:center;gap:7px}
+.lg i{width:10px;height:10px;border-radius:3px}
+
+/* soak bars as list rows */
+.bar{display:grid;grid-template-columns:110px 1fr 70px;gap:14px;align-items:center;padding:7px 12px;font-size:13.5px;color:var(--ink-2)}
+.bar i{display:block;height:8px;border-radius:4px;background:rgba(255,255,255,.06);box-shadow:inset 0 1px 2px rgba(0,0,0,.5)}
+.bar i span{display:block;height:100%;border-radius:4px;background:linear-gradient(180deg,#a6a8b0,#6c6e76)}
+.bar em{font:700 12.5px var(--mono);font-style:normal;text-align:right}
+.bar.zero em{color:var(--yel);text-shadow:0 0 12px rgba(255,244,104,.6)}
+
+/* talent window */
+.code{flex:1;min-width:0;font:500 12.5px/1.5 var(--mono);color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;user-select:all}
+.copy{flex:none;cursor:pointer;font:700 13px/1 var(--sans);color:#17170a;padding:9px 14px;border-radius:9px;border:1px solid rgba(255,255,255,.4);
+  background:linear-gradient(180deg,#fffcc0,var(--yel) 50%,#e3c838);box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 2px 0 #6d5f10,0 8px 20px -6px rgba(255,244,104,.55)}
+.copy:active{transform:translateY(1px)}
+
+footer{padding:90px 0 60px;font-size:12.5px;color:var(--faint)}
+footer .refs{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px}
+footer a{color:var(--mute)}
+footer a:hover{color:var(--yel)}
+
+@media (max-width:760px){
+  .row{grid-template-columns:34px minmax(0,1fr)}
+  .row .keys{grid-column:2;grid-row:auto;justify-content:flex-start;flex-wrap:wrap;margin-top:4px}
+  .row .t small{display:block;margin-left:0}
+  .sh{flex-wrap:wrap}.sh p{margin-left:0;text-align:left;width:100%}
+  .search{flex-wrap:wrap}.search .hint{margin-left:0;text-align:left;width:100%}
+}
+@media (max-width:520px){
+  .wrap{padding:0 16px}
+  .hero{padding:84px 0 48px}
+  .aura{inset:-30px -10px}
+  .bar{grid-template-columns:84px 1fr 58px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="beams" aria-hidden="true"><div class="g2"></div><div class="g1"></div><div class="stripes"></div></div>
+  <div class="wrap">
+    <div class="badge"><img src="{{I:31224}}" alt="">ALTAR OF FANGS · MYTHIC+ · SUBTLETY ROGUE</div>
+    <h1><span class="cls">潜行者</span><span class="dot">·</span>毒牙祭坛</h1>
+    <p class="lede">这个副本几乎全是<b>自然伤害和持续毒</b>。暗影斗篷两分钟一次，整场的节奏就是把它留给下一个毒机制；其余的伤害交佯攻。唯一的例外在祖尔加：仪式毒液斗篷清不掉，要靠首领自己的飞斧冲掉。</p>
+
+    <div class="lit">
+      <div class="aura" aria-hidden="true"><i class="a-v" style="width:46%;height:70%;left:2%;top:8%"></i><i class="a-y" style="width:40%;height:60%;right:6%;top:30%"></i></div>
+      <div class="win">
+        <div class="search"><span class="crumb">核心</span><h3>四个技能撑起整个副本</h3></div>
+        <div class="list">
+          <div class="row sel"><img class="ic" src="{{I:31224}}" alt=""><div class="t">暗影斗篷<small>免疫并清掉自然毒</small></div><p class="why">只交给毒。物理伤害它挡不住。</p><div class="keys"><span class="k txt">2 分钟</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1966}}" alt=""><div class="t">佯攻<small>范围 −40% · 单体 −20%</small></div><p class="why">转好就按，几乎常驻。</p><div class="keys"><span class="k txt">2 层</span></div></div>
+          <div class="row"><img class="ic" src="{{I:5277}}" alt=""><div class="t">闪避<small>配飘忽不定，所有伤害 −20%</small></div><p class="why">主要用来接切骨者。</p><div class="keys"></div></div>
+          <div class="row"><img class="ic" src="{{I:185311}}" alt=""><div class="t">猩红之瓶<small>4 秒回 20%</small></div><p class="why">斗篷没好时拦光束用。</p><div class="keys"></div></div>
+        </div>
+      </div>
+    </div>
+    <p class="meta">参考 <b>+24 / +23 限时敏锐贼（国 / 欧 / 美）</b> · 英雄天赋 <b>欺诈者</b></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <div class="sh"><span class="k">01</span><h2>一场里斗篷交在哪</h2><p>一整场 +24 的实际记录</p></div>
+  <div class="lit">
+    <div class="aura" aria-hidden="true"><i class="a-y" style="width:40%;height:80%;left:20%;top:10%"></i><i class="a-g" style="width:34%;height:70%;right:4%;top:20%"></i></div>
+    <div class="win">
+      <div class="tl-scroll">
+{{TIMELINE}}
+      </div>
+      <div class="foot">
+        <span class="lg"><i style="background:var(--yel);box-shadow:0 0 8px var(--yel)"></i>必做的斗篷</span>
+        <span class="lg"><i style="background:var(--red);box-shadow:0 0 8px var(--red)"></i>闪避接切骨者</span>
+        <span class="lg"><i style="background:#4a4a52"></i>顺手交的斗篷</span>
+        <span class="sp">斗篷 9 次 · 闪避 1 次</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="k">02</span><h2>按路线逐段</h2><p>看到什么 → 按什么 → 为什么　高亮行是必做</p></div>
+  <div class="stack">
+
+    <!-- 开场 -->
+    <div class="lit">
+      <div class="aura" aria-hidden="true"><i class="a-g" style="width:40%;height:70%;left:10%;top:15%"></i></div>
+      <div class="win">
+        <div class="search"><span class="crumb">小怪</span><h3>开场 → 拉维</h3><span class="hint">仪式首领 · 双牙蹂躏者 · 原始毒蛇</span></div>
+        <div class="list">
+          <div class="row"><img class="ic" src="{{I:1294569}}" alt=""><div class="t">麻痹射击<small>双牙蹂躏者 · 魔法减速 14 秒</small></div><p class="why">治疗没驱才交。交在开场最后一两分钟，拉维开打时正好转好。</p><div class="keys"><span class="k cloak"><img src="{{I:31224}}" alt="">暗影斗篷</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1306550}}" alt=""><div class="t">鲜血献祭<small>仪式首领读条 · 物理</small></div><p class="why">读条时开。物理伤害，斗篷挡不住。</p><div class="keys"><span class="k"><img src="{{I:1966}}" alt="">佯攻</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1294557}}" alt=""><div class="t">刺耳嘶鸣<small>原始毒蛇读条</small></div><p class="why">这几波的打断主要踢它。</p><div class="keys"><span class="k"><img src="{{I:1766}}" alt="">脚踢</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1306890}}" alt=""><div class="t">不稳定的图腾<small>地面范围</small></div><p class="why">跑出范围；走不开就开佯攻，每跳少四成。</p><div class="keys"><span class="k"><img src="{{I:2983}}" alt="">疾跑</span><span class="or">或</span><span class="k"><img src="{{I:1966}}" alt="">佯攻</span></div></div>
+        </div>
+        <div class="foot"><span><img src="{{I:31224}}" alt="">斗篷 1 次</span><span class="sp">下一段 拉维</span></div>
+      </div>
+    </div>
+
+    <!-- 拉维 -->
+    <div class="lit">
+      <div class="aura" aria-hidden="true"><i class="a-y" style="width:44%;height:80%;left:4%;top:10%"></i><i class="a-g" style="width:36%;height:70%;right:6%;top:24%"></i></div>
+      <div class="win">
+        <div class="search"><span class="crumb boss">首领 1</span><h3>拉维</h3></div>
+        <p class="sect">节奏</p>
+        <p class="plan">斗篷能交<b>两次</b>：开打后第一个毒球一次，两分钟后再一次。中间的毒球和每次践踏交佯攻。</p>
+        <div class="list">
+          <div class="row sel"><img class="ic" src="{{I:1297876}}" alt=""><div class="t">三重喷吐<small>毒球砸中 · 10 秒持续毒</small></div><p class="why">砸中后马上开。毒当场清掉，脚下也不再烫自己和身边的人。</p><div class="keys"><span class="must">必做</span><span class="k cloak"><img src="{{I:31224}}" alt="">暗影斗篷</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1297876}}" alt=""><div class="t">三重喷吐<small>斗篷在冷却</small></div><p class="why">持续毒每跳几乎砍半。</p><div class="keys"><span class="k"><img src="{{I:1966}}" alt="">佯攻</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1307894}}" alt=""><div class="t">贪婪践踏<small>全团 · 约一分钟一次</small></div><p class="why">每次都开，不开要吃将近 90 万。</p><div class="keys"><span class="k"><img src="{{I:1966}}" alt="">佯攻</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1296058}}" alt=""><div class="t">反刍<small>点名直线胃酸波</small></div><p class="why">走出直线。</p><div class="keys"><span class="k"><img src="{{I:36554}}" alt="">暗影步</span></div></div>
+        </div>
+        <div class="foot"><span><img src="{{I:31224}}" alt="">斗篷 2 次</span><span class="sp">下一段 进化者</span></div>
+      </div>
+    </div>
+
+    <!-- 进化者 -->
+    <div class="lit">
+      <div class="aura" aria-hidden="true"><i class="a-c" style="width:40%;height:70%;right:10%;top:15%"></i></div>
+      <div class="win">
+        <div class="search"><span class="crumb">小怪</span><h3>拉维 → 扭缠盘蛇</h3><span class="hint">高阶进化者 · 振响的扭缠蛇 · 放血者</span></div>
+        <div class="list">
+          <div class="row"><img class="ic" src="{{I:1289416}}" alt=""><div class="t">毒伤<small>高阶进化者 3 秒读条</small></div><p class="why">全场踢得最多的一个，能踢就踢。</p><div class="keys"><span class="k"><img src="{{I:1766}}" alt="">脚踢</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1289416}}" alt=""><div class="t">毒伤<small>没踢掉，毒上身</small></div><p class="why">在这里交，两分钟后正好赶上盘蛇的第二次同步毒液。</p><div class="keys"><span class="k cloak"><img src="{{I:31224}}" alt="">暗影斗篷</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1294859}}" alt=""><div class="t">振响<small>全团物理 5 秒 · 无视护甲</small></div><p class="why">佯攻每跳少四成，闪避好了再叠。</p><div class="keys"><span class="k"><img src="{{I:1966}}" alt="">佯攻</span><span class="k eva"><img src="{{I:5277}}" alt="">闪避</span></div></div>
+        </div>
+        <div class="foot"><span><img src="{{I:31224}}" alt="">斗篷 1 次</span><span class="sp">下一段 扭缠盘蛇</span></div>
+      </div>
+    </div>
+
+    <!-- 扭缠盘蛇 -->
+    <div class="lit">
+      <div class="aura" aria-hidden="true"><i class="a-g" style="width:44%;height:80%;left:6%;top:10%"></i><i class="a-y" style="width:34%;height:70%;right:6%;top:20%"></i></div>
+      <div class="win">
+        <div class="search"><span class="crumb boss">首领 2</span><h3>扭缠盘蛇</h3></div>
+        <p class="sect">节奏</p>
+        <p class="plan">第一次同步毒液开怪就来，斗篷还没转好，开佯攻顶。<b>斗篷留给第二次</b>，别交在冲锋和撕裂上。</p>
+        <div class="list">
+          <div class="row sel"><img class="ic" src="{{I:1299189}}" alt=""><div class="t">同步毒液 · 第二次<small>全团 · 35 秒持续毒</small></div><p class="why">读条时开。慢了半拍也照开，上身后一样能清。</p><div class="keys"><span class="must">必做</span><span class="k cloak"><img src="{{I:31224}}" alt="">暗影斗篷</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1299080}}" alt=""><div class="t">濒死喘息<small>被藤蔓连上 · 每秒叠一层</small></div><p class="why">先开佯攻，再按副本按钮跑开 10 码扯开盘蛇。撕裂后 1–3 秒全团挨一下解除盘卷。</p><div class="keys"><span class="k"><img src="{{I:1966}}" alt="">佯攻</span><span class="k"><img src="{{I:1287798}}" alt="">藤蔓之握</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1299130}}" alt=""><div class="t">掘地冲锋<small>首领钻地冲走</small></div><p class="why">落地后步回首领身边。</p><div class="keys"><span class="k"><img src="{{I:36554}}" alt="">暗影步</span></div></div>
+        </div>
+        <div class="foot"><span><img src="{{I:31224}}" alt="">斗篷 1 次</span><span class="sp">下一段 神选者</span></div>
+      </div>
+    </div>
+
+    <!-- 神选者 -->
+    <div class="lit">
+      <div class="aura" aria-hidden="true"><i class="a-r" style="width:40%;height:70%;left:8%;top:20%"></i><i class="a-g" style="width:36%;height:70%;right:8%;top:10%"></i></div>
+      <div class="win">
+        <div class="search"><span class="crumb">小怪</span><h3>扭缠盘蛇 → 祖尔加</h3><span class="hint">祭坛利刃 · 晋升之蛇 · 乌拉特克神选者 · 活体毒液</span></div>
+        <p class="sect">节奏 · 全场最疼的一段</p>
+        <p class="plan"><b>神选者分两拨，每拨交一次斗篷</b>，两拨之间隔约两分钟。前面的小怪别把斗篷交空。</p>
+        <div class="list">
+          <div class="row"><img class="ic" src="{{I:1308518}}" alt=""><div class="t">淬毒之刃<small>祭坛利刃闪到身后劈砍</small></div><p class="why">这一段掉血最多的来源。佯攻转好就开，闪避叠上能砍半。</p><div class="keys"><span class="k"><img src="{{I:1966}}" alt="">佯攻</span><span class="k eva"><img src="{{I:5277}}" alt="">闪避</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1308865}}" alt=""><div class="t">感染 / 毒伤<small>晋升之蛇种卵 · 进化者毒伤</small></div><p class="why">只在离第一拨神选者还有两分钟以上时交，到时正好转好。</p><div class="keys"><span class="k cloak"><img src="{{I:31224}}" alt="">暗影斗篷</span></div></div>
+          <div class="row sel"><img class="ic" src="{{I:1306852}}" alt=""><div class="t">剧毒涌动<small>神选者 2 秒读条 · 9 秒毒风暴</small></div><p class="why">整段免疫，活体毒液死亡时的毒液爆裂也一起免。</p><div class="keys"><span class="must">必做</span><span class="k cloak"><img src="{{I:31224}}" alt="">暗影斗篷</span></div></div>
+          <div class="row"><img class="ic" src="{{I:1306550}}" alt=""><div class="t">鲜血献祭<small>常和剧毒涌动叠在一起</small></div><p class="why">斗篷挡毒，佯攻挡献祭，血低就喝瓶。</p><div class="keys"><span class="k"><img src="{{I:1966}}" alt="">佯攻</span><span class="k"><img src="{{I:185311}}" alt="">猩红之瓶</span></div></div>
+        </div>
+        <div class="foot"><span><img src="{{I:31224}}" alt="">斗篷 3 次</span><span class="sp">下一段 祖尔加</span></div>
+      </div>
+    </div>
+
+    <!-- 祖尔加 -->
+    <div class="lit">
+      <div class="aura" aria-hidden="true"><i class="a-y" style="width:40%;height:60%;left:6%;top:8%"></i><i class="a-r" style="width:38%;height:60%;right:4%;top:36%"></i><i class="a-v" style="width:30%;height:40%;left:30%;bottom:0"></i></div>
+      <div class="win">
+        <div class="search"><span class="crumb boss">首领 3</span><h3>祖尔加</h3></div>
+        <p class="sect">机制</p>
+        <p class="plan">约一分钟一次毒牙仪式，蛇头的光束要有人站进去拦，贼很适合拦。拦完身上留下<b>仪式毒液</b>，约 57 秒后喷发，斗篷清不掉。能清掉它的是祖尔加自己的<b>切骨者</b>：飞斧路径上的人会流血，流血结束时仪式毒液跟着消失。</p>
+        <p class="sect">一轮仪式 · 从光束读条算起</p>
+        <div class="list">
+          <div class="row"><span class="when">0 秒</span><div class="t">毒牙仪式<small>站进光束拦截，8 秒</small></div><p class="why">斗篷两分钟、光束一分钟，所以隔一轮才有斗篷；没有就佯攻加瓶子边拦边回血。</p><div class="keys"><span class="k cloak"><img src="{{I:31224}}" alt="">斗篷</span><span class="or">或</span><span class="k"><img src="{{I:1966}}" alt="">佯攻</span><span class="k"><img src="{{I:185311}}" alt="">瓶</span></div></div>
+          <div class="row sel"><span class="when">+32 秒</span><div class="t">切骨者<small>5 秒读条 · 飞斧 + 7 秒流血</small></div><p class="why">站进飞斧路径，读条结束前开好。闪避靠飘忽不定盖住首击和整段流血。</p><div class="keys"><span class="must">必做</span><span class="k"><img src="{{I:1966}}" alt="">佯攻</span><span class="k eva"><img src="{{I:5277}}" alt="">闪避</span></div></div>
+          <div class="row"><span class="when">+44 秒</span><div class="t">流血结束<small>仪式毒液消失</small></div><p class="why">不会喷发，这一轮结束。</p><div class="keys"></div></div>
+          <div class="row"><span class="when">没接到</span><div class="t">第二把切骨者<small>约 16 秒后，最后机会</small></div><p class="why">两把都错过，就在仪式毒液快走完时开斗篷，喷发会被抵抗掉。</p><div class="keys"><span class="k cloak"><img src="{{I:31224}}" alt="">暗影斗篷</span></div></div>
+        </div>
+        <p class="sect">拦光束时每一跳吃多少</p>
+        <div class="list">
+          <div class="bar"><span>不开</span><i><span style="width:100%"></span></i><em>29.4 万</em></div>
+          <div class="bar"><span>佯攻</span><i><span style="width:77.9%"></span></i><em>22.9 万</em></div>
+          <div class="bar"><span>佯攻 + 闪避</span><i><span style="width:58.5%"></span></i><em>17.2 万</em></div>
+          <div class="bar zero"><span>暗影斗篷</span><i></i><em>0</em></div>
+        </div>
+        <div class="foot"><span><img src="{{I:31224}}" alt="">斗篷 1 次</span><span><img src="{{I:5277}}" alt="">闪避 1 次</span><span class="sp">通关</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="k">03</span><h2>天赋</h2><p>取自 +24 限时录像 · 英雄天赋欺诈者</p></div>
+  <div class="lit">
+    <div class="aura" aria-hidden="true"><i class="a-y" style="width:40%;height:70%;right:10%;top:0"></i><i class="a-v" style="width:36%;height:70%;left:6%;top:30%"></i></div>
+    <div class="win">
+      <div class="search"><span class="crumb">导入</span><code class="code" id="talent-code">{{TALENT}}</code><button class="copy" id="copy-btn" type="button">复制</button></div>
+      <p class="sect">这四个防御天赋不要动</p>
+      <div class="list">
+        <div class="row"><img class="ic" src="{{I:79008}}" alt=""><div class="t">飘忽不定</div><p class="why">闪避期间所有伤害 −20%，佯攻对单体也 −20%。</p><div class="keys"></div></div>
+        <div class="row"><img class="ic" src="{{I:423647}}" alt=""><div class="t">优雅诡谋</div><p class="why">佯攻 2 层充能，践踏和献祭都赶得上。</p><div class="keys"></div></div>
+        <div class="row"><img class="ic" src="{{I:1267220}}" alt=""><div class="t">危险感知</div><p class="why">20% 几率让一次伤害降低 20%。</p><div class="keys"></div></div>
+        <div class="row"><img class="ic" src="{{I:231719}}" alt=""><div class="t">麻木神经</div><p class="why">物理伤害 −5%，切骨者和献祭都吃到。</p><div class="keys"></div></div>
+      </div>
+      <div class="foot"><span>可换：吸血药膏、轻若鸿毛、恶毒药膏 → 剧毒短匕、铜肠铁胃、强化致伤药膏</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  潜行者 · 毒牙祭坛 · 2026-11 · 参考录像
+  <div class="refs">
+    <a href="https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=36">斗篷小王子 +24 29:40</a>
+    <a href="https://www.warcraftlogs.com/reports/pJqfFgYPNKaBmz1k#fight=30">黑川茜贼贼 +24 29:47</a>
+    <a href="https://www.warcraftlogs.com/reports/vyTYACGBPHca6qtw#fight=4">Qingxinlucky +24 29:49</a>
+    <a href="https://www.warcraftlogs.com/reports/x31kmyYL2fMKCw6T#fight=18">Dlkeyrogue +23 28:12</a>
+    <a href="https://www.warcraftlogs.com/reports/yp8drqxAtz7F4KC9#fight=18">Charrend +23 28:37</a>
+  </div>
+</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+  });
+})();
+</script>
+</body>
+</html>
