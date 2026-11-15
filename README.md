@@ -10,11 +10,11 @@
 
 ## 职业副本手册
 
-职业大秘境手册不用 skill，按 [`guides/tools/README.md`](guides/tools/README.md) 的两段式流程制作：便宜模型跑 `evidence.py` 采集证据包，强模型从三场高分限时录像里找出该职业真正用来处理机制的技巧，手写成「信号 → 按什么 → 为什么」的攻略页，结尾附天赋导入字符串。
+职业大秘境手册不用 skill，按 [`guides/tools/README.md`](guides/tools/README.md) 的两段式流程制作：便宜模型跑 `evidence.py` 采集证据包，主会话从五场高分限时录像里找出该职业真正用来处理机制的技巧，手写成「信号 → 按什么 → 为什么」的攻略页，结尾附天赋导入字符串。
 
 所有手册都在 [`guides/`](guides/README.md)，一个职业专精一个目录，成品和源材料放在一起：
 - 武器战：八本（`guides/warrior-arms/`）
-- 潜行者：七本第一版（`guides/rogue/`），正在按新流程重做，已完成诸王之眠、夺目谷
+- 潜行者：七本第一版（`guides/rogue/`），正在按新流程重做，已完成诸王之眠、夺目谷、毒牙祭坛
 - 神圣骑士：八本（`guides/holy-paladin/`）
 - 噬灭恶魔猎手：六本：诸王之眠、纳洛拉克的洞穴、塞塔里斯神庙、毒牙祭坛、红玉新生法池、夺目谷（`guides/demonhunter-devourer/`）
 
