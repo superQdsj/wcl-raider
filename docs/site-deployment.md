@@ -1,6 +1,6 @@
 # 攻略网站发布
 
-使用 Cloudflare Pages 免费静态托管。首页与 404 页由 `scripts/site_index.py` 生成：顶部按专精切换（整页随职业色变化，选择记在网址 `#slug` 和浏览器本地），下方列出该专精的八个副本，摘要取各攻略的 `lede` 段，旧版链接附在日期旁。新增职业需同时在 `build_site.py` 的 `CLASSES` 和 `site_index.py` 的 `CLASS_META` 中登记（含职业色和职业色上的文字色）。
+使用 Cloudflare Pages 免费静态托管。首页与 404 页是手写的模板，放在 `site/`（`index.html`、`404.html`、`site.css`、`site.js`）：深色主题，整页随所选专精的职业色变化，顶部是专精印章切换，下方八张副本卡片各有一幅线描纹样，卡片上的要点取自攻略 `lede` 段里的短粗体词，没有粗体短词时退回摘要。选择记在网址 `#slug` 和浏览器本地。`build_site.py` 只负责收集攻略、提取元数据，并把数据以 JSON 注入 `site/index.html`。新增职业只需在 `build_site.py` 的 `CLASSES` 中登记（名称、简称、职业色、职业色上的文字色、印章字）；新增副本的纹样在 `site/site.js` 的 `MOTIFS` 中补一幅。
 
 生产网址：https://wcl-raider.pages.dev/
 项目名称：`wcl-raider`；生产分支：`main`。
