@@ -1,0 +1,335 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">MURDER ROW · MYTHIC+ · DEVOURER DEMON HUNTER FIELD CARD</div>
+    <h1><span class="cls">噬灭恶魔猎手</span><span class="dot">·</span>密谋小径 应对手册</h1>
+    <p class="lede">密谋小径里噬灭最忙的是<b>瓦解</b>：法师的邪能飞弹、萨亚德的诱惑、凯斯媞亚镜像的邪能风暴、评论家的恶意评价、掠夺者的邪能之怒、利希尔的混乱之箭，一路断到尾。<b>疾影</b>留给几次固定的群伤：赞恩每一轮的影舞步、萨祖克斯的地狱火碾压接魔化狂怒。小鬼成群读邪火爆裂就丢<b>虚空新星</b>。暗夜精灵被腐化的术士吸取生命，<b>影遁</b>当场断掉。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时噬灭 ×3</b></span>
+      <span class="chip">英雄天赋 <b>Void-Scarred</b></span>
+      <span class="chip">核心 <b>瓦解 / 疾影 / 虚空新星 / 影遁</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里关键技能交在哪</h2>
+  <p class="sub">一整场 +22 里，瓦解、疾影、虚空新星和影遁分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(163,48,201,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:198589}}" alt="">疾影</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:58984}}" alt="">影遁（青圈，暗夜精灵）</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 / <img class="ic sm" src="{{I:1234195}}" alt="">虚空新星（绿圈）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 2 · 赞恩·刃悲</div>
+      <div class="sig">看到<b>赞恩开始影舞步</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+      <p>赞恩每 42 秒一轮，第一下就是影舞步：3 秒里每 0.5 秒打全队一下物理，无视护甲。开怪和之后每一轮都在影舞步出手时按疾影，两层轮着交，整段弹幕都在减伤里。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 腐化的术士</div>
+      <div class="sig">看到<b>吸取生命点到你</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">断引导</span></div>
+      <p>术士读 2 秒后对一名玩家引导 7 秒，每秒一跳二十多万，吸走的血给自己回。暗夜精灵吃到第一跳就影遁，术士丢了目标，引导当场断，后面几跳都不用吃。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 萨祖克斯之后的小鬼群</div>
+      <div class="sig">看到<b>一堆不羁的小鬼一起读邪火爆裂</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">群体昏迷</span></div>
+      <p>每只小鬼 1.5 秒读一发邪火爆裂，单体火焰伤害，一大群一起读就是一排火球。小鬼被拉到一起、读条同时亮起来时丢虚空新星，读到一半的那一批全部打断，掠夺者和地狱猎犬也一起晕 2 秒。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 4 · 利希尔·烬怒</div>
+      <div class="sig">看到<b>利希尔读混乱之箭</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+      <p>利希尔整场一直在读混乱之箭，3 秒读条，读完一发混乱伤害近八十万，打在一名玩家身上。和队友排好轮次，轮到你就断，一发都别放出来。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>萨祖克斯：碾压读条开疾影，一层盖住碾压和魔化狂怒</h2>
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:474197}}" alt="">一轮一层疾影，从碾压读条交到狂怒落地</h3>
+      <p>歼灭者萨祖克斯大约一分钟一轮。先是<b>利斧投掷</b>，斧头落地后留在场上放魔能闪电，要尽快打掉。十五秒后是这一轮最疼的一段：<b>地狱火碾压</b>读 3 秒，在每个人脚下喷发，一下三四十万火焰伤害，接着 8 秒每秒一跳灼烧；碾压刚落地，萨祖克斯就读 4 秒<b>魔化狂怒</b>，对全队一下大额混乱伤害，之后 15 秒攻速大涨，脚下铺开燃烧脚步。</p>
+      <p>这两样是连着来的，中间几乎没有空隙。<b>看到地狱火碾压的读条就开疾影</b>，最晚在碾压落地那一刻按：10 秒正好盖住碾压的喷发、大半段灼烧和魔化狂怒那一下。交在前面的利斧投掷上，碾压来时疾影就没了；等狂怒读条再按，碾压的喷发和前几跳就白吃了。</p>
+      <p>每一轮都这么交，疾影有两层，一分钟一轮转得过来。狂怒之后远离萨祖克斯脚下的燃烧脚步，那是一秒五十多万的火焰地面，开着疾影也不能站。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1214650}}" alt=""><div><b>利斧投掷</b><span>打掉斧头 · 疾影留着</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1295453}}" alt=""><div><b>地狱火碾压读条</b><span>信号 · 3 秒</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:198589}}" alt=""><div><b>疾影</b><span>读条中到落地前按</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1295455}}" alt=""><div><b>碾压喷发 + 8 秒灼烧</b><span>减 25%</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:474197}}" alt=""><div><b>魔化狂怒</b><span>还在同一层疾影里</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:474234}}" alt=""><div><b>燃烧脚步</b><span>离开首领脚下</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="地狱火碾压灼烧每跳：不开减伤约 15 万，开疾影约 11 万">
+      <div class="cap">地狱火碾压的灼烧，每一跳打在你身上</div>
+      <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">15 万</span></div></div>
+      <div class="bar-row"><span>开着疾影</span><div class="bar"><span class="on" style="width:76%">11 万</span></div></div>
+      <div class="delta">−25%<small>魔化狂怒那一下也落在同一层疾影里</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 凯斯媞亚</h3><span class="kind">TRASH · 凶邪的法师、诱惑的萨亚德、径巷流氓、巨大的邪能浮龙</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1216571}}" alt=""><div><div class="n">邪能飞弹</div><div class="s">凶邪的法师一直读，打一名玩家 5 秒火焰持续伤害 <span class="tag fel">火焰</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">盯住一只法师，瓦解一好就断它</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1201554}}" alt=""><div><div class="n">诱惑</div><div class="s">诱惑的萨亚德读 3 秒，迷惑一名玩家 6 秒 <span class="tag magic">魔法</span><span class="tag">控制</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">读出来就少一个人 6 秒，优先级比邪能飞弹高</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297667}}" alt=""><div><div class="n">燃烧邪能 · 腐蚀唾液</div><div class="s">巨大的邪能浮龙活着就每 3 秒烧 50 码内所有人；唾液吐当前目标，可叠加 <span class="tag fel">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">这只浮龙要打一阵，全程都在烧，这一波交一层；唾液吐到你身上时正好按</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>凯斯媞亚·魔力之心 · 咬咬</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1264106}}" alt=""><div><div class="n">邪能风暴</div><div class="s">凯斯媞亚放出镜像，镜像读邪能风暴，每秒烧附近所有玩家 <span class="tag fel">火焰</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">镜像一出来就找正在读条的那只断，诡计的射程站远也够得着</div>
+        </div>
+        <div class="note">混沌弹幕打坦克后会跳到附近的人身上，凯斯媞亚被圣光昏迷后的混沌爆裂每秒烧全队。噬灭这场的活儿是<b>断镜像的邪能风暴</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>非法降雨酒吧</h3><span class="kind">TRASH · 走红的评论家、仓库工人</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1257877}}" alt=""><div><div class="n">恶意评价</div><div class="s">走红的评论家引导 10 秒；被打断会反噬并直接离开酒吧 <span class="tag">引导</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">一断评论家就走，不用打；第二只来时瓦解没好就交虚空新星，昏迷一样打断引导</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>赞恩·刃悲</h3><span class="kind">BOSS 2 · 每 42 秒一轮</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:474483}}" alt=""><div><div class="n">影舞步</div><div class="s">3 秒弹幕，每 0.5 秒打全队一下，无视护甲 <span class="tag">物理</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">每轮的第一下群伤；开怪和每一轮都在影舞步出手时按</div>
+        </div>
+        <div class="note">赞恩一轮的顺序是固定的：<b>影舞步 → 火焰炸弹 → 货物爆炸 + 毒伤 → 绝命凶径</b>。疾影只等影舞步，别交在别的地方；绝命凶径只打视线内的人，瞄准时离开赞恩的视线。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>赞恩 → 萨祖克斯</h3><span class="kind">TRASH · 魔蝇、驯服的地狱猎犬、愤怒卫士掠夺者、破坏魔惩罚者、腐化的术士</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1214922}}" alt=""><div><div class="n">邪能之怒</div><div class="s">愤怒卫士掠夺者读条，读完自己 1 分钟受伤降低 60%、免疫控制 <span class="tag">激怒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">读出来这只掠夺者就打不动也控不住，这一波瓦解基本都给它</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297683}}" alt=""><div><div class="n">吸取生命</div><div class="s">腐化的术士读 2 秒后引导 7 秒，每秒一跳 <span class="tag">点名</span><span class="tag">引导</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">断引导</span></div>
+          <div class="why">暗夜精灵：第一跳打上来就影遁，引导当场断</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>歼灭者萨祖克斯</h3><span class="kind">BOSS 3 · 约一分钟一轮</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1295453}}" alt=""><div><div class="n">地狱火碾压 → 魔化狂怒</div><div class="s">碾压读 3 秒在每人脚下喷发并灼烧 8 秒，紧接着狂怒读 4 秒打全队 <span class="tag fel">火焰</span><span class="tag">混乱</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">碾压读条时按，一层盖住喷发、灼烧和狂怒；每轮都这么交</div>
+        </div>
+        <div class="note">利斧投掷落下的斧头会一直放魔能闪电，层数叠在全队身上，<b>尽快打掉</b>。疾影不交给利斧投掷，留给后面的碾压。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>萨祖克斯 → 利希尔</h3><span class="kind">TRASH · 不羁的小鬼、驯服的地狱猎犬、愤怒卫士掠夺者、腐化的术士</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1223204}}" alt=""><div><div class="n">邪火爆裂 · 成群</div><div class="s">不羁的小鬼每只读 1.5 秒，各打一名玩家 <span class="tag fel">火焰</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">昏迷</span></div>
+          <div class="why">小鬼拉到一起同时读的时候丢，一下停掉一整批火球</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1214922}}" alt=""><div><div class="n">邪能之怒</div><div class="s">掠夺者又在读 <span class="tag">激怒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">同上一段，掠夺者的读条优先于小鬼</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1295427}}" alt=""><div><div class="n">剥离 + 邪火爆裂叠在你身上</div><div class="s">掠夺者冲过来劈砍再流血 3 秒，同时小鬼的火球也在打你 <span class="tag bleed">流血</span><span class="tag fel">火焰</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">两样一起打你、血线往下掉时按，后面几秒的火球一起减</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297683}}" alt=""><div><div class="n">吸取生命</div><div class="s">这一段又有腐化的术士 <span class="tag">点名</span><span class="tag">引导</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">断引导</span></div>
+          <div class="why">同前：第一跳之后影遁</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>利希尔·烬怒</h3><span class="kind">BOSS 4 · 约一分钟一轮</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:474375}}" alt=""><div><div class="n">混乱之箭</div><div class="s">利希尔一直读，3 秒读条打一名玩家 <span class="tag">混乱</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">读完一发近八十万，和队友排轮次，一发都别放</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1223204}}" alt=""><div><div class="n">野生小鬼 · 邪火爆裂</div><div class="s">古尔丹之指落点涌出野生小鬼，灾厄浪潮读条时一起读火球 <span class="tag fel">火焰</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">昏迷</span></div>
+          <div class="why">穿完传送门、利希尔召出邪能护盾开始读灾厄浪潮前后，小鬼正聚在一起读条，丢新星停一批</div>
+        </div>
+        <div class="note">每轮的顺序：<b>召唤邪犬 → 古尔丹之指 → 恶魔传送门 → 邪能护盾 + 灾厄浪潮（读 10 秒）</b>。灾厄浪潮读完前穿过恶魔传送门，免疫首波伤害和火焰易伤。灼热邪焰从头烧到尾，躲不掉。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:183752}}" alt=""><div><div class="nm">瓦解</div><span class="pill p-clr">打断 · 远程</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>邪能飞弹、诱惑、邪能风暴（镜像）、恶意评价、邪能之怒、混乱之箭</dd><dt>时机</dt><dd>诱惑和邪能之怒优先；利希尔的混乱之箭排轮次</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:198589}}" alt=""><div><div class="nm">疾影</div><span class="pill p-dr">减伤 25% · 两层</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>巨大的邪能浮龙、影舞步、地狱火碾压 + 魔化狂怒、小鬼群里被剥离和火球一起打</dd><dt>时机</dt><dd>赞恩每轮影舞步出手时；萨祖克斯每轮碾压读条时</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1234195}}" alt=""><div><div class="nm">虚空新星</div><span class="pill p-cc">群体昏迷</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>不羁的小鬼和野生小鬼的邪火爆裂、瓦解交不上的恶意评价</dd><dt>时机</dt><dd>小鬼聚在一起同时读条；利希尔读灾厄浪潮时</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:58984}}" alt=""><div><div class="nm">影遁（暗夜精灵）</div><span class="pill p-clr">断引导</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>腐化的术士的吸取生命</dd><dt>时机</dt><dd>第一跳打上来时</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>身上常中的减益</h2>
+  <p class="sub">噬灭自己能解的只有吸取生命（暗夜精灵影遁），其余靠打断、减伤和治疗。</p>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>减益</th><th>类型</th><th>自己能解吗</th><th>一般怎么处理</th></tr></thead>
+      <tbody>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1216571}}" alt="">邪能飞弹</div></td><td><span class="tag fel">火焰</span><span class="tag">5 秒</span></td><td class="no">✗</td><td>瓦解法师，别让它读出来</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1297683}}" alt="">吸取生命</div></td><td><span class="tag">引导</span><span class="tag">7 秒</span></td><td class="yes">✓ 影遁（暗夜精灵）</td><td>第一跳后影遁，引导当场断</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1217633}}" alt="">腐蚀唾液</div></td><td><span class="tag magic">魔法</span><span class="tag">可叠加</span></td><td class="no">✗</td><td>治疗驱散魔法；巨大的邪能浮龙这波疾影顶着</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1216300}}" alt="">妙手空空</div></td><td><span class="tag bleed">流血</span><span class="tag">8 秒</span></td><td class="no">✗</td><td>径巷流氓跳过来挂上，治疗跟刷</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1295427}}" alt="">剥离</div></td><td><span class="tag bleed">流血</span><span class="tag">3 秒</span></td><td class="no">✗</td><td>愤怒卫士掠夺者冲过来挂上，只持续 3 秒，治疗跟刷</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1295455}}" alt="">地狱火碾压</div></td><td><span class="tag fel">火焰</span><span class="tag">8 秒</span></td><td class="no">✗</td><td>碾压读条时疾影，同一层带过魔化狂怒</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1217973}}" alt="">厄运诅咒</div></td><td><span class="tag">诅咒</span><span class="tag">10 秒</span></td><td class="no">✗</td><td>有人能驱就驱；没人驱就靠拢，4 码内的人一起分摊</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1214650}}" alt="">魔能闪电</div></td><td><span class="tag">混乱</span><span class="tag">可叠加</span></td><td class="no">✗</td><td>尽快打掉萨祖克斯丢在地上的斧头</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1217345}}" alt="">灾厄浪潮</div></td><td><span class="tag fel">火焰易伤</span><span class="tag">可叠加</span></td><td class="no">✗</td><td>读完前穿恶魔传送门，首波和易伤都不吃</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">07</span>天赋</h2>
+  <p class="sub">+22 高手同款噬灭天赋，英雄天赋 Void-Scarred。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1266307}}" alt=""><div><b>恶魔韧性</b><span>疾影多一层充能，赞恩的影舞步、萨祖克斯的碾压每轮都接得上</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1234195}}" alt=""><div><b>虚空新星</b><span>群体昏迷，停小鬼群的邪火爆裂、打断恶意评价</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1266329}}" alt=""><div><b>恶魔笼头</b><span>瓦解打断成功后 12 秒魔法伤害降低 15%，这里的群伤大多是火焰和混乱</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1223171}}" alt=""><div><b>诡计</b><span>瓦解施法距离多 20 码，站远也断得到法师、镜像和利希尔</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389783}}" alt=""><div><b>漆黑</b><span>黑暗冷却缩短 120 秒</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389696}}" alt=""><div><b>伊利达雷的知识</b><span>受到的魔法伤害降低 3%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/PMGFzxcybAv8pL24#fight=4">Yamatekudasi 28:05（时间轴）</a>
+      <a href="https://www.warcraftlogs.com/reports/m2h7dx9zrjwvAfgQ#fight=18">Daysixx 28:48</a>
+      <a href="https://www.warcraftlogs.com/reports/nJAXzq1Nd9FrCHY3#fight=7">Chandemon 28:53（天赋）</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">噬灭恶魔猎手 · 密谋小径 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

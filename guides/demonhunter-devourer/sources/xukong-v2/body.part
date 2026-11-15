@@ -1,0 +1,302 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">VOIDSCAR ARENA · MYTHIC+ · DEVOURER DEMON HUNTER FIELD CARD</div>
+    <h1><span class="cls">噬灭恶魔猎手</span><span class="dot">·</span>虚空之痕竞技场 应对手册</h1>
+    <p class="lede">虚空之痕竞技场打的几乎全是持续掉血的群伤，噬灭靠<b>两层疾影</b>轮着接：几丁高斯的险恶光环、塔兹拉尔的空灵冲刺、阿特洛苏斯召出的剧毒光环、贪噬残虐者的恐惧咆哮、煞戎努斯的星辰坠击。<b>瓦解</b>管四个读条：挫志怒吼、熔岩箭、愈体虚空、暗影箭雨；萨满的熔岩箭赶上瓦解冷却，就丢<b>虚空新星</b>。暗夜精灵被警惕的掠心者的虚空光束点到时，<b>影遁</b>让光束当场断掉。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+22 限时噬灭</b></span>
+      <span class="chip">英雄天赋 <b>Void-Scarred</b></span>
+      <span class="chip">核心 <b>疾影 / 瓦解 / 影遁 / 虚空新星</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里保命技能交在哪</h2>
+  <p class="sub">一整场 +22 里，疾影、影遁、瓦解和虚空新星分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(163,48,201,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:198589}}" alt="">疾影</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:58984}}" alt="">影遁（青圈，暗夜精灵）</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 / <img class="ic sm" src="{{I:1234195}}" alt="">虚空新星（绿圈）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 1 · 塔兹拉尔</div>
+      <div class="sig">看到<b>虚灵之影开始读空灵冲刺</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤 25%</span></div>
+      <p>塔兹拉尔每 35 秒放一轮虚灵之影，几道影子同时读条，大约 7 秒后冲向各自的目标：一下暗影伤害，接着 15 秒每秒一跳。读条快结束、影子冲出来前一秒开疾影，10 秒盖住冲击和前大半段持续伤害。两层轮着交，转好一层就接下一轮。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 警惕的掠心者</div>
+      <div class="sig">看到<b>虚空光束点到你</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">甩掉光束</span></div>
+      <p>掠心者的虚空光束锁一名玩家，4 秒里每 0.5 秒对落点 8 码打一跳暗影伤害。暗夜精灵被点到就开影遁，光束当场断掉，只吃开头一两跳。不是暗夜精灵、或者影遁在冷却，就开疾影，并且别把光束拖进人群。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 被奴役的萨满</div>
+      <div class="sig">看到<b>萨满读熔岩箭</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:183752}}" alt="">瓦解 · <img class="ic lg" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-clr">打断 / 昏迷</span></div>
+      <p>萨满一直在读熔岩箭，一发十多万火焰伤害打一个人。瓦解好了就断；下一发来时瓦解还在冷却，就在萨满身边丢虚空新星，晕 2 秒把读条打断，还顺带晕住同一堆里的尖啸者和裂爪兽。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 贪噬残虐者</div>
+      <div class="sig">看到<b>残虐者读恐惧咆哮</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+      <p>读条 4 秒多，读完击退全队，再挂 12 秒每秒一跳的暗影伤害。读条进入最后一两秒时开疾影，10 秒刚好盖住大半段持续伤害。煞戎努斯前那一大段路，残虐者一只接一只，这是疾影交得最多的地方。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>深挖：萨满 + 掠心者这一堆怎么按</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1300138}}" alt="">熔岩箭先断，瓦解没好就新星，光束点你就影遁</h3>
+      <p>塔兹拉尔之后、煞戎努斯之前的长路上，都会碰到同一套组合：<b>被奴役的萨满</b>、<b>警惕的掠心者</b>，旁边带着千噬兽尖啸者、野蛮裂爪兽和熔岩图腾。这一堆里噬灭有三个键要按，顺序是固定的。</p>
+      <p>第一，<b>萨满的熔岩箭</b>。它几乎不停地读，开怪第一发就用瓦解断掉。瓦解冷却期间它又读，就贴过去丢<b>虚空新星</b>，2 秒昏迷打断读条，同一堆里的尖啸者、裂爪兽也一起晕住。新星交完，下一发瓦解差不多就转好了。</p>
+      <p>第二，<b>掠心者的虚空光束</b>。它锁定一名玩家，4 秒里每 0.5 秒一跳。暗夜精灵被点到，<b>马上影遁</b>：影遁让你脱离锁定，光束在你身上的减益当场消失，后面的跳数全部落空。慢一秒按，就是多吃两跳。</p>
+      <p>没有影遁时，<b>疾影</b>是退路，但它只能把每一跳砍掉四分之一，光束还是会把 4 秒跳满。所以影遁好着的时候，别拿疾影去接光束，把疾影留给后面的恐惧咆哮。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1228176}}" alt=""><div><b>熔岩箭</b><span>第一发瓦解</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1234195}}" alt=""><div><b>又读：虚空新星</b><span>瓦解冷却时</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1300138}}" alt=""><div><b>虚空光束点你</b><span>4 秒每 0.5 秒一跳</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:58984}}" alt=""><div><b>影遁</b><span>光束当场断</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一道虚空光束打在你身上：开疾影跳满约 136 万，影遁后只吃两跳约 40 万">
+      <div class="cap">一道虚空光束打在你身上</div>
+      <div class="bar-row"><span>疾影硬吃</span><div class="bar"><span class="off" style="width:100%">136 万</span></div></div>
+      <div class="bar-row"><span>影遁甩掉</span><div class="bar"><span class="on" style="width:29%">40 万</span></div></div>
+      <div class="delta">−70%<small>疾影吃满 9 跳；影遁只吃开头 2 跳</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 几丁高斯</h3><span class="kind">TRASH · 被统御的斗士、狂野的刃牙虎人、不屈的埃吉拉、几丁高斯</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1298899}}" alt=""><div><div class="n">挫志怒吼</div><div class="s">被统御的斗士的长读条 <span class="tag">读条</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">开怪第一个要断的读条；它反复读，瓦解一好就交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1267894}}" alt=""><div><div class="n">野蛮飞跃扑到你</div><div class="s">刃牙虎人扑人，一刀 + 5 秒每秒一跳流血 <span class="tag">物理</span><span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">被扑中、身上挂上流血就开；刃牙虎人多的那几堆会连着扑</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1250695}}" alt=""><div><div class="n">险恶光环</div><div class="s">几丁高斯放出，8 秒每 2 秒一跳，100 码 <span class="tag fel">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">光环一出、第一跳落下就开，10 秒盖住整段 8 秒；大约 20 秒来一次，两层各接一次</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>塔兹拉尔</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1222103}}" alt=""><div><div class="n">空灵冲刺</div><div class="s">虚灵之影读条约 7 秒后冲向目标，一下 + 15 秒每秒一跳 <span class="tag magic">暗影</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">影子冲出来前一秒开，冲击和前 10 秒持续伤害一起减；每 35 秒一轮，两层轮着交</div>
+        </div>
+        <div class="note">这场疾影只等一件事：<b>空灵冲刺</b>。冲刺读条一出就开始数，读到最后一秒再按，别提前按掉一半时间。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>塔兹拉尔 → 阿特洛苏斯</h3><span class="kind">TRASH · 被奴役的萨满、警惕的掠心者、千噬兽尖啸者、野蛮裂爪兽</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1228176}}" alt=""><div><div class="n">熔岩箭</div><div class="s">被奴役的萨满一直在读 <span class="tag">火焰</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">这一段瓦解只给它，好了就断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1228176}}" alt=""><div><div class="n">熔岩箭 · 瓦解冷却中</div><div class="s">萨满和尖啸者、裂爪兽挤在一起 <span class="tag">火焰</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1234195}}" alt="">虚空新星 <span class="pill p-cc">昏迷</span></div>
+          <div class="why">贴着萨满放，2 秒昏迷打断读条，整堆一起晕</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300138}}" alt=""><div><div class="n">虚空光束点你</div><div class="s">掠心者锁定，4 秒每 0.5 秒一跳，落点 8 码 <span class="tag magic">暗影</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:58984}}" alt="">影遁 <span class="pill p-clr">甩掉</span></div>
+          <div class="why">暗夜精灵专用：被点就开，光束当场断；影遁在冷却就开疾影，离开人群</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>阿特洛苏斯</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1222692}}" alt=""><div><div class="n">巨响咆哮 → 剧毒光环</div><div class="s">咆哮打全队并召出剧毒蠕行者；蠕行者活着时每 0.5 秒一跳，100 码 <span class="tag fel">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">咆哮落地、蠕行者冒出来就开，盖住光环这十来秒；同时转火蠕行者，光环跟着它一起没</div>
+        </div>
+        <div class="note">阿特洛苏斯大约 50 秒一次<b>巨响咆哮</b>，每次都带出一只剧毒蠕行者。疾影按<b>蠕行者</b>来交：每出来一只，有疾影就开一层。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>阿特洛苏斯 → 煞戎努斯</h3><span class="kind">TRASH · 食腐虹虚魔、贪噬残虐者、虚空看顾者、虚触法师、被奴役的萨满、警惕的掠心者</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1252406}}" alt=""><div><div class="n">恐惧咆哮</div><div class="s">贪噬残虐者读条 4 秒多，击退全队 + 12 秒每秒一跳 <span class="tag magic">暗影</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条最后一两秒按，10 秒盖住大半段持续伤害</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1310324}}" alt=""><div><div class="n">愈体虚空</div><div class="s">虚空看顾者给友方回血 <span class="tag">治疗</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">让它读完，整堆怪的血就回去了；看顾者一读就断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1299938}}" alt=""><div><div class="n">暗影箭雨</div><div class="s">虚触法师的群体读条 <span class="tag magic">暗影</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">一发都别让它读完，虚触法师在的那几堆瓦解先给它</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1299913}}" alt=""><div><div class="n">虚无喷发</div><div class="s">虚触法师读条，落点 10 码一下 + 5 秒每秒一跳 <span class="tag magic">暗影</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">落在你脚下就在读条末尾开，整段持续伤害都在疾影里</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300138}}" alt=""><div><div class="n">熔岩箭 · 虚空光束</div><div class="s">这段路上又有萨满和掠心者 <span class="tag">火焰</span><span class="tag magic">暗影</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 / 新星 / 影遁 <span class="pill p-clr">同前</span></div>
+          <div class="why">和塔兹拉尔后面那堆一样：熔岩箭瓦解，瓦解没好就新星；光束点你就影遁</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>煞戎努斯</h3><span class="kind">BOSS 3</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300372}}" alt=""><div><div class="n">星辰坠击</div><div class="s">5 秒读条，落点 8 码一下并击退，之后 20 秒每秒一跳 <span class="tag magic">暗影</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条快结束时开，落地那一下和持续伤害的开头一起减；大约 53 秒一轮，每轮一层</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1264188}}" alt=""><div><div class="n">不稳定奇点</div><div class="s">全程每个奇点每秒打全队一跳，并把人往中心拉 <span class="tag magic">暗影</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:198589}}" alt="">疾影 <span class="pill p-dr">顺带</span></div>
+          <div class="why">不用单独交；星辰坠击那一层疾影开着时，奇点的每一跳也跟着少四分之一</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1298899}}" alt=""><div><div class="n">挫志怒吼</div><div class="s">首领门口的被统御的斗士，常和首领一起拉 <span class="tag">读条</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:183752}}" alt="">瓦解 <span class="pill p-clr">打断</span></div>
+          <div class="why">斗士还活着，瓦解就先给它</div>
+        </div>
+        <div class="note">一轮的顺序是 <b>星辰坠击 → 引力宝珠 → 暗影浪潮 → 虚空奔涌</b>，53 秒后再来星辰坠击。疾影就交在<b>每轮的星辰坠击</b>上。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:198589}}" alt=""><div><div class="nm">疾影</div><span class="pill p-dr">减伤 25% · 两层</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>险恶光环、野蛮飞跃、空灵冲刺、剧毒光环、恐惧咆哮、虚无喷发、星辰坠击</dd><dt>时机</dt><dd>读条最后一秒或第一跳落下时按；点了恶魔韧性有两层</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:183752}}" alt=""><div><div class="nm">瓦解</div><span class="pill p-clr">打断 · 远程</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>挫志怒吼、熔岩箭、愈体虚空、暗影箭雨</dd><dt>时机</dt><dd>好了就断；断成了 12 秒魔法伤害再降 15%，这本几乎全是暗影和自然伤害</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:58984}}" alt=""><div><div class="nm">影遁（暗夜精灵）</div><span class="pill p-clr">甩掉锁定</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>警惕的掠心者的虚空光束</dd><dt>时机</dt><dd>光束一点到你就按，越早少吃越多跳</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1234195}}" alt=""><div><div class="nm">虚空新星</div><span class="pill p-cc">群体昏迷 2 秒</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>瓦解交不上的熔岩箭</dd><dt>时机</dt><dd>萨满读条、瓦解在冷却时，贴着萨满放</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+22 高手同款噬灭天赋，英雄天赋 Void-Scarred；走 Annihilator 也行，下面这些防御和打断天赋两边一样。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1266307}}" alt=""><div><b>恶魔韧性</b><span>疾影多一层充能，险恶光环、空灵冲刺、恐惧咆哮这种连着来的群伤都靠它轮着接</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1234195}}" alt=""><div><b>虚空新星</b><span>群体昏迷 2 秒，瓦解冷却时停萨满的熔岩箭</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1266329}}" alt=""><div><b>恶魔笼头</b><span>瓦解打断成功后 12 秒魔法伤害降低 15%，正好减恐惧咆哮和光束的暗影伤害</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1223171}}" alt=""><div><b>诡计</b><span>瓦解施法距离多 20 码，站在后排也够得着萨满和虚触法师</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:389696}}" alt=""><div><b>伊利达雷的知识</b><span>受到的魔法伤害降低 3%</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/hCfbYtnyc1aRvzrZ#fight=45">Isirys 26:24（时间轴和天赋）</a>
+      <a href="https://www.warcraftlogs.com/reports/xMVZNvHyTAFXKRta#fight=31">无间枫月 27:14</a>
+      <a href="https://www.warcraftlogs.com/reports/6j2dJcnagKNZRXLf#fight=12">Khalîsî 27:31</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">噬灭恶魔猎手 · 虚空之痕竞技场 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>
