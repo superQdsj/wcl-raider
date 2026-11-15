@@ -1,0 +1,459 @@
+<header>
+  <div class="wrap">
+    <div class="eyebrow">ALTAR OF FANGS · MYTHIC+ · RETRIBUTION PALADIN FIELD CARD</div>
+    <h1><span class="cls">惩戒骑</span><span class="dot">·</span>毒牙祭坛 应对手册</h1>
+    <p class="lede">毒牙祭坛的伤害大多挂在身上慢慢跳，惩戒在这里的活是<b>清</b>。仪式首领的<b>鲜血献祭</b>吸收治疗，圣盾或保护祝福一开就没了，保护还能给队友清。拉维的毒球砸到你，圣佑没好就开圣盾，接着把<b>牺牲祝福</b>交给另一个吃球的人。双牙的<b>麻痹射击</b>用自由祝福解。尾王祖尔加读切骨者时，看飞斧点了谁，牺牲就给谁。<b>责难</b>专断四种读条：刺耳嘶鸣、毒伤、剧毒萎缩、群体毒伤。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+23 限时惩戒骑 ×5</b></span>
+      <span class="chip">英雄天赋 <b>烈日先驱</b></span>
+      <span class="chip">核心 <b>圣盾术 / 保护祝福 / 牺牲祝福 / 自由祝福 / 责难</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里保命技能交在哪</h2>
+  <p class="sub">一整场 +23 里，祝福、圣盾、圣佑和责难分别交给了哪个机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="background:rgba(243,156,195,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:1044}}" alt="">自由祝福</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span>
+      <span style="display:inline-flex;gap:6px;align-items:center"><img class="ic sm" src="{{I:96231}}" alt="">责难（绿圈）</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个处理。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">小怪 · 开场和尾王前</div>
+      <div class="sig">看到<b>鲜血献祭挂上身</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:642}}" alt="">圣盾术 → <img class="ic lg" src="{{I:1022}}" alt="">保护祝福 → 队友 <span class="pill p-clr">清除</span></div>
+      <p>仪式首领读 3 秒，祭坛之灵剖开全队，一下物理伤害，再吸收你接下来的一大口治疗。圣盾开出来，自己身上的就没了；一两秒后把保护祝福给一名输出，他身上的也当场消失。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 1 · 拉维</div>
+      <div class="sig">看到<b>三重喷吐砸到你</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:403876}}" alt="">圣佑术 · 没好就 <img class="ic lg" src="{{I:642}}" alt="">圣盾术 <span class="pill p-dr">减伤 · 清除</span></div>
+      <p>拉维朝三个人各吐一颗毒球，砸中一大下，之后 10 秒每秒一跳，站得近的人一起吃。圣佑好了就交圣佑；没好就开圣盾，身上的毒球当场清掉。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 双牙蹂躏者</div>
+      <div class="sig">看到<b>麻痹射击打到你或队友</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:1044}}" alt="">自由祝福 <span class="pill p-clr">清除</span></div>
+      <p>麻痹射击 14 秒每秒一跳自然伤害，每跳再减 10% 移动速度，叠到最后人几乎走不动。自由祝福给被打的队友，点了<b>无拘自由</b>你自己也得一份，两个人身上的麻痹射击一起解掉。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 祖尔加</div>
+      <div class="sig">看到<b>切骨者读条，飞斧点了队友</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:6940}}" alt="">牺牲祝福 → 被点的人 <span class="pill p-dr">减伤 30%</span></div>
+      <p>切骨者读 5 秒，朝一名玩家掷飞斧，路径上的人都挨一下物理伤害，再流血 7 秒，无视护甲。读条到一半就给牺牲，首击和整段流血都分走 30%。飞斧点的是你，就交圣佑。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>三个关键处理</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1306517}}" alt="">鲜血献祭：圣盾清自己，保护清队友</h3>
+      <p><b>仪式首领</b>在开场三波和尾王前那一波都有。它读 3 秒<b>鲜血献祭</b>，读完全队每人挨一下物理伤害，身上挂上一个吸收治疗的减益，治疗得先把这层吸收刷穿才能回血。连着几轮下来，治疗光刷吸收就跟不上。</p>
+      <p>读条时交<b>圣佑术</b>，先把这一下压低。读完开<b>圣盾术</b>，圣盾免疫有害效果，身上的鲜血献祭当场消失；点了<b>圣光决断</b>，每清一个减益还回 10% 血。圣盾之后一两秒把<b>保护祝福</b>给一名输出，他身上的鲜血献祭同样当场清掉。</p>
+      <p>圣盾在冷却时，保护祝福给自己也能清。<b>圣疗术</b>是另一个办法，治疗量远大于这层吸收，一下就冲掉。开场三波仪式首领多，圣盾、保护、圣疗轮着交，尾王前那一波把圣盾和保护都留着。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1306517}}" alt=""><div><b>鲜血献祭读条</b><span>3 秒 · 圣佑</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1306550}}" alt=""><div><b>全队挂上吸收</b><span>物理一下 + 吸收治疗</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:642}}" alt=""><div><b>圣盾术</b><span>清自己 · 回 10% 血</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1022}}" alt=""><div><b>保护祝福</b><span>给输出 · 清掉他的</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="一次鲜血献祭：不开技能约 35 万；圣佑加复仇之盾约 24 万；圣盾 0">
+      <div class="cap">一次鲜血献祭打在惩戒身上</div>
+      <div class="bar-row"><span>什么都不开</span><div class="bar"><span class="off" style="width:100%">35 万</span></div></div>
+      <div class="bar-row"><span>圣佑 + 复仇之盾</span><div class="bar"><span class="on" style="width:68%">24 万</span></div></div>
+      <div class="bar-row"><span>圣盾术</span><div class="bar"><span class="on" style="width:1.5%"></span><em class="em" style="left:calc(1.5% + 8px)">0 · 免疫</em></div></div>
+      <div class="delta">−100%<small>吸收治疗也一起清掉</small></div>
+      <div class="cap">保护祝福给出去的那一下，队友身上的鲜血献祭在同一刻消失。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1296220}}" alt="">拉维的毒球：圣盾清掉，再把牺牲交给另一个吃球的</h3>
+      <p><b>三重喷吐</b>是拉维这场的主要伤害：一次三颗毒球，砸中先吃一大下，之后 10 秒每秒一跳，5 码内的人一起吃。每一轮被砸到都要有东西顶。</p>
+      <p>圣佑好了就交<b>圣佑术</b>，复仇之盾先吃掉砸中那一下，后面每跳再减三成。圣佑在冷却的那一轮开<b>圣盾术</b>，毒球直接从身上清掉，10 秒持续伤害一跳都不吃。</p>
+      <p>圣盾开着时，<b>牺牲祝福</b>给另一个吃到毒球的队友。牺牲把他受到的 30% 转到你身上，被圣盾全部吃掉：他少掉三成，你一点不掉。没开圣盾时，牺牲也是在毒球砸中后交给吃球的人。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1296220}}" alt=""><div><b>毒球砸中</b><span>你和另外两人</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:642}}" alt=""><div><b>圣盾术</b><span>圣佑没好时 · 清毒球</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:6940}}" alt=""><div><b>牺牲祝福</b><span>1–2 秒内 · 给吃球的人</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1297876}}" alt=""><div><b>毒球 10 秒</b><span>你 0 · 他减 30%</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="三重喷吐每跳：不开技能约 21 万；圣佑约 15 万；圣盾 0">
+      <div class="cap">毒球每跳打在惩戒身上</div>
+      <div class="bar-row"><span>什么都不开</span><div class="bar"><span class="off" style="width:100%">21 万</span></div></div>
+      <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="on" style="width:72%">15 万</span></div></div>
+      <div class="bar-row"><span>圣盾术</span><div class="bar"><span class="on" style="width:1.5%"></span><em class="em" style="left:calc(1.5% + 8px)">0 · 清除</em></div></div>
+      <div class="delta">−100%<small>还替队友扛 30%</small></div>
+      <div class="cap">砸中那一下不开技能是七十多万，圣佑加复仇之盾压到五十万左右。</div>
+    </div>
+  </div>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1301413}}" alt="">祖尔加：牺牲跟着飞斧走</h3>
+      <p>祖尔加每轮先读<b>毒牙仪式</b>，有人进光束拦，拦的人挂上 50 秒的仪式毒液。接着连读两次<b>切骨者</b>，每次 5 秒，飞斧朝一名玩家掷出，路径上的人都挨一下物理伤害，再流血 7 秒，无视护甲。祖尔加的物理技能会让人大出血，<b>大出血会移除仪式毒液</b>，所以拦过光束的人要主动进飞斧路径。</p>
+      <p>读条期间就能看到飞斧点了谁。<b>牺牲祝福</b>在读条中段给被点的人，首击到流血结束都在牺牲里。点了<b>正义牺牲</b>，牺牲 60 秒一次，祖尔加差不多一分钟一组飞斧，每组都能给一次。</p>
+      <p>飞斧点的是你，或者你挂着仪式毒液要进路径，读条时交<b>圣佑术</b>，流血每跳从三十万压到二十万以下。</p>
+      <div class="combo">
+        <div class="st"><img class="ic" src="{{I:1300876}}" alt=""><div><b>毒牙仪式</b><span>拦光束 · 挂毒液</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:1301413}}" alt=""><div><b>切骨者读条</b><span>5 秒 · 看点了谁</span></div></div>
+        <span class="ar">→</span>
+        <div class="st"><img class="ic" src="{{I:6940}}" alt=""><div><b>牺牲祝福</b><span>给被点的人</span></div></div>
+        <span class="ar">→</span>
+        <div class="st hit"><img class="ic" src="{{I:1301231}}" alt=""><div><b>飞斧 + 流血</b><span>他减 30% · 毒液清掉</span></div></div>
+      </div>
+    </div>
+    <div class="bars" role="img" aria-label="切骨者流血每跳：不开技能约 31 万；圣佑约 19 万">
+      <div class="cap">飞斧点到你时，流血每跳</div>
+      <div class="bar-row"><span>什么都不开</span><div class="bar"><span class="off" style="width:100%">31 万</span></div></div>
+      <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="on" style="width:61%">19 万</span></div></div>
+      <div class="delta">−39%<small>首击五六十万起</small></div>
+      <div class="cap">流血无视护甲，7 秒全吃满是两百多万，被点的人最需要牺牲。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 拉维</h3><span class="kind">TRASH · 仪式首领、原始毒蛇、双牙蹂躏者、贪婪的后裔、毒液水蛭</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306381}}" alt=""><div><div class="n">恶臭喷吐 + 不稳定的图腾</div><div class="s">开怪第一下，图腾每 2 秒烧全队 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">一拉上就交，盾先吃开怪这一波</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294557}}" alt=""><div><div class="n">刺耳嘶鸣</div><div class="s">原始毒蛇读条，物理一下加急速 −30% <span class="tag">物理</span><span class="tag">无视护甲</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:96231}}" alt="">责难 <span class="pill p-clr">打断</span></div>
+          <div class="why">开场三波都有毒蛇，一只一只断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294557}}" alt=""><div><div class="n">刺耳嘶鸣 · 责难在冷却</div><div class="s">两只毒蛇一起读 <span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:853}}" alt="">制裁之锤 / <img class="ic sm" src="{{I:115750}}" alt="">盲目之光 <span class="pill p-mv">控制</span></div>
+          <div class="why">锤子点另一只，毒蛇扎堆就放盲目之光</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306517}}" alt=""><div><div class="n">鲜血献祭</div><div class="s">仪式首领读 3 秒，剖开全队 <span class="tag">物理</span><span class="tag">吸收治疗</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，盾先吃这一下</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306550}}" alt=""><div><div class="n">鲜血献祭挂在身上</div><div class="s">治疗先要刷穿这层吸收 <span class="tag">1 分钟</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:642}}" alt="">圣盾术 / <img class="ic sm" src="{{I:1022}}" alt="">保护祝福 → 自己 <span class="pill p-clr">清除</span></div>
+          <div class="why">开出来就消失，圣盾每清一个回 10% 血</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306550}}" alt=""><div><div class="n">鲜血献祭 · 自己已用过圣盾</div><div class="s">输出队友身上还挂着 <span class="tag">吸收治疗</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福 → 输出 <span class="pill p-clr">清除</span></div>
+          <div class="why">他身上的当场消失，治疗不用再刷这层吸收</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294567}}" alt=""><div><div class="n">麻痹射击</div><div class="s">双牙蹂躏者喷毒，14 秒每跳减速 10% <span class="tag poison">自然</span><span class="tag magic">魔法</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1044}}" alt="">自由祝福 → 队友 <span class="pill p-clr">清除</span></div>
+          <div class="why">无拘自由让你自己也得一份，两人一起解</div>
+        </div>
+        <div class="note">鲜血献祭在这一段要连着处理好几轮，<b>圣盾、保护、圣疗术轮着交</b>，圣疗的治疗量一下就能冲掉这层吸收。保护和圣疗会挂 30 秒自律，圣光决断让你自律中照样能开圣盾。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>拉维</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1296220}}" alt=""><div><div class="n">三重喷吐</div><div class="s">三颗毒球，砸中加 10 秒每秒一跳，5 码内共享 <span class="tag poison">自然</span><span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">每轮圣佑好了就交，盾吃砸中，减伤吃后面 10 秒</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297876}}" alt=""><div><div class="n">毒球挂身上 · 圣佑在冷却</div><div class="s">每秒一跳，持续 10 秒 <span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:642}}" alt="">圣盾术 <span class="pill p-clr">清除</span></div>
+          <div class="why">毒球当场清掉，后面一跳都不吃</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297876}}" alt=""><div><div class="n">另一个吃毒球的队友</div><div class="s">同一轮被砸到的人 <span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福 → 他 <span class="pill p-dr">减伤 30%</span></div>
+          <div class="why">开着圣盾时给，转过来的伤害你一点不掉</div>
+        </div>
+        <div class="note">圣盾同时会清掉身上叠着的<b>腐肉喷发</b>。牺牲给出去以后，圣盾结束前转移伤害都是 0，结束后转过来的要自己吃。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>拉维 → 扭缠盘蛇</h3><span class="kind">TRASH · 高阶进化者、振响的扭缠蛇、放血者、幼体</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n">毒伤</div><div class="s">高阶进化者读 3 秒，一发加 8 秒持续毒 <span class="tag poison">中毒</span><span class="tag">单体</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:96231}}" alt="">责难 <span class="pill p-clr">打断</span></div>
+          <div class="why">认准一只进化者，它读一次断一次</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n">毒伤 · 责难在冷却</div><div class="s">进化者又开始读 <span class="tag poison">中毒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:853}}" alt="">制裁之锤 / <img class="ic sm" src="{{I:115750}}" alt="">盲目之光 <span class="pill p-mv">控制</span></div>
+          <div class="why">锤子或者致盲把这一发停掉</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n">毒伤没断掉</div><div class="s">8 秒持续毒挂在人身上 <span class="tag poison">中毒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:213644}}" alt="">清毒术 / <img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福 <span class="pill p-clr">清除</span></div>
+          <div class="why">清毒术直接清；牺牲点了正义保护也会移除中毒</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294849}}" alt=""><div><div class="n">振响</div><div class="s">振响的扭缠蛇摇尾 5 秒，每秒一跳 <span class="tag">物理</span><span class="tag">无视护甲</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，两只扭缠蛇各一轮</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294849}}" alt=""><div><div class="n">振响 · 圣佑在冷却</div><div class="s">纯物理 <span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福 → 自己 <span class="pill p-imm">免疫</span></div>
+          <div class="why">物理免疫，5 秒摇尾一跳都打不进来</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>扭缠盘蛇</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1310358}}" alt=""><div><div class="n">剧毒萎缩</div><div class="s">盘蛇和溃散的扭缠蛇都会读 <span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:96231}}" alt="">责难 <span class="pill p-clr">打断</span></div>
+          <div class="why">盘蛇读一次断一次，小蛇出来也断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300503}}" alt=""><div><div class="n">怨毒狩猎</div><div class="s">每条溃散的扭缠蛇锁定一人，20 秒 <span class="tag">点名</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">小蛇追着你咬，锁定上身就开</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1299053}}" alt=""><div><div class="n">濒死喘息</div><div class="s">响尾声每秒叠一层，直到盘蛇被撕裂 <span class="tag">物理</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1287798}}" alt="">藤蔓之握 <span class="pill p-mv">副本按钮</span></div>
+          <div class="why">被藤蔓连上后跑开，盘蛇解除盘卷，响尾不再叠</div>
+        </div>
+        <div class="note"><b>同步毒液</b>是开场挂上的 35 秒持续毒，躲不掉也清不掉，交给治疗。藤蔓之握是副本给的按钮，撕开时全队会吃一下<b>解除盘卷</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>扭缠盘蛇 → 祖尔加</h3><span class="kind">TRASH · 晋升之蛇、乌拉特克神选者、祭坛利刃、双牙、仪式首领</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308864}}" alt=""><div><div class="n">感染 · 第一轮</div><div class="s">晋升之蛇给全队种卵，5 秒每秒一跳，结束爆开出幼体 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:642}}" alt="">圣盾术 <span class="pill p-imm">免疫</span></div>
+          <div class="why">卵种上后开，剩下的跳伤和爆开都免疫</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308864}}" alt=""><div><div class="n">感染 · 第二轮</div><div class="s">圣盾还在冷却 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">5 秒跳伤加爆开都在圣佑里</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n">毒伤</div><div class="s">这一段还有高阶进化者 <span class="tag poison">中毒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:96231}}" alt="">责难 <span class="pill p-clr">打断</span></div>
+          <div class="why">和上一段一样，进化者读一次断一次</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1307567}}" alt=""><div><div class="n">群体毒伤</div><div class="s">乌拉特克神选者读条 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:96231}}" alt="">责难 <span class="pill p-clr">打断</span></div>
+          <div class="why">四只神选者，轮到你的那只每次都断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306852}}" alt=""><div><div class="n">剧毒涌动</div><div class="s">神选者卷起毒素风暴，9 秒每秒一跳 <span class="tag poison">自然</span><span class="tag">全团</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">风暴一起就开，8 秒盖住大半</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294567}}" alt=""><div><div class="n">麻痹射击 + 刺耳嘶鸣</div><div class="s">后半段又来双牙和原始毒蛇 <span class="tag poison">自然</span><span class="tag">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1044}}" alt="">自由祝福 · <img class="ic sm" src="{{I:96231}}" alt="">责难 <span class="pill p-clr">清除 · 打断</span></div>
+          <div class="why">和开场一样：麻痹射击给自由，毒蛇读条就断</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306517}}" alt=""><div><div class="n">鲜血献祭 · 尾王前最后一波</div><div class="s">仪式首领又出现 <span class="tag">物理</span><span class="tag">吸收治疗</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:642}}" alt="">圣盾术 → <img class="ic sm" src="{{I:1022}}" alt="">保护祝福 → 输出 <span class="pill p-clr">清除</span></div>
+          <div class="why">自己和一名输出的吸收一起清，进尾王前把治疗解放出来</div>
+        </div>
+        <div class="note"><b>淬毒之刃</b>是这一段承伤最大的一项：祭坛利刃瞬移到人身后劈一刀，再跳 4 秒毒。它不点固定的人，挂着淬毒之刃又赶上剧毒涌动时，圣佑交在一起最划算。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>祖尔加</h3><span class="kind">BOSS 3 · 光束 → 两把飞斧，一分钟一轮</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301413}}" alt=""><div><div class="n">切骨者 · 点了队友</div><div class="s">5 秒读条，飞斧路径上都挨，流血 7 秒 <span class="tag">物理</span><span class="tag">无视护甲</span><span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福 → 被点的人 <span class="pill p-dr">减伤 30%</span></div>
+          <div class="why">读条中段给，首击和流血都在牺牲里；每组飞斧给一次</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301413}}" alt=""><div><div class="n">切骨者 · 点了你</div><div class="s">首击五六十万，流血每跳三十万 <span class="tag">物理</span><span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开，盾吃首击，减伤吃流血</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300894}}" alt=""><div><div class="n">仪式毒液</div><div class="s">拦光束后挂上，50 秒后喷发 <span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1301231}}" alt="">进飞斧路径 <span class="pill p-mv">走位</span></div>
+          <div class="why">飞斧的大出血移除毒液；进之前交圣佑</div>
+        </div>
+        <div class="note">飞斧落地会留下<b>鲜血之池</b>，每秒一跳，挨完一斧就走出来。牺牲给出去要看自己血线，转过来的伤害把你压到 20% 以下时牺牲会自己断。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:642}}" alt=""><div><div class="nm">圣盾术</div><span class="pill p-clr">清除 · 免疫</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>鲜血献祭、拉维的毒球、第一轮感染；配牺牲替队友扛</dd><dt>时机</dt><dd>减益上身后开；自律中也能开</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1022}}" alt=""><div><div class="nm">保护祝福</div><span class="pill p-clr">物理免疫 · 清除</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>输出队友身上的鲜血献祭；自己吃振响</dd><dt>时机</dt><dd>圣盾之后一两秒给；目标挂 30 秒自律</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:6940}}" alt=""><div><div class="nm">牺牲祝福</div><span class="pill p-dr">减伤 30% · 清中毒</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>祖尔加的飞斧目标、拉维另一个吃毒球的人</dd><dt>时机</dt><dd>切骨者读条中段；60 秒一次</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1044}}" alt=""><div><div class="nm">自由祝福</div><span class="pill p-clr">解麻痹射击</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>双牙蹂躏者的麻痹射击</dd><dt>时机</dt><dd>给被打的队友，你自己也得一份</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:96231}}" alt=""><div><div class="nm">责难</div><span class="pill p-clr">打断</span></div></div>
+      <dl class="dl"><dt>断什么</dt><dd>刺耳嘶鸣、毒伤、剧毒萎缩、群体毒伤</dd><dt>时机</dt><dd>开场盯毒蛇，中段盯一只进化者</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:403876}}" alt=""><div><div class="nm">圣佑术 + 复仇之盾</div><span class="pill p-dr">减伤 30% · 吸收盾</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>鲜血献祭、三重喷吐、振响、剧毒涌动、第二轮感染、飞斧点你</dd><dt>时机</dt><dd>读条时开；好了就找下一个</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:853}}" alt=""><div><div class="nm">制裁之锤 · 盲目之光</div><span class="pill p-mv">控制</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>责难在冷却时的刺耳嘶鸣和毒伤</dd><dt>时机</dt><dd>锤单只，扎堆放致盲</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:213644}}" alt=""><div><div class="nm">清毒术</div><span class="pill p-clr">清中毒</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>没断掉的毒伤</dd><dt>时机</dt><dd>挂上就清，自己和队友都行</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:633}}" alt=""><div><div class="nm">圣疗术</div><span class="pill p-heal">一下拉满</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>鲜血献祭的吸收治疗；危险线的队友</dd><dt>时机</dt><dd>圣盾和保护都在冷却时</dd></dl>
+    </div>
+  </div>
+  <div class="note" style="margin-top:12px;border:1px solid var(--line);border-radius:10px"><b>自律</b>：圣疗、保护、圣盾都会给目标挂 30 秒自律。有自律的人不能再吃圣疗和保护；圣盾有圣光决断，不受影响。保护给自己之后，这一段就别指望给自己圣疗了，<b>保护尽量给队友，自己靠圣盾</b>。</div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>天赋</h2>
+  <p class="sub">+23 高手同款惩戒天赋，英雄天赋烈日先驱。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:384820}}" alt=""><div><b>正义牺牲</b><span>牺牲祝福冷却缩短 60 秒，祖尔加每组飞斧都能给一次</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:305394}}" alt=""><div><b>无拘自由</b><span>自由祝福给队友时自己也得一份，麻痹射击一次解两个人</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:146956}}" alt=""><div><b>圣光决断</b><span>自律中也能开圣盾，每清一个减益回 10% 血</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:469321}}" alt=""><div><b>正义保护</b><span>牺牲祝福移除并防止中毒，顺手清掉毒伤</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1261562}}" alt=""><div><b>复仇之盾</b><span>圣佑术再减 10% 并附带 30% 血量的吸收盾</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:114154}}" alt=""><div><b>不败之魂</b><span>圣盾、圣佑、圣疗冷却缩短 30%</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:213644}}" alt=""><div><b>清毒术</b><span>清掉没断掉的毒伤</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:115750}}" alt=""><div><b>盲目之光</b><span>责难在冷却时停一群毒蛇或进化者</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:234299}}" alt=""><div><b>制裁之拳</b><span>制裁之锤冷却缩短 15 秒</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:326734}}" alt=""><div><b>治疗之手</b><span>目标掉血越多，圣疗冷却缩得越多</span></div></div>
+    </div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/DbynTmWQLZakHxp2#fight=22">Fzpala 27:56</a>
+      <a href="https://www.warcraftlogs.com/reports/QvkFwm7c1nAGb4TX#fight=14">絶戦龍児 28:34</a>
+      <a href="https://www.warcraftlogs.com/reports/CjbQMp8HRr2wX94g#fight=16">安爪啦 28:34</a>
+      <a href="https://www.warcraftlogs.com/reports/A23FBDZpXVwhJ7jd#fight=33">哦毕爷 28:51</a>
+      <a href="https://www.warcraftlogs.com/reports/cqFgBM3zTvVrRa6j#fight=35">Âra 28:57</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">惩戒骑 · 毒牙祭坛 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>
