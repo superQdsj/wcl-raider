@@ -13,17 +13,27 @@ from zipfile import ZipFile, ZIP_DEFLATED
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "dist" / "site"
 TEMPLATE = ROOT / "site"
-# Display order. color is the in-game class color; on is the text color on it;
-# glyph is the single character on the spec's seal.
+# Display order. color is the in-game class color;
+# icon is the in-game spec icon file in site/img/icons/.
 CLASSES = {
-    "demonhunter-devourer": dict(name="噬灭恶魔猎手", short="噬灭", family="恶魔猎手", role="远程输出", color="#A330C9", on="#FFFFFF", glyph="噬"),
-    "warrior-arms": dict(name="武器战", short="武器", family="战士", role="近战输出", color="#C69B6D", on="#14110D", glyph="武"),
-    "rogue": dict(name="潜行者", family="潜行者", short="潜行", role="近战输出", color="#FFF468", on="#14130A", glyph="潜"),
-    "holy-paladin": dict(name="神圣骑士", short="神圣", family="圣骑士", role="治疗", color="#F48CBA", on="#1A0F14", glyph="圣"),
-    "paladin-ret": dict(name="惩戒骑士", short="惩戒", family="圣骑士", role="近战输出", color="#F48CBA", on="#1A0F14", glyph="惩"),
+    "demonhunter-devourer": dict(name="噬灭恶魔猎手", short="噬灭", family="恶魔猎手", role="远程输出", color="#A330C9", icon="classicon_demonhunter_void"),
+    "warrior-arms": dict(name="武器战", short="武器", family="战士", role="近战输出", color="#C69B6D", icon="ability_warrior_savageblow"),
+    "rogue": dict(name="潜行者", family="潜行者", short="潜行", role="近战输出", color="#FFF468", icon="ability_stealth"),
+    "holy-paladin": dict(name="神圣骑士", short="神圣", family="圣骑士", role="治疗", color="#F48CBA", icon="spell_holy_holybolt"),
+    "paladin-ret": dict(name="惩戒骑士", short="惩戒", family="圣骑士", role="近战输出", color="#F48CBA", icon="spell_holy_auraoflight"),
 }
-DUNGEONS = ["夺目谷", "塞塔里斯神庙", "密谋小径", "毒牙祭坛",
-            "红玉新生法池", "纳洛拉克的洞穴", "虚空之痕竞技场", "诸王之眠"]
+# Chinese name, English name, image in site/img/dungeons/ (<img>.jpg backdrop, <img>-s.jpg card).
+DUNGEON_INFO = [
+    ("夺目谷", "The Blinding Vale", "vale"),
+    ("塞塔里斯神庙", "Temple of Sethraliss", "sethraliss"),
+    ("密谋小径", "Murder Row", "murder"),
+    ("毒牙祭坛", "Altar of Fangs", "altar"),
+    ("红玉新生法池", "Ruby Life Pools", "ruby"),
+    ("纳洛拉克的洞穴", "Den of Nalorakk", "nalorakk"),
+    ("虚空之痕竞技场", "Voidscar Arena", "voidscar"),
+    ("诸王之眠", "Kings' Rest", "kingsrest"),
+]
+DUNGEONS = [d[0] for d in DUNGEON_INFO]
 LEDE = re.compile(r'<p class="lede">(.*?)</p>', re.S)
 BOLD = re.compile(r"<b>(.*?)</b>", re.S)
 TAG = re.compile(r"<[^>]+>")
@@ -64,7 +74,8 @@ def site_data(guides):
         current = {d: {**v[0], "old": [{"href": o["href"], "date": o["date"]} for o in v[1:]]}
                    for d, v in by.items()}
         classes.append({"slug": slug, **CLASSES[slug], "guides": current, "extras": extras})
-    return {"dungeons": DUNGEONS, "classes": classes}
+    dungeons = [{"name": n, "en": en, "img": img} for n, en, img in DUNGEON_INFO]
+    return {"dungeons": dungeons, "classes": classes}
 
 
 def write_pages(data):
@@ -78,6 +89,7 @@ def write_pages(data):
     (OUTPUT / "index.html").write_text(index, encoding="utf-8")
     for name in ("404.html", "site.css", "site.js"):
         shutil.copyfile(TEMPLATE / name, OUTPUT / name)
+    shutil.copytree(TEMPLATE / "img", OUTPUT / "img")
     (OUTPUT / "assets").mkdir(exist_ok=True)
     shutil.copyfile(ROOT / "assets" / "icon.svg", OUTPUT / "assets" / "icon.svg")
 

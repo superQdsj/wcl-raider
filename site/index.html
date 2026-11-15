@@ -5,19 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>大秘境作战手册</title>
 <meta name="description" content="按专精和副本整理的魔兽世界大秘境应对手册：每个首领和小怪技能该交什么、什么时候交，按路线从头讲到尾。">
-<meta name="theme-color" content="#08090F">
-<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#07080B">
+<link rel="icon" href="/img/icons/inv_relics_hourglass.jpg" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-<div class="atmos" aria-hidden="true"><i class="glow a"></i><i class="glow b"></i><i class="grain"></i></div>
+<div class="stage" aria-hidden="true"><div class="scene"></div><div class="scene"></div><i class="shade"></i></div>
 
 <header class="bar wrap">
   <a class="mark" href="/" aria-label="大秘境作战手册首页">
-    <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><rect x="19" y="19" width="26" height="26"/><rect x="19" y="19" width="26" height="26" transform="rotate(45 32 32)"/></g><circle cx="32" cy="32" r="4.5" fill="currentColor"/></svg>
+    <span class="slot sm"><img src="/img/icons/inv_relics_hourglass.jpg" alt=""></span>
     <span>大秘境作战手册</span>
   </a>
   <span class="src">整理自 Warcraft Logs 高分记录</span>
@@ -25,32 +25,16 @@
 
 <main>
   <section class="hero wrap" aria-labelledby="spec-name">
-    <nav class="seals" aria-label="选择专精"></nav>
+    <nav class="specbar" aria-label="选择专精"></nav>
 
     <div class="title">
+      <p class="family"></p>
       <h1 id="spec-name"></h1>
-      <div class="facts">
-        <span class="tags"></span>
-        <span class="cover" aria-live="polite"></span>
-      </div>
+      <p class="cover" aria-live="polite"></p>
       <p class="pitch">每个首领和小怪技能该交什么、什么时候交，按路线从头讲到尾。选好专精，打开这周要打的副本。</p>
     </div>
 
-    <svg class="sigil" viewBox="0 0 400 400" aria-hidden="true">
-      <defs>
-        <radialGradient id="core"><stop offset="0" stop-color="var(--c)" stop-opacity=".55"/><stop offset="1" stop-color="var(--c)" stop-opacity="0"/></radialGradient>
-      </defs>
-      <circle cx="200" cy="200" r="190" fill="url(#core)"/>
-      <g class="ring slow">
-        <circle cx="200" cy="200" r="182"/>
-        <circle cx="200" cy="200" r="170" class="ticks"/>
-      </g>
-      <g class="ring rev">
-        <circle cx="200" cy="200" r="140" class="dash"/>
-      </g>
-      <g class="star"></g>
-      <circle cx="200" cy="200" r="7" class="pip"/>
-    </svg>
+    <p class="now" aria-hidden="true"><span class="zh"></span><span class="en"></span></p>
   </section>
 
   <section class="board wrap" aria-label="副本手册">
@@ -60,7 +44,7 @@
 </main>
 
 <footer class="wrap foot">
-  <p>内容整理自 Warcraft Logs 公开的高分记录，技能数值以游戏内为准。</p>
+  <p>内容整理自 Warcraft Logs 公开的高分记录，技能数值以游戏内为准。副本截图与图标来自 Wowhead，版权归暴雪娱乐所有。</p>
   <p>wcl-raider</p>
 </footer>
 
