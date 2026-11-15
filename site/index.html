@@ -5,50 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>大秘境作战手册</title>
 <meta name="description" content="按专精和副本整理的魔兽世界大秘境应对手册：每个首领和小怪技能该交什么、什么时候交，按路线从头讲到尾。">
-<meta name="theme-color" content="#07080B">
+<meta name="theme-color" content="#100e0d">
 <link rel="icon" href="/img/icons/inv_relics_hourglass.jpg" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-<div class="stage" aria-hidden="true"><div class="scene"></div><div class="scene"></div><i class="shade"></i></div>
 
-<header class="bar wrap">
-  <a class="mark" href="/" aria-label="大秘境作战手册首页">
-    <span class="slot sm"><img src="/img/icons/inv_relics_hourglass.jpg" alt=""></span>
-    <span>大秘境作战手册</span>
-  </a>
-  <span class="src">整理自 Warcraft Logs 高分记录</span>
+<header class="top">
+  <div class="wrap">
+    <nav class="specs" aria-label="选择专精"></nav>
+    <div class="eyebrow">MYTHIC+ · <span id="spec-en"></span> · FIELD MANUALS</div>
+    <h1 id="spec-name">大秘境作战手册</h1>
+    <p class="lede">每个首领和小怪技能该交什么、什么时候交，按路线从头讲到尾。选好专精，打开这周要打的副本。</p>
+    <div class="chips"></div>
+  </div>
 </header>
 
-<main>
-  <section class="hero wrap" aria-labelledby="spec-name">
-    <nav class="specbar" aria-label="选择专精"></nav>
-
-    <div class="title">
-      <p class="family"></p>
-      <h1 id="spec-name"></h1>
-      <p class="cover" aria-live="polite"></p>
-      <p class="pitch">每个首领和小怪技能该交什么、什么时候交，按路线从头讲到尾。选好专精，打开这周要打的副本。</p>
-    </div>
-
-    <p class="now" aria-hidden="true"><span class="zh"></span><span class="en"></span></p>
-  </section>
-
-  <section class="board wrap" aria-label="副本手册">
-    <div class="extra"></div>
+<main class="wrap">
+  <section aria-labelledby="board-title">
+    <h2 id="board-title"><span class="k">DUNGEONS</span>副本手册</h2>
+    <p class="sub">内容整理自 Warcraft Logs 上的限时高分记录。</p>
     <ol class="grid"></ol>
   </section>
 </main>
 
 <footer class="wrap foot">
-  <p>内容整理自 Warcraft Logs 公开的高分记录，技能数值以游戏内为准。副本截图与图标来自 Wowhead，版权归暴雪娱乐所有。</p>
-  <p>wcl-raider</p>
+  <p>技能数值以游戏内为准。副本截图与图标来自 Wowhead，版权归暴雪娱乐所有。</p>
+  <p class="mono">wcl-raider</p>
 </footer>
 
-<noscript><style>.hero,.board{display:none}</style>__NOSCRIPT__</noscript>
+<noscript><style>.top .wrap>*:not(h1):not(.lede),main{display:none}</style>__NOSCRIPT__</noscript>
 <script id="guide-data" type="application/json">__DATA__</script>
 <script src="/site.js"></script>
 </body>

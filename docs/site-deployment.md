@@ -1,10 +1,12 @@
 # 攻略网站发布
 
-使用 Cloudflare Pages 免费静态托管。首页与 404 页是手写的模板，放在 `site/`（`index.html`、`404.html`、`site.css`、`site.js`、`img/`）：游戏读条画面风格，整页背后是副本实景截图，指向哪张副本卡片背景就换成哪个副本；顶部是专精技能栏（游戏内专精图标、暗金框），选中专精的职业色只用于光晕和卡片顶上的宝石。卡片上的要点取自攻略 `lede` 段里的短粗体词，没有粗体短词时退回摘要。选择记在网址 `#slug` 和浏览器本地。`build_site.py` 只负责收集攻略、提取元数据，并把数据以 JSON 注入 `site/index.html`，再把 `site/img/` 整个复制到产物。
+使用 Cloudflare Pages 免费静态托管。首页与 404 页是手写的模板，放在 `site/`（`index.html`、`404.html`、`site.css`、`site.js`、`img/`），视觉和各本攻略同一套：深色平面、细线面板、宋体标题、等宽小标签，当前专精的职业色作强调色。顶部是专精选择（游戏内专精图标，统一写"专精名 + 职业名"），下面是副本卡片：截图、中英文名、攻略 `lede` 摘要、更新日期和旧版链接；没有攻略的副本灰掉。选择记在网址 `#slug` 和浏览器本地。`build_site.py` 只负责收集攻略、提取元数据，并把数据以 JSON 注入 `site/index.html`，再把 `site/img/` 整个复制到产物。
 
-图片来源：副本截图来自 Wowhead 各副本页面的截图（`wow.zamimg.com/uploads/screenshots/normal/…`，毒牙祭坛用的是 Wowhead 新闻配图），图标来自 `wow.zamimg.com/images/wow/icons/large/<图标名>.jpg`，均已下载到 `site/img/`，不在线引用。每个副本两张：`<名>.jpg`（1600 宽，背景）和 `<名>-s.jpg`（720 宽，卡片），用 `sips -Z 1600 -s format jpeg -s formatOptions 68` 等压缩。
+发布时，每本攻略的副本会在 `<body>` 后插入一个右上角"← 全部手册"链接回首页（源文件不改）。文件名里没有副本名的页面（例如旧的武器战目录页）视为过时目录，不发布；攻略里指向它的链接改成回到首页对应专精。
 
-新增职业：下载专精图标到 `site/img/icons/`，在 `build_site.py` 的 `CLASSES` 中登记（名称、简称、职业色、图标名）。新增副本：在 `DUNGEON_INFO` 中登记中英文名和图片名，并放好两张图片。
+图片来源：副本截图来自 Wowhead 各副本页面的截图（`wow.zamimg.com/uploads/screenshots/normal/…`，毒牙祭坛用的是 Wowhead 新闻配图），图标来自 `wow.zamimg.com/images/wow/icons/large/<图标名>.jpg`，均已下载到 `site/img/`，不在线引用。每个副本一张 `<名>.jpg`（720 宽，卡片用），用 `sips -Z 720 -s format jpeg -s formatOptions 68` 压缩。
+
+新增职业：下载专精图标到 `site/img/icons/`，在 `build_site.py` 的 `CLASSES` 中登记（英文名、专精名、职业名、定位、职业色、图标名）。新增副本：在 `DUNGEON_INFO` 中登记中英文名和图片名，并放好图片。
 
 生产网址：https://wcl-raider.pages.dev/
 项目名称：`wcl-raider`；生产分支：`main`。
