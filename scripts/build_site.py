@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Build a public site from finished guide HTML only (Python standard library)."""
 
-from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
 import shutil
-from urllib.parse import quote, unquote, urlsplit
+from urllib.parse import unquote, urlsplit
 from zipfile import ZipFile, ZIP_DEFLATED
+
+from site_index import write_pages
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "dist" / "site"
@@ -61,29 +62,7 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source, target)
 
-    sections = []
-    for slug, pages in guides:
-        links = "\n".join(
-            f'<li><a href="{quote(p.relative_to(ROOT).as_posix())}">{escape(p.stem)}</a></li>'
-            for p in pages
-        )
-        sections.append(f'<section><h2>{CLASSES[slug]}</h2><ul>{links}</ul></section>')
-    (OUTPUT / "index.html").write_text('''<!doctype html>
-<html lang="zh-CN">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>大秘境攻略 · wcl-raider</title>
-<style>
-body{max-width:860px;margin:48px auto;padding:0 20px;font:16px/1.7 system-ui,sans-serif;color:#222;background:#fafafa}
-h1{font-size:28px}h2{font-size:20px;margin-top:32px}a{color:#2458a6;overflow-wrap:anywhere}li{margin:8px 0}p{color:#666}
-</style>
-<h1>大秘境攻略</h1>
-<p>首页整理中，攻略可以通过以下链接阅读。</p>
-''' + "\n".join(sections) + "\n</html>\n", encoding="utf-8")
-    (OUTPUT / "404.html").write_text('''<!doctype html><html lang="zh-CN">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>页面未找到</title><h1>页面未找到</h1><p><a href="/">返回攻略首页</a></p></html>
-''', encoding="utf-8")
+    write_pages(guides, ROOT, OUTPUT)
     (OUTPUT / "_headers").write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n", encoding="utf-8")
     archive = ROOT / "dist" / "wcl-raider-site.zip"
     with ZipFile(archive, "w", ZIP_DEFLATED) as bundle:
