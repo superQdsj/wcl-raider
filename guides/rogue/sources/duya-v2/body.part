@@ -1,0 +1,387 @@
+
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">ALTAR OF FANGS · MYTHIC+ · SUBTLETY ROGUE FIELD CARD</div>
+    <h1><span class="cls">潜行者</span><span class="dot">·</span>毒牙祭坛 应对手册</h1>
+    <p class="lede">毒牙祭坛几乎全是<b>自然伤害和持续毒</b>，贼的核心是<b>暗影斗篷</b>：拉维的三重喷吐、扭缠盘蛇的第二次同步毒液、神选者的剧毒涌动、祖尔加的光束，都交斗篷。范围伤害交<b>佯攻</b>。祖尔加身上的仪式毒液斗篷清不掉，要开<b>佯攻 + 闪避</b>站进切骨者的飞斧路径，用流血把它冲掉。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+24 / +23 限时敏锐贼（国 / 欧 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>欺诈者</b></span>
+      <span class="chip">核心 <b>暗影斗篷 · 佯攻 · 闪避 · 猩红之瓶</b></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2><span class="k">01</span>一场里斗篷交在哪</h2>
+  <p class="sub">一整场 +24 里，暗影斗篷交在了哪。斗篷约 2 分钟一次，转好就留给下一个毒机制。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i style="border:2px solid var(--gold);border-radius:50%"></i>暗影斗篷</span>
+      <span><i style="border:2px solid var(--nature);border-radius:50%"></i>闪避 · 接切骨者</span>
+      <span><i style="background:rgba(242,210,75,.25);border:1px solid var(--gold-dim)"></i>首领战</span>
+      <span><i style="background:var(--panel-2);border:1px dashed var(--line)"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">02</span>先学这四招</h2>
+  <p class="sub">每把都要做到的四个动作。</p>
+  <div class="moments">
+    <article class="mo">
+      <div class="where">首领 1 · 拉维</div>
+      <div class="sig">被<b>三重喷吐毒球砸中</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:31224}}" alt=""><span class="nm">暗影斗篷</span> <span class="pill p-clr">清除</span></div>
+      <p>砸中后马上开，10 秒的毒当场清掉，脚下也不再每秒烫自己和身边的人。拉维一场能交两次。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 2 · 扭缠盘蛇</div>
+      <div class="sig">看到<b>第二次同步毒液读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:31224}}" alt=""><span class="nm">暗影斗篷</span> <span class="pill p-imm">免疫</span></div>
+      <p>读条时开，35 秒的全团毒不上身。慢了半拍也照开，上身后开一样能清掉。</p>
+    </article>
+    <article class="mo">
+      <div class="where">小怪 · 乌拉特克神选者</div>
+      <div class="sig">看到<b>剧毒涌动读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic lg" src="{{I:31224}}" alt=""><span class="nm">暗影斗篷</span> <span class="pill p-imm">免疫</span></div>
+      <p>9 秒毒风暴整段免疫，活体毒液死亡时的毒液爆裂也一起免。神选者分两拨，两拨各交一次。</p>
+    </article>
+    <article class="mo">
+      <div class="where">首领 3 · 祖尔加</div>
+      <div class="sig">身上有<b>仪式毒液</b>，看到<b>切骨者读条</b></div>
+      <div class="act"><span class="arrow">→</span><img class="ic" src="{{I:1966}}" alt=""><span class="nm">佯攻</span><span style="color:var(--faint)">+</span><img class="ic" src="{{I:5277}}" alt=""><span class="nm">闪避</span></div>
+      <p>站进飞斧路径吃这一斧。流血 7 秒一结束，仪式毒液跟着消失，不会喷发。</p>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">03</span>祖尔加：拦光束、接飞斧</h2>
+
+  <div class="finding">
+    <div>
+      <h3><img class="ic lg" src="{{I:1300894}}" alt="">仪式毒液要靠切骨者冲掉</h3>
+      <p>祖尔加约一分钟一次<b>毒牙仪式</b>，蛇头的光束要有人站进去拦。贼很适合当拦光束的人：拦的时候开<b>暗影斗篷</b>，光束每一跳都打不到你；斗篷没好就开佯攻，再喝<b>猩红之瓶</b>。</p>
+      <p>拦完身上会留下<b>仪式毒液</b>，约 57 秒后喷发。斗篷<b>清不掉</b>它。</p>
+      <p>能清掉它的是祖尔加自己的<b>切骨者</b>：飞斧路径上的人会流血，流血结束时仪式毒液一起消失。所以看到切骨者读条，就开<b>佯攻 + 闪避</b>站进路径。闪避靠天赋「飘忽不定」降低 20% 所有伤害，盖住首击和整段流血。</p>
+    </div>
+    <div class="viz">
+      <div class="cap">一轮毒牙仪式怎么打（从光束读条算起）</div>
+      <div class="steps">
+        <div class="st"><span class="when">0 秒</span><div class="what"><b>毒牙仪式读条</b> → 站进光束拦截
+          <div class="btns"><img class="ic sm" src="{{I:31224}}" alt="">斗篷<span>或</span><img class="ic sm" src="{{I:1966}}" alt="">佯攻 + <img class="ic sm" src="{{I:185311}}" alt="">猩红之瓶</div></div></div>
+        <div class="st"><span class="when">+32 秒</span><div class="what"><b>第一把切骨者读条</b>（5 秒）→ 站进飞斧路径
+          <div class="btns"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 + <img class="ic sm" src="{{I:5277}}" alt="">闪避，读条结束前开好</div></div></div>
+        <div class="st"><span class="when">+44 秒</span><div class="what"><b>流血结束</b> → 仪式毒液消失，不会喷发</div></div>
+        <div class="st alt"><span class="when">没接到</span><div class="what">第二把切骨者约 16 秒后还有一次，是最后机会。两把都没接到，就在<b>仪式毒液快结束时开斗篷</b>，喷发会被抵抗掉。</div></div>
+      </div>
+      <div class="cap">拦光束时每一跳吃多少</div>
+      <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">29.4 万</span></div></div>
+      <div class="bar-row"><span>佯攻</span><div class="bar"><span class="on" style="width:78%">22.9 万</span></div></div>
+      <div class="bar-row"><span>佯攻 + 闪避</span><div class="bar"><span class="on" style="width:58%">17.2 万</span></div></div>
+      <div class="bar-row"><span>暗影斗篷</span><div class="bar"><span class="zero">0 · 打不到</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">04</span>按路线逐段</h2>
+  <p class="sub">每一行：看到什么 → 按什么 → 为什么。</p>
+  <div class="route">
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 拉维</h3><span class="kind">TRASH · 仪式首领 / 双牙蹂躏者 / 原始毒蛇 / 贪婪的后裔</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294569}}" alt=""><div><div class="n">麻痹射击</div><div class="s">双牙蹂躏者，命中后 14 秒 <span class="tag magic">魔法</span><span class="tag">减速</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">清除</span></div>
+          <div class="why">毒和越叠越深的减速一起清；开场最后一两分钟交，赶得上拉维</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306550}}" alt=""><div><div class="n">鲜血献祭</div><div class="s">仪式首领读条 <span class="tag">全团</span><span class="tag phys">物理</span><span class="tag">吸收治疗</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">读条时开。斗篷挡不住这一下，别交</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294557}}" alt=""><div><div class="n">刺耳嘶鸣</div><div class="s">原始毒蛇读条</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1766}}" alt="">脚踢 <span class="pill p-mv">打断</span></div>
+          <div class="why">这几波的打断主要踢它</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306890}}" alt=""><div><div class="n">不稳定的图腾</div><div class="s">仪式首领战斗中 <span class="tag">地面</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:2983}}" alt="">疾跑 <img class="ic sm" src="{{I:1966}}" alt="">佯攻</div>
+          <div class="why">离开图腾范围；走不开就开佯攻，每跳少四成</div>
+        </div>
+        <div class="note">麻痹射击是魔法，治疗也能驱。治疗已经驱了就别交斗篷，<b>留着给拉维的三重喷吐</b>。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>拉维</h3><span class="kind">BOSS 1</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297876}}" alt=""><div><div class="n">三重喷吐</div><div class="s">毒球砸中，10 秒持续毒 <span class="tag">点名</span><span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">清除</span></div>
+          <div class="why">砸中后马上开，整段持续毒当场清掉</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1297876}}" alt=""><div><div class="n">三重喷吐</div><div class="s">斗篷在冷却</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">持续毒每跳几乎砍半</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1307894}}" alt=""><div><div class="n">贪婪践踏</div><div class="s">约一分钟一次 <span class="tag">全团</span><span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">每次都开；不开要吃将近 90 万</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1296058}}" alt=""><div><div class="n">反刍</div><div class="s">点名直线胃酸波 <span class="tag">减速 · 减伤害</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">走出直线；斗篷正好开着也能免疫</div>
+        </div>
+        <div class="note">开场交掉的斗篷正好在拉维开打后转好。<b>第一次毒球砸中交一次，两分钟后再交一次</b>，中间的毒球和每一次践踏都交佯攻。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>拉维 → 扭缠盘蛇</h3><span class="kind">TRASH · 高阶进化者 / 振响的扭缠蛇 / 放血者</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n">毒伤</div><div class="s">高阶进化者 3 秒读条 <span class="tag poison">中毒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1766}}" alt="">脚踢 <span class="pill p-mv">打断</span></div>
+          <div class="why">全场踢得最多的一个，能踢就踢</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n">毒伤</div><div class="s">没踢掉，毒上身</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-clr">清除</span></div>
+          <div class="why">这里交的斗篷两分钟后正好赶上第二次同步毒液</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1294859}}" alt=""><div><div class="n">振响</div><div class="s">5 秒，无视护甲 <span class="tag">全团</span><span class="tag phys">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span><img class="ic sm" src="{{I:5277}}" alt="">闪避</div>
+          <div class="why">佯攻每跳少四成，闪避好了再叠。物理伤害，斗篷没用</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>扭缠盘蛇</h3><span class="kind">BOSS 2</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1299189}}" alt=""><div><div class="n">同步毒液 · 第二次</div><div class="s">约 90 秒一次，35 秒持续毒 <span class="tag">全团</span><span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">读条时开；上身后开也能清</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1299080}}" alt=""><div><div class="n">濒死喘息</div><div class="s">每秒叠一层，直到盘蛇被撕裂 <span class="tag phys">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1287798}}" alt="">藤蔓之握 <span class="pill p-mv">副本按钮</span></div>
+          <div class="why">被藤蔓连上就按，跑开 10 码把盘蛇扯开</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1287811}}" alt=""><div><div class="n">解除盘卷</div><div class="s">盘蛇被撕裂 <span class="tag">全团</span><span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span></div>
+          <div class="why">按藤蔓之握前先开好，1–3 秒后就炸</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1299130}}" alt=""><div><div class="n">掘地冲锋</div><div class="s">首领钻地冲走 <span class="tag">地面</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:36554}}" alt="">暗影步 <span class="pill p-mv">位移</span></div>
+          <div class="why">冲锋落地后步回首领身边</div>
+        </div>
+        <div class="note">第一次同步毒液在开怪时就来，斗篷还没转好，开佯攻顶。<b>斗篷留给第二次</b>，别交在冲锋和撕裂上。</div>
+      </div>
+    </div>
+
+    <div class="stop trash">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>扭缠盘蛇 → 祖尔加</h3><span class="kind">TRASH · 祭坛利刃 / 晋升之蛇 / 乌拉特克神选者 / 活体毒液</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308518}}" alt=""><div><div class="n">淬毒之刃</div><div class="s">祭坛利刃闪到你身后劈砍 <span class="tag poison">自然</span><span class="tag">4 秒</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span><img class="ic sm" src="{{I:5277}}" alt="">闪避</div>
+          <div class="why">这一段掉血最多的来源，佯攻转好就开，闪避叠上能砍半</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1308865}}" alt=""><div><div class="n">感染 / 毒伤</div><div class="s">晋升之蛇种卵，进化者毒伤 <span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">进神选者那波前两分钟交，斗篷正好转好</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306852}}" alt=""><div><div class="n">剧毒涌动</div><div class="s">乌拉特克神选者 2 秒读条，9 秒 <span class="tag">全团</span><span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">整段毒风暴免疫，连毒液爆裂一起免</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1306550}}" alt=""><div><div class="n">鲜血献祭</div><div class="s">和剧毒涌动叠在一起 <span class="tag">全团</span><span class="tag phys">物理</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <img class="ic sm" src="{{I:185311}}" alt="">猩红之瓶</div>
+          <div class="why">斗篷挡毒，佯攻挡献祭，血线低就喝瓶</div>
+        </div>
+        <div class="note warn"><b>注意：</b>神选者分两拨，剧毒涌动常和鲜血献祭一起来，是全场最疼的一段。<b>第一拨交一次斗篷，两分钟后第二拨再交一次</b>，前面的小怪别把斗篷交空。</div>
+      </div>
+    </div>
+
+    <div class="stop boss">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>祖尔加</h3><span class="kind">BOSS 3</span></div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300885}}" alt=""><div><div class="n">毒牙仪式</div><div class="s">光束 8 秒，要有人拦 <span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">站进光束后开，每一跳都打不到</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300885}}" alt=""><div><div class="n">毒牙仪式</div><div class="s">斗篷没好仍要拦</div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <img class="ic sm" src="{{I:185311}}" alt="">猩红之瓶</div>
+          <div class="why">佯攻减两成多，瓶子边拦边回血</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1301508}}" alt=""><div><div class="n">切骨者</div><div class="s">5 秒读条，飞斧路径 + 7 秒流血 <span class="tag phys">物理</span><span class="tag bleed">流血</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:1966}}" alt="">佯攻 <span class="pill p-dr">减伤</span><img class="ic sm" src="{{I:5277}}" alt="">闪避</div>
+          <div class="why">身上有仪式毒液就站进路径，流血结束时毒液消失</div>
+        </div>
+        <div class="row">
+          <div class="mech"><img class="ic" src="{{I:1300894}}" alt=""><div><div class="n">仪式毒液</div><div class="s">两把飞斧都没接到 <span class="tag poison">自然</span></div></div></div>
+          <div class="to">→</div>
+          <div class="skill"><img class="ic sm" src="{{I:31224}}" alt="">暗影斗篷 <span class="pill p-imm">免疫</span></div>
+          <div class="why">计时快走完时开，喷发被抵抗</div>
+        </div>
+        <div class="note">斗篷两分钟一次，光束一分钟一次。<b>斗篷好了就交光束，没好就佯攻 + 瓶子</b>；仪式毒液每次都靠切骨者冲掉，斗篷只在两把飞斧都错过时拿来顶喷发。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">05</span>工具箱</h2>
+  <p class="sub">金框是这个副本的核心技能。</p>
+  <div class="tools">
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:31224}}" alt=""><div><div class="nm">暗影斗篷</div><span class="pill p-imm">免疫 · 清除</span></div></div>
+      <dl class="dl"><dt>交给</dt><dd>麻痹射击、三重喷吐、毒伤、第二次同步毒液、剧毒涌动、毒牙仪式光束</dd><dt>节奏</dt><dd>约 2 分钟一次，转好就留给下一个固定点</dd><dt>不交</dt><dd>鲜血献祭、振响、切骨者这类物理伤害；仪式毒液清不掉</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:1966}}" alt=""><div><div class="nm">佯攻</div><span class="pill p-dr">范围 −40% · 单体 −20%</span></div></div>
+      <dl class="dl"><dt>顶什么</dt><dd>贪婪践踏、鲜血献祭、振响、解除盘卷、淬毒之刃、毒牙仪式、切骨者</dd><dt>节奏</dt><dd>两层充能，转好就按，几乎常驻</dd></dl>
+    </div>
+    <div class="tool star">
+      <div class="top"><img class="ic lg" src="{{I:5277}}" alt=""><div><div class="nm">闪避</div><span class="pill p-dr">所有伤害 −20%</span></div></div>
+      <dl class="dl"><dt>用在</dt><dd>接切骨者冲仪式毒液、振响、淬毒之刃</dd><dt>时机</dt><dd>切骨者读条结束前开好</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:185311}}" alt=""><div><div class="nm">猩红之瓶</div><span class="pill p-heal">4 秒回 20%</span></div></div>
+      <dl class="dl"><dt>用在</dt><dd>斗篷没好时拦光束、神选者那波</dd><dt>时机</dt><dd>站进光束就喝，别等治疗</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1766}}" alt=""><div><div class="nm">脚踢</div><span class="pill p-mv">打断</span></div></div>
+      <dl class="dl"><dt>踢什么</dt><dd>高阶进化者的毒伤、原始毒蛇的刺耳嘶鸣</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:1287798}}" alt=""><div><div class="nm">藤蔓之握</div><span class="pill p-mv">副本按钮</span></div></div>
+      <dl class="dl"><dt>用在</dt><dd>扭缠盘蛇的濒死喘息，按完跑开把盘蛇扯开</dd><dt>配合</dt><dd>先开佯攻，接解除盘卷</dd></dl>
+    </div>
+    <div class="tool">
+      <div class="top"><img class="ic lg" src="{{I:36554}}" alt=""><div><div class="nm">暗影步 · 疾跑</div><span class="pill p-mv">位移</span></div></div>
+      <dl class="dl"><dt>用在</dt><dd>掘地冲锋后贴回首领、走出反刍直线、离开不稳定的图腾</dd></dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">06</span>身上常中的减益</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>减益</th><th>类型</th><th>自己能处理吗</th><th>一般怎么处理</th></tr></thead>
+      <tbody>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1297876}}" alt="">三重喷吐</div></td><td><span class="tag">点名</span><span class="tag poison">自然</span><span class="tag">10 秒</span></td><td class="yes">✓ 暗影斗篷</td><td>驱散不掉，斗篷清或佯攻顶</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1294569}}" alt="">麻痹射击</div></td><td><span class="tag magic">魔法</span><span class="tag">减速 14 秒</span></td><td class="yes">✓ 暗影斗篷 <span class="no">/ 消失也能解</span></td><td>治疗能驱就让治疗驱</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1307571}}" alt="">毒伤</div></td><td><span class="tag poison">中毒</span><span class="tag">8 秒</span></td><td class="yes">✓ 暗影斗篷</td><td>能踢先踢；治疗也能驱</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1299189}}" alt="">同步毒液</div></td><td><span class="tag">全团</span><span class="tag poison">自然</span><span class="tag">35 秒</span></td><td class="yes">✓ 暗影斗篷</td><td>第二次交斗篷，其余治疗刷</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1300894}}" alt="">仪式毒液</div></td><td><span class="tag">拦光束后</span><span class="tag poison">约 57 秒后喷发</span></td><td><span class="no">✗ 斗篷清不掉</span></td><td>接切骨者，流血结束时消失；都错过就斗篷顶喷发</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1301508}}" alt="">切骨者</div></td><td><span class="tag phys">物理</span><span class="tag bleed">流血 7 秒</span></td><td class="no">✗ 佯攻 + 闪避</td><td>故意去吃，用来冲掉仪式毒液</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1306550}}" alt="">鲜血献祭</div></td><td><span class="tag phys">物理</span><span class="tag">吸收治疗</span></td><td class="no">✗ 佯攻减伤</td><td>治疗把吸收盾刷掉</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1308518}}" alt="">淬毒之刃</div></td><td><span class="tag poison">自然</span><span class="tag">4 秒</span></td><td class="no">✗ 佯攻减伤</td><td>时间短，不用处理</td></tr>
+        <tr><td><div class="dname"><img class="ic sm" src="{{I:1308865}}" alt="">感染</div></td><td><span class="tag poison">自然</span><span class="tag">5 秒后炸 8 码</span></td><td class="no">✗ 佯攻减伤</td><td>结束时离开队友，爆出幼体马上打</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="k">07</span>天赋</h2>
+  <p class="sub">取自 +24 限时录像的敏锐天赋，英雄天赋欺诈者。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:79008}}" alt=""><div><b>飘忽不定</b><span>闪避期间所有伤害 −20%；佯攻对非范围伤害也 −20%</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:423647}}" alt=""><div><b>优雅诡谋</b><span>佯攻 2 层充能，践踏和献祭都赶得上</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:1267220}}" alt=""><div><b>危险感知</b><span>20% 几率让一次伤害降低 20%</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:231719}}" alt=""><div><b>麻木神经</b><span>受到的物理伤害 −5%，切骨者和献祭都吃到</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:280716}}" alt=""><div><b>吸血药膏</b><span>致命药膏附带吸血</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:231691}}" alt=""><div><b>强化疾跑</b><span>疾跑冷却缩短</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:423683}}" alt=""><div><b>轻若鸿毛</b><span>疾跑更快、持续更久</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:441247}}" alt=""><div><b>烟雾</b>（欺诈者）<span>惊慌的目标对你的伤害 −5%</span></div></div>
+    </div>
+    <p class="tal-note">另一种常见配法：把<b>吸血药膏、轻若鸿毛、恶毒药膏</b>换成<b>剧毒短匕、铜肠铁胃、强化致伤药膏</b>。飘忽不定、优雅诡谋、危险感知、麻木神经这几个防御天赋不要动。</p>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=36">斗篷小王子 +24 29:40</a>
+      <a href="https://www.warcraftlogs.com/reports/pJqfFgYPNKaBmz1k#fight=30">黑川茜贼贼 +24 29:47</a>
+      <a href="https://www.warcraftlogs.com/reports/vyTYACGBPHca6qtw#fight=4">Qingxinlucky +24 29:49</a>
+      <a href="https://www.warcraftlogs.com/reports/x31kmyYL2fMKCw6T#fight=18">Dlkeyrogue +23 28:12</a>
+      <a href="https://www.warcraftlogs.com/reports/yp8drqxAtz7F4KC9#fight=18">Charrend +23 28:37</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">潜行者 · 毒牙祭坛 应对手册 · 2026-11</div></footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  btn.addEventListener("click",function(){
+    var t=code.textContent.trim();
+    function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+  });
+})();
+</script>
+</body>
+</html>

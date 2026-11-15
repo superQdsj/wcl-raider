@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""职业手册证据包：把三场录像的原始事件算成小表格，供写手册的模型直接读。
+"""职业手册证据包：把多场录像（现行 5 场）的原始事件算成小表格，供写手册的模型直接读。
 
 不做判断，只做确定性的计算：
   compare.md   每个敌方技能打到本玩家时，按「当时开着哪些防御技能」分组的命中数 / 免疫或未命中数 / 平均伤害
@@ -14,7 +14,7 @@
 
 用法（仓库根目录）：
   python3 guides/tools/evidence.py --class guides/tools/classes/rogue.json --out <目录> \
-      "<WCL链接#fight=N>@玩家名" "<链接>@玩家名" "<链接>@玩家名"
+      "<WCL链接#fight=N>@玩家名" "<链接>@玩家名" "<链接>@玩家名" "<链接>@玩家名" "<链接>@玩家名"
 """
 from __future__ import annotations
 
