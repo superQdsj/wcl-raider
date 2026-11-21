@@ -9,9 +9,11 @@
 ```sh
 python3 guides/paladin-ret/sources/mimou-v2/build.py
 python3 guides/paladin-ret/sources/duya-v2/build.py
+python3 guides/paladin-ret/sources/zhuwang-v2/build.py
 ```
 
 - `sources/mimou-v2/`：页面源码（`head.part` 样式、`body.part` 正文、`build.py` 含单轨时间轴）、天赋编码 `enc.py`、`NOTES.md` 关键结论的数据依据。
 - `sources/duya-v2/`：毒牙祭坛，同样的结构，证据包（五场 +23）在 `evidence/`。
+- `sources/zhuwang-v2/`：诸王之眠的页面源码（系统字体，不用 Google Fonts）、`enc.py`、`NOTES.md`。
 - `sources/zhuwang/evidence/`：诸王之眠的证据包，收录五场 +23 / +24 限时录像。
 - `sources/mimouxiaojing/`：三场 +22 的证据包、场景还原和全部关注技能施法的逐次核对（第一版手册的研究材料）。

@@ -229,6 +229,37 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
   .stages a{padding:7px 7px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* timeline (same as the gold rogue card) */
+.tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
+.tl-scroll{overflow-x:auto;padding-bottom:6px}
+.tl{position:relative;min-width:980px;height:232px}
+.band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
+.band.trash{background:var(--panel-2);color:var(--faint);border:1px dashed var(--line)}
+.band.boss{background:rgba(217,171,82,.12);color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:80px;z-index:1}
+.mk .stem{width:2px;background:var(--gold)}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:#000}
+.mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
+.mk .t{font:500 11px var(--mono);color:var(--mute)}
+.mk.up{top:4px}
+.mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
+.mk.dn{top:114px}
+.mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
+.mk.dn .stem{height:14px}
+.mk.v .stem{background:var(--shadow)}.mk.v img{border-color:var(--shadow)}
+.mk.e .stem{background:var(--nature)}.mk.e img{border-color:var(--nature)}
+.mk.muted .stem{background:var(--faint)}.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}.mk.muted .lab{color:var(--mute)}
+.mk.end{transform:translateX(-80%)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+.tl-card{--panel:var(--card);--panel-2:var(--bg2);--faint:var(--ink3);--gold-dim:var(--goldd);--mute:var(--ink2);--nature:var(--jade)}
+.tl-card .mk.start{transform:translateX(-22%)}
+#talent .tal-sub{color:var(--ink2);font-size:14px;margin:0 0 12px}
+#talent .code-row{display:flex;gap:10px;align-items:stretch;background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:12px}
+#talent code{flex:1;min-width:0;font:500 12.5px/1.5 var(--mono);color:var(--ink);word-break:break-all}
+#talent button{flex:none;padding:6px 16px;border-radius:8px;border:1px solid var(--goldd);background:transparent;color:var(--gold);font:inherit;cursor:pointer}
 </style>
 </head>
 <body>
@@ -254,7 +285,7 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
     <div class="eyebrow">Kings' Rest · Retribution</div>
     <h1>诸王之眠<span class="dot">·</span>惩戒圣骑士实战手册</h1>
     <div class="tags"><span>大秘境攻略</span><span>烈日先驱</span><span>基于 +24 / +23 限时实测提炼</span></div>
-    <p class="lede">诸王之眠对惩戒骑是一场<em>「清流血 + 保队友 + 踩轴减伤」</em>的考场——捏好保护、无敌、清毒与圣佑四张牌，全本最致命的翻车点都能一手按平。</p>
+    <p class="lede">诸王之眠里惩戒骑要做三件事：<em>清流血、保队友、按读条交减伤</em>。保护祝福、圣盾术、清毒术和圣佑术这四个技能，管住了全本最容易出事的地方。</p>
     <svg class="flourish" viewBox="0 0 280 18" fill="none" stroke="currentColor" aria-hidden="true">
       <path d="M0 9h112M168 9h112" stroke-width="1"/>
       <path d="M140 2l7 7-7 7-7-7z" stroke-width="1.2"/>
@@ -315,14 +346,14 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
         <div class="ic"><img src="../icons/b3bb765fb8bc.jpg" alt="圣盾术"></div>
         <h3>圣盾术</h3>
         <div class="role">全免疫 · 清减益</div>
-        <p>顶爆发硬吃高压波次、单吃议会<span class="m">翻滚</span>、原地秒清祖尔之影<span class="m">黑暗启示</span>；尾王与 <b class="s" data-s="sac">牺牲祝福</b> 联动无伤保坦。</p>
+        <p>开门<span class="m">暗影旋风斩</span>圣佑在冷却、血线吃紧时直接免疫；议会单独吃下<span class="m">翻滚</span>；尾王先给坦克套 <b class="s" data-s="sac">牺牲祝福</b> 再开圣盾，圣盾期间转来的伤害全免。</p>
       </article>
       <article class="ace" data-pick="dp">
         <span class="n">III</span>
         <div class="ic"><img src="../icons/39f85b6d2657.jpg" alt="圣佑术"><img src="../icons/d0bd6356d74c.jpg" alt="复仇之盾"></div>
         <h3>圣佑术 <small style="font-size:13px;color:var(--ink3);font-family:var(--sans);font-weight:400">联动复仇之盾</small></h3>
         <div class="role">1 分钟固定减伤轴</div>
-        <p>节奏完美覆盖全本每一轮核心群伤：<span class="m">暗影旋风斩</span><span class="m">蛇之风</span><span class="m">鲜血吸取</span><span class="m">觉醒猛击</span><span class="m">翻滚</span><span class="m">镀金毁灭</span>。</p>
+        <p>读条时交，赶在伤害落下前按：<span class="m">暗影旋风斩</span><span class="m">蛇之风</span><span class="m">鲜血吸取</span><span class="m">觉醒猛击</span><span class="m">翻滚</span><span class="m">镀金毁灭</span>。蛇之风和镀金毁灭来得比冷却快，只够隔一轮交一次。</p>
       </article>
       <article class="ace" data-pick="cl">
         <span class="n">IV</span>
@@ -352,13 +383,58 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
       <div><h3>全本 5 个必断读条</h3><span>责难最高优先级 · 点击跳到对应战斗</span></div>
     </div>
     <div class="kicks">
-      <a class="kick" href="#e-mbara"><span class="go">↗</span><div class="i">01</div><div class="who">总管姆巴拉</div><div class="cast">邪恶愈合</div><div class="why">10 秒持续大量回血，放出来会严重拖慢节奏，全程焦点死断。</div></a>
+      <a class="kick" href="#e-mbara"><span class="go">↗</span><div class="i">01</div><div class="who">总管姆巴拉</div><div class="cast">邪恶愈合</div><div class="why">10 秒持续大量回血，放出来会严重拖慢节奏，设焦点盯着断。</div></a>
       <a class="kick" href="#e-wasi"><span class="go">↗</span><div class="i">02</div><div class="who">沃希女王</div><div class="cast">束缚灵魂</div><div class="why">魅惑队友 10 秒，必断；次选顺手断她的「灵魂之箭」。</div></a>
       <a class="kick" href="#e-morgue"><span class="go">↗</span><div class="i">03</div><div class="who">未完成的木乃伊</div><div class="cast">恶疾排放</div><div class="why">全队高额疾病 DoT，停尸间与二号首领战的核心打断目标。</div></a>
       <a class="kick" href="#e-council"><span class="go">↗</span><div class="i">04</div><div class="who">智者扎纳扎尔</div><div class="cast">毒性新星</div><div class="why">全队剧毒爆炸 DoT，必断（若意外漏断立刻用清毒术救人）。</div></a>
-      <a class="kick" href="#e-dazar"><span class="go">↗</span><div class="i">05</div><div class="who">莱班（尾王坐骑）</div><div class="cast">致命咆哮</div><div class="why">全队 4 秒恐惧，尾王起手焦点死断。</div></a>
+      <a class="kick" href="#e-dazar"><span class="go">↗</span><div class="i">05</div><div class="who">莱班（尾王坐骑）</div><div class="cast">致命咆哮</div><div class="why">全队 4 秒恐惧，尾王开打就设焦点盯着断。</div></a>
     </div>
     <p class="kicks-extra">顺手断：开场复活的妖术师的<span class="m">妖术齐射</span>、议会前幻影妖术祭司的<span class="m">幽灵弹 / 妖术</span>。</p>
+  </section>
+
+  <!-- ============ 时间轴 ============ -->
+  <section id="tl">
+    <div class="sh"><div class="num">TL</div><div><div class="k">一场 +24 实录</div><h2>保命技能交在哪</h2></div><div class="rule"></div></div>
+    <div class="tl-card">
+      <div class="tl-scroll">
+<div class="tl">
+  <div class="band trash" style="left:0.94%;width:9.15%">开门大厅</div>
+  <div class="band boss" style="left:10.13%;width:12.32%">风蛇</div>
+  <div class="band trash" style="left:23.23%;width:16.42%">陵墓四王</div>
+  <div class="band trash" style="left:40.59%;width:6.39%">停尸间</div>
+  <div class="band boss" style="left:46.98%;width:12.78%">姆沁巴</div>
+  <div class="band trash" style="left:60.49%;width:5.40%">长廊</div>
+  <div class="band boss" style="left:65.90%;width:14.92%">部族议会</div>
+  <div class="band trash" style="left:81.59%;width:5.30%">祖尔之影</div>
+  <div class="band boss" style="left:87.67%;width:12.32%">达萨</div>
+  <div class="axis" style="left:0;transform:none">0:00</div>
+  <div class="axis" style="left:15.59%">5:00</div>
+  <div class="axis" style="left:31.18%">10:00</div>
+  <div class="axis" style="left:46.77%">15:00</div>
+  <div class="axis" style="left:62.36%">20:00</div>
+  <div class="axis" style="left:77.95%">25:00</div>
+  <div class="axis" style="left:93.55%">30:00</div>
+  <div class="mk up start" style="left:3.01%"><span class="lab">圣盾免疫旋风斩</span><span class="t">0:58</span><span class="stem"></span><img src="../icons/b3bb765fb8bc.jpg" alt=""></div>
+  <div class="mk dn" style="left:10.97%"><span class="lab">圣佑顶蛇之风</span><span class="t">3:31</span><span class="stem"></span><img src="../icons/39f85b6d2657.jpg" alt=""></div>
+  <div class="mk up" style="left:17.73%"><span class="lab">圣佑顶蛇之风</span><span class="t">5:41</span><span class="stem"></span><img src="../icons/39f85b6d2657.jpg" alt=""></div>
+  <div class="mk dn" style="left:24.51%"><span class="lab">牺牲接鲜血吸取</span><span class="t">7:51</span><span class="stem"></span><img src="../icons/011c0b335bf9.jpg" alt=""></div>
+  <div class="mk up" style="left:25.66%"><span class="lab">保护清骤裂</span><span class="t">8:13</span><span class="stem"></span><img src="../icons/bdbd6a5f6061.jpg" alt=""></div>
+  <div class="mk dn e" style="left:34.56%"><span class="lab">清毒蛇打击</span><span class="t">11:05</span><span class="stem"></span><img src="../icons/81bc87699eff.jpg" alt=""></div>
+  <div class="mk up" style="left:50.99%"><span class="lab">牺牲接排干体液</span><span class="t">16:21</span><span class="stem"></span><img src="../icons/011c0b335bf9.jpg" alt=""></div>
+  <div class="mk dn" style="left:61.94%"><span class="lab">保护挡飞斧</span><span class="t">19:51</span><span class="stem"></span><img src="../icons/bdbd6a5f6061.jpg" alt=""></div>
+  <div class="mk up e" style="left:65.38%"><span class="lab">盲目之光</span><span class="t">20:58</span><span class="stem"></span><img src="../icons/f8cb22a1bcc9.jpg" alt=""></div>
+  <div class="mk dn muted" style="left:83.98%"><span class="lab">圣盾</span><span class="t">26:56</span><span class="stem"></span><img src="../icons/b3bb765fb8bc.jpg" alt=""></div>
+  <div class="mk up" style="left:92.71%"><span class="lab">保护免疫震地之跃</span><span class="t">29:44</span><span class="stem"></span><img src="../icons/bdbd6a5f6061.jpg" alt=""></div>
+  <div class="mk dn end" style="left:96.44%"><span class="lab">牺牲＋圣盾保坦</span><span class="t">30:55</span><span class="stem"></span><img src="../icons/b3bb765fb8bc.jpg" alt=""></div>
+</div>
+      </div>
+      <div class="legend">
+        <span><i style="background:rgba(217,171,82,.12);border:1px solid var(--goldd)"></i>首领战</span>
+        <span><i style="background:var(--bg2);border:1px dashed var(--line)"></i>小怪段</span>
+        <span><i style="background:var(--jade);border-radius:50%"></i>清毒 · 盲目之光</span>
+        <span><i style="background:var(--ink3);border-radius:50%"></i>可选</span>
+      </div>
+    </div>
   </section>
 
   <!-- ============ 01 ============ -->
@@ -370,7 +446,7 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
       <div class="steps">
         <div class="step">
           <div class="cue" data-l="信号">读条<span class="m">暗影旋风斩</span>全团高额暗影爆发，同时场上有<span class="m">重力猛击</span>持续掉血。</div>
-          <div class="act" data-l="按键"><span class="key">第一轮爆发直接交 <b class="s" data-s="ds">圣盾术</b> 站桩打满输出</span>；后续轮次读条前交 <b class="s" data-s="dp">圣佑术</b> 稳血。</div>
+          <div class="act" data-l="按键"><span class="key">读条时交 <b class="s" data-s="dp">圣佑术</b></span>，能少吃三成；圣佑在冷却、血线又吃紧时，<b class="s" data-s="ds">圣盾术</b> 能直接免疫。</div>
         </div>
         <div class="step">
           <div class="cue" data-l="顺手">复活的妖术师读<span class="m">妖术齐射 / 暗影箭</span>。</div>
@@ -384,7 +460,7 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
       <div class="steps">
         <div class="step">
           <div class="cue" data-l="信号"><span class="m">蛇之风</span>读条（持续 5 秒击退 + 全团自然伤害）。</div>
-          <div class="act" data-l="按键"><span class="key">每一轮读条前交 <b class="s" data-s="dp">圣佑术</b></span>，减伤与复仇之盾刚好覆盖整段伤害——冷却与每轮时间轴天然对齐。</div>
+          <div class="act" data-l="按键"><span class="key">读条时交 <b class="s" data-s="dp">圣佑术</b></span>，赶在第一跳前按下，每跳少吃三成。蛇之风两轮约一分钟，圣佑冷却只够<b>隔一轮交一次</b>，中间那轮靠治疗。</div>
         </div>
         <div class="step">
           <div class="cue" data-l="细节">被点<span class="m">吐金</span>时按规矩放边；<span class="m">吐金</span>与<span class="m">蛇之风</span>同时落在自己或脆皮队友身上。</div>
@@ -423,11 +499,11 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
     </article>
 
     <article class="enc trash" id="e-mbara">
-      <div class="enc-h"><span class="badge">小怪</span><h3>守卫队长阿图 + 总管姆巴拉</h3></div>
+      <div class="enc-h"><span class="badge">小怪</span><h3>守卫队长阿图 + 总管姆巴拉 + 拉胡艾大王</h3></div>
       <div class="steps">
         <div class="step">
-          <div class="cue" data-l="信号">总管姆巴拉读条<span class="m">邪恶愈合</span>；同时吃<span class="m">叉状闪电 / 过载</span>连击。</div>
-          <div class="act" data-l="按键"><span class="key">焦点死盯姆巴拉，<b class="s" data-s="reb">责难</b> 专断<span class="m">邪恶愈合</span></span>；吃连击时交 <b class="s" data-s="dp">圣佑术</b>。</div>
+          <div class="cue" data-l="信号">总管姆巴拉读条<span class="m">邪恶愈合</span>；拉胡艾大王放<span class="m">叉状闪电</span>和<span class="m">过载</span>。</div>
+          <div class="act" data-l="按键"><span class="key">设焦点盯住姆巴拉，<b class="s" data-s="reb">责难</b> 专断<span class="m">邪恶愈合</span></span>；<span class="m">过载</span>读条时离开拉胡艾 10 码；<span class="m">叉状闪电</span>一般靠治疗，血线低时交 <b class="s" data-s="dp">圣佑术</b>。</div>
         </div>
       </div>
     </article>
@@ -441,7 +517,7 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
         </div>
         <div class="step">
           <div class="cue" data-l="信号">提玛吉大王读<span class="m">爆破重击</span>或点名<span class="m">剑刃风暴</span>。</div>
-          <div class="act" data-l="按键"><span class="m">爆破重击</span>落地前交 <b class="s" data-s="dp">圣佑术</b>；被<span class="m">剑刃风暴</span>锁定直接开 <b class="s" data-s="steed">神圣马驹</b> 拉开距离。</div>
+          <div class="act" data-l="按键"><span class="m">爆破重击</span>落地前交 <b class="s" data-s="dp">圣佑术</b>；被<span class="m">剑刃风暴</span>锁定直接开 <b class="s" data-s="steed"><img src="../icons/03050a328f7e.jpg" alt="">神圣马驹</b> 拉开距离。</div>
         </div>
       </div>
     </article>
@@ -470,13 +546,13 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
       <div class="steps">
         <div class="step">
           <div class="cue" data-l="信号 1"><span class="m">觉醒猛击</span>全团暗影重击，并震开棺材刷出未完成的木乃伊。</div>
-          <div class="act" data-l="按键 1">读条交 <b class="s" data-s="dp">圣佑术</b> 减伤；<span class="key">木乃伊一出来立刻切目标，<b class="s" data-s="reb">责难</b> 死断<span class="m">恶疾排放</span></span>。</div>
+          <div class="act" data-l="按键 1">读条交 <b class="s" data-s="dp">圣佑术</b> 减伤；<span class="key">木乃伊一出来立刻切目标，<b class="s" data-s="reb">责难</b> 断掉<span class="m">恶疾排放</span></span>。</div>
         </div>
         <div class="step">
           <div class="cue" data-l="信号 2"><span class="m">排干体液</span>点名队友或自己（6 秒高额持续伤害，结束后挂<span class="m">干枯</span>：减 50% 伤害与移速，需抬过 90% 血才消）。</div>
           <div class="act" data-l="按键 2"><ul>
             <li><b>点名队友：</b><span class="key">第一时间套 <b class="s" data-s="sac">牺牲祝福</b>，顺手补一口 <b class="s" data-s="ef">永恒之火</b></span>，帮治疗迅速抬过 90% 血线</li>
-            <li><b>点名自己且压力大：</b>开 <b class="s" data-s="dp">圣佑术</b>，或直接 <b class="s" data-s="ds">圣盾术</b> 秒清<span class="m">排干体液</span>（同时规避后续<span class="m">干枯</span>）</li>
+            <li><b>点名自己：</b>开 <b class="s" data-s="dp">圣佑术</b>，每跳少吃三成</li>
           </ul></div>
         </div>
       </div>
@@ -519,6 +595,10 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
           <div class="cue" data-l="扎纳扎尔"><span class="k2">信号 3</span>召图腾并读条<span class="m">毒性新星</span>。</div>
           <div class="act" data-l="按键 3">第一时间转火图腾，<span class="key"><b class="s" data-s="reb">责难</b> 必断<span class="m">毒性新星</span></span>（漏断立刻 <b class="s" data-s="cl">清毒术</b> 补救）。</div>
         </div>
+        <div class="step">
+          <div class="cue" data-l="扎纳扎尔"><span class="k2">信号 4</span><span class="m">电弧</span>高伤弹射，打中一人后弹到其他人，是议会里总掉血最多的技能。</div>
+          <div class="act" data-l="按键 4">一般不为它交技能，靠治疗；血线低又碰上 <b class="s" data-s="dp">圣佑术</b> 转好就交。</div>
+        </div>
       </div>
     </article>
   </section>
@@ -532,7 +612,7 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
       <div class="steps">
         <div class="step">
           <div class="cue" data-l="信号">被点名<span class="m">黑暗启示</span>（5 秒后对 20 码内造成巨额暗影爆炸）。</div>
-          <div class="act" data-l="按键">常规做法：带出人群交 <b class="s" data-s="dp">圣佑术</b> 硬吃。<br><span class="key">更优解：直接原地 <b class="s" data-s="ds">圣盾术</b> 秒清 Debuff</span>，不炸队友也不丢输出。</div>
+          <div class="act" data-l="按键"><span class="key">带出人群，交 <b class="s" data-s="dp">圣佑术</b> 硬吃</span>。</div>
         </div>
         <div class="step">
           <div class="cue" data-l="信号">队友被<span class="m">暗影弹幕</span>连点，压力大。</div>
@@ -550,23 +630,33 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
         </div>
         <div class="step">
           <div class="cue" data-l="信号 2"><span class="k2">核心全团大招</span>达萨读条<span class="m">镀金毁灭</span>（全团高额火焰直伤 + 15 秒持续灼烧 DoT）。</div>
-          <div class="act" data-l="按键 2">每轮落地前先交 <b class="s" data-s="dp">圣佑术</b> 覆盖直伤与前半段灼烧；高危轮次直接交 <b class="s" data-s="ds">圣盾术</b> 秒清整段灼烧 DoT。</div>
+          <div class="act" data-l="按键 2">读条时交 <b class="s" data-s="dp">圣佑术</b>，赶在落地前按下。镀金毁灭来得比圣佑冷却快，同样只够<b>隔一轮交一次</b>，中间那轮靠治疗。</div>
         </div>
         <div class="step">
-          <div class="cue" data-l="信号 3"><span class="k2">终极连招 · 保坦神技</span>后半程<span class="m">镀金毁灭</span>与提扎拉<span class="m">野蛮槌击 / 剑刃连击</span>重叠，坦克承伤濒危。</div>
+          <div class="cue" data-l="信号 3"><span class="k2">保坦克</span>后半程<span class="m">镀金毁灭</span>、提扎拉的<span class="m">野蛮槌击</span>和达萨的<span class="m">剑刃连击</span>叠在一起，坦克血线吃紧。</div>
           <div class="act" data-l="按键 3">
             <div class="combo">
               <span class="p"><img src="../icons/011c0b335bf9.jpg" alt="">牺牲祝福 → 坦克</span><span class="plus">紧接</span><span class="p"><img src="../icons/b3bb765fb8bc.jpg" alt="">秒开圣盾术</span>
             </div>
-            <div style="margin-top:8px">先给坦克套 <b class="s" data-s="sac">牺牲祝福</b>，紧接着秒开 <b class="s" data-s="ds">圣盾术</b>——<span class="key">自身 0 承伤（同步清掉自身镀金灼烧 + 免疫牺牲反伤），白送坦克 12 秒 30% 硬减伤</span>。</div>
+            <div style="margin-top:8px">先给坦克套 <b class="s" data-s="sac">牺牲祝福</b>，紧接着开 <b class="s" data-s="ds">圣盾术</b>：<span class="key">圣盾 8 秒内，牺牲转到你身上的伤害全免</span>，顺带清掉身上的镀金灼烧。牺牲最长 12 秒，两次按键之间和圣盾结束后，转来的伤害照样会打到你，留意自己的血线。</div>
           </div>
         </div>
         <div class="step">
-          <div class="cue" data-l="信号 4"><span class="k2">物理白嫖免疫</span>提扎拉点名<span class="m">震地之跃</span>或头顶<span class="m">穿刺之矛</span>封路。</div>
-          <div class="act" data-l="按键 4"><b class="s" data-s="bop">保护祝福</b>（给自己或队友）与 <b class="s" data-s="ds">圣盾术</b> 均可完全免疫<span class="m">震地之跃</span>砸地伤害及<span class="m">穿刺之矛</span>伤害与流血，走位受限时大胆交。</div>
+          <div class="cue" data-l="信号 4"><span class="k2">物理技能能免疫</span>提扎拉点名<span class="m">震地之跃</span>，或达萨的<span class="m">穿刺之矛</span>封路。</div>
+          <div class="act" data-l="按键 4"><b class="s" data-s="bop">保护祝福</b>（给自己或队友）和 <b class="s" data-s="ds">圣盾术</b> 都能完全免疫<span class="m">震地之跃</span>和<span class="m">穿刺之矛</span>的伤害与流血，走位受限时就交。</div>
         </div>
       </div>
     </article>
+  </section>
+
+  <!-- ============ 天赋 ============ -->
+  <section id="talent">
+    <div class="sh"><div class="num">✦</div><div><div class="k">导入</div><h2>天赋字符串</h2></div><div class="rule"></div></div>
+    <p class="tal-sub">+24 限时录像所用的惩戒天赋，英雄天赋烈日先驱。复制后在游戏天赋界面点「导入」。</p>
+    <div class="code-row">
+      <code id="talent-code">CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAwoZZbmZWGzYGAAAAAAzUmlZYmx2Y2GmZbGjxYYGLsBgZZ2mZmtGAAAYBwAgxMbAzYmZDYmZYMjBD</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
   </section>
 </main>
 
@@ -592,12 +682,12 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
     sac:{n:'牺牲祝福',i:'011c0b335bf9'}, dp:{n:'圣佑术',i:'39f85b6d2657'},
     cl:{n:'清毒术',i:'81bc87699eff'}, reb:{n:'责难',i:'d2d6bf7553fd'},
     bl:{n:'盲目之光',i:'f8cb22a1bcc9'}, loh:{n:'圣疗术',i:'cdbcd4c63765'},
-    ef:{n:'永恒之火',i:'511f8f6875eb'}
+    ef:{n:'永恒之火',i:'511f8f6875eb'}, steed:{n:'神圣马驹',i:'03050a328f7e'}
   };
   var ORDER=['bop','ds','dp','cl','reb','sac','bl','loh','ef'];
   // 给技能词补图标
   document.querySelectorAll('.s[data-s]').forEach(function(el){
-    var k=SK[el.dataset.s]; if(!k) return;
+    var k=SK[el.dataset.s]; if(!k||el.querySelector('img')) return;
     var img=document.createElement('img'); img.src='../icons/'+k.i+'.jpg'; img.alt=''; img.loading='lazy';
     el.insertBefore(img,el.firstChild);
   });
@@ -641,6 +731,7 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
   document.querySelector('.seg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
     state.type=b.dataset.type;apply();});
   document.querySelectorAll('.ace').forEach(function(a){a.addEventListener('click',function(){
+    if(state.type!=='all') state.type='all';
     state.skill=state.skill===a.dataset.pick?null:a.dataset.pick;apply();
     if(state.skill) document.getElementById('s1').scrollIntoView({behavior:'smooth'});
   });});
@@ -648,6 +739,21 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
   document.querySelectorAll('.kick').forEach(function(k){k.addEventListener('click',function(){
     if(state.type!=='all'){state.type='all';apply();}
   });});
+
+  // 点阶段导航时，目标被筛选隐藏就先恢复「全部」
+  document.querySelectorAll('.stages a').forEach(function(a){a.addEventListener('click',function(){
+    var t=document.getElementById(a.getAttribute('href').slice(1));
+    if(t&&t.classList.contains('gone')){state.type='all';apply();}
+  });});
+
+  // 复制天赋字符串
+  var cb=document.getElementById('copy-btn'), code=document.getElementById('talent-code');
+  cb.addEventListener('click',function(){
+    var t=code.textContent.trim();
+    function done(){cb.textContent='已复制';setTimeout(function(){cb.textContent='复制';},1600);}
+    function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);var ok=false;try{ok=document.execCommand('copy');}catch(e){}if(ok)done();else cb.textContent='已选中，请手动复制';}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+  });
 
   // 阶段导航高亮
   var links={}; document.querySelectorAll('.stages a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
