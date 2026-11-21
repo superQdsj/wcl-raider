@@ -14,7 +14,7 @@
 | 武器战士（屠戮者） | [`guides/warrior-arms/`](guides/warrior-arms/README.md) | 8/8 本齐（2026-11-07） |
 | 神圣圣骑士 | `guides/holy-paladin/` | 8/8 本齐（第一版，2026-10-25 ~ 10-28） |
 | 敏锐潜行者 | [`guides/rogue/`](guides/rogue/README.md) | 第一版 7 本（可离线重建）；新版已完成诸王之眠、夺目谷、毒牙祭坛 |
-| 惩戒圣骑士（烈日先驱） | [`guides/paladin-ret/`](guides/paladin-ret/README.md) | 密谋小径、毒牙祭坛（2 本，全有证据包与源码） |
+| 惩戒圣骑士（烈日先驱） | [`guides/paladin-ret/`](guides/paladin-ret/README.md) | 密谋小径、毒牙祭坛、诸王之眠（3 本，均有证据包） |
 
 ## 制作流程与数据工具
 
