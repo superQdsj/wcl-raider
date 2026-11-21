@@ -68,9 +68,10 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--type", default="all",
                    help="damage-taken | damage-done | healing | casts | enemy-casts | buffs | debuffs | deaths | "
                         "interrupts | dispels | all（默认 all）")
-    p.add_argument("--player", help="玩家名：all 双向过滤（施放或承受）；damage-taken/healing 看其承受，其余看其发出")
+    p.add_argument("--player", help="玩家名：all 双向过滤（施放或承受）；damage-taken/healing/buffs/debuffs 看其承受，其余看其发出")
+    p.add_argument("--source", help="施法/来源单位名（精确匹配，例如查某玩家给队友套的增益或治疗）")
     p.add_argument("--target", help="目标名（任意单位名称，精确匹配）")
-    p.add_argument("--ability", help="技能 ID 或名称片段")
+    p.add_argument("--ability", help="技能 ID 或名称片段（interrupts/dispels 时同时匹配施放技与被打断/驱散的技能）")
     p.add_argument("--filter", help="原生 WCL filterExpression（与其他过滤条件取 AND）")
     p.add_argument("--limit", type=_positive, default=400, help="最多输出多少条（默认 400；繁忙窗口加大到 1000–2000）")
 

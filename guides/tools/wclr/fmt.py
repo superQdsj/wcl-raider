@@ -13,7 +13,7 @@ CLASS_ZH = {
 
 SPEC_ZH = {
     ("DeathKnight", "Blood"): "鲜血", ("DeathKnight", "Frost"): "冰霜", ("DeathKnight", "Unholy"): "邪恶",
-    ("DemonHunter", "Havoc"): "浩劫", ("DemonHunter", "Vengeance"): "复仇",
+    ("DemonHunter", "Havoc"): "浩劫", ("DemonHunter", "Vengeance"): "复仇", ("DemonHunter", "Devourer"): "噬灭",
     ("Druid", "Balance"): "平衡", ("Druid", "Feral"): "野性", ("Druid", "Guardian"): "守护", ("Druid", "Restoration"): "恢复",
     ("Evoker", "Devastation"): "湮灭", ("Evoker", "Preservation"): "恩护", ("Evoker", "Augmentation"): "增辉",
     ("Hunter", "BeastMastery"): "野兽控制", ("Hunter", "Marksmanship"): "射击", ("Hunter", "Survival"): "生存",
@@ -47,23 +47,47 @@ CLASS_ALIASES = {
 
 
 def parse_class(text: str) -> "tuple[str, Optional[str]]":
-    """'法师' / 'Mage' / '冰法' / '冰霜法师' / 'frost mage' -> ('Mage', 'Frost' 或 None)。认不出时抛 ValueError。"""
+    """'法师' / 'Mage' / '冰法' / '惩戒' / '敏锐' / '冰霜法师' / 'frost mage' -> ('Mage', 'Frost' 或 None)。认不出时抛 ValueError。"""
     q = (text or "").strip().lower()
     if not q:
         raise ValueError("请指定职业")
+    # 常见专精简称与纯专精名直达映射（先匹配无歧义专精，避免 '惩戒' 等报错）
+    short = {
+        "奶骑": ("Paladin", "Holy"), "防骑": ("Paladin", "Protection"), "惩戒骑": ("Paladin", "Retribution"),
+        "惩戒": ("Paladin", "Retribution"), "cjq": ("Paladin", "Retribution"),
+        "奶萨": ("Shaman", "Restoration"), "元素萨": ("Shaman", "Elemental"), "元素": ("Shaman", "Elemental"),
+        "增强萨": ("Shaman", "Enhancement"), "增强": ("Shaman", "Enhancement"),
+        "奶德": ("Druid", "Restoration"), "鸟德": ("Druid", "Balance"), "咕咕": ("Druid", "Balance"),
+        "平衡": ("Druid", "Balance"), "猫德": ("Druid", "Feral"), "野德": ("Druid", "Feral"), "熊德": ("Druid", "Guardian"),
+        "奶牧": ("Priest", "Holy"), "戒律": ("Priest", "Discipline"), "戒律牧": ("Priest", "Discipline"),
+        "暗牧": ("Priest", "Shadow"), "神牧": ("Priest", "Holy"),
+        "冰法": ("Mage", "Frost"), "火法": ("Mage", "Fire"), "奥法": ("Mage", "Arcane"),
+        "敏锐": ("Rogue", "Subtlety"), "敏锐贼": ("Rogue", "Subtlety"),
+        "奇袭": ("Rogue", "Assassination"), "刺杀": ("Rogue", "Assassination"),
+        "狂徒": ("Rogue", "Outlaw"), "狂徒贼": ("Rogue", "Outlaw"),
+        "武器": ("Warrior", "Arms"), "武器战": ("Warrior", "Arms"),
+        "狂暴": ("Warrior", "Fury"), "狂怒": ("Warrior", "Fury"), "狂暴战": ("Warrior", "Fury"),
+        "防战": ("Warrior", "Protection"),
+        "噬灭": ("DemonHunter", "Devourer"), "浩劫": ("DemonHunter", "Havoc"), "复仇": ("DemonHunter", "Vengeance"),
+        "兽王": ("Hunter", "BeastMastery"), "射击": ("Hunter", "Marksmanship"), "生存": ("Hunter", "Survival"),
+        "痛苦": ("Warlock", "Affliction"), "痛苦术": ("Warlock", "Affliction"),
+        "恶魔术": ("Warlock", "Demonology"), "毁灭": ("Warlock", "Destruction"), "毁灭术": ("Warlock", "Destruction"),
+        "踏风": ("Monk", "Windwalker"), "织雾": ("Monk", "Mistweaver"), "酒仙": ("Monk", "Brewmaster"),
+        "邪dk": ("DeathKnight", "Unholy"), "冰dk": ("DeathKnight", "Frost"), "血dk": ("DeathKnight", "Blood"),
+        "湮灭": ("Evoker", "Devastation"), "增辉": ("Evoker", "Augmentation"), "恩护": ("Evoker", "Preservation"),
+    }
+    if q in short:
+        return short[q]
     best = None
     for cls, names in CLASS_ALIASES.items():
         for n in names:
             if n in q and (best is None or len(n) > len(best[1])):
                 best = (cls, n)
-    specs = {sp: zh for (c, sp), zh in SPEC_ZH.items()}
-    if best is None:  # 只写了专精简称，例如"冰法""奶骑"由下面处理；纯专精名需带职业
-        short = {"奶骑": ("Paladin", "Holy"), "奶萨": ("Shaman", "Restoration"), "奶德": ("Druid", "Restoration"),
-                 "奶牧": ("Priest", "Holy"), "冰法": ("Mage", "Frost"), "火法": ("Mage", "Fire"), "奥法": ("Mage", "Arcane")}
-        for k, v in short.items():
+    if best is None:
+        for k, v in sorted(short.items(), key=lambda kv: -len(kv[0])):
             if k in q:
                 return v
-        raise ValueError(f"认不出职业：{text}（可写 法师 / Mage / 冰法 / 冰霜法师）")
+        raise ValueError(f"认不出职业：{text}（可写 惩戒 / 惩戒骑 / 敏锐 / 噬灭 / 武器战 / 冰法 / 法师）")
     cls = best[0]
     rest = q.replace(best[1], "")
     for (c, sp), zh in SPEC_ZH.items():

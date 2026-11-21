@@ -88,7 +88,7 @@ def build_body(cls_zh: str, spec_zh: str, spec_en: str, dungeon: str, dungeon_en
     <h1><span class="cls">{cls_zh}</span><span class="dot">·</span>{dungeon} 应对手册</h1>
     <p class="lede">TODO：用 2–3 句概括本副本核心伤害特点、主大招节奏，以及最关键的一条例外（build_site.py 会提取此句作首页摘要）。</p>
     <div class="chips">
-      <span class="chip">参考 <b>+24 / +23 限时{spec_zh}（国 / 欧 / 美）</b></span>
+      <span class="chip">参考 <b>TODO 层数限时{spec_zh}（国 / 欧 / 美）</b></span>
       <span class="chip">英雄天赋 <b>TODO</b></span>
     </div>
   </div>
@@ -346,10 +346,10 @@ def build_notes(cls_slug: str, slug: str, cls_zh: str, dungeon: str, out_name: s
 ## 技能基础窗口与关键结论依据
 
 ### 技能基础窗口来源（`evidence/spells.md`）
-- TODO：列出速记卡上每个技能的冷却、充能与持续秒数来源。
+- TODO：核对 `spells.md` 输出的基础冷却、充能、持续秒数与天赋改写冷却（不要仅靠最短施放间隔反推冷却）。
 
 ### 关键结论（窗口内外对比）
-- TODO：按波次/机制记录 `compare.md`、`uses.md`、`debuffs.md` 与保人补查的量化依据。
+- TODO：按波次/机制记录 `compare.md`（注意直击/跳伤已拆分）、`uses.md`、`interrupts.md`、`debuffs.md` 与保人补查的量化依据。
 
 ## 删掉的低样本打法
 

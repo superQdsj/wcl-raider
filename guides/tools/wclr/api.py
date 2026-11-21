@@ -335,7 +335,7 @@ class Client:
                 headers={"Accept": "application/json", "User-Agent": USER_AGENT},
             )
             try:
-                with urllib.request.urlopen(req, timeout=120) as resp:
+                with urllib.request.urlopen(req, timeout=45) as resp:
                     self._record_v1_rate(resp.headers)
                     return json.loads(resp.read().decode("utf-8"))
             except urllib.error.HTTPError as exc:
@@ -352,12 +352,14 @@ class Client:
                     raise WCLError(_explain(str(msg))) from None
                 if exc.code >= 500 and attempt < 3:
                     last_exc = exc
+                    stderr(f"[wcl] v1 HTTP {exc.code}，{2 * (attempt + 1)}s 后第 {attempt + 2}/4 次重试 ({path})")
                     time.sleep(2 * (attempt + 1))
                     continue
                 raise WCLError(f"WCL v1 API 请求失败：HTTP {exc.code} {detail}") from None
             except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
                 last_exc = exc
                 if attempt < 3:
+                    stderr(f"[wcl] v1 连接超时/异常（{getattr(exc, 'reason', exc)}），{2 * (attempt + 1)}s 后第 {attempt + 2}/4 次重试 ({path})")
                     time.sleep(2 * (attempt + 1))
                     continue
                 raise WCLError(f"无法连接 {host}：{getattr(exc, 'reason', exc)}") from None
@@ -379,7 +381,7 @@ class Client:
                 },
             )
             try:
-                with urllib.request.urlopen(req, timeout=120) as resp:
+                with urllib.request.urlopen(req, timeout=45) as resp:
                     payload = json.loads(resp.read().decode("utf-8"))
             except urllib.error.HTTPError as exc:
                 if exc.code == 401 and attempt == 0:
@@ -391,6 +393,7 @@ class Client:
                         "已拉取过的数据会走缓存，不再消耗点数。") from None
                 if exc.code >= 500 and attempt < 3:
                     last_exc = exc
+                    stderr(f"[wcl] v2 HTTP {exc.code}，{2 * (attempt + 1)}s 后第 {attempt + 2}/4 次重试")
                     time.sleep(2 * (attempt + 1))
                     continue
                 detail = exc.read()[:300].decode("utf-8", "replace")
@@ -398,6 +401,7 @@ class Client:
             except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
                 last_exc = exc
                 if attempt < 3:
+                    stderr(f"[wcl] v2 连接超时/异常（{getattr(exc, 'reason', exc)}），{2 * (attempt + 1)}s 后第 {attempt + 2}/4 次重试")
                     time.sleep(2 * (attempt + 1))
                     continue
                 raise WCLError(f"无法连接 {host}：{getattr(exc, 'reason', exc)}") from None

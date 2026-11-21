@@ -17,20 +17,21 @@
 | `icons.py` | 解析 `{{I:技能ID}}`、自动补拉缺失图标并外链到 `guides/icons/` | `build.py` 调用 `inject_icons()`；手动补拉 `python3 guides/tools/icons.py --fetch <ID...>` |
 | `timeline.py` | 共享单轨时间轴与图例样式（禁止在副本目录分叉） | `build.py` 导入 `GOLD_TL_CSS, timeline` |
 | `check.py` | 自动化门禁（离线纯度、对比度、锚点、禁词、时间轴、发布契约） | `python3 guides/tools/check.py <页面.html> --source-dir <源码目录> --published` |
-| `wcl.py` | 选场（`find`）与定向补查事件（`events`） | `python3 guides/tools/wcl.py find <副本> --class <职业> --level 23 --limit 15` |
+| `wcl.py` | 选场（`find`，支持 `惩戒`/`敏锐`/`噬灭`/`武器` 等简称）与定向补查（`events`，支持 `--source`） | `python3 guides/tools/wcl.py find <副本> --class 惩戒 --level 23 --limit 15` |
 
 ### `evidence.py` 输出说明
 
 | 输出 | 内容 |
 | --- | --- |
-| `compare.md` | 本玩家承伤按「当时开着哪些防御技能」分组；还有敌方每次施放后被打到的比例。先看这个 |
-| `uses.md` | 每次防御技能和低频技能的使用情境（波次、前后敌方读条、刚吃的伤害、身上减益、随后消失的减益） |
+| `compare.md` | 本玩家承伤按防御窗口分组（直击与跳伤自动拆分），含玩家最大血量与占血量%，以及敌方每次施放后的命中比例。先看这个 |
+| `uses.md` | 每次防御技能和低频技能的使用情境（已排除同刻由本技能挂上的减益如自律） |
+| `interrupts.md` | 本玩家打断/驱散汇总 + 敌方主要技能读条形态（区分可断读条 vs 无读条瞬发引导） |
 | `team.md` | 全队承伤，按波次 × 敌方技能，含同一时刻几名玩家一起吃（判断分摊或 AOE） |
-| `debuffs.md` | 本玩家身上的减益和可能清掉它的技能 |
-| `segments.md` | 波次时间表 |
-| `spells.md` | 相关技能的 Wowhead 说明 |
+| `debuffs.md` | 本玩家身上的减益和消失前后 0.5 秒内的低频技能（含打断/控制） |
+| `segments.md` | 波次时间表（首领名自动回退）+ 首领战内关键减益相对开打时间（`+Xs`） |
+| `spells.md` | 相关技能的 Wowhead 说明（覆盖 `defensives`/`always` 玩家冷却与天赋改写，以及敌方伤害/非伤害机制） |
 | `talents.json` | 五人的天赋原始数据（有的报告没有记录） |
-| `raw/*.json` | 原始事件；`run<N>_names.json` 是单位和技能 ID 到名字的对照 |
+| `raw/*.json` | 原始事件（含 `interrupts`/`dispels`）；`run<N>_names.json` 是单位和技能 ID 到名字的对照 |
 
 职业配置 `classes/<专精>.json` 写防御技能（施法 ID、增益 ID、兜底持续秒数）和必列低频技能 `always`（打断、控制、保人、位移）。新 DPS 专精照 `rogue.json` / `paladin-ret.json` 写一份。
 

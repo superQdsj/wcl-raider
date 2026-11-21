@@ -202,6 +202,8 @@ def check_page(page: Path, source_dir: Optional[Path], published: bool) -> Tuple
         for _, _, lab in marks:
             if len(lab.strip()) > 8:
                 fails.append(f"Timeline mark label > 8 chars ('{lab}'): risk of edge clipping or overlap.")
+        if marks and (len(marks) < 6 or len(marks) > 14):
+            warns.append(f"Timeline has {len(marks)} marks (typical range 6–14; acceptable if clean representative run without fallback points).")
         for side in (" up", " dn"):
             pts = sorted((float(p) / 100.0 * 884.0, lab) for cls, p, lab in marks if side in cls)
             for (x1, l1), (x2, l2) in zip(pts, pts[1:]):
@@ -252,6 +254,25 @@ def check_page(page: Path, source_dir: Optional[Path], published: bool) -> Tuple
                 warns.append("No .row.must highlighted rows found in body.part.")
             elif must_count > 7:
                 warns.append(f"High number of must-do rows ({must_count}); keep focused around 3–6.")
+            # Warn when a single must-do row highlights >1 primary (.pri) skill chip
+            for blk in re.findall(r'<div class="row(?: step)? must"[^>]*>.*?</div>\s*</div>', body, re.S):
+                pri_n = blk.count("btn-chip pri")
+                if pri_n > 1:
+                    warns.append(f"A must-do row has {pri_n} .btn-chip.pri chips (prefer 1 primary button per must-do row).")
+            # Cross-check comparison bar numbers against evidence/compare.md (>= 3 runs)
+            cmp_p = source_dir / "evidence" / "compare.md"
+            if cmp_p.is_file() and 'class="bars"' in body:
+                cmp_txt = cmp_p.read_text(encoding="utf-8")
+                bar_nums = re.findall(r'<div class="bar"><span[^>]*>([0-9]+(?:\.[0-9]+)?)\s*万', body)
+                for num_s in bar_nums:
+                    pat_val = f"{num_s}万"
+                    matched_rows = [ln for ln in cmp_txt.splitlines() if ln.startswith("|") and pat_val in ln]
+                    if not matched_rows:
+                        warns.append(f"Bar value '{num_s} 万' not found verbatim in evidence/compare.md (verify tick/direct split or NOTES.md).")
+                    else:
+                        max_runs = max((len(re.findall(r"\br[1-5]\b", ln)) for ln in matched_rows), default=0)
+                        if max_runs < 3:
+                            warns.append(f"Bar value '{num_s} 万' appears in only {max_runs}/5 runs in compare.md (< 3 runs).")
 
         if build_p.is_file():
             bt = build_p.read_text(encoding="utf-8")
@@ -266,6 +287,8 @@ def check_page(page: Path, source_dir: Optional[Path], published: bool) -> Tuple
             fails.append(f"Missing {notes_p}")
         else:
             nt = notes_p.read_text(encoding="utf-8")
+            if re.search(r"\bTODO\b", nt):
+                fails.append("NOTES.md still contains leftover TODO placeholders.")
             for kw, label in [
                 (r"重建|build\.py", "样本来源与重建命令"),
                 (r"低样本|删掉", "删掉的低样本打法"),

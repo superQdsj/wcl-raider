@@ -3,8 +3,9 @@
 
 Reads a WCL evidence/talents.json (or legacy talents_raw.json), encodes a chosen
 player's talentTree against the Raidbots spec tree, decodes it back to assert
-0 mismatches / 0 extra nodes, compares talent differences across all players in
-the file, and writes tstring.json.
+0 mismatches / 0 extra nodes, resolves official Chinese talent names via cached
+Wowhead tooltips (so authors NEVER hand-translate talent names), prints cross-run
+diffs in Chinese + English + spellId, and writes tstring.json.
 
 Usage:
   python3 guides/tools/enc.py --in <evidence/talents.json> --out <tstring.json> [--spec 70] [--player r1_名字]
@@ -26,7 +27,6 @@ DEFAULT_TREE = GUIDES / "rogue" / "sources" / "dl" / "talents.json"
 RAIDBOTS_URL = "https://www.raidbots.com/static/data/live/talents.json"
 B64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 
-# Convenience lookup from WCL icon string ("Paladin-Retribution") -> Raidbots (className, specName)
 _WCL_CLASS = {
     "DeathKnight": "Death Knight",
     "DemonHunter": "Demon Hunter",
@@ -73,7 +73,6 @@ def infer_spec_id(entry: Dict[str, Any], specs: List[Dict[str, Any]]) -> Optiona
             if (s.get("className", "").replace(" ", "").lower() == cls_name.replace(" ", "").lower()
                     and s.get("specName", "").replace(" ", "").lower() == spec_raw.replace(" ", "").lower()):
                 return int(s["specId"])
-    # Fallback: match by nodeID overlap against specNodes
     tree = extract_tree(entry) or []
     ids = {t["nodeID"] for t in tree}
     if not ids:
@@ -183,13 +182,35 @@ def verify_roundtrip(st: str, w: Dict[int, Dict[str, Any]], spec: Dict[str, Any]
         raise AssertionError(f"Round-trip verification failed: mismatch={bad}, extra={extra}")
 
 
-def talent_names(w: Dict[int, Dict[str, Any]], nodes: Dict[int, Dict[str, Any]]) -> List[str]:
-    names: List[str] = []
+def talent_entries(w: Dict[int, Dict[str, Any]], nodes: Dict[int, Dict[str, Any]]) -> Dict[str, Optional[int]]:
+    """Return {en_name: spellId} for all selected nodes."""
+    out: Dict[str, Optional[int]] = {}
     for nid, t in w.items():
         n = nodes[nid]
-        e = [x for x in n.get("entries", []) if x.get("id") == t["id"]]
-        names.append(e[0]["name"] if e and e[0].get("name") else n["name"])
-    return sorted(names)
+        e = next((x for x in n.get("entries", []) if x.get("id") == t["id"]), None)
+        en_name = (e.get("name") if e and e.get("name") else n["name"])
+        sid = e.get("spellId") if e else n.get("spellId")
+        out[en_name] = int(sid) if sid else None
+    return out
+
+
+def resolve_zh_names(spell_ids: List[int]) -> Dict[int, str]:
+    """Fetch official Chinese client names via cached wclr.wowhead.spells."""
+    clean = sorted({int(s) for s in spell_ids if s and int(s) > 1})
+    if not clean:
+        return {}
+    if str(TOOLS) not in sys.path:
+        sys.path.insert(0, str(TOOLS))
+    from wclr.wowhead import spells as wowhead_spells
+    info = wowhead_spells(clean, lang="zh")
+    return {gid: v["name"] for gid, v in info.items() if v.get("name")}
+
+
+def fmt_talent(en_name: str, sid: Optional[int], zh_map: Dict[int, str]) -> str:
+    zh = zh_map.get(sid) if sid else None
+    if zh:
+        return f"{zh}({en_name}/{sid})"
+    return f"{en_name}({sid})" if sid else en_name
 
 
 def main() -> None:
@@ -199,6 +220,7 @@ def main() -> None:
     ap.add_argument("--spec", type=int, help="Raidbots specId (auto-inferred from WCL icon if omitted)")
     ap.add_argument("--player", help="Player key in talents.json (defaults to first player with talentTree)")
     ap.add_argument("--tree", default=str(DEFAULT_TREE), help=f"Raidbots talents.json path (default: {DEFAULT_TREE})")
+    ap.add_argument("--no-zh", action="store_true", help="Skip Wowhead Chinese name resolution (pure offline)")
     ap.add_argument("--list-specs", action="store_true", help="List all specIds in Raidbots talents.json")
     ap.add_argument("--refresh-tree", action="store_true", help="Download latest Raidbots talents.json")
     args = ap.parse_args()
@@ -239,36 +261,63 @@ def main() -> None:
         raise SystemExit(f"specId {spec_id} not found in {tree_path}")
     nodes = build_nodes(spec)
 
-    # Encode and verify all available players to show cross-run consistency
-    results: Dict[str, Tuple[str, List[str]]] = {}
+    results: Dict[str, Tuple[str, Dict[str, Optional[int]]]] = {}
     for k, tr in available:
         st_k, w_k = encode(tr, spec, nodes)
         verify_roundtrip(st_k, w_k, spec, nodes)
-        results[k] = (st_k, talent_names(w_k, nodes))
+        results[k] = (st_k, talent_entries(w_k, nodes))
 
-    st, names = results[who]
+    st, base_entries = results[who]
+    # Resolve Chinese names for all diff talents (+ selected talents when writing tstring.json)
+    diff_sids = set()
+    for k, (st_k, ent_k) in results.items():
+        if k == who or st_k == st:
+            continue
+        for en_n in set(base_entries) ^ set(ent_k):
+            sid = base_entries.get(en_n) or ent_k.get(en_n)
+            if sid:
+                diff_sids.add(sid)
+    zh_map: Dict[int, str] = {}
+    if not args.no_zh:
+        want_ids = list(diff_sids | ({s for s in base_entries.values() if s} if args.out else set()))
+        zh_map = resolve_zh_names(want_ids)
+
     print(f"spec: {spec_id} ({spec.get('className')} - {spec.get('specName')})")
-    print(f"selected: {who} ({len(names)} nodes, round-trip 0 mismatch / 0 extra)")
+    print(f"selected: {who} ({len(base_entries)} nodes, round-trip 0 mismatch / 0 extra)")
     print(f"string: {st}")
 
-    base_set = set(names)
-    for k, (st_k, nm_k) in results.items():
+    base_set = set(base_entries)
+    diffs_out: Dict[str, Any] = {}
+    for k, (st_k, ent_k) in results.items():
         if k == who:
             continue
         if st_k == st:
             print(f"  vs {k}: IDENTICAL")
+            diffs_out[k] = "IDENTICAL"
         else:
-            only_base = sorted(base_set - set(nm_k))
-            only_other = sorted(set(nm_k) - base_set)
-            print(f"  vs {k}: -{only_base}  +{only_other}")
+            only_base = sorted(base_set - set(ent_k))
+            only_other = sorted(set(ent_k) - base_set)
+            b_fmt = [fmt_talent(n, base_entries.get(n), zh_map) for n in only_base]
+            o_fmt = [fmt_talent(n, ent_k.get(n), zh_map) for n in only_other]
+            print(f"  vs {k}: -{b_fmt}  +{o_fmt}")
+            diffs_out[k] = {"removed": b_fmt, "added": o_fmt}
 
     if args.out:
         out_path = Path(args.out)
         out_path.parent.mkdir(parents=True, exist_ok=True)
-        out_path.write_text(
-            json.dumps({"player": who, "specId": spec_id, "string": st, "talents": names}, ensure_ascii=False, indent=1) + "\n",
-            encoding="utf-8",
-        )
+        tal_zh = {
+            en_n: {"zh": zh_map.get(sid), "spellId": sid}
+            for en_n, sid in sorted(base_entries.items())
+        }
+        payload = {
+            "player": who,
+            "specId": spec_id,
+            "string": st,
+            "talents": sorted(base_entries),
+            "talents_zh": tal_zh,
+            "diffs": diffs_out,
+        }
+        out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print(f"wrote: {out_path}")
 
 

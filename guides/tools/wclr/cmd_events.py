@@ -136,17 +136,27 @@ def cmd_events(run: Run, args: argparse.Namespace) -> str:
             conds.append(f'source.name = "{n}"')
         else:
             conds.append(f'(source.name = "{n}" or target.name = "{n}")')
+    if getattr(args, "source", None):
+        conds.append(f'source.name = "{esc(args.source)}"')
     if args.target:
         conds.append(f'target.name = "{esc(args.target)}"')
+    post_ab_ids = None
     if args.ability:
         ids = _ability_ids(run, args.ability)
-        conds.append("ability.id in (%s)" % ", ".join(str(i) for i in ids))
+        if kind in ("interrupts", "dispels"):
+            # interrupts/dispels 中被断/被驱技能在 extraAbilityGameID，拉取后再本地同时匹配两者
+            post_ab_ids = set(ids)
+        else:
+            conds.append("ability.id in (%s)" % ", ".join(str(i) for i in ids))
     if args.filter:
         conds.append(f"({args.filter})")
     expr = " and ".join(conds)
     want_hp = kind in ("damage-taken", "all")
+    fetch_limit = max(1000, args.limit) if post_ab_ids else max(1, args.limit)
     evs, truncated = data.events(run, data_type=data_type, start=start, end=end, hostility=hostility, expr=expr,
-                                 limit=max(1, args.limit), include_resources=want_hp)
+                                 limit=fetch_limit, include_resources=want_hp)
+    if post_ab_ids is not None:
+        evs = [e for e in evs if e.get("abilityGameID") in post_ab_ids or e.get("extraAbilityGameID") in post_ab_ids]
     direction = "（玩家双向过滤：施放或承受）" if args.player and kind == "all" else ""
     lines = [f"# 事件 {kind}{direction} {run.t(start, True)}–{run.t(end, True)}" + (f" 过滤：{expr}" if expr else "") +
              f" — {run.header()}"]
