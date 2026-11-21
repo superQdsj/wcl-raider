@@ -1,0 +1,431 @@
+{
+ "player": "r1_Âra",
+ "specId": 70,
+ "hero_tree": {
+  "en": "Herald of the Sun",
+  "zh": "烈日先驱"
+ },
+ "string": "CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAwoZbbmZWGzYGAAAAAAzUmlZYmx2Y2GmZbGjxYYGLsBgZZ2mZmtGAAAYBwAgxMbAzYmZDYmZYMjBD",
+ "talents": [
+  "Art of War",
+  "Auras of the Resolute",
+  "Aurora",
+  "Avenging Wrath",
+  "Blade of Justice",
+  "Blade of Vengeance",
+  "Blades of Light",
+  "Blessed Champion",
+  "Blessing of An'she",
+  "Blessing of Dusk",
+  "Blessing of Freedom",
+  "Blessing of Protection",
+  "Blessing of Sacrifice",
+  "Blinding Light",
+  "Born in Sunlight",
+  "Burn to Ash",
+  "Burning Crusade",
+  "Cavalier",
+  "Cleanse Toxins",
+  "Crusade",
+  "Crusading Strikes",
+  "Dawnlight",
+  "Divine Purpose",
+  "Divine Resonance",
+  "Divine Steed",
+  "Divine Storm",
+  "Divine Toll",
+  "Divine Wrath",
+  "Empyrean Legacy",
+  "Endless Gleam",
+  "Eternal Flame",
+  "Execution Sentence",
+  "Expurgation",
+  "Final Verdict",
+  "Fist of Justice",
+  "Gleaming Rays",
+  "Greater Judgment",
+  "Guided Prayer",
+  "Hammer of Wrath",
+  "Healing Hands",
+  "Herald of the Sun",
+  "Highlord's Wrath",
+  "Holy Aegis",
+  "Holy Blade",
+  "Holy Flames",
+  "Improved Judgment",
+  "Inspired Guard",
+  "Jurisdiction",
+  "Lay on Hands",
+  "Light Within",
+  "Light of Justice",
+  "Light's Revocation",
+  "Lightbearer",
+  "Luminosity",
+  "Obduracy",
+  "Punishment",
+  "Rebuke",
+  "Righteous Protection",
+  "Rush of Light",
+  "Sacrifice of the Just",
+  "Sanctified Plates",
+  "Seal of Might",
+  "Second Sunrise",
+  "Seething Flames",
+  "Shield of Vengeance",
+  "Solar Grace",
+  "Sun Sear",
+  "Sun's Avatar",
+  "Tempest of the Lightbringer",
+  "Unbound Freedom",
+  "Unbreakable Spirit",
+  "Vengeful Wrath",
+  "Wake of Ashes",
+  "Walk Into Light",
+  "Will of the Dawn",
+  "Zealot's Fervor"
+ ],
+ "talents_zh": {
+  "Art of War": {
+   "zh": "战争艺术",
+   "spellId": 406064
+  },
+  "Auras of the Resolute": {
+   "zh": "坚定光环",
+   "spellId": 385633
+  },
+  "Aurora": {
+   "zh": "极光",
+   "spellId": 439760
+  },
+  "Avenging Wrath": {
+   "zh": "复仇之怒",
+   "spellId": 31884
+  },
+  "Blade of Justice": {
+   "zh": "公正之剑",
+   "spellId": 184575
+  },
+  "Blade of Vengeance": {
+   "zh": "复仇之剑",
+   "spellId": 403826
+  },
+  "Blades of Light": {
+   "zh": "圣光之剑",
+   "spellId": 403664
+  },
+  "Blessed Champion": {
+   "zh": "受祝福的勇士",
+   "spellId": 403010
+  },
+  "Blessing of An'she": {
+   "zh": "安瑟的祝福",
+   "spellId": 445200
+  },
+  "Blessing of Dusk": {
+   "zh": "黄昏祝福",
+   "spellId": 1241945
+  },
+  "Blessing of Freedom": {
+   "zh": "自由祝福",
+   "spellId": 1044
+  },
+  "Blessing of Protection": {
+   "zh": "保护祝福",
+   "spellId": 1022
+  },
+  "Blessing of Sacrifice": {
+   "zh": "牺牲祝福",
+   "spellId": 6940
+  },
+  "Blinding Light": {
+   "zh": "盲目之光",
+   "spellId": 115750
+  },
+  "Born in Sunlight": {
+   "zh": "诞于日光",
+   "spellId": 1263920
+  },
+  "Burn to Ash": {
+   "zh": "焚烧成灰",
+   "spellId": 446663
+  },
+  "Burning Crusade": {
+   "zh": "燃烧的远征",
+   "spellId": 403026
+  },
+  "Cavalier": {
+   "zh": "骑手",
+   "spellId": 230332
+  },
+  "Cleanse Toxins": {
+   "zh": "清毒术",
+   "spellId": 213644
+  },
+  "Crusade": {
+   "zh": "征伐",
+   "spellId": 1253598
+  },
+  "Crusading Strikes": {
+   "zh": "远征打击",
+   "spellId": 404542
+  },
+  "Dawnlight": {
+   "zh": "晨光",
+   "spellId": 431377
+  },
+  "Divine Purpose": {
+   "zh": "神圣意志",
+   "spellId": 408459
+  },
+  "Divine Resonance": {
+   "zh": "圣洁共鸣",
+   "spellId": 384027
+  },
+  "Divine Steed": {
+   "zh": "神圣马驹",
+   "spellId": 190784
+  },
+  "Divine Storm": {
+   "zh": "神圣风暴",
+   "spellId": 53385
+  },
+  "Divine Toll": {
+   "zh": "圣洁鸣钟",
+   "spellId": 375576
+  },
+  "Divine Wrath": {
+   "zh": "神圣愤怒",
+   "spellId": 406872
+  },
+  "Empyrean Legacy": {
+   "zh": "苍穹之遗",
+   "spellId": 387170
+  },
+  "Endless Gleam": {
+   "zh": "无尽辉光",
+   "spellId": 1263787
+  },
+  "Eternal Flame": {
+   "zh": "永恒之火",
+   "spellId": 156322
+  },
+  "Execution Sentence": {
+   "zh": "处决宣判",
+   "spellId": 343527
+  },
+  "Expurgation": {
+   "zh": "异端逐除",
+   "spellId": 383344
+  },
+  "Final Verdict": {
+   "zh": "最终审判",
+   "spellId": 383328
+  },
+  "Fist of Justice": {
+   "zh": "制裁之拳",
+   "spellId": 234299
+  },
+  "Gleaming Rays": {
+   "zh": "辉耀日光",
+   "spellId": 431480
+  },
+  "Greater Judgment": {
+   "zh": "强效审判",
+   "spellId": 231663
+  },
+  "Guided Prayer": {
+   "zh": "向善祷言",
+   "spellId": 404357
+  },
+  "Hammer of Wrath": {
+   "zh": "愤怒之锤",
+   "spellId": 1241288
+  },
+  "Healing Hands": {
+   "zh": "治疗之手",
+   "spellId": 326734
+  },
+  "Herald of the Sun": {
+   "zh": "烈日先驱",
+   "spellId": null
+  },
+  "Highlord's Wrath": {
+   "zh": "大领主之怒",
+   "spellId": 404512
+  },
+  "Holy Aegis": {
+   "zh": "神圣护佑",
+   "spellId": 385515
+  },
+  "Holy Blade": {
+   "zh": "神圣之刃",
+   "spellId": 383342
+  },
+  "Holy Flames": {
+   "zh": "神圣烈焰",
+   "spellId": 406545
+  },
+  "Improved Judgment": {
+   "zh": "强化审判",
+   "spellId": 405461
+  },
+  "Inspired Guard": {
+   "zh": "奋发卫士",
+   "spellId": 469439
+  },
+  "Jurisdiction": {
+   "zh": "神圣制裁",
+   "spellId": 402971
+  },
+  "Lay on Hands": {
+   "zh": "圣疗术",
+   "spellId": 633
+  },
+  "Light Within": {
+   "zh": "内在之光",
+   "spellId": 1261159
+  },
+  "Light of Justice": {
+   "zh": "圣光的正义",
+   "spellId": 404436
+  },
+  "Light's Revocation": {
+   "zh": "圣光决断",
+   "spellId": 146956
+  },
+  "Lightbearer": {
+   "zh": "圣光使者",
+   "spellId": 469416
+  },
+  "Luminosity": {
+   "zh": "明灿",
+   "spellId": 431402
+  },
+  "Obduracy": {
+   "zh": "坚决",
+   "spellId": 385427
+  },
+  "Punishment": {
+   "zh": "惩罚",
+   "spellId": 403530
+  },
+  "Rebuke": {
+   "zh": "责难",
+   "spellId": 96231
+  },
+  "Righteous Protection": {
+   "zh": "正义保护",
+   "spellId": 469321
+  },
+  "Rush of Light": {
+   "zh": "急促圣光",
+   "spellId": 407067
+  },
+  "Sacrifice of the Just": {
+   "zh": "正义牺牲",
+   "spellId": 384820
+  },
+  "Sanctified Plates": {
+   "zh": "圣化护甲",
+   "spellId": 402964
+  },
+  "Seal of Might": {
+   "zh": "力量圣印",
+   "spellId": 385450
+  },
+  "Second Sunrise": {
+   "zh": "旭日再升",
+   "spellId": 431474
+  },
+  "Seething Flames": {
+   "zh": "沸腾烈焰",
+   "spellId": 405355
+  },
+  "Shield of Vengeance": {
+   "zh": "复仇之盾",
+   "spellId": 1261562
+  },
+  "Solar Grace": {
+   "zh": "灼阳恩典",
+   "spellId": 431404
+  },
+  "Sun Sear": {
+   "zh": "日灼",
+   "spellId": 431413
+  },
+  "Sun's Avatar": {
+   "zh": "曜日化身",
+   "spellId": 431425
+  },
+  "Tempest of the Lightbringer": {
+   "zh": "光明使者的风暴",
+   "spellId": 383396
+  },
+  "Unbound Freedom": {
+   "zh": "无拘自由",
+   "spellId": 305394
+  },
+  "Unbreakable Spirit": {
+   "zh": "不败之魂",
+   "spellId": 114154
+  },
+  "Vengeful Wrath": {
+   "zh": "愤怒复仇",
+   "spellId": 1241958
+  },
+  "Wake of Ashes": {
+   "zh": "灰烬觉醒",
+   "spellId": 255937
+  },
+  "Walk Into Light": {
+   "zh": "向光而行",
+   "spellId": 1263782
+  },
+  "Will of the Dawn": {
+   "zh": "曙光意志",
+   "spellId": 431406
+  },
+  "Zealot's Fervor": {
+   "zh": "狂热者的赤诚",
+   "spellId": 403509
+  }
+ },
+ "diffs": {
+  "r2_左边忧伤": {
+   "removed": [
+    "治疗之手(Healing Hands/326734)",
+    "惩罚(Punishment/403530)",
+    "正义保护(Righteous Protection/469321)"
+   ],
+   "added": [
+    "残光(Afterimage/385414)",
+    "强化保护祝福(Improved Blessing of Protection/384909)",
+    "带头冲锋(Lead the Charge/469780)"
+   ]
+  },
+  "r3_哦毕爷": {
+   "removed": [
+    "圣光的正义(Light of Justice/404436)"
+   ],
+   "added": [
+    "迅捷审判(Swift Justice/383228)"
+   ]
+  },
+  "r4_Khumi": {
+   "removed": [
+    "惩罚(Punishment/403530)"
+   ],
+   "added": [
+    "强化保护祝福(Improved Blessing of Protection/384909)"
+   ]
+  },
+  "r5_Poznasme": {
+   "removed": [
+    "圣光决断(Light's Revocation/146956)"
+   ],
+   "added": [
+    "强化保护祝福(Improved Blessing of Protection/384909)"
+   ]
+  }
+ }
+}

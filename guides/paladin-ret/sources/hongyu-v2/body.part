@@ -1,0 +1,506 @@
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">RUBY LIFE POOLS · MYTHIC+ · RETRIBUTION PALADIN</div>
+    <h1><span class="cls">惩戒骑</span><span class="dot">·</span>红玉新生法池 应对手册</h1>
+    <p class="lede">红玉新生法池的压力集中在多段全队群伤与高压点名：开场、火焰区、柯姬雅地狱烈火以及递增易伤波次，圣佑术约 1 分钟一次按压力分段交；圣盾术优先留给雷暴区点到你的闪电涌流。辅助位有两件事每把都要做：梅莉杜莎战给坦克交自由祝福清掉冰寒利爪层数，基拉卡战把牺牲祝福给中了烈焰喷吐的队友。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+23 限时惩戒（国 / 欧 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>烈日先驱</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap">
+    <div class="nav-scroll">
+      <a href="#prep" class="on">速记</a>
+      <a href="#timeline">时间轴</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#s1">开场</a>
+      <a href="#s2"><span class="n">①</span>梅莉杜莎</a>
+      <a href="#s3">火焰区</a>
+      <a href="#s4"><span class="n">②</span>柯姬雅</a>
+      <a href="#s5">雷暴区</a>
+      <a href="#s6"><span class="n">③</span>基拉卡</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#talent">天赋</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <p class="sub">四张手牌、一条硬限制，外加五个必断读条。</p>
+
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="{{I:642}}" alt=""><div><div class="nm">圣盾术</div><div class="cd">3.5 分钟 · 持续 8 秒</div></div></div>
+      <p>免疫一切伤害。主要留给雷暴区点到你的闪电涌流（7 秒引导，8 秒圣盾盖得住）。开场用掉没关系，只要距雷暴区还有 3.5 分钟以上。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:403876}}" alt=""><div><div class="nm">圣佑术</div><div class="cd">约 1 分钟 · 持续 8 秒（附复仇之盾）</div></div></div>
+      <p>受到伤害 −20%，外加复仇之盾吸收盾。全本主力减伤，转好就交给高压群伤或点名：采掘冲击、钢铁弹幕、冰霜过载、地狱烈火、熔火血脉、闪电涌流、烈焰喷吐。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:6940}}" alt=""><div><div class="nm">牺牲祝福</div><div class="cd">1 分钟 · 持续 12 秒</div></div></div>
+      <p>队友受到的伤害 −30%，这部分转给你承担。给中了活动炸弹或烈焰喷吐、正在掉血的队友。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:1044}}" alt=""><div><div class="nm">自由祝福</div><div class="cd">25 秒冷却 · 持续 8 秒</div></div></div>
+      <p>免疫移动限制。梅莉杜莎战给坦克，清掉叠起来的冰寒利爪并在 8 秒内不再叠层（配合无拘自由同步清掉自己身上的层数）。</p>
+    </article>
+  </div>
+
+  <div class="limit">
+    <div class="h">自律硬限制</div>
+    <b>开过圣盾术后 30 秒带自律，保护祝福和圣疗术都交不到你自己身上</b>。雷暴区用圣盾顶掉闪电涌流后，30 秒内再被点到别指望圣疗术自救，只能靠圣佑术和治疗（圣光决断让圣盾术本身在自律期间仍能开）。
+  </div>
+
+  <div class="kicks-box">
+    <div class="kicks-head">
+      <img class="ic" src="{{I:96231}}" alt="责难">
+      <h3>全本关键打断</h3>
+      <span>点击跳到对应战斗</span>
+    </div>
+    <div class="kicks">
+      <a class="kick" href="#k-bolt">
+        <div class="meta"><span class="idx">01</span><span>闪霜织寒者 · 开场</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">寒冰箭</div>
+        <div class="why">单体冰霜重击，织寒者读得很勤，轮流断。</div>
+      </a>
+      <a class="kick" href="#k-bulwark">
+        <div class="meta"><span class="idx">02</span><span>闪霜织寒者 · 开场</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">寒冰壁垒</div>
+        <div class="why">可断引导技，一出来立刻断。放成了，同伴每 3 秒叠一层吸收盾，还免疫控制。</div>
+      </a>
+      <a class="kick" href="#k-shard">
+        <div class="meta"><span class="idx">03</span><span>梅莉杜莎·寒妆 · 首领一</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">冷冽飞弹</div>
+        <div class="why">打坦克的高额单体物理重击，近战排好顺序轮流断。</div>
+      </a>
+      <a class="kick" href="#k-ember">
+        <div class="meta"><span class="idx">04</span><span>拜荒织烬者 · 火焰区</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">焰烬之箭</div>
+        <div class="why">火焰区高频单体读条，漏断单发伤害极高，全程排进打断轮换。</div>
+      </a>
+      <a class="kick" href="#k-blast">
+        <div class="meta"><span class="idx">05</span><span>炎缚火焰风暴 · 柯姬雅</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">烈焰狂轰</div>
+        <div class="why">全队火焰伤害，和同一只风暴的地狱烈火叠在一起，治疗压力很大。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>一场里关键大招交在哪</h2>
+  <p class="sub">一场 +23 限时单场实录（展示真实冷却节奏，非每波强制照搬；具体取舍见下方路线）。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>圣盾术</span>
+      <span><i class="e"></i>圣佑术</span>
+      <span><i class="v"></i>自由 / 牺牲祝福</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。</p>
+
+  <div class="route">
+
+    <!-- 开场 -->
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 梅莉杜莎</h3><span class="kind">TRASH · 闪霜织寒者 · 深石塑地者 · 缚地守护者 · 原始主宰 · 亵渎者德拉加尔</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>圣佑术 63 秒转好：原始主宰的<b>采掘冲击</b>与德拉加尔的<b>钢铁弹幕</b>若相隔 ≥ 1 分钟可各交一次，间隔不足时优先留给压力更大或叠着地缚印记的那一波（没转好靠治疗）。圣盾术可在这里备选使用，3.5 分钟后（雷暴区之前）能转好。</div>
+        <div class="rows">
+          <div class="row" id="k-bolt">
+            <div class="mech"><img class="ic" src="{{I:371984}}" alt=""><div><div class="n">寒冰箭</div><div class="s">闪霜织寒者 · 单体读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:853}}" alt="">制裁之锤</span></div>
+            <div class="why">责难 15 秒一次，和队友轮流断；责难没好就用制裁之锤昏迷 6 秒。</div>
+          </div>
+          <div class="row" id="k-bulwark">
+            <div class="mech"><img class="ic" src="{{I:372743}}" alt=""><div><div class="n">寒冰壁垒</div><div class="s">闪霜织寒者 · 可断引导</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span></div>
+            <div class="why"><b>一开始引导就断</b>，别等。引导期间每 3 秒给同伴叠一层吸收盾，叠上后同伴免疫控制。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1305201}}" alt=""><div><div class="n">采掘冲击</div><div class="s">原始主宰 · 读条 · 60 码全队 + 8 秒自然持续（清毒术驱不了）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span></div>
+            <div class="why">直击接近半管血，后面跟 8 秒自然持续（清毒术驱不了）。<b>读条末预开或落地后立刻开圣佑术</b>减免直击与持续；圣盾术可备选免疫或清掉后续持续伤害。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:372047}}" alt=""><div><div class="n">钢铁弹幕</div><div class="s">亵渎者德拉加尔 · 3 秒连击 · 每下烈焰新星炸全队</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
+            <div class="why">每下给 60 码内全队一个烈焰新星并留熔铁碎片。连击开始或叠到地缚印记掉血时开圣佑术稳住中后段血线。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1307205}}" alt=""><div><div class="n">地缚印记</div><div class="s">缚地守护者 · 瞬发点名 · 8 秒自然持续（清毒术驱不了）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">交给治疗</span></div>
+            <div class="why">瞬发断不了且清毒术驱不了；一次点 1 人、一波点很多次，持续伤害靠治疗刷。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:372735}}" alt=""><div><div class="n">地壳震击</div><div class="s">深石塑地者 · 打坦克叠层（+25% 易伤）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">配合群伤快清</span></div>
+            <div class="why">塑地者数量多，给坦克叠高易伤，配合队友尽快压掉这批怪减轻坦克压力。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">建议：圣佑术按冷却优先交采掘冲击或钢铁弹幕；圣盾术可备选，雷暴区前能转好</span></div>
+          <a class="next" href="#s2">下一段：梅莉杜莎 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 1 梅莉杜莎 -->
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>梅莉杜莎·寒妆</h3><span class="kind">BOSS 1</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span><b>唤醒雏龙</b>接<b>冰霜过载</b>，约 70–83 秒一轮。自由祝福 25 秒冷却，盯紧坦克身上的冰寒利爪层数及时清层；圣佑术 63 秒转好，每次冰霜过载都能在易伤叠起后的中后段交上。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1305234}}" alt=""><div><div class="n"><span class="badge-must">必做</span>冰寒利爪</div><div class="s">注能龙崽打坦克叠层 · 20 层冻结昏迷 5 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:1044}}" alt="">自由祝福</span><span class="tgt">给坦克</span></div>
+            <div class="why">唤醒雏龙与冰霜过载前后，坦克叠到约 7–15 层时<b>交自由祝福直接清层</b>，8 秒内不再叠层（配合无拘自由同步清自己层数）。注意 8 秒结束后新龙崽仍可能快速叠满，后续靠坦克自保或等 25 秒再交。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:373688}}" alt=""><div><div class="n">冰霜过载</div><div class="s">首领裹进寒冰壁垒 · 持续十余秒 · 每 1.5 秒全队冰霜且易伤 +5%</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
+            <div class="why">壁垒越久越痛，开头就交 8 秒圣佑会漏掉最痛后段。<b>等过载开始数秒、易伤叠起后再开圣佑术</b>，同时全力破盾。</div>
+          </div>
+          <div class="row" id="k-shard">
+            <div class="mech"><img class="ic" src="{{I:372808}}" alt=""><div><div class="n">冷冽飞弹</div><div class="s">首领读条 · 打坦克的物理重击</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span></div>
+            <div class="why">首领读得勤，单体物理重击威胁大，近战排好顺序轮流断。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:397077}}" alt=""><div><div class="n">霜风</div><div class="s">点一名玩家脚下 · 把人往风暴之眼拉 · 7 秒后爆炸击退</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">逆拉力往外走</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:190784}}" alt="">神圣马驹</span></div>
+            <div class="why">站进风暴之眼受到的冰霜伤害 +100%。逆着拉力往外走，拉不动就开马驹。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:396044}}" alt=""><div><div class="n">冰雹爆裂</div><div class="s">读条 · 全队冰霜伤害并射出冰雹炸弹</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">别踩地上的冰雹炸弹</span></div>
+            <div class="why">直击接近半管血。炸弹踩到再吃一大口自然伤害、被击飞，还急速 −50% 持续 20 秒。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:1044}}" alt="">建议：坦克叠高层冰寒利爪就交自由祝福 · 冰霜过载中后段开圣佑术</span></div>
+          <a class="next" href="#s3">下一段：火焰区 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 火焰区 -->
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>火焰区（两波）</h3><span class="kind">TRASH · 拜荒织烬者 · 炎缚毁灭者 · 灼烧元素 · 灰烬先知烈焰鞭笞者 · 烈焰之咽</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>炎缚毁灭者的<b>地狱烈火</b>是 60 码全队直击加持续伤害，两波各有好几次。圣佑术约 1 分钟，<b>转好就压在下一次地狱烈火读条末或落地时</b>；没好的那次让治疗顶，牺牲祝福补给掉血最多的队友。圣盾术只要距雷暴区还有 3.5 分钟以上就可以交。</div>
+        <div class="rows">
+          <div class="row must" id="k-ember">
+            <div class="mech"><img class="ic" src="{{I:384194}}" alt=""><div><div class="n"><span class="badge-must">必做</span>焰烬之箭</div><div class="s">拜荒织烬者 · 单体读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:853}}" alt="">制裁之锤</span></div>
+            <div class="why">漏断单体伤害极高，织烬者一直读。责难 15 秒一次排进打断轮换，空档用制裁之锤或盲目之光停它。</div>
+          </div>
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:373692}}" alt=""><div><div class="n"><span class="badge-must">必做</span>地狱烈火</div><div class="s">炎缚毁灭者 · 约 3.5 秒读条 · 60 码全队直击 + 5 秒持续</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
+            <div class="why">打断不了。<b>读条快结束时开圣佑术</b>（或落地后立刻补开），复仇之盾吃直击，减伤盖住后面 5 秒持续伤害（别在起读就按，以免漏掉尾跳）。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:373693}}" alt=""><div><div class="n">活动炸弹</div><div class="s">拜荒织烬者 · 魔法 · 6 秒火焰持续，结束时 6 码爆炸击飞</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给中炸弹的队友</span></div>
+            <div class="why">对队友你驱不了魔法，靠治疗驱散或交牺牲分担（同时吃地狱烈火和炸弹时优先给）。自己中了离开人群再爆，危急时圣盾术也能自清。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:392570}}" alt=""><div><div class="n">熔火血脉</div><div class="s">烈焰之咽（第一波）· 半血以下持续二十余秒 · 每 3 秒全队火焰且 +15%</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
+            <div class="why">越拖越疼：爆发尽早压血，<b>8 秒圣佑术留到中后段高层易伤时再交</b>。它的烈焰吐息是对着一人的锥形，别站那个人身后。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1307372}}" alt=""><div><div class="n">炽烈灭亡</div><div class="s">灼烧元素死亡时 · 地面高额火焰池</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">远离死怪脚下</span></div>
+            <div class="why">这波灼烧元素数量极多，死后会留下火焰池，踩进去掉血很快。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:373972}}" alt=""><div><div class="n">荣耀烈焰</div><div class="s">灰烬先知烈焰鞭笞者死亡时 · 免疫控制 · 15 秒内每 3 秒射余烬</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">离开 5 码，躲余烬</span></div>
+            <div class="why">死亡时连续射出高额余烬，拉开并躲开落点；活着时注意避开其对坦克的燃焰弹幕。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1305955}}" alt=""><div><div class="n">火热冲击</div><div class="s">炎缚毁灭者 · 读条 · 打坦克</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span></div>
+            <div class="why">第二顺位，焰烬之箭断完责难还有就协作断这个。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">建议：圣佑术每次转好交地狱烈火；牺牲祝福给中炸弹掉血的队友；圣盾术交前先算雷暴区</span></div>
+          <a class="next" href="#s4">下一段：柯姬雅 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 2 柯姬雅 -->
+    <article class="stop boss" id="s4">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>柯姬雅·焰蹄</h3><span class="kind">BOSS 2</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>每次<b>缚焰仪式</b>后约 3 秒风暴就开始读<b>地狱烈火</b>，两次一组（相隔约 15 秒）、约每 40 秒一组。圣佑术 63 秒转好，<b>转好就交在下一组地狱烈火上</b>（没转好的那组靠治疗与自保）。这里用圣盾术要算好：距雷暴区闪电涌流不足 3.5 分钟就别交。</div>
+        <div class="rows">
+          <div class="row" id="k-blast">
+            <div class="mech"><img class="ic" src="{{I:373017}}" alt=""><div><div class="n">烈焰狂轰</div><div class="s">炎缚火焰风暴 · 读条 · 全队火焰伤害</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span></div>
+            <div class="why">能断，风暴的地狱烈火断不了，所以狂轰一定要断掉，别让两份全队伤害叠在一起。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:384823}}" alt=""><div><div class="n">地狱烈火</div><div class="s">炎缚火焰风暴 · 读条 · 全队直击 + 8 秒持续，可叠加</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
+            <div class="why">直击三成多血，8 秒持续还能叠层。<b>读条末预开或落地后立刻开圣佑术</b>，稳住后续叠层跳伤。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:372863}}" alt=""><div><div class="n">缚焰仪式</div><div class="s">首领满能量 · 点名约 5 秒后 12 码爆炸并召出火焰风暴</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">被点就离开人群 12 码</span></div>
+            <div class="why">约每 40 秒一次。打在身上能掉六成血，点名后立刻带离队友，落地约 3 秒后风暴就会读地狱烈火。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:372107}}" alt=""><div><div class="n">熔火巨石</div><div class="s">首领读条 · 巨石向前滚 40 码后爆炸，留下焦灼之土</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">绕开路径与 12 码落点</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:190784}}" alt="">神圣马驹</span></div>
+            <div class="why">约每 20 秒一次。别站首领正前方，碰到巨石会被击退，走不开时可开马驹拉距离。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:373087}}" alt=""><div><div class="n">燃尽</div><div class="s">火焰风暴死亡时 · 20 码爆炸 + 焦灼之土</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">风暴快死时拉开 20 码</span></div>
+            <div class="why">20 码内爆炸伤害极高并留焦灼之土，近战看到风暴血量见底就提前后撤。</div>
+          </div>
+        </div>
+        <div class="subhead">地狱烈火每一跳持续伤害吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">15.1 万</span></div></div>
+          <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="mid" style="width:71%">10.7 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">建议：圣佑术每次转好交地狱烈火；烈焰狂轰必断；圣盾术留给雷暴区</span></div>
+          <a class="next" href="#s5">下一段：雷暴区 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 雷暴区 -->
+    <article class="stop trash" id="s5">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>雷暴区</h3><span class="kind">TRASH · 暴风引导者 · 大引导者莱瓦迪 · 风暴战士 · 原始雷云</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>暴风引导者约 24 秒、莱瓦迪约 33 秒放一次<b>闪电涌流</b>，点到谁连吃 7 秒高额自然引导伤害。<b>点到自己时按冷却轮流交圣盾术与圣佑术</b>（圣盾转好优先全免，圣盾在冷却就交圣佑术）；风暴战士的雷霆践踏一直在全队跳，圣佑术别浪费在常规践踏上。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1306366}}" alt=""><div><div class="n"><span class="badge-must">必做</span>闪电涌流</div><div class="s">暴风引导者 / 莱瓦迪 · 无读条 7 秒自然引导（清毒术驱不了）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
+            <div class="why">无前置读条、不可打断、清毒术驱不了，7 秒跳完远超一管血。<b>点到你立刻开圣盾术</b>，剩下几跳全部免疫；圣盾在冷却就立刻开圣佑术并喊治疗刷你。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:392406}}" alt=""><div><div class="n">雷霆践踏</div><div class="s">风暴战士 · 高频全队自然伤害</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">靠治疗 · 优先压血/控停</span></div>
+            <div class="why">全本高承伤来源，但单跳约两成血且频率极高，不单独交圣佑（留给闪电涌流）；配合昏迷和转火尽快压死，若连带进基拉卡战优先清理。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1310355}}" alt=""><div><div class="n">暴风骤雨之盾</div><div class="s">大引导者莱瓦迪 · 自身吸收盾 · 存在期间每秒全队自然伤害</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">转火打破</span></div>
+            <div class="why">盾越久全队掉血越多，说明中盾结束时还会炸 60 码昏迷 4 秒，转火尽快打掉；开盾期间仍可能同时点出闪电涌流，被点到照上一行处理。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:392576}}" alt=""><div><div class="n">雷霆冲击</div><div class="s">暴风引导者 · 读条 · 单体自然重击</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span></div>
+            <div class="why">能断的单体自然读条，顺手协助队友打断。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:391031}}" alt=""><div><div class="n">雷云屏障</div><div class="s">原始雷云 · 护盾被打掉后冲向一名玩家自爆</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">散开站位</span></div>
+            <div class="why">雷云自爆只炸 4 码，别和队友挤在一起，一只雷云别带走两个人的血。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:6940}}" alt=""><div><div class="n">队友中闪电涌流（备选）</div><div class="s">队友血线顶不住时</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给中涌流的队友</span></div>
+            <div class="why">备选：分走三成伤害。自己同时被点或刚吃完涌流时别交。</div>
+          </div>
+        </div>
+        <div class="subhead">闪电涌流每一跳吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">40.8 万</span></div></div>
+          <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="mid" style="width:69%">28.2 万</span></div></div>
+          <div class="bar-row"><span>圣盾术</span><div class="bar"><span class="zero">0 · 免疫</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:642}}" alt="">建议：闪电涌流点到自己按冷却轮流交圣盾术与圣佑术，别把圣佑浪费在雷霆践踏上</span></div>
+          <a class="next" href="#s6">下一段：基拉卡 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 3 基拉卡 / 厄克哈特 -->
+    <article class="stop boss" id="s6">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>基拉卡 / 厄克哈特·风脉</h3><span class="kind">BOSS 3</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>P1 <b>变迁之风</b>约 22 秒一次、<b>烈焰喷吐</b>点 2 人；P2 烈焰喷吐加密到约 17 秒点 3 人、变迁之风约 25 秒一次。牺牲祝福 1 分钟，<b>转好就给正在吃喷吐的队友</b>；圣佑术留给自己中喷吐时。若连带前波风暴战士或残留原始雷云进首领，优先清掉。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:381862}}" alt=""><div><div class="n"><span class="badge-must">必做</span>烈焰喷吐（队友）</div><div class="s">基拉卡 · 6 秒火焰持续 · 结束时 8 码爆炸留下烈焰余烬</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给中喷吐的队友</span></div>
+            <div class="why">喷吐同时点多人，挑掉血最快的队友（布甲、治疗优先）交牺牲，覆盖剩余跳伤与结束爆炸（自身血线跌破 20% 会提前结束转移）。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:381862}}" alt=""><div><div class="n">烈焰喷吐（自己）</div><div class="s">同上 · 结束爆炸伤到 8 码内的人</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
+            <div class="why">被点就开圣佑术，跑到离队友 8 码外等它结束，别把余烬留在团队脚下。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:381517}}" alt=""><div><div class="n">变迁之风</div><div class="s">厄克哈特读条 · 8 秒飓风 · 推动玩家和烈焰余烬</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">顺风站位，别被吹进余烬</span></div>
+            <div class="why">本身伤害不高，危险在于把人和地上的余烬一起推着走。提前看风向，站在余烬上风处。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:381525}}" alt=""><div><div class="n">怒吼火息</div><div class="s">基拉卡读条 · 前方 4 秒火焰喷射</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">离开基拉卡正前方</span></div>
+            <div class="why">正前方持续火焰喷射，近战绕到侧面打。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:381515}}" alt=""><div><div class="n">风暴猛击</div><div class="s">厄克哈特打坦克 · 30 秒可叠加魔法易伤（受到自然 +100%）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">留给治疗驱散 · 不站正面</span></div>
+            <div class="why">坦克专属魔法易伤，清毒术驱不了，避免站厄克哈特正面或抢走治疗驱散节奏。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:381516}}" alt=""><div><div class="n">阻断暴雨</div><div class="s">厄克哈特读条 · 全队自然伤害 + 打断施法 2 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">它读完那一刻别读条</span></div>
+            <div class="why">直击四成血，还会打断施法 2 秒。手上有读条技能就等它放完再读。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:642}}" alt=""><div><div class="n">自己中喷吐且血线危险（兜底）</div><div class="s">圣盾术已转好时</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span></div>
+            <div class="why">兜底：按雷暴区交盾后 3.5 分钟推算，转好时用来顶喷吐并挡住脚下余烬。若先开圣盾再给队友牺牲，仅在两技能重叠的圣盾窗口内转伤为 0，盾结束后剩余秒数照吃转伤。</div>
+          </div>
+        </div>
+        <div class="subhead">自己中烈焰喷吐时每一跳吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">25.8 万</span></div></div>
+          <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="mid" style="width:71%">18.4 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:6940}}" alt="">建议：牺牲祝福每次转好给中喷吐的队友；圣佑术留给自己中喷吐</span></div>
+          <a class="next" href="#talent">查看天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">取自限时录像的天赋。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">这几个防御/功能天赋不要动</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:114154}}" alt=""><div><b>不败之魂</b><span>圣盾术、圣佑术、圣疗术冷却缩短 30%，圣盾术才能 3.5 分钟、圣佑术约 1 分钟一次。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1261562}}" alt=""><div><b>复仇之盾</b><span>每次圣佑术附带吸收盾，地狱烈火、采掘冲击这类大直击先被盾吃掉。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:384820}}" alt=""><div><b>正义牺牲</b><span>牺牲祝福冷却降到 1 分钟，基拉卡战能多给几次中喷吐的队友。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:146956}}" alt=""><div><b>圣光决断</b><span>带自律时仍可开圣盾术，圣盾每移除一个有害效果还回 10% 血。</span></div></div>
+    </div>
+    <p class="tal-note">常见可换：<b>迅捷审判 ↔ 圣光的正义</b>、<b>奋发卫士 ↔ 福佑召唤</b>，都不影响上面的防御牌。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>惩戒骑 · 红玉新生法池 应对手册 · 2026-11</div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/cFzGq4WbXMdrQ8L6#fight=7">哦毕爷 +23 25:28</a>
+      <a href="https://www.warcraftlogs.com/reports/ydajFDrh3BWnQP6J#fight=3">聚光灯下 +23 25:34</a>
+      <a href="https://www.warcraftlogs.com/reports/m6jBctXD2TyvZH1a#fight=18">Âra +23 25:36</a>
+      <a href="https://www.warcraftlogs.com/reports/Y241aWzJAbyvGrwf#fight=6">Fzpala +23 25:40</a>
+      <a href="https://www.warcraftlogs.com/reports/drgR3n94hHyT7GJc#fight=27">Yenvenger +23 26:09</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>
