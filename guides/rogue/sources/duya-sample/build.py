@@ -11,7 +11,7 @@ H = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(H, '..', 'duya-v2')  # 样板复用兄弟目录数据；正式新副本直接设为 H
 TOOLS = os.path.join(H, '../../../tools')
 sys.path.insert(0, TOOLS)
-from icons import externalize
+from icons import externalize, inject_icons
 from timeline import GOLD_TL_CSS, timeline
 
 BANDS = [  # r2 segments (../duya-v2/evidence/segments.md)
@@ -46,11 +46,13 @@ s = s.replace('{{TLCSS}}', GOLD_TL_CSS)
 s = s.replace('{{TIMELINE}}', timeline(29 * 60 + 40.6, BANDS, MARKS))
 if '{{TALENT}}' in s:
     s = s.replace('{{TALENT}}', json.load(open(os.path.join(DATA_DIR, 'tstring.json'), encoding='utf-8'))['string'])
-ic = json.load(open(os.path.join(DATA_DIR, 'icons.json'), encoding='utf-8'))
-s = re.sub(r'\{\{I:(\d+)\}\}', lambda m: ic[m.group(1)], s)
+fallback_ic = os.path.join(DATA_DIR, 'icons.json')
+s, n_icons, n_fetched = inject_icons(s, out, fallback_json=fallback_ic if os.path.isfile(fallback_ic) else None)
 assert '{{' not in s, re.findall(r'\{\{[^}]*\}\}', s)[:5]
 
 with open(out, 'w', encoding='utf-8') as f:
     f.write(s)
-print(out, len(s))
-print('icons:', externalize(out))
+print(f'{out} ({len(s)} bytes) | icons={n_icons} (newly fetched={n_fetched})')
+ext_n, ext_saved = externalize(out)
+if ext_n:
+    print(f'externalized extra base64: {ext_n} (-{ext_saved} bytes)')
