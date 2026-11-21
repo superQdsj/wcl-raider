@@ -24,8 +24,8 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / ".claude/skills/mplus-review/scripts"))
+TOOLS = Path(__file__).resolve().parent
+sys.path.insert(0, str(TOOLS))
 
 from wclr import data  # noqa: E402
 from wclr.api import Client  # noqa: E402
@@ -327,8 +327,11 @@ def talents(runs, out):
     for rd in runs:
         try:
             r2 = load_run(en, rd.run.url)
-            rep = fetch(r2, "d: playerDetails(fightIDs: $fid, includeCombatantInfo: true)")
-            det = (rep.get("d") or {}).get("data", {}).get("playerDetails", {})
+            if en.use_v1:
+                det = r2.summary.get("playerDetails") or {}
+            else:
+                rep = fetch(r2, "d: playerDetails(fightIDs: $fid, includeCombatantInfo: true)")
+                det = (rep.get("d") or {}).get("data", {}).get("playerDetails", {})
             for role in det.values():
                 for p in role:
                     if p.get("name") == rd.name:

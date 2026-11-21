@@ -6,8 +6,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .DS_Store
-# 复盘 / 应对技巧报告是本地输出，不入库；要长期保留的职业手册放在 guides/
-reviews/
 # 静态网站发布产物与 Cloudflare 本地状态
 dist/
 .wrangler/

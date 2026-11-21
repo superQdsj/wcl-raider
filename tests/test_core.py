@@ -1,14 +1,12 @@
-"""核心语义回归；合成数据，禁止网络。"""
+"""攻略数据层（wclr）核心语义回归；合成数据，禁止网络。"""
 import unittest
 from unittest.mock import patch
 
 from support import CODE, make_run
-from wclr import data, fmt
+from wclr import data, fmt, wowhead
 from wclr.api import WCLError
-from wclr.context import Pull, esc, parse_ref, select_fight
-from wclr.cmd_damage import _flags, _match_abilities
-from wclr.cmd_deaths import _clusters
 from wclr.cmd_events import _ability_ids
+from wclr.context import Pull, esc, parse_ref, select_fight
 
 
 def setUpModule():
@@ -189,13 +187,6 @@ class RunTests(unittest.TestCase):
 
 
 class DataSemanticsTests(unittest.TestCase):
-    def test_death_clusters_sorted_inclusive_and_chained(self):
-        deaths = [dict(timestamp=t) for t in (40000, 0, 20000, 60001)]
-        clusters = _clusters(deaths)
-        self.assertEqual([[d['timestamp'] for d in g] for g in clusters], [[0, 20000, 40000], [60001]])
-        self.assertEqual(_clusters([]), [])
-        self.assertEqual(deaths[0]['timestamp'], 40000)
-
     def test_interrupt_entries_nested_flat_and_channel(self):
         a, b, c = {'spellsBegun': 0}, {'spellsInterrupted': 2}, {'spellsBegun': 4, 'spellChannelsInterrupted': 1}
         tbl = {'entries': [{'entries': [a, None, {'entries': [b]}]}, c]}
@@ -212,29 +203,48 @@ class DataSemanticsTests(unittest.TestCase):
                      ([1], 0, 1000, -500, 500)]:
             self.assertIsNone(data.window_rate(*args))
 
-    def test_tank_dominance_is_not_exclusive(self):
-        r = make_run()
-        self.assertEqual(_flags(r, 100, [(1, 95, 1), (2, 5, 1)]), '坦克占95%')
-        self.assertEqual(_flags(r, 100, [(1, 100, 1)]), '仅坦克')
-        self.assertEqual(_flags(r, 0, []), '')
-
-    def test_even_distribution_requires_everyone(self):
-        r = make_run()
-        self.assertNotIn('全员', _flags(r, 100, [(i, 25, 1) for i in range(1, 5)]))
-        self.assertIn('全员承伤接近', _flags(r, 100, [(i, 20, 1) for i in range(1, 6)]))
-        self.assertIn('只打中:Dps', _flags(r, 100, [(4, 100, 1)]))
-        self.assertIn('集中:Dps80%', _flags(r, 100, [(1, 10, 1), (2, 5, 1), (3, 5, 1), (4, 80, 2), (5, 0, 0)]))
-
     def test_same_name_multiple_ability_ids(self):
         r = make_run()
         r.abilities = {10: {'name': '同名'}, 11: {'name': '同名'}}
-        self.assertEqual(_match_abilities(r, '同名'), [10, 11])
         self.assertEqual(_ability_ids(r, '同名'), [10, 11])
-        self.assertEqual(_match_abilities(r, '123'), [123])
+        self.assertEqual(_ability_ids(r, '123'), [123])
         r.abilities = {i: {'name': '同名'} for i in range(31)}
-        for fn in (_match_abilities, _ability_ids):
-            with self.assertRaisesRegex(WCLError, '指定技能 ID'):
-                fn(r, '同名')
+        with self.assertRaisesRegex(WCLError, '指定技能 ID'):
+            _ability_ids(r, '同名')
+
+
+class WowheadTests(unittest.TestCase):
+    def test_wowhead_parse_and_classify(self):
+        payload = {
+            'name': '麻痹射击',
+            'tooltip': '<table><tr><td><b>麻痹射击</b></td></tr></table><table><tr><td><div class="q">'
+                       '造成自然伤害，持续14秒。<br /><br />移动速度降低10%。</div></td></tr></table>',
+            'buff': '<table><tr><td><table width="100%"><tr><td><b class="q">麻痹射击</b></td>'
+                    '<th class="q"><b class="q">魔法</b></th></tr></table></td></tr></table>'
+                    '<table><tr><td>移动速度降低10%。</td></tr></table>',
+        }
+        info = wowhead.parse_tooltip(payload)
+        self.assertEqual(info['dispel'], '魔法')
+        self.assertIn('持续14秒', info['description'])
+        self.assertEqual(info['aura'], '移动速度降低10%。')
+        self.assertIsNone(info['duration_ms'])
+        self.assertEqual(wowhead.parse_duration('移动速度降低10%。持续14秒'), 14000)
+        self.assertEqual(wowhead.parse_duration('20 seconds remaining'), 20000)
+        self.assertEqual(wowhead.classify({'description': '提供魔法免疫，并移除所有有害法术效果'}), '免疫')
+        self.assertEqual(wowhead.classify({'description': '使你受到的伤害降低30%'}), '减伤')
+        self.assertEqual(wowhead.classify({'description': '造成100点物理伤害'}), '伤害')
+
+    def test_wowhead_cooldown_charges_and_talent_overrides(self):
+        tip = ('<table><tr><td>瞬发</td><th><!--cooldownText-->5\u200b分钟 冷却<!--cooldownText-->'
+               '<!--baseCooldown:5\u200b分钟 冷却--></th></tr></table><!--baseCharges:1 次充能-->'
+               '<div class="q">免疫一切伤害。<!--cooldown:114154:3.5分钟冷却时间--></div>')
+        info = wowhead.parse_tooltip({'name': '圣盾术', 'tooltip': tip})
+        self.assertEqual(info['cooldown_ms'], 300000)
+        self.assertEqual(info['charges'], 1)
+        self.assertEqual(info['cooldown_mods'], {114154: 210000})
+        english = wowhead.parse_cooldown('<!--baseCooldown:25 sec cooldown-->')
+        self.assertEqual(english, (25000, None, {}))
+        self.assertEqual(wowhead.parse_cooldown('<td>瞬发</td>'), (None, None, {}))
 
 
 if __name__ == '__main__':

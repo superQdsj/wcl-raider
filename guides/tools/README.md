@@ -2,7 +2,7 @@
 
 2026-11-08 起的做法；2026-11-15 起改为 5 场录像、写作由主会话亲自完成。便宜模型只做固定采集，主会话（Opus）读证据包、分析和写页面。
 
-1. **采集（Haiku 子代理）**：选 5 场录像，跑 `evidence.py`，得到一个证据包。
+1. **采集（Haiku 子代理）**：选 5 场录像，跑 `evidence.py`，得到一个证据包。数据工具默认优先使用 WCL v1 API（`WCL_V1_API_KEY`，限额较宽松），未配置时自动回退到 v2（配置见根目录 `README.md`）。
 2. **写作（主会话亲自做，不再派 Opus 子代理）**：先读证据包，只在需要细看时调用 `wcl.py events` 精确查询，然后写 HTML、编天赋字符串。只交付 HTML，不出 PNG 长图，不做截图和手机版检查。
 
 为什么要先算成表：第一次试做时，Haiku 交的是整场原始事件的 Markdown。Opus 为了做窗口内外对比，在这些文件上跑了 43 轮 grep 和 Python，比单个 Opus 全包还慢。`evidence.py` 把这类确定性计算一次做完。
@@ -32,7 +32,7 @@ python3 guides/tools/evidence.py --class guides/tools/classes/<职业>.json --ou
 ### 采集（Haiku）
 
 > 你是数据采集员，只运行命令，不做分析，不用 skill。仓库 /Users/xialiqun/.t3/projects/wcl-raider。
-> 1. `python3 .claude/skills/mplus-review/scripts/wcl.py find <副本> --class <职业中文名> --level <层数> --limit 15`，层数先试 23，再试 22。
+> 1. `python3 guides/tools/wcl.py find <副本> --class <职业中文名> --level <层数> --limit 15`，层数先试 23，再试 22。
 > 2. 选 5 场：专精是 <专精>；5 个不同报告、5 个不同玩家；层数高优先，同层用时短优先；尽量覆盖国服、欧服、美服。
 > 3. 运行 `python3 guides/tools/evidence.py --class guides/tools/classes/<职业>.json --out guides/<职业目录>/sources/<副本拼音>-v2/evidence "<链接>@<玩家>" ×5`。
 > 4. 回复：5 场的链接和玩家，以及脚本最后打印的文件大小和天赋状态。出错就原样贴出错误。

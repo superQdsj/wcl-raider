@@ -1,4 +1,4 @@
-"""分页、缓存、命令错误与输出语义的离线回归。"""
+"""分页、缓存、events/query 命令错误与输出语义的离线回归。"""
 import contextlib
 import io
 import json
@@ -12,13 +12,8 @@ from support import CODE, make_run
 from wclr import api, data
 from wclr.api import Client, WCLError
 from wclr.cli import build_parser, main
-from wclr.context import load_meta
-from wclr.cmd_compare import _bench_player, _bench_run, _boss_times, _logged
-from wclr.cmd_deaths import _recap_fields, cmd_deaths
 from wclr.cmd_events import cmd_events
-from wclr.cmd_interrupts import cmd_interrupts
-from wclr.cmd_overview import cmd_overview
-from wclr.cmd_player import cmd_player
+from wclr.context import load_meta
 
 
 def setUpModule():
@@ -164,75 +159,6 @@ class CacheTests(unittest.TestCase):
 
 
 class CommandTests(unittest.TestCase):
-    def test_player_buff_denominator_and_table_names_and_top(self):
-        r = make_run()
-        r.abilities[30146] = {'name': '召唤恶魔卫士'}
-        r.summary['damageDone'] = [{'id': 3, 'total': 1000}]
-        got = dict(casts={'entries': [dict(guid=100 + i, name=f'技能{i}', total=100 - i) for i in range(10)]},
-                   dmg={'entries': [dict(guid=30146, name='Rinnvazul', total=1000)]},
-                   taken={}, dd_all={}, rk=[],
-                   buffs=dict(startTime=0, endTime=7000000, totalTime=100000,
-                              auras=[dict(name='光环', guid=10, totalUptime=96000, totalUses=1)]))
-        with patch('wclr.cmd_player.data.parallel', return_value=got):
-            out = cmd_player(r, '猎人', top=5)
-        self.assertIn('96%', out)
-        self.assertIn('Rinnvazul(30146)', out)
-        self.assertNotIn('召唤恶魔卫士(30146)', out)
-        self.assertIn('技能4(104)', out)
-        self.assertNotIn('技能5(105)', out)
-
-    def test_overview_pet_interrupt_attributed_to_owner(self):
-        r = make_run()
-        r.timer_ms = lambda: None
-        r.affix_names = lambda: []
-        got = dict(dd={}, intr={'entries': [dict(spellsBegun=5, details=[dict(id=6, total=3)])]}, rkd=[], rkh=[])
-        with patch('wclr.cmd_overview.data.parallel', return_value=got):
-            out = cmd_overview(r)
-        row = next(line for line in out.splitlines() if line.startswith('| 猎人 |'))
-        self.assertIn('| 0 | 3 | 0 | 0 |', row)
-        self.assertIn('非 GCD 利用率', out)
-
-    def test_interrupt_same_name_ids_subtracted_once(self):
-        r = make_run()
-        r.abilities = {19647: {'name': '法术封锁'}, 119910: {'name': '法术封锁'}}
-        got = {'table': {'entries': [dict(guid=99, spellsBegun=4, spellsInterrupted=4,
-                    details=[dict(id=6, total=4, abilities=[dict(name='法术封锁', total=4)])])]},
-               'kicks': ([dict(sourceID=6, abilityGameID=gid) for gid in (19647, 19647, 119910, 119910)], False)}
-        with patch('wclr.cmd_interrupts.data.parallel', return_value=got):
-            out = cmd_interrupts(r)
-        row = next(line for line in out.splitlines() if line.startswith('| 猎人('))
-        self.assertIn('| 4 |', row)
-        self.assertIn('| 0 |', row)
-        self.assertIn('汇总差值', out)
-
-    def test_no_death_and_no_interrupt_outputs(self):
-        r = make_run()
-        with patch('wclr.cmd_deaths.data.parallel', return_value={'table': {}, 'events': []}):
-            self.assertIn('没有玩家死亡', cmd_deaths(r))
-        with patch('wclr.cmd_interrupts.data.parallel', return_value={'table': {}}):
-            self.assertIn('未记录打断', cmd_interrupts(r))
-
-    def test_death_partial_error_not_reported_as_no_damage(self):
-        r = make_run()
-        got = {'table': {}, 'events': [dict(type='death', targetID=3, timestamp=110000)]}
-        with patch('wclr.cmd_deaths.data.parallel', return_value=got), \
-                patch('wclr.cmd_deaths.data.casts', return_value={}), \
-                patch('wclr.cmd_deaths.fetch', return_value={'d0': None, '_errors': ['窗口错误']}):
-            out = cmd_deaths(r)
-        self.assertIn('部分死亡窗口获取失败', out)
-        self.assertIn('无法判断', out)
-        self.assertNotIn('未查到伤害事件', out)
-
-    def test_death_recap_uses_names_and_clamped_report_timestamps(self):
-        r = make_run()
-        r.players[3].name = 'A"\\B'
-        fields = _recap_fields(r, [dict(targetID=3, timestamp=101000)], 10000)
-        self.assertIn('startTime: 100000', fields)
-        self.assertIn('endTime: 101300', fields)
-        self.assertIn('target.name', fields)
-        self.assertNotIn('target.id', fields)
-        self.assertIn('nextPageTimestamp', fields)
-
     def test_player_target_filter_uses_name(self):
         r = make_run()
         r.players[3].name = 'Sìmply'
@@ -241,29 +167,19 @@ class CommandTests(unittest.TestCase):
             cmd_events(r, args)
         self.assertEqual(events.call_args.kwargs['expr'], 'target.name = "Sìmply"')
 
+    def test_events_all_player_is_explicitly_bidirectional(self):
+        args = build_parser().parse_args(['events', CODE, '--type', 'all', '--player', '猎人'])
+        with patch('wclr.cmd_events.data.events', return_value=([], False)) as fetch:
+            output = cmd_events(make_run(), args)
+        self.assertEqual(fetch.call_args.kwargs['expr'], '(source.name = "猎人" or target.name = "猎人")')
+        self.assertIn('玩家双向过滤：施放或承受', output)
+        self.assertIn('双向过滤', build_parser()._subparsers._group_actions[0].choices['events'].format_help())
+
     def test_bad_time_is_chinese_cli_error(self):
         r = make_run()
         args = build_parser().parse_args(['events', CODE, '--from', 'NaN'])
         with self.assertRaisesRegex(WCLError, '无效时间'):
             cmd_events(r, args)
-
-    def test_benchmark_partial_errors_are_excluded(self):
-        r = make_run()
-        r.client = Mock()
-        r.client.gql.return_value = {'_errors': ['missing'], 'reportData': {'report': {'fights': [{'id': 1}]}}}
-        self.assertEqual(_bench_run(r, CODE, 1), {})
-        self.assertIsNone(_bench_player(r, {'report': {'code': CODE, 'fightID': 1}}))
-
-    def test_unlogged_rankings_and_self_are_skipped(self):
-        r = make_run()
-        other = {'report': {'code': 'OtherCode1234567X', 'fightID': 2}}
-        rows = [{'report': {'code': None}}, {'report': {'code': CODE, 'fightID': 1}}, other]
-        self.assertEqual(_logged(rows, r), [other])
-
-    def test_boss_failed_attempt_separate_from_kill_time(self):
-        pulls = [dict(encounterID=10, kill=False, startTime=10000, endTime=30000),
-                 dict(encounterID=10, kill=True, startTime=50000, endTime=110000)]
-        self.assertEqual(_boss_times(pulls), {10: (60000, 2, 80000)})
 
     def test_query_input_errors_have_no_traceback_or_network(self):
         for argv in [['query', '{}', '--vars', 'bad'], ['query', '{}', '--vars', '[]'],
@@ -288,11 +204,88 @@ class CommandTests(unittest.TestCase):
 
     def test_invalid_numeric_options_rejected_by_parser(self):
         for argv in [['events', CODE, '--limit', '-1'], ['events', CODE, '--pull', '0'],
-                     ['deaths', CODE, '--window', 'nan'], ['deaths', CODE, '--detail', '-1'],
-                     ['damage', CODE, '--top', '0'], ['compare', CODE, '--runs', '-1']]:
+                     ['find', '毒牙祭坛', '--level', '0'], ['find', '毒牙祭坛', '--limit', '-1']]:
             with contextlib.redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as exc:
                 build_parser().parse_args(argv)
             self.assertEqual(exc.exception.code, 2)
+
+
+class V1AdapterTests(unittest.TestCase):
+    def test_auto_mode_prefers_v1_when_key_present(self):
+        with patch('wclr.api.load_v1_key', return_value='dummy-v1-key'):
+            self.assertTrue(Client(lang='zh', api_version='auto').use_v1)
+            self.assertTrue(Client(lang='zh', api_version='v1').use_v1)
+            self.assertFalse(Client(lang='zh', api_version='v2').use_v1)
+        with patch('wclr.api.load_v1_key', return_value=None):
+            self.assertFalse(Client(lang='zh', api_version='auto').use_v1)
+            self.assertTrue(Client(lang='zh', api_version='v1').use_v1)
+
+    def test_v1_meta_and_events_normalization(self):
+        from wclr.context import _v1_pulls, _v1_to_meta
+        raw = {
+            'lang': 'zh', 'title': 't', 'start': 1000, 'end': 2000, 'zone': 55,
+            'friendlies': [{'id': 6, 'name': 'Tank', 'type': 'Druid', 'server': 'S', 'region': 'CN', 'fights': [{'id': 9}]}],
+            'enemies': [{'id': 455, 'name': 'Mob', 'type': 'NPC', 'guid': 241813}],
+            'friendlyPets': [{'id': 17, 'name': 'Pet', 'type': 'Pet', 'petOwner': 6, 'guid': 226269}],
+            'fights': [{
+                'id': 9, 'boss': 12825, 'start_time': 100000, 'end_time': 200000, 'name': '纳洛拉克的洞穴',
+                'difficulty': 10, 'kill': True, 'keystoneLevel': 22, 'affixes': [10, 9, 147],
+                'completionTime': 90000, 'dungeonPulls': [{
+                    'id': 1, 'boss': 0, 'start_time': 101000, 'end_time': 150000, 'name': 'P1', 'kill': False,
+                    'enemies': [[241813, 455, 1, 3, 1, 1]],
+                }],
+            }],
+        }
+        meta = _v1_to_meta(CODE, raw)
+        self.assertEqual(meta['region']['slug'], 'CN')
+        self.assertEqual(meta['fights'][0]['encounterID'], 12825)
+        self.assertEqual(meta['fights'][0]['keystoneTime'], 90000)
+        pulls = _v1_pulls(meta['fights'][0]['_v1_raw'])
+        self.assertEqual(pulls[0]['enemyNPCs'][0], {'gameID': 241813, 'id': 455, 'minimumInstanceID': 1, 'maximumInstanceID': 3})
+
+        r = make_run()
+        r.client = Client(lang='zh', api_version='v1')
+        pages = [
+            {'events': [
+                {'timestamp': 101000, 'type': 'damage', 'ability': {'guid': 8921, 'name': '月火术', 'type': 64}},
+                {'timestamp': 101001, 'fake': True},
+            ], 'nextPageTimestamp': 110000},
+            {'events': [
+                {'timestamp': 111000, 'type': 'interrupt',
+                 'ability': {'guid': 1766, 'name': '脚踢'},
+                 'extraAbility': {'guid': 9999, 'name': '敌方读条'}},
+            ]},
+        ]
+        with patch.object(r.client, 'v1_get', side_effect=pages):
+            evs, truncated = data.events(r, data_type='All', limit=5)
+        self.assertFalse(truncated)
+        self.assertEqual([e['abilityGameID'] for e in evs], [8921, 1766])
+        self.assertEqual(evs[1]['extraAbilityGameID'], 9999)
+        self.assertEqual(r.ab(8921), '月火术')
+        self.assertEqual(r.ab(9999), '敌方读条')
+
+    def test_v1_resolve_dungeon_and_find_runs(self):
+        from wclr.cmd_find import find_runs, resolve_dungeon
+        c = Client(lang='zh', api_version='v1')
+        zones = [
+            {'id': 56, 'name': 'PTR Zone', 'encounters': [{'id': 999, 'name': '毒牙祭坛'}]},
+            {'id': 55, 'name': 'Mythic+ Season 2', 'encounters': [{'id': 12825, 'name': '毒牙祭坛'}]},
+        ]
+        with patch.object(c, 'v1_get', return_value=zones):
+            self.assertEqual(resolve_dungeon(c, '毒牙祭坛'), (12825, '毒牙祭坛'))
+
+        classes = [{'id': 12, 'name': 'Demon Hunter', 'specs': [{'id': 1, 'name': 'Havoc'}, {'id': 3, 'name': 'Devourer'}]}]
+        rk = {'hasMorePages': False, 'rankings': [
+            {'name': 'NoLog', 'class': 12, 'spec': 3, 'reportID': '', 'fightID': None, 'keystoneLevel': 25},
+            {'name': 'PlayerA', 'class': 12, 'spec': 3, 'reportID': CODE, 'fightID': 9, 'keystoneLevel': 23,
+             'duration': 1500000, 'regionName': '欧服'},
+        ]}
+        with patch.object(c, 'v1_get', side_effect=[classes, rk]) as v1_get:
+            rows, note = find_runs(c, 12825, cls='DemonHunter', spec='Devourer', level=23, want=5)
+        self.assertEqual(note, '+23')
+        self.assertEqual(len(rows), 1)
+        self.assertEqual((rows[0]['code'], rows[0]['fid'], rows[0]['level']), (CODE, 9, 23))
+        self.assertEqual(v1_get.call_args_list[1].args[1]['bracket'], 22)
 
 
 if __name__ == '__main__':

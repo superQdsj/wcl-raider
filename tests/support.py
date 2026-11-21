@@ -14,7 +14,7 @@ _CACHE = tempfile.mkdtemp(prefix='wcl-raider-test-cache-')
 os.environ['WCL_RAIDER_CACHE_DIR'] = _CACHE
 atexit.register(shutil.rmtree, _CACHE, ignore_errors=True)
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / '.claude/skills/mplus-review/scripts'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'guides/tools'))
 
 from wclr import api
 from wclr.context import Run

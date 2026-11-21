@@ -1,114 +1,83 @@
 <img src="assets/icon.svg" width="64" height="64" alt="">
 
-# wcl-raider · 大秘境战斗记录复盘
+# wcl-raider · 大秘境职业副本攻略
 
-把一条 Warcraft Logs 大秘境报告链接交给 Claude Code，它会像指挥看录像一样复盘这场钥石：按首领把这一把切成几段，和路线相近的高分记录（或者你们自己上一把限时的记录）逐段、逐波比时间，讲清楚**这一把是怎么打的、时间丢在哪里、哪里差点出事、下一把怎么打**。评分（0.0–10.0）放在附录里。
+从高分 Warcraft Logs 大秘境录像中提取各职业处理副本机制的实际做法，整理成「**信号 → 按什么 → 为什么**」的单页 HTML 职业副本手册，并构建成静态攻略站发布到 Cloudflare Pages（https://wcl-raider.pages.dev/）。
 
-它的结构是一个 **Claude Code Skill + 一个零依赖的数据工具**：
-- **数据工具**（`scripts/wcl.py`）负责客观测量：通过 WCL v2 API 拉取数据，把几万条战斗事件压缩成计时、波次、死亡回放、打断、承伤、个人施法，以及与同副本同层高分记录、同专精顶尖玩家的对比，并按统一公式计算评分卡。
-- **Skill**（`SKILL.md` + `references/`）负责判断：教 agent 先把这一把按时间线讲出来，再追丢时间的地方和险情的起因，最后给出能直接在语音里布置的改进。判断标准是"和路线相近的参考记录逐段比"，不是写死的规则，所以换赛季、换副本都不需要改代码。
+## 已有攻略成果
 
-## 职业副本手册
+所有手册都在 [`guides/`](guides/README.md)，一个职业专精一个目录，成品 HTML 与源材料放在一起：
 
-职业大秘境手册不用 skill，按 [`guides/tools/README.md`](guides/tools/README.md) 的两段式流程制作：便宜模型跑 `evidence.py` 采集证据包，主会话从五场高分限时录像里找出该职业真正用来处理机制的技巧，手写成「信号 → 按什么 → 为什么」的攻略页，结尾附天赋导入字符串。
+| 职业专精 | 目录 | 覆盖进度 |
+| --- | --- | --- |
+| 噬灭恶魔猎手 | [`guides/demonhunter-devourer/`](guides/demonhunter-devourer/README.md) | 8/8 本齐（2026-11-15，全有证据包与源码） |
+| 武器战士（屠戮者） | [`guides/warrior-arms/`](guides/warrior-arms/README.md) | 8/8 本齐（2026-11-07） |
+| 神圣圣骑士 | `guides/holy-paladin/` | 8/8 本齐（第一版，2026-10-25 ~ 10-28） |
+| 敏锐潜行者 | [`guides/rogue/`](guides/rogue/README.md) | 第一版 7 本（可离线重建）；新版已完成诸王之眠、夺目谷、毒牙祭坛 |
+| 惩戒圣骑士（烈日先驱） | [`guides/paladin-ret/`](guides/paladin-ret/README.md) | 密谋小径、毒牙祭坛（2 本，全有证据包与源码） |
 
-所有手册都在 [`guides/`](guides/README.md)，一个职业专精一个目录，成品和源材料放在一起：
-- 武器战：八本（`guides/warrior-arms/`）
-- 潜行者：七本第一版（`guides/rogue/`），正在按新流程重做，已完成诸王之眠、夺目谷、毒牙祭坛
-- 神圣骑士：八本（`guides/holy-paladin/`）
-- 噬灭恶魔猎手：六本：诸王之眠、纳洛拉克的洞穴、塞塔里斯神庙、毒牙祭坛、红玉新生法池、夺目谷（`guides/demonhunter-devourer/`）
+## 制作流程与数据工具
 
-## 快速开始
+详细制作流程与派发模板见 [`guides/tools/README.md`](guides/tools/README.md)。整体为两段式流程（不使用 Claude Code skill）：
 
-1. **创建 WCL API 客户端**：打开 https://www.warcraftlogs.com/api/clients/ （需要登录 WCL），点 "Create Client"。名称随意，Redirect URL 填 `http://localhost`，不要勾选 Public Client。
-2. **保存凭据**到 `~/.config/wcl-raider/credentials.env`：
+1. **采集证据包**：用 `guides/tools/wcl.py find` 选出 5 场高分限时录像，再跑 `guides/tools/evidence.py` 生成结构化证据表（窗口内外承伤对比、技能使用情境、全队承伤、减益、波次、Wowhead 技能说明、天赋数据）。
+2. **分析与成稿**：阅读证据包，必要时用 `guides/tools/wcl.py events` / `spell` 补查，编写页面源码与单轨时间轴（`guides/tools/timeline.py`），生成独立 HTML 并通过 `guides/tools/icons.py` 外置共享技能图标到 `guides/icons/`。
+
+### WCL API 凭据配置（优先 v1）
+
+仅需 Python 3.9+ 标准库，无第三方依赖。**工具默认优先使用 WCL v1 API**（v2 GraphQL API 的每小时点数限额较紧，v1 REST API 限额更宽松且可获取同类数据）；未配置 v1 密钥时自动回退到 v2，仅 `wcl.py query`（任意 GraphQL 调试）需要 v2。
+
+1. 在 https://www.warcraftlogs.com/api/clients/ 获取凭据：
+   - **优先（v1）**：创建或查看 V1 客户端密钥（`WCL_V1_API_KEY`）。
+   - **备选（v2）**：点击 Create Client（Redirect URL 填 `http://localhost`，不要勾选 Public Client），获取 `WCL_CLIENT_ID` 和 `WCL_CLIENT_SECRET`。
+2. 保存凭据到 `~/.config/wcl-raider/credentials.env`（或参考 [`.env.example`](.env.example) 放到仓库根目录 `.env`，已被 `.gitignore` 忽略，**切勿将真实密钥写入仓库文档或代码**）：
    ```
+   WCL_V1_API_KEY=你的 v1 API Key
+   # 可选：同时配置 v2 供回退或 `wcl.py query` 使用
    WCL_CLIENT_ID=你的 Client ID
    WCL_CLIENT_SECRET=你的 Client Secret
    ```
-   （也可以用同名环境变量，或当前目录下的 `.env`。）
-3. **验证**：`python3 .claude/skills/mplus-review/scripts/wcl.py points`
-4. **在本仓库里启动 Claude Code**，输入：
+3. 验证与常用命令（可用 `--api v1|v2` 或 `WCL_API_VERSION` 手动切换版本）：
+   ```bash
+   W=guides/tools/wcl.py
+   python3 $W points                                             # 查看 WCL API 限额/点数余量
+   python3 $W find 毒牙祭坛 --class 潜行者 --level 23 --limit 15   # 查找带日志的高分录像
+   python3 $W events <WCL链接#fight=N> --ability 183752 --from 0:00 --to 10:00
+   python3 $W spell 1044 213644                                  # 查询 Wowhead 技能说明与驱散类型
    ```
-   /mplus-review https://www.warcraftlogs.com/reports/XXXXXXXXXXXXXXXX#fight=5
-   ```
-   可以附加关注点，例如 `/mplus-review <链接> 我是坦克，重点看我`，或者 `/mplus-review <链接> 快速`。
 
-复盘报告会保存到 `reviews/` 目录（本地输出，不入库），对话里给出一句话结论、分段用时表、时间丢在哪里和下一把怎么打。想和自己上一把比，就加上参考链接：`/mplus-review <链接> 参考 <上一把的链接>`。
+默认通过 `cn.warcraftlogs.com` 获取中文技能/怪物/副本名（可用 `--lang en` 或 `WCL_LANG=en` 切换英文）；API 响应会缓存在 `~/.cache/wcl-raider/`，重复查询不消耗限额/点数。
 
-### 在任意目录使用
-把 skill 链接到个人 skill 目录：
-```bash
-ln -s "$(pwd)/.claude/skills/mplus-review" ~/.claude/skills/mplus-review
-ln -s "$(pwd)/.claude/skills/mplus-tactics" ~/.claude/skills/mplus-tactics   # 依赖同级的 mplus-review
-```
-
-## 应对技巧复盘（mplus-tactics）
-
-另一个 skill：从高水准记录里学习**各职业在常规循环之外用了哪些技能、什么时机、在应对哪个机制**——例如圣骑士自由祝福解定身、战士法术反射反掉读条、潜行者暗影斗篷清魔法、奶骑先牺牲祝福再圣盾术。工具会还原每一次使用时身上的减益、前后几秒的敌方读条、血线，以及之后发生了什么（驱散、减益消失、免疫/反射），再按"敌方机制 → 被什么技能应对"汇总，可选多场高分记录对照。
-
-```
-/mplus-tactics https://www.warcraftlogs.com/reports/XXXXXXXXXXXXXXXX#fight=5
-/mplus-tactics <链接> 多场对照            # 再拉 3 场同副本高分记录，看哪些做法是共识
-/mplus-tactics <高分链接> 我的记录 <链接>  # 对照自己的记录，找漏掉的技巧
-/mplus-tactics 法师在毒牙祭坛要在什么时机用哪些技能应对哪些机制？   # 职业专题：自动找有法师的高分记录
-```
-
-## 数据工具
-
-需要 Python 3.9+，只用标准库。所有命令都接受完整链接（会自动识别 `#fight=N`）或 16 位报告代码。
+## 构建与发布站点
 
 ```bash
-W=.claude/skills/mplus-review/scripts/wcl.py
-python3 $W runs     <链接>            # 报告里的所有钥石记录
-python3 $W overview <链接>            # 计时/罚时/阵容/DPS/同层百分位/打断/药水石头
-python3 $W splits   <链接> [--ref 链接]   # 分段计时：按首领分段，逐段/逐波与路线相近的参考记录比用时和拉怪
-python3 $W danger   <链接>            # 险情：没死但血线很低的时刻、多人同时低血
-python3 $W pulls    <链接>            # 波次时间线
-python3 $W deaths   <链接>            # 死亡回放（血线、承伤、死者施法、团灭归组）
-python3 $W interrupts <链接>          # 打断率、漏断时间点、每人打断
-python3 $W damage   <链接> [--ability 技能]   # 承伤构成与每人分布
-python3 $W compare  <链接>            # 与同层高分记录对比
-python3 $W player   <链接> <玩家>     # 单人深挖
-python3 $W spec     <链接> <玩家>     # 与同专精顶尖玩家对比 CPM
-python3 $W events   <链接> --pull 7 --type interrupts   # 原始事件钻取
-python3 $W score    <链接>            # 评分卡
-python3 $W tactics  <链接> [--refs 3] [--ability 技能] [--player 玩家] [--class 职业]   # 应对技巧：额外技能的情境与效果
-python3 $W find     <副本名> [--class 职业] [--level N]   # 没有链接时找高分记录
-python3 $W render   <报告.json> [--pdf x.pdf] [--png x.png] [--md x.md]   # 报告排版：本地 HTML，可导出 PDF/PNG（需 playwright + Chrome）
-python3 $W spell    <技能ID…>         # Wowhead 技能说明与驱散类型
-python3 $W --help
+python3 scripts/build_site.py
 ```
 
-- **语言**：默认通过 `cn.warcraftlogs.com` 获取中文技能/怪物/副本名（任何地区的日志都适用）。`--lang en` 或 `WCL_LANG=en` 切换为英文。
-- **API 点数**：WCL 每个客户端每小时 1000 点。一次完整复盘大约消耗 60–100 点（首次 `splits` 约 20–30 点，之后缓存 7 天）。数据会缓存在 `~/.cache/wcl-raider/`，重复查询不再消耗点数。每条命令都会在 stderr 打印本小时已用点数。
-- **限制**：只支持正式服大秘境；只能读取公开或未列出（unlisted）的报告，私密报告需要上传者修改可见性。
-
-## 评分体系
-
-0.0–10.0，保留一位小数：9.5+ 顶尖 · 8.5 优秀 · 7.5 良好 · 6.5 及格 · <6.5 不及格。
-- **团队**：计时、节奏（与同层高分对比）、存活、打断协作。
-- **个人**：生存、机制（可躲伤害）、打断、输出、执行（活跃时间），按坦克/治疗/输出各自的权重加权。
-- **数据分**由统一公式计算，可复现、可跨场比较；agent 复盘时可以在每个维度 ±1.0 内结合上下文修正，并写明理由。公式见 [`references/scoring.md`](.claude/skills/mplus-review/references/scoring.md)。
+只收集 `guides/<职业>/` 顶层的成品 HTML 和它们引用的本地图片（含 `guides/icons/` 共享图标），生成静态站点到 `dist/site/` 和压缩包 `dist/wcl-raider-site.zip`。部署方式见 [`docs/site-deployment.md`](docs/site-deployment.md)。
 
 ## 目录结构
 
 ```
-.claude/skills/
-├── mplus-review/            # 战斗记录复盘
-│   ├── SKILL.md             # 复盘流程（agent 的工作说明）
-│   ├── references/          # playbook / scoring / data-notes / report-template
-│   └── scripts/
-│       ├── wcl.py           # 数据工具入口（三个 skill 共用）
-│       └── wclr/            # API 客户端、上下文、各命令实现
-└── mplus-tactics/           # 应对技巧复盘（共用 mplus-review 的数据工具）
-guides/                      # 职业副本手册：一个职业专精一个目录，成品 + 源材料
-├── tools/                   # 手册制作工具：evidence.py 证据包、timeline.py 时间轴、派发模板
-├── warrior-arms/            # 武器战
-├── rogue/                   # 潜行者（归档，可离线重建）
-└── holy-paladin/            # 神圣骑士（只有成品）
-reviews/                     # 复盘 / 应对技巧报告的本地输出，不入库
-tests/                       # 离线单元测试：python3 -m unittest discover -s tests
-docs/verification/           # 历次人工验证记录（数据工具的回放与证据核对）
-assets/                      # README 图标
+guides/
+├── tools/                   # 攻略制作工具
+│   ├── wcl.py               # WCL / Wowhead 数据查询 CLI（find / events / spell / query / points）
+│   ├── wclr/                # WCL API 客户端（优先 v1，兼容 v2）、事件拉取、Wowhead 解析底层模块
+│   ├── evidence.py          # 多场录像证据包生成器
+│   ├── timeline.py          # 单轨技能时间轴组件
+│   ├── icons.py             # 攻略图标外置工具（提取到 guides/icons/）
+│   └── classes/             # 各职业防御技能配置文件（JSON）
+├── icons/                   # 所有攻略共享的外置技能图标
+├── demonhunter-devourer/    # 噬灭恶魔猎手
+├── warrior-arms/            # 武器战士
+├── rogue/                   # 敏锐潜行者
+├── paladin-ret/             # 惩戒圣骑士
+└── holy-paladin/            # 神圣圣骑士
+scripts/
+└── build_site.py            # 静态站点构建脚本
+site/                        # 站点首页 / 404 模板、样式、副本图与专精图标
+docs/
+└── site-deployment.md       # Cloudflare Pages 部署说明
+tests/                       # 底层 wclr 离线单元测试：python3 -m unittest discover -s tests
+assets/                      # 站点与 README 图标
 ```

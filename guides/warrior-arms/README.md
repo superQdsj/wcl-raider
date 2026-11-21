@@ -6,19 +6,19 @@
 
 | 副本 | 状态 |
 | --- | --- |
-| 红玉新生法池 | 第二版完成：[手册](2026-11-07-红玉新生法池-武器战.html) · [长图](2026-11-07-红玉新生法池-武器战.png)。参考录像：[Mjtwarrior](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=13) · [人艰不拆战](https://www.warcraftlogs.com/reports/Kzg6XDw3V2FnWZcd#fight=1) · [Rosebankk](https://www.warcraftlogs.com/reports/TFfB8XRw6HPVLjN2#fight=4) |
-| 毒牙祭坛 | 完成：[手册](2026-11-07-毒牙祭坛-武器战.html) · [长图](2026-11-07-毒牙祭坛-武器战.png)。参考录像：[末诚](https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=36) · [Mjtwarrior](https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=44) · [暗夜白昼](https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1) |
-| 密谋小径 | 完成（不用 skill，手工分析 +23）：[手册](2026-11-07-密谋小径-武器战.html) · [长图](2026-11-07-密谋小径-武器战.png)。参考录像：[Иутир](https://www.warcraftlogs.com/reports/vbq6AXY4ByjVgx2D#fight=29) · [Madenianarch](https://www.warcraftlogs.com/reports/fWtc3hx6GZaJTmbD#fight=39) · [Yarrgiwr](https://www.warcraftlogs.com/reports/tg6k3ZvFd24pJrhT#fight=4) |
-| 夺目谷 | 完成（自由版式）：[手册](2026-11-07-夺目谷-武器战.html) · [长图](2026-11-07-夺目谷-武器战.png)。参考录像：[Venzèr](https://www.warcraftlogs.com/reports/8yZD1VXdvf42qcFR#fight=3) · [Yarrgiwr](https://www.warcraftlogs.com/reports/FHJ6XPcCvnWwLM23#fight=6) · [Zitee](https://www.warcraftlogs.com/reports/VDBjgqz8xnMCkH6p#fight=10) |
-| 纳洛拉克的洞穴 | 完成（不走 skill，自由版式）：[手册](2026-11-07-纳洛拉克的洞穴-武器战.html) · [长图](2026-11-07-纳洛拉克的洞穴-武器战.png)。参考录像：[Doxorsw](https://www.warcraftlogs.com/reports/jH7dWrY18QF2MzqJ#fight=1) · [Yarrgiwr](https://www.warcraftlogs.com/reports/jnHZFBVRN4M3DxpX#fight=7) · [Crimsfeel](https://www.warcraftlogs.com/reports/JGXt7TkQ2gm3FWfR#fight=11) |
-| 塞塔里斯神庙 | 完成（不用 skill，手写）：[手册](2026-11-07-塞塔里斯神庙-武器战.html) · [长图](2026-11-07-塞塔里斯神庙-武器战.png)；源文件 `sources/sethraliss/`（`python3 sources/sethraliss/build.py sources/sethraliss <输出.html>`）。参考录像（+22）：[Diffw](https://www.warcraftlogs.com/reports/4Ab97gnVjKhZP1Nf#fight=8) · [Swordish](https://www.warcraftlogs.com/reports/r1ChwFYjNM7XkWp9#fight=20) · [咙咚哐咙咚哐](https://www.warcraftlogs.com/reports/XtNDVkrqb8LaK36M#fight=7) |
-| 虚空之痕竞技场 | 完成（自由版式）：[手册](2026-11-07-虚空之痕竞技场-武器战.html) · [长图](2026-11-07-虚空之痕竞技场-武器战.png)；源文件 `sources/voidscar/`。参考录像：[Miratrixwar](https://www.warcraftlogs.com/reports/6TCrNBtdvnMDV78p#fight=2) · [Statikkw](https://www.warcraftlogs.com/reports/HDjaYfxXJWwCb9Kg#fight=6) · [Timeevo](https://www.warcraftlogs.com/reports/vN9PxrQFX2fJ3mjM#fight=19) |
-| 诸王之眠 | 完成（自由版式）：[手册](2026-11-07-诸王之眠-武器战.html) · [长图](2026-11-07-诸王之眠-武器战.png)；源文件 `sources/zhuwang-freeform/`。参考录像（+22）：[Yarrgiwr](https://www.warcraftlogs.com/reports/DGtXrcbpV3YhN81A#fight=9) · [一戰成名](https://www.warcraftlogs.com/reports/Z4WCnjBGyMzKfwdb#fight=2) · [Ptz](https://www.warcraftlogs.com/reports/vxWqaMdprBXmcHPG#fight=14) |
+| 红玉新生法池 | 第二版完成：[手册](2026-11-07-红玉新生法池-武器战.html)。参考录像：[Mjtwarrior](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=13) · [人艰不拆战](https://www.warcraftlogs.com/reports/Kzg6XDw3V2FnWZcd#fight=1) · [Rosebankk](https://www.warcraftlogs.com/reports/TFfB8XRw6HPVLjN2#fight=4) |
+| 毒牙祭坛 | 完成：[手册](2026-11-07-毒牙祭坛-武器战.html)。参考录像：[末诚](https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=36) · [Mjtwarrior](https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=44) · [暗夜白昼](https://www.warcraftlogs.com/reports/JpHdnbhYD8ZFWvma#fight=1) |
+| 密谋小径 | 完成（不用 skill，手工分析 +23）：[手册](2026-11-07-密谋小径-武器战.html)。参考录像：[Иутир](https://www.warcraftlogs.com/reports/vbq6AXY4ByjVgx2D#fight=29) · [Madenianarch](https://www.warcraftlogs.com/reports/fWtc3hx6GZaJTmbD#fight=39) · [Yarrgiwr](https://www.warcraftlogs.com/reports/tg6k3ZvFd24pJrhT#fight=4) |
+| 夺目谷 | 完成（自由版式）：[手册](2026-11-07-夺目谷-武器战.html)。参考录像：[Venzèr](https://www.warcraftlogs.com/reports/8yZD1VXdvf42qcFR#fight=3) · [Yarrgiwr](https://www.warcraftlogs.com/reports/FHJ6XPcCvnWwLM23#fight=6) · [Zitee](https://www.warcraftlogs.com/reports/VDBjgqz8xnMCkH6p#fight=10) |
+| 纳洛拉克的洞穴 | 完成（不走 skill，自由版式）：[手册](2026-11-07-纳洛拉克的洞穴-武器战.html)。参考录像：[Doxorsw](https://www.warcraftlogs.com/reports/jH7dWrY18QF2MzqJ#fight=1) · [Yarrgiwr](https://www.warcraftlogs.com/reports/jnHZFBVRN4M3DxpX#fight=7) · [Crimsfeel](https://www.warcraftlogs.com/reports/JGXt7TkQ2gm3FWfR#fight=11) |
+| 塞塔里斯神庙 | 完成（不用 skill，手写）：[手册](2026-11-07-塞塔里斯神庙-武器战.html)；源文件 `sources/sethraliss/`（`python3 sources/sethraliss/build.py sources/sethraliss <输出.html>`）。参考录像（+22）：[Diffw](https://www.warcraftlogs.com/reports/4Ab97gnVjKhZP1Nf#fight=8) · [Swordish](https://www.warcraftlogs.com/reports/r1ChwFYjNM7XkWp9#fight=20) · [咙咚哐咙咚哐](https://www.warcraftlogs.com/reports/XtNDVkrqb8LaK36M#fight=7) |
+| 虚空之痕竞技场 | 完成（自由版式）：[手册](2026-11-07-虚空之痕竞技场-武器战.html)；源文件 `sources/voidscar/`。参考录像：[Miratrixwar](https://www.warcraftlogs.com/reports/6TCrNBtdvnMDV78p#fight=2) · [Statikkw](https://www.warcraftlogs.com/reports/HDjaYfxXJWwCb9Kg#fight=6) · [Timeevo](https://www.warcraftlogs.com/reports/vN9PxrQFX2fJ3mjM#fight=19) |
+| 诸王之眠 | 完成（自由版式）：[手册](2026-11-07-诸王之眠-武器战.html)；源文件 `sources/zhuwang-freeform/`。参考录像（+22）：[Yarrgiwr](https://www.warcraftlogs.com/reports/DGtXrcbpV3YhN81A#fight=9) · [一戰成名](https://www.warcraftlogs.com/reports/Z4WCnjBGyMzKfwdb#fight=2) · [Ptz](https://www.warcraftlogs.com/reports/vxWqaMdprBXmcHPG#fight=14) |
 
 ## 文件
 
 - 塞塔里斯神庙、虚空之痕竞技场、诸王之眠的源码在 `sources/<副本>/`，能离线重建。
-- 其余几本（含旧 skill 生成的红玉新生法池、毒牙祭坛和八本目录页）只保留成品 HTML。
+- 其余几本只保留成品 HTML。
 
 ## 关键核对与边界
 

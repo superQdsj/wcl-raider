@@ -19,7 +19,7 @@
 python3 scripts/build_site.py
 ```
 
-产物为 `dist/site/` 和 `dist/wcl-raider-site.zip`。只收集 `guides/<职业>/` 顶层的 HTML 成品和它们引用的本地图片（同目录或共享的 `guides/icons/` 技能图标）；不会上传源材料、证据包、复盘记录或 API 凭据。旧版成品保留，通过文件名中的日期区分。
+产物为 `dist/site/` 和 `dist/wcl-raider-site.zip`。只收集 `guides/<职业>/` 顶层的 HTML 成品和它们引用的本地图片（同目录或共享的 `guides/icons/` 技能图标）；不会上传源材料、证据包或 API 凭据。旧版成品保留，通过文件名中的日期区分。
 
 ## Cloudflare 登录与首次部署
 
