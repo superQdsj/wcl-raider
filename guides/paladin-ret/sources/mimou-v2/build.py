@@ -20,7 +20,7 @@ MARKS = [('0:36', '', 6940, '坦克免毒'), ('0:55', 'muted', 213644, '清断�
 
 css = open(os.path.join(H, 'head.part'), encoding='utf-8').read()
 tlcss = (GOLD_TL_CSS.replace('rgba(242,210,75,', 'rgba(243,156,195,')
-         + '.mk.start{transform:translateX(-22%)}\n:root{--shadow:#b48cf0;--nature:#9bd65f}\n')
+         + ':root{--shadow:#b48cf0;--nature:#9bd65f}\n')
 css = css.replace('{{TLCSS}}', tlcss)
 head = ('<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>惩戒骑 · 密谋小径</title>\n'

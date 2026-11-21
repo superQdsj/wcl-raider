@@ -229,33 +229,37 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
   .stages a{padding:7px 7px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-/* timeline (same as the gold rogue card) */
+/* timeline (shared single-track timeline) */
 .tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
 .tl-scroll{overflow-x:auto;padding-bottom:6px}
-.tl{position:relative;min-width:980px;height:232px}
+.tl{position:relative;min-width:884px;height:232px;margin:0 48px}
 .band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
-.band.trash{background:var(--panel-2);color:var(--faint);border:1px dashed var(--line)}
-.band.boss{background:rgba(217,171,82,.12);color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.band.trash{background:var(--panel-2);color:var(--mute);border:1px dashed var(--line)}
+.band.boss{background:var(--gold-band,rgba(217,171,82,.12));color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
 .axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
-.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:80px;z-index:1}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:96px;z-index:1}
 .mk .stem{width:2px;background:var(--gold)}
-.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:#000}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:var(--ic-edge,#000)}
 .mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
-.mk .t{font:500 11px var(--mono);color:var(--mute)}
-.mk.up{top:4px}
+.mk .t{font:500 11px/1.25 var(--mono);color:var(--mute)}
+.mk.up{bottom:148px}
 .mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
 .mk.dn{top:114px}
 .mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
 .mk.dn .stem{height:14px}
-.mk.v .stem{background:var(--shadow)}.mk.v img{border-color:var(--shadow)}
-.mk.e .stem{background:var(--nature)}.mk.e img{border-color:var(--nature)}
+.mk.v .stem{background:var(--tl-v,var(--shadow))}.mk.v img{border-color:var(--tl-v,var(--shadow))}
+.mk.e .stem{background:var(--tl-e,var(--nature))}.mk.e img{border-color:var(--tl-e,var(--nature))}
 .mk.muted .stem{background:var(--faint)}.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}.mk.muted .lab{color:var(--mute)}
-.mk.end{transform:translateX(-80%)}
 .legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+.legend i.pri{border:2px solid var(--gold);border-radius:50%}
+.legend i.e{border:2px solid var(--tl-e,var(--nature));border-radius:50%}
+.legend i.v{border:2px solid var(--tl-v,var(--shadow));border-radius:50%}
+.legend i.muted{border:2px solid var(--faint);border-radius:50%}
+.legend i.boss{background:var(--gold-band,rgba(217,171,82,.12));border:1px solid var(--gold-dim)}
+.legend i.trash{background:var(--panel-2);border:1px dashed var(--line)}
 
 .tl-card{--panel:var(--card);--panel-2:var(--bg2);--faint:var(--ink3);--gold-dim:var(--goldd);--mute:var(--ink2);--nature:var(--jade)}
-.tl-card .mk.start{transform:translateX(-22%)}
 #talent .tal-sub{color:var(--ink2);font-size:14px;margin:0 0 12px}
 #talent .code-row{display:flex;gap:10px;align-items:stretch;background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:12px}
 #talent code{flex:1;min-width:0;font:500 12.5px/1.5 var(--mono);color:var(--ink);word-break:break-all}
@@ -414,7 +418,7 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
   <div class="axis" style="left:62.36%">20:00</div>
   <div class="axis" style="left:77.95%">25:00</div>
   <div class="axis" style="left:93.55%">30:00</div>
-  <div class="mk up start" style="left:3.01%"><span class="lab">圣盾免疫旋风斩</span><span class="t">0:58</span><span class="stem"></span><img src="../icons/b3bb765fb8bc.jpg" alt=""></div>
+  <div class="mk up" style="left:3.01%"><span class="lab">圣盾免疫旋风斩</span><span class="t">0:58</span><span class="stem"></span><img src="../icons/b3bb765fb8bc.jpg" alt=""></div>
   <div class="mk dn" style="left:10.97%"><span class="lab">圣佑顶蛇之风</span><span class="t">3:31</span><span class="stem"></span><img src="../icons/39f85b6d2657.jpg" alt=""></div>
   <div class="mk up" style="left:17.73%"><span class="lab">圣佑顶蛇之风</span><span class="t">5:41</span><span class="stem"></span><img src="../icons/39f85b6d2657.jpg" alt=""></div>
   <div class="mk dn" style="left:24.51%"><span class="lab">牺牲接鲜血吸取</span><span class="t">7:51</span><span class="stem"></span><img src="../icons/011c0b335bf9.jpg" alt=""></div>
@@ -425,7 +429,7 @@ footer h4{margin:0 0 18px;font:600 13px/1 var(--sans);letter-spacing:.26em;color
   <div class="mk up e" style="left:65.38%"><span class="lab">盲目之光</span><span class="t">20:58</span><span class="stem"></span><img src="../icons/f8cb22a1bcc9.jpg" alt=""></div>
   <div class="mk dn muted" style="left:83.98%"><span class="lab">圣盾</span><span class="t">26:56</span><span class="stem"></span><img src="../icons/b3bb765fb8bc.jpg" alt=""></div>
   <div class="mk up" style="left:92.71%"><span class="lab">保护免疫震地之跃</span><span class="t">29:44</span><span class="stem"></span><img src="../icons/bdbd6a5f6061.jpg" alt=""></div>
-  <div class="mk dn end" style="left:96.44%"><span class="lab">牺牲＋圣盾保坦</span><span class="t">30:55</span><span class="stem"></span><img src="../icons/b3bb765fb8bc.jpg" alt=""></div>
+  <div class="mk dn" style="left:96.44%"><span class="lab">牺牲＋圣盾保坦</span><span class="t">30:55</span><span class="stem"></span><img src="../icons/b3bb765fb8bc.jpg" alt=""></div>
 </div>
       </div>
       <div class="legend">

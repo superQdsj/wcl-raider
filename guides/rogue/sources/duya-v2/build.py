@@ -4,7 +4,7 @@ Timeline: single track from r2 (pJqfFgYPNKaBmz1k#30, +24), made with guides/tool
 import json, os, re, sys
 H = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(H, '../../../tools'))
-from timeline import timeline
+from timeline import timeline, GOLD_TL_CSS
 
 BANDS = [  # r2 segments (evidence/segments.md)
     ('0:13', '6:13', '开场小怪', 'trash'),
@@ -29,6 +29,7 @@ MARKS = [  # r2 cloak / evasion times (evidence/uses.md)
 
 out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(H, '../../2026-11-15-毒牙祭坛-潜行者.html')
 s = open(os.path.join(H, 'head.part'), encoding='utf-8').read() + open(os.path.join(H, 'body.part'), encoding='utf-8').read()
+s = s.replace('{{TLCSS}}', GOLD_TL_CSS)
 s = s.replace('{{TIMELINE}}', timeline(29 * 60 + 40.6, BANDS, MARKS))
 s = s.replace('{{TALENT}}', json.load(open(os.path.join(H, 'tstring.json')))['string'])
 ic = json.load(open(os.path.join(H, 'icons.json')))

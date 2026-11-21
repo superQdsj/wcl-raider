@@ -7,7 +7,7 @@ from timeline import timeline, GOLD_TL_CSS
 
 # single track: reference run r1 (EU +22, 28:08, rL6J8cZhbHQ2zxVD#10) — has every technique on the page
 END = 28 * 60 + 8
-BANDS = [('0:13', '1:30', '开场小怪', 'trash'), ('1:30', '5:26', '阿德里斯与阿斯匹克斯', 'boss'),
+BANDS = [('0:13', '1:30', '开场', 'trash'), ('1:30', '5:26', '阿德里斯与阿斯匹克斯', 'boss'),
          ('5:36', '11:05', '毒蛇与三叶虫', 'trash'), ('11:10', '14:44', '米利克萨', 'boss'),
          ('14:50', '17:19', '雷云', 'trash'), ('17:26', '20:57', '加瓦兹特', 'boss'),
          ('21:13', '24:51', '宝珠守望者', 'trash'), ('24:53', '28:02', '塞塔里斯的化身', 'boss')]
@@ -20,7 +20,7 @@ MARKS = [('0:40.7', '', 198589, '疾影接震地'), ('1:42.7', '', 198589, '疾�
 
 css = open(os.path.join(H, 'head.part'), encoding='utf-8').read()
 tlcss = (GOLD_TL_CSS.replace('rgba(242,210,75,', 'rgba(163,48,201,')
-         + '.mk.start{transform:translateX(-22%)}\n:root{--shadow:#5fc6d6;--nature:#9bd65f}\n')
+         + ':root{--shadow:#5fc6d6;--nature:#9bd65f}\n')
 css = css.replace('{{TLCSS}}', tlcss)
 head = ('<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>噬灭恶魔猎手 · 塞塔里斯神庙</title>\n'

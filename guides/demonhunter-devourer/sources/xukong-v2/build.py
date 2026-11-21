@@ -8,7 +8,7 @@ from timeline import timeline, GOLD_TL_CSS
 # single track: reference run r1 (US +22, 26:24, hCfbYtnyc1aRvzrZ#45; same player as the talent string)
 END = 26 * 60 + 20
 BANDS = [('0:15', '2:38', '开场小怪', 'trash'), ('2:42', '6:13', '几丁高斯', 'trash'),
-         ('6:20', '9:47', '塔兹拉尔', 'boss'), ('9:59', '11:54', '萨满 · 掠心者', 'trash'),
+         ('6:20', '9:47', '塔兹拉尔', 'boss'), ('9:59', '11:54', '掠心者', 'trash'),
          ('12:04', '15:02', '阿特洛苏斯', 'boss'), ('15:14', '23:02', '虹虚魔 · 残虐者', 'trash'),
          ('23:02', '26:18', '煞戎努斯', 'boss')]
 MARKS = [('0:29.2', 'e', 183752, '断挫志怒吼'), ('4:30.2', '', 198589, '疾影接险恶光环'),
@@ -20,7 +20,7 @@ MARKS = [('0:29.2', 'e', 183752, '断挫志怒吼'), ('4:30.2', '', 198589, '疾
 
 css = open(os.path.join(H, 'head.part'), encoding='utf-8').read()
 tlcss = (GOLD_TL_CSS.replace('rgba(242,210,75,', 'rgba(163,48,201,')
-         + '.mk.start{transform:translateX(-22%)}\n:root{--shadow:#5fc6d6;--nature:#9bd65f}\n')
+         + ':root{--shadow:#5fc6d6;--nature:#9bd65f}\n')
 css = css.replace('{{TLCSS}}', tlcss)
 head = ('<!DOCTYPE html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>噬灭恶魔猎手 · 虚空之痕竞技场</title>\n'

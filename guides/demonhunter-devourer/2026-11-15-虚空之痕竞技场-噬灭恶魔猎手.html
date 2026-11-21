@@ -50,31 +50,35 @@ h1 .dot{color:var(--faint);margin:0 .2em}
 .chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mute)}
 .chip b{color:var(--ink);font-weight:500}
 
-/* timeline (same as the gold rogue card) */
+/* timeline (shared single-track timeline) */
 .tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
 .tl-scroll{overflow-x:auto;padding-bottom:6px}
-.tl{position:relative;min-width:980px;height:232px}
+.tl{position:relative;min-width:884px;height:232px;margin:0 48px}
 .band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
-.band.trash{background:var(--panel-2);color:var(--faint);border:1px dashed var(--line)}
-.band.boss{background:rgba(163,48,201,.12);color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.band.trash{background:var(--panel-2);color:var(--mute);border:1px dashed var(--line)}
+.band.boss{background:var(--gold-band,rgba(163,48,201,.12));color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
 .axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
-.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:80px;z-index:1}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:96px;z-index:1}
 .mk .stem{width:2px;background:var(--gold)}
-.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:#000}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:var(--ic-edge,#000)}
 .mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
-.mk .t{font:500 11px var(--mono);color:var(--mute)}
-.mk.up{top:4px}
+.mk .t{font:500 11px/1.25 var(--mono);color:var(--mute)}
+.mk.up{bottom:148px}
 .mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
 .mk.dn{top:114px}
 .mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
 .mk.dn .stem{height:14px}
-.mk.v .stem{background:var(--shadow)}.mk.v img{border-color:var(--shadow)}
-.mk.e .stem{background:var(--nature)}.mk.e img{border-color:var(--nature)}
+.mk.v .stem{background:var(--tl-v,var(--shadow))}.mk.v img{border-color:var(--tl-v,var(--shadow))}
+.mk.e .stem{background:var(--tl-e,var(--nature))}.mk.e img{border-color:var(--tl-e,var(--nature))}
 .mk.muted .stem{background:var(--faint)}.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}.mk.muted .lab{color:var(--mute)}
-.mk.end{transform:translateX(-80%)}
 .legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
-.mk.start{transform:translateX(-22%)}
+.legend i.pri{border:2px solid var(--gold);border-radius:50%}
+.legend i.e{border:2px solid var(--tl-e,var(--nature));border-radius:50%}
+.legend i.v{border:2px solid var(--tl-v,var(--shadow));border-radius:50%}
+.legend i.muted{border:2px solid var(--faint);border-radius:50%}
+.legend i.boss{background:var(--gold-band,rgba(163,48,201,.12));border:1px solid var(--gold-dim)}
+.legend i.trash{background:var(--panel-2);border:1px dashed var(--line)}
 :root{--shadow:#5fc6d6;--nature:#9bd65f}
 
 /* key moments */
@@ -245,7 +249,7 @@ footer{padding:40px 0 56px;color:var(--faint);font-size:12px}
   <div class="band trash" style="left:0.95%;width:9.05%">开场小怪</div>
   <div class="band trash" style="left:10.25%;width:13.35%">几丁高斯</div>
   <div class="band boss" style="left:24.05%;width:13.10%">塔兹拉尔</div>
-  <div class="band trash" style="left:37.91%;width:7.28%">萨满 · 掠心者</div>
+  <div class="band trash" style="left:37.91%;width:7.28%">掠心者</div>
   <div class="band boss" style="left:45.82%;width:11.27%">阿特洛苏斯</div>
   <div class="band trash" style="left:57.85%;width:29.62%">虹虚魔 · 残虐者</div>
   <div class="band boss" style="left:87.47%;width:12.41%">煞戎努斯</div>
@@ -255,7 +259,7 @@ footer{padding:40px 0 56px;color:var(--faint);font-size:12px}
   <div class="axis" style="left:56.96%">15:00</div>
   <div class="axis" style="left:75.95%">20:00</div>
   <div class="axis" style="left:94.94%">25:00</div>
-  <div class="mk up e start" style="left:1.85%"><span class="lab">断挫志怒吼</span><span class="t">0:29</span><span class="stem"></span><img src="../icons/ed7a0a9a5fe5.jpg" alt=""></div>
+  <div class="mk up e" style="left:1.85%"><span class="lab">断挫志怒吼</span><span class="t">0:29</span><span class="stem"></span><img src="../icons/ed7a0a9a5fe5.jpg" alt=""></div>
   <div class="mk dn" style="left:17.10%"><span class="lab">疾影接险恶光环</span><span class="t">4:30</span><span class="stem"></span><img src="../icons/5fcc6da2042f.jpg" alt=""></div>
   <div class="mk up" style="left:24.86%"><span class="lab">疾影接空灵冲刺</span><span class="t">6:32</span><span class="stem"></span><img src="../icons/5fcc6da2042f.jpg" alt=""></div>
   <div class="mk dn e" style="left:39.24%"><span class="lab">新星停熔岩箭</span><span class="t">10:20</span><span class="stem"></span><img src="../icons/9e354daffd5d.jpg" alt=""></div>
@@ -265,7 +269,7 @@ footer{padding:40px 0 56px;color:var(--faint);font-size:12px}
   <div class="mk dn v" style="left:68.26%"><span class="lab">影遁甩虚空光束</span><span class="t">17:58</span><span class="stem"></span><img src="../icons/a118b38b48c5.jpg" alt=""></div>
   <div class="mk up e" style="left:72.23%"><span class="lab">断熔岩箭</span><span class="t">19:01</span><span class="stem"></span><img src="../icons/ed7a0a9a5fe5.jpg" alt=""></div>
   <div class="mk dn e" style="left:81.44%"><span class="lab">断愈体虚空</span><span class="t">21:26</span><span class="stem"></span><img src="../icons/ed7a0a9a5fe5.jpg" alt=""></div>
-  <div class="mk up end" style="left:95.63%"><span class="lab">疾影接星辰坠击</span><span class="t">25:11</span><span class="stem"></span><img src="../icons/5fcc6da2042f.jpg" alt=""></div>
+  <div class="mk up" style="left:95.63%"><span class="lab">疾影接星辰坠击</span><span class="t">25:11</span><span class="stem"></span><img src="../icons/5fcc6da2042f.jpg" alt=""></div>
 </div>
     </div>
     <div class="legend">

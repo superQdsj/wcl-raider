@@ -50,31 +50,35 @@ h1 .dot{color:var(--faint);margin:0 .2em}
 .chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mute)}
 .chip b{color:var(--ink);font-weight:500}
 
-/* timeline (same as the gold rogue card) */
+/* timeline (shared single-track timeline) */
 .tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
 .tl-scroll{overflow-x:auto;padding-bottom:6px}
-.tl{position:relative;min-width:980px;height:232px}
+.tl{position:relative;min-width:884px;height:232px;margin:0 48px}
 .band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
-.band.trash{background:var(--panel-2);color:var(--faint);border:1px dashed var(--line)}
-.band.boss{background:rgba(163,48,201,.12);color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.band.trash{background:var(--panel-2);color:var(--mute);border:1px dashed var(--line)}
+.band.boss{background:var(--gold-band,rgba(163,48,201,.12));color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
 .axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
-.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:80px;z-index:1}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:96px;z-index:1}
 .mk .stem{width:2px;background:var(--gold)}
-.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:#000}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:var(--ic-edge,#000)}
 .mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
-.mk .t{font:500 11px var(--mono);color:var(--mute)}
-.mk.up{top:4px}
+.mk .t{font:500 11px/1.25 var(--mono);color:var(--mute)}
+.mk.up{bottom:148px}
 .mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
 .mk.dn{top:114px}
 .mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
 .mk.dn .stem{height:14px}
-.mk.v .stem{background:var(--shadow)}.mk.v img{border-color:var(--shadow)}
-.mk.e .stem{background:var(--nature)}.mk.e img{border-color:var(--nature)}
+.mk.v .stem{background:var(--tl-v,var(--shadow))}.mk.v img{border-color:var(--tl-v,var(--shadow))}
+.mk.e .stem{background:var(--tl-e,var(--nature))}.mk.e img{border-color:var(--tl-e,var(--nature))}
 .mk.muted .stem{background:var(--faint)}.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}.mk.muted .lab{color:var(--mute)}
-.mk.end{transform:translateX(-80%)}
 .legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
-.mk.start{transform:translateX(-22%)}
+.legend i.pri{border:2px solid var(--gold);border-radius:50%}
+.legend i.e{border:2px solid var(--tl-e,var(--nature));border-radius:50%}
+.legend i.v{border:2px solid var(--tl-v,var(--shadow));border-radius:50%}
+.legend i.muted{border:2px solid var(--faint);border-radius:50%}
+.legend i.boss{background:var(--gold-band,rgba(163,48,201,.12));border:1px solid var(--gold-dim)}
+.legend i.trash{background:var(--panel-2);border:1px dashed var(--line)}
 :root{--shadow:#5fc6d6;--nature:#9bd65f}
 
 /* key moments */
@@ -256,7 +260,7 @@ footer{padding:40px 0 56px;color:var(--faint);font-size:12px}
   <div class="axis" style="left:56.78%">15:00</div>
   <div class="axis" style="left:75.71%">20:00</div>
   <div class="axis" style="left:94.64%">25:00</div>
-  <div class="mk up start" style="left:2.05%"><span class="lab">疾影接拔根而起</span><span class="t">0:32</span><span class="stem"></span><img src="../icons/5fcc6da2042f.jpg" alt=""></div>
+  <div class="mk up" style="left:2.05%"><span class="lab">疾影接拔根而起</span><span class="t">0:32</span><span class="stem"></span><img src="../icons/5fcc6da2042f.jpg" alt=""></div>
   <div class="mk dn e" style="left:7.25%"><span class="lab">新星停光箭雨</span><span class="t">1:54</span><span class="stem"></span><img src="../icons/9e354daffd5d.jpg" alt=""></div>
   <div class="mk up" style="left:22.83%"><span class="lab">疾影接荆棘之刃</span><span class="t">6:01</span><span class="stem"></span><img src="../icons/5fcc6da2042f.jpg" alt=""></div>
   <div class="mk dn e" style="left:26.94%"><span class="lab">断光芒箭</span><span class="t">7:07</span><span class="stem"></span><img src="../icons/ed7a0a9a5fe5.jpg" alt=""></div>
