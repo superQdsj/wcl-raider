@@ -3,7 +3,7 @@
 2026-11-08 起改为两段式（便宜模型固定采集 + 主会话亲自分析写作）；现行攻略面向 **DPS 专精**，唯一制作标准见 **`guides/tools/GUIDE-SPEC.md`**，完整可触发工作流见项目 skill **`.agents/skills/dps-guide/SKILL.md`**，唯一样板页在 `guides/rogue/sources/duya-sample/`。
 
 1. **采集（Haiku 子代理）**：选 5 场录像，跑 `evidence.py`，得到确定性计算后的证据包。数据工具优先使用 WCL v1 API（`WCL_V1_API_KEY`），未配置时自动回退 v2（配置见根目录 `README.md`）。
-2. **写作与验收（主会话亲自做）**：读证据包 → `scaffold.py` 建骨架 → `enc.py` 编天赋 → 按 `GUIDE-SPEC.md` 写页面 → `build.py`（自动外链并补拉缺失图标）→ 跑 `check.py` 0 error + 4 问实战逻辑自检。只交付 HTML，不出 PNG 长图、不截图、不管手机宽度。
+2. **写作与验收（主会话亲自做）**：读证据包 → `scaffold.py` 建骨架 → `enc.py` 编天赋 → 按 `GUIDE-SPEC.md` 写页面 → `build.py`（自动外链并补拉缺失图标）→ 跑 `check.py` 0 error + 6 问实战逻辑自检。只交付 HTML，不出 PNG 长图、不截图、不管手机宽度。
 
 为什么要先算成表：第一次试做时，Haiku 交的是整场原始事件 Markdown，主会话为了做窗口内外对比跑了 43 轮 grep 和 Python。`evidence.py` 把这类确定性计算一次做完。
 
@@ -24,14 +24,14 @@
 | 输出 | 内容 |
 | --- | --- |
 | `compare.md` | 本玩家承伤按防御窗口分组（直击与跳伤自动拆分），含玩家最大血量与占血量%，以及敌方每次施放后的命中比例。先看这个 |
-| `uses.md` | 每次防御技能和低频技能的使用情境（已排除同刻由本技能挂上的减益如自律） |
-| `interrupts.md` | 本玩家打断/驱散汇总 + 敌方主要技能读条形态（区分可断读条 vs 无读条瞬发引导） |
+| `uses.md` | 每次防御/低频技能的使用情境（含前 3 秒承伤、后 4 秒窗口承伤/零伤、保人队友 -3/+4 秒承伤；已排除同刻自挂减益如自律） |
+| `interrupts.md` | 本玩家与全队打断汇总、本玩家驱散汇总 + 敌方读条/中止/全队打断形态（区分可断读条 vs 可断引导 vs 无读条未见打断） |
 | `team.md` | 全队承伤，按波次 × 敌方技能，含同一时刻几名玩家一起吃（判断分摊或 AOE） |
-| `debuffs.md` | 本玩家身上的减益和消失前后 0.5 秒内的低频技能（含打断/控制） |
+| `debuffs.md` | 本玩家减益与消失关联 + 全队敌方减益（含场均目标与职责分布）+ 敌方关键增益（减伤/免疫/激怒） |
 | `segments.md` | 波次时间表（首领名自动回退）+ 首领战内关键减益相对开打时间（`+Xs`） |
-| `spells.md` | 相关技能的 Wowhead 说明（覆盖 `defensives`/`always` 玩家冷却与天赋改写，以及敌方伤害/非伤害机制） |
+| `spells.md` | 玩家核心技能 5 场实测最短施放间隔 + Wowhead 技能说明（基础冷却、天赋改写及敌方伤害/非伤害机制） |
 | `talents.json` | 五人的天赋原始数据（有的报告没有记录） |
-| `raw/*.json` | 原始事件（含 `interrupts`/`dispels`）；`run<N>_names.json` 是单位和技能 ID 到名字的对照 |
+| `raw/*.json` | 原始事件（含 `team_interrupts`/`team_debuffs`/`enemy_buffs`）；`run<N>_names.json` 是单位和技能 ID 对照 |
 
 职业配置 `classes/<专精>.json` 写防御技能（施法 ID、增益 ID、兜底持续秒数）和必列低频技能 `always`（打断、控制、保人、位移）。新 DPS 专精照 `rogue.json` / `paladin-ret.json` 写一份。
 

@@ -4,13 +4,13 @@
 不做判断，只做确定性的计算：
   compare.md     每个敌方技能打到本玩家时，按「当时开着哪些防御技能」分组（直击与跳伤自动拆分）
                  含玩家最大生命值与占血量%，以及「敌方每次施放后本玩家有没有被打到」命中率
-  uses.md        本玩家每次使用防御技能和低频技能的情境（排除同刻由本技能挂上的减益如自律）
-  interrupts.md  本玩家打断与驱散汇总，以及主要敌方技能是否有读条（区分可断读条 vs 瞬发引导）
+  uses.md        本玩家每次使用防御/低频技能的情境（含前3秒承伤 + 后4秒窗口承伤/免疫 + 保人队友±3秒承伤；
+                 已排除同刻自挂减益如自律）
+  interrupts.md  本玩家与全队打断汇总、本玩家驱散汇总，以及主要敌方技能读条/中止/全队打断形态（区分可断读条 vs 可断引导 vs 瞬发）
   team.md        全队承伤：按波次 × 敌方技能，含同刻多人吃（分摊/AOE 信号）
-  debuffs.md     本玩家身上的减益：次数、平均持续、消失前后 0.5 秒内低频技能（含打断/控制）
+  debuffs.md     本玩家减益 + 全队关键减益（含治疗锁定/队友点名）+ 敌方关键增益（减伤/免疫/激怒）
   segments.md    波次时间表（首领名回退到波次名）+ 首领战内关键机制相对开打时间（+Xs）
-  spells.md      Wowhead 技能说明：覆盖防御/always 技能（含基础冷却、充能与天赋改写冷却）与
-                 敌方伤害/非伤害读条/减益机制
+  spells.md      玩家核心技能 5 场实测最短施放间隔 + Wowhead 技能说明（基础冷却、充能、天赋改写及敌方非伤害机制）
   talents.json   本玩家的天赋原始数据（playerDetails includeCombatantInfo）
   raw/           原始事件 JSON（需要时自己再算）
 
@@ -69,22 +69,34 @@ class RunData:
         self.pid, self.name = self.p.id, self.p.name
         self.cfg = cfg
         n = esc(self.name)
-        get = lambda **kw: data.events(run, limit=60000, **kw)[0]  # noqa: E731
-        self.casts = get(data_type="Casts", hostility="Friendlies", expr=f'source.name = "{n}"')
-        self.taken = get(data_type="DamageTaken", hostility="Friendlies", expr=f'target.name = "{n}"', include_resources=True)
-        self.team_taken = get(data_type="DamageTaken", hostility="Friendlies")
-        self.debuffs = get(data_type="Debuffs", hostility="Friendlies", expr=f'target.name = "{n}"')
+        self.truncated = []
+
+        def get(label, **kw):
+            evs, trunc = data.events(run, limit=60000, **kw)
+            if trunc:
+                self.truncated.append(f"{label}({len(evs)})")
+                print(f"[warn] r{idx} {label} 触发 60000 条截断，数据可能不完整", file=sys.stderr)
+            return evs
+
+        self.casts = get("casts", data_type="Casts", hostility="Friendlies", expr=f'source.name = "{n}"')
+        self.taken = get("taken", data_type="DamageTaken", hostility="Friendlies", expr=f'target.name = "{n}"', include_resources=True)
+        self.team_taken = get("team_taken", data_type="DamageTaken", hostility="Friendlies")
+        self.debuffs = get("debuffs", data_type="Debuffs", hostility="Friendlies", expr=f'target.name = "{n}"')
         buff_ids = sorted({b for d in cfg["defensives"] for b in d.get("buff", [d["cast"]])})
-        self.buffs = get(data_type="Buffs", hostility="Friendlies",
+        self.buffs = get("buffs", data_type="Buffs", hostility="Friendlies",
                          expr=f'target.name = "{n}" and ability.id in ({",".join(map(str, buff_ids))})')
-        self.enemy = get(data_type="Casts", hostility="Enemies")
-        self.interrupts = get(data_type="Interrupts", hostility="Friendlies", expr=f'source.name = "{n}"')
-        self.dispels = get(data_type="Dispels", hostility="Friendlies", expr=f'source.name = "{n}"')
+        self.enemy = get("enemy", data_type="Casts", hostility="Enemies")
+        self.interrupts = get("interrupts", data_type="Interrupts", hostility="Friendlies", expr=f'source.name = "{n}"')
+        self.team_interrupts = get("team_interrupts", data_type="Interrupts", hostility="Friendlies")
+        self.dispels = get("dispels", data_type="Dispels", hostility="Friendlies", expr=f'source.name = "{n}"')
+        self.team_debuffs = get("team_debuffs", data_type="Debuffs", hostility="Friendlies")
+        self.enemy_buffs = get("enemy_buffs", data_type="Buffs", hostility="Enemies")
         names = {"actors": {a: v.get("name") for a, v in run.actors.items()},
                  "abilities": {g: v.get("name") for g, v in run.abilities.items()},
                  "fight_start": run.start}
         (raw_dir / f"run{idx}_names.json").write_text(json.dumps(names, ensure_ascii=False))
-        for k in ("casts", "taken", "team_taken", "debuffs", "buffs", "enemy", "interrupts", "dispels"):
+        for k in ("casts", "taken", "team_taken", "debuffs", "buffs", "enemy",
+                  "interrupts", "team_interrupts", "dispels", "team_debuffs", "enemy_buffs"):
             (raw_dir / f"run{idx}_{k}.json").write_text(json.dumps(getattr(self, k), ensure_ascii=False))
         self.windows = self._windows()
         hps = [e.get("maxHitPoints") for e in self.taken if e.get("maxHitPoints")]
@@ -115,7 +127,8 @@ class RunData:
         return out
 
     def active(self, ts: float) -> str:
-        names = sorted({n for n, a, b in self.windows if a <= ts <= b})
+        # 左闭右开 [a, b)：避免增益移除同毫秒落下的伤害（如圣盾结束同刻牺牲转伤）被误算在增益窗口内
+        names = sorted({n for n, a, b in self.windows if a <= ts < b})
         return "+".join(names) or "无"
 
     def t(self, ts):
@@ -151,17 +164,27 @@ def compare_md(runs):
         "",
         hp_note,
         "口径：伤害 = 实际掉血 + 吸收量；同时含直击和持续跳伤的技能自动拆分为 `[直击]` 与 `[跳伤]` 两张表。",
-        "每格：命中次数 · 0伤害/未命中(类型) · 有伤害平均（占最大血量%）· 最大 · 涉及场次。\"无\"=对照组。",
+        "每格：命中次数 · 0伤害/未命中(类型) · 有伤害平均（占最大血量%）· 最大 · 涉及场次 · 开启偏移（减伤相对本波该机制首次伤害的开启时间，≤0s 为预开，>0s 为落地后/中后段补开）。\"无\"=对照组。",
         "只列总命中≥3 或在任一防御窗口内出现过的敌方技能，按总伤害排序。",
         "",
     ]
 
-    # 检测每个技能 ID 是否同时存在直击与 tick 跳伤
+    # 检测每个技能 ID 是否同时存在直击与 tick 跳伤，并计算每次承伤所属波段(episode)的首次伤害时间
     kinds_by_gid = defaultdict(set)
+    ep_start: dict[tuple[int, int], float] = {}  # (rd.idx, id(e)) -> episode_start_ts
     for rd in runs:
+        last_ts: dict[int, float] = {}
+        cur_ep: dict[int, float] = {}
         for e in rd.taken:
-            if e.get("type") == "damage":
-                kinds_by_gid[e.get("abilityGameID")].add("tick" if e.get("tick") else "direct")
+            if e.get("type") != "damage":
+                continue
+            gid = e.get("abilityGameID")
+            kinds_by_gid[gid].add("tick" if e.get("tick") else "direct")
+            ts = e["timestamp"]
+            if gid not in last_ts or ts - last_ts[gid] > 6000:
+                cur_ep[gid] = ts
+            last_ts[gid] = ts
+            ep_start[(rd.idx, id(e))] = cur_ep[gid]
 
     by = defaultdict(lambda: defaultdict(list))  # key -> combo -> [(rd, e)]
     total = Counter()
@@ -175,14 +198,36 @@ def compare_md(runs):
             by[nm][rd.active(e["timestamp"])].append((rd, e))
             total[nm] += dmg(e)
 
+    def _onset_note(combo: str, evs) -> str:
+        if combo == "无":
+            return "—"
+        combo_parts = set(combo.split("+"))
+        seen_act = {}  # (rd.idx, ep_ts) -> earliest offset_s
+        for rd, e in evs:
+            ep_ts = ep_start.get((rd.idx, id(e)), e["timestamp"])
+            ts = e["timestamp"]
+            starts = [a for n, a, b in rd.windows if n in combo_parts and a <= ts < b]
+            if not starts:
+                continue
+            off = (min(starts) - ep_ts) / 1000.0
+            key = (rd.idx, ep_ts)
+            if key not in seen_act or off < seen_act[key]:
+                seen_act[key] = off
+        if not seen_act:
+            return "—"
+        offs = sorted(seen_act.values())
+        pre = sum(1 for x in offs if x <= 0.3)
+        med = offs[len(offs) // 2]
+        return f"预开{pre}/{len(offs)} · 中位{med:+.1f}s"
+
     for nm, _ in total.most_common():
         combos = by[nm]
         n = sum(len(v) for v in combos.values())
         if n < 3 and set(combos) == {"无"}:
             continue
         lines.append(f"## {nm} — 共 {n} 次，总 {wan(total[nm])}")
-        lines.append("| 当时开着 | 命中 | 0伤害/未命中 | 有伤害平均 | 占血量 | 最大 | 场次 |")
-        lines.append("|---|---|---|---|---|---|---|")
+        lines.append("| 当时开着 | 命中 | 0伤害/未命中 | 有伤害平均 | 占血量 | 最大 | 场次 | 开启偏移 |")
+        lines.append("|---|---|---|---|---|---|---|---|")
         for combo, evs in sorted(combos.items(), key=lambda kv: (kv[0] != "无", -len(kv[1]))):
             zero = [e for _, e in evs if dmg(e) == 0]
             kinds = Counter(HIT_LABEL.get(e.get("hitType"), f"hit{e.get('hitType')}") for e in zero)
@@ -193,7 +238,8 @@ def compare_md(runs):
             mx = wan(max(pos)) if pos else "—"
             rs = "/".join(f"r{r}" for r in sorted({rd.idx for rd, _ in evs}))
             zs = f"{len(zero)}（{'、'.join(f'{k}{v}' for k, v in kinds.items())}）" if zero else "0"
-            lines.append(f"| {combo} | {len(evs)} | {zs} | {avg} | {hp_pct} | {mx} | {rs} |")
+            onset = _onset_note(combo, evs)
+            lines.append(f"| {combo} | {len(evs)} | {zs} | {avg} | {hp_pct} | {mx} | {rs} | {onset} |")
         lines.append("")
 
     # 每次敌方施放后有没有打到本玩家
@@ -232,7 +278,7 @@ def uses_md(runs, defensive_names, always=()):
     lines = [
         "# 本玩家技能使用情境",
         "",
-        "每行：时间 波次 技能 → 目标 | 前4秒/后2秒敌方读条或施放 | 前3秒吃到的伤害 | 使用前身上已有减益（已排除本技能同刻挂上的减益如自律） | 使用后0.5秒内消失的减益",
+        "每行：时间 波次 技能 → 目标 | 前4秒/后2秒敌方读条或施放 | 前3秒承伤 | 后4秒窗口承伤/零伤（含免疫/吸收/未命中；给队友时附队友-3/+4秒承伤） | 使用前已有减益（已排除本技能同刻自挂减益如自律） | 使用后0.5秒内消失的减益",
         "",
     ]
     for rd in runs:
@@ -247,6 +293,7 @@ def uses_md(runs, defensive_names, always=()):
                 continue
             ts = e["timestamp"]
             tgt = e.get("targetID")
+            is_ally = bool(tgt and tgt != rd.pid and tgt != -1 and tgt in rd.run.players)
             tgt_s = f" → {rd.run.actor_name(tgt, e.get('targetInstance'))}" if tgt and tgt != rd.pid and tgt != -1 else ""
             ctx = []
             for x in rd.enemy:
@@ -255,10 +302,39 @@ def uses_md(runs, defensive_names, always=()):
                     s = f"{ab(rd, x.get('abilityGameID'))}{tag}{(x['timestamp'] - ts) / 1000:+.1f}"
                     if s not in ctx:
                         ctx.append(s)
-            hits = Counter()
+            hits_pre = Counter()
+            hits_post = Counter()
+            imm_post = Counter()
             for x in rd.taken:
-                if x.get("type") == "damage" and ts - 3000 <= x["timestamp"] <= ts:
-                    hits[ab(rd, x.get("abilityGameID"))] += dmg(x)
+                if x.get("type") != "damage":
+                    continue
+                xts = x["timestamp"]
+                if ts - 3000 <= xts < ts:
+                    hits_pre[ab(rd, x.get("abilityGameID"))] += dmg(x)
+                elif ts <= xts <= ts + 4000:
+                    k = ab(rd, x.get("abilityGameID"))
+                    v = dmg(x)
+                    if v > 0:
+                        hits_post[k] += v
+                    else:
+                        imm_post[k] += 1
+            post_parts = [f"{k}{wan(v)}" for k, v in hits_post.most_common(3)]
+            post_parts += [f"{k}零伤×{c}" for k, c in imm_post.most_common(3)]
+            if is_ally:
+                ally_pre = Counter()
+                ally_post = Counter()
+                for x in rd.team_taken:
+                    if x.get("type") != "damage" or x.get("targetID") != tgt:
+                        continue
+                    xts = x["timestamp"]
+                    if ts - 3000 <= xts < ts:
+                        ally_pre[ab(rd, x.get("abilityGameID"))] += dmg(x)
+                    elif ts <= xts <= ts + 4000:
+                        ally_post[ab(rd, x.get("abilityGameID"))] += dmg(x)
+                if ally_pre:
+                    post_parts.append("队友前3s:" + "/".join(f"{k}{wan(v)}" for k, v in ally_pre.most_common(2)))
+                if ally_post:
+                    post_parts.append("队友后4s:" + "/".join(f"{k}{wan(v)}" for k, v in ally_post.most_common(2)))
             state_before = {}
             gone = []
             for x in rd.debuffs:
@@ -276,7 +352,8 @@ def uses_md(runs, defensive_names, always=()):
             on = [k for k, v in state_before.items() if v and k not in LONG_DEBUFFS]
             lines.append(
                 f"- {rd.t(ts)} {rd.seg(ts)} **{name}**{tgt_s} | {'、'.join(ctx[:8]) or '—'} | "
-                f"{'、'.join(f'{k}{wan(v)}' for k, v in hits.most_common(3)) or '—'} | "
+                f"{'、'.join(f'{k}{wan(v)}' for k, v in hits_pre.most_common(3)) or '—'} | "
+                f"{'、'.join(post_parts) or '—'} | "
                 f"{'、'.join(sorted(set(on))) or '—'} | {'、'.join(gone) or '—'}"
             )
         lines.append("")
@@ -285,7 +362,7 @@ def uses_md(runs, defensive_names, always=()):
 
 def interrupts_md(runs):
     lines = [
-        "# 打断、驱散与敌方施法形态（是否含读条）",
+        "# 打断、驱散与敌方施法形态（区分可断读条 / 可断引导 / 瞬发）",
         "",
         "## 本玩家打断汇总（按被打断的敌方技能）",
         "",
@@ -309,7 +386,36 @@ def interrupts_md(runs):
             ms = "、".join(f"{m}×{c}" for m, c in mobs.most_common(3))
             lines.append(f"| {k} | {cnt} | {rs} | {ms} |")
     else:
-        lines.append("（五场均无打断记录）")
+        lines.append("（五场均无本玩家打断记录）")
+    lines.append("")
+
+    lines += ["## 全队打断汇总（识别队友断过、本玩家未断的可断技能）", ""]
+    team_int_stat = defaultdict(lambda: [0, set(), Counter()])
+    team_int_by_k = Counter()
+    for rd in runs:
+        src_list = getattr(rd, "team_interrupts", None)
+        if src_list is None:
+            src_list = rd.interrupts
+        for e in src_list:
+            egid = e.get("extraAbilityGameID")
+            if not egid:
+                continue
+            k = f"{ab(rd, egid)}({egid})"
+            team_int_stat[k][0] += 1
+            team_int_stat[k][1].add(rd.idx)
+            team_int_by_k[k] += 1
+            tgt = rd.run.actor_name(e.get("targetID"), e.get("targetInstance"))
+            team_int_stat[k][2][tgt.split("#")[0]] += 1
+    if team_int_stat:
+        lines.append("| 被打断技能 | 全队次数 | 涉及场次 | 本玩家次数 | 主要施法怪 |")
+        lines.append("|---|---|---|---|---|")
+        for k, (cnt, rset, mobs) in sorted(team_int_stat.items(), key=lambda kv: (-len(kv[1][1]), -kv[1][0])):
+            rs = "/".join(f"r{r}" for r in sorted(rset))
+            ms = "、".join(f"{m}×{c}" for m, c in mobs.most_common(3))
+            my_cnt = int_stat[k][0] if k in int_stat else 0
+            lines.append(f"| {k} | {cnt} | {rs} | {my_cnt} | {ms} |")
+    else:
+        lines.append("（五场均无全队打断记录）")
     lines.append("")
 
     lines += ["## 本玩家驱散汇总（按被驱散的减益）", ""]
@@ -335,11 +441,11 @@ def interrupts_md(runs):
         lines.append("（五场均无驱散记录）")
     lines.append("")
 
-    # 敌方施法形态：区分有 begincast（读条）和仅 cast 无 begincast（瞬发或瞬发引导，常规打断无法断读条）
+    # 敌方施法形态：结合 begincast、cast、中止差值与全队打断记录，区分可断读条 / 可断引导 / 不可断瞬发
     lines += [
-        "## 敌方主要技能读条形态（区分可断读条 vs 瞬发/引导）",
+        "## 敌方主要技能读条形态（区分可断读条 / 可断引导 / 瞬发）",
         "",
-        "仅 `cast` 无 `begincast` 的高频引导技（如箭雨）常规打断无法打断，需看 `debuffs.md` 是否可用群控/硬控停掉。",
+        "注意：WCL 中**可断引导技**（如愈体虚空）也是 `begincast=0, cast>0`，需结合「全队打断」列区分「可断引导」与「瞬发/不可断引导」（如箭雨，常规打断断不了、需看 `debuffs.md` 硬控停）。",
         "",
     ]
     cast_forms = defaultdict(lambda: [0, 0])  # label -> [begincast, cast]
@@ -353,12 +459,23 @@ def interrupts_md(runs):
                 cast_forms[k][0] += 1
             elif e.get("type") == "cast":
                 cast_forms[k][1] += 1
-    top_casts = sorted(cast_forms.items(), key=lambda kv: -(kv[1][0] + kv[1][1]))[:45]
-    lines.append("| 敌方技能 | begincast(读条) | cast(施放) | 形态提示 |")
-    lines.append("|---|---|---|---|")
+    top_casts = sorted(cast_forms.items(), key=lambda kv: -(kv[1][0] + kv[1][1]))[:50]
+    lines.append("| 敌方技能 | begincast(读条) | cast(施放) | 中止(读-放) | 全队打断 | 形态提示 |")
+    lines.append("|---|---|---|---|---|---|")
     for k, (bc, cs) in top_casts:
-        hint = "有读条" if bc > 0 else "无读条（瞬发/引导）"
-        lines.append(f"| {k} | {bc} | {cs} | {hint} |")
+        aborted = max(0, bc - cs)
+        t_int = team_int_by_k.get(k, 0)
+        if bc == 0 and t_int > 0:
+            hint = "可断引导（立即断）"
+        elif bc > 0 and t_int > 0:
+            hint = "可断读条"
+        elif bc > 0 and aborted > 0:
+            hint = "有读条（有中止，核查能否打断/控停）"
+        elif bc > 0:
+            hint = "有读条（未见打断）"
+        else:
+            hint = "无读条（瞬发/引导，未见打断，核查 debuffs.md 或 tooltip）"
+        lines.append(f"| {k} | {bc} | {cs} | {aborted} | {t_int} | {hint} |")
     return "\n".join(lines) + "\n"
 
 
@@ -429,6 +546,61 @@ def debuffs_md(runs):
             ns = "、".join(f"{a}×{b}" for a, b in near.most_common(4)) or "—"
             lines.append(f"- {k} · {n}次 · 均{tot / max(n, 1) / 1000:.1f}秒 · {ns}")
         lines.append("")
+
+    # 全队关键减益（仅敌方施加，排除玩家自挂减益；按场均目标数与职责分布统计）
+    ROLE_ZH = {"tank": "坦克", "healer": "治疗", "dps": "输出"}
+    tdeb = defaultdict(lambda: [0, set(), defaultdict(set), Counter()])  # label -> [count, runs, run->set(tid), roles]
+    for rd in runs:
+        players = set(rd.run.players)
+        for x in getattr(rd, "team_debuffs", []):
+            if x.get("type") not in ("applydebuff", "applydebuffstack"):
+                continue
+            tid = x.get("targetID")
+            sid = x.get("sourceID")
+            if tid not in players or (sid in players):
+                continue
+            nm = ab(rd, x.get("abilityGameID"))
+            if nm in LONG_DEBUFFS or nm == "自律":
+                continue
+            k = f"{nm}({x.get('abilityGameID')})"
+            tdeb[k][0] += 1
+            tdeb[k][1].add(rd.idx)
+            tdeb[k][2][rd.idx].add(tid)
+            p_obj = rd.run.players.get(tid) if isinstance(rd.run.players, dict) else None
+            role_s = ROLE_ZH.get(getattr(p_obj, "role", ""), "未知")
+            tdeb[k][3][role_s] += 1
+    if tdeb:
+        lines += ["## 全队敌方减益汇总（含治疗锁定/队友点名，前 35 项）", "",
+                  "| 减益 | 总施加次数 | 涉及场次 | 场均目标数 | 目标职责分布 |", "|---|---|---|---|---|"]
+        for k, (cnt, rset, per_run, roles) in sorted(tdeb.items(), key=lambda kv: (-len(kv[1][1]), -kv[1][0]))[:35]:
+            rs = "/".join(f"r{r}" for r in sorted(rset))
+            avg_t = sum(len(s) for s in per_run.values()) / max(len(rset), 1)
+            r_s = "、".join(f"{rk}×{rv}" for rk, rv in roles.most_common(3))
+            lines.append(f"| {k} | {cnt} | {rs} | {avg_t:.1f}人/场 | {r_s} |")
+        lines.append("")
+
+    # 敌方关键增益（捕捉如甲壳守护 75% 减伤、风暴祝福免疫、激怒等非伤害机制）
+    ebuf = defaultdict(lambda: [0, set(), Counter()])
+    for rd in runs:
+        for x in getattr(rd, "enemy_buffs", []):
+            if x.get("type") not in ("applybuff", "applybuffstack"):
+                continue
+            gid = x.get("abilityGameID")
+            if not gid or gid <= 1:
+                continue
+            k = f"{ab(rd, gid)}({gid})"
+            ebuf[k][0] += 1
+            ebuf[k][1].add(rd.idx)
+            mob = (rd.run.actor_name(x.get("targetID"), x.get("targetInstance")) or "").split("#")[0].strip() or "未知目标"
+            ebuf[k][2][mob] += 1
+    if ebuf:
+        lines += ["## 敌方关键增益汇总（减伤光环 / 免疫 / 激怒等，前 30 项）", "",
+                  "| 敌方增益 | 总施加次数 | 涉及场次 | 主要目标怪 |", "|---|---|---|---|"]
+        for k, (cnt, rset, mobs) in sorted(ebuf.items(), key=lambda kv: (-len(kv[1][1]), -kv[1][0]))[:30]:
+            rs = "/".join(f"r{r}" for r in sorted(rset))
+            ms = "、".join(f"{m}×{c}" for m, c in mobs.most_common(3))
+            lines.append(f"| {k} | {cnt} | {rs} | {ms} |")
+        lines.append("")
     return "\n".join(lines)
 
 
@@ -485,17 +657,58 @@ def spells_md(runs, cfg, client, tal_data=None):
                 ids[e.get("abilityGameID")] += 2 * 10 ** 5
         for e in rd.interrupts:
             ids[e.get("extraAbilityGameID")] += 3 * 10 ** 6
+        for e in getattr(rd, "team_interrupts", []):
+            ids[e.get("extraAbilityGameID")] += 10 ** 6
         for e in rd.dispels:
             ids[e.get("extraAbilityGameID")] += 3 * 10 ** 6
+        for e in getattr(rd, "team_debuffs", []):
+            if e.get("type") in ("applydebuff", "applydebuffstack"):
+                ids[e.get("abilityGameID")] += 5 * 10 ** 5
+        for e in getattr(rd, "enemy_buffs", []):
+            if e.get("type") in ("applybuff", "applybuffstack"):
+                ids[e.get("abilityGameID")] += 8 * 10 ** 5
 
-    top = [g for g, _ in ids.most_common(100) if g and g > 1]
+    top = [g for g, _ in ids.most_common(120) if g and g > 1]
     info = wowhead_spells(top, client.lang)
 
     # 收集天赋改写冷却里涉及的天赋技能 ID 名称，方便直接标出中文天赋名
     mod_ids = sorted({mid for i in info.values() for mid in (i.get("cooldown_mods") or {})})
     mod_info = wowhead_spells(mod_ids, client.lang) if mod_ids else {}
 
-    lines = ["# 技能说明（Wowhead，含玩家基础冷却与天赋改写冷却）", ""]
+    lines = ["# 技能说明（含玩家核心技能实测最短间隔 + Wowhead 冷却与非伤害机制）", ""]
+
+    # 玩家核心技能 5 场实测最短施放间隔（复核真实冷却，防止把首领轴距误当技能冷却）
+    core_ids = [d["cast"] for d in cfg["defensives"]] + [g for g in cfg.get("always", []) if g not in {d["cast"] for d in cfg["defensives"]}]
+    cd_rows = []
+    for gid in core_ids:
+        gaps = []
+        for rd in runs:
+            ts_list = sorted(e["timestamp"] for e in rd.casts if e.get("type") == "cast" and e.get("abilityGameID") == gid)
+            diffs = [(b - a) / 1000.0 for a, b in zip(ts_list, ts_list[1:]) if (b - a) >= 3000]
+            if diffs:
+                gaps.append((rd.idx, min(diffs)))
+        if not gaps:
+            continue
+        i = info.get(gid) or {}
+        nm = i.get("name") or ab(runs[0], gid)
+        gmin = min(v for _, v in gaps)
+        per_run = "、".join(f"r{r}:{v:.1f}s" for r, v in gaps)
+        wh_cd = _fmt_cd(i["cooldown_ms"]) if i.get("cooldown_ms") else "—"
+        if i.get("charges") and i["charges"] > 1:
+            wh_cd = f"{wh_cd}（{i['charges']}层充能）"
+        cd_rows.append(f"| {nm}（{gid}） | **{gmin:.1f}s** | {per_run} | {wh_cd} |")
+    if cd_rows:
+        lines += [
+            "## 本玩家核心技能实测最短施放间隔（复核真实冷却）",
+            "",
+            "注：多充能或带冷却重置/缩短天赋的技能，实测最短间隔会小于单层基础冷却，请结合下方 Wowhead 充能与改写条目核对。",
+            "",
+            "| 技能 | 全样本最短间隔 | 各场最短间隔(≥3s) | Wowhead 基础冷却/充能 |",
+            "|---|---|---|---|",
+            *cd_rows,
+            "",
+        ]
+
     for g in top:
         i = info.get(g)
         if not i:
@@ -514,8 +727,10 @@ def spells_md(runs, cfg, client, tal_data=None):
             )
             meta.append(f"天赋改写：{mods_s}")
         head = f"## {i['name']}（{g}）" + (f" · {' · '.join(meta)}" if meta else "")
-        body = (i.get("description") or "").replace("\n", " ")
+        body = (i.get("description") or "").replace("\n", " ").strip()
         aura = f" ‖ 效果：{i['aura']}".replace("\n", " / ") if i.get("aura") else ""
+        if not body and not aura:
+            body = "（Wowhead 缺效果说明，勿脑补）"
         lines.append(f"{head}\n{body}{aura}\n")
     return "\n".join(lines)
 
@@ -566,7 +781,11 @@ def main():
     (out / "segments.md").write_text(segments_md(runs))
     (out / "spells.md").write_text(spells_md(runs, cfg, client))
     tal = talents(runs, out)
-    rows = [f"r{rd.idx} | {rd.name} | {rd.run.header()} | {rd.run.url} | 防御窗口 {len(rd.windows)} 个" for rd in runs]
+    rows = [
+        f"r{rd.idx} | {rd.name} | {rd.run.header()} | {rd.run.url} | 防御窗口 {len(rd.windows)} 个"
+        + (f" | **截断警告：{', '.join(rd.truncated)}**" if getattr(rd, "truncated", None) else "")
+        for rd in runs
+    ]
     (out / "README.md").write_text(
         "# 证据包\n\n" + "\n".join(rows) + f"\n\n天赋：{tal}\n\n"
         "文件：compare.md（直击/跳伤拆分后的窗口内外对比，先看这个）、uses.md、interrupts.md（打断/驱散与读条形态）、"

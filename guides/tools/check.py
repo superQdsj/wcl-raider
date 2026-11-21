@@ -48,7 +48,7 @@ BANNED_PATTERNS = [
     (r"平均", "统计词「平均」"),
     (r"共\s*\d+\s*次", "统计词「共 N 次」"),
     (r"一场按\s*\d+", "统计词「一场按 X 次」"),
-    (r"全场最[多重高]", "统计/极值词「全场最多/最重/最高」"),
+    (r"全[场本](?:承伤)?最[多重高]", "统计/极值词「全场/全本最多/最重/最高」"),
     (r"(?:金色|粉色|紫色|蓝色|绿色)高亮", "模板色词写死（应写「带「必做」标签的高亮行」）"),
     (r"\bTODO\b", "残留 TODO 占位符"),
 ]
@@ -261,18 +261,35 @@ def check_page(page: Path, source_dir: Optional[Path], published: bool) -> Tuple
                     warns.append(f"A must-do row has {pri_n} .btn-chip.pri chips (prefer 1 primary button per must-do row).")
             # Cross-check comparison bar numbers against evidence/compare.md (>= 3 runs)
             cmp_p = source_dir / "evidence" / "compare.md"
-            if cmp_p.is_file() and 'class="bars"' in body:
+            if cmp_p.is_file():
                 cmp_txt = cmp_p.read_text(encoding="utf-8")
-                bar_nums = re.findall(r'<div class="bar"><span[^>]*>([0-9]+(?:\.[0-9]+)?)\s*万', body)
-                for num_s in bar_nums:
-                    pat_val = f"{num_s}万"
-                    matched_rows = [ln for ln in cmp_txt.splitlines() if ln.startswith("|") and pat_val in ln]
-                    if not matched_rows:
-                        warns.append(f"Bar value '{num_s} 万' not found verbatim in evidence/compare.md (verify tick/direct split or NOTES.md).")
-                    else:
-                        max_runs = max((len(re.findall(r"\br[1-5]\b", ln)) for ln in matched_rows), default=0)
-                        if max_runs < 3:
-                            warns.append(f"Bar value '{num_s} 万' appears in only {max_runs}/5 runs in compare.md (< 3 runs).")
+                if 'class="bars"' in body:
+                    bar_nums = re.findall(r'<div class="bar"><span[^>]*>([0-9]+(?:\.[0-9]+)?)\s*万', body)
+                    for num_s in bar_nums:
+                        pat_val = f"{num_s}万"
+                        matched_rows = [ln for ln in cmp_txt.splitlines() if ln.startswith("|") and pat_val in ln]
+                        if not matched_rows:
+                            warns.append(f"Bar value '{num_s} 万' not found verbatim in evidence/compare.md (verify tick/direct split or NOTES.md).")
+                        else:
+                            max_runs = max((len(re.findall(r"\br[1-5]\b", ln)) for ln in matched_rows), default=0)
+                            if max_runs < 3:
+                                warns.append(f"Bar value '{num_s} 万' appears in only {max_runs}/5 runs in compare.md (< 3 runs).")
+                # Coverage check: top-8 highest-damage enemy skills in compare.md should have a mechanism row (<div class="n">) or NOTES.md entry
+                notes_txt_cov = notes_p.read_text(encoding="utf-8") if notes_p.is_file() else ""
+                mech_titles = "\n".join(re.findall(r'<div class="n"[^>]*>(.*?)</div>', body, re.S))
+                combined_cov = mech_titles + "\n" + notes_txt_cov
+                skip_names = {"近战", "自动攻击", "Melee", "牺牲祝福", "醉拳", "流血"}
+                dmg_by_base: dict[str, float] = {}
+                for m in re.finditer(r"^##\s+([^\(\[\n]+?)(?:\[(?:直击|跳伤)\])?\(\d+\)\s+—\s+共\s+\d+\s+次，总\s+([0-9.]+)(万)?", cmp_txt, re.M):
+                    bname = m.group(1).strip()
+                    if bname in skip_names or len(bname) < 2:
+                        continue
+                    val = float(m.group(2)) * (10000.0 if m.group(3) else 1.0)
+                    dmg_by_base[bname] = dmg_by_base.get(bname, 0.0) + val
+                top_skills = sorted(dmg_by_base.items(), key=lambda kv: -kv[1])[:8]
+                for sname, tot_v in top_skills:
+                    if sname not in combined_cov:
+                        warns.append(f"Top-damage skill '{sname}' ({tot_v / 10000:.0f}万 in compare.md) has no mechanism row (<div class='n'>) in body.part and is not in NOTES.md.")
 
         if build_p.is_file():
             bt = build_p.read_text(encoding="utf-8")

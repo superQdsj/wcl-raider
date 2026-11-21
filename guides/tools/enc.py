@@ -32,6 +32,51 @@ _WCL_CLASS = {
     "DemonHunter": "Demon Hunter",
 }
 
+# 国服官方英雄天赋树中文名（subTreeNodes 无 spellId，Wowhead tooltip 查不到）
+HERO_TREE_ZH = {
+    "Aldrachi Reaver": "奥达奇收割者",
+    "Annihilator": "歼灭者",
+    "Archon": "执政官",
+    "Chronowarden": "时空守卫",
+    "Colossus": "巨神兵",
+    "Conduit of the Celestials": "天神御师",
+    "Dark Ranger": "黑暗游侠",
+    "Deathbringer": "死亡使者",
+    "Deathstalker": "死亡猎手",
+    "Diabolist": "恶魔使徒",
+    "Druid of the Claw": "利爪德鲁伊",
+    "Elune's Chosen": "艾露恩钦选者",
+    "Farseer": "先知",
+    "Fatebound": "命缚者",
+    "Fel-Scarred": "邪痕枭雄",
+    "Flameshaper": "塑焰者",
+    "Frostfire": "霜火",
+    "Hellcaller": "地狱召唤者",
+    "Herald of the Sun": "烈日先驱",
+    "Keeper of the Grove": "丛林守护者",
+    "Lightsmith": "铸光者",
+    "Master of Harmony": "祥和宗师",
+    "Mountain Thane": "山丘领主",
+    "Oracle": "神谕者",
+    "Pack Leader": "群兽领袖",
+    "Rider of the Apocalypse": "天启骑士",
+    "San'layn": "萨莱因",
+    "Scalecommander": "鳞长",
+    "Sentinel": "哨兵",
+    "Shado-Pan": "影踪派",
+    "Slayer": "屠戮者",
+    "Soul Harvester": "灵魂收割者",
+    "Spellslinger": "疾咒师",
+    "Stormbringer": "风暴使者",
+    "Sunfury": "日怒",
+    "Templar": "圣殿骑士",
+    "Totemic": "图腾祭司",
+    "Trickster": "欺诈者",
+    "Void-Scarred": "虚痕枭雄",
+    "Voidweaver": "虚空编织者",
+    "Wildstalker": "荒野追猎者",
+}
+
 
 def load_specs(tree_path: Path) -> List[Dict[str, Any]]:
     if not tree_path.is_file():
@@ -206,10 +251,23 @@ def resolve_zh_names(spell_ids: List[int]) -> Dict[int, str]:
     return {gid: v["name"] for gid, v in info.items() if v.get("name")}
 
 
+def detect_hero_tree(w: Dict[int, Dict[str, Any]], spec: Dict[str, Any]) -> Optional[Dict[str, Optional[str]]]:
+    """Return {'en': ..., 'zh': ...} for the selected hero talent subtree, if present."""
+    for n in spec.get("subTreeNodes", []):
+        t = w.get(n["id"])
+        if not t:
+            continue
+        e = next((x for x in n.get("entries", []) if x.get("id") == t["id"]), None)
+        en = (e.get("name") if e else None) or n.get("name")
+        if en:
+            return {"en": en, "zh": HERO_TREE_ZH.get(en)}
+    return None
+
+
 def fmt_talent(en_name: str, sid: Optional[int], zh_map: Dict[int, str]) -> str:
-    zh = zh_map.get(sid) if sid else None
+    zh = (zh_map.get(sid) if sid else None) or HERO_TREE_ZH.get(en_name)
     if zh:
-        return f"{zh}({en_name}/{sid})"
+        return f"{zh}({en_name}/{sid})" if sid else f"{zh}({en_name})"
     return f"{en_name}({sid})" if sid else en_name
 
 
@@ -218,7 +276,7 @@ def main() -> None:
     ap.add_argument("--in", dest="inp", help="Path to evidence/talents.json (or talents_raw.json)")
     ap.add_argument("--out", help="Output path for tstring.json (optional; omit for dry-run)")
     ap.add_argument("--spec", type=int, help="Raidbots specId (auto-inferred from WCL icon if omitted)")
-    ap.add_argument("--player", help="Player key in talents.json (defaults to first player with talentTree)")
+    ap.add_argument("--player", help="Player key in talents.json (defaults to majority build, tie-broken by run order)")
     ap.add_argument("--tree", default=str(DEFAULT_TREE), help=f"Raidbots talents.json path (default: {DEFAULT_TREE})")
     ap.add_argument("--no-zh", action="store_true", help="Skip Wowhead Chinese name resolution (pure offline)")
     ap.add_argument("--list-specs", action="store_true", help="List all specIds in Raidbots talents.json")
@@ -249,11 +307,9 @@ def main() -> None:
     if args.player:
         if args.player not in raw or not extract_tree(raw[args.player]):
             raise SystemExit(f"Player '{args.player}' missing or has no talentTree. Available: {[k for k, _ in available]}")
-        who, tree = args.player, extract_tree(raw[args.player])
-    else:
-        who, tree = available[0]
 
-    spec_id = args.spec or infer_spec_id(raw[who], specs)
+    seed_who = args.player or available[0][0]
+    spec_id = args.spec or infer_spec_id(raw[seed_who], specs)
     if not spec_id:
         raise SystemExit("Could not infer specId; pass --spec <id> (see --list-specs).")
     spec = next((s for s in specs if int(s.get("specId", -1)) == spec_id), None)
@@ -261,16 +317,28 @@ def main() -> None:
         raise SystemExit(f"specId {spec_id} not found in {tree_path}")
     nodes = build_nodes(spec)
 
-    results: Dict[str, Tuple[str, Dict[str, Optional[int]]]] = {}
+    results: Dict[str, Tuple[str, Dict[str, Optional[int]], Dict[int, Dict[str, Any]]]] = {}
     for k, tr in available:
         st_k, w_k = encode(tr, spec, nodes)
         verify_roundtrip(st_k, w_k, spec, nodes)
-        results[k] = (st_k, talent_entries(w_k, nodes))
+        results[k] = (st_k, talent_entries(w_k, nodes), w_k)
 
-    st, base_entries = results[who]
+    # Default to the majority build (tie-broken by run order in talents.json)
+    str_counts: Dict[str, int] = {}
+    for k, _ in available:
+        st_k = results[k][0]
+        str_counts[st_k] = str_counts.get(st_k, 0) + 1
+    if args.player:
+        who = args.player
+    else:
+        who = max((k for k, _ in available), key=lambda k: str_counts[results[k][0]])
+
+    st, base_entries, base_w = results[who]
+    hero = detect_hero_tree(base_w, spec)
+    maj_cnt = str_counts[st]
     # Resolve Chinese names for all diff talents (+ selected talents when writing tstring.json)
     diff_sids = set()
-    for k, (st_k, ent_k) in results.items():
+    for k, (st_k, ent_k, _) in results.items():
         if k == who or st_k == st:
             continue
         for en_n in set(base_entries) ^ set(ent_k):
@@ -283,12 +351,15 @@ def main() -> None:
         zh_map = resolve_zh_names(want_ids)
 
     print(f"spec: {spec_id} ({spec.get('className')} - {spec.get('specName')})")
-    print(f"selected: {who} ({len(base_entries)} nodes, round-trip 0 mismatch / 0 extra)")
+    if hero:
+        print(f"hero: {hero['zh'] or hero['en']} ({hero['en']})")
+    mode_tag = "explicit" if args.player else (f"majority {maj_cnt}/{len(available)}" if maj_cnt > 1 else "first (all unique)")
+    print(f"selected: {who} ({mode_tag}, {len(base_entries)} nodes, round-trip 0 mismatch / 0 extra)")
     print(f"string: {st}")
 
     base_set = set(base_entries)
     diffs_out: Dict[str, Any] = {}
-    for k, (st_k, ent_k) in results.items():
+    for k, (st_k, ent_k, _) in results.items():
         if k == who:
             continue
         if st_k == st:
@@ -306,12 +377,13 @@ def main() -> None:
         out_path = Path(args.out)
         out_path.parent.mkdir(parents=True, exist_ok=True)
         tal_zh = {
-            en_n: {"zh": zh_map.get(sid), "spellId": sid}
+            en_n: {"zh": (zh_map.get(sid) if sid else None) or HERO_TREE_ZH.get(en_n), "spellId": sid}
             for en_n, sid in sorted(base_entries.items())
         }
         payload = {
             "player": who,
             "specId": spec_id,
+            "hero_tree": hero,
             "string": st,
             "talents": sorted(base_entries),
             "talents_zh": tal_zh,

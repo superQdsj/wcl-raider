@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import base64
+import fcntl
 import hashlib
 import json
 import os
@@ -57,10 +58,22 @@ def load_index() -> Dict[str, str]:
     return {}
 
 
-def save_index(idx: Dict[str, str]) -> None:
+def save_index(idx: Dict[str, str], delta: Optional[Dict[str, str]] = None) -> None:
     ICONS.mkdir(parents=True, exist_ok=True)
-    ordered = {k: idx[k] for k in sorted(idx, key=lambda x: int(x) if x.isdigit() else 0)}
-    INDEX.write_text(json.dumps(ordered, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    lock_path = ICONS / ".by-spell.lock"
+    with open(lock_path, "a+", encoding="utf-8") as lf:
+        fcntl.flock(lf.fileno(), fcntl.LOCK_EX)
+        try:
+            merged = load_index()
+            merged.update(delta if delta is not None else idx)
+            ordered = {k: merged[k] for k in sorted(merged, key=lambda x: int(x) if x.isdigit() else 0)}
+            tmp = INDEX.with_name(f".by-spell.{os.getpid()}.tmp")
+            tmp.write_text(json.dumps(ordered, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            os.replace(tmp, INDEX)
+            idx.clear()
+            idx.update(ordered)
+        finally:
+            fcntl.flock(lf.fileno(), fcntl.LOCK_UN)
 
 
 def _decode_data_uri(uri: str) -> Optional[Tuple[bytes, str]]:
@@ -123,7 +136,7 @@ def fetch_icon(spell_id: int, idx: Optional[Dict[str, str]] = None) -> str:
     fname = _save_bytes(data, "jpg")
     idx[key] = fname
     if owned:
-        save_index(idx)
+        save_index(idx, delta={key: fname})
     return fname
 
 
@@ -146,24 +159,24 @@ def inject_icons(
 
     ids = sorted({m.group(1) for m in PLACEHOLDER.finditer(html_text)}, key=int)
     fetched = 0
-    dirty = False
+    delta: Dict[str, str] = {}
     for sid in ids:
         if sid in idx and (ICONS / idx[sid]).is_file():
             continue
         if sid in local_map:
             decoded = _decode_data_uri(local_map[sid])
             if decoded:
-                idx[sid] = _save_bytes(*decoded)
-                dirty = True
+                fname = _save_bytes(*decoded)
+                idx[sid] = fname
+                delta[sid] = fname
                 continue
         if not fetch:
             raise KeyError(f"Spell icon {sid} not in {INDEX} and fetch=False")
-        fetch_icon(int(sid), idx)
+        delta[sid] = fetch_icon(int(sid), idx)
         fetched += 1
-        dirty = True
 
-    if dirty:
-        save_index(idx)
+    if delta:
+        save_index(idx, delta=delta)
 
     count = [0]
 

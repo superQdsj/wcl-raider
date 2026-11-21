@@ -51,9 +51,32 @@ def _v1_class_maps(client: Client) -> Tuple[Dict[str, int], Dict[Tuple[int, str]
     return cls_to_id, spec_to_id, id_to_cls, id_to_spec
 
 
+DUNGEON_ALIASES = {
+    "红玉新生法池": "红玉",
+    "ruby life pools": "红玉",
+    "ruby": "红玉",
+    "temple of sethraliss": "塞塔里斯",
+    "sethraliss": "塞塔里斯",
+    "voidscar arena": "虚空之痕",
+    "voidscar": "虚空之痕",
+    "kings' rest": "诸王",
+    "kings rest": "诸王",
+    "algeth'ar": "艾杰斯亚",
+    "maisara": "迈萨拉",
+    "nexus-point": "魔导师",
+    "magisters": "魔导师",
+    "pit of saron": "萨隆",
+    "skyreach": "通天峰",
+    "windrunner": "风行者",
+    "murder row": "密谋小径",
+    "den of nalorakk": "纳洛拉克",
+}
+
+
 def resolve_dungeon(client: Client, query: str) -> Tuple[int, str]:
     """副本名（中/英文片段）或 encounter ID → (ID, 名称)，优先最新资料片的正式赛季分区。"""
     q = (query or "").strip()
+    q = DUNGEON_ALIASES.get(q.lower(), q)
     if getattr(client, "use_v1", False) is True:
         zones = sorted(client.v1_get("zones", ttl=7 * DAY) or [], key=lambda z: -int(z.get("id") or 0))
         hits: List[Tuple[int, str, str]] = []
@@ -205,7 +228,9 @@ def cmd_find(client: Client, dungeon: str, cls_text: Optional[str] = None, level
     lines.append(fmt.table(["#", "层数", "用时", "地区", "该职业玩家（专精）" if cls else "阵容", "链接"], table))
     first = f"{host}/{rows[0]['code']}#fight={rows[0]['fid']}"
     if cls:
-        lines.append(f"\n下一步：`tactics {first} --class {cls_text} --refs 2`（以第 1 条为主，再从同一份排名里取 2 场对照）。")
+        lines.append(
+            f"\n下一步：选 5 个不同报告与玩家后运行 `python3 guides/tools/evidence.py --class guides/tools/classes/<专精>.json --out <目录>/evidence \"<链接>@<玩家>\" ×5`。"
+        )
     else:
-        lines.append(f"\n下一步：`tactics {first} --refs 2`。")
+        lines.append(f"\n下一步：`python3 guides/tools/wcl.py summary {first}`。")
     return "\n".join(lines)
