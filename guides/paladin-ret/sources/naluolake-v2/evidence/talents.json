@@ -1,0 +1,4032 @@
+{
+ "r1_Âra": {
+  "name": "Âra",
+  "id": 2,
+  "guid": 173426296,
+  "type": "Paladin",
+  "server": "Blackhand",
+  "region": "EU",
+  "icon": "Paladin-Retribution",
+  "specs": [
+   "Retribution"
+  ],
+  "minItemLevel": 339,
+  "maxItemLevel": 339,
+  "potionUse": 7,
+  "healthstoneUse": 1,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Mastery": {
+     "min": 1245,
+     "max": 1245
+    },
+    "Crit": {
+     "min": 982,
+     "max": 982
+    },
+    "Item Level": {
+     "min": 339,
+     "max": 339
+    },
+    "Strength": {
+     "min": 2862,
+     "max": 2862
+    },
+    "Stamina": {
+     "min": 50076,
+     "max": 50076
+    },
+    "Avoidance": {
+     "min": 301,
+     "max": 301
+    },
+    "Haste": {
+     "min": 1049,
+     "max": 1049
+    },
+    "Versatility": {
+     "min": 527,
+     "max": 527
+    },
+    "Leech": {
+     "min": 73,
+     "max": 73
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Blessing of Sanctuary",
+     "guid": 210256,
+     "type": 1,
+     "abilityIcon": "spell_holy_greaterblessingofsanctuary.jpg"
+    },
+    {
+     "name": "Blessing of Spellwarding",
+     "guid": 204018,
+     "type": 1,
+     "abilityIcon": "spell_holy_blessingofprotection.jpg"
+    },
+    {
+     "name": "Spellbreaker",
+     "guid": 469895,
+     "type": 1,
+     "abilityIcon": "ability_priest_reflectiveshield.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 102476,
+     "rank": 1,
+     "nodeID": 81507
+    },
+    {
+     "id": 102493,
+     "rank": 1,
+     "nodeID": 81523
+    },
+    {
+     "id": 102497,
+     "rank": 1,
+     "nodeID": 81525
+    },
+    {
+     "id": 102498,
+     "rank": 1,
+     "nodeID": 81526
+    },
+    {
+     "id": 102499,
+     "rank": 1,
+     "nodeID": 81527
+    },
+    {
+     "id": 102504,
+     "rank": 1,
+     "nodeID": 81532
+    },
+    {
+     "id": 102505,
+     "rank": 1,
+     "nodeID": 81533
+    },
+    {
+     "id": 102506,
+     "rank": 1,
+     "nodeID": 81534
+    },
+    {
+     "id": 102515,
+     "rank": 1,
+     "nodeID": 81541
+    },
+    {
+     "id": 102516,
+     "rank": 1,
+     "nodeID": 81542
+    },
+    {
+     "id": 102519,
+     "rank": 1,
+     "nodeID": 81544
+    },
+    {
+     "id": 102521,
+     "rank": 1,
+     "nodeID": 81545
+    },
+    {
+     "id": 102583,
+     "rank": 1,
+     "nodeID": 81597
+    },
+    {
+     "id": 102584,
+     "rank": 1,
+     "nodeID": 81598
+    },
+    {
+     "id": 102592,
+     "rank": 1,
+     "nodeID": 81605
+    },
+    {
+     "id": 102595,
+     "rank": 1,
+     "nodeID": 81607
+    },
+    {
+     "id": 102596,
+     "rank": 1,
+     "nodeID": 81608
+    },
+    {
+     "id": 102597,
+     "rank": 1,
+     "nodeID": 81609
+    },
+    {
+     "id": 102602,
+     "rank": 1,
+     "nodeID": 81614
+    },
+    {
+     "id": 102603,
+     "rank": 1,
+     "nodeID": 81615
+    },
+    {
+     "id": 102604,
+     "rank": 1,
+     "nodeID": 81616
+    },
+    {
+     "id": 102612,
+     "rank": 2,
+     "nodeID": 81621
+    },
+    {
+     "id": 102622,
+     "rank": 2,
+     "nodeID": 81630
+    },
+    {
+     "id": 102625,
+     "rank": 1,
+     "nodeID": 81632
+    },
+    {
+     "id": 114824,
+     "rank": 1,
+     "nodeID": 92686
+    },
+    {
+     "id": 114828,
+     "rank": 1,
+     "nodeID": 81521
+    },
+    {
+     "id": 114830,
+     "rank": 1,
+     "nodeID": 92689
+    },
+    {
+     "id": 115022,
+     "rank": 1,
+     "nodeID": 92838
+    },
+    {
+     "id": 115024,
+     "rank": 1,
+     "nodeID": 92839
+    },
+    {
+     "id": 115034,
+     "rank": 2,
+     "nodeID": 93009
+    },
+    {
+     "id": 115043,
+     "rank": 1,
+     "nodeID": 92854
+    },
+    {
+     "id": 115165,
+     "rank": 2,
+     "nodeID": 92952
+    },
+    {
+     "id": 115435,
+     "rank": 1,
+     "nodeID": 109373
+    },
+    {
+     "id": 115438,
+     "rank": 1,
+     "nodeID": 109371
+    },
+    {
+     "id": 115439,
+     "rank": 2,
+     "nodeID": 93160
+    },
+    {
+     "id": 115443,
+     "rank": 2,
+     "nodeID": 93164
+    },
+    {
+     "id": 115452,
+     "rank": 1,
+     "nodeID": 109372
+    },
+    {
+     "id": 115453,
+     "rank": 1,
+     "nodeID": 93173
+    },
+    {
+     "id": 115454,
+     "rank": 1,
+     "nodeID": 93174
+    },
+    {
+     "id": 115468,
+     "rank": 1,
+     "nodeID": 93181
+    },
+    {
+     "id": 115475,
+     "rank": 1,
+     "nodeID": 81512
+    },
+    {
+     "id": 115481,
+     "rank": 1,
+     "nodeID": 93189
+    },
+    {
+     "id": 117666,
+     "rank": 1,
+     "nodeID": 95069
+    },
+    {
+     "id": 117668,
+     "rank": 1,
+     "nodeID": 95071
+    },
+    {
+     "id": 117669,
+     "rank": 1,
+     "nodeID": 95072
+    },
+    {
+     "id": 117677,
+     "rank": 1,
+     "nodeID": 95080
+    },
+    {
+     "id": 117683,
+     "rank": 1,
+     "nodeID": 95086
+    },
+    {
+     "id": 117691,
+     "rank": 1,
+     "nodeID": 95094
+    },
+    {
+     "id": 117692,
+     "rank": 1,
+     "nodeID": 95095
+    },
+    {
+     "id": 117702,
+     "rank": 1,
+     "nodeID": 95105
+    },
+    {
+     "id": 117777,
+     "rank": 1,
+     "nodeID": 95098
+    },
+    {
+     "id": 117778,
+     "rank": 1,
+     "nodeID": 95073
+    },
+    {
+     "id": 123360,
+     "rank": 1,
+     "nodeID": 99837
+    },
+    {
+     "id": 128241,
+     "rank": 2,
+     "nodeID": 103851
+    },
+    {
+     "id": 128243,
+     "rank": 1,
+     "nodeID": 81618
+    },
+    {
+     "id": 128248,
+     "rank": 1,
+     "nodeID": 103865
+    },
+    {
+     "id": 128251,
+     "rank": 1,
+     "nodeID": 81631
+    },
+    {
+     "id": 128257,
+     "rank": 1,
+     "nodeID": 103861
+    },
+    {
+     "id": 128259,
+     "rank": 1,
+     "nodeID": 103863
+    },
+    {
+     "id": 128260,
+     "rank": 1,
+     "nodeID": 103864
+    },
+    {
+     "id": 135564,
+     "rank": 1,
+     "nodeID": 109368
+    },
+    {
+     "id": 135565,
+     "rank": 1,
+     "nodeID": 109369
+    },
+    {
+     "id": 136006,
+     "rank": 1,
+     "nodeID": 109748
+    },
+    {
+     "id": 136007,
+     "rank": 1,
+     "nodeID": 109749
+    },
+    {
+     "id": 136008,
+     "rank": 1,
+     "nodeID": 109750
+    },
+    {
+     "id": 136127,
+     "rank": 1,
+     "nodeID": 109867
+    },
+    {
+     "id": 136487,
+     "rank": 1,
+     "nodeID": 109999
+    },
+    {
+     "id": 136503,
+     "rank": 1,
+     "nodeID": 110012
+    },
+    {
+     "id": 136592,
+     "rank": 1,
+     "nodeID": 110091
+    },
+    {
+     "id": 136594,
+     "rank": 1,
+     "nodeID": 110093
+    },
+    {
+     "id": 136809,
+     "rank": 1,
+     "nodeID": 109374
+    },
+    {
+     "id": 137023,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 137024,
+     "rank": 2,
+     "nodeID": 110419
+    },
+    {
+     "id": 137025,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 117696,
+     "rank": 1,
+     "nodeID": 95099
+    },
+    {
+     "id": 102590,
+     "rank": 1,
+     "nodeID": 81603
+    },
+    {
+     "id": 102587,
+     "rank": 1,
+     "nodeID": 81600
+    },
+    {
+     "id": 133481,
+     "rank": 1,
+     "nodeID": 81510
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271465,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Warhelm of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      14049,
+      13696,
+      13692,
+      13698,
+      1587,
+      13695
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      41,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      },
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271463,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Pauldrons of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      13335,
+      40,
+      12854,
+      13694,
+      13697,
+      1587
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 151116,
+     "slot": 3,
+     "quality": 3,
+     "icon": "inv_shirt_06.jpg",
+     "name": "Fashionable Undershirt",
+     "itemLevel": 1
+    },
+    {
+     "id": 271468,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Bulwark of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268259,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Girdle of Toxic Regret",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13695,
+      13662,
+      13335,
+      13848
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271464,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Greaves of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13708,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 237828,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_boot.jpg",
+     "name": "Spellbreaker's March",
+     "itemLevel": 331,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8790,
+      13836
+     ]
+    },
+    {
+     "id": 268239,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_plate_raiddeathknightulatek_d_01.jpg",
+     "name": "Shellbound Bracers",
+     "itemLevel": 334,
+     "bonusIDs": [
+      6652,
+      13695,
+      13662,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 237836,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_glove.jpg",
+     "name": "Spellbreaker's Resolve",
+     "itemLevel": 331,
+     "permanentEnchant": 8729,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Heat Wave",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8793,
+      13836
+     ]
+    },
+    {
+     "id": 281029,
+     "slot": 10,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 252258,
+     "slot": 11,
+     "quality": 3,
+     "icon": "inv_12_jewelry_devouringhost_ring_bronze2.jpg",
+     "name": "Sickening Signet of Atroxus",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      13440,
+      40,
+      13668,
+      12699,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 270173,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_trolltablet.jpg",
+     "name": "Zul'jin's Guillotine Technique",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268213,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_axe_2h_ulatek_d_01.jpg",
+     "name": "Maze-roa, Warlord's Fury",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 38309,
+     "slot": 17,
+     "quality": 4,
+     "icon": "inv_shirt_guildtabard_01.jpg",
+     "name": "Tabard of Nature",
+     "itemLevel": 1
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    70
+   ],
+   "factionID": 1
+  }
+ },
+ "r2_聚光灯下": {
+  "name": "聚光灯下",
+  "id": 4,
+  "guid": 93332511,
+  "type": "Paladin",
+  "server": "伊森利恩",
+  "region": "CN",
+  "icon": "Paladin-Retribution",
+  "specs": [
+   "Retribution"
+  ],
+  "minItemLevel": 339,
+  "maxItemLevel": 339,
+  "potionUse": 6,
+  "healthstoneUse": 2,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 90,
+     "max": 90
+    },
+    "Mastery": {
+     "min": 1386,
+     "max": 1386
+    },
+    "Crit": {
+     "min": 871,
+     "max": 871
+    },
+    "Item Level": {
+     "min": 339,
+     "max": 339
+    },
+    "Strength": {
+     "min": 2862,
+     "max": 2862
+    },
+    "Stamina": {
+     "min": 50103,
+     "max": 50103
+    },
+    "Avoidance": {
+     "min": 284,
+     "max": 284
+    },
+    "Haste": {
+     "min": 997,
+     "max": 997
+    },
+    "Versatility": {
+     "min": 107,
+     "max": 107
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Blessing of Sanctuary",
+     "guid": 210256,
+     "type": 1,
+     "abilityIcon": "spell_holy_greaterblessingofsanctuary.jpg"
+    },
+    {
+     "name": "Spreading the Word",
+     "guid": 199456,
+     "type": 1,
+     "abilityIcon": "inv_misc_book_17.jpg"
+    },
+    {
+     "name": "Blessing of Spellwarding",
+     "guid": 204018,
+     "type": 1,
+     "abilityIcon": "spell_holy_blessingofprotection.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 102498,
+     "rank": 1,
+     "nodeID": 81526
+    },
+    {
+     "id": 102499,
+     "rank": 1,
+     "nodeID": 81527
+    },
+    {
+     "id": 102583,
+     "rank": 1,
+     "nodeID": 81597
+    },
+    {
+     "id": 102592,
+     "rank": 1,
+     "nodeID": 81605
+    },
+    {
+     "id": 102625,
+     "rank": 1,
+     "nodeID": 81632
+    },
+    {
+     "id": 114824,
+     "rank": 1,
+     "nodeID": 92686
+    },
+    {
+     "id": 102476,
+     "rank": 1,
+     "nodeID": 81507
+    },
+    {
+     "id": 102505,
+     "rank": 1,
+     "nodeID": 81533
+    },
+    {
+     "id": 102491,
+     "rank": 1,
+     "nodeID": 81521
+    },
+    {
+     "id": 102515,
+     "rank": 1,
+     "nodeID": 81541
+    },
+    {
+     "id": 102521,
+     "rank": 1,
+     "nodeID": 81545
+    },
+    {
+     "id": 102493,
+     "rank": 1,
+     "nodeID": 81523
+    },
+    {
+     "id": 102497,
+     "rank": 1,
+     "nodeID": 81525
+    },
+    {
+     "id": 102519,
+     "rank": 1,
+     "nodeID": 81544
+    },
+    {
+     "id": 102597,
+     "rank": 1,
+     "nodeID": 81609
+    },
+    {
+     "id": 102604,
+     "rank": 1,
+     "nodeID": 81616
+    },
+    {
+     "id": 102622,
+     "rank": 2,
+     "nodeID": 81630
+    },
+    {
+     "id": 102504,
+     "rank": 1,
+     "nodeID": 81532
+    },
+    {
+     "id": 102506,
+     "rank": 1,
+     "nodeID": 81534
+    },
+    {
+     "id": 102516,
+     "rank": 1,
+     "nodeID": 81542
+    },
+    {
+     "id": 102584,
+     "rank": 1,
+     "nodeID": 81598
+    },
+    {
+     "id": 102595,
+     "rank": 1,
+     "nodeID": 81607
+    },
+    {
+     "id": 102596,
+     "rank": 1,
+     "nodeID": 81608
+    },
+    {
+     "id": 102602,
+     "rank": 1,
+     "nodeID": 81614
+    },
+    {
+     "id": 102603,
+     "rank": 1,
+     "nodeID": 81615
+    },
+    {
+     "id": 102612,
+     "rank": 2,
+     "nodeID": 81621
+    },
+    {
+     "id": 114830,
+     "rank": 1,
+     "nodeID": 92689
+    },
+    {
+     "id": 115022,
+     "rank": 1,
+     "nodeID": 92838
+    },
+    {
+     "id": 115024,
+     "rank": 1,
+     "nodeID": 92839
+    },
+    {
+     "id": 115034,
+     "rank": 2,
+     "nodeID": 93009
+    },
+    {
+     "id": 115043,
+     "rank": 1,
+     "nodeID": 92854
+    },
+    {
+     "id": 115165,
+     "rank": 2,
+     "nodeID": 92952
+    },
+    {
+     "id": 115438,
+     "rank": 1,
+     "nodeID": 109371
+    },
+    {
+     "id": 115439,
+     "rank": 2,
+     "nodeID": 93160
+    },
+    {
+     "id": 115443,
+     "rank": 2,
+     "nodeID": 93164
+    },
+    {
+     "id": 115452,
+     "rank": 1,
+     "nodeID": 109372
+    },
+    {
+     "id": 115453,
+     "rank": 1,
+     "nodeID": 93173
+    },
+    {
+     "id": 115454,
+     "rank": 1,
+     "nodeID": 93174
+    },
+    {
+     "id": 115468,
+     "rank": 1,
+     "nodeID": 93181
+    },
+    {
+     "id": 115475,
+     "rank": 1,
+     "nodeID": 81512
+    },
+    {
+     "id": 117666,
+     "rank": 1,
+     "nodeID": 95069
+    },
+    {
+     "id": 123360,
+     "rank": 1,
+     "nodeID": 99837
+    },
+    {
+     "id": 128241,
+     "rank": 2,
+     "nodeID": 103851
+    },
+    {
+     "id": 128243,
+     "rank": 1,
+     "nodeID": 81618
+    },
+    {
+     "id": 128248,
+     "rank": 1,
+     "nodeID": 103865
+    },
+    {
+     "id": 128251,
+     "rank": 1,
+     "nodeID": 81631
+    },
+    {
+     "id": 128257,
+     "rank": 1,
+     "nodeID": 103861
+    },
+    {
+     "id": 128259,
+     "rank": 1,
+     "nodeID": 103863
+    },
+    {
+     "id": 128264,
+     "rank": 1,
+     "nodeID": 103868
+    },
+    {
+     "id": 135564,
+     "rank": 1,
+     "nodeID": 109368
+    },
+    {
+     "id": 135565,
+     "rank": 1,
+     "nodeID": 109369
+    },
+    {
+     "id": 136006,
+     "rank": 1,
+     "nodeID": 109748
+    },
+    {
+     "id": 136008,
+     "rank": 1,
+     "nodeID": 109750
+    },
+    {
+     "id": 136127,
+     "rank": 1,
+     "nodeID": 109867
+    },
+    {
+     "id": 136487,
+     "rank": 1,
+     "nodeID": 109999
+    },
+    {
+     "id": 136503,
+     "rank": 1,
+     "nodeID": 110012
+    },
+    {
+     "id": 136592,
+     "rank": 1,
+     "nodeID": 110091
+    },
+    {
+     "id": 136594,
+     "rank": 1,
+     "nodeID": 110093
+    },
+    {
+     "id": 137023,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 137024,
+     "rank": 2,
+     "nodeID": 110419
+    },
+    {
+     "id": 137025,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 115435,
+     "rank": 1,
+     "nodeID": 109373
+    },
+    {
+     "id": 115481,
+     "rank": 1,
+     "nodeID": 93189
+    },
+    {
+     "id": 117668,
+     "rank": 1,
+     "nodeID": 95071
+    },
+    {
+     "id": 117669,
+     "rank": 1,
+     "nodeID": 95072
+    },
+    {
+     "id": 117778,
+     "rank": 1,
+     "nodeID": 95073
+    },
+    {
+     "id": 117677,
+     "rank": 1,
+     "nodeID": 95080
+    },
+    {
+     "id": 117683,
+     "rank": 1,
+     "nodeID": 95086
+    },
+    {
+     "id": 117691,
+     "rank": 1,
+     "nodeID": 95094
+    },
+    {
+     "id": 117692,
+     "rank": 1,
+     "nodeID": 95095
+    },
+    {
+     "id": 117702,
+     "rank": 1,
+     "nodeID": 95105
+    },
+    {
+     "id": 117777,
+     "rank": 1,
+     "nodeID": 95098
+    },
+    {
+     "id": 136007,
+     "rank": 1,
+     "nodeID": 109749
+    },
+    {
+     "id": 136809,
+     "rank": 1,
+     "nodeID": 109374
+    },
+    {
+     "id": 117696,
+     "rank": 1,
+     "nodeID": 95099
+    },
+    {
+     "id": 102590,
+     "rank": 1,
+     "nodeID": 81603
+    },
+    {
+     "id": 102587,
+     "rank": 1,
+     "nodeID": 81600
+    },
+    {
+     "id": 133481,
+     "rank": 1,
+     "nodeID": 81510
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271465,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Warhelm of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      13334,
+      6652,
+      12854,
+      14049,
+      13696,
+      13695,
+      13692,
+      13698,
+      1587
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271463,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Pauldrons of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      13694,
+      13697,
+      1587
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271468,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Bulwark of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268259,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Girdle of Toxic Regret",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13696,
+      13662,
+      13335,
+      13848,
+      13695
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271464,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Greaves of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13708,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 271467,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Greatboots of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      1587
+     ]
+    },
+    {
+     "id": 237834,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_bracer.jpg",
+     "name": "Spellbreaker's Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8793,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 237836,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_glove.jpg",
+     "name": "Spellbreaker's Resolve",
+     "itemLevel": 331,
+     "permanentEnchant": 8729,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Heat Wave",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8793,
+      13836
+     ]
+    },
+    {
+     "id": 272147,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Colubrine Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      13668,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281029,
+     "slot": 11,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      13696,
+      12856
+     ]
+    },
+    {
+     "id": 270173,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_trolltablet.jpg",
+     "name": "Zul'jin's Guillotine Technique",
+     "itemLevel": 344,
+     "bonusIDs": [
+      40,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      40,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268213,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_axe_2h_ulatek_d_01.jpg",
+     "name": "Maze-roa, Warlord's Fury",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      42,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    70
+   ],
+   "factionID": 1
+  }
+ },
+ "r3_哦毕爷": {
+  "name": "哦毕爷",
+  "id": 75,
+  "guid": 250268036,
+  "type": "Paladin",
+  "server": "影之哀伤",
+  "region": "CN",
+  "icon": "Paladin-Retribution",
+  "specs": [
+   "Retribution"
+  ],
+  "minItemLevel": 339,
+  "maxItemLevel": 339,
+  "potionUse": 6,
+  "healthstoneUse": 0,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 65,
+     "max": 65
+    },
+    "Mastery": {
+     "min": 1428,
+     "max": 1428
+    },
+    "Crit": {
+     "min": 825,
+     "max": 825
+    },
+    "Item Level": {
+     "min": 339,
+     "max": 339
+    },
+    "Strength": {
+     "min": 2862,
+     "max": 2862
+    },
+    "Stamina": {
+     "min": 50103,
+     "max": 50103
+    },
+    "Avoidance": {
+     "min": 167,
+     "max": 167
+    },
+    "Haste": {
+     "min": 1001,
+     "max": 1001
+    },
+    "Versatility": {
+     "min": 107,
+     "max": 107
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Searing Glare",
+     "guid": 410126,
+     "type": 1,
+     "abilityIcon": "pvp_searingglare.jpg"
+    },
+    {
+     "name": "Blessing of Sanctuary",
+     "guid": 210256,
+     "type": 1,
+     "abilityIcon": "spell_holy_greaterblessingofsanctuary.jpg"
+    },
+    {
+     "name": "Hallowed Ground",
+     "guid": 216868,
+     "type": 1,
+     "abilityIcon": "spell_holy_innerfire.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 102476,
+     "rank": 1,
+     "nodeID": 81507
+    },
+    {
+     "id": 128248,
+     "rank": 1,
+     "nodeID": 103865
+    },
+    {
+     "id": 117668,
+     "rank": 1,
+     "nodeID": 95071
+    },
+    {
+     "id": 102515,
+     "rank": 1,
+     "nodeID": 81541
+    },
+    {
+     "id": 102516,
+     "rank": 1,
+     "nodeID": 81542
+    },
+    {
+     "id": 135564,
+     "rank": 1,
+     "nodeID": 109368
+    },
+    {
+     "id": 135565,
+     "rank": 1,
+     "nodeID": 109369
+    },
+    {
+     "id": 115438,
+     "rank": 1,
+     "nodeID": 109371
+    },
+    {
+     "id": 136127,
+     "rank": 1,
+     "nodeID": 109867
+    },
+    {
+     "id": 136487,
+     "rank": 1,
+     "nodeID": 109999
+    },
+    {
+     "id": 136503,
+     "rank": 1,
+     "nodeID": 110012
+    },
+    {
+     "id": 136594,
+     "rank": 1,
+     "nodeID": 110093
+    },
+    {
+     "id": 102584,
+     "rank": 1,
+     "nodeID": 81598
+    },
+    {
+     "id": 137025,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 136007,
+     "rank": 1,
+     "nodeID": 109749
+    },
+    {
+     "id": 102612,
+     "rank": 2,
+     "nodeID": 81621
+    },
+    {
+     "id": 136006,
+     "rank": 1,
+     "nodeID": 109748
+    },
+    {
+     "id": 136008,
+     "rank": 1,
+     "nodeID": 109750
+    },
+    {
+     "id": 102497,
+     "rank": 1,
+     "nodeID": 81525
+    },
+    {
+     "id": 102506,
+     "rank": 1,
+     "nodeID": 81534
+    },
+    {
+     "id": 102519,
+     "rank": 1,
+     "nodeID": 81544
+    },
+    {
+     "id": 102596,
+     "rank": 1,
+     "nodeID": 81608
+    },
+    {
+     "id": 102597,
+     "rank": 1,
+     "nodeID": 81609
+    },
+    {
+     "id": 102602,
+     "rank": 1,
+     "nodeID": 81614
+    },
+    {
+     "id": 102603,
+     "rank": 1,
+     "nodeID": 81615
+    },
+    {
+     "id": 115043,
+     "rank": 1,
+     "nodeID": 92854
+    },
+    {
+     "id": 115165,
+     "rank": 2,
+     "nodeID": 92952
+    },
+    {
+     "id": 115034,
+     "rank": 2,
+     "nodeID": 93009
+    },
+    {
+     "id": 115439,
+     "rank": 2,
+     "nodeID": 93160
+    },
+    {
+     "id": 115453,
+     "rank": 1,
+     "nodeID": 93173
+    },
+    {
+     "id": 115481,
+     "rank": 1,
+     "nodeID": 93189
+    },
+    {
+     "id": 128241,
+     "rank": 2,
+     "nodeID": 103851
+    },
+    {
+     "id": 128259,
+     "rank": 1,
+     "nodeID": 103863
+    },
+    {
+     "id": 136809,
+     "rank": 1,
+     "nodeID": 109374
+    },
+    {
+     "id": 137024,
+     "rank": 2,
+     "nodeID": 110419
+    },
+    {
+     "id": 117669,
+     "rank": 1,
+     "nodeID": 95072
+    },
+    {
+     "id": 117677,
+     "rank": 1,
+     "nodeID": 95080
+    },
+    {
+     "id": 117683,
+     "rank": 1,
+     "nodeID": 95086
+    },
+    {
+     "id": 117691,
+     "rank": 1,
+     "nodeID": 95094
+    },
+    {
+     "id": 117692,
+     "rank": 1,
+     "nodeID": 95095
+    },
+    {
+     "id": 117702,
+     "rank": 1,
+     "nodeID": 95105
+    },
+    {
+     "id": 115443,
+     "rank": 2,
+     "nodeID": 93164
+    },
+    {
+     "id": 115475,
+     "rank": 1,
+     "nodeID": 81512
+    },
+    {
+     "id": 102493,
+     "rank": 1,
+     "nodeID": 81523
+    },
+    {
+     "id": 115024,
+     "rank": 1,
+     "nodeID": 92839
+    },
+    {
+     "id": 117666,
+     "rank": 1,
+     "nodeID": 95069
+    },
+    {
+     "id": 117777,
+     "rank": 1,
+     "nodeID": 95098
+    },
+    {
+     "id": 114824,
+     "rank": 1,
+     "nodeID": 92686
+    },
+    {
+     "id": 102491,
+     "rank": 1,
+     "nodeID": 81521
+    },
+    {
+     "id": 102595,
+     "rank": 1,
+     "nodeID": 81607
+    },
+    {
+     "id": 136592,
+     "rank": 1,
+     "nodeID": 110091
+    },
+    {
+     "id": 102505,
+     "rank": 1,
+     "nodeID": 81533
+    },
+    {
+     "id": 137023,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 102504,
+     "rank": 1,
+     "nodeID": 81532
+    },
+    {
+     "id": 128251,
+     "rank": 1,
+     "nodeID": 81631
+    },
+    {
+     "id": 102625,
+     "rank": 1,
+     "nodeID": 81632
+    },
+    {
+     "id": 114830,
+     "rank": 1,
+     "nodeID": 92689
+    },
+    {
+     "id": 102498,
+     "rank": 1,
+     "nodeID": 81526
+    },
+    {
+     "id": 102499,
+     "rank": 1,
+     "nodeID": 81527
+    },
+    {
+     "id": 102583,
+     "rank": 1,
+     "nodeID": 81597
+    },
+    {
+     "id": 102592,
+     "rank": 1,
+     "nodeID": 81605
+    },
+    {
+     "id": 102604,
+     "rank": 1,
+     "nodeID": 81616
+    },
+    {
+     "id": 128243,
+     "rank": 1,
+     "nodeID": 81618
+    },
+    {
+     "id": 102622,
+     "rank": 2,
+     "nodeID": 81630
+    },
+    {
+     "id": 115022,
+     "rank": 1,
+     "nodeID": 92838
+    },
+    {
+     "id": 117778,
+     "rank": 1,
+     "nodeID": 95073
+    },
+    {
+     "id": 115435,
+     "rank": 1,
+     "nodeID": 109373
+    },
+    {
+     "id": 115454,
+     "rank": 1,
+     "nodeID": 93174
+    },
+    {
+     "id": 115468,
+     "rank": 1,
+     "nodeID": 93181
+    },
+    {
+     "id": 128260,
+     "rank": 1,
+     "nodeID": 103864
+    },
+    {
+     "id": 123360,
+     "rank": 1,
+     "nodeID": 99837
+    },
+    {
+     "id": 102521,
+     "rank": 1,
+     "nodeID": 81545
+    },
+    {
+     "id": 115452,
+     "rank": 1,
+     "nodeID": 109372
+    },
+    {
+     "id": 117696,
+     "rank": 1,
+     "nodeID": 95099
+    },
+    {
+     "id": 102590,
+     "rank": 1,
+     "nodeID": 81603
+    },
+    {
+     "id": 102587,
+     "rank": 1,
+     "nodeID": 81600
+    },
+    {
+     "id": 133481,
+     "rank": 1,
+     "nodeID": 81510
+    },
+    {
+     "id": 128257,
+     "rank": 1,
+     "nodeID": 103861
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271465,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Warhelm of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      13334,
+      6652,
+      12854,
+      14049,
+      13696,
+      13692,
+      13698,
+      1587
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      },
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271463,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Pauldrons of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      6652,
+      13335,
+      13694,
+      13697,
+      12854
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 4336,
+     "slot": 3,
+     "quality": 2,
+     "icon": "inv_shirt_black_01.jpg",
+     "name": "Black Swashbuckler's Shirt",
+     "itemLevel": 1
+    },
+    {
+     "id": 271468,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Bulwark of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 271462,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Waistguard of the Consecrated Flame",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13696,
+      13848,
+      1597,
+      13695
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271464,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Greaves of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13708,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 237828,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_boot.jpg",
+     "name": "Spellbreaker's March",
+     "itemLevel": 331,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8793,
+      13836
+     ]
+    },
+    {
+     "id": 237834,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_bracer.jpg",
+     "name": "Spellbreaker's Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8793,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271466,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Gauntlets of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8727,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Falco Strikes",
+     "bonusIDs": [
+      13335,
+      13691,
+      42,
+      13697,
+      12854
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 281029,
+     "slot": 10,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 272147,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Colubrine Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      13668,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 270173,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_trolltablet.jpg",
+     "name": "Zul'jin's Guillotine Technique",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 271460,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Cloak of the Consecrated Flame",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      1597
+     ]
+    },
+    {
+     "id": 268213,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_axe_2h_ulatek_d_01.jpg",
+     "name": "Maze-roa, Warlord's Fury",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 52252,
+     "slot": 17,
+     "quality": 4,
+     "icon": "inv_shirt_guildtabard_01.jpg",
+     "name": "Tabard of the Lightbringer",
+     "itemLevel": 14
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    70
+   ],
+   "factionID": 1
+  }
+ },
+ "r4_安爪啦": {
+  "name": "安爪啦",
+  "id": 3,
+  "guid": 93734339,
+  "type": "Paladin",
+  "server": "伊森利恩",
+  "region": "CN",
+  "icon": "Paladin-Retribution",
+  "specs": [
+   "Retribution"
+  ],
+  "minItemLevel": 339,
+  "maxItemLevel": 339,
+  "potionUse": 6,
+  "healthstoneUse": 2,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Mastery": {
+     "min": 1324,
+     "max": 1324
+    },
+    "Crit": {
+     "min": 861,
+     "max": 861
+    },
+    "Item Level": {
+     "min": 339,
+     "max": 339
+    },
+    "Strength": {
+     "min": 2817,
+     "max": 2817
+    },
+    "Stamina": {
+     "min": 50103,
+     "max": 50103
+    },
+    "Avoidance": {
+     "min": 299,
+     "max": 299
+    },
+    "Haste": {
+     "min": 934,
+     "max": 934
+    },
+    "Versatility": {
+     "min": 196,
+     "max": 196
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Blessing of Spellwarding",
+     "guid": 204018,
+     "type": 1,
+     "abilityIcon": "spell_holy_blessingofprotection.jpg"
+    },
+    {
+     "name": "Searing Glare",
+     "guid": 410126,
+     "type": 1,
+     "abilityIcon": "pvp_searingglare.jpg"
+    },
+    {
+     "name": "Spellbreaker",
+     "guid": 469895,
+     "type": 1,
+     "abilityIcon": "ability_priest_reflectiveshield.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 102498,
+     "rank": 1,
+     "nodeID": 81526
+    },
+    {
+     "id": 102499,
+     "rank": 1,
+     "nodeID": 81527
+    },
+    {
+     "id": 102521,
+     "rank": 1,
+     "nodeID": 81545
+    },
+    {
+     "id": 102583,
+     "rank": 1,
+     "nodeID": 81597
+    },
+    {
+     "id": 102592,
+     "rank": 1,
+     "nodeID": 81605
+    },
+    {
+     "id": 102597,
+     "rank": 1,
+     "nodeID": 81609
+    },
+    {
+     "id": 102476,
+     "rank": 1,
+     "nodeID": 81507
+    },
+    {
+     "id": 102493,
+     "rank": 1,
+     "nodeID": 81523
+    },
+    {
+     "id": 102497,
+     "rank": 1,
+     "nodeID": 81525
+    },
+    {
+     "id": 102504,
+     "rank": 1,
+     "nodeID": 81532
+    },
+    {
+     "id": 102505,
+     "rank": 1,
+     "nodeID": 81533
+    },
+    {
+     "id": 102506,
+     "rank": 1,
+     "nodeID": 81534
+    },
+    {
+     "id": 102515,
+     "rank": 1,
+     "nodeID": 81541
+    },
+    {
+     "id": 102516,
+     "rank": 1,
+     "nodeID": 81542
+    },
+    {
+     "id": 102519,
+     "rank": 1,
+     "nodeID": 81544
+    },
+    {
+     "id": 102596,
+     "rank": 1,
+     "nodeID": 81608
+    },
+    {
+     "id": 102584,
+     "rank": 1,
+     "nodeID": 81598
+    },
+    {
+     "id": 102602,
+     "rank": 1,
+     "nodeID": 81614
+    },
+    {
+     "id": 102603,
+     "rank": 1,
+     "nodeID": 81615
+    },
+    {
+     "id": 102604,
+     "rank": 1,
+     "nodeID": 81616
+    },
+    {
+     "id": 102612,
+     "rank": 2,
+     "nodeID": 81621
+    },
+    {
+     "id": 102622,
+     "rank": 2,
+     "nodeID": 81630
+    },
+    {
+     "id": 102625,
+     "rank": 1,
+     "nodeID": 81632
+    },
+    {
+     "id": 114824,
+     "rank": 1,
+     "nodeID": 92686
+    },
+    {
+     "id": 114828,
+     "rank": 1,
+     "nodeID": 81521
+    },
+    {
+     "id": 114830,
+     "rank": 1,
+     "nodeID": 92689
+    },
+    {
+     "id": 115022,
+     "rank": 1,
+     "nodeID": 92838
+    },
+    {
+     "id": 115024,
+     "rank": 1,
+     "nodeID": 92839
+    },
+    {
+     "id": 115034,
+     "rank": 2,
+     "nodeID": 93009
+    },
+    {
+     "id": 115043,
+     "rank": 1,
+     "nodeID": 92854
+    },
+    {
+     "id": 115165,
+     "rank": 2,
+     "nodeID": 92952
+    },
+    {
+     "id": 115435,
+     "rank": 1,
+     "nodeID": 109373
+    },
+    {
+     "id": 115438,
+     "rank": 1,
+     "nodeID": 109371
+    },
+    {
+     "id": 115439,
+     "rank": 2,
+     "nodeID": 93160
+    },
+    {
+     "id": 115443,
+     "rank": 2,
+     "nodeID": 93164
+    },
+    {
+     "id": 115452,
+     "rank": 1,
+     "nodeID": 109372
+    },
+    {
+     "id": 115453,
+     "rank": 1,
+     "nodeID": 93173
+    },
+    {
+     "id": 115454,
+     "rank": 1,
+     "nodeID": 93174
+    },
+    {
+     "id": 115475,
+     "rank": 1,
+     "nodeID": 81512
+    },
+    {
+     "id": 115481,
+     "rank": 1,
+     "nodeID": 93189
+    },
+    {
+     "id": 117691,
+     "rank": 1,
+     "nodeID": 95094
+    },
+    {
+     "id": 115468,
+     "rank": 1,
+     "nodeID": 93181
+    },
+    {
+     "id": 117683,
+     "rank": 1,
+     "nodeID": 95086
+    },
+    {
+     "id": 117666,
+     "rank": 1,
+     "nodeID": 95069
+    },
+    {
+     "id": 117669,
+     "rank": 1,
+     "nodeID": 95072
+    },
+    {
+     "id": 117677,
+     "rank": 1,
+     "nodeID": 95080
+    },
+    {
+     "id": 117692,
+     "rank": 1,
+     "nodeID": 95095
+    },
+    {
+     "id": 117777,
+     "rank": 1,
+     "nodeID": 95098
+    },
+    {
+     "id": 117778,
+     "rank": 1,
+     "nodeID": 95073
+    },
+    {
+     "id": 117702,
+     "rank": 1,
+     "nodeID": 95105
+    },
+    {
+     "id": 117779,
+     "rank": 1,
+     "nodeID": 95071
+    },
+    {
+     "id": 123360,
+     "rank": 1,
+     "nodeID": 99837
+    },
+    {
+     "id": 128241,
+     "rank": 2,
+     "nodeID": 103851
+    },
+    {
+     "id": 128243,
+     "rank": 1,
+     "nodeID": 81618
+    },
+    {
+     "id": 128251,
+     "rank": 1,
+     "nodeID": 81631
+    },
+    {
+     "id": 128259,
+     "rank": 1,
+     "nodeID": 103863
+    },
+    {
+     "id": 128262,
+     "rank": 1,
+     "nodeID": 103866
+    },
+    {
+     "id": 128264,
+     "rank": 1,
+     "nodeID": 103868
+    },
+    {
+     "id": 135564,
+     "rank": 1,
+     "nodeID": 109368
+    },
+    {
+     "id": 135565,
+     "rank": 1,
+     "nodeID": 109369
+    },
+    {
+     "id": 136006,
+     "rank": 1,
+     "nodeID": 109748
+    },
+    {
+     "id": 136007,
+     "rank": 1,
+     "nodeID": 109749
+    },
+    {
+     "id": 136008,
+     "rank": 1,
+     "nodeID": 109750
+    },
+    {
+     "id": 136127,
+     "rank": 1,
+     "nodeID": 109867
+    },
+    {
+     "id": 136487,
+     "rank": 1,
+     "nodeID": 109999
+    },
+    {
+     "id": 136503,
+     "rank": 1,
+     "nodeID": 110012
+    },
+    {
+     "id": 136594,
+     "rank": 1,
+     "nodeID": 110093
+    },
+    {
+     "id": 136809,
+     "rank": 1,
+     "nodeID": 109374
+    },
+    {
+     "id": 137023,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 137024,
+     "rank": 2,
+     "nodeID": 110419
+    },
+    {
+     "id": 137025,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 136592,
+     "rank": 1,
+     "nodeID": 110091
+    },
+    {
+     "id": 117696,
+     "rank": 1,
+     "nodeID": 95099
+    },
+    {
+     "id": 102590,
+     "rank": 1,
+     "nodeID": 81603
+    },
+    {
+     "id": 102587,
+     "rank": 1,
+     "nodeID": 81600
+    },
+    {
+     "id": 133481,
+     "rank": 1,
+     "nodeID": 81510
+    },
+    {
+     "id": 102595,
+     "rank": 1,
+     "nodeID": 81607
+    },
+    {
+     "id": 128248,
+     "rank": 1,
+     "nodeID": 103865
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 281239,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_plate_raidwarriorulatek_d_01.jpg",
+     "name": "Corroded Hulk's Skullcap",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      6652,
+      13696,
+      13662,
+      13335,
+      14049,
+      12854
+     ]
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240900,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271463,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Pauldrons of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      13335,
+      40,
+      12854,
+      13694,
+      13697,
+      1587
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271468,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Bulwark of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268259,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Girdle of Toxic Regret",
+     "itemLevel": 344,
+     "bonusIDs": [
+      40,
+      13696,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271464,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Greaves of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 7935,
+     "permanentEnchantName": "+41 Intellect & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13708,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 237828,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_boot.jpg",
+     "name": "Spellbreaker's March",
+     "itemLevel": 331,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8793,
+      13836
+     ]
+    },
+    {
+     "id": 237834,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_bracer.jpg",
+     "name": "Spellbreaker's Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8793,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 271466,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Gauntlets of the Consecrated Flame",
+     "itemLevel": 334,
+     "bonusIDs": [
+      13335,
+      13691,
+      6652,
+      13697,
+      12854
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268249,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Vile Alchemist's Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240900,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 268266,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_70_raid_ring8c.jpg",
+     "name": "Alluring Bubbleband",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240900,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 270173,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_trolltablet.jpg",
+     "name": "Zul'jin's Guillotine Technique",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268213,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_axe_2h_ulatek_d_01.jpg",
+     "name": "Maze-roa, Warlord's Fury",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    70
+   ],
+   "factionID": 1
+  }
+ },
+ "r5_Khumi": {
+  "name": "Khumi",
+  "id": 320,
+  "guid": 239765362,
+  "type": "Paladin",
+  "server": "Ragnaros",
+  "region": "US",
+  "icon": "Paladin-Retribution",
+  "specs": [
+   "Retribution"
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 6,
+  "healthstoneUse": 2,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 67,
+     "max": 67
+    },
+    "Mastery": {
+     "min": 1222,
+     "max": 1222
+    },
+    "Crit": {
+     "min": 1028,
+     "max": 1028
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Strength": {
+     "min": 2895,
+     "max": 2895
+    },
+    "Stamina": {
+     "min": 49940,
+     "max": 49940
+    },
+    "Avoidance": {
+     "min": 167,
+     "max": 167
+    },
+    "Haste": {
+     "min": 1016,
+     "max": 1016
+    },
+    "Versatility": {
+     "min": 107,
+     "max": 107
+    },
+    "Leech": {
+     "min": 90,
+     "max": 90
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Spellbreaker",
+     "guid": 469895,
+     "type": 1,
+     "abilityIcon": "ability_priest_reflectiveshield.jpg"
+    },
+    {
+     "name": "Blessing of Sanctuary",
+     "guid": 210256,
+     "type": 1,
+     "abilityIcon": "spell_holy_greaterblessingofsanctuary.jpg"
+    },
+    {
+     "name": "Blessing of Spellwarding",
+     "guid": 204018,
+     "type": 2,
+     "abilityIcon": "spell_holy_blessingofprotection.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 102476,
+     "rank": 1,
+     "nodeID": 81507
+    },
+    {
+     "id": 102493,
+     "rank": 1,
+     "nodeID": 81523
+    },
+    {
+     "id": 102497,
+     "rank": 1,
+     "nodeID": 81525
+    },
+    {
+     "id": 102498,
+     "rank": 1,
+     "nodeID": 81526
+    },
+    {
+     "id": 102499,
+     "rank": 1,
+     "nodeID": 81527
+    },
+    {
+     "id": 102504,
+     "rank": 1,
+     "nodeID": 81532
+    },
+    {
+     "id": 102505,
+     "rank": 1,
+     "nodeID": 81533
+    },
+    {
+     "id": 102506,
+     "rank": 1,
+     "nodeID": 81534
+    },
+    {
+     "id": 102515,
+     "rank": 1,
+     "nodeID": 81541
+    },
+    {
+     "id": 102516,
+     "rank": 1,
+     "nodeID": 81542
+    },
+    {
+     "id": 102519,
+     "rank": 1,
+     "nodeID": 81544
+    },
+    {
+     "id": 102521,
+     "rank": 1,
+     "nodeID": 81545
+    },
+    {
+     "id": 102583,
+     "rank": 1,
+     "nodeID": 81597
+    },
+    {
+     "id": 102584,
+     "rank": 1,
+     "nodeID": 81598
+    },
+    {
+     "id": 102592,
+     "rank": 1,
+     "nodeID": 81605
+    },
+    {
+     "id": 102595,
+     "rank": 1,
+     "nodeID": 81607
+    },
+    {
+     "id": 102596,
+     "rank": 1,
+     "nodeID": 81608
+    },
+    {
+     "id": 102597,
+     "rank": 1,
+     "nodeID": 81609
+    },
+    {
+     "id": 102602,
+     "rank": 1,
+     "nodeID": 81614
+    },
+    {
+     "id": 102603,
+     "rank": 1,
+     "nodeID": 81615
+    },
+    {
+     "id": 102604,
+     "rank": 1,
+     "nodeID": 81616
+    },
+    {
+     "id": 102606,
+     "rank": 1,
+     "nodeID": 81617
+    },
+    {
+     "id": 102612,
+     "rank": 2,
+     "nodeID": 81621
+    },
+    {
+     "id": 102622,
+     "rank": 2,
+     "nodeID": 81630
+    },
+    {
+     "id": 102625,
+     "rank": 1,
+     "nodeID": 81632
+    },
+    {
+     "id": 114824,
+     "rank": 1,
+     "nodeID": 92686
+    },
+    {
+     "id": 114828,
+     "rank": 1,
+     "nodeID": 81521
+    },
+    {
+     "id": 114830,
+     "rank": 1,
+     "nodeID": 92689
+    },
+    {
+     "id": 115022,
+     "rank": 1,
+     "nodeID": 92838
+    },
+    {
+     "id": 115024,
+     "rank": 1,
+     "nodeID": 92839
+    },
+    {
+     "id": 115034,
+     "rank": 2,
+     "nodeID": 93009
+    },
+    {
+     "id": 115043,
+     "rank": 1,
+     "nodeID": 92854
+    },
+    {
+     "id": 115165,
+     "rank": 2,
+     "nodeID": 92952
+    },
+    {
+     "id": 115435,
+     "rank": 1,
+     "nodeID": 109373
+    },
+    {
+     "id": 115438,
+     "rank": 1,
+     "nodeID": 109371
+    },
+    {
+     "id": 115439,
+     "rank": 2,
+     "nodeID": 93160
+    },
+    {
+     "id": 115443,
+     "rank": 2,
+     "nodeID": 93164
+    },
+    {
+     "id": 115452,
+     "rank": 1,
+     "nodeID": 109372
+    },
+    {
+     "id": 115453,
+     "rank": 1,
+     "nodeID": 93173
+    },
+    {
+     "id": 115454,
+     "rank": 1,
+     "nodeID": 93174
+    },
+    {
+     "id": 115468,
+     "rank": 1,
+     "nodeID": 93181
+    },
+    {
+     "id": 115475,
+     "rank": 1,
+     "nodeID": 81512
+    },
+    {
+     "id": 115481,
+     "rank": 1,
+     "nodeID": 93189
+    },
+    {
+     "id": 117666,
+     "rank": 1,
+     "nodeID": 95069
+    },
+    {
+     "id": 117668,
+     "rank": 1,
+     "nodeID": 95071
+    },
+    {
+     "id": 117669,
+     "rank": 1,
+     "nodeID": 95072
+    },
+    {
+     "id": 117677,
+     "rank": 1,
+     "nodeID": 95080
+    },
+    {
+     "id": 117683,
+     "rank": 1,
+     "nodeID": 95086
+    },
+    {
+     "id": 117691,
+     "rank": 1,
+     "nodeID": 95094
+    },
+    {
+     "id": 117692,
+     "rank": 1,
+     "nodeID": 95095
+    },
+    {
+     "id": 117702,
+     "rank": 1,
+     "nodeID": 95105
+    },
+    {
+     "id": 117777,
+     "rank": 1,
+     "nodeID": 95098
+    },
+    {
+     "id": 117778,
+     "rank": 1,
+     "nodeID": 95073
+    },
+    {
+     "id": 123360,
+     "rank": 1,
+     "nodeID": 99837
+    },
+    {
+     "id": 128241,
+     "rank": 2,
+     "nodeID": 103851
+    },
+    {
+     "id": 128243,
+     "rank": 1,
+     "nodeID": 81618
+    },
+    {
+     "id": 128248,
+     "rank": 1,
+     "nodeID": 103865
+    },
+    {
+     "id": 128251,
+     "rank": 1,
+     "nodeID": 81631
+    },
+    {
+     "id": 128257,
+     "rank": 1,
+     "nodeID": 103861
+    },
+    {
+     "id": 128259,
+     "rank": 1,
+     "nodeID": 103863
+    },
+    {
+     "id": 128260,
+     "rank": 1,
+     "nodeID": 103864
+    },
+    {
+     "id": 135564,
+     "rank": 1,
+     "nodeID": 109368
+    },
+    {
+     "id": 135565,
+     "rank": 1,
+     "nodeID": 109369
+    },
+    {
+     "id": 136006,
+     "rank": 1,
+     "nodeID": 109748
+    },
+    {
+     "id": 136007,
+     "rank": 1,
+     "nodeID": 109749
+    },
+    {
+     "id": 136008,
+     "rank": 1,
+     "nodeID": 109750
+    },
+    {
+     "id": 136127,
+     "rank": 1,
+     "nodeID": 109867
+    },
+    {
+     "id": 136487,
+     "rank": 1,
+     "nodeID": 109999
+    },
+    {
+     "id": 136503,
+     "rank": 1,
+     "nodeID": 110012
+    },
+    {
+     "id": 136594,
+     "rank": 1,
+     "nodeID": 110093
+    },
+    {
+     "id": 136809,
+     "rank": 1,
+     "nodeID": 109374
+    },
+    {
+     "id": 137023,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 137024,
+     "rank": 2,
+     "nodeID": 110419
+    },
+    {
+     "id": 137025,
+     "rank": 1,
+     "nodeID": 110419
+    },
+    {
+     "id": 117696,
+     "rank": 1,
+     "nodeID": 95099
+    },
+    {
+     "id": 102590,
+     "rank": 1,
+     "nodeID": 81603
+    },
+    {
+     "id": 102587,
+     "rank": 1,
+     "nodeID": 81600
+    },
+    {
+     "id": 133481,
+     "rank": 1,
+     "nodeID": 81510
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271465,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Warhelm of the Consecrated Flame",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      6652,
+      13335,
+      13695,
+      13692,
+      13698,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 237835,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_shoulder.jpg",
+     "name": "Spellbreaker's Mantle",
+     "itemLevel": 331,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8793,
+      13836
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271468,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Bulwark of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      13335,
+      41,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268259,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Girdle of Toxic Regret",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13696,
+      13662,
+      13335,
+      13848,
+      13695
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271464,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Greaves of the Consecrated Flame",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13708,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 268260,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Scaled Fiend's Warboots",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      12854
+     ]
+    },
+    {
+     "id": 237834,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_plate_questbloodelf_b_01_bracer.jpg",
+     "name": "Spellbreaker's Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13695,
+      12497,
+      13751,
+      14001,
+      13454,
+      8960,
+      8793,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271466,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_plate_raidpaladinulatek_d_01.jpg",
+     "name": "Gauntlets of the Consecrated Flame",
+     "itemLevel": 334,
+     "bonusIDs": [
+      12854,
+      13691,
+      13697,
+      1587
+     ],
+     "setID": 2062
+    },
+    {
+     "id": 240949,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_12_profession_jewelcrafting_ring4_gold.jpg",
+     "name": "Masterwork Sin'dorei Band",
+     "itemLevel": 331,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8793,
+      13836
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 251513,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_12_profession_jewelcrafting_ring3_silver.jpg",
+     "name": "Loa Worshiper's Band",
+     "itemLevel": 331,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      12214,
+      13667,
+      8960,
+      12497,
+      13751,
+      14001,
+      13836
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270173,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_trolltablet.jpg",
+     "name": "Zul'jin's Guillotine Technique",
+     "itemLevel": 344,
+     "bonusIDs": [
+      42,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 270175,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268213,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_axe_2h_ulatek_d_01.jpg",
+     "name": "Maze-roa, Warlord's Fury",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ],
+     "setID": 2070
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 233290,
+     "slot": 17,
+     "quality": 4,
+     "icon": "inv_tabard_nightfall_c_01.jpg",
+     "name": "Sacred Templar's Tabard",
+     "itemLevel": 1
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    70
+   ],
+   "factionID": 1
+  }
+ }
+}

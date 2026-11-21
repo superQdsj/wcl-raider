@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>惩戒骑 · 夺目谷 应对手册</title>
+<style>
+/* 惩戒骑 · 夺目谷（圣骑士粉暗底）：一条路线讲到底，顶部速记 + 高频职责跳转 + 阶段导航。
+   换职业只改 :root 变量即可，:root 之外零硬编码色值。
+   路线内主强调色（--gold）严格只表达「必做」；次色（--tl-e / --tl-v）仅用于时间轴副手牌标记；红（--blood）仅用于硬限制与高压警示。
+   纯系统字体，无外部资源依赖。 */
+:root{
+  --bg:#100e0d; --nav-bg:rgba(16,14,13,.92);
+  --panel:#181514; --panel-2:#201c1a; --line:#332d29; --line-2:#463e38;
+  --tint-1:rgba(255,255,255,.018); --tint-2:rgba(255,255,255,.045); --ic-edge:#000;
+  --ink:#ebe7da; --ink-2:#d4cec2; --mute:#a8a3b0; --faint:#8a8594;
+  --gold:#f39cc3; --gold-dim:#86506a; --on-gold:#1b0e14;
+  --gold-bg:rgba(243,156,195,.08); --gold-chip:rgba(243,156,195,.15); --gold-band:rgba(243,156,195,.13);
+  --hero-a:rgba(243,156,195,.14); --hero-b:rgba(88,179,155,.09);
+  --tl-e:#6cc7ae; --tl-v:#e6be67;
+  --bar-off:#848e88; --bar-mid:#b8c4bc; --on-bar:#141916;
+  --blood:#eb7a6e; --blood-bg:rgba(235,122,110,.09); --blood-line:rgba(235,122,110,.34);
+  --display:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",Georgia,serif;
+  --body:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:68px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.68 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+img.ic{width:28px;height:28px;border-radius:6px;border:1px solid var(--ic-edge);box-shadow:0 0 0 1px var(--line-2);flex:none;display:block}
+img.ic.lg{width:38px;height:38px;border-radius:8px}
+img.ic.sm{width:20px;height:20px;border-radius:5px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.01em}
+h2{font-size:23px;font-weight:900;display:flex;align-items:baseline;gap:12px}
+h2 .k{font:700 12px var(--mono);color:var(--mute);letter-spacing:.12em}
+.sub{color:var(--mute);font-size:14px;margin:6px 0 0}
+section{padding:40px 0 6px}
+
+/* hero */
+header{border-bottom:1px solid var(--line);background:
+  radial-gradient(900px 320px at 88% -40%,var(--hero-a),transparent 70%),
+  radial-gradient(700px 260px at 0% 130%,var(--hero-b),transparent 70%)}
+header .wrap{padding-top:42px;padding-bottom:30px;display:grid;gap:16px}
+.eyebrow{font:700 12px var(--mono);letter-spacing:.16em;color:var(--mute)}
+h1{font-size:clamp(30px,5.6vw,48px);font-weight:900;line-height:1.12}
+h1 .cls{color:var(--gold)}
+h1 .dot{color:var(--faint);margin:0 .2em}
+.lede{max-width:66ch;color:var(--ink-2);font-size:16px;margin:0;line-height:1.75}
+.lede b{color:var(--ink);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mute)}
+.chip b{color:var(--ink);font-weight:500}
+
+/* sticky stage nav (outer wrap reserves 124px so scrolled links never slide under ← 全部手册) */
+.nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{padding-top:8px;padding-bottom:8px;padding-right:124px}
+.nav-scroll{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav a{flex:none;font-size:13px;font-weight:500;color:var(--mute);padding:6px 10px;border-radius:7px;white-space:nowrap;transition:color .15s,background .15s}
+.nav a .n{font:700 11px var(--mono);color:var(--faint);margin-right:4px}
+.nav a:hover{color:var(--ink);background:var(--panel)}
+.nav a.on{color:var(--on-gold);background:var(--gold);font-weight:700}
+.nav a.on .n{color:var(--on-gold)}
+.nav .sep{flex:none;width:1px;height:14px;background:var(--line);margin:0 4px}
+
+/* prep: core skills + hard limit + duty checklist */
+.cores{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.core{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 15px;display:grid;gap:8px;align-content:start}
+.core.main{border-color:var(--gold-dim);background:linear-gradient(180deg,var(--gold-bg),var(--panel) 55%)}
+.core .top{display:flex;gap:10px;align-items:center}
+.core .nm{font-weight:700;font-size:15.5px;line-height:1.25}
+.core .cd{font:500 12px var(--mono);color:var(--mute);margin-top:2px}
+.core.main .nm{color:var(--gold)}
+.core p{margin:0;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+
+.limit{margin-top:12px;background:var(--blood-bg);border:1px solid var(--blood-line);border-left:3px solid var(--blood);
+  border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink-2);line-height:1.65}
+.limit .h{font:700 12.5px var(--body);color:var(--blood);letter-spacing:.04em;margin-bottom:4px}
+.limit b{color:var(--ink);font-weight:700}
+
+.kicks-box{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.kicks-head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel-2)}
+.kicks-head h3{font-size:16px;font-weight:700}
+.kicks-head span{font-size:13px;color:var(--mute);margin-left:auto}
+.kicks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--panel)}
+.kick{display:grid;gap:4px;padding:14px 16px;background:var(--panel);box-shadow:0 0 0 1px var(--line);transition:background .15s;position:relative}
+.kick:hover{background:var(--panel-2)}
+.kick .meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--mute)}
+.kick .idx{font:700 11.5px var(--mono);color:var(--ink-2)}
+.kick .go{margin-left:auto;color:var(--faint);font-size:12px}
+.kick:hover .go{color:var(--ink)}
+.kick .cast{font:700 16px/1.35 var(--display);color:var(--ink)}
+.kick .why{font-size:13.5px;color:var(--ink-2);line-height:1.55}
+
+/* timeline (shared single-track timeline) */
+.tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
+.tl-scroll{overflow-x:auto;padding-bottom:6px}
+.tl{position:relative;min-width:884px;height:232px;margin:0 48px}
+.band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
+.band.trash{background:var(--panel-2);color:var(--mute);border:1px dashed var(--line)}
+.band.boss{background:var(--gold-band,rgba(242,210,75,.12));color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:96px;z-index:1}
+.mk .stem{width:2px;background:var(--gold)}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:var(--ic-edge,#000)}
+.mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
+.mk .t{font:500 11px/1.25 var(--mono);color:var(--mute)}
+.mk.up{bottom:148px}
+.mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
+.mk.dn{top:114px}
+.mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
+.mk.dn .stem{height:14px}
+.mk.v .stem{background:var(--tl-v,var(--shadow))}.mk.v img{border-color:var(--tl-v,var(--shadow))}
+.mk.e .stem{background:var(--tl-e,var(--nature))}.mk.e img{border-color:var(--tl-e,var(--nature))}
+.mk.muted .stem{background:var(--faint)}.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}.mk.muted .lab{color:var(--mute)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+.legend i.pri{border:2px solid var(--gold);border-radius:50%}
+.legend i.e{border:2px solid var(--tl-e,var(--nature));border-radius:50%}
+.legend i.v{border:2px solid var(--tl-v,var(--shadow));border-radius:50%}
+.legend i.muted{border:2px solid var(--faint);border-radius:50%}
+.legend i.boss{background:var(--gold-band,rgba(242,210,75,.12));border:1px solid var(--gold-dim)}
+.legend i.trash{background:var(--panel-2);border:1px dashed var(--line)}
+
+
+/* route */
+.route{margin-top:20px;position:relative;display:grid;gap:18px}
+.route::before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.stop{display:grid;grid-template-columns:40px 1fr;gap:14px}
+.node{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:900 16px var(--display);position:relative;z-index:1}
+.stop.boss .node{background:var(--panel-2);border:2px solid var(--ink-2);color:var(--ink)}
+.stop.trash .node{background:var(--panel-2);border:1px solid var(--line-2);color:var(--mute);font-size:12px;font-weight:700}
+.stop-body{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.stop.boss .stop-body{border-color:var(--line-2)}
+.stop-head{padding:13px 16px;display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:var(--panel-2)}
+.stop-head h3{font-size:18px;font-weight:900}
+.stop.trash .stop-head h3{font-size:16.5px;font-weight:700;color:var(--ink)}
+.stop-head .kind{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.stop.boss .stop-head .kind{color:var(--ink-2)}
+
+.rhythm{padding:10px 16px;font-size:13.5px;color:var(--ink-2);background:var(--tint-1);border-bottom:1px solid var(--line);line-height:1.65}
+.rhythm .lbl{font:700 11.5px var(--body);color:var(--ink);margin-right:8px;letter-spacing:.04em}
+.rhythm b{color:var(--ink);font-weight:700}
+.rhythm.warn{background:var(--blood-bg);color:var(--ink)}
+.rhythm.warn .lbl{color:var(--blood)}
+
+.rows{display:grid}
+.row{display:grid;grid-template-columns:minmax(190px,1.15fr) 20px minmax(150px,.95fr) minmax(180px,1.25fr);gap:10px 12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row.must{background:var(--gold-bg);border-left:3px solid var(--gold);padding-left:13px}
+.row:target{outline:2px solid var(--ink-2);outline-offset:-2px;background:var(--tint-2)}
+.mech{display:flex;gap:10px;align-items:center;min-width:0}
+.mech .n{font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mech .s{font-size:12.5px;color:var(--mute);margin-top:1px}
+.badge-must{font:700 11px/1 var(--body);color:var(--on-gold);background:var(--gold);padding:3px 6px;border-radius:4px;letter-spacing:.02em}
+.row .to{color:var(--faint);text-align:center;font-weight:700}
+.row.must .to{color:var(--gold)}
+.skill{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.btn-chip{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--ink);
+  background:var(--panel-2);border:1px solid var(--line-2);border-radius:7px;padding:3px 9px 3px 4px;white-space:nowrap}
+.row.must .btn-chip.pri{border-color:var(--gold-dim);background:var(--gold-chip);color:var(--gold)}
+.tgt{font-size:12.5px;color:var(--mute);font-weight:500}
+.act-note{font-size:13px;color:var(--mute)}
+.or{font-size:12px;color:var(--faint)}
+.row .why{font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.row .why b{color:var(--ink);font-weight:700}
+
+/* step sequence inside boss stop */
+.subhead{padding:10px 16px 6px;font:700 12px var(--body);color:var(--mute);letter-spacing:.04em;border-top:1px solid var(--line);background:var(--tint-1)}
+.row.step{grid-template-columns:minmax(72px,auto) minmax(150px,1fr) minmax(160px,1fr) minmax(180px,1.25fr)}
+.row.step .when{font:700 12.5px var(--mono);color:var(--mute);white-space:nowrap}
+.row.step.must .when{color:var(--gold)}
+.row.step .mech{gap:8px}
+
+/* soak comparison bars */
+.bars{padding:8px 16px 14px;display:grid;gap:8px}
+.bar-row{display:grid;grid-template-columns:108px 1fr;gap:12px;align-items:center;font-size:13px;color:var(--mute)}
+.bar{height:24px;background:var(--panel-2);border-radius:6px;position:relative;overflow:hidden}
+.bar span{position:absolute;inset:0 auto 0 0;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font:700 12px var(--mono);color:var(--on-bar);white-space:nowrap;min-width:52px}
+.bar .off{background:var(--bar-off)}
+.bar .mid{background:var(--bar-mid)}
+.bar .zero{background:none;color:var(--ink);justify-content:flex-start;padding-left:8px}
+
+.stop-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 16px;
+  border-top:1px solid var(--line);background:var(--panel-2);font-size:13px;color:var(--mute)}
+.stop-foot .plan{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.stop-foot .plan img{vertical-align:-4px;margin-right:4px}
+.stop-foot .next{color:var(--ink-2);font-weight:500}
+.stop-foot .next:hover{color:var(--ink);text-decoration:underline}
+
+/* talents */
+.talent{margin-top:18px;background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:18px;display:grid;gap:16px}
+.code-row{display:flex;gap:10px;align-items:stretch}
+.code-row code{flex:1;min-width:0;font:500 13px/1.5 var(--mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;word-break:break-all;user-select:all}
+.code-row button{flex:none;font:700 14px var(--body);color:var(--on-gold);background:var(--gold);border:0;border-radius:8px;padding:0 20px;cursor:pointer}
+.code-row button:hover{filter:brightness(1.08)}
+.tal-label{font-size:13px;font-weight:700;color:var(--mute);margin:0}
+.tal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tal{display:flex;gap:10px;align-items:center;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);font-size:13.5px}
+.tal.key{border-color:var(--line-2)}
+.tal b{font-size:14px;color:var(--ink);display:block;margin-bottom:2px}
+.tal span{display:block;color:var(--ink-2);line-height:1.5}
+.tal-note{font-size:13.5px;color:var(--mute);margin:0;line-height:1.6}
+.tal-note b{color:var(--ink);font-weight:600}
+
+footer{padding:36px 0 54px;border-top:1px solid var(--line);margin-top:44px;color:var(--mute);font-size:13px}
+.refs{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
+.refs a{color:var(--ink-2);border-bottom:1px dotted var(--faint)}
+.refs a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .row,.row.step{grid-template-columns:1fr;gap:6px}
+  .row .to{display:none}
+  .route::before{left:15px}
+  .stop{grid-template-columns:32px 1fr;gap:10px}
+  .node{width:32px;height:32px;font-size:14px}
+  .tal-grid{grid-template-columns:1fr}
+  .code-row{flex-direction:column}
+  .code-row button{padding:10px 20px}
+  .bar-row{grid-template-columns:88px 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">THE BLINDING VALE · MYTHIC+ · RETRIBUTION PALADIN</div>
+    <h1><span class="cls">惩戒骑</span><span class="dot">·</span>夺目谷 应对手册</h1>
+    <p class="lede">夺目谷的核心节奏是<b>63 秒圣佑术覆盖每段群体脉冲，圣盾术主防鲁伊亚凶残痛击与兹欧凯特高压窗（开盾 8 秒无敌期内还能顺手挂牺牲保脆皮，最后 4 秒恢复转伤）</b>。伊库兹每次青翠践踏落地 4 秒内给搭档套自由祝福双免疫血棘之根，蛤蟆区用清毒术与牺牲祝福处理喷毒。<b>注意保护祝福只挡物理直击与流血，对光明之火、渗流木质与莱克希初始背刺无效。</b></p>
+    <div class="chips">
+      <span class="chip">参考 <b>+23 / +24 限时惩戒（国 / 欧 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>烈日先驱</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap">
+    <div class="nav-scroll">
+      <a href="#prep" class="on">速记</a>
+      <a href="#timeline">时间轴</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#s1">开场</a>
+      <a href="#s2"><span class="n">①</span>莱克希</a>
+      <a href="#s3">过桥</a>
+      <a href="#s4"><span class="n">②</span>伊库兹</a>
+      <a href="#s5">棘喉兽</a>
+      <a href="#s6"><span class="n">③</span>鲁伊亚</a>
+      <a href="#s7">蛤蟆区</a>
+      <a href="#s8"><span class="n">④</span>兹欧凯特</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#talent">天赋</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <p class="sub">核心手牌定位、硬限制与全本必断读条。</p>
+
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="../icons/a9f509d8e834.jpg" alt=""><div><div class="nm">圣盾术</div><div class="cd">3.5 分钟（不败之魂） · 8 秒全免</div></div></div>
+      <p>首领一莱克希即可先交一次（进鲁伊亚前早已转好）；后半程主留<b>鲁伊亚凶残痛击</b>直接免疫直击和 40 秒流血，打完鲁伊亚经蛤蟆区进入<b>兹欧凯特</b>时已转好，留给高叠层高压窗。<b>开盾 8 秒无敌期内顺手给高压队友挂牺牲祝福可免除转伤（牺牲持续 12 秒，无敌结束后的最后 4 秒会恢复转伤）。</b></p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/ba1d0f58f83f.jpg" alt=""><div><div class="nm">圣佑术</div><div class="cd">63 秒（不败之魂） · 8 秒减伤 / 10 秒盾</div></div></div>
+      <p>配合<b>复仇之盾</b>（减伤持续 8 秒，吸收盾以 30% 最大生命值为基础并受全能加成、持续 10 秒），主力覆盖<b>喷涌之花</b>、莱克希隔轮<b>基岩涌动</b>、伊库兹<b>唤棘者咆哮</b>、鲁伊亚<b>光明之火 / 凶残痛击</b>与兹欧凯特<b>渗流木质</b>。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/9d88bcfc8ef2.jpg" alt=""><div><div class="nm">自由祝福 · 保护祝福</div><div class="cd">25 秒 / 5 分钟（强化 4 分钟）</div></div></div>
+      <p><b>无拘自由</b>让伊库兹每次<b>青翠践踏</b>落地后给搭档套自由即双免<b>血棘之根</b>；<b>保护祝福</b>只免疫物理伤害与物理流血，用于鲁伊亚给无自律的自己或队友挡/清<b>凶残痛击</b>，或在莱克希清<b>荆棘之刃</b>物理流血。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/aa2c7718004f.jpg" alt=""><div><div class="nm">清毒术 · 牺牲祝福</div><div class="cd">8 秒 / 1 分钟（正义牺牲）</div></div></div>
+      <p>蛤蟆区<b>喷毒</b>交 8 秒<b>清毒术</b>，双人中毒或冷却时补带正义保护的<b>牺牲祝福</b>清队友毒；鲁伊亚与尾王高压段也用 1 分钟牺牲保脆皮，或在圣盾 8 秒无敌期内免转伤帮扛（最后 4 秒恢复分担）。</p>
+    </article>
+  </div>
+
+  <div class="limit">
+    <div class="h">职业硬限制：30 秒自律与物理免疫边界</div>
+    <b>圣盾术、保护祝福、圣疗术</b>都会给目标挂上 30 秒<b>自律</b>，自律期内无法再对该目标施放保护或圣疗（点出<b>圣光决断</b>仅放行自己无视自律开圣盾）；且<b>保护祝福只挡物理</b>，对莱克希背刺自然直击、光明之火、光箭雨和渗流木质（神圣）完全无效。
+  </div>
+
+  <div class="kicks-box">
+    <div class="kicks-head">
+      <img class="ic" src="../icons/d95f26b4e7b0.jpg" alt="">
+      <h3>全本必断读条</h3>
+      <span>点击跳到对应战斗</span>
+    </div>
+    <div class="kicks">
+      <a class="kick" href="#k-rain">
+        <div class="meta"><span class="idx">01</span><span>光耀播法者 · 开场 / 门前</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">光箭雨 · 光芒箭</div>
+        <div class="why">光箭雨读出即全队高额神圣群体伤害，合波漏一发极易减员；责难冷却时立刻交制裁之锤或盲目之光控停。</div>
+      </a>
+      <a class="kick" href="#k-beam1">
+        <div class="meta"><span class="idx">02</span><span>科兹齐特 · ①莱克希三人组</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">光芒箭</div>
+        <div class="why">三人组高频单体神圣读条（常夹带前波残余播法者），近战贴近科兹齐特用 15 秒责难轮流断。</div>
+      </a>
+      <a class="kick" href="#k-scream">
+        <div class="meta"><span class="idx">03</span><span>光羽瓣翼鸟 · 过桥 / 蛤蟆区</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">迷乱尖叫</div>
+        <div class="why">读出全队迷惑 3 秒失去控制，极易原地吃地刺或吐息，见到读条立刻交责难断死。</div>
+      </a>
+      <a class="kick" href="#k-seed">
+        <div class="meta"><span class="idx">04</span><span>多叶林莽爬行者 · 棘喉兽区</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">种子射击</div>
+        <div class="why">单发约 76.2 万（约六成血量）自然点射，不交打断极易在合波时点秒半血脆皮。</div>
+      </a>
+      <a class="kick" href="#k-spore">
+        <div class="meta"><span class="idx">05</span><span>光诞鞭笞者 · ④兹欧凯特</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">光孢射击</div>
+        <div class="why">首领每轮唤醒多只鞭笞者齐射会与渗流木质叠死全队：成堆用盲目之光或制裁控，落单责难断。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>一场里关键大招交在哪</h2>
+  <p class="sub">一局 +24 限时实录（展示真实冷却节奏，非每波强制照搬；具体取舍见下方路线）。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+<div class="tl">
+  <div class="band trash" style="left:0.78%;width:15.56%">开场</div>
+  <div class="band boss" style="left:16.40%;width:14.33%">①莱克希三人组</div>
+  <div class="band trash" style="left:31.18%;width:4.35%">过桥</div>
+  <div class="band boss" style="left:35.53%;width:14.44%">②伊库兹</div>
+  <div class="band trash" style="left:51.92%;width:5.86%">棘喉兽</div>
+  <div class="band boss" style="left:57.83%;width:14.05%">③鲁伊亚</div>
+  <div class="band trash" style="left:73.45%;width:12.83%">蛤蟆区</div>
+  <div class="band boss" style="left:86.28%;width:13.72%">④兹欧凯特</div>
+  <div class="axis" style="left:0;transform:none">0:00</div>
+  <div class="axis" style="left:16.73%">5:00</div>
+  <div class="axis" style="left:33.46%">10:00</div>
+  <div class="axis" style="left:50.19%">15:00</div>
+  <div class="axis" style="left:66.92%">20:00</div>
+  <div class="axis" style="left:83.65%">25:00</div>
+  <div class="mk up e" style="left:1.87%"><span class="lab">圣佑喷涌</span><span class="t">0:33</span><span class="stem"></span><img src="../icons/ba1d0f58f83f.jpg" alt=""></div>
+  <div class="mk dn e" style="left:7.27%"><span class="lab">圣佑喷涌</span><span class="t">2:10</span><span class="stem"></span><img src="../icons/ba1d0f58f83f.jpg" alt=""></div>
+  <div class="mk up e" style="left:16.88%"><span class="lab">圣佑涌动</span><span class="t">5:02</span><span class="stem"></span><img src="../icons/ba1d0f58f83f.jpg" alt=""></div>
+  <div class="mk dn e" style="left:24.43%"><span class="lab">圣佑涌动</span><span class="t">7:18</span><span class="stem"></span><img src="../icons/ba1d0f58f83f.jpg" alt=""></div>
+  <div class="mk up v" style="left:29.51%"><span class="lab">保护荆棘</span><span class="t">8:49</span><span class="stem"></span><img src="../icons/80d64e11d1d9.jpg" alt=""></div>
+  <div class="mk dn muted" style="left:36.87%"><span class="lab">圣盾+牺牲</span><span class="t">11:01</span><span class="stem"></span><img src="../icons/a9f509d8e834.jpg" alt=""></div>
+  <div class="mk up v" style="left:41.42%"><span class="lab">自由防根</span><span class="t">12:22</span><span class="stem"></span><img src="../icons/9d88bcfc8ef2.jpg" alt=""></div>
+  <div class="mk dn e" style="left:47.64%"><span class="lab">圣佑咆哮</span><span class="t">14:14</span><span class="stem"></span><img src="../icons/ba1d0f58f83f.jpg" alt=""></div>
+  <div class="mk up e" style="left:58.40%"><span class="lab">圣佑光火</span><span class="t">17:27</span><span class="stem"></span><img src="../icons/ba1d0f58f83f.jpg" alt=""></div>
+  <div class="mk dn v" style="left:67.29%"><span class="lab">保护痛击</span><span class="t">20:06</span><span class="stem"></span><img src="../icons/80d64e11d1d9.jpg" alt=""></div>
+  <div class="mk up" style="left:70.56%"><span class="lab">圣盾双免</span><span class="t">21:05</span><span class="stem"></span><img src="../icons/a9f509d8e834.jpg" alt=""></div>
+  <div class="mk dn v" style="left:74.60%"><span class="lab">清毒喷毒</span><span class="t">22:17</span><span class="stem"></span><img src="../icons/aa2c7718004f.jpg" alt=""></div>
+  <div class="mk up e" style="left:87.36%"><span class="lab">圣佑木质</span><span class="t">26:06</span><span class="stem"></span><img src="../icons/ba1d0f58f83f.jpg" alt=""></div>
+  <div class="mk dn" style="left:96.07%"><span class="lab">圣盾木质</span><span class="t">28:42</span><span class="stem"></span><img src="../icons/a9f509d8e834.jpg" alt=""></div>
+</div>
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>圣盾术</span>
+      <span><i class="e"></i>圣佑术</span>
+      <span><i class="v"></i>保护 / 自由 / 清毒</span>
+      <span><i class="muted"></i>备选 / 顺手交牌</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标记的条目是每把必做的关键动作。</p>
+
+  <div class="route">
+
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场花园 → 莱克希前</h3><span class="kind">TRASH · 孢荒喷射者 / 光耀播法者 / 光噬鞭笞者 / 翠绿林地守护者</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>开场圣佑术转好就对准<b>喷涌之花</b>交；多只播法者同读时果断交群控，保护与圣盾留给首领一或突发合波保命（开场如交圣盾可在 8 秒无敌期内顺手挂牺牲保脆皮）。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/2de43687f8dd.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>喷涌之花</div><div class="s">孢荒喷射者 · 60 码每 2 秒神圣伤（6 秒）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span></div>
+            <div class="why">全队 60 码硬吃，常与<b>拔根而起</b>重叠。读条快结束时预开圣佑，同时覆盖 8 秒减伤与 10 秒吸收盾。</div>
+          </div>
+          <div class="bars">
+            <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">43.1 万 / 跳</span></div></div>
+            <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="mid" style="width:71%">30.8 万 / 跳</span></div></div>
+          </div>
+          <div class="row" id="k-rain">
+            <div class="mech"><img class="ic" src="../icons/a48c1d43c768.jpg" alt=""><div><div class="n">光箭雨 · 光芒箭</div><div class="s">光耀播法者 · 群体 / 单体神圣读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="../icons/2ee159fa264d.jpg" alt="">盲目之光</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="../icons/1bf461a26dad.jpg" alt="">制裁之锤</span></div>
+            <div class="why"><b>光箭雨</b>漏断就是全队重伤大 AoE，优先级高于光芒箭；多只同时读光箭雨直接甩群控。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/76b2945c0d33.jpg" alt=""><div><div class="n">拔根而起</div><div class="s">翠绿林地守护者 · 69.0 万自然 + 击退</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span><span class="act-note">靠墙/柱接击退</span></div>
+            <div class="why">击退容易把近战弹进怪堆正面或未开怪区域，先看背后站位；与喷涌之花同来时一发圣佑同步盖住。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/47310f5dc946.jpg" alt=""><div><div class="n">光绽授粉 · 荆棘之刃</div><div class="s">光噬鞭笞者吸收盾 / 追猎者 8 秒流血 / 地裂打击留破裂大地</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/9d88bcfc8ef2.jpg" alt="">自由祝福</span><span class="act-note">优先破盾与避开地裂</span></div>
+            <div class="why">鞭笞者开盾免疫控制并给周围怪提速回血，优先集火破盾；<b>地裂打击</b>留下的<b>破裂大地</b>会持续减速掉血，被卡身位时交自由脱出。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑留给喷涌之花</span><span><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难专断光箭雨</span></div>
+          <a class="next" href="#s2">下一段：① 莱克希三人组 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>莱克希 / 科兹齐特 / 梅提克</h3><span class="kind">BOSS 1 · 密林三杰共享生命 · 45 秒周期</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>开打常带入前波残余播法者或追猎者，先清小怪并断好<b>光芒箭</b>。Boss 循环约 45 秒、圣佑冷却 63 秒，<b>基岩涌动隔轮开圣佑</b>（冷却空窗靠团队减伤或自疗稳住）；同时吃涌动与<b>荆棘之刃</b>时可交<b>圣盾术</b>全免或<b>保护祝福</b>清流血——打到鲁伊亚还有约 8–10 分钟，这里交的保护或后段交出的圣盾仅影响伊库兹前半段，进鲁伊亚前均已转好。</div>
+        <div class="rows">
+          <div class="row" id="k-beam1">
+            <div class="mech"><img class="ic" src="../icons/29947388c009.jpg" alt=""><div><div class="n">光芒箭</div><div class="s">科兹齐特（及残余播法者） · 单体神圣读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难</span></div>
+            <div class="why">全场持续读条，配合坦克近战每轮断死，减少无谓单点减员。</div>
+          </div>
+          <div class="subhead">45 秒技能循环（圣佑 63 秒隔轮覆盖）</div>
+          <div class="row step">
+            <div class="when">+5s 猛击</div>
+            <div class="mech"><img class="ic" src="../icons/275e4915cd0d.jpg" alt=""><div><div class="n">基岩涌动</div><div class="s">梅提克 · +5s 读猛击 → +8s 起 8 秒全队自然涌动</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span><span class="act-note">隔轮覆盖 · 空窗靠团减/自疗</span></div>
+            <div class="why">基岩猛击 3 秒读完地面起跳后 1–2 秒补开圣佑，覆盖后续跳伤与随后的荆棘之刃；下一轮圣佑冷却中则留圣能自疗或依赖团减。</div>
+          </div>
+          <div class="bars">
+            <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">21.2 万 / 跳</span></div></div>
+            <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="mid" style="width:72%">15.3 万 / 跳</span></div></div>
+          </div>
+          <div class="row step">
+            <div class="when">+8s 点名</div>
+            <div class="mech"><img class="ic" src="../icons/43a55af3f69c.jpg" alt=""><div><div class="n">荆棘之刃</div><div class="s">莱克希 · 初始自然背刺 + 12 秒物理流血</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a9f509d8e834.jpg" alt="">圣盾术</span><span class="or">清流血</span><span class="btn-chip"><img class="ic sm" src="../icons/80d64e11d1d9.jpg" alt="">保护祝福</span><span class="tgt">给自己或队友</span></div>
+            <div class="why"><b>注意双属性：初始背刺直击是自然伤，保护挡不住直击、只能免疫和清除后续 12 秒物理流血</b>；自身吃涌动+荆棘高压时可开<b>圣盾术</b>连直击与流血一并全免，队友挂流血血危时给<b>保护祝福</b>。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+11s 出圈</div>
+            <div class="mech"><img class="ic" src="../icons/aad6c105620b.jpg" alt=""><div><div class="n">荆棘之扇</div><div class="s">莱克希 · 15 码 3 秒自然 AoE</div></div></div>
+            <div class="skill"><span class="act-note">退到 15 码外继续远程审判与输出</span></div>
+            <div class="why">退出 15 码即可零伤输出；同时看清 +20s <b>播光急奔</b>路径让开种子点位。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+36s 光束</div>
+            <div class="mech"><img class="ic" src="../icons/73ffd0a9226c.jpg" alt=""><div><div class="n">光明之花射线</div><div class="s">科兹齐特 · 逐颗照种子 8 秒（49.8 万/跳）</div></div></div>
+            <div class="skill"><span class="act-note">按分工站进指定光束 · 低血换人</span></div>
+            <div class="why">每束光照射一颗种子，需多人按分工各自站进光束吃跳伤抑制开花，防止炸全队<b>光绽疯长</b>；轮到自己踩线时保持满血或留圣能用<b>永恒之火</b>自抬，低血立刻换队友接。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">涌动起跳隔轮开圣佑</span><span><img class="ic sm" src="../icons/80d64e11d1d9.jpg" alt="">保护只清后续物理流血</span></div>
+          <a class="next" href="#s3">下一段：过桥小怪 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>过桥 → 伊库兹前</h3><span class="kind">TRASH · 光羽瓣翼鸟 / 孢荒喷射者 / 翠绿林地守护者</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>高限路线过桥独立时间极短，经常直接把翼鸟、守卫者或追猎者带进二号首领一起打。<b>以进伊库兹首发唤棘者咆哮的时刻倒推 63 秒控制圣佑</b>；若桥面交过圣佑且莱克希后段交过圣盾导致两者都在冷却，进 Boss 首发咆哮前提前安排团队减伤或治疗单减；圣盾转好且距鲁伊亚目标痛击 ≥ 3.5 分钟时再作备选过渡。</div>
+        <div class="rows">
+          <div class="row" id="k-scream">
+            <div class="mech"><img class="ic" src="../icons/d93ec51df594.jpg" alt=""><div><div class="n">迷乱尖叫</div><div class="s">光羽瓣翼鸟 · 全队迷惑 3 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="../icons/2ee159fa264d.jpg" alt="">盲目之光</span></div>
+            <div class="why">过桥空间窄且翼鸟常跟进二号首领战，务必盯死每条迷乱尖叫，避免迷惑期间原地吃践踏或咆哮。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/2de43687f8dd.jpg" alt=""><div><div class="n">喷涌之花</div><div class="s">孢荒喷射者 · 60 码神圣 AoE（6 秒）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span><span class="act-note">距 Boss 咆哮 &lt;63 秒时留给 Boss</span></div>
+            <div class="why">桥面单独清怪时间够长时正常交圣佑；直接连波带进 Boss 时先保好 25 秒自由祝福与打断在手。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">翼鸟带进 Boss 也要断尖叫</span><span><img class="ic sm" src="../icons/9d88bcfc8ef2.jpg" alt="">自由留进二号首领</span></div>
+          <a class="next" href="#s4">下一段：② 圣光猎手伊库兹 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop boss" id="s4">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>圣光猎手伊库兹</h3><span class="kind">BOSS 2 · 约 30 秒践踏 · 约 64 秒咆哮</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>开战常连带前波守卫者/翼鸟/追猎者，先清残怪并断好<b>迷乱尖叫</b>。惩戒骑的核心职责是<b>每次青翠践踏落地 4 秒内给少自解搭档套自由祝福</b>（无拘自由双免血棘之根），以及<b>63 秒圣佑对齐约 64 秒一轮的唤棘者咆哮</b>。如咆哮时圣佑在冷却，且<b>圣盾已转好并距鲁伊亚目标痛击 ≥ 3.5 分钟</b>时，可开备选圣盾 + 牺牲保自己和脆皮（仅无敌 8 秒内免转伤，最后 4 秒恢复分担）；两者均不在则提前要团减。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/97438f77ad5a.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>青翠践踏 → 血棘之根</div><div class="s">击退后 4 秒在玩家脚下长根定身 + 每秒自然伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/9d88bcfc8ef2.jpg" alt="">自由祝福</span><span class="tgt">给搭档</span></div>
+            <div class="why">约 30 秒一次，正好对准 25 秒<b>自由祝福</b>。<b>践踏落地出现 4 秒倒计时再丢给搭档（近战或治疗）</b>，靠无拘自由两人同步免疫生根。注意<b>唤棘者咆哮</b>同样会生根，有人被根时由队友转火打碎或治疗魔法驱散。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/fc785f369bfe.jpg" alt=""><div><div class="n">唤棘者咆哮</div><div class="s">约 64 秒周期 · 2 秒读条 + 6 秒全队自然伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span><span class="or">空窗备选</span><span class="btn-chip"><img class="ic sm" src="../icons/a9f509d8e834.jpg" alt="">圣盾术</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="../icons/5111558479b0.jpg" alt="">牺牲祝福</span><span class="tgt">给脆皮</span></div>
+            <div class="why">读条末尾预开<b>圣佑术</b>稳定压伤；半血后常叠<b>光狂疯乱</b>脉冲，圣佑刚好在冷却且圣盾满足冷却条件时可开圣盾顺手丢牺牲（无敌 8 秒内转伤全免，最后 4 秒注意血线）。</div>
+          </div>
+          <div class="bars">
+            <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">44.3 万 / 跳</span></div></div>
+            <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="mid" style="width:69%">30.6 万 / 跳</span></div></div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/49573aece633.jpg" alt=""><div><div class="n">嗜血注视 · 光狂疯乱</div><div class="s">点名追击 10 秒 + 半血常驻每 2 秒脉冲</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/03050a328f7e.jpg" alt="">神圣马驹</span><span class="or">被追上兜底</span><span class="btn-chip"><img class="ic sm" src="../icons/80d64e11d1d9.jpg" alt="">保护祝福</span><span class="tgt">给自己</span></div>
+            <div class="why">被点嗜血注视开马驹绕场，带 Boss 经过场上残余<b>血棘之根 7 码内</b>借<b>脚步重碾</b>踩碎残根（<b>绕开队友</b>以免队友吃重碾自然伤）；实在逃不掉被追咬时开保护可免物理切裂与 5 秒昏迷（挡不住自然伤，且会影响鲁伊亚保护冷却）。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/9d88bcfc8ef2.jpg" alt="">每次践踏后 4 秒内交自由给搭档</span><span><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">咆哮对齐 63 秒圣佑</span></div>
+          <a class="next" href="#s5">下一段：棘喉兽区 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop trash" id="s5">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>通道 → 鲁伊亚前（棘喉兽区）</h3><span class="kind">TRASH · 多叶林莽爬行者 / 发光的棘喉兽 / 脊盾甲虫 / 多刺的迅叶龙</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>本段约 1.5–2 分钟，且经常带脊盾甲虫或残余棘喉兽直接进三号首领：<b>圣盾术与保护祝福留进鲁伊亚应对凶残痛击</b>，本段靠打断、圣佑和走位处理。</div>
+        <div class="rows">
+          <div class="row" id="k-seed">
+            <div class="mech"><img class="ic" src="../icons/95192cbffde4.jpg" alt=""><div><div class="n">种子射击</div><div class="s">多叶林莽爬行者 · 单体 76.2 万（约六成血）自然</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="../icons/1bf461a26dad.jpg" alt="">制裁之锤</span></div>
+            <div class="why">单发极痛且爬行者常与棘喉兽同拉，盯死读条框轮流打断，残血点射不交控极易减员。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/fac7e1ea3004.jpg" alt=""><div><div class="n">护光者的荒芜 · 炽阳吐息</div><div class="s">整批小怪均有死亡 7 码炸 + 荒芜树脂池</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span><span class="act-note">怪濒死提前后撤 7 码</span></div>
+            <div class="why">鲁伊亚会给整片棘喉兽区所有小怪（爬行者、甲虫、迅叶龙、棘喉兽）灌注<b>护光者的荒芜</b>，任意小怪濒死都要提前留出 7 码躲爆炸与地板；另躲<b>炽阳吐息</b>正面、<b>狩猎跃击</b>锁定锥形，甲虫开<b>尖刺盾牌</b>正常转火破盾即可。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难专断种子射击</span><span><img class="ic sm" src="../icons/a9f509d8e834.jpg" alt="">圣盾与保护留进三号首领</span></div>
+          <a class="next" href="#s6">下一段：③ 护光者鲁伊亚 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop boss" id="s6">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>护光者鲁伊亚</h3><span class="kind">BOSS 3 · 三形态转场 + P3 峡谷之灵</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>全队高压直击与流血段（常带残余甲虫/棘喉兽进战，先清怪躲死亡炸）。P2 熊形态起（约 +76–91s 首发）读<b>凶残痛击</b>全队吃 68% 物理直击并挂 40 秒重流血，P3 还有峡谷之灵同步叠加<b>光明之火</b>。<b>主线：最险一轮预开圣盾术，另一轮按冷却交圣佑术或给无自律目标套保护祝福；备选连招：P3 两轮痛击间隔略超 30 秒自律，预开圣盾自律消完后下一轮可顺接保护。</b>期间用 1 分钟<b>牺牲祝福</b>保光明之火/痛击脆皮队友。</div>
+        <div class="rows">
+          <div class="subhead">三形态转场轴（枭兽 → 熊形态 → 哈籁尼尔）</div>
+          <div class="row step">
+            <div class="when">P1 枭兽</div>
+            <div class="mech"><img class="ic" src="../icons/dd39e55ff53b.jpg" alt=""><div><div class="n">光明之火 · 守卫之怒</div><div class="s">6 秒点名光辉持续 + 结束留沉默射线 / 4 码光明坠落</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="../icons/5111558479b0.jpg" alt="">牺牲祝福</span><span class="tgt">给点名队友</span></div>
+            <div class="why">协作断<b>守卫之怒</b>并躲开 4 码<b>光明坠落</b>圈；被点<b>光明之火</b>开圣佑减伤（<b>首发痛击约 +76–91s 落地，想用圣佑接首发痛击需倒推 63 秒，在开打后约 13 秒内交完，错过就直接留给痛击</b>），结束前贴边排沉默射线；队友中光火高压时丢 1 分钟牺牲。</div>
+          </div>
+          <div class="row step">
+            <div class="when">P2 熊形态</div>
+            <div class="mech"><img class="ic" src="../icons/766f9d16a509.jpg" alt=""><div><div class="n">粉碎打击</div><div class="s">标记多名目标连发 3 波锥形冲击波（88.1 万 + 易伤 +100%）</div></div></div>
+            <div class="skill"><span class="act-note">看标记与朝向横移躲避</span></div>
+            <div class="why">Boss（及 P3 幽灵熊）每 2 秒朝被标记目标方向喷一道锥形波共 3 波，吃中叠 +100% 易伤后再吃下一波或痛击极易减员，躲完 3 波再回近战位背打。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">P2/P3</div>
+            <div class="mech"><img class="ic" src="../icons/a64a2a4b930f.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>凶残痛击</div><div class="s">2 秒读条 · 全队 87.2 万物理 + 40 秒流血（回满才消）</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/a9f509d8e834.jpg" alt="">圣盾术</span><span class="or">另一轮</span><span class="btn-chip"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="../icons/80d64e11d1d9.jpg" alt="">保护祝福</span><span class="tgt">给自己或无自律队友</span></div>
+            <div class="why"><b>自保：</b>读条末尾预开<b>圣盾术</b>免疫直击且不上流血（P3 与<b>光明之火</b>紧邻时可提前 2–4 秒开盾一并罩住射线与痛击）；其余轮次读条前预开<b>圣佑术</b>硬吃直击，或用<b>保护祝福</b>免伤清流血（备选：P3 两轮痛击间隔略超 30 秒，开盾后自律一消可顺接自保保护）。<br><b>保人 / 兜底：</b>无自律队友残血面临痛击或流血抬不满时给<b>保护祝福</b>免伤清流血，也可给脆皮挂<b>牺牲祝福</b>；极端救急用<b>圣疗术</b>（给自己或无自律队友）奶满消流血（注意挂 30 秒自律）。</div>
+          </div>
+          <div class="bars">
+            <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">87.2 万</span></div></div>
+            <div class="bar-row"><span>圣佑 + 复仇盾</span><div class="bar"><span class="mid" style="width:67%">58.6 万</span></div></div>
+            <div class="bar-row"><span>圣盾术（预开）</span><div class="bar"><span class="zero">0 · 免疫直击</span></div></div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/a9f509d8e834.jpg" alt="">预开圣盾免痛击 · 另一轮交圣佑/保护</span><span><img class="ic sm" src="../icons/5111558479b0.jpg" alt="">1 分钟牺牲保光火/痛击队友</span></div>
+          <a class="next" href="#s7">下一段：蛤蟆区 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop trash" id="s7">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>蛤蟆区 → 兹欧凯特门前</h3><span class="kind">TRASH · 薯身蟾主母 / 光羽瓣翼鸟 / 孢荒喷射者 / 光耀播法者</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>本段持续约 4 分钟，从鲁伊亚交盾起算 210 秒，<b>圣盾术通常在清完蛤蟆区、开打兹欧凯特之前就已转好</b>；这里靠 8 秒清毒、1 分钟圣佑与 1 分钟牺牲平稳推进，把转好的圣盾留进尾王。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/0215a087c1ad.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>喷毒</div><div class="s">薯身蟾主母 · 41.4 万直击 + 9 秒高伤中毒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/aa2c7718004f.jpg" alt="">清毒术</span><span class="tgt">给自己或中毒队友</span><span class="or">另补</span><span class="btn-chip"><img class="ic sm" src="../icons/5111558479b0.jpg" alt="">牺牲祝福</span><span class="tgt">给中毒队友</span></div>
+            <div class="why">每 1.5 秒跳 34.0 万持续中毒，单靠治疗单驱极易倒人。优先用 8 秒<b>清毒术</b>自清或点驱脆皮，自己刚清过毒再交带正义保护的<b>牺牲祝福</b>帮扛并同步移除队友中毒；同时避开<b>薯身蟾抽击</b>击退。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/a48c1d43c768.jpg" alt=""><div><div class="n">门前播法者 · 喷射者</div><div class="s">迷乱尖叫 / 光箭雨 + 喷涌之花</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span></div>
+            <div class="why">沿用开场与过桥处理：翼鸟先断<b>迷乱尖叫</b>、门前播法者死盯<b>光箭雨</b>、喷射者读<b>喷涌之花</b>交圣佑。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/aa2c7718004f.jpg" alt="">喷毒先交清毒</span><span><img class="ic sm" src="../icons/5111558479b0.jpg" alt="">双中毒补牺牲救队友</span></div>
+          <a class="next" href="#s8">下一段：④ 兹欧凯特 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="stop boss" id="s8">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>兹欧凯特</h3><span class="kind">BOSS 4 · 全程神圣脉冲 · 50 秒循环</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>开打常连带门前残余棘喉兽或鞭笞者，先断清小怪防死亡炸。全战每 3 秒全队吃<b>渗流木质（神圣伤）</b>，叠加<b>光绽之力</b>跳伤后压力持续抬高。<b>鲁伊亚交完的圣盾术开怪前大多已经转好，先捏在手里留到中后段高叠层或走位危机时再开（开盾 8 秒无敌期内还可顺手挂牺牲保叠层队友，最后 4 秒恢复转伤），全程 63 秒圣佑卡轴盖高压。</b></div>
+        <div class="rows">
+          <div class="subhead">50 秒技能轴</div>
+          <div class="row step" id="k-spore">
+            <div class="when">+4s 唤怪</div>
+            <div class="mech"><img class="ic" src="../icons/54bc38beec6c.jpg" alt=""><div><div class="n">唤醒光绽 → 光孢射击</div><div class="s">叫醒光诞鞭笞者高频神圣齐射</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/2ee159fa264d.jpg" alt="">盲目之光</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="../icons/1bf461a26dad.jpg" alt="">制裁之锤</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="../icons/d95f26b4e7b0.jpg" alt="">责难</span></div>
+            <div class="why">成堆拉一起 A 时先手交<b>盲目之光</b>整批停读条，再补<b>制裁</b>和<b>责难</b>收尾，防止多发<b>光孢射击</b>与渗流木质齐砸。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+14s 撞球</div>
+            <div class="mech"><img class="ic" src="../icons/dd39e55ff53b.jpg" alt=""><div><div class="n">光绽精华 → 光绽之力</div><div class="s">吃球叠 +10% 伤害/治疗（每秒 10.4 万神圣可叠）</div></div></div>
+            <div class="skill"><span class="act-note">按需吃球叠增伤 · 开圣盾会清层</span></div>
+            <div class="why">漏球会让首领触发全队爆伤，惩戒满血带减伤帮吃 1–2 层打输出兼清场；<b>注意开圣盾术会清除身上已有的光绽之力（一并失去 +10% 伤害/治疗增益）且无敌期间不会叠加新层数</b>，想吃增伤请避开圣盾窗口。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+40s 射线</div>
+            <div class="mech"><img class="ic" src="../icons/a48c1d43c768.jpg" alt=""><div><div class="n">凝聚光线</div><div class="s">点名坦克的持续射线 · 扫中休眠鞭笞者液化成光明树脂</div></div></div>
+            <div class="skill"><span class="act-note">避开坦克拉线路径与光明树脂池</span></div>
+            <div class="why">射线固定点名坦克，近战提前让开坦克拉线路径与液化后的高伤减速<b>光明树脂</b>；误踩进树脂池被减速时交<b>自由祝福</b>或<b>神圣马驹</b>脱身。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">全程 3s</div>
+            <div class="mech"><img class="ic" src="../icons/0951f69ad868.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>渗流木质</div><div class="s">全战每 3 秒全队神圣脉冲</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">圣佑术</span><span class="or">高压窗</span><span class="btn-chip"><img class="ic sm" src="../icons/a9f509d8e834.jpg" alt="">圣盾术</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="../icons/5111558479b0.jpg" alt="">牺牲祝福</span><span class="tgt">给高叠层队友</span></div>
+            <div class="why">起手吃球叠加跳伤时交第一发<b>圣佑术</b>，之后每 63 秒转好配合叠层继续开；手里留好的<b>圣盾术</b>压在中后段高层掉血、躲不开树脂或救场时交出（开盾同时把牺牲丢给高叠层队友，无敌 8 秒内转伤全免，最后 4 秒注意自身血线）；保护对这里所有神圣伤害均无效。</div>
+          </div>
+          <div class="bars">
+            <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">28.3 万 / 跳</span></div></div>
+            <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="mid" style="width:70%">19.9 万 / 跳</span></div></div>
+            <div class="bar-row"><span>圣盾术</span><div class="bar"><span class="zero">0 · 免疫渗流木质</span></div></div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ba1d0f58f83f.jpg" alt="">63 秒圣佑覆盖叠层+木质</span><span><img class="ic sm" src="../icons/a9f509d8e834.jpg" alt="">圣盾留给中后段高压+8 秒无敌牺牲</span></div>
+          <a class="next" href="#talent">查看天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">取自限时录像的天赋。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">CYEAAAAAAAAAAAAAAAAAAAAAAAAAAAwoZbbmZWGzYGAAAAAAzUmlZYmx2Y2GmZbGjxYYGLsBgZZ2mZmtGAAAYBwAgxMbAzYmZDYmZYMjBD</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">这几个防御/功能天赋不要动</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="../icons/47aa97698a81.jpg" alt=""><div><b>不败之魂</b><span>把圣盾术缩到 3.5 分钟（鲁伊亚交完进尾王前已转好）、圣佑术缩到 63 秒对齐伊库兹咆哮。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/7680c302be2d.jpg" alt=""><div><b>复仇之盾</b><span>圣佑 8 秒额外减伤 10% 并附 10 秒吸收盾（基础 30% 最大生命值，受全能加成），稳吃喷涌之花与凶残痛击。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/9d88bcfc8ef2.jpg" alt=""><div><b>无拘自由</b><span>二号首领伊库兹给搭档套自由祝福时同步免疫血棘之根，一张牌保两个人。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/a9f509d8e834.jpg" alt=""><div><b>圣光决断</b><span>自律期内仍能开出圣盾术并每清 1 个有害效果回 10% 血，避免鲁伊亚交完保护或圣疗被自律卡死。</span></div></div>
+    </div>
+    <p class="tal-note">常见可换：<b>迅捷审判</b> ↔ <b>圣光的正义</b>；想把保护缩至 4 分钟时可用<b>强化保护祝福</b>换<b>圣光使者</b>（保留<b>正义保护</b>以便蛤蟆区牺牲解喷毒，若同时舍弃正义保护则蛤蟆区仅靠 8 秒清毒术单解）。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>惩戒骑 · 夺目谷 应对手册 · 2026-11</div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/Ygc1zWm3Mj4dTLBR#fight=17">欧鳇打鸡 +24 29:03</a>
+      <a href="https://www.warcraftlogs.com/reports/2JCbhkXHdf6MzDB4#fight=14">Tabris +24 29:45</a>
+      <a href="https://www.warcraftlogs.com/reports/rjp6cLXBknbtYgfa#fight=20">哦毕爷 +24 29:51</a>
+      <a href="https://www.warcraftlogs.com/reports/jH7dWrY18QF2MzqJ#fight=16">Âra +23 25:58</a>
+      <a href="https://www.warcraftlogs.com/reports/h2HMxYQmgFNZWXPG#fight=10">Khumi +23 27:38</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>
