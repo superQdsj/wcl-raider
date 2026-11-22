@@ -172,14 +172,14 @@
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1311987}}" alt=""><div><div class="n">蛇之风</div><div class="s">全团自然跳伤 · 每跳约 29 万</div></div></div>
             <div class="to">→</div>
-            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
-            <div class="why">快读完或刚出首跳开优胜，背朝空地吃击退；被推向金池按逃脱拉回。</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span><span class="btn-chip"><img class="ic sm" src="{{I:781}}" alt="">逃脱</span><span class="act-note">备选</span></div>
+            <div class="why">读条末或首跳开优胜。背朝空地吃击退，被推向金池可跳回。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:265923}}" alt=""><div><div class="n">卢彻的召唤</div><div class="s">地上的金池变成活性黄金</div></div></div>
             <div class="to">→</div>
-            <div class="skill"><span class="act-note">转火活性黄金</span></div>
-            <div class="why">叫宠物一起转火，先打离首领近的几只。</div>
+            <div class="skill"><span class="act-note">转火活性黄金</span><span class="btn-chip"><img class="ic sm" src="{{I:109248}}" alt="">束缚射击</span><span class="act-note">备选</span></div>
+            <div class="why">先打离首领近的。小怪往首领爬时沿路放箭，出圈就晕。</div>
           </div>
         </div>
         <div class="stop-foot">
@@ -213,6 +213,12 @@
             <div class="why">贴外圈拉着跑，千万别带进人群。</div>
           </div>
           <div class="row">
+            <div class="mech"><img class="ic" src="{{I:109248}}" alt=""><div><div class="n">血誓刺客</div><div class="s">陵墓大厅增援</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:109248}}" alt="">束缚射击</span><span class="act-note">备选</span></div>
+            <div class="why">刺客聚在一起时把箭放在移动路线上，出圈就晕。</div>
+          </div>
+          <div class="row">
             <div class="mech"><img class="ic" src="{{I:1297781}}" alt=""><div><div class="n">骤裂 / 鲜血吸取</div><div class="s">已挂流血 · 阿库尔大王准备抽血</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
@@ -240,7 +246,7 @@
             <div class="mech"><img class="ic" src="{{I:1306763}}" alt=""><div><div class="n">毒蛇打击</div><div class="s">帕特拉女王上中毒与减速 · 持续 8 秒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:5384}}" alt="">假死</span><span class="act-note">备选</span><span class="or">或</span><span class="act-note">报治疗清毒</span></div>
-            <div class="why">有紧急药膏按假死秒清毒和减速；没转好或没点喊治疗驱。</div>
+            <div class="why">点了紧急药膏可假死清毒，减速也随毒消失。缺技能就报治疗。</div>
           </div>
         </div>
         <div class="stop-foot">
@@ -259,7 +265,7 @@
             <div class="mech"><img class="ic" src="{{I:267763}}" alt=""><div><div class="n"><span class="badge-must">必做</span>恶疾排放</div><div class="s">未完成的木乃伊读条 · 漏断会挂全团疾病</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span><span class="or">补控</span><span class="btn-chip"><img class="ic sm" src="{{I:19577}}" alt="">胁迫</span></div>
-            <div class="why">反制锁系；胁迫晕完盯重读，大怪多免控。真漏断染病，实在不行按假死自清。</div>
+            <div class="why">反制锁系，胁迫晕完盯重读。漏断染病可用紧急药膏假死自清。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:271555}}" alt=""><div><div class="n">埋葬 / 哀痛恸哭</div><div class="s">葬礼构造体埋人后开始越跳越疼的引导</div></div></div>
@@ -332,8 +338,14 @@
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:270499}}" alt=""><div><div class="n">冰霜震击</div><div class="s">幻影萨满祭司点名 · 15 秒魔法减速</div></div></div>
             <div class="to">→</div>
-            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:781}}" alt="">逃脱</span><span class="act-note">备选</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:53271}}" alt="">主人的召唤</span></div>
-            <div class="why">按逃脱解减速，也能跳出迅猛龙狩猎跃击正面，后跳先看飞斧；带狡诈宠可用主人的召唤。</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:781}}" alt="">逃脱</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:53271}}" alt="">主人的召唤</span></div>
+            <div class="why">迅疾如风逃脱自解。逃脱在转时，带狡诈宠可用主人的召唤。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:270500}}" alt=""><div><div class="n">狩猎跃击</div><div class="s">荣耀迅猛龙扑人后扫正面</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:781}}" alt="">逃脱</span><span class="btn-chip"><img class="ic sm" src="{{I:109248}}" alt="">束缚射击</span><span class="act-note">备选</span></div>
+            <div class="why">扑人后绕侧面，来不及就侧跳。束缚射击能晕出圈的迅猛龙，狂战士免疫。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:270492}}" alt=""><div><div class="n">妖术 / 幽灵弹</div><div class="s">幻影妖术祭司读条</div></div></div>
@@ -388,7 +400,7 @@
             <div class="mech"><img class="ic" src="{{I:267273}}" alt=""><div><div class="n"><span class="badge-must">必做</span>毒性新星</div><div class="s">扎纳扎尔读条 · 全团中毒 12 秒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
-            <div class="why">按顺序接断，别交图腾；万一漏断中毒，靠紧急药膏按假死自清。</div>
+            <div class="why">按顺序接断，图腾另拆。漏断中毒可用紧急药膏假死自清。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:267060}}" alt=""><div><div class="n">元素的召唤</div><div class="s">扎纳扎尔召出爆裂、洪流和雷鸣图腾</div></div></div>
@@ -461,8 +473,8 @@
           <div class="row step">
             <div class="when">全程看落点</div>
             <div class="mech"><img class="ic" src="{{I:1303115}}" alt=""><div><div class="n">凌空猛击 / 穿刺之矛</div><div class="s">达萨跃击 8 码 · 落矛范围 7 码</div></div></div>
-            <div class="skill"><span class="act-note">分散躲地面</span></div>
-            <div class="why">全场留开间距，别站首领正面吃灼金之波。</div>
+            <div class="skill"><span class="act-note">分散躲地面</span><span class="btn-chip"><img class="ic sm" src="{{I:781}}" alt="">逃脱</span><span class="act-note">备选</span></div>
+            <div class="why">见落点或正面波就横移，来不及走可逃脱侧跳。</div>
           </div>
           <div class="row step">
             <div class="when">提扎拉起读</div>
@@ -479,8 +491,8 @@
           <div class="row step">
             <div class="when">砸完已挂上</div>
             <div class="mech"><img class="ic" src="{{I:1303267}}" alt=""><div><div class="n">镀金毁灭持续伤</div><div class="s">直击后有 15 秒火焰跳伤 · 每跳约 12 万</div></div></div>
-            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span><span class="or">位移</span><span class="btn-chip"><img class="ic sm" src="{{I:781}}" alt="">逃脱</span><span class="or">保命</span><span class="btn-chip"><img class="ic sm" src="{{I:109304}}" alt="">意气风发</span></div>
-            <div class="why">砸完按逃脱侧跳，躲灼金之波和穿刺之矛；漏开龟壳补优胜，掉太快按意气风发。</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span><span class="or">保命</span><span class="btn-chip"><img class="ic sm" src="{{I:109304}}" alt="">意气风发</span></div>
+            <div class="why">漏开龟壳就补优胜压跳伤，血线吃紧按意气风发。</div>
           </div>
         </div>
         <div class="stop-foot">
@@ -507,7 +519,7 @@
       <div class="tal key"><img class="ic" src="{{I:109215}}" alt=""><div><b>迅疾如风</b><span>逃脱直接解移动限制，还加速 4 秒。</span></div></div>
       <div class="tal key"><img class="ic" src="{{I:459983}}" alt=""><div><b>科多兽镇静剂</b><span>宁神顺带驱旁边最多两个怪的魔法，爪牙扎堆瞄中间打。</span></div></div>
     </div>
-    <p class="tal-note">自带<b>紧急药膏</b>，毒蛇打击或漏断恶疾排放、毒性新星都能假死自清；<b>甲壳壁垒</b>可换<b>寻路</b>，跳怪留<b>伪装</b>。不开原始暴怒常驻<b>坚韧宠物</b>，拿耐力训练 +5% 生命值和巨熊之韧被动 3% 减伤；要额外解减速切<b>狡诈宠物</b>按主人的召唤。</p>
+    <p class="tal-note">有<b>紧急药膏</b>时，假死可备选自清中毒或疾病。<b>甲壳壁垒</b>可换<b>寻路</b>，跳怪留<b>伪装</b>。不开原始暴怒常驻<b>坚韧宠物</b>，拿耐力训练 +5% 生命值和巨熊之韧被动 3% 减伤；<b>狡诈宠物</b>的主人的召唤可解定身、减速，基础免疫 4 秒。要控移动小怪可点<b>束缚射击</b>。</p>
   </div>
 </section>
 
