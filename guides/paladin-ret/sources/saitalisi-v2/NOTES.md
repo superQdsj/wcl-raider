@@ -62,3 +62,7 @@
 - 英雄天赋树：新版 `enc.py` 已内置国服英雄天赋树映射，重跑后 `tstring.json` 正确输出 `hero_tree: {"en": "Herald of the Sun", "zh": "烈日先驱"}`。
 - 正义保护（469321）的 Wowhead 页面没有 tooltip 正文；「牺牲祝福清中毒」的依据是本证据包 dispels（牺牲祝福驱散细胞毒素 6 次，r1/r2/r3）以及 `mimou-v2/NOTES.md` 的同类实测。
 - 补查方式：没有调 `wcl.py events`，全部用 `evidence/raw/*.json`（本地，0 次 API）做脚本核对。新版 `evidence.py` 现已默认补充采集 `team_interrupts`、`team_debuffs`、`enemy_buffs`（仅缺队友增益 `team_buffs`）。
+
+## 伤害写法（2026-11-22）
+
+正文的「几成血 / 几管血」全部改成 compare.md 有伤害平均的绝对值（含吸收，取整到万），route 副标题注明层数实测。原占血量%按峰值血量算，偏小约 15%，已不再使用。

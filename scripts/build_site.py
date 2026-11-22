@@ -22,6 +22,7 @@ CLASSES = {
     "rogue": dict(en="Subtlety Rogue", spec="敏锐", cls="潜行者", role="近战输出", color="#FFF468", icon="ability_stealth"),
     "holy-paladin": dict(en="Holy Paladin", spec="神圣", cls="圣骑士", role="治疗", color="#F48CBA", icon="spell_holy_holybolt"),
     "paladin-ret": dict(en="Retribution Paladin", spec="惩戒", cls="圣骑士", role="近战输出", color="#F48CBA", icon="spell_holy_auraoflight"),
+    "shaman-elemental": dict(en="Elemental Shaman", spec="元素", cls="萨满祭司", role="远程输出", color="#0070DD", icon="spell_nature_lightning"),
 }
 # Chinese name, English name, card image site/img/dungeons/<img>.jpg.
 DUNGEON_INFO = [

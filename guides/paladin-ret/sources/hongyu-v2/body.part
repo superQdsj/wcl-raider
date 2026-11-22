@@ -115,7 +115,7 @@
 
 <section id="route">
   <h2><span class="k">02</span>按路线逐段</h2>
-  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。</p>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。伤害数字是 +23 实测（含被吸收的部分），层数越高越大。</p>
 
   <div class="route">
 
@@ -142,7 +142,7 @@
             <div class="mech"><img class="ic" src="{{I:1305201}}" alt=""><div><div class="n">采掘冲击</div><div class="s">原始主宰 · 读条 · 60 码全队 + 8 秒自然持续（清毒术驱不了）</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span></div>
-            <div class="why">直击接近半管血，后面跟 8 秒自然持续（清毒术驱不了）。<b>读条末预开或落地后立刻开圣佑术</b>减免直击与持续；圣盾术可备选免疫或清掉后续持续伤害。</div>
+            <div class="why">直击约 58 万，后面跟 8 秒自然持续（每跳约 18 万）（清毒术驱不了）。<b>读条末预开或落地后立刻开圣佑术</b>减免直击与持续；圣盾术可备选免疫或清掉后续持续伤害。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:372047}}" alt=""><div><div class="n">钢铁弹幕</div><div class="s">亵渎者德拉加尔 · 3 秒连击 · 每下烈焰新星炸全队</div></div></div>
@@ -205,7 +205,7 @@
             <div class="mech"><img class="ic" src="{{I:396044}}" alt=""><div><div class="n">冰雹爆裂</div><div class="s">读条 · 全队冰霜伤害并射出冰雹炸弹</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">别踩地上的冰雹炸弹</span></div>
-            <div class="why">直击接近半管血。炸弹踩到再吃一大口自然伤害、被击飞，还急速 −50% 持续 20 秒。</div>
+            <div class="why">直击约 63 万。炸弹踩到再吃一大口自然伤害、被击飞，还急速 −50% 持续 20 秒。</div>
           </div>
         </div>
         <div class="stop-foot">
@@ -289,13 +289,13 @@
             <div class="mech"><img class="ic" src="{{I:384823}}" alt=""><div><div class="n">地狱烈火</div><div class="s">炎缚火焰风暴 · 读条 · 全队直击 + 8 秒持续，可叠加</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">直击三成多血，8 秒持续还能叠层。<b>读条末预开或落地后立刻开圣佑术</b>，稳住后续叠层跳伤。</div>
+            <div class="why">直击约 50 万，8 秒持续（每跳 15–21 万）还能叠层。<b>读条末预开或落地后立刻开圣佑术</b>，稳住后续叠层跳伤。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:372863}}" alt=""><div><div class="n">缚焰仪式</div><div class="s">首领满能量 · 点名约 5 秒后 12 码爆炸并召出火焰风暴</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">被点就离开人群 12 码</span></div>
-            <div class="why">约每 40 秒一次。打在身上能掉六成血，点名后立刻带离队友，落地约 3 秒后风暴就会读地狱烈火。</div>
+            <div class="why">约每 40 秒一次。打在身上约 78 万，点名后立刻带离队友，落地约 3 秒后风暴就会读地狱烈火。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:372107}}" alt=""><div><div class="n">熔火巨石</div><div class="s">首领读条 · 巨石向前滚 40 码后爆炸，留下焦灼之土</div></div></div>
@@ -333,13 +333,13 @@
             <div class="mech"><img class="ic" src="{{I:1306366}}" alt=""><div><div class="n"><span class="badge-must">必做</span>闪电涌流</div><div class="s">暴风引导者 / 莱瓦迪 · 无读条 7 秒自然引导（清毒术驱不了）</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">无前置读条、不可打断、清毒术驱不了，7 秒跳完远超一管血。<b>点到你立刻开圣盾术</b>，剩下几跳全部免疫；圣盾在冷却就立刻开圣佑术并喊治疗刷你。</div>
+            <div class="why">无前置读条、不可打断、清毒术驱不了，每跳约 41 万，7 秒跳满必死。<b>点到你立刻开圣盾术</b>，剩下几跳全部免疫；圣盾在冷却就立刻开圣佑术并喊治疗刷你。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:392406}}" alt=""><div><div class="n">雷霆践踏</div><div class="s">风暴战士 · 高频全队自然伤害</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">靠治疗 · 优先压血/控停</span></div>
-            <div class="why">全本高承伤来源，但单跳约两成血且频率极高，不单独交圣佑（留给闪电涌流）；配合昏迷和转火尽快压死，若连带进基拉卡战优先清理。</div>
+            <div class="why">全本高承伤来源，但单跳约 24 万且频率极高，不单独交圣佑（留给闪电涌流）；配合昏迷和转火尽快压死，若连带进基拉卡战优先清理。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1310355}}" alt=""><div><div class="n">暴风骤雨之盾</div><div class="s">大引导者莱瓦迪 · 自身吸收盾 · 存在期间每秒全队自然伤害</div></div></div>
@@ -420,7 +420,7 @@
             <div class="mech"><img class="ic" src="{{I:381516}}" alt=""><div><div class="n">阻断暴雨</div><div class="s">厄克哈特读条 · 全队自然伤害 + 打断施法 2 秒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">它读完那一刻别读条</span></div>
-            <div class="why">直击四成血，还会打断施法 2 秒。手上有读条技能就等它放完再读。</div>
+            <div class="why">直击约 51 万，还会打断施法 2 秒。手上有读条技能就等它放完再读。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:642}}" alt=""><div><div class="n">自己中喷吐且血线危险（兜底）</div><div class="s">圣盾术已转好时</div></div></div>

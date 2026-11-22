@@ -100,7 +100,8 @@ class RunData:
             (raw_dir / f"run{idx}_{k}.json").write_text(json.dumps(getattr(self, k), ensure_ascii=False))
         self.windows = self._windows()
         hps = [e.get("maxHitPoints") for e in self.taken if e.get("maxHitPoints")]
-        self.max_hp = max(hps) if hps else 0
+        # 用中位数：峰值常来自临时加血上限的增益（如土元素 +15%），会把占血量%算小
+        self.max_hp = sorted(hps)[len(hps) // 2] if hps else 0
 
     # 防御技能生效窗口：优先用增益事件，没有增益事件就用施法时间 + 配置的持续时间
     def _windows(self):

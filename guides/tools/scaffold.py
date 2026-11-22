@@ -66,6 +66,16 @@ PALETTES: Dict[str, Dict[str, str]] = {
         "--hero-a": "rgba(216,173,126,.14)", "--hero-b": "rgba(143,174,196,.09)",
         "--tl-e": "#8faec4", "--tl-v": "#e49d6e",
     },
+    "shaman-elemental": {
+        "theme_name": "萨满雷蓝暗底", "cls_zh": "元素萨满", "spec_en": "ELEMENTAL SHAMAN", "spec_zh": "元素",
+        "--bg": "#0d1014", "--nav-bg": "rgba(13,16,20,.92)",
+        "--panel": "#141920", "--panel-2": "#1a2029", "--line": "#2a323e", "--line-2": "#3b4655",
+        "--ink": "#e8eaee", "--ink-2": "#cfd4dc", "--mute": "#a2abb8", "--faint": "#848e9c",
+        "--gold": "#5fb0ff", "--gold-dim": "#2f5f8f", "--on-gold": "#08131f",
+        "--gold-bg": "rgba(95,176,255,.08)", "--gold-chip": "rgba(95,176,255,.15)", "--gold-band": "rgba(95,176,255,.13)",
+        "--hero-a": "rgba(95,176,255,.14)", "--hero-b": "rgba(224,168,92,.09)",
+        "--tl-e": "#e0a85c", "--tl-v": "#9be06a",
+    },
 }
 
 

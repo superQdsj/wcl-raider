@@ -71,3 +71,7 @@
   7. r1 / r2 / r4 `enemy-casts --ability 险恶光环 --from 3:00 --to 7:30`：瞬发、20.6 秒间隔三次。
   8. 队伍职业与职责：`wclr.context.load_run(...).players`。
 - 证据包说明：原初采集版本未含 `team_interrupts`/`team_debuffs`/`enemy_buffs`；新版 `evidence.py` 现已默认补充采集（仅缺 `team_buffs`）。时间轴 r3 已用 `0:51.1` 圣佑钉锤替换降级备选的 `1:52.0` 牺牲接飞跃。
+
+## 伤害写法（2026-11-22）
+
+正文的「几成血 / 几管血」全部改成 compare.md 有伤害平均的绝对值（含吸收，取整到万），route 副标题注明层数实测。原占血量%按峰值血量算，偏小约 15%，已不再使用。

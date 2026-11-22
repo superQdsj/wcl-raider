@@ -112,7 +112,7 @@
 
 <section id="route">
   <h2><span class="k">02</span>按路线逐段</h2>
-  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标记的条目是每把必做的关键动作。</p>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标记的条目是每把必做的关键动作。伤害数字是 +24 实测（含被吸收的部分），层数越高越大。</p>
 
   <div class="route">
 
@@ -369,7 +369,7 @@
     <p class="tal-label">这几个防御/功能天赋不要动</p>
     <div class="tal-grid">
       <div class="tal key"><img class="ic" src="{{I:114154}}" alt=""><div><b>不败之魂</b><span>圣佑术缩至 63 秒精准对齐寒冬哨兵 63 秒循环与尾王每轮重击；圣盾术缩至 3.5 分钟可在图腾区与尾王各开一次。</span></div></div>
-      <div class="tal key"><img class="ic" src="{{I:1261562}}" alt=""><div><b>复仇之盾</b><span>圣佑 8 秒额外减伤 10% 并附 10 秒吸收盾（基础 30% 最大生命值，受全能加成），是稳吃 90% 血量回响重击的关键。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1261562}}" alt=""><div><b>复仇之盾</b><span>圣佑 8 秒额外减伤 10% 并附 10 秒吸收盾（基础 30% 最大生命值，受全能加成），是稳吃约 110 万回响重击（开圣佑约 76 万）的关键。</span></div></div>
       <div class="tal key"><img class="ic" src="{{I:384820}}" alt=""><div><b>正义牺牲</b><span>牺牲祝福冷却减半至 1 分钟，配合<b>正义保护</b>与无敌窗口免转伤，覆盖囤宝狂人、图腾区与尾王保脆皮。</span></div></div>
       <div class="tal key"><img class="ic" src="{{I:305394}}" alt=""><div><b>无拘自由</b><span>冰川区用自由祝福解救或读条期预免冰川之墓，全队少救两人。</span></div></div>
     </div>

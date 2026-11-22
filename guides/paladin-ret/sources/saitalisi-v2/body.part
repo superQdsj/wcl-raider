@@ -53,7 +53,7 @@
     </article>
     <article class="core">
       <div class="top"><img class="ic lg" src="{{I:213644}}" alt=""><div><div class="nm">清毒术</div><div class="cd">8 秒冷却</div></div></div>
-      <p>清中毒。蝰蛇区剧毒蝰蛇的细胞毒素转好就清，这个 10 秒的毒不清就能跳掉超过一管血。</p>
+      <p>清中毒。蝰蛇区剧毒蝰蛇的细胞毒素转好就清，这个 10 秒的毒直击约 40 万，不清每跳再掉约 21 万。</p>
     </article>
   </div>
 
@@ -72,7 +72,7 @@
       <a class="kick" href="#k-bolt">
         <div class="meta"><span class="idx">01</span><span>风暴能手 · 灌注能量的唤雷者</span><span class="go">跳转 ↘</span></div>
         <div class="cast">闪电箭</div>
-        <div class="why">全本最常见的单体读条，漏断一下就是六成血。风暴能手出现在开场到蝰蛇区，唤雷者在云气区。</div>
+        <div class="why">全本最常见的单体读条，漏断一下就是约 78 万。风暴能手出现在开场到蝰蛇区，唤雷者在云气区。</div>
       </a>
       <a class="kick" href="#k-arrow">
         <div class="meta"><span class="idx">02</span><span>育巢者 · 蝰蛇区</span><span class="go">跳转 ↘</span></div>
@@ -113,7 +113,7 @@
 
 <section id="route">
   <h2><span class="k">02</span>按路线逐段</h2>
-  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。</p>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。伤害数字是 +23 实测（含被吸收的部分），层数越高越大。</p>
 
   <div class="route">
 
@@ -128,13 +128,13 @@
             <div class="mech"><img class="ic" src="{{I:1291399}}" alt=""><div><div class="n"><span class="badge-must">必做</span>锯齿冲锋</div><div class="s">倒刺三叶虫 · 瞬发冲锋 · 6 秒物理流血</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福</span><span class="tgt">给自己</span></div>
-            <div class="why">没有读条，打断管不了。流血每跳约两成血，跳满超过一管；中了就给自己套保护，流血当场清掉。</div>
+            <div class="why">没有读条，打断管不了。直击约 41 万，流血每跳约 26 万；中了就给自己套保护，流血当场清掉。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:265966}}" alt=""><div><div class="n">震地</div><div class="s">沙怒石拳战士读条 · 60 码物理 · 击退</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">一下就是六成多血，读条时开好；刚套了保护祝福的话物理正好免疫。</div>
+            <div class="why">一下就是约 84 万，读条时开好；刚套了保护祝福的话物理正好免疫。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1308113}}" alt=""><div><div class="n">箭雨</div><div class="s">流沙猎手 · 瞬发引导 9 秒 · 物理</div></div></div>
@@ -146,7 +146,7 @@
             <div class="mech"><img class="ic" src="{{I:1291262}}" alt=""><div><div class="n">闪电箭</div><div class="s">风暴能手读条 · 单体自然</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span></div>
-            <div class="why">这段的第一打断目标，漏一下就是六成血。</div>
+            <div class="why">这段的第一打断目标，漏一下就是约 78 万。</div>
           </div>
         </div>
         <div class="stop-foot">
@@ -173,7 +173,7 @@
             <div class="when">约 +9.5 秒</div>
             <div class="mech"><img class="ic" src="{{I:1288087}}" alt=""><div><div class="n">惊雷（电闪雷鸣二段）</div><div class="s">冲刺后约 5 秒 · 20 码自然</div></div></div>
             <div class="skill"><span class="act-note">跑出 20 码</span></div>
-            <div class="why">吃一下比一管血还多，冲刺一结束就跑开；圣盾还开着可以留在原地。</div>
+            <div class="why">吃一下就可能直接死，冲刺一结束就跑开；圣盾还开着可以留在原地。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1289062}}" alt=""><div><div class="n">狂风之力</div><div class="s">阿斯匹克斯 · 部分轮次前 3.5 秒读条 → 全团击退</div></div></div>
@@ -185,7 +185,7 @@
             <div class="mech"><img class="ic" src="{{I:1288457}}" alt=""><div><div class="n">阵风</div><div class="s">阿斯匹克斯高频点名 · 2 秒读条 · 自然直击 + 4 秒持续</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">靠治疗，圣佑留给电闪雷鸣</span></div>
-            <div class="why">双首领阶段的高频点名，单次合计约七成血但施放太勤，圣佑术优先留给电闪雷鸣。</div>
+            <div class="why">双首领阶段的高频点名，直击约 37 万、之后每跳约 15 万，但施放太勤，圣佑术优先留给电闪雷鸣。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1310311}}" alt=""><div><div class="n">风暴祝福</div><div class="s">两个首领之一免疫伤害 · 受伤时互相转移</div></div></div>
@@ -293,13 +293,13 @@
             <div class="mech"><img class="ic" src="{{I:1289109}}" alt=""><div><div class="n">雷霆喷吐（点名）</div><div class="s">开打约 25 秒起 · 点名约 3.5 秒后连劈 5 下</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">闪电每秒劈你所在位置，5 下合计超过一管血；<b>临近第一道闪电劈下前开</b>（点名加连劈共 7.5 秒，按太早会少盖后段），边走边把萦绕风暴拉到场边。</div>
+            <div class="why">闪电每秒劈你所在位置，每下约 36 万、共 5 下；<b>临近第一道闪电劈下前开</b>（点名加连劈共 7.5 秒，按太早会少盖后段），边走边把萦绕风暴拉到场边。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1293048}}" alt=""><div><div class="n">毒蛇风暴</div><div class="s">开打约 40 秒起 · 4 秒读条 · 全团击退 + 8 秒自然持续</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术（备选）</span><span class="btn-chip"><img class="ic sm" src="{{I:190784}}" alt="">神圣马驹</span></div>
-            <div class="why">一下近半管血，后续自然持续<b>清毒术驱不了</b>；这轮没被雷霆喷吐点到才交圣佑。被吹远就上马跑回来。</div>
+            <div class="why">一下约 63 万，后续自然持续<b>清毒术驱不了</b>；这轮没被雷霆喷吐点到才交圣佑。被吹远就上马跑回来。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1300227}}" alt=""><div><div class="n">钻地 / 钻地之震</div><div class="s">开打约 49 秒起 · 冲撞路径 + 全团持续掉血</div></div></div>
@@ -332,7 +332,7 @@
             <div class="mech"><img class="ic" src="{{I:1293475}}" alt=""><div><div class="n"><span class="badge-must">必做</span>释放电荷</div><div class="s">暴怒云气 · 3 秒读条 · 全团自然</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">一下六成多血，躲不掉；<b>看到读条就开</b>，出了伤害再开就晚了。积攒电荷每层让伤害再高 8%。</div>
+            <div class="why">一下约 81 万，躲不掉；<b>看到读条就开</b>，出了伤害再开就晚了。积攒电荷每层让伤害再高 8%。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1291262}}" alt=""><div><div class="n">闪电箭</div><div class="s">灌注能量的唤雷者 · 同开场</div></div></div>
@@ -388,7 +388,7 @@
             <div class="mech"><img class="ic" src="{{I:1290531}}" alt=""><div><div class="n">诱导</div><div class="s">加瓦兹特 · 3 秒读条 · 全团自然 · 留下静电场</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">走出静电场</span></div>
-            <div class="why">每次全团六成血左右，靠治疗；留下的诱导力场每秒伤害很高，马上走出来。</div>
+            <div class="why">每次全团约 78 万，靠治疗；留下的诱导力场每秒伤害很高，马上走出来。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:633}}" alt=""><div><div class="n">兜底：光束里血线见底</div><div class="s">自己或接光束的队友</div></div></div>
@@ -415,7 +415,7 @@
             <div class="mech"><img class="ic" src="{{I:1303486}}" alt=""><div><div class="n">蚀骨践踏</div><div class="s">宝珠守望者 · 3.5 秒读条 · 60 码自然 + 10 秒自然持续</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">60 码躲不掉，一下就是半管血，后面还有 10 秒自然持续（<b>清毒术驱不了</b>）；读条中开好。</div>
+            <div class="why">60 码躲不掉，一下就是约 66 万，后面还有 10 秒自然持续（每跳约 18 万）（<b>清毒术驱不了</b>）；读条中开好。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1303486}}" alt=""><div><div class="n">蚀骨践踏（圣佑在冷却）</div><div class="s">身上的 10 秒持续</div></div></div>
