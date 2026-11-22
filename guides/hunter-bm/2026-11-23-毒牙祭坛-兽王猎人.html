@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>兽王猎人 · 毒牙祭坛 应对手册</title>
+<style>
+/* 兽王猎人 · 毒牙祭坛（猎人绿暗底）：一条路线讲到底，顶部速记 + 高频职责跳转 + 阶段导航。
+   换职业只改 :root 变量即可，:root 之外零硬编码色值。
+   路线内主强调色（--gold）严格只表达「必做」；次色（--tl-e / --tl-v）仅用于时间轴副手牌标记；红（--blood）仅用于硬限制与高压警示。
+   纯系统字体，无外部资源依赖。 */
+:root{
+  --bg:#0e1310; --nav-bg:rgba(14,19,16,.92);
+  --panel:#151d17; --panel-2:#1b261e; --line:#2a3a2e; --line-2:#3e5142;
+  --tint-1:rgba(255,255,255,.018); --tint-2:rgba(255,255,255,.045); --ic-edge:#000;
+  --ink:#e9eddf; --ink-2:#cdd6c8; --mute:#a4b4a6; --faint:#8b9b8d;
+  --gold:#aad372; --gold-dim:#839f61; --on-gold:#11180b;
+  --gold-bg:rgba(170,211,114,.08); --gold-chip:rgba(170,211,114,.15); --gold-band:rgba(170,211,114,.13);
+  --hero-a:rgba(170,211,114,.14); --hero-b:rgba(127,181,227,.09);
+  --tl-e:#88b7e9; --tl-v:#e1a778;
+  --bar-off:#848e88; --bar-mid:#b8c4bc; --on-bar:#141916;
+  --blood:#eb7a6e; --blood-bg:rgba(235,122,110,.09); --blood-line:rgba(235,122,110,.34);
+  --display:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",Georgia,serif;
+  --body:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:68px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.68 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+img.ic{width:28px;height:28px;border-radius:6px;border:1px solid var(--ic-edge);box-shadow:0 0 0 1px var(--line-2);flex:none;display:block}
+img.ic.lg{width:38px;height:38px;border-radius:8px}
+img.ic.sm{width:20px;height:20px;border-radius:5px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.01em}
+h2{font-size:23px;font-weight:900;display:flex;align-items:baseline;gap:12px}
+h2 .k{font:700 12px var(--mono);color:var(--mute);letter-spacing:.12em}
+.sub{color:var(--mute);font-size:14px;margin:6px 0 0}
+section{padding:40px 0 6px}
+
+/* hero */
+header{border-bottom:1px solid var(--line);background:
+  radial-gradient(900px 320px at 88% -40%,var(--hero-a),transparent 70%),
+  radial-gradient(700px 260px at 0% 130%,var(--hero-b),transparent 70%)}
+header .wrap{padding-top:42px;padding-bottom:30px;display:grid;gap:16px}
+.eyebrow{font:700 12px var(--mono);letter-spacing:.16em;color:var(--mute)}
+h1{font-size:clamp(30px,5.6vw,48px);font-weight:900;line-height:1.12}
+h1 .cls{color:var(--gold)}
+h1 .dot{color:var(--faint);margin:0 .2em}
+.lede{max-width:66ch;color:var(--ink-2);font-size:16px;margin:0;line-height:1.75}
+.lede b{color:var(--ink);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mute)}
+.chip b{color:var(--ink);font-weight:500}
+
+/* sticky stage nav (outer wrap reserves 124px so scrolled links never slide under ← 全部手册) */
+.nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{padding-top:8px;padding-bottom:8px;padding-right:124px}
+.nav-scroll{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav a{flex:none;font-size:13px;font-weight:500;color:var(--mute);padding:6px 10px;border-radius:7px;white-space:nowrap;transition:color .15s,background .15s}
+.nav a .n{font:700 11px var(--mono);color:var(--faint);margin-right:4px}
+.nav a:hover{color:var(--ink);background:var(--panel)}
+.nav a.on{color:var(--on-gold);background:var(--gold);font-weight:700}
+.nav a.on .n{color:var(--on-gold)}
+.nav .sep{flex:none;width:1px;height:14px;background:var(--line);margin:0 4px}
+
+/* prep: core skills + hard limit + duty checklist */
+.cores{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.core{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 15px;display:grid;gap:8px;align-content:start}
+.core.main{border-color:var(--gold-dim);background:linear-gradient(180deg,var(--gold-bg),var(--panel) 55%)}
+.core .top{display:flex;gap:10px;align-items:center}
+.core .nm{font-weight:700;font-size:15.5px;line-height:1.25}
+.core .cd{font:500 12px var(--mono);color:var(--mute);margin-top:2px}
+.core.main .nm{color:var(--gold)}
+.core p{margin:0;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+
+.limit{margin-top:12px;background:var(--blood-bg);border:1px solid var(--blood-line);border-left:3px solid var(--blood);
+  border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink-2);line-height:1.65}
+.limit .h{font:700 12.5px var(--body);color:var(--blood);letter-spacing:.04em;margin-bottom:4px}
+.limit b{color:var(--ink);font-weight:700}
+
+.kicks-box{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.kicks-head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel-2)}
+.kicks-head h3{font-size:16px;font-weight:700}
+.kicks-head span{font-size:13px;color:var(--mute);margin-left:auto}
+.kicks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--panel)}
+.kick{display:grid;gap:4px;padding:14px 16px;background:var(--panel);box-shadow:0 0 0 1px var(--line);transition:background .15s;position:relative}
+.kick:hover{background:var(--panel-2)}
+.kick .meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--mute)}
+.kick .idx{font:700 11.5px var(--mono);color:var(--ink-2)}
+.kick .go{margin-left:auto;color:var(--faint);font-size:12px}
+.kick:hover .go{color:var(--ink)}
+.kick .cast{font:700 16px/1.35 var(--display);color:var(--ink)}
+.kick .why{font-size:13.5px;color:var(--ink-2);line-height:1.55}
+
+/* timeline (shared single-track timeline) */
+.tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
+.tl-scroll{overflow-x:auto;padding-bottom:6px}
+.tl{position:relative;min-width:884px;height:232px;margin:0 48px}
+.band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
+.band.trash{background:var(--panel-2);color:var(--mute);border:1px dashed var(--line)}
+.band.boss{background:var(--gold-band,rgba(242,210,75,.12));color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:96px;z-index:1}
+.mk .stem{width:2px;background:var(--gold)}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:var(--ic-edge,#000)}
+.mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
+.mk .t{font:500 11px/1.25 var(--mono);color:var(--mute)}
+.mk.up{bottom:148px}
+.mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
+.mk.dn{top:114px}
+.mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
+.mk.dn .stem{height:14px}
+.mk.v .stem{background:var(--tl-v,var(--shadow))}.mk.v img{border-color:var(--tl-v,var(--shadow))}
+.mk.e .stem{background:var(--tl-e,var(--nature))}.mk.e img{border-color:var(--tl-e,var(--nature))}
+.mk.muted .stem{background:var(--faint)}.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}.mk.muted .lab{color:var(--mute)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+.legend i.pri{border:2px solid var(--gold);border-radius:50%}
+.legend i.e{border:2px solid var(--tl-e,var(--nature));border-radius:50%}
+.legend i.v{border:2px solid var(--tl-v,var(--shadow));border-radius:50%}
+.legend i.muted{border:2px solid var(--faint);border-radius:50%}
+.legend i.boss{background:var(--gold-band,rgba(242,210,75,.12));border:1px solid var(--gold-dim)}
+.legend i.trash{background:var(--panel-2);border:1px dashed var(--line)}
+
+
+/* route */
+.route{margin-top:20px;position:relative;display:grid;gap:18px}
+.route::before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.stop{display:grid;grid-template-columns:40px 1fr;gap:14px}
+.node{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:900 16px var(--display);position:relative;z-index:1}
+.stop.boss .node{background:var(--panel-2);border:2px solid var(--ink-2);color:var(--ink)}
+.stop.trash .node{background:var(--panel-2);border:1px solid var(--line-2);color:var(--mute);font-size:12px;font-weight:700}
+.stop-body{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.stop.boss .stop-body{border-color:var(--line-2)}
+.stop-head{padding:13px 16px;display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:var(--panel-2)}
+.stop-head h3{font-size:18px;font-weight:900}
+.stop.trash .stop-head h3{font-size:16.5px;font-weight:700;color:var(--ink)}
+.stop-head .kind{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.stop.boss .stop-head .kind{color:var(--ink-2)}
+
+.rhythm{padding:10px 16px;font-size:13.5px;color:var(--ink-2);background:var(--tint-1);border-bottom:1px solid var(--line);line-height:1.65}
+.rhythm .lbl{font:700 11.5px var(--body);color:var(--ink);margin-right:8px;letter-spacing:.04em}
+.rhythm b{color:var(--ink);font-weight:700}
+.rhythm.warn{background:var(--blood-bg);color:var(--ink)}
+.rhythm.warn .lbl{color:var(--blood)}
+
+.rows{display:grid}
+.row{display:grid;grid-template-columns:minmax(190px,1.15fr) 20px minmax(150px,.95fr) minmax(180px,1.25fr);gap:10px 12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row.must{background:var(--gold-bg);border-left:3px solid var(--gold);padding-left:13px}
+.row:target{outline:2px solid var(--ink-2);outline-offset:-2px;background:var(--tint-2)}
+.mech{display:flex;gap:10px;align-items:center;min-width:0}
+.mech .n{font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mech .s{font-size:12.5px;color:var(--mute);margin-top:1px}
+.badge-must{font:700 11px/1 var(--body);color:var(--on-gold);background:var(--gold);padding:3px 6px;border-radius:4px;letter-spacing:.02em}
+.row .to{color:var(--faint);text-align:center;font-weight:700}
+.row.must .to{color:var(--gold)}
+.skill{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.btn-chip{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--ink);
+  background:var(--panel-2);border:1px solid var(--line-2);border-radius:7px;padding:3px 9px 3px 4px;white-space:nowrap}
+.row.must .btn-chip.pri{border-color:var(--gold-dim);background:var(--gold-chip);color:var(--gold)}
+.tgt{font-size:12.5px;color:var(--mute);font-weight:500}
+.act-note{font-size:13px;color:var(--mute)}
+.or{font-size:12px;color:var(--faint)}
+.row .why{font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.row .why b{color:var(--ink);font-weight:700}
+
+/* step sequence inside boss stop */
+.subhead{padding:10px 16px 6px;font:700 12px var(--body);color:var(--mute);letter-spacing:.04em;border-top:1px solid var(--line);background:var(--tint-1)}
+.row.step{grid-template-columns:minmax(72px,auto) minmax(150px,1fr) minmax(160px,1fr) minmax(180px,1.25fr)}
+.row.step .when{font:700 12.5px var(--mono);color:var(--mute);white-space:nowrap}
+.row.step.must .when{color:var(--gold)}
+.row.step .mech{gap:8px}
+
+/* soak comparison bars */
+.bars{padding:8px 16px 14px;display:grid;gap:8px}
+.bar-row{display:grid;grid-template-columns:108px 1fr;gap:12px;align-items:center;font-size:13px;color:var(--mute)}
+.bar{height:24px;background:var(--panel-2);border-radius:6px;position:relative;overflow:hidden}
+.bar span{position:absolute;inset:0 auto 0 0;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font:700 12px var(--mono);color:var(--on-bar);white-space:nowrap;min-width:52px}
+.bar .off{background:var(--bar-off)}
+.bar .mid{background:var(--bar-mid)}
+.bar .zero{background:none;color:var(--ink);justify-content:flex-start;padding-left:8px}
+
+.stop-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 16px;
+  border-top:1px solid var(--line);background:var(--panel-2);font-size:13px;color:var(--mute)}
+.stop-foot .plan{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.stop-foot .plan img{vertical-align:-4px;margin-right:4px}
+.stop-foot .next{color:var(--ink-2);font-weight:500}
+.stop-foot .next:hover{color:var(--ink);text-decoration:underline}
+
+/* talents */
+.talent{margin-top:18px;background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:18px;display:grid;gap:16px}
+.code-row{display:flex;gap:10px;align-items:stretch}
+.code-row code{flex:1;min-width:0;font:500 13px/1.5 var(--mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;word-break:break-all;user-select:all}
+.code-row button{flex:none;font:700 14px var(--body);color:var(--on-gold);background:var(--gold);border:0;border-radius:8px;padding:0 20px;cursor:pointer}
+.code-row button:hover{filter:brightness(1.08)}
+.tal-label{font-size:13px;font-weight:700;color:var(--mute);margin:0}
+.tal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tal{display:flex;gap:10px;align-items:center;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);font-size:13.5px}
+.tal.key{border-color:var(--line-2)}
+.tal b{font-size:14px;color:var(--ink);display:block;margin-bottom:2px}
+.tal span{display:block;color:var(--ink-2);line-height:1.5}
+.tal-note{font-size:13.5px;color:var(--mute);margin:0;line-height:1.6}
+.tal-note b{color:var(--ink);font-weight:600}
+
+footer{padding:36px 0 54px;border-top:1px solid var(--line);margin-top:44px;color:var(--mute);font-size:13px}
+.refs{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
+.refs a{color:var(--ink-2);border-bottom:1px dotted var(--faint)}
+.refs a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .row,.row.step{grid-template-columns:1fr;gap:6px}
+  .row .to{display:none}
+  .route::before{left:15px}
+  .stop{grid-template-columns:32px 1fr;gap:10px}
+  .node{width:32px;height:32px;font-size:14px}
+  .tal-grid{grid-template-columns:1fr}
+  .code-row{flex-direction:column}
+  .code-row button{padding:10px 20px}
+  .bar-row{grid-template-columns:88px 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">ALTAR OF FANGS · MYTHIC+ · BEAST MASTERY HUNTER</div>
+    <h1><span class="cls">兽王猎人</span><span class="dot">·</span>毒牙祭坛 应对手册</h1>
+    <p class="lede">开场中麻痹射击直接<b>逃脱</b>秒解；拉维和扭缠盘蛇的长掉血，提前开<b>灵龟守护</b>挡掉。祖尔加拦完光束留<b>优胜劣汰</b>吃切骨者，靠流血洗掉仪式毒液。</p>
+    <div class="chips">
+      <span class="chip">英雄天赋 <b>群兽领袖</b></span>
+      <span class="chip">参考 <b>+22～23 限时（国 / 欧 / 美）</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap"><div class="nav-scroll">
+    <a href="#prep" class="on">速记</a>
+    <a href="#timeline">时间轴</a>
+    <span class="sep" aria-hidden="true"></span>
+    <a href="#s1">开场</a>
+    <a href="#s2"><span class="n">①</span>拉维</a>
+    <a href="#s3">进化者</a>
+    <a href="#s4"><span class="n">②</span>盘蛇</a>
+    <a href="#s5">神选者</a>
+    <a href="#s6"><span class="n">③</span>祖尔加</a>
+    <span class="sep" aria-hidden="true"></span>
+    <a href="#talent">天赋</a>
+  </div></div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="../icons/fc38901d4be6.jpg" alt=""><div><div class="nm">灵龟守护</div><div class="cd">2 分钟冷却 · 最长 8 秒</div></div></div>
+      <p>能挡关键直击，开着打不了人。看准点到自己，卡伤害落地前按。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/a6aed8aed400.jpg" alt=""><div><div class="nm">优胜劣汰</div><div class="cd">90 秒充能 · 2 层 · 持续 8 秒</div></div></div>
+      <p>龟壳庇护给 40% 减伤。多段掉血只交一层，留一层接下一波。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/1747c1619fd8.jpg" alt=""><div><div class="nm">意气风发</div><div class="cd">60 秒冷却 · 即时自疗</div></div></div>
+      <p>掉血按一口回自己和宠物，春回大地接着回 8 秒。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/efba0b57fcd2.jpg" alt=""><div><div class="nm">反制射击</div><div class="cd">24 秒冷却</div></div></div>
+      <p>焦点挂自己那只怪，多只同读按分工断，别抢断。</p>
+    </article>
+  </div>
+  <div class="kicks-box">
+    <div class="kicks-head"><img class="ic" src="../icons/efba0b57fcd2.jpg" alt=""><h3>全本必断读条</h3></div>
+    <div class="kicks">
+      <a class="kick" href="#k-screech">
+        <div class="meta"><span>原始毒蛇</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">刺耳嘶鸣</div>
+        <div class="why">不断全队掉血还降急速。</div>
+      </a>
+      <a class="kick" href="#k-envenom">
+        <div class="meta"><span>高阶进化者</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">毒伤</div>
+        <div class="why">开打前分好一人盯一只。</div>
+      </a>
+      <a class="kick" href="#k-atrophy">
+        <div class="meta"><span>扭缠盘蛇</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">剧毒萎缩</div>
+        <div class="why">首领会连读，排好顺序接。</div>
+      </a>
+      <a class="kick" href="#k-mass">
+        <div class="meta"><span>乌拉特克神选者</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">群体毒伤</div>
+        <div class="why">后半段和进化者分开盯。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>一场里的防御与解控</h2>
+  <p class="sub">单场实录，看冷却节奏就行，实战跟着队伍读条和分工交。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+<div class="tl">
+  <div class="band trash" style="left:0.83%;width:20.79%">开场小怪</div>
+  <div class="band boss" style="left:21.71%;width:16.29%">拉维</div>
+  <div class="band trash" style="left:38.73%;width:9.44%">高阶进化者</div>
+  <div class="band boss" style="left:48.55%;width:11.50%">扭缠盘蛇</div>
+  <div class="band trash" style="left:60.78%;width:23.57%">祭坛利刃与神选者</div>
+  <div class="band boss" style="left:84.66%;width:15.34%">祖尔加</div>
+  <div class="axis" style="left:0;transform:none">0:00</div>
+  <div class="axis" style="left:17.70%">5:00</div>
+  <div class="axis" style="left:35.39%">10:00</div>
+  <div class="axis" style="left:53.09%">15:00</div>
+  <div class="axis" style="left:70.79%">20:00</div>
+  <div class="axis" style="left:88.49%">25:00</div>
+  <div class="mk up e" style="left:6.24%"><span class="lab">优胜吃献祭</span><span class="t">1:45</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk dn v" style="left:15.02%"><span class="lab">逃脱解麻痹</span><span class="t">4:14</span><span class="stem"></span><img src="../icons/277b75bf8722.jpg" alt=""></div>
+  <div class="mk up" style="left:24.22%"><span class="lab">龟壳挡喷吐</span><span class="t">6:50</span><span class="stem"></span><img src="../icons/fc38901d4be6.jpg" alt=""></div>
+  <div class="mk dn e" style="left:25.73%"><span class="lab">优胜扛喷吐</span><span class="t">7:16</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk up e" style="left:40.38%"><span class="lab">优胜扛振响</span><span class="t">11:24</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk dn muted" style="left:46.72%"><span class="lab">反制断毒伤</span><span class="t">13:12</span><span class="stem"></span><img src="../icons/efba0b57fcd2.jpg" alt=""></div>
+  <div class="mk up" style="left:48.71%"><span class="lab">龟壳挡同步</span><span class="t">13:45</span><span class="stem"></span><img src="../icons/fc38901d4be6.jpg" alt=""></div>
+  <div class="mk dn v" style="left:56.85%"><span class="lab">逃脱扯连线</span><span class="t">16:03</span><span class="stem"></span><img src="../icons/277b75bf8722.jpg" alt=""></div>
+  <div class="mk up e" style="left:68.27%"><span class="lab">优胜扛感染</span><span class="t">19:17</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk dn e" style="left:81.42%"><span class="lab">优胜扛涌动</span><span class="t">23:00</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk up e" style="left:90.82%"><span class="lab">优胜接飞斧</span><span class="t">25:39</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+</div>
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>灵龟守护</span>
+      <span><i class="e"></i>优胜劣汰</span>
+      <span><i class="v"></i>逃脱</span>
+      <span><i class="muted"></i>反制射击</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">打本先扫带「必做」的高亮行。伤害是 +22～23 实测（含吸收），层数越高越疼。</p>
+  <div class="route">
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 拉维</h3><span class="kind">TRASH · 仪式首领 / 原始毒蛇 / 双牙蹂躏者 / 贪婪的后裔</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>鲜血献祭交一层优胜劣汰，留一层防技能重叠。两层都在转交给治疗抬，掉血狠按意气风发。</div>
+        <div class="rows">
+          <div class="row must" id="k-screech">
+            <div class="mech"><img class="ic" src="../icons/784b86cd89cd.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>刺耳嘶鸣</div><div class="s">原始毒蛇读条 · 全队降急速</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span><span class="or">起手控</span><span class="btn-chip"><img class="ic sm" src="../icons/773d26831377.jpg" alt="">冰冻陷阱</span></div>
+            <div class="why">恶臭喷吐断不了，反制死留给嘶鸣。起手冰冻陷阱冻一只，破冰起读再接控。</div>
+          </div>
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/ccc4c22a7cae.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>麻痹射击</div><div class="s">双牙蹂躏者点名 · 魔法掉血且越叠越慢</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/277b75bf8722.jpg" alt="">逃脱</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="../icons/a71f5b90d931.jpg" alt="">主人的召唤</span></div>
+            <div class="why">中了秒朝空地逃脱，迅疾如风连减速带掉血一起清。在转且带狡诈宠，按主人的召唤解减速。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/f8cc2aec4f71.jpg" alt=""><div><div class="n">鲜血献祭</div><div class="s">仪式首领 · 全队物理直击约 38 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">快读完开减伤，落地吸收盾交给治疗刷。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>反制死盯嘶鸣，逃脱捏手里解点名。</span></div>
+          <a class="next" href="#s2">拉维 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>拉维</h3><span class="kind">BOSS 1</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>三重喷吐拿龟壳和优胜劣汰轮着接。离盘蛇首轮同步毒液够 120 秒，才能再交龟壳。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/0215a087c1ad.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>三重喷吐</div><div class="s">点名毒球 · 直击约 66 万，随后 10 秒每跳约 21 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/fc38901d4be6.jpg" alt="">灵龟守护</span></div>
+            <div class="why">毒球飞来先散开，砸脸前开龟壳全挡掉。龟壳在转交优胜劣汰压前几跳。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/757d6066dd16.jpg" alt=""><div><div class="n">嘶嘶食腐</div><div class="s">吸收盾 · 狼吞虎咽接一次约 55 万，减伤后约 33 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">破盾 · 接腐肉</span></div>
+            <div class="why">转火打盾，漏接腐肉炸团。优胜富余就提前开一层接狼吞虎咽。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/5da91a8ee071.jpg" alt=""><div><div class="n">贪婪践踏</div><div class="s">全队自然直击约 74 万 · 落地后掉钟乳石</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">拉满血 · 躲落石</span></div>
+            <div class="why">读条靠进治疗圈，砸完盯脚下躲落石，血残按意气风发保命。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/0fa4fd29f8f7.jpg" alt=""><div><div class="n">反刍</div><div class="s">点名直线喷 3 道胃酸波 · 单次约 130–161 万，命中减速 50%、伤害降低 50%</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">走出直线</span></div>
+            <div class="why">看头朝哪喷横着走开，真走不出再用逃脱侧跳。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>毒球砸脸前开龟壳，别等挂上再按。</span></div>
+          <a class="next" href="#s3">高阶进化者 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>拉维 → 扭缠盘蛇</h3><span class="kind">TRASH · 高阶进化者 / 振响的扭缠蛇 / 放血者</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>反制按分工死盯毒伤，优胜劣汰留给振响。进盘蛇尽量捏着龟壳，赶不上首轮就挡下轮。</div>
+        <div class="rows">
+          <div class="row must" id="k-envenom">
+            <div class="mech"><img class="ic" src="../icons/0ce35a8aaef7.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>毒伤</div><div class="s">高阶进化者读条约 3 秒 · 漏断挂 8 秒中毒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span><span class="or">漏断自清</span><span class="btn-chip"><img class="ic sm" src="../icons/01d5563c623d.jpg" alt="">假死</span></div>
+            <div class="why">断好自己那只；反制在转扔冰冻陷阱或胁迫停条，盯重读。漏断中毒按假死，靠紧急药膏秒清。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/784b86cd89cd.jpg" alt=""><div><div class="n">振响</div><div class="s">振响的扭缠蛇 · 无视护甲，持续 5 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">快读完开一层，等下一只起读再看交不交第二层。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/8e21a5fee1c6.jpg" alt=""><div><div class="n">进化</div><div class="s">高阶进化者 · 6 秒持续回血，读完得盾还免控</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">集火进化者</span></div>
+            <div class="why">起读就集火压死；读完它就上免控盾，冰冻陷阱和胁迫都控不住。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>焦点挂好进化者，停条后防重读。</span></div>
+          <a class="next" href="#s4">扭缠盘蛇 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s4">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>扭缠盘蛇</h3><span class="kind">BOSS 2</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>同步毒液开怪约 5 秒出，之后约 91 秒一轮。第一、三轮都能龟壳挡；第二轮才交，第三轮靠治疗硬吃。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/0ce35a8aaef7.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>同步毒液</div><div class="s">2 秒读条 · 直击约 50 万，随后 35 秒自然持续伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/fc38901d4be6.jpg" alt="">灵龟守护</span></div>
+            <div class="why">卡第一下落地前开龟壳，35 秒掉血不上身。龟壳在转提前靠治疗，血危按意气风发。</div>
+          </div>
+          <div class="row" id="k-atrophy">
+            <div class="mech"><img class="ic" src="../icons/795d7917aa9b.jpg" alt=""><div><div class="n">剧毒萎缩</div><div class="s">剧毒弹幕期间连读 · 叠降伤和减速</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span></div>
+            <div class="why">排顺序轮流断；分裂出溃散的扭缠蛇后也要接着盯。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/9f583ddc33c8.jpg" alt=""><div><div class="n">掘地冲锋 → 毒液喷射</div><div class="s">钻地横移 · 正面锥形单次可到约 200 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">出冲锋路径 · 绕侧面</span></div>
+            <div class="why">钻地先让冲锋道，冒头立刻绕侧面，别站正面。</div>
+          </div>
+          <div class="row step">
+            <div class="when">连线时</div>
+            <div class="mech"><img class="ic" src="../icons/9afaccf27c89.jpg" alt=""><div><div class="n">濒死喘息</div><div class="s">开怪约 50 秒起，每秒叠加物理伤害</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/b63fb4eba8dd.jpg" alt="">藤蔓之握</span><span class="btn-chip"><img class="ic sm" src="../icons/277b75bf8722.jpg" alt="">逃脱</span></div>
+            <div class="why">点藤蔓之握往外跑，背朝外沿按逃脱。全队拉出 10 码才断，先到别回头。</div>
+          </div>
+          <div class="row step">
+            <div class="when">拉断后</div>
+            <div class="mech"><img class="ic" src="../icons/f3fc18c4c56a.jpg" alt=""><div><div class="n">解除盘卷</div><div class="s">扯断连线全队炸约 74 万</div></div></div>
+            <div class="skill"><span class="act-note">治疗覆盖 · 转小蛇</span></div>
+            <div class="why">溃散的扭缠蛇点人追，被点风筝着打，尽量在同化前清掉。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>逃脱先看身后落点，分裂别漏小蛇打断。</span></div>
+          <a class="next" href="#s5">祭坛利刃与神选者 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s5">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>扭缠盘蛇 → 祖尔加</h3><span class="kind">TRASH · 高阶进化者 / 祭坛利刃 / 晋升之蛇 / 乌拉特克神选者</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>优胜劣汰留给剧毒涌动，或淬毒之刃叠疼时交，进尾王至少留一层。没减伤掉血狠按意气风发。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/feae327a9afe.jpg" alt=""><div><div class="n">淬毒之刃</div><div class="s">祭坛利刃背刺 · 第一下约 34 万，之后每跳约 17 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">挨刀后血线吃紧就补开，压住后面几跳。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/f3fc18c4c56a.jpg" alt=""><div><div class="n">感染</div><div class="s">晋升之蛇 · 5 秒后炸周围 8 码并孵幼体</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">分散</span><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">中了离队友 8 码，减伤卡后几跳和爆炸开，幼体聚一起转火清。</div>
+          </div>
+          <div class="row" id="k-mass">
+            <div class="mech"><img class="ic" src="../icons/0ce35a8aaef7.jpg" alt=""><div><div class="n">群体毒伤</div><div class="s">乌拉特克神选者 · 可打断读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span><span class="or">漏断自清</span><span class="btn-chip"><img class="ic sm" src="../icons/01d5563c623d.jpg" alt="">假死</span></div>
+            <div class="why">盯好自己分到的条，进化者毒伤给队友；漏断中毒按假死秒清。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/0fa4fd29f8f7.jpg" alt=""><div><div class="n">剧毒涌动</div><div class="s">乌拉特克神选者 · 9 秒全队自然掉血加射线</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">刚出首跳开减伤，边打边扭射线，后半段血低按意气风发。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>后半段会带原始毒蛇，照开场盯刺耳嘶鸣。</span></div>
+          <a class="next" href="#s6">祖尔加 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s6">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>祖尔加</h3><span class="kind">BOSS 3</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>开打前分好谁拦光束。轮到你拦就留一层优胜劣汰吃切骨者；首把飞斧约 65 秒一轮，两层都在转喊队友替拦。</div>
+        <div class="rows">
+          <div class="row step">
+            <div class="when">读条开始</div>
+            <div class="mech"><img class="ic" src="../icons/5be34b3cfaab.jpg" alt=""><div><div class="n">毒牙仪式</div><div class="s">5 秒读条</div></div></div>
+            <div class="skill"><span class="act-note">找负责的蛇头</span></div>
+            <div class="why">见读条先站对应蛇头边，出光束再踩进去。</div>
+          </div>
+          <div class="row step">
+            <div class="when">光束生效</div>
+            <div class="mech"><img class="ic" src="../icons/5be34b3cfaab.jpg" alt=""><div><div class="n">拦截光束</div><div class="s">持续 8 秒</div></div></div>
+            <div class="skill"><span class="act-note">进自己负责的光束</span></div>
+            <div class="why">站首领和蛇头间挡住，边掉血边叠仪式毒液；漏拦祖尔加拿毒牙强化。</div>
+          </div>
+          <div class="row step">
+            <div class="when">毒液在身</div>
+            <div class="mech"><img class="ic" src="../icons/b71e8973668c.jpg" alt=""><div><div class="n">仪式毒液</div><div class="s">最后一次刷新后 50 秒倒计时 · 到点会炸</div></div></div>
+            <div class="skill"><span class="act-note">有仪式毒液才进斧线</span></div>
+            <div class="why">盯切骨者点谁，尽量吃第一把；漏了等约 16 秒后的第二把。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">飞斧将落</div>
+            <div class="mech"><img class="ic" src="../icons/9c51e8a6cccc.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>切骨者</div><div class="s">5 秒读条 · 直击后还有 7 秒物理流血</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">落斧前约 1 秒开优胜劣汰吃。挂上流血秒出放血池，边走边等毒液洗净。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/b56a47a84ad6.jpg" alt=""><div><div class="n">碎斧</div><div class="s">飞斧反弹 · 最高打约 60 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">躲开反弹的碎斧</span></div>
+            <div class="why">看准反弹方向再挪步，别撞回折返线上。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>确认仪式毒液洗干净，再回原位输出。</span></div>
+          <a class="next" href="#talent">天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">群兽领袖。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGzMzsMzwMzMjZGMzYmhZGzMzgZGzYGMmmBAAAAAAAAzMGDYmNALmFw2AA</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">这四个保命与功能天赋别动</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="../icons/97a56b8afe17.jpg" alt=""><div><b>迅疾如风</b><span>逃脱解移动限制，专门自解麻痹射击。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/ae93d1df088f.jpg" alt=""><div><b>紧急药膏</b><span>假死和龟壳清自身中毒和疾病，漏断毒伤秒假死自清。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/553b533f95d4.jpg" alt=""><div><b>护身软甲</b><span>优胜劣汰多一层充能，能存两层。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/fc38901d4be6.jpg" alt=""><div><b>强化灵龟守护</b><span>配 2 点天生狂野，龟壳冷却压到 2 分钟。</span></div></div>
+    </div>
+    <p class="tal-note">常换：误导 / 寻路 / 开拓者。不开原始暴怒常驻<b>坚韧宠物</b>，拿耐力训练 +5% 生命值和巨熊之韧被动 3% 减伤；要额外解减速切<b>狡诈宠物</b>按主人的召唤。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>兽王猎人 · 毒牙祭坛 应对手册 · 2026-11</div>
+    <div class="refs">参考录像
+      <a href="https://www.warcraftlogs.com/reports/j7fTprwxzG2XDPmC#fight=5">Banshers +23 28:04</a>
+      <a href="https://www.warcraftlogs.com/reports/6Lg4hCVtj12JNbXc#fight=41">丶白浅 +23 28:21</a>
+      <a href="https://www.warcraftlogs.com/reports/fAvBRtjbKxGqdMWL#fight=194">Requiescam +23 28:37</a>
+      <a href="https://www.warcraftlogs.com/reports/PkgV4X73LdKwbqcx#fight=18">Anniecpt +23 28:55</a>
+      <a href="https://www.warcraftlogs.com/reports/hZDyKJzrXFcPVmdH#fight=2">Чикенмакаут +22 28:23</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>

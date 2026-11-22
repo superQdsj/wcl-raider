@@ -1,0 +1,423 @@
+{
+ "player": "r4_Anniecpt",
+ "specId": 253,
+ "hero_tree": {
+  "en": "Pack Leader",
+  "zh": "群兽领袖"
+ },
+ "string": "C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGzMzsMzwMzMjZGMzYmhZGzMzgZGzYGMmmBAAAAAAAAzMGDYmNALmFw2AA",
+ "talents": [
+  "Alpha Predator",
+  "Animal Companion",
+  "Barbed Scales",
+  "Barbed Shot",
+  "Beast Cleave",
+  "Bestial Wrath",
+  "Better Together",
+  "Bloodshed",
+  "Born To Be Wild",
+  "Cobra Shot",
+  "Combat Experience",
+  "Counter Shot",
+  "Dire Summons",
+  "Emergency Salve",
+  "Frenzy",
+  "Fury of the Wyvern",
+  "Go for the Throat",
+  "Guardian's Hide",
+  "Hogstrider",
+  "Howl of the Pack Leader",
+  "Hunter's Avoidance",
+  "Improved Aspect of the Cheetah",
+  "Improved Aspect of the Turtle",
+  "Improved Feign Death",
+  "Intimidation",
+  "Jagged Wounds",
+  "Keen Eyesight",
+  "Kill Cleave",
+  "Kill Command",
+  "Laceration",
+  "Lethal Barbs",
+  "Lone Survivor",
+  "Misdirection",
+  "Natural Mending",
+  "Nature's Ally",
+  "No Mercy",
+  "Pack Leader",
+  "Pack Mentality",
+  "Pack Tactics",
+  "Padded Armor",
+  "Pathfinding",
+  "Posthaste",
+  "Precision Strikes",
+  "Razor Sharp",
+  "Rejuvenating Wind",
+  "Savagery",
+  "Scent of Blood",
+  "Scout's Instincts",
+  "Serpentine Strikes",
+  "Serrated Tips",
+  "Sharpened Fangs",
+  "Shell Cover",
+  "Slicked Shoes",
+  "Snakeskin Quiver",
+  "Specialized Arsenal",
+  "Stampede!",
+  "Stomp",
+  "Survival of the Fittest",
+  "The Beast Within",
+  "Thrill of the Hunt",
+  "Thundering Hooves",
+  "Touch of Grass",
+  "Trailblazer",
+  "Training Expert",
+  "Tranquilizing Shot",
+  "Trigger Finger",
+  "Unnatural Causes",
+  "Ursine Fury",
+  "War Orders",
+  "Wild Thrash",
+  "Wyvern's Gaze"
+ ],
+ "talents_zh": {
+  "Alpha Predator": {
+   "zh": "捕食者头领",
+   "spellId": 269737
+  },
+  "Animal Companion": {
+   "zh": "动物伙伴",
+   "spellId": 267116
+  },
+  "Barbed Scales": {
+   "zh": "尖刺鳞片",
+   "spellId": 469880
+  },
+  "Barbed Shot": {
+   "zh": "倒刺射击",
+   "spellId": 217200
+  },
+  "Beast Cleave": {
+   "zh": "野兽顺劈",
+   "spellId": 115939
+  },
+  "Bestial Wrath": {
+   "zh": "狂野怒火",
+   "spellId": 19574
+  },
+  "Better Together": {
+   "zh": "强强联手",
+   "spellId": 472357
+  },
+  "Bloodshed": {
+   "zh": "血溅十方",
+   "spellId": 1272099
+  },
+  "Born To Be Wild": {
+   "zh": "天生狂野",
+   "spellId": 266921
+  },
+  "Cobra Shot": {
+   "zh": "眼镜蛇射击",
+   "spellId": 193455
+  },
+  "Combat Experience": {
+   "zh": "实战经验",
+   "spellId": 1268871
+  },
+  "Counter Shot": {
+   "zh": "反制射击",
+   "spellId": 147362
+  },
+  "Dire Summons": {
+   "zh": "凶暴召唤",
+   "spellId": 472352
+  },
+  "Emergency Salve": {
+   "zh": "紧急药膏",
+   "spellId": 459517
+  },
+  "Frenzy": {
+   "zh": "狂乱",
+   "spellId": 1264934
+  },
+  "Fury of the Wyvern": {
+   "zh": "双足飞龙之怒",
+   "spellId": 472550
+  },
+  "Go for the Throat": {
+   "zh": "直取要害",
+   "spellId": 459550
+  },
+  "Guardian's Hide": {
+   "zh": "守护者之皮",
+   "spellId": 1272094
+  },
+  "Hogstrider": {
+   "zh": "猪突猛进",
+   "spellId": 472639
+  },
+  "Howl of the Pack Leader": {
+   "zh": "猎群领袖之嚎",
+   "spellId": 471876
+  },
+  "Hunter's Avoidance": {
+   "zh": "猎人闪避",
+   "spellId": 384799
+  },
+  "Improved Aspect of the Cheetah": {
+   "zh": "强化猎豹守护",
+   "spellId": 1258407
+  },
+  "Improved Aspect of the Turtle": {
+   "zh": "强化灵龟守护",
+   "spellId": 1258485
+  },
+  "Improved Feign Death": {
+   "zh": "强化假死",
+   "spellId": 1258486
+  },
+  "Intimidation": {
+   "zh": "胁迫",
+   "spellId": 19577
+  },
+  "Jagged Wounds": {
+   "zh": "锯齿创伤",
+   "spellId": 1265044
+  },
+  "Keen Eyesight": {
+   "zh": "视力敏锐",
+   "spellId": 378004
+  },
+  "Kill Cleave": {
+   "zh": "杀戮顺劈",
+   "spellId": 378207
+  },
+  "Kill Command": {
+   "zh": "杀戮命令",
+   "spellId": 34026
+  },
+  "Laceration": {
+   "zh": "裂痕",
+   "spellId": 459552
+  },
+  "Lethal Barbs": {
+   "zh": "致命倒钩",
+   "spellId": 1264781
+  },
+  "Lone Survivor": {
+   "zh": "孤独幸存者",
+   "spellId": 388039
+  },
+  "Misdirection": {
+   "zh": "误导",
+   "spellId": 34477
+  },
+  "Natural Mending": {
+   "zh": "自然治愈",
+   "spellId": 270581
+  },
+  "Nature's Ally": {
+   "zh": "自然之友",
+   "spellId": 1273043
+  },
+  "No Mercy": {
+   "zh": "从无怜悯",
+   "spellId": 472660
+  },
+  "Pack Leader": {
+   "zh": "群兽领袖",
+   "spellId": null
+  },
+  "Pack Mentality": {
+   "zh": "兽群思维",
+   "spellId": 472358
+  },
+  "Pack Tactics": {
+   "zh": "兽群战术",
+   "spellId": 321014
+  },
+  "Padded Armor": {
+   "zh": "护身软甲",
+   "spellId": 459450
+  },
+  "Pathfinding": {
+   "zh": "寻路",
+   "spellId": 378002
+  },
+  "Posthaste": {
+   "zh": "迅疾如风",
+   "spellId": 109215
+  },
+  "Precision Strikes": {
+   "zh": "精准打击",
+   "spellId": 1267003
+  },
+  "Razor Sharp": {
+   "zh": "嗜血利齿",
+   "spellId": 1265052
+  },
+  "Rejuvenating Wind": {
+   "zh": "春回大地",
+   "spellId": 385539
+  },
+  "Savagery": {
+   "zh": "野蛮",
+   "spellId": 424557
+  },
+  "Scent of Blood": {
+   "zh": "血之气息",
+   "spellId": 193532
+  },
+  "Scout's Instincts": {
+   "zh": "斥候本能",
+   "spellId": 459455
+  },
+  "Serpentine Strikes": {
+   "zh": "毒蛇打击",
+   "spellId": 468701
+  },
+  "Serrated Tips": {
+   "zh": "锯齿尖锋",
+   "spellId": 459502
+  },
+  "Sharpened Fangs": {
+   "zh": "尖锐獠牙",
+   "spellId": 1264775
+  },
+  "Shell Cover": {
+   "zh": "龟壳庇护",
+   "spellId": 472707
+  },
+  "Slicked Shoes": {
+   "zh": "油滑之靴",
+   "spellId": 472719
+  },
+  "Snakeskin Quiver": {
+   "zh": "蛇皮箭袋",
+   "spellId": 468695
+  },
+  "Specialized Arsenal": {
+   "zh": "特化军火库",
+   "spellId": 459542
+  },
+  "Stampede!": {
+   "zh": "奔踏！",
+   "spellId": 472741
+  },
+  "Stomp": {
+   "zh": "践踏",
+   "spellId": 199530
+  },
+  "Survival of the Fittest": {
+   "zh": "优胜劣汰",
+   "spellId": 264735
+  },
+  "The Beast Within": {
+   "zh": "野兽之心",
+   "spellId": 231548
+  },
+  "Thrill of the Hunt": {
+   "zh": "狩猎刺激",
+   "spellId": 1265051
+  },
+  "Thundering Hooves": {
+   "zh": "轰雷蹄踏",
+   "spellId": 459693
+  },
+  "Touch of Grass": {
+   "zh": "青草之触",
+   "spellId": 1258402
+  },
+  "Trailblazer": {
+   "zh": "开拓者",
+   "spellId": 199921
+  },
+  "Training Expert": {
+   "zh": "训练专家",
+   "spellId": 378209
+  },
+  "Tranquilizing Shot": {
+   "zh": "宁神射击",
+   "spellId": 19801
+  },
+  "Trigger Finger": {
+   "zh": "扳机指",
+   "spellId": 459534
+  },
+  "Unnatural Causes": {
+   "zh": "非自然原因",
+   "spellId": 459527
+  },
+  "Ursine Fury": {
+   "zh": "巨熊之怒",
+   "spellId": 472476
+  },
+  "War Orders": {
+   "zh": "战争命令",
+   "spellId": 393933
+  },
+  "Wild Thrash": {
+   "zh": "狂野鞭笞",
+   "spellId": 1264359
+  },
+  "Wyvern's Gaze": {
+   "zh": "双足飞龙之视",
+   "spellId": 1264792
+  }
+ },
+ "diffs": {
+  "r1_Banshers": {
+   "removed": [
+    "误导(Misdirection/34477)",
+    "寻路(Pathfinding/378002)",
+    "斥候本能(Scout's Instincts/459455)",
+    "开拓者(Trailblazer/199921)"
+   ],
+   "added": [
+    "野兽守护(Aspect of the Beast/191384)",
+    "伪装(Camouflage/199483)",
+    "干扰弹(Disruptive Rounds/343244)",
+    "科多兽镇静剂(Kodo Tranquilizer/459983)",
+    "甲壳壁垒(Shell Wall/1267218)"
+   ]
+  },
+  "r2_丶白浅": {
+   "removed": [
+    "开拓者(Trailblazer/199921)",
+    "宁神射击(Tranquilizing Shot/19801)"
+   ],
+   "added": [
+    "束缚射击(Binding Shot/109248)",
+    "缰绳束缚(Horsehair Tether/472729)"
+   ]
+  },
+  "r3_Requiescam": {
+   "removed": [
+    "误导(Misdirection/34477)",
+    "斥候本能(Scout's Instincts/459455)",
+    "蛇皮箭袋(Snakeskin Quiver/468695)",
+    "开拓者(Trailblazer/199921)",
+    "巨熊之怒(Ursine Fury/472476)",
+    "双足飞龙之视(Wyvern's Gaze/1264792)"
+   ],
+   "added": [
+    "眼镜蛇感官(Cobra Senses/378244)",
+    "干扰弹(Disruptive Rounds/343244)",
+    "低沉咆哮(Guttural Roar/1258509)",
+    "铁蹄利刃(Hoof and Blade/1264797)",
+    "科多兽镇静剂(Kodo Tranquilizer/459983)",
+    "锋利兽爪(Sharpened Claws/472524)"
+   ]
+  },
+  "r5_Чикенмакаут": {
+   "removed": [
+    "油滑之靴(Slicked Shoes/472719)",
+    "开拓者(Trailblazer/199921)"
+   ],
+   "added": [
+    "科多兽镇静剂(Kodo Tranquilizer/459983)",
+    "娴熟召唤(Masterful Call/1268705)"
+   ]
+  }
+ }
+}

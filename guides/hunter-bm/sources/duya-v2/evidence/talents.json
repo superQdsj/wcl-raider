@@ -1,0 +1,3904 @@
+{
+ "r1_Banshers": {
+  "name": "Banshers",
+  "id": 5,
+  "guid": 199520114,
+  "type": "Hunter",
+  "server": "Stormrage",
+  "region": "US",
+  "icon": "Hunter-BeastMastery",
+  "specs": [
+   "BeastMastery"
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 6,
+  "healthstoneUse": 2,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 66,
+     "max": 66
+    },
+    "Agility": {
+     "min": 3020,
+     "max": 3020
+    },
+    "Mastery": {
+     "min": 3246,
+     "max": 3246
+    },
+    "Crit": {
+     "min": 825,
+     "max": 825
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Stamina": {
+     "min": 45549,
+     "max": 45549
+    },
+    "Avoidance": {
+     "min": 525,
+     "max": 525
+    },
+    "Haste": {
+     "min": 197,
+     "max": 197
+    },
+    "Versatility": {
+     "min": 494,
+     "max": 494
+    },
+    "Leech": {
+     "min": 50,
+     "max": 50
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Survival Tactics",
+     "guid": 202746,
+     "type": 1,
+     "abilityIcon": "ability_rogue_feigndeath.jpg"
+    },
+    {
+     "name": "Diamond Ice",
+     "guid": 203340,
+     "type": 1,
+     "abilityIcon": "ability_mage_coldasice.jpg"
+    },
+    {
+     "name": "Chimaeral Sting",
+     "guid": 356719,
+     "type": 1,
+     "abilityIcon": "ability_hunter_snaketrap.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 117559,
+     "rank": 1,
+     "nodeID": 94962
+    },
+    {
+     "id": 117563,
+     "rank": 1,
+     "nodeID": 94966
+    },
+    {
+     "id": 117564,
+     "rank": 1,
+     "nodeID": 94967
+    },
+    {
+     "id": 117566,
+     "rank": 1,
+     "nodeID": 94969
+    },
+    {
+     "id": 117569,
+     "rank": 1,
+     "nodeID": 94972
+    },
+    {
+     "id": 117576,
+     "rank": 1,
+     "nodeID": 94979
+    },
+    {
+     "id": 117581,
+     "rank": 1,
+     "nodeID": 94984
+    },
+    {
+     "id": 117582,
+     "rank": 1,
+     "nodeID": 94985
+    },
+    {
+     "id": 117585,
+     "rank": 1,
+     "nodeID": 94988
+    },
+    {
+     "id": 117589,
+     "rank": 1,
+     "nodeID": 94992
+    },
+    {
+     "id": 123347,
+     "rank": 1,
+     "nodeID": 99832
+    },
+    {
+     "id": 126352,
+     "rank": 1,
+     "nodeID": 102292
+    },
+    {
+     "id": 126397,
+     "rank": 2,
+     "nodeID": 102336
+    },
+    {
+     "id": 126399,
+     "rank": 2,
+     "nodeID": 102338
+    },
+    {
+     "id": 126402,
+     "rank": 1,
+     "nodeID": 102340
+    },
+    {
+     "id": 126403,
+     "rank": 1,
+     "nodeID": 102341
+    },
+    {
+     "id": 126404,
+     "rank": 1,
+     "nodeID": 102342
+    },
+    {
+     "id": 126405,
+     "rank": 1,
+     "nodeID": 102343
+    },
+    {
+     "id": 126406,
+     "rank": 1,
+     "nodeID": 102344
+    },
+    {
+     "id": 126407,
+     "rank": 1,
+     "nodeID": 102345
+    },
+    {
+     "id": 126408,
+     "rank": 1,
+     "nodeID": 102346
+    },
+    {
+     "id": 126409,
+     "rank": 1,
+     "nodeID": 102347
+    },
+    {
+     "id": 126413,
+     "rank": 1,
+     "nodeID": 102351
+    },
+    {
+     "id": 126415,
+     "rank": 1,
+     "nodeID": 102353
+    },
+    {
+     "id": 126416,
+     "rank": 1,
+     "nodeID": 102354
+    },
+    {
+     "id": 126417,
+     "rank": 1,
+     "nodeID": 102355
+    },
+    {
+     "id": 126418,
+     "rank": 1,
+     "nodeID": 102356
+    },
+    {
+     "id": 126419,
+     "rank": 1,
+     "nodeID": 102357
+    },
+    {
+     "id": 126420,
+     "rank": 1,
+     "nodeID": 102358
+    },
+    {
+     "id": 126422,
+     "rank": 1,
+     "nodeID": 102360
+    },
+    {
+     "id": 126424,
+     "rank": 1,
+     "nodeID": 102362
+    },
+    {
+     "id": 126425,
+     "rank": 1,
+     "nodeID": 102363
+    },
+    {
+     "id": 126431,
+     "rank": 1,
+     "nodeID": 102368
+    },
+    {
+     "id": 126432,
+     "rank": 1,
+     "nodeID": 102369
+    },
+    {
+     "id": 126433,
+     "rank": 1,
+     "nodeID": 102370
+    },
+    {
+     "id": 126435,
+     "rank": 1,
+     "nodeID": 102372
+    },
+    {
+     "id": 126436,
+     "rank": 1,
+     "nodeID": 102373
+    },
+    {
+     "id": 126437,
+     "rank": 1,
+     "nodeID": 102374
+    },
+    {
+     "id": 126440,
+     "rank": 1,
+     "nodeID": 102377
+    },
+    {
+     "id": 126443,
+     "rank": 1,
+     "nodeID": 102380
+    },
+    {
+     "id": 126444,
+     "rank": 1,
+     "nodeID": 102381
+    },
+    {
+     "id": 126447,
+     "rank": 2,
+     "nodeID": 102384
+    },
+    {
+     "id": 126450,
+     "rank": 1,
+     "nodeID": 102387
+    },
+    {
+     "id": 126452,
+     "rank": 1,
+     "nodeID": 102389
+    },
+    {
+     "id": 126453,
+     "rank": 1,
+     "nodeID": 102390
+    },
+    {
+     "id": 126454,
+     "rank": 1,
+     "nodeID": 102391
+    },
+    {
+     "id": 126459,
+     "rank": 1,
+     "nodeID": 102395
+    },
+    {
+     "id": 126460,
+     "rank": 2,
+     "nodeID": 102396
+    },
+    {
+     "id": 126461,
+     "rank": 1,
+     "nodeID": 102397
+    },
+    {
+     "id": 126465,
+     "rank": 2,
+     "nodeID": 102401
+    },
+    {
+     "id": 126470,
+     "rank": 1,
+     "nodeID": 102406
+    },
+    {
+     "id": 126473,
+     "rank": 2,
+     "nodeID": 102409
+    },
+    {
+     "id": 126475,
+     "rank": 1,
+     "nodeID": 102411
+    },
+    {
+     "id": 126480,
+     "rank": 1,
+     "nodeID": 102415
+    },
+    {
+     "id": 126481,
+     "rank": 2,
+     "nodeID": 102416
+    },
+    {
+     "id": 126489,
+     "rank": 1,
+     "nodeID": 102423
+    },
+    {
+     "id": 126490,
+     "rank": 1,
+     "nodeID": 102424
+    },
+    {
+     "id": 135706,
+     "rank": 2,
+     "nodeID": 109484
+    },
+    {
+     "id": 135708,
+     "rank": 1,
+     "nodeID": 109485
+    },
+    {
+     "id": 135710,
+     "rank": 2,
+     "nodeID": 109487
+    },
+    {
+     "id": 135712,
+     "rank": 1,
+     "nodeID": 109489
+    },
+    {
+     "id": 136060,
+     "rank": 1,
+     "nodeID": 109802
+    },
+    {
+     "id": 136061,
+     "rank": 1,
+     "nodeID": 109803
+    },
+    {
+     "id": 136236,
+     "rank": 1,
+     "nodeID": 109804
+    },
+    {
+     "id": 136673,
+     "rank": 1,
+     "nodeID": 110154
+    },
+    {
+     "id": 136676,
+     "rank": 1,
+     "nodeID": 110156
+    },
+    {
+     "id": 136677,
+     "rank": 1,
+     "nodeID": 110157
+    },
+    {
+     "id": 136679,
+     "rank": 1,
+     "nodeID": 110158
+    },
+    {
+     "id": 136685,
+     "rank": 1,
+     "nodeID": 110164
+    },
+    {
+     "id": 137050,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 137051,
+     "rank": 2,
+     "nodeID": 110428
+    },
+    {
+     "id": 137052,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 117588,
+     "rank": 1,
+     "nodeID": 94991
+    },
+    {
+     "id": 126488,
+     "rank": 1,
+     "nodeID": 102422
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271492,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Weeping Fangs",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      13335,
+      40,
+      13696,
+      13692,
+      13698,
+      12854,
+      13695
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      40,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240967,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_orange.jpg"
+      },
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271490,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidhunterulatek_d_01.jpg",
+     "name": "Jaws of the Skulking Viper",
+     "itemLevel": 344,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13694,
+      13697,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 89195,
+     "slot": 3,
+     "quality": 4,
+     "icon": "inv_shirt03_epic.jpg",
+     "name": "Artisan Officer's Shirt",
+     "itemLevel": 1
+    },
+    {
+     "id": 271495,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Scuteplate",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13846,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 244581,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Trophy Belt",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8795,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 268237,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_raidevokerulatek_d_01.jpg",
+     "name": "Cuisses of the Uncoiled Union",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271494,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Tracks",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      13335,
+      40,
+      12854,
+      1587
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271493,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Hidepiercers",
+     "itemLevel": 334,
+     "permanentEnchant": 8730,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Eye of the Lynx",
+     "bonusIDs": [
+      13335,
+      40,
+      14049,
+      13691,
+      13697,
+      12854
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 281029,
+     "slot": 10,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 268249,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Vile Alchemist's Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      40,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 12,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 270164,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_10_tailoring_bag1_color2.jpg",
+     "name": "Gebbo's Bottomless Bag",
+     "itemLevel": 341,
+     "bonusIDs": [
+      42,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 271487,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_mail_raidhunterulatek_d_01.jpg",
+     "name": "Shroud of the Skulking Viper",
+     "itemLevel": 344,
+     "bonusIDs": [
+      13335,
+      41,
+      13848,
+      1597
+     ]
+    },
+    {
+     "id": 268207,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_bow_1h_ulatek_d_01.jpg",
+     "name": "Caustic Repose Greatbow",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13708
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 167363,
+     "slot": 17,
+     "quality": 4,
+     "icon": "inv_tabard_battlepvps3_alliance.jpg",
+     "name": "Notorious Gladiator's Tabard",
+     "itemLevel": 15
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    253
+   ],
+   "factionID": 1
+  }
+ },
+ "r2_丶白浅": {
+  "name": "丶白浅",
+  "id": 727,
+  "guid": 76125685,
+  "type": "Hunter",
+  "server": "布兰卡德",
+  "region": "CN",
+  "icon": "Hunter-BeastMastery",
+  "specs": [
+   "BeastMastery"
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 7,
+  "healthstoneUse": 3,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Agility": {
+     "min": 3030,
+     "max": 3030
+    },
+    "Mastery": {
+     "min": 1358,
+     "max": 1358
+    },
+    "Crit": {
+     "min": 1036,
+     "max": 1036
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Stamina": {
+     "min": 45573,
+     "max": 45573
+    },
+    "Avoidance": {
+     "min": 232,
+     "max": 232
+    },
+    "Haste": {
+     "min": 412,
+     "max": 412
+    },
+    "Versatility": {
+     "min": 837,
+     "max": 837
+    },
+    "Leech": {
+     "min": 90,
+     "max": 90
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Dire Beast: Hawk",
+     "guid": 208652,
+     "type": 1,
+     "abilityIcon": "spell_hunter_aspectoftheironhawk.jpg"
+    },
+    {
+     "name": "Survival Tactics",
+     "guid": 202746,
+     "type": 1,
+     "abilityIcon": "ability_rogue_feigndeath.jpg"
+    },
+    {
+     "name": "The Beast Within",
+     "guid": 356976,
+     "type": 1,
+     "abilityIcon": "ability_hunter_beastwithin.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 117576,
+     "rank": 1,
+     "nodeID": 94979
+    },
+    {
+     "id": 126468,
+     "rank": 1,
+     "nodeID": 102404
+    },
+    {
+     "id": 126484,
+     "rank": 1,
+     "nodeID": 102419
+    },
+    {
+     "id": 126399,
+     "rank": 2,
+     "nodeID": 102338
+    },
+    {
+     "id": 126403,
+     "rank": 1,
+     "nodeID": 102341
+    },
+    {
+     "id": 126417,
+     "rank": 1,
+     "nodeID": 102355
+    },
+    {
+     "id": 126425,
+     "rank": 1,
+     "nodeID": 102363
+    },
+    {
+     "id": 126432,
+     "rank": 1,
+     "nodeID": 102369
+    },
+    {
+     "id": 126461,
+     "rank": 1,
+     "nodeID": 102397
+    },
+    {
+     "id": 126452,
+     "rank": 1,
+     "nodeID": 102389
+    },
+    {
+     "id": 137051,
+     "rank": 2,
+     "nodeID": 110428
+    },
+    {
+     "id": 136677,
+     "rank": 1,
+     "nodeID": 110157
+    },
+    {
+     "id": 136679,
+     "rank": 1,
+     "nodeID": 110158
+    },
+    {
+     "id": 137052,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 137050,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 126407,
+     "rank": 2,
+     "nodeID": 102345
+    },
+    {
+     "id": 126435,
+     "rank": 1,
+     "nodeID": 102372
+    },
+    {
+     "id": 126406,
+     "rank": 1,
+     "nodeID": 102344
+    },
+    {
+     "id": 126419,
+     "rank": 1,
+     "nodeID": 102357
+    },
+    {
+     "id": 126489,
+     "rank": 1,
+     "nodeID": 102423
+    },
+    {
+     "id": 126405,
+     "rank": 1,
+     "nodeID": 102343
+    },
+    {
+     "id": 117559,
+     "rank": 1,
+     "nodeID": 94962
+    },
+    {
+     "id": 117563,
+     "rank": 1,
+     "nodeID": 94966
+    },
+    {
+     "id": 117564,
+     "rank": 1,
+     "nodeID": 94967
+    },
+    {
+     "id": 117566,
+     "rank": 1,
+     "nodeID": 94969
+    },
+    {
+     "id": 117569,
+     "rank": 1,
+     "nodeID": 94972
+    },
+    {
+     "id": 117581,
+     "rank": 1,
+     "nodeID": 94984
+    },
+    {
+     "id": 117582,
+     "rank": 1,
+     "nodeID": 94985
+    },
+    {
+     "id": 117585,
+     "rank": 1,
+     "nodeID": 94988
+    },
+    {
+     "id": 117589,
+     "rank": 1,
+     "nodeID": 94992
+    },
+    {
+     "id": 123347,
+     "rank": 1,
+     "nodeID": 99832
+    },
+    {
+     "id": 126352,
+     "rank": 1,
+     "nodeID": 102292
+    },
+    {
+     "id": 126418,
+     "rank": 1,
+     "nodeID": 102356
+    },
+    {
+     "id": 126397,
+     "rank": 2,
+     "nodeID": 102336
+    },
+    {
+     "id": 126404,
+     "rank": 1,
+     "nodeID": 102342
+    },
+    {
+     "id": 126415,
+     "rank": 1,
+     "nodeID": 102353
+    },
+    {
+     "id": 126420,
+     "rank": 1,
+     "nodeID": 102358
+    },
+    {
+     "id": 126424,
+     "rank": 1,
+     "nodeID": 102362
+    },
+    {
+     "id": 126431,
+     "rank": 1,
+     "nodeID": 102368
+    },
+    {
+     "id": 126433,
+     "rank": 1,
+     "nodeID": 102370
+    },
+    {
+     "id": 126436,
+     "rank": 1,
+     "nodeID": 102373
+    },
+    {
+     "id": 126437,
+     "rank": 1,
+     "nodeID": 102374
+    },
+    {
+     "id": 126443,
+     "rank": 1,
+     "nodeID": 102380
+    },
+    {
+     "id": 126447,
+     "rank": 2,
+     "nodeID": 102384
+    },
+    {
+     "id": 126450,
+     "rank": 1,
+     "nodeID": 102387
+    },
+    {
+     "id": 126453,
+     "rank": 1,
+     "nodeID": 102390
+    },
+    {
+     "id": 126454,
+     "rank": 1,
+     "nodeID": 102391
+    },
+    {
+     "id": 126460,
+     "rank": 2,
+     "nodeID": 102396
+    },
+    {
+     "id": 126473,
+     "rank": 2,
+     "nodeID": 102409
+    },
+    {
+     "id": 126481,
+     "rank": 2,
+     "nodeID": 102416
+    },
+    {
+     "id": 126490,
+     "rank": 1,
+     "nodeID": 102424
+    },
+    {
+     "id": 135708,
+     "rank": 1,
+     "nodeID": 109485
+    },
+    {
+     "id": 135710,
+     "rank": 2,
+     "nodeID": 109487
+    },
+    {
+     "id": 136060,
+     "rank": 1,
+     "nodeID": 109802
+    },
+    {
+     "id": 136061,
+     "rank": 1,
+     "nodeID": 109803
+    },
+    {
+     "id": 136236,
+     "rank": 1,
+     "nodeID": 109804
+    },
+    {
+     "id": 136685,
+     "rank": 1,
+     "nodeID": 110164
+    },
+    {
+     "id": 135705,
+     "rank": 1,
+     "nodeID": 109483
+    },
+    {
+     "id": 126402,
+     "rank": 1,
+     "nodeID": 102340
+    },
+    {
+     "id": 126408,
+     "rank": 1,
+     "nodeID": 102346
+    },
+    {
+     "id": 126409,
+     "rank": 1,
+     "nodeID": 102347
+    },
+    {
+     "id": 126416,
+     "rank": 1,
+     "nodeID": 102354
+    },
+    {
+     "id": 126440,
+     "rank": 1,
+     "nodeID": 102377
+    },
+    {
+     "id": 126444,
+     "rank": 1,
+     "nodeID": 102381
+    },
+    {
+     "id": 126465,
+     "rank": 2,
+     "nodeID": 102401
+    },
+    {
+     "id": 126470,
+     "rank": 1,
+     "nodeID": 102406
+    },
+    {
+     "id": 126475,
+     "rank": 1,
+     "nodeID": 102411
+    },
+    {
+     "id": 126422,
+     "rank": 1,
+     "nodeID": 102360
+    },
+    {
+     "id": 135706,
+     "rank": 2,
+     "nodeID": 109484
+    },
+    {
+     "id": 136670,
+     "rank": 1,
+     "nodeID": 110152
+    },
+    {
+     "id": 135711,
+     "rank": 1,
+     "nodeID": 109488
+    },
+    {
+     "id": 117588,
+     "rank": 1,
+     "nodeID": 94991
+    },
+    {
+     "id": 126488,
+     "rank": 1,
+     "nodeID": 102422
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271492,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Weeping Fangs",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      13695,
+      13692,
+      13698,
+      1587
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271490,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidhunterulatek_d_01.jpg",
+     "name": "Jaws of the Skulking Viper",
+     "itemLevel": 344,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13694,
+      13697,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 52019,
+     "slot": 3,
+     "quality": 2,
+     "icon": "inv_misc_ribbon_01.jpg",
+     "name": "Precious's Ribbon",
+     "itemLevel": 1
+    },
+    {
+     "id": 271495,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Scuteplate",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13846,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 244581,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Trophy Belt",
+     "itemLevel": 331,
+     "onUseEnchant": 4223,
+     "onUseEnchantName": "Nitro Boosts",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 271491,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Coiled Legwraps",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 271494,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Tracks",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      13335,
+      40,
+      12854,
+      1587
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 271493,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Hidepiercers",
+     "itemLevel": 334,
+     "permanentEnchant": 8729,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Heat Wave",
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      14049,
+      13691,
+      13697,
+      1587
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 281029,
+     "slot": 10,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 240949,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_12_profession_jewelcrafting_ring4_gold.jpg",
+     "name": "Masterwork Sin'dorei Band",
+     "itemLevel": 331,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8791,
+      13836
+     ],
+     "gems": [
+      {
+       "id": 240910,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270164,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_10_tailoring_bag1_color2.jpg",
+     "name": "Gebbo's Bottomless Bag",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 13,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "onUseEnchant": 4897,
+     "onUseEnchantName": "Goblin Glider",
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268207,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_bow_1h_ulatek_d_01.jpg",
+     "name": "Caustic Repose Greatbow",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      41,
+      13335,
+      13848,
+      13708
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 36941,
+     "slot": 17,
+     "quality": 3,
+     "icon": "inv_shirt_guildtabard_01.jpg",
+     "name": "Competitor's Tabard",
+     "itemLevel": 1
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    253
+   ],
+   "factionID": 0
+  }
+ },
+ "r3_Requiescam": {
+  "name": "Requiescam",
+  "id": 3396,
+  "guid": 99793655,
+  "type": "Hunter",
+  "server": "罗宁",
+  "region": "CN",
+  "icon": "Hunter-BeastMastery",
+  "specs": [
+   "BeastMastery"
+  ],
+  "minItemLevel": 337,
+  "maxItemLevel": 337,
+  "potionUse": 6,
+  "healthstoneUse": 1,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 116,
+     "max": 116
+    },
+    "Agility": {
+     "min": 3021,
+     "max": 3021
+    },
+    "Mastery": {
+     "min": 1380,
+     "max": 1380
+    },
+    "Crit": {
+     "min": 1021,
+     "max": 1021
+    },
+    "Item Level": {
+     "min": 337,
+     "max": 337
+    },
+    "Stamina": {
+     "min": 44924,
+     "max": 44924
+    },
+    "Avoidance": {
+     "min": 167,
+     "max": 167
+    },
+    "Haste": {
+     "min": 412,
+     "max": 412
+    },
+    "Versatility": {
+     "min": 1305,
+     "max": 1305
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Survival Tactics",
+     "guid": 202746,
+     "type": 1,
+     "abilityIcon": "ability_rogue_feigndeath.jpg"
+    },
+    {
+     "name": "Kindred Beasts",
+     "guid": 356962,
+     "type": 1,
+     "abilityIcon": "ability_hunter_invigeration.jpg"
+    },
+    {
+     "name": "The Beast Within",
+     "guid": 356976,
+     "type": 1,
+     "abilityIcon": "ability_hunter_beastwithin.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 126453,
+     "rank": 1,
+     "nodeID": 102390
+    },
+    {
+     "id": 117585,
+     "rank": 1,
+     "nodeID": 94988
+    },
+    {
+     "id": 136677,
+     "rank": 1,
+     "nodeID": 110157
+    },
+    {
+     "id": 136679,
+     "rank": 1,
+     "nodeID": 110158
+    },
+    {
+     "id": 136685,
+     "rank": 1,
+     "nodeID": 110164
+    },
+    {
+     "id": 137052,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 137051,
+     "rank": 2,
+     "nodeID": 110428
+    },
+    {
+     "id": 137050,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 126405,
+     "rank": 1,
+     "nodeID": 102343
+    },
+    {
+     "id": 123347,
+     "rank": 1,
+     "nodeID": 99832
+    },
+    {
+     "id": 126352,
+     "rank": 1,
+     "nodeID": 102292
+    },
+    {
+     "id": 126397,
+     "rank": 2,
+     "nodeID": 102336
+    },
+    {
+     "id": 126404,
+     "rank": 1,
+     "nodeID": 102342
+    },
+    {
+     "id": 126415,
+     "rank": 1,
+     "nodeID": 102353
+    },
+    {
+     "id": 126418,
+     "rank": 1,
+     "nodeID": 102356
+    },
+    {
+     "id": 126419,
+     "rank": 1,
+     "nodeID": 102357
+    },
+    {
+     "id": 126420,
+     "rank": 1,
+     "nodeID": 102358
+    },
+    {
+     "id": 126424,
+     "rank": 1,
+     "nodeID": 102362
+    },
+    {
+     "id": 126431,
+     "rank": 1,
+     "nodeID": 102368
+    },
+    {
+     "id": 126433,
+     "rank": 1,
+     "nodeID": 102370
+    },
+    {
+     "id": 126436,
+     "rank": 1,
+     "nodeID": 102373
+    },
+    {
+     "id": 126437,
+     "rank": 1,
+     "nodeID": 102374
+    },
+    {
+     "id": 126443,
+     "rank": 1,
+     "nodeID": 102380
+    },
+    {
+     "id": 126447,
+     "rank": 2,
+     "nodeID": 102384
+    },
+    {
+     "id": 126450,
+     "rank": 1,
+     "nodeID": 102387
+    },
+    {
+     "id": 126454,
+     "rank": 1,
+     "nodeID": 102391
+    },
+    {
+     "id": 126460,
+     "rank": 2,
+     "nodeID": 102396
+    },
+    {
+     "id": 126468,
+     "rank": 1,
+     "nodeID": 102404
+    },
+    {
+     "id": 126473,
+     "rank": 2,
+     "nodeID": 102409
+    },
+    {
+     "id": 126481,
+     "rank": 2,
+     "nodeID": 102416
+    },
+    {
+     "id": 126490,
+     "rank": 1,
+     "nodeID": 102424
+    },
+    {
+     "id": 135708,
+     "rank": 1,
+     "nodeID": 109485
+    },
+    {
+     "id": 135710,
+     "rank": 2,
+     "nodeID": 109487
+    },
+    {
+     "id": 136060,
+     "rank": 1,
+     "nodeID": 109802
+    },
+    {
+     "id": 136061,
+     "rank": 1,
+     "nodeID": 109803
+    },
+    {
+     "id": 126444,
+     "rank": 1,
+     "nodeID": 102381
+    },
+    {
+     "id": 126402,
+     "rank": 1,
+     "nodeID": 102340
+    },
+    {
+     "id": 126408,
+     "rank": 1,
+     "nodeID": 102346
+    },
+    {
+     "id": 126409,
+     "rank": 1,
+     "nodeID": 102347
+    },
+    {
+     "id": 126416,
+     "rank": 1,
+     "nodeID": 102354
+    },
+    {
+     "id": 126440,
+     "rank": 1,
+     "nodeID": 102377
+    },
+    {
+     "id": 126465,
+     "rank": 2,
+     "nodeID": 102401
+    },
+    {
+     "id": 126470,
+     "rank": 1,
+     "nodeID": 102406
+    },
+    {
+     "id": 126475,
+     "rank": 1,
+     "nodeID": 102411
+    },
+    {
+     "id": 126489,
+     "rank": 1,
+     "nodeID": 102423
+    },
+    {
+     "id": 117564,
+     "rank": 1,
+     "nodeID": 94967
+    },
+    {
+     "id": 126452,
+     "rank": 1,
+     "nodeID": 102389
+    },
+    {
+     "id": 126461,
+     "rank": 1,
+     "nodeID": 102397
+    },
+    {
+     "id": 117581,
+     "rank": 1,
+     "nodeID": 94984
+    },
+    {
+     "id": 117559,
+     "rank": 1,
+     "nodeID": 94962
+    },
+    {
+     "id": 117563,
+     "rank": 1,
+     "nodeID": 94966
+    },
+    {
+     "id": 117566,
+     "rank": 1,
+     "nodeID": 94969
+    },
+    {
+     "id": 117582,
+     "rank": 1,
+     "nodeID": 94985
+    },
+    {
+     "id": 117589,
+     "rank": 1,
+     "nodeID": 94992
+    },
+    {
+     "id": 117576,
+     "rank": 1,
+     "nodeID": 94979
+    },
+    {
+     "id": 126422,
+     "rank": 1,
+     "nodeID": 102360
+    },
+    {
+     "id": 126480,
+     "rank": 1,
+     "nodeID": 102415
+    },
+    {
+     "id": 126459,
+     "rank": 1,
+     "nodeID": 102395
+    },
+    {
+     "id": 126399,
+     "rank": 2,
+     "nodeID": 102338
+    },
+    {
+     "id": 135712,
+     "rank": 1,
+     "nodeID": 109489
+    },
+    {
+     "id": 135706,
+     "rank": 2,
+     "nodeID": 109484
+    },
+    {
+     "id": 126403,
+     "rank": 1,
+     "nodeID": 102341
+    },
+    {
+     "id": 126417,
+     "rank": 1,
+     "nodeID": 102355
+    },
+    {
+     "id": 126425,
+     "rank": 1,
+     "nodeID": 102363
+    },
+    {
+     "id": 126432,
+     "rank": 1,
+     "nodeID": 102369
+    },
+    {
+     "id": 128358,
+     "rank": 1,
+     "nodeID": 94972
+    },
+    {
+     "id": 126407,
+     "rank": 2,
+     "nodeID": 102345
+    },
+    {
+     "id": 126435,
+     "rank": 1,
+     "nodeID": 102372
+    },
+    {
+     "id": 128265,
+     "rank": 1,
+     "nodeID": 102344
+    },
+    {
+     "id": 136062,
+     "rank": 1,
+     "nodeID": 109804
+    },
+    {
+     "id": 135704,
+     "rank": 1,
+     "nodeID": 102394
+    },
+    {
+     "id": 117588,
+     "rank": 1,
+     "nodeID": 94991
+    },
+    {
+     "id": 126488,
+     "rank": 1,
+     "nodeID": 102422
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271492,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Weeping Fangs",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      6652,
+      13335,
+      13696,
+      13692,
+      13698,
+      12854,
+      13695
+     ],
+     "gems": [
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271490,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidhunterulatek_d_01.jpg",
+     "name": "Jaws of the Skulking Viper",
+     "itemLevel": 344,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13694,
+      13697,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271495,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Scuteplate",
+     "itemLevel": 334,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      13334,
+      6652,
+      13846,
+      13690,
+      13698,
+      12854
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 244581,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Trophy Belt",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8794,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 271491,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Coiled Legwraps",
+     "itemLevel": 344,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 271440,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidshamanulatek_d_01.jpg",
+     "name": "Greaves of the Noxious Depths",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      10844,
+      12854
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8795,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 271493,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Hidepiercers",
+     "itemLevel": 334,
+     "permanentEnchant": 8727,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Falco Strikes",
+     "bonusIDs": [
+      13334,
+      6652,
+      12854,
+      14049,
+      13691,
+      13697,
+      1587
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 281029,
+     "slot": 10,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 8027,
+     "permanentEnchantName": "Enchant Ring - Silvermoon's Tenacity",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 268249,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Vile Alchemist's Band",
+     "itemLevel": 334,
+     "permanentEnchant": 8027,
+     "permanentEnchantName": "Enchant Ring - Silvermoon's Tenacity",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 250215,
+     "slot": 12,
+     "quality": 3,
+     "icon": "inv_alchemy_90_flask_red.jpg",
+     "name": "Freightrunner's Flask",
+     "itemLevel": 341,
+     "bonusIDs": [
+      42,
+      12856
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 13,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      42,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268207,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_bow_1h_ulatek_d_01.jpg",
+     "name": "Caustic Repose Greatbow",
+     "itemLevel": 341,
+     "permanentEnchant": 8039,
+     "permanentEnchantName": "Enchant Weapon - Acuity of the Ren'dorei",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13334,
+      13708,
+      12856
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    253
+   ],
+   "factionID": 1
+  }
+ },
+ "r4_Anniecpt": {
+  "name": "Anniecpt",
+  "id": 2,
+  "guid": 47651224,
+  "type": "Hunter",
+  "server": "无尽之海",
+  "region": "CN",
+  "icon": "Hunter-BeastMastery",
+  "specs": [
+   "BeastMastery"
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 6,
+  "healthstoneUse": 3,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 159,
+     "max": 159
+    },
+    "Agility": {
+     "min": 2801,
+     "max": 2801
+    },
+    "Mastery": {
+     "min": 1529,
+     "max": 1529
+    },
+    "Crit": {
+     "min": 1084,
+     "max": 1084
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Stamina": {
+     "min": 45041,
+     "max": 45041
+    },
+    "Avoidance": {
+     "min": 65,
+     "max": 65
+    },
+    "Haste": {
+     "min": 367,
+     "max": 367
+    },
+    "Versatility": {
+     "min": 837,
+     "max": 837
+    },
+    "Leech": {
+     "min": 314,
+     "max": 314
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Survival Tactics",
+     "guid": 202746,
+     "type": 1,
+     "abilityIcon": "ability_rogue_feigndeath.jpg"
+    },
+    {
+     "name": "Chimaeral Sting",
+     "guid": 356719,
+     "type": 1,
+     "abilityIcon": "ability_hunter_snaketrap.jpg"
+    },
+    {
+     "name": "The Beast Within",
+     "guid": 356976,
+     "type": 1,
+     "abilityIcon": "ability_hunter_beastwithin.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 117585,
+     "rank": 1,
+     "nodeID": 94988
+    },
+    {
+     "id": 126405,
+     "rank": 1,
+     "nodeID": 102343
+    },
+    {
+     "id": 117576,
+     "rank": 1,
+     "nodeID": 94979
+    },
+    {
+     "id": 117564,
+     "rank": 1,
+     "nodeID": 94967
+    },
+    {
+     "id": 126416,
+     "rank": 1,
+     "nodeID": 102354
+    },
+    {
+     "id": 126440,
+     "rank": 1,
+     "nodeID": 102377
+    },
+    {
+     "id": 126444,
+     "rank": 1,
+     "nodeID": 102381
+    },
+    {
+     "id": 126475,
+     "rank": 1,
+     "nodeID": 102411
+    },
+    {
+     "id": 126409,
+     "rank": 1,
+     "nodeID": 102347
+    },
+    {
+     "id": 126489,
+     "rank": 1,
+     "nodeID": 102423
+    },
+    {
+     "id": 126465,
+     "rank": 2,
+     "nodeID": 102401
+    },
+    {
+     "id": 126470,
+     "rank": 1,
+     "nodeID": 102406
+    },
+    {
+     "id": 126402,
+     "rank": 1,
+     "nodeID": 102340
+    },
+    {
+     "id": 126408,
+     "rank": 1,
+     "nodeID": 102346
+    },
+    {
+     "id": 126422,
+     "rank": 1,
+     "nodeID": 102360
+    },
+    {
+     "id": 126468,
+     "rank": 1,
+     "nodeID": 102404
+    },
+    {
+     "id": 117563,
+     "rank": 1,
+     "nodeID": 94966
+    },
+    {
+     "id": 126419,
+     "rank": 1,
+     "nodeID": 102357
+    },
+    {
+     "id": 126352,
+     "rank": 1,
+     "nodeID": 102292
+    },
+    {
+     "id": 126397,
+     "rank": 2,
+     "nodeID": 102336
+    },
+    {
+     "id": 126404,
+     "rank": 1,
+     "nodeID": 102342
+    },
+    {
+     "id": 126424,
+     "rank": 1,
+     "nodeID": 102362
+    },
+    {
+     "id": 126437,
+     "rank": 1,
+     "nodeID": 102374
+    },
+    {
+     "id": 126431,
+     "rank": 1,
+     "nodeID": 102368
+    },
+    {
+     "id": 126433,
+     "rank": 1,
+     "nodeID": 102370
+    },
+    {
+     "id": 126436,
+     "rank": 1,
+     "nodeID": 102373
+    },
+    {
+     "id": 126443,
+     "rank": 1,
+     "nodeID": 102380
+    },
+    {
+     "id": 126447,
+     "rank": 2,
+     "nodeID": 102384
+    },
+    {
+     "id": 126450,
+     "rank": 1,
+     "nodeID": 102387
+    },
+    {
+     "id": 126453,
+     "rank": 1,
+     "nodeID": 102390
+    },
+    {
+     "id": 126454,
+     "rank": 1,
+     "nodeID": 102391
+    },
+    {
+     "id": 126460,
+     "rank": 2,
+     "nodeID": 102396
+    },
+    {
+     "id": 126473,
+     "rank": 2,
+     "nodeID": 102409
+    },
+    {
+     "id": 126481,
+     "rank": 2,
+     "nodeID": 102416
+    },
+    {
+     "id": 135710,
+     "rank": 2,
+     "nodeID": 109487
+    },
+    {
+     "id": 126490,
+     "rank": 1,
+     "nodeID": 102424
+    },
+    {
+     "id": 135705,
+     "rank": 1,
+     "nodeID": 109483
+    },
+    {
+     "id": 135708,
+     "rank": 1,
+     "nodeID": 109485
+    },
+    {
+     "id": 136060,
+     "rank": 1,
+     "nodeID": 109802
+    },
+    {
+     "id": 136061,
+     "rank": 1,
+     "nodeID": 109803
+    },
+    {
+     "id": 136677,
+     "rank": 1,
+     "nodeID": 110157
+    },
+    {
+     "id": 136679,
+     "rank": 1,
+     "nodeID": 110158
+    },
+    {
+     "id": 136685,
+     "rank": 1,
+     "nodeID": 110164
+    },
+    {
+     "id": 137052,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 137051,
+     "rank": 2,
+     "nodeID": 110428
+    },
+    {
+     "id": 117589,
+     "rank": 1,
+     "nodeID": 94992
+    },
+    {
+     "id": 117559,
+     "rank": 1,
+     "nodeID": 94962
+    },
+    {
+     "id": 117566,
+     "rank": 1,
+     "nodeID": 94969
+    },
+    {
+     "id": 117581,
+     "rank": 1,
+     "nodeID": 94984
+    },
+    {
+     "id": 117582,
+     "rank": 1,
+     "nodeID": 94985
+    },
+    {
+     "id": 126407,
+     "rank": 2,
+     "nodeID": 102345
+    },
+    {
+     "id": 126420,
+     "rank": 1,
+     "nodeID": 102358
+    },
+    {
+     "id": 126435,
+     "rank": 1,
+     "nodeID": 102372
+    },
+    {
+     "id": 126415,
+     "rank": 1,
+     "nodeID": 102353
+    },
+    {
+     "id": 137050,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 117569,
+     "rank": 1,
+     "nodeID": 94972
+    },
+    {
+     "id": 123347,
+     "rank": 1,
+     "nodeID": 99832
+    },
+    {
+     "id": 126418,
+     "rank": 1,
+     "nodeID": 102356
+    },
+    {
+     "id": 126484,
+     "rank": 1,
+     "nodeID": 102419
+    },
+    {
+     "id": 135706,
+     "rank": 2,
+     "nodeID": 109484
+    },
+    {
+     "id": 126399,
+     "rank": 2,
+     "nodeID": 102338
+    },
+    {
+     "id": 126403,
+     "rank": 1,
+     "nodeID": 102341
+    },
+    {
+     "id": 126417,
+     "rank": 1,
+     "nodeID": 102355
+    },
+    {
+     "id": 126425,
+     "rank": 1,
+     "nodeID": 102363
+    },
+    {
+     "id": 126432,
+     "rank": 1,
+     "nodeID": 102369
+    },
+    {
+     "id": 126406,
+     "rank": 1,
+     "nodeID": 102344
+    },
+    {
+     "id": 126461,
+     "rank": 1,
+     "nodeID": 102397
+    },
+    {
+     "id": 126452,
+     "rank": 1,
+     "nodeID": 102389
+    },
+    {
+     "id": 136236,
+     "rank": 1,
+     "nodeID": 109804
+    },
+    {
+     "id": 117588,
+     "rank": 1,
+     "nodeID": 94991
+    },
+    {
+     "id": 126488,
+     "rank": 1,
+     "nodeID": 102422
+    },
+    {
+     "id": 135712,
+     "rank": 1,
+     "nodeID": 109489
+    },
+    {
+     "id": 136675,
+     "rank": 1,
+     "nodeID": 110155
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271492,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Weeping Fangs",
+     "itemLevel": 334,
+     "permanentEnchant": 7961,
+     "permanentEnchantName": "Enchant Helm - Empowered Hex of Leeching",
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      13695,
+      13692,
+      13698,
+      1587
+     ],
+     "gems": [
+      {
+       "id": 240902,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_purple.jpg"
+      }
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240902,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271490,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidhunterulatek_d_01.jpg",
+     "name": "Jaws of the Skulking Viper",
+     "itemLevel": 344,
+     "permanentEnchant": 8031,
+     "permanentEnchantName": "Enchant Shoulders - Silvermoon's Mending",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13694,
+      13697,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271495,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Scuteplate",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13846,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 268216,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_raidevokerulatek_d_01.jpg",
+     "name": "Cursed Reliquary Cincture",
+     "itemLevel": 334,
+     "bonusIDs": [
+      40,
+      13696,
+      13662,
+      13335,
+      12854
+     ]
+    },
+    {
+     "id": 244582,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Reinforced Faulds",
+     "itemLevel": 331,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836
+     ]
+    },
+    {
+     "id": 271440,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidshamanulatek_d_01.jpg",
+     "name": "Greaves of the Noxious Depths",
+     "itemLevel": 334,
+     "permanentEnchant": 7993,
+     "permanentEnchantName": "Enchant Boots - Shaladrassil's Roots",
+     "bonusIDs": [
+      41,
+      13662,
+      13335,
+      10844,
+      12854
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240902,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271493,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Hidepiercers",
+     "itemLevel": 334,
+     "bonusIDs": [
+      13335,
+      13691,
+      6652,
+      13697,
+      12854
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 281029,
+     "slot": 10,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      42,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240910,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 268249,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Vile Alchemist's Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240902,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 13,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268207,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_bow_1h_ulatek_d_01.jpg",
+     "name": "Caustic Repose Greatbow",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      42,
+      13335,
+      13848,
+      13708
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    253
+   ],
+   "factionID": 1
+  }
+ },
+ "r5_Чикенмакаут": {
+  "name": "Чикенмакаут",
+  "id": 4,
+  "guid": 261712865,
+  "type": "Hunter",
+  "server": "Гордунни",
+  "region": "EU",
+  "icon": "Hunter-BeastMastery",
+  "specs": [
+   "BeastMastery"
+  ],
+  "minItemLevel": 334,
+  "maxItemLevel": 334,
+  "potionUse": 6,
+  "healthstoneUse": 3,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Agility": {
+     "min": 2701,
+     "max": 2701
+    },
+    "Mastery": {
+     "min": 1516,
+     "max": 1516
+    },
+    "Crit": {
+     "min": 1113,
+     "max": 1113
+    },
+    "Item Level": {
+     "min": 334,
+     "max": 334
+    },
+    "Stamina": {
+     "min": 43229,
+     "max": 43229
+    },
+    "Avoidance": {
+     "min": 167,
+     "max": 167
+    },
+    "Haste": {
+     "min": 231,
+     "max": 231
+    },
+    "Versatility": {
+     "min": 895,
+     "max": 895
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Survival Tactics",
+     "guid": 202746,
+     "type": 1,
+     "abilityIcon": "ability_rogue_feigndeath.jpg"
+    },
+    {
+     "name": "The Beast Within",
+     "guid": 356976,
+     "type": 1,
+     "abilityIcon": "ability_hunter_beastwithin.jpg"
+    },
+    {
+     "name": "Chimaeral Sting",
+     "guid": 356719,
+     "type": 1,
+     "abilityIcon": "ability_hunter_snaketrap.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 117559,
+     "rank": 1,
+     "nodeID": 94962
+    },
+    {
+     "id": 117563,
+     "rank": 1,
+     "nodeID": 94966
+    },
+    {
+     "id": 117564,
+     "rank": 1,
+     "nodeID": 94967
+    },
+    {
+     "id": 117566,
+     "rank": 1,
+     "nodeID": 94969
+    },
+    {
+     "id": 117569,
+     "rank": 1,
+     "nodeID": 94972
+    },
+    {
+     "id": 117581,
+     "rank": 1,
+     "nodeID": 94984
+    },
+    {
+     "id": 117582,
+     "rank": 1,
+     "nodeID": 94985
+    },
+    {
+     "id": 117585,
+     "rank": 1,
+     "nodeID": 94988
+    },
+    {
+     "id": 117589,
+     "rank": 1,
+     "nodeID": 94992
+    },
+    {
+     "id": 123347,
+     "rank": 1,
+     "nodeID": 99832
+    },
+    {
+     "id": 123781,
+     "rank": 1,
+     "nodeID": 94979
+    },
+    {
+     "id": 126352,
+     "rank": 1,
+     "nodeID": 102292
+    },
+    {
+     "id": 126397,
+     "rank": 2,
+     "nodeID": 102336
+    },
+    {
+     "id": 126399,
+     "rank": 2,
+     "nodeID": 102338
+    },
+    {
+     "id": 126402,
+     "rank": 1,
+     "nodeID": 102340
+    },
+    {
+     "id": 126403,
+     "rank": 1,
+     "nodeID": 102341
+    },
+    {
+     "id": 126404,
+     "rank": 1,
+     "nodeID": 102342
+    },
+    {
+     "id": 126405,
+     "rank": 1,
+     "nodeID": 102343
+    },
+    {
+     "id": 126406,
+     "rank": 1,
+     "nodeID": 102344
+    },
+    {
+     "id": 126407,
+     "rank": 2,
+     "nodeID": 102345
+    },
+    {
+     "id": 126408,
+     "rank": 1,
+     "nodeID": 102346
+    },
+    {
+     "id": 126409,
+     "rank": 1,
+     "nodeID": 102347
+    },
+    {
+     "id": 126415,
+     "rank": 1,
+     "nodeID": 102353
+    },
+    {
+     "id": 126416,
+     "rank": 1,
+     "nodeID": 102354
+    },
+    {
+     "id": 126417,
+     "rank": 1,
+     "nodeID": 102355
+    },
+    {
+     "id": 126418,
+     "rank": 1,
+     "nodeID": 102356
+    },
+    {
+     "id": 126419,
+     "rank": 1,
+     "nodeID": 102357
+    },
+    {
+     "id": 126420,
+     "rank": 1,
+     "nodeID": 102358
+    },
+    {
+     "id": 126422,
+     "rank": 1,
+     "nodeID": 102360
+    },
+    {
+     "id": 126424,
+     "rank": 1,
+     "nodeID": 102362
+    },
+    {
+     "id": 126425,
+     "rank": 1,
+     "nodeID": 102363
+    },
+    {
+     "id": 126431,
+     "rank": 1,
+     "nodeID": 102368
+    },
+    {
+     "id": 126432,
+     "rank": 1,
+     "nodeID": 102369
+    },
+    {
+     "id": 126433,
+     "rank": 1,
+     "nodeID": 102370
+    },
+    {
+     "id": 126435,
+     "rank": 1,
+     "nodeID": 102372
+    },
+    {
+     "id": 126436,
+     "rank": 1,
+     "nodeID": 102373
+    },
+    {
+     "id": 126437,
+     "rank": 1,
+     "nodeID": 102374
+    },
+    {
+     "id": 126440,
+     "rank": 1,
+     "nodeID": 102377
+    },
+    {
+     "id": 126443,
+     "rank": 1,
+     "nodeID": 102380
+    },
+    {
+     "id": 126444,
+     "rank": 1,
+     "nodeID": 102381
+    },
+    {
+     "id": 126447,
+     "rank": 2,
+     "nodeID": 102384
+    },
+    {
+     "id": 126450,
+     "rank": 1,
+     "nodeID": 102387
+    },
+    {
+     "id": 126452,
+     "rank": 1,
+     "nodeID": 102389
+    },
+    {
+     "id": 126453,
+     "rank": 1,
+     "nodeID": 102390
+    },
+    {
+     "id": 126454,
+     "rank": 1,
+     "nodeID": 102391
+    },
+    {
+     "id": 126460,
+     "rank": 2,
+     "nodeID": 102396
+    },
+    {
+     "id": 126461,
+     "rank": 1,
+     "nodeID": 102397
+    },
+    {
+     "id": 126465,
+     "rank": 2,
+     "nodeID": 102401
+    },
+    {
+     "id": 126468,
+     "rank": 1,
+     "nodeID": 102404
+    },
+    {
+     "id": 126470,
+     "rank": 1,
+     "nodeID": 102406
+    },
+    {
+     "id": 126473,
+     "rank": 2,
+     "nodeID": 102409
+    },
+    {
+     "id": 126475,
+     "rank": 1,
+     "nodeID": 102411
+    },
+    {
+     "id": 126480,
+     "rank": 1,
+     "nodeID": 102415
+    },
+    {
+     "id": 126481,
+     "rank": 2,
+     "nodeID": 102416
+    },
+    {
+     "id": 126484,
+     "rank": 1,
+     "nodeID": 102419
+    },
+    {
+     "id": 126489,
+     "rank": 1,
+     "nodeID": 102423
+    },
+    {
+     "id": 126490,
+     "rank": 1,
+     "nodeID": 102424
+    },
+    {
+     "id": 135705,
+     "rank": 1,
+     "nodeID": 109483
+    },
+    {
+     "id": 135706,
+     "rank": 2,
+     "nodeID": 109484
+    },
+    {
+     "id": 135708,
+     "rank": 1,
+     "nodeID": 109485
+    },
+    {
+     "id": 135710,
+     "rank": 2,
+     "nodeID": 109487
+    },
+    {
+     "id": 135712,
+     "rank": 1,
+     "nodeID": 109489
+    },
+    {
+     "id": 136060,
+     "rank": 1,
+     "nodeID": 109802
+    },
+    {
+     "id": 136061,
+     "rank": 1,
+     "nodeID": 109803
+    },
+    {
+     "id": 136236,
+     "rank": 1,
+     "nodeID": 109804
+    },
+    {
+     "id": 136677,
+     "rank": 1,
+     "nodeID": 110157
+    },
+    {
+     "id": 136679,
+     "rank": 1,
+     "nodeID": 110158
+    },
+    {
+     "id": 136685,
+     "rank": 1,
+     "nodeID": 110164
+    },
+    {
+     "id": 137050,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 137051,
+     "rank": 2,
+     "nodeID": 110428
+    },
+    {
+     "id": 137052,
+     "rank": 1,
+     "nodeID": 110428
+    },
+    {
+     "id": 117588,
+     "rank": 1,
+     "nodeID": 94991
+    },
+    {
+     "id": 126488,
+     "rank": 1,
+     "nodeID": 102422
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271492,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Weeping Fangs",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      6652,
+      13335,
+      13695,
+      13692,
+      13698,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      13987,
+      12856
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      },
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271490,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidhunterulatek_d_01.jpg",
+     "name": "Jaws of the Skulking Viper",
+     "itemLevel": 334,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      13334,
+      6652,
+      13694,
+      13697,
+      12854
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 41248,
+     "slot": 3,
+     "quality": 2,
+     "icon": "inv_shirt_red_01.jpg",
+     "name": "Red Lumberjack Shirt",
+     "itemLevel": 1
+    },
+    {
+     "id": 271495,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_chest_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Scuteplate",
+     "itemLevel": 334,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      13334,
+      6652,
+      13846,
+      13690,
+      13698,
+      12854
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 268216,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_raidevokerulatek_d_01.jpg",
+     "name": "Cursed Reliquary Cincture",
+     "itemLevel": 334,
+     "bonusIDs": [
+      6652,
+      13696,
+      13662,
+      13335,
+      12854
+     ]
+    },
+    {
+     "id": 244582,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Reinforced Faulds",
+     "itemLevel": 331,
+     "permanentEnchant": 8159,
+     "permanentEnchantName": "+41 Agility/Strength & +115 Stamina",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8794,
+      13836
+     ]
+    },
+    {
+     "id": 271440,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidshamanulatek_d_01.jpg",
+     "name": "Greaves of the Noxious Depths",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      10844,
+      12854
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8795,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 271493,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidhunterulatek_d_01.jpg",
+     "name": "Skulking Viper's Hidepiercers",
+     "itemLevel": 321,
+     "permanentEnchant": 8727,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Falco Strikes",
+     "bonusIDs": [
+      12846,
+      6652,
+      13440,
+      13691,
+      13697,
+      1574
+     ],
+     "setID": 2059
+    },
+    {
+     "id": 268249,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring01_purple.jpg",
+     "name": "Vile Alchemist's Band",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240910,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_frost_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281029,
+     "slot": 11,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270175,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_121_trinket_raid_ulatek_heart.jpg",
+     "name": "Voracious Heart of Ula'tek",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 13,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 239656,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_cloth_questbloodelf_b_01.jpg",
+     "name": "Adherent's Silken Shroud",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8795,
+      13836
+     ]
+    },
+    {
+     "id": 268207,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_bow_1h_ulatek_d_01.jpg",
+     "name": "Caustic Repose Greatbow",
+     "itemLevel": 341,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 8052,
+     "temporaryEnchantName": "Thalassian Phoenix Oil",
+     "bonusIDs": [
+      6652,
+      13334,
+      13708,
+      12856
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 16,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    253
+   ],
+   "factionID": 1
+  }
+ }
+}
