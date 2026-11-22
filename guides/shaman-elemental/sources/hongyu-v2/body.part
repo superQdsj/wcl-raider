@@ -1,0 +1,428 @@
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">RUBY LIFE POOLS · MYTHIC+ · ELEMENTAL SHAMAN</div>
+    <h1><span class="cls">元素萨满</span><span class="dot">·</span>红玉新生法池 应对手册</h1>
+    <p class="lede">红玉新生法池几乎全是高频<b>冰、火、自然法术全团轰炸</b>。元素萨满没有免疫，靠 90 秒<b>星界转移</b>盯紧固定点（采掘冲击/钢铁弹幕、梅莉杜莎冰霜过载、火环廊地狱烈火、雷电台闪电涌流、尾王烈焰喷吐），<b>土元素</b>（始源羁绊）补空档，<b>净化术</b>秒驱鞭笞者荣耀烈焰与破原始雷云护盾。唯一要注意：<b>冰霜过载与熔火血脉都是递增跳伤</b>，星界转移要延后到中后段再开，别起手交空。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+24 限时元素萨满（国 / 欧 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>先知</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap">
+    <div class="nav-scroll">
+      <a href="#prep" class="on">速记</a>
+      <a href="#timeline">时间轴</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#s1">开场</a>
+      <a href="#s2"><span class="n">①</span>梅莉杜莎</a>
+      <a href="#s3">火环廊</a>
+      <a href="#s4"><span class="n">②</span>柯姬雅</a>
+      <a href="#s5">雷电台</a>
+      <a href="#s6"><span class="n">③</span>基拉卡</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#talent">天赋</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <p class="sub">四张手牌管住全本，外加一条机制硬限制与五组必断读条。</p>
+
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="{{I:108271}}" alt=""><div><div class="nm">星界转移</div><div class="cd">90 秒（位面旅行者）· 持续 12 秒</div></div></div>
+      <p>全伤 −40%。全本唯一大减伤，按固定高压点预留；冰霜过载和熔火血脉等递增机制要延后到中后段再开。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:198103}}" alt=""><div><div class="nm">土元素</div><div class="cd">3 分钟 · 持续 30 秒</div></div></div>
+      <p>配始源羁绊不再嘲讽，改为最大生命值 +15%。专门补星界空档：梅莉杜莎二轮过载、德拉加尔、烈焰之咽与尾王喷吐。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:370}}" alt=""><div><div class="nm">净化术</div><div class="cd">无冷却 · 移除 1 个有益魔法</div></div></div>
+      <p>全本双核心目标：秒驱鞭笞者临死<b>荣耀烈焰</b>免躲火球，破原始雷云<b>雷云屏障</b>（85% 盾）触发引爆清场。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:57994}}" alt=""><div><div class="nm">风剪</div><div class="cd">12 秒 · 风幕：受到法伤 −15%</div></div></div>
+      <p>打断后 12 秒受法伤 −15%，覆盖全本绝大部分冰火自然法伤。盯紧下方必断读条与可断引导。</p>
+    </article>
+  </div>
+
+  <div class="limit">
+    <div class="h">没有免疫 · 递增加伤别早交，暴雨前务必停条</div>
+    <b>冰霜过载</b>与<b>熔火血脉</b>均为递增持续伤，刚起手就交星界转移会在最疼的后半段真空；厄克哈特<b>阻断暴雨</b>附带 2 秒打断施法，读条前务必提前停条防锁自然系；梅莉杜莎<b>冷冽飞弹</b>为物理伤害，风幕不减伤。全本无中毒减益，无需带清毒图腾。
+  </div>
+
+  <div class="kicks-box">
+    <div class="kicks-head">
+      <img class="ic" src="{{I:57994}}" alt="风剪">
+      <h3>全本必断读条与引导</h3>
+      <span>点击跳到对应战斗</span>
+    </div>
+    <div class="kicks">
+      <a class="kick" href="#k-barrier">
+        <div class="meta"><span class="idx">01</span><span>闪霜织寒者 · 开场小怪</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">寒冰壁垒</div>
+        <div class="why">可断引导，起手立刻打断防叠吸收盾与免控；其余风剪断寒冰箭。</div>
+      </a>
+      <a class="kick" href="#k-bolt">
+        <div class="meta"><span class="idx">02</span><span>梅莉杜莎·寒妆 · 首领一</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">冷冽飞弹</div>
+        <div class="why">高伤物理单体读条，与队友轮断保坦克并给冰伤续 12 秒风幕。</div>
+      </a>
+      <a class="kick" href="#k-cinder">
+        <div class="meta"><span class="idx">03</span><span>拜荒织烬者 / 炎缚毁灭者 · 火环廊</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">焰烬之箭 / 火热冲击</div>
+        <div class="why">高频断焰烬之箭续风幕，兼顾补断毁灭者火热冲击。</div>
+      </a>
+      <a class="kick" href="#k-barrage">
+        <div class="meta"><span class="idx">04</span><span>炎缚火焰风暴 · 首领二</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">烈焰狂轰</div>
+        <div class="why">全团高伤火读条，每只火焰风暴落地后第一必断。</div>
+      </a>
+      <a class="kick" href="#k-thunder">
+        <div class="meta"><span class="idx">05</span><span>暴风引导者 · 雷电台</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">雷霆冲击</div>
+        <div class="why">3 秒高频自然单体读条，焦点优先风剪续风幕扛践踏。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>一场里减伤交在哪</h2>
+  <p class="sub">一场 +24 限时实录（展示真实冷却节奏，非每波强制照搬；具体取舍见下方路线）。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>星界转移 · 固定点</span>
+      <span><i class="e"></i>土元素</span>
+      <span><i class="muted"></i>顺手星界</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。伤害数字是 +24 实测（含被吸收的部分），层数越高越大。</p>
+
+  <div class="route">
+
+    <!-- 开场 -->
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 梅莉杜莎</h3><span class="kind">TRASH · 原始主宰 / 深石塑地者 / 缚地守护者 / 闪霜织寒者 / 亵渎者德拉加尔</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>开场交星界转移扛原始主宰采掘冲击（或地缚印记）；距梅莉杜莎首轮冰霜过载 ≥ 90 秒时，转好再交德拉加尔钢铁弹幕叠印记，空档交土元素。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1305201}}" alt=""><div><div class="n">采掘冲击</div><div class="s">原始主宰读条 · 全团自然直击约 50 万 + 8 秒跳伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">读条末预开盖住直击（降至约 32 万）与 8 秒跳伤；脚下躲开落石。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1307205}}" alt=""><div><div class="n">地缚印记 / 钢铁弹幕</div><div class="s">守护者 8 秒自然点名 · 德拉加尔 3 秒全团火新星</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why">印记落地叠弹幕时开星界（印记跳伤约 18 万降至 11 万）；冷却中交土元素，躲开炽焰冲刺路径。</div>
+          </div>
+          <div class="row" id="k-barrier">
+            <div class="mech"><img class="ic" src="{{I:372743}}" alt=""><div><div class="n">寒冰壁垒 / 寒冰箭</div><div class="s">闪霜织寒者 · 寒冰壁垒为可断引导</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="btn-chip"><img class="ic sm" src="{{I:192058}}" alt="">电能图腾</span></div>
+            <div class="why">寒冰壁垒出引导立刻风剪防套免控盾；其余风剪断寒冰箭续风幕，多怪读条丢电能图腾群晕。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">建议：开场与德拉加尔各交 1 次星界（进首领前留足冷却）</span></div>
+          <a class="next" href="#s2">下一段：梅莉杜莎 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 1 梅莉杜莎 -->
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>梅莉杜莎·寒妆</h3><span class="kind">BOSS 1</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>冰霜过载全场约两轮（分别在开打约 +80 秒、+160 秒，间隔常不足 90 秒）。<b>星界转移只保其中一轮且延后 5–8 秒再开</b>，另一轮交土元素补血限（仅两轮间隔 ≥ 90 秒时可各交一次）；开场若连带小怪，沿用前段打断。</div>
+        <div class="subhead">关键机制与冰霜过载节奏</div>
+        <div class="rows">
+          <div class="row step">
+            <div class="when">拉人/出雷</div>
+            <div class="mech"><img class="ic" src="{{I:397077}}" alt=""><div><div class="n">霜风 / 冰雹爆裂</div><div class="s">风眼拉人 7 秒炸 · 爆裂全团约 60 万并出地雷</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:192063}}" alt="">阵风</span><span class="btn-chip"><img class="ic sm" src="{{I:79206}}" alt="">灵魂行者的恩赐</span></div>
+            <div class="why">风眼内冰伤翻倍，立刻用阵风或幽魂之狼出圈；绕开冰雹炸弹，走位期开恩赐保读条。</div>
+          </div>
+          <div class="row step" id="k-bolt">
+            <div class="when">常规轮断</div>
+            <div class="mech"><img class="ic" src="{{I:372808}}" alt=""><div><div class="n">冷冽飞弹</div><div class="s">高伤物理读条 · 打当前坦克</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">与队友按分工轮断保坦克，同时给后续冰伤续 12 秒风幕；醒龙崽阶段顺手清掉防叠冻结。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">过载 +5–8s</div>
+            <div class="mech"><img class="ic" src="{{I:373688}}" alt=""><div><div class="n"><span class="badge-must">必做</span>冰霜过载</div><div class="s">寒冰壁垒期间每 1.5 秒全团冰伤，每跳递增 +5%</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why"><b>别一开盾就交星界</b>；等叠 4–6 层进入高伤后半段再开，12 秒刚好盖完直到破盾；另一轮星界未转好交土元素，全力打爆壁垒。</div>
+          </div>
+        </div>
+        <div class="subhead">冰霜过载每一跳吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">27.7 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:71%">19.6 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">建议：星界保一轮过载（延后开），土元素补另一轮</span></div>
+          <a class="next" href="#s3">下一段：火环廊 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 火环廊 -->
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>梅莉杜莎 → 柯姬雅（火环廊）</h3><span class="kind">TRASH · 灰烬先知烈焰鞭笞者 / 炎缚毁灭者 / 拜荒织烬者 / 灼烧元素 / 烈焰之咽</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>环廊全团火伤极密。星界转移预开盖毁灭者<b>地狱烈火</b>；打烈焰之咽半血以下交在<b>熔火血脉</b>递增后段（未转好交土元素），进柯姬雅前留足冷却。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:373972}}" alt=""><div><div class="n"><span class="badge-must">必做</span>荣耀烈焰</div><div class="s">鞭笞者临死魔法增益 · 15 秒持续射余烬</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:370}}" alt="">净化术</span></div>
+            <div class="why">鞭笞者见底化旋风立刻净化，直接清掉免满场躲火球；灼烧元素临死躲开火池。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:373692}}" alt=""><div><div class="n">地狱烈火</div><div class="s">炎缚毁灭者读条 · 全团直击约 51 万 + 5 秒跳伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">读条末预开，12 秒同盖直击与 5 秒跳伤（约 21 万降至 13 万）；毁灭者死前离 20 码躲燃尽。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:392570}}" alt=""><div><div class="n">熔火血脉</div><div class="s">烈焰之咽半血以下 · 每 3 秒全团火伤递增 +15%</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why">起手低层先扛，<b>递增约 10 秒后每跳破 45 万再交星界</b>（降至约 26 万）；未转好交土元素，躲正面吐息。</div>
+          </div>
+          <div class="row" id="k-cinder">
+            <div class="mech"><img class="ic" src="{{I:384194}}" alt=""><div><div class="n">焰烬之箭 / 火热冲击</div><div class="s">织烬者与毁灭者读条 · 织烬者兼挂活动炸弹</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="btn-chip"><img class="ic sm" src="{{I:192058}}" alt="">电能图腾</span></div>
+            <div class="why">高频断焰烬之箭续风幕，兼顾补断火热冲击；活动炸弹交治疗秒驱，未驱时离队友 6 码。</div>
+          </div>
+        </div>
+        <div class="subhead">炎缚毁灭者 · 地狱烈火直击吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">50.5 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:61%">31.0 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:370}}" alt="">每只鞭笞者必净化 · 星界交地狱烈火与熔火血脉后段</span></div>
+          <a class="next" href="#s4">下一段：柯姬雅·焰蹄 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 2 柯姬雅 -->
+    <article class="stop boss" id="s4">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>柯姬雅·焰蹄</h3><span class="kind">BOSS 2</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>缚焰仪式每 <b>40 秒</b> 召一只炎缚火焰风暴，分别在仪式后 <b>+11 秒</b>、<b>+25 秒</b> 放两次地狱烈火。星界转移（90 秒）在第二发地狱烈火（或绕廊顺带鞭笞者/织烬者叠压时）预开，间隔 ≥ 90 秒（约隔两轮）可再交。</div>
+        <div class="subhead">一轮缚焰仪式（以缚焰仪式开始读条为 0 秒）</div>
+        <div class="rows">
+          <div class="row step">
+            <div class="when">0 秒</div>
+            <div class="mech"><img class="ic" src="{{I:372863}}" alt=""><div><div class="n">缚焰仪式</div><div class="s">点名 5 秒落地召火焰风暴 · 12 码炸约 74 万</div></div></div>
+            <div class="skill"><span class="act-note">点名靠边 / 离 12 码</span></div>
+            <div class="why">被点名靠边放稳火焰风暴，非点名远离 12 码不吃落地伤；绕廊同步躲开熔火巨石滚动线。</div>
+          </div>
+          <div class="row step" id="k-barrage">
+            <div class="when">+11 秒起</div>
+            <div class="mech"><img class="ic" src="{{I:373017}}" alt=""><div><div class="n">烈焰狂轰</div><div class="s">炎缚火焰风暴全团火读条 · 漏断约 54 万</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">火焰风暴落地后第一必断，优先风剪续风幕；若绕廊带入鞭笞者，临死照旧净化荣耀烈焰。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">+25 秒</div>
+            <div class="mech"><img class="ic" src="{{I:384823}}" alt=""><div><div class="n"><span class="badge-must">必做</span>地狱烈火（第二发/叠压）</div><div class="s">全团直击约 44 万 + 8 秒每跳约 15 万</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">首轮靠风幕与治疗吃；<b>第二发读条末或叠加绕廊小怪时开星界</b>，直击压至约 25 万、跳伤近乎砍半，未转好靠土元素兜底。</div>
+          </div>
+          <div class="row step">
+            <div class="when">击杀时</div>
+            <div class="mech"><img class="ic" src="{{I:373087}}" alt=""><div><div class="n">燃尽</div><div class="s">火焰风暴临死读条 · 20 码爆炸留焦灼之土</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:79206}}" alt="">灵魂行者的恩赐</span></div>
+            <div class="why">远程保持 20 码外直接 0 伤，绕开焦灼之土，长距离转位开恩赐保输出。</div>
+          </div>
+        </div>
+        <div class="subhead">炎缚火焰风暴 · 地狱烈火每一跳吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">15.2 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:55%">8.3 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">建议：星界交第二发地狱烈火或叠压轮 · 必断烈焰狂轰</span></div>
+          <a class="next" href="#s5">下一段：雷电台 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 雷电台 -->
+    <article class="stop trash" id="s5">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>柯姬雅 → 基拉卡（雷电台）</h3><span class="kind">TRASH · 暴风引导者 / 风暴战士 / 原始雷云 / 大引导者莱瓦迪</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>雷霆践踏每跳约 24 万全程高频轰炸。星界转移<b>别单为践踏乱交</b>，留给被点<b>闪电涌流</b>叠践踏时保命；土元素补莱瓦迪破盾段或涌流空档。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1307488}}" alt=""><div><div class="n"><span class="badge-must">必做</span>闪电涌流 / 雷霆践踏</div><div class="s">7 秒单体自然点名约 36 万/跳 · 常叠全团践踏</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why"><b>被点闪电涌流立刻开星界</b>，同时把雷霆践踏压至约 14 万；未转好交土元素或生命药水。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:391031}}" alt=""><div><div class="n">雷云屏障</div><div class="s">原始雷云 85% 魔法盾 · 破盾触发雷云引爆约 22 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:370}}" alt="">净化术</span></div>
+            <div class="why">血线健康时净化秒破盾令其引爆自毁；<b>错开节奏别连驱过多只</b>防连续引爆炸团。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1310355}}" alt=""><div><div class="n">暴风骤雨之盾</div><div class="s">莱瓦迪 15% 吸收盾 · 每秒约 15 万，到期晕 4 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span><span class="act-note">转火破盾</span></div>
+            <div class="why">第一时间打爆吸收盾防全团晕 4 秒；破盾叠践踏时开土元素撑血限。</div>
+          </div>
+          <div class="row" id="k-thunder">
+            <div class="mech"><img class="ic" src="{{I:392576}}" alt=""><div><div class="n">雷霆冲击</div><div class="s">暴风引导者 3 秒高频自然单体读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">焦点优先风剪防点杀队友，同时给雷霆践踏全程续 12 秒风幕。</div>
+          </div>
+        </div>
+        <div class="subhead">闪电涌流每一跳吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">35.7 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:62%">22.0 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">建议：星界专保闪电涌流 · 错峰净化雷云屏障</span></div>
+          <a class="next" href="#s6">下一段：基拉卡 / 厄克哈特 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 3 基拉卡 / 厄克哈特 -->
+    <article class="stop boss" id="s6">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>基拉卡 / 厄克哈特·风脉</h3><span class="kind">BOSS 3</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>双首领同场，约 2 分半基拉卡下地进二阶段后，烈焰喷吐由每 23 秒点 2 人加快至每 <b>17 秒点 3 人</b>。星界转移专交<b>自己被点烈焰喷吐</b>，空档轮交土元素；灵魂行者的恩赐（90 秒）留给变迁之风走位。</div>
+        <div class="subhead">全程循环关键机制</div>
+        <div class="rows">
+          <div class="row step must">
+            <div class="when">点名即开</div>
+            <div class="mech"><img class="ic" src="{{I:381862}}" alt=""><div><div class="n"><span class="badge-must">必做</span>烈焰喷吐</div><div class="s">6 秒火持续约 25 万/跳 · 结束炸 8 码约 23 万留余烬</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why"><b>挂上减益立刻开星界</b>，12 秒完整盖住 6 秒跳伤、结束炸裂与紧接的阻断暴雨；结束前离队友 8 码靠边放火，星界未转好交土元素。</div>
+          </div>
+          <div class="row step">
+            <div class="when">约 25 秒</div>
+            <div class="mech"><img class="ic" src="{{I:381516}}" alt=""><div><div class="n">阻断暴雨</div><div class="s">全团自然约 52 万 · 附带 2 秒打断施法</div></div></div>
+            <div class="skill"><span class="act-note">读条末提前停手</span></div>
+            <div class="why">读条结束前<b>必须停读法术</b>防锁自然系 2 秒；恰逢烈焰喷吐时可被同一张星界压至约 32 万。</div>
+          </div>
+          <div class="row step">
+            <div class="when">约 24 秒</div>
+            <div class="mech"><img class="ic" src="{{I:381517}}" alt=""><div><div class="n">变迁之风 / 怒吼火息</div><div class="s">8 秒吹风推人并吹移余烬 · 基拉卡正面 4 秒火息</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:79206}}" alt="">灵魂行者的恩赐</span><span class="btn-chip"><img class="ic sm" src="{{I:192063}}" alt="">阵风</span></div>
+            <div class="why">吹风期开恩赐移动读条，看清风向躲开被吹来的余烬与正面火息；站位被吹偏用阵风拉回。</div>
+          </div>
+        </div>
+        <div class="subhead">烈焰喷吐每一跳吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">25.4 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:63%">16.1 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">建议：星界交点名喷吐（二阶段优先）</span><span><img class="ic sm" src="{{I:79206}}" alt="">吹风期开恩赐保走位</span></div>
+          <a class="next" href="#talent">查看天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">取自 +24 限时录像的元素天赋，英雄天赋先知。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">这四个防御天赋不要动</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:381647}}" alt=""><div><b>位面旅行者</b><span>星界转移冷却缩至 90 秒，让冰霜过载、火环廊、雷电台与尾王都对得上高压轴。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:355630}}" alt=""><div><b>风幕</b><span>风剪打断后 12 秒受法术伤害 −15%，覆盖全本密集冰火自然伤害。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1279819}}" alt=""><div><b>始源羁绊</b><span>土元素不再嘲讽，改为最大生命值 +15%，专门补星界转移空档。</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:381650}}" alt=""><div><b>元素防护</b><span>常驻受到的魔法伤害 −8%，全程稳吃冰霜过载、地狱烈火与烈焰喷吐。</span></div></div>
+    </div>
+    <p class="tal-note">常见可换：<b>大地之盾、元素环绕、塞拉赞恩的韧性、治疗链</b> ↔ <b>先祖狼魂亲和、图腾集中、升涌气流</b>；位移可选 <b>阵风</b> ↔ <b>幽魂步</b>；本本无中毒减益无需点<b>清毒图腾</b>。另必配<b>净化术</b>、<b>恩赐之魂</b>、<b>自然守护者</b>与<b>狂风图腾</b>（转区跑图）。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>元素萨满 · 红玉新生法池 应对手册 · 2026-11</div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/a3nXGbD8PhdyVHFv#fight=14">回城补个妆丶 +24 27:20</a>
+      <a href="https://www.warcraftlogs.com/reports/4j6JmKVCpaFrQzHg#fight=100">Keai +24 27:20</a>
+      <a href="https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=13">小奈电下 +24 27:21</a>
+      <a href="https://www.warcraftlogs.com/reports/YwmNvD7gpKyX8PnV#fight=6">Hearthjacke +24 27:46</a>
+      <a href="https://www.warcraftlogs.com/reports/VZA9Frpv24dThL8G#fight=6">Bondd +24 27:50</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>

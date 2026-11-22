@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>元素萨满 · 纳洛拉克的洞穴 应对手册</title>
+<style>
+/* 元素萨满 · 纳洛拉克的洞穴（萨满雷蓝暗底）：一条路线讲到底，顶部速记 + 高频职责跳转 + 阶段导航。
+   换职业只改 :root 变量即可，:root 之外零硬编码色值。
+   路线内主强调色（--gold）严格只表达「必做」；次色（--tl-e / --tl-v）仅用于时间轴副手牌标记；红（--blood）仅用于硬限制与高压警示。
+   纯系统字体，无外部资源依赖。 */
+:root{
+  --bg:#0d1014; --nav-bg:rgba(13,16,20,.92);
+  --panel:#141920; --panel-2:#1a2029; --line:#2a323e; --line-2:#3b4655;
+  --tint-1:rgba(255,255,255,.018); --tint-2:rgba(255,255,255,.045); --ic-edge:#000;
+  --ink:#e8eaee; --ink-2:#cfd4dc; --mute:#a2abb8; --faint:#848e9c;
+  --gold:#5fb0ff; --gold-dim:#2f5f8f; --on-gold:#08131f;
+  --gold-bg:rgba(95,176,255,.08); --gold-chip:rgba(95,176,255,.15); --gold-band:rgba(95,176,255,.13);
+  --hero-a:rgba(95,176,255,.14); --hero-b:rgba(224,168,92,.09);
+  --tl-e:#e0a85c; --tl-v:#9be06a;
+  --bar-off:#848e88; --bar-mid:#b8c4bc; --on-bar:#141916;
+  --blood:#eb7a6e; --blood-bg:rgba(235,122,110,.09); --blood-line:rgba(235,122,110,.34);
+  --display:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",Georgia,serif;
+  --body:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:68px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.68 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+img.ic{width:28px;height:28px;border-radius:6px;border:1px solid var(--ic-edge);box-shadow:0 0 0 1px var(--line-2);flex:none;display:block}
+img.ic.lg{width:38px;height:38px;border-radius:8px}
+img.ic.sm{width:20px;height:20px;border-radius:5px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.01em}
+h2{font-size:23px;font-weight:900;display:flex;align-items:baseline;gap:12px}
+h2 .k{font:700 12px var(--mono);color:var(--mute);letter-spacing:.12em}
+.sub{color:var(--mute);font-size:14px;margin:6px 0 0}
+section{padding:40px 0 6px}
+
+/* hero */
+header{border-bottom:1px solid var(--line);background:
+  radial-gradient(900px 320px at 88% -40%,var(--hero-a),transparent 70%),
+  radial-gradient(700px 260px at 0% 130%,var(--hero-b),transparent 70%)}
+header .wrap{padding-top:42px;padding-bottom:30px;display:grid;gap:16px}
+.eyebrow{font:700 12px var(--mono);letter-spacing:.16em;color:var(--mute)}
+h1{font-size:clamp(30px,5.6vw,48px);font-weight:900;line-height:1.12}
+h1 .cls{color:var(--gold)}
+h1 .dot{color:var(--faint);margin:0 .2em}
+.lede{max-width:66ch;color:var(--ink-2);font-size:16px;margin:0;line-height:1.75}
+.lede b{color:var(--ink);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mute)}
+.chip b{color:var(--ink);font-weight:500}
+
+/* sticky stage nav (outer wrap reserves 124px so scrolled links never slide under ← 全部手册) */
+.nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{padding-top:8px;padding-bottom:8px;padding-right:124px}
+.nav-scroll{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav a{flex:none;font-size:13px;font-weight:500;color:var(--mute);padding:6px 10px;border-radius:7px;white-space:nowrap;transition:color .15s,background .15s}
+.nav a .n{font:700 11px var(--mono);color:var(--faint);margin-right:4px}
+.nav a:hover{color:var(--ink);background:var(--panel)}
+.nav a.on{color:var(--on-gold);background:var(--gold);font-weight:700}
+.nav a.on .n{color:var(--on-gold)}
+.nav .sep{flex:none;width:1px;height:14px;background:var(--line);margin:0 4px}
+
+/* prep: core skills + hard limit + duty checklist */
+.cores{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.core{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 15px;display:grid;gap:8px;align-content:start}
+.core.main{border-color:var(--gold-dim);background:linear-gradient(180deg,var(--gold-bg),var(--panel) 55%)}
+.core .top{display:flex;gap:10px;align-items:center}
+.core .nm{font-weight:700;font-size:15.5px;line-height:1.25}
+.core .cd{font:500 12px var(--mono);color:var(--mute);margin-top:2px}
+.core.main .nm{color:var(--gold)}
+.core p{margin:0;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+
+.limit{margin-top:12px;background:var(--blood-bg);border:1px solid var(--blood-line);border-left:3px solid var(--blood);
+  border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink-2);line-height:1.65}
+.limit .h{font:700 12.5px var(--body);color:var(--blood);letter-spacing:.04em;margin-bottom:4px}
+.limit b{color:var(--ink);font-weight:700}
+
+.kicks-box{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.kicks-head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel-2)}
+.kicks-head h3{font-size:16px;font-weight:700}
+.kicks-head span{font-size:13px;color:var(--mute);margin-left:auto}
+.kicks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--panel)}
+.kick{display:grid;gap:4px;padding:14px 16px;background:var(--panel);box-shadow:0 0 0 1px var(--line);transition:background .15s;position:relative}
+.kick:hover{background:var(--panel-2)}
+.kick .meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--mute)}
+.kick .idx{font:700 11.5px var(--mono);color:var(--ink-2)}
+.kick .go{margin-left:auto;color:var(--faint);font-size:12px}
+.kick:hover .go{color:var(--ink)}
+.kick .cast{font:700 16px/1.35 var(--display);color:var(--ink)}
+.kick .why{font-size:13.5px;color:var(--ink-2);line-height:1.55}
+
+/* timeline (shared single-track timeline) */
+.tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
+.tl-scroll{overflow-x:auto;padding-bottom:6px}
+.tl{position:relative;min-width:884px;height:232px;margin:0 48px}
+.band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
+.band.trash{background:var(--panel-2);color:var(--mute);border:1px dashed var(--line)}
+.band.boss{background:var(--gold-band,rgba(242,210,75,.12));color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:96px;z-index:1}
+.mk .stem{width:2px;background:var(--gold)}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:var(--ic-edge,#000)}
+.mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
+.mk .t{font:500 11px/1.25 var(--mono);color:var(--mute)}
+.mk.up{bottom:148px}
+.mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
+.mk.dn{top:114px}
+.mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
+.mk.dn .stem{height:14px}
+.mk.v .stem{background:var(--tl-v,var(--shadow))}.mk.v img{border-color:var(--tl-v,var(--shadow))}
+.mk.e .stem{background:var(--tl-e,var(--nature))}.mk.e img{border-color:var(--tl-e,var(--nature))}
+.mk.muted .stem{background:var(--faint)}.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}.mk.muted .lab{color:var(--mute)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+.legend i.pri{border:2px solid var(--gold);border-radius:50%}
+.legend i.e{border:2px solid var(--tl-e,var(--nature));border-radius:50%}
+.legend i.v{border:2px solid var(--tl-v,var(--shadow));border-radius:50%}
+.legend i.muted{border:2px solid var(--faint);border-radius:50%}
+.legend i.boss{background:var(--gold-band,rgba(242,210,75,.12));border:1px solid var(--gold-dim)}
+.legend i.trash{background:var(--panel-2);border:1px dashed var(--line)}
+
+
+/* route */
+.route{margin-top:20px;position:relative;display:grid;gap:18px}
+.route::before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.stop{display:grid;grid-template-columns:40px 1fr;gap:14px}
+.node{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:900 16px var(--display);position:relative;z-index:1}
+.stop.boss .node{background:var(--panel-2);border:2px solid var(--ink-2);color:var(--ink)}
+.stop.trash .node{background:var(--panel-2);border:1px solid var(--line-2);color:var(--mute);font-size:12px;font-weight:700}
+.stop-body{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.stop.boss .stop-body{border-color:var(--line-2)}
+.stop-head{padding:13px 16px;display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:var(--panel-2)}
+.stop-head h3{font-size:18px;font-weight:900}
+.stop.trash .stop-head h3{font-size:16.5px;font-weight:700;color:var(--ink)}
+.stop-head .kind{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.stop.boss .stop-head .kind{color:var(--ink-2)}
+
+.rhythm{padding:10px 16px;font-size:13.5px;color:var(--ink-2);background:var(--tint-1);border-bottom:1px solid var(--line);line-height:1.65}
+.rhythm .lbl{font:700 11.5px var(--body);color:var(--ink);margin-right:8px;letter-spacing:.04em}
+.rhythm b{color:var(--ink);font-weight:700}
+.rhythm.warn{background:var(--blood-bg);color:var(--ink)}
+.rhythm.warn .lbl{color:var(--blood)}
+
+.rows{display:grid}
+.row{display:grid;grid-template-columns:minmax(190px,1.15fr) 20px minmax(150px,.95fr) minmax(180px,1.25fr);gap:10px 12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row.must{background:var(--gold-bg);border-left:3px solid var(--gold);padding-left:13px}
+.row:target{outline:2px solid var(--ink-2);outline-offset:-2px;background:var(--tint-2)}
+.mech{display:flex;gap:10px;align-items:center;min-width:0}
+.mech .n{font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mech .s{font-size:12.5px;color:var(--mute);margin-top:1px}
+.badge-must{font:700 11px/1 var(--body);color:var(--on-gold);background:var(--gold);padding:3px 6px;border-radius:4px;letter-spacing:.02em}
+.row .to{color:var(--faint);text-align:center;font-weight:700}
+.row.must .to{color:var(--gold)}
+.skill{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.btn-chip{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--ink);
+  background:var(--panel-2);border:1px solid var(--line-2);border-radius:7px;padding:3px 9px 3px 4px;white-space:nowrap}
+.row.must .btn-chip.pri{border-color:var(--gold-dim);background:var(--gold-chip);color:var(--gold)}
+.tgt{font-size:12.5px;color:var(--mute);font-weight:500}
+.act-note{font-size:13px;color:var(--mute)}
+.or{font-size:12px;color:var(--faint)}
+.row .why{font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.row .why b{color:var(--ink);font-weight:700}
+
+/* step sequence inside boss stop */
+.subhead{padding:10px 16px 6px;font:700 12px var(--body);color:var(--mute);letter-spacing:.04em;border-top:1px solid var(--line);background:var(--tint-1)}
+.row.step{grid-template-columns:minmax(72px,auto) minmax(150px,1fr) minmax(160px,1fr) minmax(180px,1.25fr)}
+.row.step .when{font:700 12.5px var(--mono);color:var(--mute);white-space:nowrap}
+.row.step.must .when{color:var(--gold)}
+.row.step .mech{gap:8px}
+
+/* soak comparison bars */
+.bars{padding:8px 16px 14px;display:grid;gap:8px}
+.bar-row{display:grid;grid-template-columns:108px 1fr;gap:12px;align-items:center;font-size:13px;color:var(--mute)}
+.bar{height:24px;background:var(--panel-2);border-radius:6px;position:relative;overflow:hidden}
+.bar span{position:absolute;inset:0 auto 0 0;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font:700 12px var(--mono);color:var(--on-bar);white-space:nowrap;min-width:52px}
+.bar .off{background:var(--bar-off)}
+.bar .mid{background:var(--bar-mid)}
+.bar .zero{background:none;color:var(--ink);justify-content:flex-start;padding-left:8px}
+
+.stop-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 16px;
+  border-top:1px solid var(--line);background:var(--panel-2);font-size:13px;color:var(--mute)}
+.stop-foot .plan{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.stop-foot .plan img{vertical-align:-4px;margin-right:4px}
+.stop-foot .next{color:var(--ink-2);font-weight:500}
+.stop-foot .next:hover{color:var(--ink);text-decoration:underline}
+
+/* talents */
+.talent{margin-top:18px;background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:18px;display:grid;gap:16px}
+.code-row{display:flex;gap:10px;align-items:stretch}
+.code-row code{flex:1;min-width:0;font:500 13px/1.5 var(--mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;word-break:break-all;user-select:all}
+.code-row button{flex:none;font:700 14px var(--body);color:var(--on-gold);background:var(--gold);border:0;border-radius:8px;padding:0 20px;cursor:pointer}
+.code-row button:hover{filter:brightness(1.08)}
+.tal-label{font-size:13px;font-weight:700;color:var(--mute);margin:0}
+.tal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tal{display:flex;gap:10px;align-items:center;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);font-size:13.5px}
+.tal.key{border-color:var(--line-2)}
+.tal b{font-size:14px;color:var(--ink);display:block;margin-bottom:2px}
+.tal span{display:block;color:var(--ink-2);line-height:1.5}
+.tal-note{font-size:13.5px;color:var(--mute);margin:0;line-height:1.6}
+.tal-note b{color:var(--ink);font-weight:600}
+
+footer{padding:36px 0 54px;border-top:1px solid var(--line);margin-top:44px;color:var(--mute);font-size:13px}
+.refs{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
+.refs a{color:var(--ink-2);border-bottom:1px dotted var(--faint)}
+.refs a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .row,.row.step{grid-template-columns:1fr;gap:6px}
+  .row .to{display:none}
+  .route::before{left:15px}
+  .stop{grid-template-columns:32px 1fr;gap:10px}
+  .node{width:32px;height:32px;font-size:14px}
+  .tal-grid{grid-template-columns:1fr}
+  .code-row{flex-direction:column}
+  .code-row button{padding:10px 20px}
+  .bar-row{grid-template-columns:88px 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">DEN OF NALORAKK · MYTHIC+ · ELEMENTAL SHAMAN</div>
+    <h1><span class="cls">元素萨满</span><span class="dot">·</span>纳洛拉克的洞穴 应对手册</h1>
+    <p class="lede">纳洛拉克的洞穴全程是<b>无视护甲的全团物理咆哮、流血与冰霜持续伤</b>，尾王回响重击单次约 101 万。元素萨满没有免疫，靠 90 秒<b>星界转移</b>盯紧固定点：囤宝狂人首发咆哮与第五发饕餮怒吼、寒冬哨兵寒冰暴雨、战争使者原始回响与纳洛拉克的回响重击；<b>清毒图腾</b>清腐坏补给后的剧毒孢子，<b>净化灵魂</b>驱饥荒雕像的饥肠辘辘，<b>土元素</b>（3 分钟）补星界空档。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+24 限时元素萨满（国 / 欧）</b></span>
+      <span class="chip">英雄天赋 <b>先知</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap">
+    <div class="nav-scroll">
+      <a href="#prep" class="on">速记</a>
+      <a href="#timeline">时间轴</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#s1">开场</a>
+      <a href="#s2"><span class="n">①</span>囤宝狂人</a>
+      <a href="#s3">冰川</a>
+      <a href="#s4"><span class="n">②</span>寒冬哨兵</a>
+      <a href="#s5">图腾区</a>
+      <a href="#s6"><span class="n">③</span>纳洛拉克</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#talent">天赋</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <p class="sub">四张手牌管住全本，外加一条驱散边界与五组必断读条。</p>
+
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="../icons/ca0443aca328.jpg" alt=""><div><div class="nm">星界转移</div><div class="cd">90 秒（位面旅行者）· 持续 12 秒</div></div></div>
+      <p>所有伤害 −40%。全本唯一大减伤，优先留给下方路线里标「必做」的高压机制。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/6144a646aa8d.jpg" alt=""><div><div class="nm">土元素</div><div class="cd">3 分钟 · 持续 30 秒</div></div></div>
+      <p>配始源羁绊不再嘲讽，改为最大生命值 +15%。补星界空档，主要用在尾王回响重击，囤宝狂人与冰川转好可兜底。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/1d3881ba8d78.jpg" alt=""><div><div class="nm">清毒图腾</div><div class="cd">2 分钟 · 持续 6 秒</div></div></div>
+      <p>脚下 30 码每 1.5 秒清一名队友全部中毒。专清囤宝狂人腐坏补给之后的<b>剧毒孢子</b>。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/3105f4c8479d.jpg" alt=""><div><div class="nm">净化灵魂</div><div class="cd">8 秒 · 移除全部诅咒</div></div></div>
+      <p>驱饥荒雕像的<b>饥肠辘辘</b>（最大生命值 −15%，可叠加），开场两波和林道叠层就驱。</p>
+    </article>
+  </div>
+
+  <div class="limit">
+    <div class="h">没有免疫 · 认清驱散边界</div>
+    <b>清毒图腾</b>只清剧毒孢子这类中毒；<b>饥肠辘辘</b>是诅咒，须用净化灵魂；寒冬哨兵的<b>冰川折磨</b>是魔法，交治疗驱散；锐眼掠击鹰的<b>剃刀俯冲</b>是物理流血，萨满驱不掉，叠深了用星界或喊治疗。
+  </div>
+
+  <div class="kicks-box">
+    <div class="kicks-head">
+      <img class="ic" src="../icons/ef75d4381b87.jpg" alt="风剪">
+      <h3>全本必断读条</h3>
+      <span>点击跳到对应战斗</span>
+    </div>
+    <div class="kicks">
+      <a class="kick" href="#k-earth">
+        <div class="meta"><span class="idx">01</span><span>地语看护者 · 开场与首领一</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">大地之箭 / 治疗之风</div>
+        <div class="why">两个读条轮着读，单点高伤与群体回血都要断。</div>
+      </a>
+      <a class="kick" href="#k-roar">
+        <div class="meta"><span class="idx">02</span><span>酷寒重殴者 · 冰川</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">冰冷咆哮</div>
+        <div class="why">漏断全团急速减半，破冰川之墓与输出都变慢。</div>
+      </a>
+      <a class="kick" href="#k-veil">
+        <div class="meta"><span class="idx">03</span><span>碎裂的震颤核心 · 首领二</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">寒冬帷幕</div>
+        <div class="why">核心露出就断，漏断全团叠冰霜易伤再吃暴雨。</div>
+      </a>
+      <a class="kick" href="#k-arc">
+        <div class="meta"><span class="idx">04</span><span>雷缚秘法师 · 图腾区与尾王</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">电弧 / 闪电箭</div>
+        <div class="why">电弧弹 3 人高伤，常被带进尾王，优先断。</div>
+      </a>
+      <a class="kick" href="#k-nanya">
+        <div class="meta"><span class="idx">05</span><span>神灵代言人纳尼亚 · 图腾区</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">闪电箭</div>
+        <div class="why">纳尼亚一直读，按分工轮断，轮到就风剪。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>一场里减伤和清毒交在哪</h2>
+  <p class="sub">一场 +24 限时实录（展示真实冷却节奏，非每波强制照搬；具体取舍见下方路线）。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+<div class="tl">
+  <div class="band trash" style="left:1.24%;width:12.23%">开场</div>
+  <div class="band boss" style="left:13.46%;width:13.24%">①囤宝狂人</div>
+  <div class="band trash" style="left:27.49%;width:26.48%">林道·冰川</div>
+  <div class="band boss" style="left:54.03%;width:13.13%">②寒冬哨兵</div>
+  <div class="band trash" style="left:69.07%;width:17.58%">图腾·纳尼亚</div>
+  <div class="band boss" style="left:86.65%;width:13.35%">③纳洛拉克</div>
+  <div class="axis" style="left:0;transform:none">0:00</div>
+  <div class="axis" style="left:16.90%">5:00</div>
+  <div class="axis" style="left:33.80%">10:00</div>
+  <div class="axis" style="left:50.70%">15:00</div>
+  <div class="axis" style="left:67.61%">20:00</div>
+  <div class="axis" style="left:84.51%">25:00</div>
+  <div class="mk up" style="left:8.47%"><span class="lab">苦难盛宴</span><span class="t">2:30</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk dn" style="left:14.05%"><span class="lab">咆哮·补开</span><span class="t">4:09</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk up v" style="left:15.62%"><span class="lab">清孢子</span><span class="t">4:37</span><span class="stem"></span><img src="../icons/1d3881ba8d78.jpg" alt=""></div>
+  <div class="mk dn v" style="left:22.47%"><span class="lab">清孢子</span><span class="t">6:38</span><span class="stem"></span><img src="../icons/1d3881ba8d78.jpg" alt=""></div>
+  <div class="mk up" style="left:23.05%"><span class="lab">饕餮·补开</span><span class="t">6:49</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk dn" style="left:28.88%"><span class="lab">剃刀俯冲</span><span class="t">8:32</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk up" style="left:48.04%"><span class="lab">凛冽严冬</span><span class="t">14:12</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk dn" style="left:57.19%"><span class="lab">寒冰暴雨</span><span class="t">16:55</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk up" style="left:65.31%"><span class="lab">折磨·兜底</span><span class="t">19:19</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk dn" style="left:74.47%"><span class="lab">原始回响</span><span class="t">22:01</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk up" style="left:80.62%"><span class="lab">纳尼亚·可选</span><span class="t">23:51</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk dn e" style="left:87.10%"><span class="lab">首发重击</span><span class="t">25:46</span><span class="stem"></span><img src="../icons/6144a646aa8d.jpg" alt=""></div>
+  <div class="mk up" style="left:92.15%"><span class="lab">回响重击</span><span class="t">27:15</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+  <div class="mk dn" style="left:99.52%"><span class="lab">回响重击</span><span class="t">29:26</span><span class="stem"></span><img src="../icons/ca0443aca328.jpg" alt=""></div>
+</div>
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>星界转移 · 实录施放</span>
+      <span><i class="e"></i>土元素</span>
+      <span><i class="v"></i>清毒图腾</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。伤害数字是 +24 实测（含被吸收的部分），层数越高越大。</p>
+
+  <div class="route">
+
+    <!-- 开场 -->
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 囤宝狂人</h3><span class="kind">TRASH · 地语看护者 / 锐眼掠击鹰 / 饥渴之灵 / 饥荒雕像 / 棘爪收集者 / 领地主母 / 好奇的幼崽</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>前两大波各交一次星界（两发间隔须 ≥ 90 秒），压<b>剃刀俯冲与苦难盛宴</b>；第二波这发距首领首发咆哮不足 90 秒就跳过，留给首领。</div>
+        <div class="rows">
+          <div class="row" id="k-earth">
+            <div class="mech"><img class="ic" src="../icons/60685e7d518b.jpg" alt=""><div><div class="n">大地之箭 / 治疗之风</div><div class="s">地语看护者 · 2.5 秒单点自然 / 3.5 秒群体回血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ef75d4381b87.jpg" alt="">风剪</span></div>
+            <div class="why">看护者活着就轮读，盯住一只断到死，顺手续 12 秒风幕。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/2cce66dd6874.jpg" alt=""><div><div class="n">剃刀俯冲 + 苦难盛宴</div><div class="s">掠击鹰 10 秒物理流血约 22 万/跳 · 饥渴之灵 5 秒全团暗影约 21 万/跳</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">星界转移</span></div>
+            <div class="why">流血叠深或苦难盛宴开跳时开，两样叠上最值；盛宴吸血回怪，尽快打掉饥渴之灵。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/38e225ae9361.jpg" alt=""><div><div class="n">饥肠辘辘</div><div class="s">饥荒雕像 · 诅咒 · 最大生命值 −15% · 25 秒可叠加</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/3105f4c8479d.jpg" alt="">净化灵魂</span><span class="tgt">给叠层队友</span></div>
+            <div class="why">上身就驱，叠层的人优先；同时转火雕像停读条。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/97fca9968792.jpg" alt=""><div><div class="n">腐烂的补给品 / 母熊之怒</div><div class="s">棘爪收集者留腐烂地面 · 幼崽死时激怒附近母熊</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/646553eebad3.jpg" alt="">灵魂行者的恩赐</span><span class="act-note">出地面，别先杀幼崽</span></div>
+            <div class="why">踩到绿地板立即离开，走位开恩赐续读条；幼崽死会激怒附近母熊，留到母熊之后打。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">优先：两大波星界压流血叠苦难盛宴，净化灵魂驱雕像诅咒</span></div>
+          <a class="next" href="#s2">下一段：囤宝狂人 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 1 囤宝狂人 -->
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>囤宝狂人</h3><span class="kind">BOSS 1 · 约 40 秒一发咆哮</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>约每 <b>40 秒</b>一发全团咆哮（+9 / +49 / +89 / +130 / +170 / +210 秒），吃到肉堆后变为饕餮怒吼。<b>星界交首发（或第二发）贪婪咆哮，再留给第五发饕餮怒吼</b>，中段土元素转好可挑一发兜底；孢子上身插清毒图腾。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/a5ba2241b3d5.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>贪婪咆哮 / 饕餮怒吼</div><div class="s">3 秒读条 · 落地约 96 万（饕餮约 89 万）无视护甲物理并击退 + 10 秒每秒约 17 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">星界转移</span><span class="or">空档</span><span class="btn-chip"><img class="ic sm" src="../icons/6144a646aa8d.jpg" alt="">土元素</span></div>
+            <div class="why"><b>读条末开星界</b>，12 秒盖住落地和 10 秒持续伤；首发前星界没转好就推到第二发，第五发照样留。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/96059b2ba452.jpg" alt=""><div><div class="n">腐坏补给 → 剧毒孢子</div><div class="s">+31 秒起每 40 秒 · 投掷约 54 万 + 蘑菇毒雾 12 秒中毒可叠加</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/1d3881ba8d78.jpg" alt="">清毒图腾</span><span class="tgt">清队友孢子</span></div>
+            <div class="why">首批孢子开始上身时插下，满 2 分钟后的那轮补给再插；清不完的层数喊治疗驱。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/2317a98280cf.jpg" alt=""><div><div class="n">骨刺猛击</div><div class="s">4 秒读条 · 前方锥形高伤 · 留 45 秒白骨尖刺</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">离开正面，绕开骨刺</span></div>
+            <div class="why">远程站侧面不吃锥形，骨刺扎入每 0.5 秒一跳还减速，别从尖刺上走。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/60685e7d518b.jpg" alt=""><div><div class="n">连带地语看护者</div><div class="s">若带进首领战，继续读大地之箭（同前段）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ef75d4381b87.jpg" alt="">风剪</span></div>
+            <div class="why">看护者活着就轮流断，先压它血再回首领。</div>
+          </div>
+        </div>
+        <div class="subhead">饕餮怒吼落地每次吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">89.2 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:66%">59.0 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">优先：星界交首发与第五发咆哮，孢子上身插清毒图腾</span></div>
+          <a class="next" href="#s3">下一段：林道与冰川 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 林道与冰川 -->
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>林道 → 冰川 → 寒冬哨兵</h3><span class="kind">TRASH · 锐眼掠击鹰 / 决意化身 / 酷寒重殴者 / 撼地奔行者 / 霜牙 / 冰川亡魂 / 寒冬暴风雪</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>林道掠击鹰流血转好就交星界；<b>冰川第二大波进雾后扛不住叠伤时再交</b>，距哨兵首轮暴雨须 ≥ 90 秒。</div>
+        <div class="rows">
+          <div class="row" id="k-roar">
+            <div class="mech"><img class="ic" src="../icons/1e237a251ca4.jpg" alt=""><div><div class="n">冰冷咆哮</div><div class="s">酷寒重殴者 · 3.5 秒读条 · 全团急速与移速 −50% 15 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ef75d4381b87.jpg" alt="">风剪</span></div>
+            <div class="why">每个都断，急速减半会拖慢破冰川之墓；重殴者粉碎是近战 12 码晕。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/f884faa69d00.jpg" alt=""><div><div class="n">冰川之墓</div><div class="s">决意化身 · 2 秒读条全队冻住 · 每 2 秒约 23 万直到破墓</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">先破墓</span><span class="or">兜底</span><span class="btn-chip"><img class="ic sm" src="../icons/6144a646aa8d.jpg" alt="">土元素</span></div>
+            <div class="why">冻住后先打自己的墓再回化身；土元素转好可招出抬血上限兜底。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/65993adc97cf.jpg" alt=""><div><div class="n">凛冽严冬 + 隆隆结界</div><div class="s">暴风雪雾每 2 秒约 22 万 · 奔行者护盾每 2 秒全团约 13 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">星界转移</span></div>
+            <div class="why">进雾后叠伤压不住血线时补开；雾内外不能互选目标，跟坦克一起进雾。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/2d574bbd748a.jpg" alt=""><div><div class="n">强风 / 冰寒涌动</div><div class="s">风口持续推人 · 冰川亡魂 4 码冰霜冲击</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">贴岩石拿掩护，4 码散开</span></div>
+            <div class="why">站岩石后拿「受到掩护。」免推，亡魂附近别和队友挤。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">优先：风剪断冰冷咆哮，先破冰川之墓，进雾叠伤交星界</span></div>
+          <a class="next" href="#s4">下一段：寒冬哨兵 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 2 寒冬哨兵 -->
+    <article class="stop boss" id="s4">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>寒冬哨兵</h3><span class="kind">BOSS 2 · 63 秒循环</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>每 <b>63 秒</b>一轮：冰川折磨 → 狂怒的飑风 → 粉碎冰刺露核心 → 寒冰暴雨。<b>星界交首轮暴雨，下一发留给第三轮暴雨</b>；错过则兜底给没及时驱掉的冰川折磨，第二轮靠治疗。</div>
+        <div class="subhead">一轮技能轴（以开打为 0 秒，每 63 秒循环）</div>
+        <div class="rows">
+          <div class="row step">
+            <div class="when">+8 秒上身</div>
+            <div class="mech"><img class="ic" src="../icons/8be4b0961089.jpg" alt=""><div><div class="n">冰川折磨</div><div class="s">魔法 · 16 秒每 2 秒约 39 万冰霜</div></div></div>
+            <div class="skill"><span class="act-note">喊治疗驱散</span><span class="or">兜底</span><span class="btn-chip"><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">星界转移</span></div>
+            <div class="why">等治疗驱；第三轮暴雨没交星界、折磨又没驱掉时兜底补开。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+16 秒落地</div>
+            <div class="mech"><img class="ic" src="../icons/071aebe634d1.jpg" alt=""><div><div class="n">狂怒的飑风</div><div class="s">冲击点 4 码高伤 · 随后在场地游荡 1.5 分钟并击退</div></div></div>
+            <div class="skill"><span class="act-note">躲落点，绕开游走旋风</span></div>
+            <div class="why">落点和游走旋风都能单下打出百万级伤害，读条就离开落点，走位开恩赐续读条。</div>
+          </div>
+          <div class="row step" id="k-veil">
+            <div class="when">+28 秒碎裂</div>
+            <div class="mech"><img class="ic" src="../icons/30a1e69004c8.jpg" alt=""><div><div class="n">粉碎冰刺 → 寒冬帷幕</div><div class="s">冰柱碎裂露出核心 · 4 秒读条全团冰伤 + 冰霜易伤 10% 可叠加</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ef75d4381b87.jpg" alt="">风剪</span></div>
+            <div class="why">躲开冰柱落点，核心起读立刻风剪；打碎后留下雪流，踩着免疫暴雨推人。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">+51 秒起读</div>
+            <div class="mech"><img class="ic" src="../icons/82c8e4df0f26.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>寒冰暴雨（开始读条）</div><div class="s">4 秒读条 · 每秒全团约 20 万并外推 · 风眼外额外高伤</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">星界转移</span></div>
+            <div class="why"><b>读条末、起风时开星界</b>，站雪流或贴风眼别被吹出外圈。</div>
+          </div>
+        </div>
+        <div class="subhead">寒冰暴雨每秒吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">19.5 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:57%">11.1 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">优先：星界交第一、三轮暴雨，风剪核心寒冬帷幕，冰川折磨喊驱</span></div>
+          <a class="next" href="#s5">下一段：图腾区与纳尼亚 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 图腾区与纳尼亚 -->
+    <article class="stop trash" id="s5">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>寒冬哨兵 → 纳洛拉克（图腾区）</h3><span class="kind">TRASH · 老练的战争使者 / 雷缚秘法师 / 冷酷的图腾召唤者 / 羁绊驯兽师 / 神灵代言人纳尼亚</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span><b>星界必交战争使者原始回响</b>；纳尼亚那发可选，只在距尾王首发回响爆炸 ≥ 90 秒时交，否则留给尾王。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/4bc5f5b3ddd5.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>原始回响</div><div class="s">老练的战争使者 · 3 秒读条 · 60 码约 61 万无视护甲物理 + 3 秒持续</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">星界转移</span></div>
+            <div class="why">60 码跑不出，<b>读条末约 1 秒预开</b>，直击压到约 36 万，后续持续伤一并盖住。</div>
+          </div>
+          <div class="row" id="k-arc">
+            <div class="mech"><img class="ic" src="../icons/f52feb671c4b.jpg" alt=""><div><div class="n">电弧 / 闪电箭</div><div class="s">雷缚秘法师 · 电弧弹射最多 3 人 · 闪电箭 2.5 秒单点</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ef75d4381b87.jpg" alt="">风剪</span></div>
+            <div class="why">电弧优先断，秘法师站后排，远程最好够得着。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/e27b0a921106.jpg" alt=""><div><div class="n">熔岩图腾 / 毒矛乱射</div><div class="s">灼热岩浆每 0.3 秒约 17 万 · 召唤者 4 码毒矛圈</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">先拆熔岩图腾，躲毒矛圈</span></div>
+            <div class="why">图腾在就一直喷，落地先集火打掉；读到毒矛乱射看地面走开。</div>
+          </div>
+          <div class="row" id="k-nanya">
+            <div class="mech"><img class="ic" src="../icons/efd8aacf9499.jpg" alt=""><div><div class="n">纳尼亚 · 闪电箭</div><div class="s">神灵代言人纳尼亚 · 2.5 秒单点自然</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ef75d4381b87.jpg" alt="">风剪</span></div>
+            <div class="why">纳尼亚一直读，按分工轮断，轮到你就风剪。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/dd6a26fcbeba.jpg" alt=""><div><div class="n">地震术 / 动荡图腾</div><div class="s">纳尼亚 4 秒读条 10 码约 64 万 · 图腾无常烈焰每 2.5 秒约 27 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">星界转移</span></div>
+            <div class="why">先出 10 码圈、拆图腾；扛不住且离尾王够 90 秒才交星界。</div>
+          </div>
+        </div>
+        <div class="subhead">原始回响直击每次吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">61.1 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:59%">36.3 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">优先：星界必交原始回响，风剪电弧，纳尼亚那发看离尾王够不够 90 秒</span></div>
+          <a class="next" href="#s6">下一段：纳洛拉克 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 3 纳洛拉克 -->
+    <article class="stop boss" id="s6">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>纳洛拉克（祖尔加拉协助）</h3><span class="kind">BOSS 3 · 65 秒双组循环</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>每 <b>65 秒</b>两组：回响重击 → 压制强攻 → 强力猛击，组末战神之怒。回响重击每次点 3 名非坦克，<b>点到你且星界已好就交</b>，没好交土元素，都没好提前喊治疗；连带秘法师继续断电弧。</div>
+        <div class="subhead">一轮技能轴（以开打为 0 秒，每 65 秒循环）</div>
+        <div class="rows">
+          <div class="row step must">
+            <div class="when">+5 / +30 点名</div>
+            <div class="mech"><img class="ic" src="../icons/73b3a7c6bedd.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>回响重击（点名 4 秒）</div><div class="s">到期在脚下生成回响 · 8 码自然约 101 万</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">星界转移</span><span class="or">空档</span><span class="btn-chip"><img class="ic sm" src="../icons/6144a646aa8d.jpg" alt="">土元素</span></div>
+            <div class="why">出人群 8 码放到边上，<b>爆炸（+9 / +34）前 2–3 秒开星界</b>；首发星界没留好用土元素兜底。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+13 / +38 起读</div>
+            <div class="mech"><img class="ic" src="../icons/0b9d42fbdc65.jpg" alt=""><div><div class="n">压制强攻</div><div class="s">3 秒每秒一跳无视护甲物理 · 第 3 下击退</div></div></div>
+            <div class="skill"><span class="act-note">拿防御姿态</span></div>
+            <div class="why">跟着祖尔加拉拿到防御姿态（这招减伤 80%），站满三跳再走。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+23 / +48 起读</div>
+            <div class="mech"><img class="ic" src="../icons/e91f0b5a32b0.jpg" alt=""><div><div class="n">强力猛击</div><div class="s">5 秒读条 · 砸昏迷的祖尔加拉 6 码内</div></div></div>
+            <div class="skill"><span class="act-note">坦克进圈，其他人离开 6 码</span></div>
+            <div class="why">必须有人吃（由坦克承接），无人命中会触发挫志怒吼；DPS 别留在圈里。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+54 秒冲锋</div>
+            <div class="mech"><img class="ic" src="../icons/c28d9df3527b.jpg" alt=""><div><div class="n">战神之怒 → 回响狂怒</div><div class="s">回响冲向祖尔加拉 · 撞到首个玩家约 39 万自然</div></div></div>
+            <div class="skill"><span class="act-note">按分工挡回响</span></div>
+            <div class="why">新旧回响都会冲（每只多冲一轮才消失），按分工站进冲锋路线，漏一只就是挫志怒吼。</div>
+          </div>
+        </div>
+        <div class="subhead">回响重击每次吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">101.0 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:63%">64.0 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="../icons/ca0443aca328.jpg" alt="">优先：星界交回响重击，土元素补空档，防御姿态吃压制强攻</span></div>
+          <a class="next" href="#talent">查看天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">取自 +24 限时录像的元素天赋，英雄天赋先知。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbbzMGjZZbZMmhZAAAAgFzsBDYAzGTgZBAmtZmZwCaDzYmlZmZmZMLzyMzywYmZBAYAgZGDDD</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">这四个防御与功能天赋不要动</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="../icons/268d079e64e0.jpg" alt=""><div><b>位面旅行者</b><span>星界转移冷却缩到 90 秒，囤宝狂人、寒冬哨兵与尾王回响重击才能排开两到三发。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/ff34ecd98976.jpg" alt=""><div><b>始源羁绊</b><span>土元素不再嘲讽，改为最大生命值 +15%，专门补星界转移空档。</span></div></div>
+      <div class="tal"><img class="ic" src="../icons/1d3881ba8d78.jpg" alt=""><div><b>清毒图腾</b><span>囤宝狂人两轮剧毒孢子各插一根，轮流清掉队友身上的中毒。</span></div></div>
+      <div class="tal"><img class="ic" src="../icons/a03b3546a10b.jpg" alt=""><div><b>风幕</b><span>风剪打断后 12 秒受到的法术伤害 −15%，地语看护者与秘法师读条多，打断频繁时经常吃得到。</span></div></div>
+    </div>
+    <p class="tal-note">参考录像里的常见改动：去掉<b>幽魂步、静电充能</b>换<b>阵风、冰霜震击、图腾投射</b>；去掉<b>雷霆之爪</b>换<b>幽灵狼</b>；去掉<b>首席升腾者</b>换<b>飞升卓越、喷流</b>；去掉<b>先祖狼魂亲和、图腾集中</b>换<b>大地之盾、治疗链、元素环绕、塞拉赞恩的韧性</b>。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>元素萨满 · 纳洛拉克的洞穴 应对手册 · 2026-11</div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/BV19wgKxrnZ2dFj8#fight=1">Freaksh +24 27:54</a>
+      <a href="https://www.warcraftlogs.com/reports/jLq6dKR3rMnag87C#fight=3">Stoveteacher +24 28:23</a>
+      <a href="https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=46">坦克不许动 +24 29:38</a>
+      <a href="https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=11">小电飒 +24 29:42</a>
+      <a href="https://www.warcraftlogs.com/reports/qPRJ78rDw9pXmKG1#fight=13">Fnrsham +24 29:50</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>
