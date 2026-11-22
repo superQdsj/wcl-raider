@@ -154,6 +154,12 @@
             <div class="skill"><span class="act-note">拉满血 · 躲落石</span></div>
             <div class="why">读条时靠近治疗覆盖区，落地后看脚下，缺血就用意气风发兜底。</div>
           </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1296058}}" alt=""><div><div class="n">反刍</div><div class="s">点名直线喷 3 道胃酸波 · 单次约 130–161 万，命中减速 50%、伤害降低 50%</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">走出直线</span></div>
+            <div class="why">看喷吐朝向，往侧面走。</div>
+          </div>
         </div>
         <div class="stop-foot">
           <div class="plan"><span>喷吐先散开，龟壳在毒球落地前交。</span></div>
@@ -171,7 +177,7 @@
             <div class="mech"><img class="ic" src="{{I:1289416}}" alt=""><div><div class="n"><span class="badge-must">必做</span>毒伤</div><div class="s">高阶进化者 · 约 3 秒读条，漏断后挂 8 秒中毒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
-            <div class="why">断自己负责的目标。反制射击冷却时让队友接，备选冰冻陷阱或宠物胁迫停条，盯住重读。</div>
+            <div class="why">断分工目标。反制冷却叫队友接，或用冰冻陷阱、宠物胁迫停条并盯重读。漏断上身就报队友解毒。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1294859}}" alt=""><div><div class="n">振响</div><div class="s">振响的扭缠蛇 · 无视护甲，持续 5 秒</div></div></div>
@@ -288,13 +294,13 @@
             <div class="when">光束生效</div>
             <div class="mech"><img class="ic" src="{{I:1300876}}" alt=""><div><div class="n">拦截光束</div><div class="s">持续 8 秒</div></div></div>
             <div class="skill"><span class="act-note">进自己负责的光束</span></div>
-            <div class="why">去首领与蛇头之间接光束，拦截时会持续受伤并叠仪式毒液。</div>
+            <div class="why">站首领与蛇头之间，拦截时持续受伤并叠仪式毒液。漏拦会让祖尔加获得毒牙强化。</div>
           </div>
           <div class="row step">
             <div class="when">毒液在身</div>
             <div class="mech"><img class="ic" src="{{I:1300894}}" alt=""><div><div class="n">仪式毒液</div><div class="s">光束最后一次刷新后倒计时 50 秒 · 到期会爆</div></div></div>
-            <div class="skill"><span class="act-note">站到斧线一侧</span></div>
-            <div class="why">看切骨者点谁，优先赶上本轮首把飞斧。</div>
+            <div class="skill"><span class="act-note">有仪式毒液才进斧线</span></div>
+            <div class="why">看切骨者点谁，优先接首把，漏接就等约 16 秒后的第二把。</div>
           </div>
           <div class="row step must">
             <div class="when">飞斧将落</div>
