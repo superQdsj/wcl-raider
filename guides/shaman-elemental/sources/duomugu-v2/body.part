@@ -1,0 +1,481 @@
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">THE BLINDING VALE · MYTHIC+ · ELEMENTAL SHAMAN</div>
+    <h1><span class="cls">元素萨满</span><span class="dot">·</span>夺目谷 应对手册</h1>
+    <p class="lede">夺目谷以高频<b>神圣与自然法伤</b>和密集读条为主。元素萨满没有免疫，靠 90 秒<b>星界转移</b>锁住六个固定高压点：开场喷涌之花、伊库兹疯乱叠咆哮、鲁伊亚光明之火与峡谷之灵、主母无清毒轮喷毒、兹欧凯特多层吃球；<b>清毒图腾</b>管住主母一整轮全团喷毒，<b>土元素</b>（3 分钟）跨段补空档，<b>风剪</b>盯紧五个必断读条顺带续风幕减伤。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+24 限时元素萨满（国 / 欧 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>先知</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap">
+    <div class="nav-scroll">
+      <a href="#prep" class="on">速记</a>
+      <a href="#timeline">时间轴</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#s1">开场</a>
+      <a href="#s2"><span class="n">①</span>密林三杰</a>
+      <a href="#s3">林地</a>
+      <a href="#s4"><span class="n">②</span>伊库兹</a>
+      <a href="#s5">荒芜</a>
+      <a href="#s6"><span class="n">③</span>鲁伊亚</a>
+      <a href="#s7">蟾蜍·尾王前</a>
+      <a href="#s8"><span class="n">④</span>兹欧凯特</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#talent">天赋</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <p class="sub">四张手牌管住全本，外加两条铁律和五个必断读条。</p>
+
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="{{I:108271}}" alt=""><div><div class="nm">星界转移</div><div class="cd">90 秒（位面旅行者）· 持续 12 秒</div></div></div>
+      <p>所有伤害 −40%。全本唯一主动大减伤，按路线固定高压点预留，两个必留点间隔不足 90 秒时保后一个。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:198103}}" alt=""><div><div class="nm">土元素</div><div class="cd">3 分钟 · 持续 30 秒</div></div></div>
+      <p>配始源羁绊不再嘲讽，改为最大生命值 +15%。冷却长，跨段算好 180 秒间隔，只补星界空档。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:383013}}" alt=""><div><div class="nm">清毒图腾</div><div class="cd">2 分钟 · 持续 6 秒</div></div></div>
+      <p>插下当刻及随后每 1.5 秒为 30 码内一名队友清掉所有中毒；专门用来化解主母全团喷毒，不能清魔法或非中毒自然伤。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:57994}}" alt=""><div><div class="nm">风剪</div><div class="cd">12 秒 · 风幕：受到法伤 −15%</div></div></div>
+      <p>打断后 12 秒受法术伤害 −15%（物理践踏、流血与痛击吃不到）。盯紧下方五个必断读条。</p>
+    </article>
+  </div>
+
+  <div class="limit">
+    <div class="h">本本两条铁律：尾王绝不贪层，长冷却跨段留好</div>
+    没有免疫，星界转移未转好时遇到兹欧凯特接球轮只能与队友分摊接 1 颗——每多撞一颗球都会叠层并<b>刷新 12 秒持续掉血</b>，叠高后极易倒人；土元素（180 秒）与清毒图腾（120 秒）冷却长，前段尾声透支会直接让下一位首领或主母喷毒断档。
+  </div>
+
+  <div class="kicks-box">
+    <div class="kicks-head">
+      <img class="ic" src="{{I:57994}}" alt="风剪">
+      <h3>全本必断读条</h3>
+      <span>点击跳到对应战斗</span>
+    </div>
+    <div class="kicks">
+      <a class="kick" href="#k-volley">
+        <div class="meta"><span class="idx">01</span><span>光耀播法者 · 开场 / 尾王前</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">光箭雨 / 光芒箭</div>
+        <div class="why">光箭雨全团重伤第一优先断，光芒箭单体神圣轮流补断。</div>
+      </a>
+      <a class="kick" href="#k-bolt">
+        <div class="meta"><span class="idx">02</span><span>科兹齐特 · 首领一</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">光芒箭</div>
+        <div class="why">每 7–8 秒一发的单体神圣重击，整场高频轮断顺带续风幕。</div>
+      </a>
+      <a class="kick" href="#k-seed">
+        <div class="meta"><span class="idx">03</span><span>多叶林莽爬行者 · 老三前</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">种子射击</div>
+        <div class="why">高伤自然读条，设焦点轮断。</div>
+      </a>
+      <a class="kick" href="#k-screech">
+        <div class="meta"><span class="idx">04</span><span>光羽瓣翼鸟 · 蟾蜍区</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">迷乱尖叫</div>
+        <div class="why">漏断群体迷惑 3 秒，容易连锁灭波，第一优先必断。</div>
+      </a>
+      <a class="kick" href="#k-spore">
+        <div class="meta"><span class="idx">05</span><span>光诞鞭笞者 · 首领四</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">光孢射击</div>
+        <div class="why">2.5 秒读条单体神圣点射，风剪盯断并配电能图腾群控。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>一场里减伤和清毒交在哪</h2>
+  <p class="sub">一场 +24 限时实录（展示真实冷却节奏，非每波强制照搬；具体取舍见下方路线）。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>星界转移 · 固定点</span>
+      <span><i class="e"></i>土元素</span>
+      <span><i class="v"></i>清毒图腾</span>
+      <span><i class="muted"></i>条件星界</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。伤害数字是 +24 实测（含被吸收的部分），层数越高越大。</p>
+
+  <div class="route">
+
+    <!-- 开场 -->
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 密林三杰</h3><span class="kind">TRASH · 孢荒喷射者 / 光耀播法者 / 光噬鞭笞者 / 翠绿林地守护者 / 灌林追猎者</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>星界转移 90 秒一次，转好就交给<b>孢荒喷射者的喷涌之花</b>；进密林三杰前距上次满 90 秒可留一手防点名荆棘之刃。土元素这段不强求交，若在缺星界波次应急，须留意 3 分钟冷却。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1263628}}" alt=""><div><div class="n"><span class="badge-must">必做</span>喷涌之花</div><div class="s">孢荒喷射者 2 秒读条 · 6 秒内共 4 跳全团神圣（落地首跳 + 每 2 秒一跳）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">读条末预开可盖满四跳；花已开出首跳也照样立刻按，压住剩余跳伤。星界冷却中（距上次不足 90 秒）就满血进机制并喊治疗，土元素仅作距上次 ≥ 3 分钟时的应急备选。同时躲开喷射孢子落地圈。</div>
+          </div>
+          <div class="row" id="k-volley">
+            <div class="mech"><img class="ic" src="{{I:1301834}}" alt=""><div><div class="n">光箭雨 / 光芒箭</div><div class="s">光耀播法者读条 · 全团重伤 / 单体神圣</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">光箭雨第一优先打断，光芒箭按队伍顺序轮断；打断成功同时触发 12 秒风幕（法伤 −15%）。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1238158}}" alt=""><div><div class="n">光绽授粉</div><div class="s">光噬鞭笞者瞬发护盾 · 免群体控制 · 周围怪攻速 +50% 且每 3 秒回 5% 血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">立刻转火破盾</span></div>
+            <div class="why">护盾持续期间免控，盾不破周围小怪就会持续回血加速，出盾立刻切目标集火打碎。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1255205}}" alt=""><div><div class="n">拔根而起 / 地裂打击</div><div class="s">翠绿林地守护者 · 3 秒读条全团自然约 59 万 + 击退</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">稳站位防击退</span><span class="or">叠波时</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">不可打断，满血接招并注意身后位置防击退引怪；若正撞上喷涌之花的星界窗口，可一并把这一击压到约 38 万。地裂打击留下的破裂大地（减速 40% + 持续自然）立刻走开。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1238076}}" alt=""><div><div class="n">荆棘之刃</div><div class="s">灌林追猎者瞬发闪现背刺 · 直击约 34 万 + 8 秒物理流血（每 2 秒约 26 万）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">靠治疗刷</span></div>
+            <div class="why">不可打断，单独点名不交星界；撞在喷涌之花星界窗口内顺带压到每跳约 16 万。</div>
+          </div>
+        </div>
+        <div class="subhead">喷涌之花每一跳吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">36.8 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:60%">21.9 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界转移交给喷涌之花；冷却中满血喊治疗</span></div>
+          <a class="next" href="#s2">下一段：密林三杰 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 1 密林三杰 -->
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>莱克希 / 科兹齐特 / 梅提克</h3><span class="kind">BOSS 1 · 密林三杰（共享生命）</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>每 <b>45 秒</b>一轮固定循环（基岩涌动 → 荆棘之刃 → 播光急奔 → 光明之花射线）。星界转移<b>专留给自己被莱克希点名荆棘之刃（正好撞上基岩涌动）</b>时交；没被点名就留着。高层常把门前光噬鞭笞者、光耀播法者或林地守护者连带进首领一起打，开打先断光箭雨并破授粉盾。</div>
+        <div class="rows">
+          <div class="row" id="k-bolt">
+            <div class="mech"><img class="ic" src="{{I:1235616}}" alt=""><div><div class="n">光芒箭</div><div class="s">科兹齐特高频读条 · 每 7–8 秒一发单体神圣</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">全队轮流打断，既挡高额点射又白嫖 12 秒风幕（基岩涌动和光明之花射线都是法伤，能减 15%）。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1276586}}" alt=""><div><div class="n">基岩涌动 + 荆棘之刃</div><div class="s">每 45 秒一次 · 全团 8 秒自然（每秒约 19 万）+ 莱克希 3 秒读条（点名预警同步）背刺与 12 秒流血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">单涌动靠治疗</span><span class="or">被点荆棘</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">只吃基岩涌动靠治疗和风幕刷住即可；一旦被莱克希点名荆棘之刃，在<b>读条末（命中前 1–2 秒）开星界转移</b>（距上次满 90 秒），12 秒刚好盖住基岩涌动剩余跳伤、压住背刺直击（星界内约 32 万）和大部分后续流血（该流血可被队友流血驱散或矮人石像形态清掉）。紧接着莱克希放 3 秒<b>荆棘之扇</b>，远离 15 码躲开。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1235574}}" alt=""><div><div class="n">光明之花射线</div><div class="s">播光急奔留种子 → 科兹齐特 3 秒读条后照 8 秒（每 2 秒神圣约 45 万）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">站进光束挡线</span></div>
+            <div class="why">提前分好各自负责的光束，满血站进科兹齐特与种子之间挡满 8 秒，阻止种子叠噬光层数；漏挡会触发全团 8 秒<b>光绽疯长</b>并把肥沃壤土烧成光灼大地。常规不开星界，靠风幕与治疗刷住；挡完离开梅提克砸出的肥沃壤土（减速 50% 且每秒掉血）。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界转移仅留给被点荆棘之刃叠基岩涌动；没被点名则留牌</span></div>
+          <a class="next" href="#s3">下一段：林地小怪 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 老一到老二小怪 -->
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>密林三杰 → 圣光猎手伊库兹</h3><span class="kind">TRASH · 孢荒喷射者 / 翠绿林地守护者 / 灌林追猎者 / 光噬鞭笞者</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>怪物机制同开场段。这波时间短，星界转移不作常规必交，仅在<b>拔根而起叠喷涌之花或荆棘流血</b>时作为叠伤备选交出（距伊库兹疯乱后咆哮足够 90 秒）；土元素留给首领二或三，这里不乱交。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1263628}}" alt=""><div><div class="n">喷涌之花 / 拔根而起 / 光绽授粉</div><div class="s">同开场段 · 全团神圣 / 击退自然 / 破盾</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">常规靠治疗刷</span><span class="or">叠伤备选</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">光噬鞭笞者出盾立刻转火破掉；单吃喷涌之花或拔根满血接招即可，仅当两项叠伤危及血线且星界已转好时顺手交。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界转移仅作叠伤备选；土元素留给后面首领</span></div>
+          <a class="next" href="#s4">下一段：圣光猎手伊库兹 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 2 圣光猎手伊库兹 -->
+    <article class="stop boss" id="s4">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>圣光猎手伊库兹</h3><span class="kind">BOSS 2</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>唤棘者咆哮固定每 <b>64 秒</b>开始读条（开打 +23 / +87 / +151 / +216 秒，首跳约晚 2 秒）。首领在约 +130–161 秒进入<b>光狂疯乱</b>后全程每 2 秒叠约 16 万神圣脉冲，撞上咆哮每 2 秒合计近 59 万。<b>星界转移务必留给光狂疯乱开启后的咆哮</b>（第三轮若已叠上疯乱且星界就绪，可交第三轮；第三轮未叠上则留给第四轮）；开打 +23 秒首次咆哮仅作备选（距第三/四轮 ≥ 90 秒且星界已转好时可先交）。土元素同样为备选（距上次 ≥ 3 分钟且缺星界时交在咆哮轮，注意若在伊库兹后段交了土元素，鲁伊亚 P1 会尚未转好）。高层常带门前小怪进场，先断光羽瓣翼鸟迷乱尖叫。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1236709}}" alt=""><div><div class="n"><span class="badge-must">必做</span>光狂疯乱 + 唤棘者咆哮</div><div class="s">咆哮 2 秒读条 → 6 秒每 2 秒全团自然 + 疯乱每 2 秒神圣脉冲</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why">进入光狂疯乱后的咆哮，在读条末至首跳前后开星界（12 秒足以盖住整段或剩余跳伤，将咆哮与疯乱脉冲一并压四成）。缺星界的咆哮轮满血进机制并协调治疗；仅当距上次土元素 ≥ 3 分钟时，可交土元素拉高 15% 血量上限应急。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1236746}}" alt=""><div><div class="n">青翠践踏 → 血棘之根</div><div class="s">3 秒读条全团物理约 52 万 + 击退 · 4 秒后出根须定身（每秒约 29 万自然）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:58875}}" alt="">幽魂步</span><span class="or">或</span><span class="act-note">速转火打根 / 治疗驱魔法</span></div>
+            <div class="why">践踏前抬满血、留好身后空间；4 秒后出根别贴队友根堆，<b>唤棘者咆哮也会在周围生根</b>。被定身时若点了幽魂步且 1 分钟冷却就绪可直接秒解；冷却中或连续两次被定身时优先转火打碎脚下根须，或喊治疗驱散魔法。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1253410}}" alt=""><div><div class="n">嗜血注视</div><div class="s">每 64 秒一次 · 4 秒读条后锁定追击 10 秒 · 追上切裂秒杀</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">拉开风筝，带首领踩碎残根</span><span class="or">可选</span><span class="btn-chip"><img class="ic sm" src="{{I:2645}}" alt="">幽魂之狼</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:58875}}" alt="">幽魂步</span></div>
+            <div class="why">锁定期间伊库兹自带<b>脚步重碾</b>，走过会碾碎 7 码内血棘之根。被点名边拉开距离防贴身，边顺路把首领带过场上残余根须，需要加速时按幽魂之狼或幽魂步（点了阵风则用阵风），移动中开灵魂行者的恩赐补输出。</div>
+          </div>
+        </div>
+        <div class="subhead">唤棘者咆哮每一跳吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">42.5 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:63%">26.8 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界转移必保光狂疯乱 + 咆哮；未转好时满血协调治疗</span></div>
+          <a class="next" href="#s5">下一段：荒芜小怪 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 老二到老三小怪 -->
+    <article class="stop trash" id="s5">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>圣光猎手伊库兹 → 护光者鲁伊亚</h3><span class="kind">TRASH · 多叶林莽爬行者 / 发光的棘喉兽 / 多刺的迅叶龙 / 脊盾甲虫</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>这一段短且高层常直接连带进鲁伊亚开打，<b>星界转移与土元素都不要交在小怪上</b>，留给鲁伊亚 P1–P3。</div>
+        <div class="rows">
+          <div class="row" id="k-seed">
+            <div class="mech"><img class="ic" src="{{I:1238232}}" alt=""><div><div class="n">种子射击</div><div class="s">多叶林莽爬行者读条 · 单体自然高伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">这段第一打断目标，设焦点轮断。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1242138}}" alt=""><div><div class="n">炽阳吐息 / 护光者的荒芜</div><div class="s">发光的棘喉兽正面锥形神圣 · 带进首领时死亡炸 7 码留荒芜树脂</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">躲正面，残血离 7 码</span></div>
+            <div class="why">吐息正面吃满直接秒杀，永远别站头前；这波带进鲁伊亚后，鲁伊亚会用荒芜弥漫给棘喉兽挂<b>护光者的荒芜</b>，临死前退出 7 码外，避开死亡爆炸和荒芜树脂池。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1314884}}" alt=""><div><div class="n">狩猎跃击</div><div class="s">多刺的迅叶龙瞬发扑人 + 连续锥形物理撕裂</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">横移躲锥形</span></div>
+            <div class="why">扑过来落地后马上接前方锥形连斩，看到落地立刻侧移避开朝向。脊盾甲虫的尖刺盾牌仅有微量反伤，正常顺劈即可。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界转移与土元素全留给鲁伊亚</span></div>
+          <a class="next" href="#s6">下一段：护光者鲁伊亚 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 3 护光者鲁伊亚 -->
+    <article class="stop boss" id="s6">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>护光者鲁伊亚</h3><span class="kind">BOSS 3 · 三形态（枭兽 → 熊 → 哈籁尼尔）</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>三形态顺序固定：<b>P1 枭兽（开打起）→ P2 熊（约 +89–108 秒生效）→ P3 哈籁尼尔（约 +158–177 秒生效，随后 4 秒读条进峡谷之灵）</b>。星界转移整场交两次：第一次在 <b>P1 被点光明之火</b>且距 P3 峡谷之灵 ≥ 90 秒时交（若 P1 靠后才被点就直接留给 P3）；第二次稳留给 <b>P3 峡谷之灵</b>。土元素距上次（伊库兹）满 180 秒时，优先交给 <b>P2/P3 凶残痛击</b>或 P1 缺星界的光明之火；若未转好就满血接招并配合治疗抬满血。</div>
+        <div class="subhead">三阶段应对节奏（以开打为 0 秒）</div>
+        <div class="rows">
+          <div class="row step">
+            <div class="when">P1 枭兽</div>
+            <div class="mech"><img class="ic" src="{{I:1239824}}" alt=""><div><div class="n">光明之火 / 守卫之怒</div><div class="s">每 21 秒点 3 人 6 秒光辉（每秒约 26 万），结束出沉默射线 · 光明坠落躲 4 码</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">补断守卫之怒</span></div>
+            <div class="why">P1 前中段被点光明之火后立刻开星界（把每秒跳伤从约 26 万压到约 16 万），<b>6 秒结束前走到场地边缘放下光明之火射线</b>，别踩进射线（沉默 6 秒且每秒掉血）。期间顺手用风剪协助补断守卫之怒，躲开 4 码光明坠落落点。</div>
+          </div>
+          <div class="row step">
+            <div class="when">约 +89–108 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1241058}}" alt=""><div><div class="n">P2 熊 · 凶残痛击 / 粉碎打击</div><div class="s">每 21 秒全团物理直击约 89 万 + 流血至满血 · 粉碎打击连放 3 道锥形</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素（≥ 3 分）</span><span class="act-note">躲开 3 道锥形</span></div>
+            <div class="why">凶残痛击的物理流血每 1 秒约 12 万且可叠加，<b>最多持续 40 秒，生命值回满即可提前结束</b>；星界转移留给 P3，P2 满血接直击，土元素距上次满 3 分钟可交在痛击拉高上限，并用治疗之涌帮抬满清流血。粉碎打击每 2 秒一道锥形（中一道约 80 万且 6 秒易伤 100%），靠走位躲开。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">约 +158–177 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1241067}}" alt=""><div><div class="n"><span class="badge-must">必做</span>P3 峡谷之灵（幽灵枭兽 + 幽灵熊）</div><div class="s">哈籁尼尔变形后 4 秒读条进场，每 8 秒召灵体轮放光明之火与凶残痛击 / 粉碎打击</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">未交则补</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why"><b>光明之火已上身且幽灵熊凶残痛击即将到来（约 6–7 秒后落地）时立刻开星界转移</b>：12 秒窗口同时压住剩余火跳、痛击直击（约 89 万压到约 58 万）及这 12 秒内的流血（约 12 万压到约 7 万；窗口结束若仍未回满血，流血会继续跳，配合治疗尽快抬满）。土元素若前面没交且已就绪，可补在下一轮痛击。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界转移留 P1 光明之火 + P3 峡谷之灵（间隔 ≥ 90 秒）；土元素满 3 分钟再交痛击</span></div>
+          <a class="next" href="#s7">下一段：蟾蜍 · 尾王前 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 老三到老四小怪 -->
+    <article class="stop trash" id="s7">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>护光者鲁伊亚 → 兹欧凯特</h3><span class="kind">TRASH · 薯身蟾主母 / 光羽瓣翼鸟 / 孢荒喷射者 / 光耀播法者 / 光噬鞭笞者 / 发光的棘喉兽</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>分两段开怪：先清<b>蟾蜍鸟区</b>（主母每约 27 秒读一轮喷毒，整波常打 3–4 轮），再清<b>尾王前门神</b>。<b>清毒图腾</b>（2 分钟）与<b>星界转移</b>（90 秒）各包一轮喷毒，其余轮次满血喊治疗；尾王前孢荒喷射者的喷涌之花，须算好距尾王<b>实际接球时刻</b>（首轮约开打 +20–27 秒、第二轮约 +69–78 秒）满 90 秒再交。</div>
+        <div class="rows">
+          <div class="row" id="k-screech">
+            <div class="mech"><img class="ic" src="{{I:1238294}}" alt=""><div><div class="n">迷乱尖叫</div><div class="s">光羽瓣翼鸟读条 · 群体迷惑 3 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">蟾蜍鸟区第一打断目标，一个都不能漏；漏断全队失控撞上喷毒和幼蟾抽击极易减员。</div>
+          </div>
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1250937}}" alt=""><div><div class="n"><span class="badge-must">必做</span>喷毒（清毒图腾轮）</div><div class="s">薯身蟾主母 2 秒读条 · 全团自然直击约 35 万 + 9 秒中毒（每 1.5 秒约 32 万）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:383013}}" alt="">清毒图腾</span></div>
+            <div class="why">通常留给首轮（若队里另有团驱可与队友错开给第二轮）；<b>中毒上身后立刻在人群中插下</b>，别提前太早空耗首跳，并确认队友在 30 码内——插下当刻与随后每 1.5 秒依次清一人，6 秒把全队五人全清干净。</div>
+          </div>
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1250937}}" alt=""><div><div class="n"><span class="badge-must">必做</span>喷毒（无清毒轮）</div><div class="s">清毒图腾冷却中的后续喷毒 · 吃满 9 秒跳伤合计约 190 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">清毒图腾冷却中的下一轮喷毒，毒落地后立刻开星界，把剩余跳伤从约 32 万压到约 18 万（直击常规不开星界吃）；若清毒与星界都未就绪，立刻喊治疗驱毒并抬血。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1250199}}" alt=""><div><div class="n">蛤蟆卵 / 薯身蟾抽击</div><div class="s">主母产卵孵化幼蟾 · 幼蟾扑人约 19 万物理 + 击退</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">闪电链快清幼蟾</span><span class="or">可选</span><span class="btn-chip"><img class="ic sm" src="{{I:192058}}" alt="">电能图腾</span></div>
+            <div class="why">幼蟾成群扑人容易打断读条并把人顶乱站位，出卵顺劈快清，聚怪时可扔电能图腾辅助控一轮。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1263628}}" alt=""><div><div class="n">尾王前 · 喷涌之花 / 门神小怪</div><div class="s">孢荒喷射者 / 光耀播法者 / 光噬鞭笞者 / 发光的棘喉兽（机制同前段）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">转好且距多层球 ≥ 90 秒</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">清完蟾蜍进尾王前，星界已转好且距预定接多层的球轮至少 90 秒才交在喷涌之花（未转好就满血喊治疗；若交得晚，进兹欧凯特后顺延到实际撞球满 90 秒的首个合适轮次再接多层，之前与队友分摊球数）。其余门神按前段断光箭雨、破授粉盾、躲棘喉兽炽阳吐息。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:383013}}" alt="">优先：清毒图腾与星界转移错开各包一轮喷毒；双技能空档提前喊治疗</span></div>
+          <a class="next" href="#s8">下一段：兹欧凯特 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 4 兹欧凯特 -->
+    <article class="stop boss" id="s8">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>兹欧凯特</h3><span class="kind">BOSS 4</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>全程每 3 秒全团<b>渗流木质</b>（约 26 万神圣），外加 <b>50 秒固定循环</b>（唤醒光绽 → 光绽精华吸球 → 棘刺 → 凝聚光线）。<b>开打前先分配好每轮全部光球的归属</b>；自己从实际撞球时刻距上次交星界已满 90 秒的首个合适轮次开始接多层，随后隔轮（约 100 秒）继续交，冷却未转好的轮次与队友分摊球数；土元素距鲁伊亚上次使用满 180 秒时，可作为无星界接球轮的常规备选补血量上限。高层常连带一只发光的棘喉兽和光噬鞭笞者进场，开打躲吐息并先破授粉盾。</div>
+        <div class="subhead">一轮 50 秒循环（以唤醒光绽开始读条为 0 秒）</div>
+        <div class="rows">
+          <div class="row step" id="k-spore">
+            <div class="when">0 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1246372}}" alt=""><div><div class="n">唤醒光绽 → 光孢射击</div><div class="s">3 秒读条催生光诞鞭笞者 · 2.5 秒读条单体神圣约 25 万</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="btn-chip"><img class="ic sm" src="{{I:192058}}" alt="">电能图腾</span></div>
+            <div class="why">小花出来立刻闪电链打进休眠，风剪紧盯光孢射击打断（同时续风幕给后面渗流木质和吃球减 15% 法伤），小怪聚拢时丢电能图腾群控防连射。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">+10 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1246858}}" alt=""><div><div class="n"><span class="badge-must">必做</span>光绽精华 → 光绽之力 / 渗流木质</div><div class="s">2 秒读条抽球飘向首领 · 撞球 12 秒增伤 +10%/层，后续撞球刷新持续并叠加每秒掉血</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素（≥ 3 分）</span></div>
+            <div class="why">全队先分清每颗球归属，绝不漏球让它撞首领触发荧光迸发。吃 1 层每秒约 8 万可裸吃；叠到 2 层每秒约 15 万（接第 3 颗还会更高），再叠每 3 秒约 26 万渗流木质，预计连续接 2–3 颗球时在<b>首层掉血前后立刻开星界转移</b>（2 层压至约 9 万、3 层星界内仍约 14 万、渗流木质压至约 16 万），并留意<b>末颗球会刷新 12 秒减益</b>，星界到期后尾巴仍需满血交治疗刷。星界未转好的轮次与队友分摊球数（尽量只接 1 颗），土元素距上次满 3 分钟时可补在这轮拉血量上限。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+22 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1247685}}" alt=""><div><div class="n">棘刺</div><div class="s">坦克方向击退 + 10 秒物理流血</div></div></div>
+            <div class="skill"><span class="act-note">别站首领正面</span></div>
+            <div class="why">坦克专属机制，远程站侧后方输出即可。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+36 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1246607}}" alt=""><div><div class="n">凝聚光线</div><div class="s">5 秒读条射线扫场 · 击中休眠鞭笞者化为光明树脂</div></div></div>
+            <div class="skill"><span class="act-note">躲射线与树脂池</span></div>
+            <div class="why">配合坦克把休眠的光诞鞭笞者留在射线扫过路径上（没扫掉的下一轮唤醒光绽会带着邪恶愈合复活），自己避开射线和留下的光明树脂（减速 40% 且每 2 秒高额神圣），移位时开灵魂行者的恩赐保持输出。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：按实际接球满 90 秒隔轮交星界转移；冷却轮分摊球数，土元素满 3 分钟作备选</span></div>
+          <a class="next" href="#talent">查看天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">取自 +24 限时录像的元素天赋，英雄天赋先知。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">这四个防御与功能天赋不要动</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:381647}}" alt=""><div><b>位面旅行者</b><span>星界转移冷却缩到 90 秒，全本六个高压点全靠它排得开。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1279819}}" alt=""><div><b>始源羁绊</b><span>土元素不再嘲讽，改为最大生命值 +15%，补星界空档。</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:383013}}" alt=""><div><b>清毒图腾</b><span>2 分钟冷却，专治薯身蟾主母全团喷毒。</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:355630}}" alt=""><div><b>风幕</b><span>风剪打断后 12 秒法术伤害 −15%，全本大量神圣/自然读条都能吃到。</span></div></div>
+    </div>
+    <p class="tal-note">常见可换：<b>幽魂步</b>（可秒解伊库兹血棘之根定身）↔ <b>阵风</b>；<b>大地之盾、元素环绕、塞拉赞恩的韧性、治疗链</b> ↔ <b>静电充能、图腾集中、图腾潮涌</b>（按队伍分工另可调整<b>雷霆之爪、妖术、陷地图腾、喷流</b>）；另常驻配有<b>自然守护者、元素防护、生机盎然、恩赐之魂、电能图腾、狂风图腾</b>。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>元素萨满 · 夺目谷 应对手册 · 2026-11</div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/CG3RbAdqgMvt7nP4#fight=1">孤独咩 +24 28:22</a>
+      <a href="https://www.warcraftlogs.com/reports/1b9v7Z4FqkCwxpdX#fight=13">麦格拉斯蛮锤 +24 28:37</a>
+      <a href="https://www.warcraftlogs.com/reports/7m4kFCRwBnbYDQv6#fight=20">Hearthjacke +24 29:16</a>
+      <a href="https://www.warcraftlogs.com/reports/WBZyHQ26atmCArq1#fight=22">Bondd +24 29:24</a>
+      <a href="https://www.warcraftlogs.com/reports/cjDr17Nyhvf4MbX8#fight=10">Corysham +24 29:29</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>

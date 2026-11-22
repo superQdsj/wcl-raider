@@ -1,0 +1,4058 @@
+{
+ "r1_孤独咩": {
+  "name": "孤独咩",
+  "id": 2,
+  "guid": 118128684,
+  "type": "Shaman",
+  "server": "白银之手",
+  "region": "CN",
+  "icon": "Shaman-Elemental",
+  "specs": [
+   "Elemental"
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 6,
+  "healthstoneUse": 2,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Intellect": {
+     "min": 3687,
+     "max": 3687
+    },
+    "Mastery": {
+     "min": 1100,
+     "max": 1100
+    },
+    "Crit": {
+     "min": 1154,
+     "max": 1154
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Stamina": {
+     "min": 52323,
+     "max": 52323
+    },
+    "Avoidance": {
+     "min": 286,
+     "max": 286
+    },
+    "Haste": {
+     "min": 924,
+     "max": 924
+    },
+    "Versatility": {
+     "min": 169,
+     "max": 169
+    },
+    "Leech": {
+     "min": 65,
+     "max": 65
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 123377,
+     "rank": 1,
+     "nodeID": 99845
+    },
+    {
+     "id": 127881,
+     "rank": 1,
+     "nodeID": 103606
+    },
+    {
+     "id": 127858,
+     "rank": 1,
+     "nodeID": 103585
+    },
+    {
+     "id": 135988,
+     "rank": 1,
+     "nodeID": 109730
+    },
+    {
+     "id": 136973,
+     "rank": 2,
+     "nodeID": 110402
+    },
+    {
+     "id": 117480,
+     "rank": 1,
+     "nodeID": 94883
+    },
+    {
+     "id": 136974,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 127889,
+     "rank": 1,
+     "nodeID": 103612
+    },
+    {
+     "id": 117472,
+     "rank": 1,
+     "nodeID": 94875
+    },
+    {
+     "id": 101861,
+     "rank": 1,
+     "nodeID": 80990
+    },
+    {
+     "id": 101850,
+     "rank": 1,
+     "nodeID": 80981
+    },
+    {
+     "id": 101853,
+     "rank": 1,
+     "nodeID": 80983
+    },
+    {
+     "id": 101859,
+     "rank": 1,
+     "nodeID": 80988
+    },
+    {
+     "id": 101860,
+     "rank": 1,
+     "nodeID": 80989
+    },
+    {
+     "id": 101871,
+     "rank": 1,
+     "nodeID": 80998
+    },
+    {
+     "id": 101864,
+     "rank": 1,
+     "nodeID": 80992
+    },
+    {
+     "id": 101867,
+     "rank": 1,
+     "nodeID": 80995
+    },
+    {
+     "id": 101870,
+     "rank": 1,
+     "nodeID": 80997
+    },
+    {
+     "id": 101874,
+     "rank": 1,
+     "nodeID": 81000
+    },
+    {
+     "id": 101876,
+     "rank": 1,
+     "nodeID": 81002
+    },
+    {
+     "id": 101885,
+     "rank": 1,
+     "nodeID": 81008
+    },
+    {
+     "id": 101892,
+     "rank": 1,
+     "nodeID": 81015
+    },
+    {
+     "id": 127855,
+     "rank": 2,
+     "nodeID": 103582
+    },
+    {
+     "id": 127856,
+     "rank": 1,
+     "nodeID": 103583
+    },
+    {
+     "id": 127857,
+     "rank": 1,
+     "nodeID": 103584
+    },
+    {
+     "id": 127859,
+     "rank": 1,
+     "nodeID": 103586
+    },
+    {
+     "id": 127880,
+     "rank": 1,
+     "nodeID": 103605
+    },
+    {
+     "id": 127888,
+     "rank": 1,
+     "nodeID": 103611
+    },
+    {
+     "id": 127890,
+     "rank": 1,
+     "nodeID": 103613
+    },
+    {
+     "id": 127892,
+     "rank": 1,
+     "nodeID": 103615
+    },
+    {
+     "id": 127893,
+     "rank": 1,
+     "nodeID": 103616
+    },
+    {
+     "id": 127894,
+     "rank": 2,
+     "nodeID": 103617
+    },
+    {
+     "id": 127899,
+     "rank": 1,
+     "nodeID": 103620
+    },
+    {
+     "id": 127908,
+     "rank": 1,
+     "nodeID": 103626
+    },
+    {
+     "id": 127913,
+     "rank": 1,
+     "nodeID": 103631
+    },
+    {
+     "id": 127917,
+     "rank": 1,
+     "nodeID": 103635
+    },
+    {
+     "id": 127919,
+     "rank": 1,
+     "nodeID": 103638
+    },
+    {
+     "id": 127920,
+     "rank": 1,
+     "nodeID": 103639
+    },
+    {
+     "id": 135591,
+     "rank": 1,
+     "nodeID": 109387
+    },
+    {
+     "id": 136585,
+     "rank": 1,
+     "nodeID": 110085
+    },
+    {
+     "id": 117455,
+     "rank": 1,
+     "nodeID": 94858
+    },
+    {
+     "id": 117457,
+     "rank": 1,
+     "nodeID": 94860
+    },
+    {
+     "id": 117458,
+     "rank": 1,
+     "nodeID": 94861
+    },
+    {
+     "id": 117466,
+     "rank": 1,
+     "nodeID": 94869
+    },
+    {
+     "id": 123630,
+     "rank": 1,
+     "nodeID": 94884
+    },
+    {
+     "id": 117484,
+     "rank": 1,
+     "nodeID": 94887
+    },
+    {
+     "id": 117491,
+     "rank": 1,
+     "nodeID": 94894
+    },
+    {
+     "id": 135989,
+     "rank": 1,
+     "nodeID": 109731
+    },
+    {
+     "id": 135990,
+     "rank": 1,
+     "nodeID": 109732
+    },
+    {
+     "id": 101879,
+     "rank": 1,
+     "nodeID": 81004
+    },
+    {
+     "id": 101844,
+     "rank": 1,
+     "nodeID": 80978
+    },
+    {
+     "id": 127924,
+     "rank": 1,
+     "nodeID": 80984
+    },
+    {
+     "id": 136714,
+     "rank": 1,
+     "nodeID": 80999
+    },
+    {
+     "id": 136561,
+     "rank": 1,
+     "nodeID": 110066
+    },
+    {
+     "id": 127851,
+     "rank": 1,
+     "nodeID": 103579
+    },
+    {
+     "id": 127925,
+     "rank": 1,
+     "nodeID": 80985
+    },
+    {
+     "id": 127891,
+     "rank": 2,
+     "nodeID": 103614
+    },
+    {
+     "id": 127854,
+     "rank": 1,
+     "nodeID": 103581
+    },
+    {
+     "id": 123632,
+     "rank": 1,
+     "nodeID": 94862
+    },
+    {
+     "id": 127921,
+     "rank": 1,
+     "nodeID": 103640
+    },
+    {
+     "id": 136972,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 101883,
+     "rank": 1,
+     "nodeID": 81007
+    },
+    {
+     "id": 101893,
+     "rank": 1,
+     "nodeID": 81016
+    },
+    {
+     "id": 127865,
+     "rank": 1,
+     "nodeID": 103591
+    },
+    {
+     "id": 127884,
+     "rank": 1,
+     "nodeID": 103608
+    },
+    {
+     "id": 127886,
+     "rank": 1,
+     "nodeID": 103610
+    },
+    {
+     "id": 127905,
+     "rank": 1,
+     "nodeID": 103624
+    },
+    {
+     "id": 127910,
+     "rank": 1,
+     "nodeID": 103628
+    },
+    {
+     "id": 127912,
+     "rank": 1,
+     "nodeID": 103630
+    },
+    {
+     "id": 127914,
+     "rank": 2,
+     "nodeID": 103632
+    },
+    {
+     "id": 101884,
+     "rank": 1,
+     "nodeID": 103637
+    },
+    {
+     "id": 127909,
+     "rank": 1,
+     "nodeID": 103627
+    },
+    {
+     "id": 127873,
+     "rank": 1,
+     "nodeID": 103598
+    },
+    {
+     "id": 117485,
+     "rank": 1,
+     "nodeID": 94888
+    },
+    {
+     "id": 136567,
+     "rank": 1,
+     "nodeID": 103599
+    },
+    {
+     "id": 127861,
+     "rank": 1,
+     "nodeID": 103588
+    },
+    {
+     "id": 127868,
+     "rank": 1,
+     "nodeID": 103593
+    },
+    {
+     "id": 127871,
+     "rank": 1,
+     "nodeID": 103596
+    },
+    {
+     "id": 127877,
+     "rank": 1,
+     "nodeID": 103602
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271483,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidshamanulatek_d_01.jpg",
+     "name": "Serpent Crown of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      13695,
+      13692,
+      13698,
+      1587
+     ],
+     "gems": [
+      {
+       "id": 240906,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_red.jpg"
+      }
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240906,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_red.jpg"
+      },
+      {
+       "id": 240967,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_orange.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271481,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hissing Mantle of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13694,
+      13697,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271486,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_robe_mail_raidshamanulatek_d_01.jpg",
+     "name": "Fanged Raiment of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13846,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268216,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_raidevokerulatek_d_01.jpg",
+     "name": "Cursed Reliquary Cincture",
+     "itemLevel": 334,
+     "bonusIDs": [
+      6652,
+      13695,
+      13662,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240906,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271482,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_raidshamanulatek_d_01.jpg",
+     "name": "Leggings of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7935,
+     "permanentEnchantName": "+41 Intellect & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 271440,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidshamanulatek_d_01.jpg",
+     "name": "Greaves of the Noxious Depths",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      10844,
+      12854
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8790,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271484,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hexing Grips of the Ophidian Oracle",
+     "itemLevel": 334,
+     "bonusIDs": [
+      13334,
+      41,
+      12854,
+      14049,
+      13691,
+      13697,
+      1587
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 251513,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_12_profession_jewelcrafting_ring3_silver.jpg",
+     "name": "Loa Worshiper's Band",
+     "itemLevel": 331,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      12214,
+      13667,
+      8960,
+      12497,
+      13751,
+      14001,
+      13836
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281029,
+     "slot": 11,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      40,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 270167,
+     "slot": 12,
+     "quality": 4,
+     "icon": "inv_tradeskillitem_sorcererswater.jpg",
+     "name": "Wavecaller's Seastone",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 270164,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_10_tailoring_bag1_color2.jpg",
+     "name": "Gebbo's Bottomless Bag",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      40,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271092,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_knife_1h_ulatekfang_d_01_spirit.jpg",
+     "name": "Jan'thrazet, the Soul Fang",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 5400,
+     "temporaryEnchantName": "Flametongue",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268196,
+     "slot": 16,
+     "quality": 4,
+     "icon": "inv_shield_1h_ulatek_d_01.jpg",
+     "name": "Venom-Slashed Scuteward",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    262
+   ],
+   "factionID": 1
+  }
+ },
+ "r2_麦格拉斯蛮锤": {
+  "name": "麦格拉斯蛮锤",
+  "id": 3,
+  "guid": 118225627,
+  "type": "Shaman",
+  "server": "白银之手",
+  "region": "CN",
+  "icon": "Shaman-Elemental",
+  "specs": [
+   "Elemental"
+  ],
+  "minItemLevel": 337,
+  "maxItemLevel": 337,
+  "potionUse": 6,
+  "healthstoneUse": 2,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Intellect": {
+     "min": 3945,
+     "max": 3945
+    },
+    "Mastery": {
+     "min": 1561,
+     "max": 1561
+    },
+    "Crit": {
+     "min": 1171,
+     "max": 1171
+    },
+    "Item Level": {
+     "min": 337,
+     "max": 337
+    },
+    "Stamina": {
+     "min": 51914,
+     "max": 51914
+    },
+    "Avoidance": {
+     "min": 362,
+     "max": 362
+    },
+    "Haste": {
+     "min": 727,
+     "max": 727
+    },
+    "Versatility": {
+     "min": 534,
+     "max": 534
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Static Field Totem",
+     "guid": 355580,
+     "type": 1,
+     "abilityIcon": "spell_shaman_stormtotem.jpg"
+    },
+    {
+     "name": "Shamanism",
+     "guid": 193876,
+     "type": 1,
+     "abilityIcon": "trade_archaeology_ancientorcshamanheaddress.jpg"
+    },
+    {
+     "name": "Totem of Wrath",
+     "guid": 460697,
+     "type": 1,
+     "abilityIcon": "shaman_pvp_skyfurytotem.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 136567,
+     "rank": 1,
+     "nodeID": 103599
+    },
+    {
+     "id": 101859,
+     "rank": 1,
+     "nodeID": 80988
+    },
+    {
+     "id": 127890,
+     "rank": 1,
+     "nodeID": 103613
+    },
+    {
+     "id": 127893,
+     "rank": 1,
+     "nodeID": 103616
+    },
+    {
+     "id": 127880,
+     "rank": 1,
+     "nodeID": 103605
+    },
+    {
+     "id": 101861,
+     "rank": 1,
+     "nodeID": 80990
+    },
+    {
+     "id": 101870,
+     "rank": 1,
+     "nodeID": 80997
+    },
+    {
+     "id": 127855,
+     "rank": 2,
+     "nodeID": 103582
+    },
+    {
+     "id": 127858,
+     "rank": 1,
+     "nodeID": 103585
+    },
+    {
+     "id": 101853,
+     "rank": 1,
+     "nodeID": 80983
+    },
+    {
+     "id": 127917,
+     "rank": 1,
+     "nodeID": 103635
+    },
+    {
+     "id": 127924,
+     "rank": 1,
+     "nodeID": 80984
+    },
+    {
+     "id": 101876,
+     "rank": 1,
+     "nodeID": 81002
+    },
+    {
+     "id": 127856,
+     "rank": 1,
+     "nodeID": 103583
+    },
+    {
+     "id": 127908,
+     "rank": 1,
+     "nodeID": 103626
+    },
+    {
+     "id": 127909,
+     "rank": 1,
+     "nodeID": 103627
+    },
+    {
+     "id": 101879,
+     "rank": 1,
+     "nodeID": 81004
+    },
+    {
+     "id": 136561,
+     "rank": 1,
+     "nodeID": 110066
+    },
+    {
+     "id": 135988,
+     "rank": 1,
+     "nodeID": 109730
+    },
+    {
+     "id": 101874,
+     "rank": 1,
+     "nodeID": 81000
+    },
+    {
+     "id": 123632,
+     "rank": 1,
+     "nodeID": 94862
+    },
+    {
+     "id": 123377,
+     "rank": 1,
+     "nodeID": 99845
+    },
+    {
+     "id": 127881,
+     "rank": 1,
+     "nodeID": 103606
+    },
+    {
+     "id": 135989,
+     "rank": 1,
+     "nodeID": 109731
+    },
+    {
+     "id": 135990,
+     "rank": 1,
+     "nodeID": 109732
+    },
+    {
+     "id": 117472,
+     "rank": 1,
+     "nodeID": 94875
+    },
+    {
+     "id": 117455,
+     "rank": 1,
+     "nodeID": 94858
+    },
+    {
+     "id": 117457,
+     "rank": 1,
+     "nodeID": 94860
+    },
+    {
+     "id": 117458,
+     "rank": 1,
+     "nodeID": 94861
+    },
+    {
+     "id": 117466,
+     "rank": 1,
+     "nodeID": 94869
+    },
+    {
+     "id": 117480,
+     "rank": 1,
+     "nodeID": 94883
+    },
+    {
+     "id": 123630,
+     "rank": 1,
+     "nodeID": 94884
+    },
+    {
+     "id": 117484,
+     "rank": 1,
+     "nodeID": 94887
+    },
+    {
+     "id": 117491,
+     "rank": 1,
+     "nodeID": 94894
+    },
+    {
+     "id": 127889,
+     "rank": 1,
+     "nodeID": 103612
+    },
+    {
+     "id": 101850,
+     "rank": 1,
+     "nodeID": 80981
+    },
+    {
+     "id": 101860,
+     "rank": 1,
+     "nodeID": 80989
+    },
+    {
+     "id": 101864,
+     "rank": 1,
+     "nodeID": 80992
+    },
+    {
+     "id": 101867,
+     "rank": 1,
+     "nodeID": 80995
+    },
+    {
+     "id": 101844,
+     "rank": 1,
+     "nodeID": 80978
+    },
+    {
+     "id": 101885,
+     "rank": 1,
+     "nodeID": 81008
+    },
+    {
+     "id": 101892,
+     "rank": 1,
+     "nodeID": 81015
+    },
+    {
+     "id": 127857,
+     "rank": 1,
+     "nodeID": 103584
+    },
+    {
+     "id": 127859,
+     "rank": 1,
+     "nodeID": 103586
+    },
+    {
+     "id": 127894,
+     "rank": 2,
+     "nodeID": 103617
+    },
+    {
+     "id": 127913,
+     "rank": 1,
+     "nodeID": 103631
+    },
+    {
+     "id": 127899,
+     "rank": 1,
+     "nodeID": 103620
+    },
+    {
+     "id": 127919,
+     "rank": 1,
+     "nodeID": 103638
+    },
+    {
+     "id": 127920,
+     "rank": 1,
+     "nodeID": 103639
+    },
+    {
+     "id": 135591,
+     "rank": 1,
+     "nodeID": 109387
+    },
+    {
+     "id": 136585,
+     "rank": 1,
+     "nodeID": 110085
+    },
+    {
+     "id": 136974,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 136973,
+     "rank": 2,
+     "nodeID": 110402
+    },
+    {
+     "id": 127853,
+     "rank": 1,
+     "nodeID": 103581
+    },
+    {
+     "id": 136714,
+     "rank": 1,
+     "nodeID": 80999
+    },
+    {
+     "id": 127906,
+     "rank": 1,
+     "nodeID": 103625
+    },
+    {
+     "id": 136972,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 127914,
+     "rank": 2,
+     "nodeID": 103632
+    },
+    {
+     "id": 127925,
+     "rank": 1,
+     "nodeID": 80985
+    },
+    {
+     "id": 127892,
+     "rank": 1,
+     "nodeID": 103615
+    },
+    {
+     "id": 127910,
+     "rank": 1,
+     "nodeID": 103628
+    },
+    {
+     "id": 127921,
+     "rank": 1,
+     "nodeID": 103640
+    },
+    {
+     "id": 127851,
+     "rank": 1,
+     "nodeID": 103579
+    },
+    {
+     "id": 127884,
+     "rank": 1,
+     "nodeID": 103608
+    },
+    {
+     "id": 127886,
+     "rank": 1,
+     "nodeID": 103610
+    },
+    {
+     "id": 127888,
+     "rank": 1,
+     "nodeID": 103611
+    },
+    {
+     "id": 127905,
+     "rank": 1,
+     "nodeID": 103624
+    },
+    {
+     "id": 101871,
+     "rank": 1,
+     "nodeID": 80998
+    },
+    {
+     "id": 101883,
+     "rank": 1,
+     "nodeID": 81007
+    },
+    {
+     "id": 101893,
+     "rank": 1,
+     "nodeID": 81016
+    },
+    {
+     "id": 127912,
+     "rank": 1,
+     "nodeID": 103630
+    },
+    {
+     "id": 101884,
+     "rank": 1,
+     "nodeID": 103637
+    },
+    {
+     "id": 127891,
+     "rank": 2,
+     "nodeID": 103614
+    },
+    {
+     "id": 127865,
+     "rank": 1,
+     "nodeID": 103591
+    },
+    {
+     "id": 127873,
+     "rank": 1,
+     "nodeID": 103598
+    },
+    {
+     "id": 117485,
+     "rank": 1,
+     "nodeID": 94888
+    },
+    {
+     "id": 127896,
+     "rank": 2,
+     "nodeID": 103618
+    },
+    {
+     "id": 135592,
+     "rank": 1,
+     "nodeID": 109388
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271483,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidshamanulatek_d_01.jpg",
+     "name": "Serpent Crown of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      13335,
+      40,
+      13696,
+      13692,
+      13698,
+      12854
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271481,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hissing Mantle of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      12854,
+      13335,
+      13694,
+      6652,
+      13697
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268274,
+     "slot": 3,
+     "quality": 2,
+     "icon": "inv_jewelry_necklace_22.jpg",
+     "name": "Blinky's Collar",
+     "itemLevel": 1
+    },
+    {
+     "id": 271486,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_robe_mail_raidshamanulatek_d_01.jpg",
+     "name": "Fanged Raiment of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13846,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268254,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_raidshamanulatek_d_01.jpg",
+     "name": "Serpentine Mixing Belt",
+     "itemLevel": 334,
+     "bonusIDs": [
+      6652,
+      13696,
+      13662,
+      13335,
+      12854
+     ]
+    },
+    {
+     "id": 271482,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_raidshamanulatek_d_01.jpg",
+     "name": "Leggings of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7935,
+     "permanentEnchantName": "+41 Intellect & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 271440,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidshamanulatek_d_01.jpg",
+     "name": "Greaves of the Noxious Depths",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      40,
+      13662,
+      13335,
+      10844,
+      12854
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8790,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271484,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hexing Grips of the Ophidian Oracle",
+     "itemLevel": 334,
+     "bonusIDs": [
+      6652,
+      13335,
+      12854,
+      13691,
+      13697,
+      1587
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 251513,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_12_profession_jewelcrafting_ring3_silver.jpg",
+     "name": "Loa Worshiper's Band",
+     "itemLevel": 331,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      12214,
+      13667,
+      8960,
+      12497,
+      13751,
+      14001,
+      13836
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281029,
+     "slot": 11,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240892,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 273796,
+     "slot": 12,
+     "quality": 3,
+     "icon": "inv_121_trinket_dungeon_ulatek_vile.jpg",
+     "name": "Vile Vial of Volatile Venom",
+     "itemLevel": 341,
+     "bonusIDs": [
+      13440,
+      6652,
+      12699,
+      12856
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 13,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 328,
+     "bonusIDs": [
+      6652,
+      13334,
+      12848
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271092,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_knife_1h_ulatekfang_d_01_spirit.jpg",
+     "name": "Jan'thrazet, the Soul Fang",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 5400,
+     "temporaryEnchantName": "Flametongue",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268196,
+     "slot": 16,
+     "quality": 4,
+     "icon": "inv_shield_1h_ulatek_d_01.jpg",
+     "name": "Venom-Slashed Scuteward",
+     "itemLevel": 341,
+     "bonusIDs": [
+      40,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 234755,
+     "slot": 17,
+     "quality": 2,
+     "icon": "inv_shirt_guildtabard_01.jpg",
+     "name": "Tabard of the Pandaren Elders",
+     "itemLevel": 10
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    262
+   ],
+   "factionID": 1
+  }
+ },
+ "r3_Hearthjacke": {
+  "name": "Hearthjacke",
+  "id": 8,
+  "guid": 190709925,
+  "type": "Shaman",
+  "server": "TarrenMill",
+  "region": "EU",
+  "icon": "Shaman-Elemental",
+  "specs": [
+   "Elemental"
+  ],
+  "minItemLevel": 337,
+  "maxItemLevel": 337,
+  "potionUse": 5,
+  "healthstoneUse": 2,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Intellect": {
+     "min": 3977,
+     "max": 3977
+    },
+    "Mastery": {
+     "min": 961,
+     "max": 961
+    },
+    "Crit": {
+     "min": 981,
+     "max": 981
+    },
+    "Item Level": {
+     "min": 337,
+     "max": 337
+    },
+    "Stamina": {
+     "min": 51988,
+     "max": 51988
+    },
+    "Avoidance": {
+     "min": 318,
+     "max": 318
+    },
+    "Haste": {
+     "min": 799,
+     "max": 799
+    },
+    "Versatility": {
+     "min": 435,
+     "max": 435
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 101844,
+     "rank": 1,
+     "nodeID": 80978
+    },
+    {
+     "id": 101850,
+     "rank": 1,
+     "nodeID": 80981
+    },
+    {
+     "id": 101853,
+     "rank": 1,
+     "nodeID": 80983
+    },
+    {
+     "id": 101855,
+     "rank": 1,
+     "nodeID": 80985
+    },
+    {
+     "id": 101859,
+     "rank": 1,
+     "nodeID": 80988
+    },
+    {
+     "id": 101860,
+     "rank": 1,
+     "nodeID": 80989
+    },
+    {
+     "id": 101861,
+     "rank": 1,
+     "nodeID": 80990
+    },
+    {
+     "id": 101864,
+     "rank": 1,
+     "nodeID": 80992
+    },
+    {
+     "id": 101867,
+     "rank": 1,
+     "nodeID": 80995
+    },
+    {
+     "id": 101870,
+     "rank": 1,
+     "nodeID": 80997
+    },
+    {
+     "id": 101871,
+     "rank": 1,
+     "nodeID": 80998
+    },
+    {
+     "id": 101874,
+     "rank": 1,
+     "nodeID": 81000
+    },
+    {
+     "id": 101876,
+     "rank": 1,
+     "nodeID": 81002
+    },
+    {
+     "id": 101879,
+     "rank": 1,
+     "nodeID": 81004
+    },
+    {
+     "id": 101883,
+     "rank": 1,
+     "nodeID": 81007
+    },
+    {
+     "id": 101884,
+     "rank": 1,
+     "nodeID": 103637
+    },
+    {
+     "id": 101885,
+     "rank": 1,
+     "nodeID": 81008
+    },
+    {
+     "id": 101892,
+     "rank": 1,
+     "nodeID": 81015
+    },
+    {
+     "id": 101893,
+     "rank": 1,
+     "nodeID": 81016
+    },
+    {
+     "id": 117455,
+     "rank": 1,
+     "nodeID": 94858
+    },
+    {
+     "id": 117457,
+     "rank": 1,
+     "nodeID": 94860
+    },
+    {
+     "id": 117458,
+     "rank": 1,
+     "nodeID": 94861
+    },
+    {
+     "id": 117466,
+     "rank": 1,
+     "nodeID": 94869
+    },
+    {
+     "id": 117472,
+     "rank": 1,
+     "nodeID": 94875
+    },
+    {
+     "id": 117480,
+     "rank": 1,
+     "nodeID": 94883
+    },
+    {
+     "id": 117484,
+     "rank": 1,
+     "nodeID": 94887
+    },
+    {
+     "id": 117491,
+     "rank": 1,
+     "nodeID": 94894
+    },
+    {
+     "id": 123377,
+     "rank": 1,
+     "nodeID": 99845
+    },
+    {
+     "id": 123630,
+     "rank": 1,
+     "nodeID": 94884
+    },
+    {
+     "id": 123632,
+     "rank": 1,
+     "nodeID": 94862
+    },
+    {
+     "id": 127854,
+     "rank": 1,
+     "nodeID": 103581
+    },
+    {
+     "id": 127855,
+     "rank": 2,
+     "nodeID": 103582
+    },
+    {
+     "id": 127856,
+     "rank": 1,
+     "nodeID": 103583
+    },
+    {
+     "id": 127857,
+     "rank": 1,
+     "nodeID": 103584
+    },
+    {
+     "id": 127858,
+     "rank": 1,
+     "nodeID": 103585
+    },
+    {
+     "id": 127859,
+     "rank": 1,
+     "nodeID": 103586
+    },
+    {
+     "id": 127864,
+     "rank": 1,
+     "nodeID": 103591
+    },
+    {
+     "id": 127880,
+     "rank": 1,
+     "nodeID": 103605
+    },
+    {
+     "id": 127881,
+     "rank": 1,
+     "nodeID": 103606
+    },
+    {
+     "id": 127883,
+     "rank": 1,
+     "nodeID": 103607
+    },
+    {
+     "id": 127888,
+     "rank": 1,
+     "nodeID": 103611
+    },
+    {
+     "id": 127889,
+     "rank": 1,
+     "nodeID": 103612
+    },
+    {
+     "id": 127890,
+     "rank": 1,
+     "nodeID": 103613
+    },
+    {
+     "id": 127891,
+     "rank": 1,
+     "nodeID": 103614
+    },
+    {
+     "id": 127892,
+     "rank": 1,
+     "nodeID": 103615
+    },
+    {
+     "id": 127893,
+     "rank": 1,
+     "nodeID": 103616
+    },
+    {
+     "id": 127894,
+     "rank": 2,
+     "nodeID": 103617
+    },
+    {
+     "id": 127899,
+     "rank": 1,
+     "nodeID": 103620
+    },
+    {
+     "id": 127908,
+     "rank": 1,
+     "nodeID": 103626
+    },
+    {
+     "id": 127909,
+     "rank": 1,
+     "nodeID": 103627
+    },
+    {
+     "id": 127912,
+     "rank": 1,
+     "nodeID": 103630
+    },
+    {
+     "id": 127913,
+     "rank": 1,
+     "nodeID": 103631
+    },
+    {
+     "id": 127914,
+     "rank": 2,
+     "nodeID": 103632
+    },
+    {
+     "id": 127917,
+     "rank": 1,
+     "nodeID": 103635
+    },
+    {
+     "id": 127919,
+     "rank": 1,
+     "nodeID": 103638
+    },
+    {
+     "id": 127920,
+     "rank": 1,
+     "nodeID": 103639
+    },
+    {
+     "id": 127921,
+     "rank": 1,
+     "nodeID": 103640
+    },
+    {
+     "id": 127924,
+     "rank": 1,
+     "nodeID": 80984
+    },
+    {
+     "id": 135590,
+     "rank": 1,
+     "nodeID": 109386
+    },
+    {
+     "id": 135591,
+     "rank": 1,
+     "nodeID": 109387
+    },
+    {
+     "id": 135718,
+     "rank": 1,
+     "nodeID": 109492
+    },
+    {
+     "id": 135988,
+     "rank": 1,
+     "nodeID": 109730
+    },
+    {
+     "id": 135989,
+     "rank": 1,
+     "nodeID": 109731
+    },
+    {
+     "id": 135990,
+     "rank": 1,
+     "nodeID": 109732
+    },
+    {
+     "id": 136561,
+     "rank": 1,
+     "nodeID": 110066
+    },
+    {
+     "id": 136585,
+     "rank": 1,
+     "nodeID": 110085
+    },
+    {
+     "id": 136714,
+     "rank": 1,
+     "nodeID": 80999
+    },
+    {
+     "id": 136972,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 136973,
+     "rank": 2,
+     "nodeID": 110402
+    },
+    {
+     "id": 136974,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 127873,
+     "rank": 1,
+     "nodeID": 103598
+    },
+    {
+     "id": 117485,
+     "rank": 1,
+     "nodeID": 94888
+    },
+    {
+     "id": 127851,
+     "rank": 1,
+     "nodeID": 103579
+    },
+    {
+     "id": 127884,
+     "rank": 1,
+     "nodeID": 103608
+    },
+    {
+     "id": 127904,
+     "rank": 1,
+     "nodeID": 103624
+    },
+    {
+     "id": 127910,
+     "rank": 1,
+     "nodeID": 103628
+    },
+    {
+     "id": 127886,
+     "rank": 1,
+     "nodeID": 103610
+    },
+    {
+     "id": 127906,
+     "rank": 1,
+     "nodeID": 103625
+    },
+    {
+     "id": 136567,
+     "rank": 1,
+     "nodeID": 103599
+    },
+    {
+     "id": 127896,
+     "rank": 1,
+     "nodeID": 103618
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271483,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidshamanulatek_d_01.jpg",
+     "name": "Serpent Crown of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      13335,
+      40,
+      13695,
+      13692,
+      13698,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240967,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_orange.jpg"
+      },
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271481,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hissing Mantle of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13694,
+      13697,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271486,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_robe_mail_raidshamanulatek_d_01.jpg",
+     "name": "Fanged Raiment of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13846,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 244581,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Trophy Belt",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8790,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 271482,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_raidshamanulatek_d_01.jpg",
+     "name": "Leggings of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7935,
+     "permanentEnchantName": "+41 Intellect & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 271440,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidshamanulatek_d_01.jpg",
+     "name": "Greaves of the Noxious Depths",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      40,
+      13662,
+      13335,
+      10844,
+      12854
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271484,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hexing Grips of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8730,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Eye of the Lynx",
+     "bonusIDs": [
+      13334,
+      6652,
+      12854,
+      14049,
+      13691,
+      13697,
+      1587
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 272148,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring03_purple.jpg",
+     "name": "Anguine Gyre",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      13668,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281029,
+     "slot": 11,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 273796,
+     "slot": 12,
+     "quality": 3,
+     "icon": "inv_121_trinket_dungeon_ulatek_vile.jpg",
+     "name": "Vile Vial of Volatile Venom",
+     "itemLevel": 328,
+     "bonusIDs": [
+      13440,
+      6652,
+      12699,
+      12848
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 13,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 268248,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidmonkulatek_d_01.jpg",
+     "name": "Amani Summoning Shawl",
+     "itemLevel": 334,
+     "bonusIDs": [
+      6652,
+      13662,
+      13334,
+      12854
+     ]
+    },
+    {
+     "id": 271092,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_knife_1h_ulatekfang_d_01_spirit.jpg",
+     "name": "Jan'thrazet, the Soul Fang",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 5400,
+     "temporaryEnchantName": "Flametongue",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268196,
+     "slot": 16,
+     "quality": 4,
+     "icon": "inv_shield_1h_ulatek_d_01.jpg",
+     "name": "Venom-Slashed Scuteward",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    262
+   ],
+   "factionID": 1
+  }
+ },
+ "r4_Bondd": {
+  "name": "Bondd",
+  "id": 2,
+  "guid": 226374645,
+  "type": "Shaman",
+  "server": "Illidan",
+  "region": "US",
+  "icon": "Shaman-Elemental",
+  "specs": [
+   "Elemental"
+  ],
+  "minItemLevel": 336,
+  "maxItemLevel": 336,
+  "potionUse": 4,
+  "healthstoneUse": 2,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 0,
+     "max": 0
+    },
+    "Intellect": {
+     "min": 3846,
+     "max": 3846
+    },
+    "Mastery": {
+     "min": 1140,
+     "max": 1140
+    },
+    "Crit": {
+     "min": 1054,
+     "max": 1054
+    },
+    "Item Level": {
+     "min": 336,
+     "max": 336
+    },
+    "Stamina": {
+     "min": 51607,
+     "max": 51607
+    },
+    "Avoidance": {
+     "min": 318,
+     "max": 318
+    },
+    "Haste": {
+     "min": 807,
+     "max": 807
+    },
+    "Versatility": {
+     "min": 192,
+     "max": 192
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Grounding Totem",
+     "guid": 204336,
+     "type": 1,
+     "abilityIcon": "spell_nature_groundingtotem.jpg"
+    },
+    {
+     "name": "Burrow",
+     "guid": 409293,
+     "type": 1,
+     "abilityIcon": "pvp_burrow.jpg"
+    },
+    {
+     "name": "Storm Conduit",
+     "guid": 1217092,
+     "type": 1,
+     "abilityIcon": "spell_lightning_lightningbolt01.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 101844,
+     "rank": 1,
+     "nodeID": 80978
+    },
+    {
+     "id": 101850,
+     "rank": 1,
+     "nodeID": 80981
+    },
+    {
+     "id": 101853,
+     "rank": 1,
+     "nodeID": 80983
+    },
+    {
+     "id": 101855,
+     "rank": 1,
+     "nodeID": 80985
+    },
+    {
+     "id": 101859,
+     "rank": 1,
+     "nodeID": 80988
+    },
+    {
+     "id": 101860,
+     "rank": 1,
+     "nodeID": 80989
+    },
+    {
+     "id": 101861,
+     "rank": 1,
+     "nodeID": 80990
+    },
+    {
+     "id": 101864,
+     "rank": 1,
+     "nodeID": 80992
+    },
+    {
+     "id": 101867,
+     "rank": 1,
+     "nodeID": 80995
+    },
+    {
+     "id": 101870,
+     "rank": 1,
+     "nodeID": 80997
+    },
+    {
+     "id": 101871,
+     "rank": 1,
+     "nodeID": 80998
+    },
+    {
+     "id": 101874,
+     "rank": 1,
+     "nodeID": 81000
+    },
+    {
+     "id": 101876,
+     "rank": 1,
+     "nodeID": 81002
+    },
+    {
+     "id": 101879,
+     "rank": 1,
+     "nodeID": 81004
+    },
+    {
+     "id": 101883,
+     "rank": 1,
+     "nodeID": 81007
+    },
+    {
+     "id": 101884,
+     "rank": 1,
+     "nodeID": 103637
+    },
+    {
+     "id": 101885,
+     "rank": 1,
+     "nodeID": 81008
+    },
+    {
+     "id": 101892,
+     "rank": 1,
+     "nodeID": 81015
+    },
+    {
+     "id": 101893,
+     "rank": 1,
+     "nodeID": 81016
+    },
+    {
+     "id": 117455,
+     "rank": 1,
+     "nodeID": 94858
+    },
+    {
+     "id": 117457,
+     "rank": 1,
+     "nodeID": 94860
+    },
+    {
+     "id": 117458,
+     "rank": 1,
+     "nodeID": 94861
+    },
+    {
+     "id": 117466,
+     "rank": 1,
+     "nodeID": 94869
+    },
+    {
+     "id": 117472,
+     "rank": 1,
+     "nodeID": 94875
+    },
+    {
+     "id": 117480,
+     "rank": 1,
+     "nodeID": 94883
+    },
+    {
+     "id": 117484,
+     "rank": 1,
+     "nodeID": 94887
+    },
+    {
+     "id": 117491,
+     "rank": 1,
+     "nodeID": 94894
+    },
+    {
+     "id": 123377,
+     "rank": 1,
+     "nodeID": 99845
+    },
+    {
+     "id": 123630,
+     "rank": 1,
+     "nodeID": 94884
+    },
+    {
+     "id": 123632,
+     "rank": 1,
+     "nodeID": 94862
+    },
+    {
+     "id": 127851,
+     "rank": 1,
+     "nodeID": 103579
+    },
+    {
+     "id": 127854,
+     "rank": 1,
+     "nodeID": 103581
+    },
+    {
+     "id": 127855,
+     "rank": 2,
+     "nodeID": 103582
+    },
+    {
+     "id": 127856,
+     "rank": 1,
+     "nodeID": 103583
+    },
+    {
+     "id": 127857,
+     "rank": 1,
+     "nodeID": 103584
+    },
+    {
+     "id": 127858,
+     "rank": 1,
+     "nodeID": 103585
+    },
+    {
+     "id": 127859,
+     "rank": 1,
+     "nodeID": 103586
+    },
+    {
+     "id": 127865,
+     "rank": 1,
+     "nodeID": 103591
+    },
+    {
+     "id": 127880,
+     "rank": 1,
+     "nodeID": 103605
+    },
+    {
+     "id": 127881,
+     "rank": 1,
+     "nodeID": 103606
+    },
+    {
+     "id": 127888,
+     "rank": 1,
+     "nodeID": 103611
+    },
+    {
+     "id": 127889,
+     "rank": 1,
+     "nodeID": 103612
+    },
+    {
+     "id": 127890,
+     "rank": 1,
+     "nodeID": 103613
+    },
+    {
+     "id": 127892,
+     "rank": 1,
+     "nodeID": 103615
+    },
+    {
+     "id": 127893,
+     "rank": 1,
+     "nodeID": 103616
+    },
+    {
+     "id": 127894,
+     "rank": 2,
+     "nodeID": 103617
+    },
+    {
+     "id": 127899,
+     "rank": 1,
+     "nodeID": 103620
+    },
+    {
+     "id": 127908,
+     "rank": 1,
+     "nodeID": 103626
+    },
+    {
+     "id": 127909,
+     "rank": 1,
+     "nodeID": 103627
+    },
+    {
+     "id": 127910,
+     "rank": 1,
+     "nodeID": 103628
+    },
+    {
+     "id": 127912,
+     "rank": 1,
+     "nodeID": 103630
+    },
+    {
+     "id": 127913,
+     "rank": 1,
+     "nodeID": 103631
+    },
+    {
+     "id": 127914,
+     "rank": 2,
+     "nodeID": 103632
+    },
+    {
+     "id": 127917,
+     "rank": 1,
+     "nodeID": 103635
+    },
+    {
+     "id": 127919,
+     "rank": 1,
+     "nodeID": 103638
+    },
+    {
+     "id": 127920,
+     "rank": 1,
+     "nodeID": 103639
+    },
+    {
+     "id": 127924,
+     "rank": 1,
+     "nodeID": 80984
+    },
+    {
+     "id": 128224,
+     "rank": 1,
+     "nodeID": 103640
+    },
+    {
+     "id": 135591,
+     "rank": 1,
+     "nodeID": 109387
+    },
+    {
+     "id": 135988,
+     "rank": 1,
+     "nodeID": 109730
+    },
+    {
+     "id": 135989,
+     "rank": 1,
+     "nodeID": 109731
+    },
+    {
+     "id": 135990,
+     "rank": 1,
+     "nodeID": 109732
+    },
+    {
+     "id": 136561,
+     "rank": 1,
+     "nodeID": 110066
+    },
+    {
+     "id": 136585,
+     "rank": 1,
+     "nodeID": 110085
+    },
+    {
+     "id": 136714,
+     "rank": 1,
+     "nodeID": 80999
+    },
+    {
+     "id": 136972,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 136973,
+     "rank": 2,
+     "nodeID": 110402
+    },
+    {
+     "id": 136974,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 127873,
+     "rank": 1,
+     "nodeID": 103598
+    },
+    {
+     "id": 117485,
+     "rank": 1,
+     "nodeID": 94888
+    },
+    {
+     "id": 136567,
+     "rank": 1,
+     "nodeID": 103599
+    },
+    {
+     "id": 127882,
+     "rank": 1,
+     "nodeID": 103607
+    },
+    {
+     "id": 127891,
+     "rank": 2,
+     "nodeID": 103614
+    },
+    {
+     "id": 127861,
+     "rank": 1,
+     "nodeID": 103588
+    },
+    {
+     "id": 127868,
+     "rank": 1,
+     "nodeID": 103593
+    },
+    {
+     "id": 127869,
+     "rank": 1,
+     "nodeID": 103594
+    },
+    {
+     "id": 127871,
+     "rank": 1,
+     "nodeID": 103596
+    },
+    {
+     "id": 127877,
+     "rank": 1,
+     "nodeID": 103602
+    },
+    {
+     "id": 127902,
+     "rank": 1,
+     "nodeID": 103622
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271483,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidshamanulatek_d_01.jpg",
+     "name": "Serpent Crown of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      13335,
+      40,
+      12854,
+      13696,
+      13695,
+      13692,
+      13698,
+      1587
+     ],
+     "gems": [
+      {
+       "id": 240906,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_red.jpg"
+      }
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240967,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_orange.jpg"
+      },
+      {
+       "id": 240914,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_blue.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271481,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hissing Mantle of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      13335,
+      13694,
+      6652,
+      13697,
+      12854
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 42369,
+     "slot": 3,
+     "quality": 2,
+     "icon": "inv_shirt_black_01.jpg",
+     "name": "Ebon Filigreed Shirt",
+     "itemLevel": 1
+    },
+    {
+     "id": 271486,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_robe_mail_raidshamanulatek_d_01.jpg",
+     "name": "Fanged Raiment of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      13335,
+      13846,
+      43,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268254,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_raidshamanulatek_d_01.jpg",
+     "name": "Serpentine Mixing Belt",
+     "itemLevel": 334,
+     "bonusIDs": [
+      40,
+      13695,
+      13662,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240890,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_green.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271482,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_raidshamanulatek_d_01.jpg",
+     "name": "Leggings of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7935,
+     "permanentEnchantName": "+41 Intellect & +115 Stamina",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 271440,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidshamanulatek_d_01.jpg",
+     "name": "Greaves of the Noxious Depths",
+     "itemLevel": 334,
+     "permanentEnchant": 7963,
+     "permanentEnchantName": "Enchant Boots - Lynx's Dexterity",
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      10844,
+      12854
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8790,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240906,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271484,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hexing Grips of the Ophidian Oracle",
+     "itemLevel": 334,
+     "bonusIDs": [
+      13334,
+      6652,
+      12854,
+      14049,
+      13691,
+      13697,
+      1587
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268252,
+     "slot": 10,
+     "quality": 4,
+     "icon": "inv_121_jewelry_ring03_red.jpg",
+     "name": "Apex Brute's Claw Ring",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240906,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_nature_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281029,
+     "slot": 11,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240898,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_fire_purple.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 12,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 328,
+     "bonusIDs": [
+      6652,
+      13334,
+      12848
+     ]
+    },
+    {
+     "id": 270164,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_10_tailoring_bag1_color2.jpg",
+     "name": "Gebbo's Bottomless Bag",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 239656,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_cloth_questbloodelf_b_01.jpg",
+     "name": "Adherent's Silken Shroud",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8790,
+      13836
+     ]
+    },
+    {
+     "id": 271092,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_knife_1h_ulatekfang_d_01_spirit.jpg",
+     "name": "Jan'thrazet, the Soul Fang",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 5400,
+     "temporaryEnchantName": "Flametongue",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 268262,
+     "slot": 16,
+     "quality": 4,
+     "icon": "inv_shield_1h_ulatek_d_01.jpg",
+     "name": "Bubblefin Splash Guard",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 43349,
+     "slot": 17,
+     "quality": 4,
+     "icon": "inv_chest_cloth_30.jpg",
+     "name": "Tabard of Brute Force",
+     "itemLevel": 1
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    262
+   ],
+   "factionID": 1
+  }
+ },
+ "r5_Corysham": {
+  "name": "Corysham",
+  "id": 3,
+  "guid": 245589164,
+  "type": "Shaman",
+  "server": "Tichondrius",
+  "region": "US",
+  "icon": "Shaman-Elemental",
+  "specs": [
+   "Elemental"
+  ],
+  "minItemLevel": 338,
+  "maxItemLevel": 338,
+  "potionUse": 6,
+  "healthstoneUse": 4,
+  "combatantInfo": {
+   "stats": {
+    "Speed": {
+     "min": 11,
+     "max": 11
+    },
+    "Intellect": {
+     "min": 3865,
+     "max": 3865
+    },
+    "Mastery": {
+     "min": 1265,
+     "max": 1265
+    },
+    "Crit": {
+     "min": 904,
+     "max": 904
+    },
+    "Item Level": {
+     "min": 338,
+     "max": 338
+    },
+    "Stamina": {
+     "min": 52100,
+     "max": 52100
+    },
+    "Avoidance": {
+     "min": 389,
+     "max": 389
+    },
+    "Haste": {
+     "min": 794,
+     "max": 794
+    },
+    "Versatility": {
+     "min": 221,
+     "max": 221
+    },
+    "Leech": {
+     "min": 0,
+     "max": 0
+    }
+   },
+   "talents": [],
+   "pvpTalents": [
+    {
+     "name": "Unknown Ability",
+     "guid": 0,
+     "type": 0,
+     "abilityIcon": "inv_axe_02.jpg"
+    },
+    {
+     "name": "Storm Conduit",
+     "guid": 1217092,
+     "type": 1,
+     "abilityIcon": "spell_lightning_lightningbolt01.jpg"
+    },
+    {
+     "name": "Electrocute",
+     "guid": 206642,
+     "type": 1,
+     "abilityIcon": "spell_nature_purge.jpg"
+    },
+    {
+     "name": "Totem of Wrath",
+     "guid": 460697,
+     "type": 1,
+     "abilityIcon": "shaman_pvp_skyfurytotem.jpg"
+    }
+   ],
+   "talentTree": [
+    {
+     "id": 101844,
+     "rank": 1,
+     "nodeID": 80978
+    },
+    {
+     "id": 101850,
+     "rank": 1,
+     "nodeID": 80981
+    },
+    {
+     "id": 101853,
+     "rank": 1,
+     "nodeID": 80983
+    },
+    {
+     "id": 101855,
+     "rank": 1,
+     "nodeID": 80985
+    },
+    {
+     "id": 101859,
+     "rank": 1,
+     "nodeID": 80988
+    },
+    {
+     "id": 101860,
+     "rank": 1,
+     "nodeID": 80989
+    },
+    {
+     "id": 101861,
+     "rank": 1,
+     "nodeID": 80990
+    },
+    {
+     "id": 101864,
+     "rank": 1,
+     "nodeID": 80992
+    },
+    {
+     "id": 101867,
+     "rank": 1,
+     "nodeID": 80995
+    },
+    {
+     "id": 101870,
+     "rank": 1,
+     "nodeID": 80997
+    },
+    {
+     "id": 101871,
+     "rank": 1,
+     "nodeID": 80998
+    },
+    {
+     "id": 101874,
+     "rank": 1,
+     "nodeID": 81000
+    },
+    {
+     "id": 101876,
+     "rank": 1,
+     "nodeID": 81002
+    },
+    {
+     "id": 101879,
+     "rank": 1,
+     "nodeID": 81004
+    },
+    {
+     "id": 101883,
+     "rank": 1,
+     "nodeID": 81007
+    },
+    {
+     "id": 101884,
+     "rank": 1,
+     "nodeID": 103637
+    },
+    {
+     "id": 101885,
+     "rank": 1,
+     "nodeID": 81008
+    },
+    {
+     "id": 101892,
+     "rank": 1,
+     "nodeID": 81015
+    },
+    {
+     "id": 117455,
+     "rank": 1,
+     "nodeID": 94858
+    },
+    {
+     "id": 117457,
+     "rank": 1,
+     "nodeID": 94860
+    },
+    {
+     "id": 117458,
+     "rank": 1,
+     "nodeID": 94861
+    },
+    {
+     "id": 117466,
+     "rank": 1,
+     "nodeID": 94869
+    },
+    {
+     "id": 117472,
+     "rank": 1,
+     "nodeID": 94875
+    },
+    {
+     "id": 117480,
+     "rank": 1,
+     "nodeID": 94883
+    },
+    {
+     "id": 117484,
+     "rank": 1,
+     "nodeID": 94887
+    },
+    {
+     "id": 117491,
+     "rank": 1,
+     "nodeID": 94894
+    },
+    {
+     "id": 123377,
+     "rank": 1,
+     "nodeID": 99845
+    },
+    {
+     "id": 123630,
+     "rank": 1,
+     "nodeID": 94884
+    },
+    {
+     "id": 123632,
+     "rank": 1,
+     "nodeID": 94862
+    },
+    {
+     "id": 127854,
+     "rank": 1,
+     "nodeID": 103581
+    },
+    {
+     "id": 127855,
+     "rank": 2,
+     "nodeID": 103582
+    },
+    {
+     "id": 127856,
+     "rank": 1,
+     "nodeID": 103583
+    },
+    {
+     "id": 127857,
+     "rank": 1,
+     "nodeID": 103584
+    },
+    {
+     "id": 127858,
+     "rank": 1,
+     "nodeID": 103585
+    },
+    {
+     "id": 127859,
+     "rank": 1,
+     "nodeID": 103586
+    },
+    {
+     "id": 127864,
+     "rank": 1,
+     "nodeID": 103591
+    },
+    {
+     "id": 127880,
+     "rank": 1,
+     "nodeID": 103605
+    },
+    {
+     "id": 127881,
+     "rank": 1,
+     "nodeID": 103606
+    },
+    {
+     "id": 127882,
+     "rank": 1,
+     "nodeID": 103607
+    },
+    {
+     "id": 127886,
+     "rank": 1,
+     "nodeID": 103610
+    },
+    {
+     "id": 127888,
+     "rank": 1,
+     "nodeID": 103611
+    },
+    {
+     "id": 127889,
+     "rank": 1,
+     "nodeID": 103612
+    },
+    {
+     "id": 127890,
+     "rank": 1,
+     "nodeID": 103613
+    },
+    {
+     "id": 127892,
+     "rank": 1,
+     "nodeID": 103615
+    },
+    {
+     "id": 127893,
+     "rank": 1,
+     "nodeID": 103616
+    },
+    {
+     "id": 127894,
+     "rank": 2,
+     "nodeID": 103617
+    },
+    {
+     "id": 127899,
+     "rank": 1,
+     "nodeID": 103620
+    },
+    {
+     "id": 127906,
+     "rank": 1,
+     "nodeID": 103625
+    },
+    {
+     "id": 127908,
+     "rank": 1,
+     "nodeID": 103626
+    },
+    {
+     "id": 127909,
+     "rank": 1,
+     "nodeID": 103627
+    },
+    {
+     "id": 127912,
+     "rank": 1,
+     "nodeID": 103630
+    },
+    {
+     "id": 127913,
+     "rank": 1,
+     "nodeID": 103631
+    },
+    {
+     "id": 127914,
+     "rank": 2,
+     "nodeID": 103632
+    },
+    {
+     "id": 127917,
+     "rank": 1,
+     "nodeID": 103635
+    },
+    {
+     "id": 127919,
+     "rank": 1,
+     "nodeID": 103638
+    },
+    {
+     "id": 127920,
+     "rank": 1,
+     "nodeID": 103639
+    },
+    {
+     "id": 127921,
+     "rank": 1,
+     "nodeID": 103640
+    },
+    {
+     "id": 127924,
+     "rank": 1,
+     "nodeID": 80984
+    },
+    {
+     "id": 135591,
+     "rank": 1,
+     "nodeID": 109387
+    },
+    {
+     "id": 135988,
+     "rank": 1,
+     "nodeID": 109730
+    },
+    {
+     "id": 135989,
+     "rank": 1,
+     "nodeID": 109731
+    },
+    {
+     "id": 135990,
+     "rank": 1,
+     "nodeID": 109732
+    },
+    {
+     "id": 136561,
+     "rank": 1,
+     "nodeID": 110066
+    },
+    {
+     "id": 136567,
+     "rank": 1,
+     "nodeID": 103599
+    },
+    {
+     "id": 136585,
+     "rank": 1,
+     "nodeID": 110085
+    },
+    {
+     "id": 136714,
+     "rank": 1,
+     "nodeID": 80999
+    },
+    {
+     "id": 136973,
+     "rank": 2,
+     "nodeID": 110402
+    },
+    {
+     "id": 136974,
+     "rank": 1,
+     "nodeID": 110402
+    },
+    {
+     "id": 127873,
+     "rank": 1,
+     "nodeID": 103598
+    },
+    {
+     "id": 117485,
+     "rank": 1,
+     "nodeID": 94888
+    },
+    {
+     "id": 101893,
+     "rank": 1,
+     "nodeID": 81016
+    },
+    {
+     "id": 127851,
+     "rank": 1,
+     "nodeID": 103579
+    },
+    {
+     "id": 127884,
+     "rank": 1,
+     "nodeID": 103608
+    },
+    {
+     "id": 127896,
+     "rank": 2,
+     "nodeID": 103618
+    },
+    {
+     "id": 127903,
+     "rank": 1,
+     "nodeID": 103623
+    },
+    {
+     "id": 127905,
+     "rank": 1,
+     "nodeID": 103624
+    },
+    {
+     "id": 127910,
+     "rank": 1,
+     "nodeID": 103628
+    },
+    {
+     "id": 135592,
+     "rank": 1,
+     "nodeID": 109388
+    },
+    {
+     "id": 136972,
+     "rank": 1,
+     "nodeID": 110402
+    }
+   ],
+   "artifact": [],
+   "gear": [
+    {
+     "id": 271483,
+     "slot": 0,
+     "quality": 4,
+     "icon": "inv_helm_mail_raidshamanulatek_d_01.jpg",
+     "name": "Serpent Crown of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8017,
+     "permanentEnchantName": "Enchant Helm - Empowered Rune of Avoidance",
+     "bonusIDs": [
+      13335,
+      40,
+      13696,
+      13692,
+      13698,
+      12854
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 268265,
+     "slot": 1,
+     "quality": 4,
+     "icon": "inv_121_jewelry_neck03_green.jpg",
+     "name": "Aqirbane Reliquary",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13668,
+      13335,
+      13848,
+      13987
+     ],
+     "gems": [
+      {
+       "id": 240983,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_epic_gem_cut_green.jpg"
+      },
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271481,
+     "slot": 2,
+     "quality": 4,
+     "icon": "inv_shoulder_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hissing Mantle of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 8001,
+     "permanentEnchantName": "Enchant Shoulders - Amirdrassil's Grace",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848,
+      13694,
+      13697,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 0,
+     "slot": 3,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    },
+    {
+     "id": 271486,
+     "slot": 4,
+     "quality": 4,
+     "icon": "inv_robe_mail_raidshamanulatek_d_01.jpg",
+     "name": "Fanged Raiment of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7987,
+     "permanentEnchantName": "Enchant Chest - Mark of the Worldsoul",
+     "bonusIDs": [
+      6652,
+      13335,
+      13846,
+      13848,
+      13690,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 244581,
+     "slot": 5,
+     "quality": 4,
+     "icon": "inv_belt_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Trophy Belt",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8791,
+      13836,
+      13696
+     ]
+    },
+    {
+     "id": 271482,
+     "slot": 6,
+     "quality": 4,
+     "icon": "inv_pant_mail_raidshamanulatek_d_01.jpg",
+     "name": "Leggings of the Ophidian Oracle",
+     "itemLevel": 344,
+     "permanentEnchant": 7935,
+     "permanentEnchantName": "+41 Intellect & +115 Stamina",
+     "bonusIDs": [
+      13335,
+      40,
+      13848,
+      13693,
+      13698,
+      1597
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 271440,
+     "slot": 7,
+     "quality": 4,
+     "icon": "inv_boot_mail_raidshamanulatek_d_01.jpg",
+     "name": "Greaves of the Noxious Depths",
+     "itemLevel": 334,
+     "permanentEnchant": 8019,
+     "permanentEnchantName": "Enchant Boots - Farstrider's Hunt",
+     "bonusIDs": [
+      40,
+      13662,
+      13335,
+      10844,
+      12854
+     ]
+    },
+    {
+     "id": 244584,
+     "slot": 8,
+     "quality": 4,
+     "icon": "inv_bracer_mail_questbloodelf_b_01.jpg",
+     "name": "Farstrider's Plated Bracers",
+     "itemLevel": 331,
+     "bonusIDs": [
+      12214,
+      13667,
+      13695,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8790,
+      13836,
+      13696
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 271484,
+     "slot": 9,
+     "quality": 4,
+     "icon": "inv_glove_mail_raidshamanulatek_d_01.jpg",
+     "name": "Hexing Grips of the Ophidian Oracle",
+     "itemLevel": 334,
+     "permanentEnchant": 8727,
+     "permanentEnchantName": "Ancient Hash'ey Battle Art: Falco Strikes",
+     "bonusIDs": [
+      13334,
+      6652,
+      12854,
+      14049,
+      13691,
+      13697,
+      1587
+     ],
+     "setID": 2065
+    },
+    {
+     "id": 281029,
+     "slot": 10,
+     "quality": 4,
+     "icon": "8268560.jpg",
+     "name": "Band of the Swarmcaller",
+     "itemLevel": 334,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      6652,
+      13668,
+      13334,
+      12854
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 240949,
+     "slot": 11,
+     "quality": 4,
+     "icon": "inv_12_profession_jewelcrafting_ring4_gold.jpg",
+     "name": "Masterwork Sin'dorei Band",
+     "itemLevel": 331,
+     "permanentEnchant": 7967,
+     "permanentEnchantName": "Enchant Ring - Eyes of the Eagle",
+     "bonusIDs": [
+      12214,
+      13667,
+      12497,
+      13751,
+      14001,
+      8791,
+      13836
+     ],
+     "gems": [
+      {
+       "id": 240908,
+       "itemLevel": 295,
+       "icon": "inv_12_profession_jewelcrafting_rare_gem_cut_void_red.jpg"
+      }
+     ]
+    },
+    {
+     "id": 281215,
+     "slot": 12,
+     "quality": 4,
+     "icon": "8268563.jpg",
+     "name": "Twisted Horror's Tendril",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13334,
+      12856
+     ]
+    },
+    {
+     "id": 270164,
+     "slot": 13,
+     "quality": 4,
+     "icon": "inv_10_tailoring_bag1_color2.jpg",
+     "name": "Gebbo's Bottomless Bag",
+     "itemLevel": 341,
+     "bonusIDs": [
+      6652,
+      13335,
+      12856
+     ]
+    },
+    {
+     "id": 268253,
+     "slot": 14,
+     "quality": 4,
+     "icon": "inv_cape_leather_raidrogueulatek_d_01.jpg",
+     "name": "Silken Voodoo Drape",
+     "itemLevel": 344,
+     "bonusIDs": [
+      6652,
+      13662,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 271092,
+     "slot": 15,
+     "quality": 4,
+     "icon": "inv_knife_1h_ulatekfang_d_01_spirit.jpg",
+     "name": "Jan'thrazet, the Soul Fang",
+     "itemLevel": 344,
+     "permanentEnchant": 8689,
+     "permanentEnchantName": "Rite of the Hash'ey",
+     "temporaryEnchant": 5400,
+     "temporaryEnchantName": "Flametongue",
+     "bonusIDs": [
+      6652,
+      13335,
+      13848
+     ]
+    },
+    {
+     "id": 237831,
+     "slot": 16,
+     "quality": 4,
+     "icon": "inv_shield_1h_questbloodelf_b_01.jpg",
+     "name": "Spellbreaker's Rebuke",
+     "itemLevel": 337,
+     "bonusIDs": [
+      12214,
+      13667,
+      13852,
+      12497,
+      13751,
+      14001,
+      8960,
+      12384,
+      8791,
+      13836
+     ]
+    },
+    {
+     "id": 0,
+     "slot": 17,
+     "quality": 1,
+     "icon": "inv_axe_02.jpg",
+     "itemLevel": 0
+    }
+   ],
+   "heartOfAzeroth": [],
+   "specIDs": [
+    262
+   ],
+   "factionID": 1
+  }
+ }
+}

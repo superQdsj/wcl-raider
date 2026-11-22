@@ -1,0 +1,466 @@
+{
+ "player": "r1_孤独咩",
+ "specId": 262,
+ "hero_tree": {
+  "en": "Farseer",
+  "zh": "先知"
+ },
+ "string": "CYQAAAAAAAAAAAAAAAAAAAAAAAAAAAzMbbzMGjZZbZMmhZAAAAgFzsBDYAzGTgZBAmlZmZMWWMtxMjZWmZmZMsYZmZZYMzsAAMAwMjhhB",
+ "talents": [
+  "Amped Up",
+  "Ancestral Influence",
+  "Ancestral Swiftness",
+  "Ancestral Wolf Affinity",
+  "Ancient Fellowship",
+  "Ascendance",
+  "Astral Shift",
+  "Brimming with Life",
+  "Call of Fire",
+  "Call of the Ancestors",
+  "Capacitor Totem",
+  "Chain Heal",
+  "Chain Lightning",
+  "Cleanse Spirit",
+  "Crackling Fury",
+  "Earth Elemental",
+  "Earth Shield",
+  "Earthquake",
+  "Earthshatter",
+  "Echo Chamber",
+  "Echo of the Elements",
+  "Elemental Blast",
+  "Elemental Fury",
+  "Elemental Orbit",
+  "Elemental Resonance",
+  "Elemental Reverb",
+  "Elemental Warding",
+  "Enhanced Imbues",
+  "Farseer",
+  "Feedback Loop",
+  "Final Calling",
+  "Fire and Ice",
+  "First Ascendant",
+  "Flames of the Cauldron",
+  "Flametongue Weapon",
+  "Flash of Lightning",
+  "Fury of the Storms",
+  "Graceful Spirit",
+  "Inferno Arc",
+  "Instinctive Imbuements",
+  "Lava Burst",
+  "Lightning Capacitor",
+  "Maelstrom Supremacy",
+  "Master of the Elements",
+  "Mountains Will Fall",
+  "Mystic Knowledge",
+  "Natural Harmony",
+  "Nature's Fury",
+  "Nature's Guardian",
+  "Nature's Swiftness",
+  "Offering from Beyond",
+  "Path of the Seer",
+  "Planes Traveler",
+  "Poison Cleansing Totem",
+  "Primal Elementalist",
+  "Primordial Bond",
+  "Primordial Capacity",
+  "Primordial Fury",
+  "Purge",
+  "Purging Flames",
+  "Routine Communication",
+  "Spirit Walk",
+  "Spirit Wolf",
+  "Spiritual Awakening",
+  "Spiritwalker's Grace",
+  "Spiritwalker's Momentum",
+  "Storm Frenzy",
+  "Stormkeeper",
+  "Swelling Maelstrom",
+  "Tectonic Collapse",
+  "Therazane's Resilience",
+  "Voltaic Blaze",
+  "Wind Rush Totem",
+  "Wind Shear",
+  "Winds of Al'Akir",
+  "Windspeaker",
+  "Windveil"
+ ],
+ "talents_zh": {
+  "Amped Up": {
+   "zh": "能量超载",
+   "spellId": 1269360
+  },
+  "Ancestral Influence": {
+   "zh": "先祖加持",
+   "spellId": 1270446
+  },
+  "Ancestral Swiftness": {
+   "zh": "先祖迅捷",
+   "spellId": 448861
+  },
+  "Ancestral Wolf Affinity": {
+   "zh": "先祖狼魂亲和",
+   "spellId": 382197
+  },
+  "Ancient Fellowship": {
+   "zh": "万古情谊",
+   "spellId": 443423
+  },
+  "Ascendance": {
+   "zh": "升腾",
+   "spellId": 114050
+  },
+  "Astral Shift": {
+   "zh": "星界转移",
+   "spellId": 108271
+  },
+  "Brimming with Life": {
+   "zh": "生机盎然",
+   "spellId": 381689
+  },
+  "Call of Fire": {
+   "zh": "火焰召唤",
+   "spellId": 378255
+  },
+  "Call of the Ancestors": {
+   "zh": "先祖的召唤",
+   "spellId": 443450
+  },
+  "Capacitor Totem": {
+   "zh": "电能图腾",
+   "spellId": 192058
+  },
+  "Chain Heal": {
+   "zh": "治疗链",
+   "spellId": 1064
+  },
+  "Chain Lightning": {
+   "zh": "闪电链",
+   "spellId": 188443
+  },
+  "Cleanse Spirit": {
+   "zh": "净化灵魂",
+   "spellId": 51886
+  },
+  "Crackling Fury": {
+   "zh": "爆裂狂怒",
+   "spellId": 1269215
+  },
+  "Earth Elemental": {
+   "zh": "土元素",
+   "spellId": 198103
+  },
+  "Earth Shield": {
+   "zh": "大地之盾",
+   "spellId": 974
+  },
+  "Earthquake": {
+   "zh": "地震术",
+   "spellId": 61882
+  },
+  "Earthshatter": {
+   "zh": "裂地猛击",
+   "spellId": 468626
+  },
+  "Echo Chamber": {
+   "zh": "回声蓄能",
+   "spellId": 382032
+  },
+  "Echo of the Elements": {
+   "zh": "元素回响",
+   "spellId": 333919
+  },
+  "Elemental Blast": {
+   "zh": "元素冲击",
+   "spellId": 117014
+  },
+  "Elemental Fury": {
+   "zh": "元素之怒",
+   "spellId": 60188
+  },
+  "Elemental Orbit": {
+   "zh": "元素环绕",
+   "spellId": 383010
+  },
+  "Elemental Resonance": {
+   "zh": "元素共鸣",
+   "spellId": 1258895
+  },
+  "Elemental Reverb": {
+   "zh": "元素余响",
+   "spellId": 443418
+  },
+  "Elemental Warding": {
+   "zh": "元素防护",
+   "spellId": 381650
+  },
+  "Enhanced Imbues": {
+   "zh": "强化灌魔",
+   "spellId": 462796
+  },
+  "Farseer": {
+   "zh": "先知",
+   "spellId": null
+  },
+  "Feedback Loop": {
+   "zh": "反馈连锁",
+   "spellId": 1270062
+  },
+  "Final Calling": {
+   "zh": "最终使命",
+   "spellId": 443446
+  },
+  "Fire and Ice": {
+   "zh": "冰火夹击",
+   "spellId": 382886
+  },
+  "First Ascendant": {
+   "zh": "首席升腾者",
+   "spellId": 462440
+  },
+  "Flames of the Cauldron": {
+   "zh": "釜镬之焰",
+   "spellId": 378266
+  },
+  "Flametongue Weapon": {
+   "zh": "火舌武器",
+   "spellId": 318038
+  },
+  "Flash of Lightning": {
+   "zh": "须臾闪电",
+   "spellId": 381936
+  },
+  "Fury of the Storms": {
+   "zh": "风暴之怒",
+   "spellId": 191717
+  },
+  "Graceful Spirit": {
+   "zh": "恩赐之魂",
+   "spellId": 192088
+  },
+  "Inferno Arc": {
+   "zh": "炼狱弧光",
+   "spellId": 1259047
+  },
+  "Instinctive Imbuements": {
+   "zh": "本能灌注",
+   "spellId": 1270350
+  },
+  "Lava Burst": {
+   "zh": "熔岩爆裂",
+   "spellId": 51505
+  },
+  "Lightning Capacitor": {
+   "zh": "闪电容蓄",
+   "spellId": 462862
+  },
+  "Maelstrom Supremacy": {
+   "zh": "漩涡统御",
+   "spellId": 443447
+  },
+  "Master of the Elements": {
+   "zh": "元素宗师",
+   "spellId": 16166
+  },
+  "Mountains Will Fall": {
+   "zh": "山峦将倾",
+   "spellId": 381726
+  },
+  "Mystic Knowledge": {
+   "zh": "灵性学识",
+   "spellId": 1270450
+  },
+  "Natural Harmony": {
+   "zh": "自然和谐",
+   "spellId": 443442
+  },
+  "Nature's Fury": {
+   "zh": "自然之怒",
+   "spellId": 381655
+  },
+  "Nature's Guardian": {
+   "zh": "自然守护者",
+   "spellId": 30884
+  },
+  "Nature's Swiftness": {
+   "zh": "自然迅捷",
+   "spellId": 378081
+  },
+  "Offering from Beyond": {
+   "zh": "彼岸供奉",
+   "spellId": 443451
+  },
+  "Path of the Seer": {
+   "zh": "先知之路",
+   "spellId": 1269364
+  },
+  "Planes Traveler": {
+   "zh": "位面旅行者",
+   "spellId": 381647
+  },
+  "Poison Cleansing Totem": {
+   "zh": "清毒图腾",
+   "spellId": 383013
+  },
+  "Primal Elementalist": {
+   "zh": "元素尊者",
+   "spellId": 117013
+  },
+  "Primordial Bond": {
+   "zh": "始源羁绊",
+   "spellId": 1279819
+  },
+  "Primordial Capacity": {
+   "zh": "始源并蓄",
+   "spellId": 443448
+  },
+  "Primordial Fury": {
+   "zh": "原始狂怒",
+   "spellId": 378193
+  },
+  "Purge": {
+   "zh": "净化术",
+   "spellId": 370
+  },
+  "Purging Flames": {
+   "zh": "净化烈焰",
+   "spellId": 1259471
+  },
+  "Routine Communication": {
+   "zh": "例行交流",
+   "spellId": 443445
+  },
+  "Spirit Walk": {
+   "zh": "幽魂步",
+   "spellId": 58875
+  },
+  "Spirit Wolf": {
+   "zh": "幽灵狼",
+   "spellId": 260878
+  },
+  "Spiritual Awakening": {
+   "zh": "魂之启迪",
+   "spellId": 1270375
+  },
+  "Spiritwalker's Grace": {
+   "zh": "灵魂行者的恩赐",
+   "spellId": 79206
+  },
+  "Spiritwalker's Momentum": {
+   "zh": "灵魂行者之势",
+   "spellId": 443425
+  },
+  "Storm Frenzy": {
+   "zh": "风暴狂乱",
+   "spellId": 462695
+  },
+  "Stormkeeper": {
+   "zh": "风暴守护者",
+   "spellId": 191634
+  },
+  "Swelling Maelstrom": {
+   "zh": "膨胀漩涡",
+   "spellId": 381707
+  },
+  "Tectonic Collapse": {
+   "zh": "大地坍缩",
+   "spellId": 1258899
+  },
+  "Therazane's Resilience": {
+   "zh": "塞拉赞恩的韧性",
+   "spellId": 1217622
+  },
+  "Voltaic Blaze": {
+   "zh": "流电炽焰",
+   "spellId": 470057
+  },
+  "Wind Rush Totem": {
+   "zh": "狂风图腾",
+   "spellId": 192077
+  },
+  "Wind Shear": {
+   "zh": "风剪",
+   "spellId": 57994
+  },
+  "Winds of Al'Akir": {
+   "zh": "奥拉基尔之风",
+   "spellId": 382215
+  },
+  "Windspeaker": {
+   "zh": "风语者",
+   "spellId": 1270447
+  },
+  "Windveil": {
+   "zh": "风幕",
+   "spellId": 355630
+  }
+ },
+ "diffs": {
+  "r2_麦格拉斯蛮锤": {
+   "removed": [
+    "治疗链(Chain Heal/1064)",
+    "大地之盾(Earth Shield/974)",
+    "元素环绕(Elemental Orbit/383010)",
+    "幽灵狼(Spirit Wolf/260878)",
+    "塞拉赞恩的韧性(Therazane's Resilience/1217622)"
+   ],
+   "added": [
+    "静电充能(Static Charge/265046)",
+    "雷霆之爪(Thunderous Paws/378075)",
+    "图腾集中(Totemic Focus/382201)",
+    "图腾潮涌(Totemic Surge/381867)"
+   ]
+  },
+  "r3_Hearthjacke": {
+   "removed": [
+    "治疗链(Chain Heal/1064)",
+    "大地之盾(Earth Shield/974)",
+    "元素环绕(Elemental Orbit/383010)",
+    "净化术(Purge/370)",
+    "幽魂步(Spirit Walk/58875)",
+    "塞拉赞恩的韧性(Therazane's Resilience/1217622)"
+   ],
+   "added": [
+    "升涌气流(Ascending Air/462791)",
+    "冰霜震击(Frost Shock/196840)",
+    "强效净化术(Greater Purge/378773)",
+    "阵风(Gust of Wind/192063)",
+    "静电充能(Static Charge/265046)",
+    "图腾集中(Totemic Focus/382201)",
+    "图腾投射(Totemic Projection/108287)"
+   ]
+  },
+  "r4_Bondd": {
+   "removed": [
+    "先祖狼魂亲和(Ancestral Wolf Affinity/382197)",
+    "净化灵魂(Cleanse Spirit/51886)",
+    "首席升腾者(First Ascendant/462440)",
+    "净化术(Purge/370)"
+   ],
+   "added": [
+    "陷地图腾(Earthgrab Totem/51485)",
+    "喷流(Jet Stream/462817)",
+    "飞升卓越(Preeminence/462443)",
+    "复苏水域(Refreshing Waters/378211)"
+   ]
+  },
+  "r5_Corysham": {
+   "removed": [
+    "治疗链(Chain Heal/1064)",
+    "大地之盾(Earth Shield/974)",
+    "元素环绕(Elemental Orbit/383010)",
+    "幽魂步(Spirit Walk/58875)",
+    "塞拉赞恩的韧性(Therazane's Resilience/1217622)",
+    "奥拉基尔之风(Winds of Al'Akir/382215)"
+   ],
+   "added": [
+    "阵风(Gust of Wind/192063)",
+    "妖术(Hex/51514)",
+    "喷流(Jet Stream/462817)",
+    "静电充能(Static Charge/265046)",
+    "图腾集中(Totemic Focus/382201)",
+    "图腾潮涌(Totemic Surge/381867)"
+   ]
+  }
+ }
+}
