@@ -128,35 +128,35 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>开场 → 黄金风蛇</h3><span class="kind">TRASH · 祖尔的爪牙 / 黯影战士 / 活化守卫 / 影裔勇士 / 复活的妖术师</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>每只黯影战士存活期间约每 <b>24 秒</b>读一次暗影旋风斩，整段开场可按 90 秒冷却交 1–2 次星界转移（每次稳盖 1 轮；若末尾交得晚、距黄金风蛇首吹不足 90 秒，进首领后等冷却转好再接后续蛇之风，首吹土元素就绪时先交土元素，否则交团队减伤兜住）。开场成群祖尔的爪牙优先放陷地图腾定身等队内群体驱散。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>暗影旋风斩约每 24 秒一轮，按 90 秒交 1–2 次星界（若尾段刚交，风蛇首吹改用土元素或团减）。开场成群爪牙先插陷地图腾定住。</div>
         <div class="rows">
           <div class="row must">
-            <div class="mech"><img class="ic" src="{{I:1305945}}" alt=""><div><div class="n"><span class="badge-must">必做</span>暗影旋风斩</div><div class="s">黯影战士 4 秒读条（每只约 24 秒一轮）· 100 码全团暗影约 85 万</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1305945}}" alt=""><div><div class="n"><span class="badge-must">必做</span>暗影旋风斩</div><div class="s">黯影战士 4 秒读条（约 24 秒一轮）· 100 码暗影约 85 万</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">冷却时</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
-            <div class="why">读条结束前约 2 秒预开星界，单次从约 85 万压到约 53 万；星界稳盖其中 1 轮（仅当两只黯影战士读条紧密交叠时偶尔能同盖 2 轮）。其余轮次靠土元素（就绪时）、成功打断妖术师挂上的风幕及团队减伤硬扛。</div>
+            <div class="why">读条末 2 秒预开星界压至约 53 万；其余轮次靠土元素、断妖术师风幕与团减扛。</div>
           </div>
           <div class="row" id="k-hexvolley">
             <div class="mech"><img class="ic" src="{{I:269972}}" alt=""><div><div class="n">妖术齐射 / 暗影箭</div><div class="s">复活的妖术师读条 · 齐射附带 12 秒暗影诅咒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="or">漏断补救</span><span class="btn-chip"><img class="ic sm" src="{{I:51886}}" alt="">净化灵魂</span></div>
-            <div class="why">妖术齐射第一优先必断，暗影箭卡 12 秒冷却高频轮断顺带续风幕。万一齐射漏断，用净化灵魂驱诅咒。</div>
+            <div class="why">妖术齐射第一必断，暗影箭轮断续风幕；齐射漏断用净化灵魂驱诅咒。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:269935}}" alt=""><div><div class="n">暗影束缚 / 锁定</div><div class="s">祖尔的爪牙 · 盯人 10 秒 · 魔法盾被驱散直接消灭</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:269935}}" alt=""><div><div class="n">暗影束缚 / 锁定</div><div class="s">祖尔的爪牙 · 盯人 10 秒 · 魔法盾被驱直接秒杀</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:51485}}" alt="">陷地图腾</span><span class="or">无群驱时</span><span class="btn-chip"><img class="ic sm" src="{{I:370}}" alt="">净化术</span></div>
-            <div class="why">开场成群爪牙盯人，插陷地图腾（或电能图腾）原地定住防近身，配合队内群体驱散瞬间清场；队里无群体驱散时用净化术逐个点驱直接秒杀。</div>
+            <div class="why">成群爪牙插陷地图腾（或电能）定住等群驱；无群驱时净化术逐个秒杀。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1310755}}" alt=""><div><div class="n">重力猛击 / 压制猛击 / 警戒防卫</div><div class="s">活化守卫物理脉冲与锥形晕 · 影裔勇士正面举盾 6 秒</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1310755}}" alt=""><div><div class="n">重力猛击 / 压制猛击 / 警戒防卫</div><div class="s">活化守卫平砍脉冲约 9 万与锥形晕 · 影裔勇士正面举盾 6 秒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">躲正面锥形 · 绕背避盾</span></div>
-            <div class="why">活化守卫每次平砍都会震出全团约 9 万物理重力猛击（释放抑制剂攻速 +75% 时更密），躲开 3.5 秒读条压制猛击正面锥形；影裔勇士开警戒防卫期间正面偏转一切法术，立刻切目标或绕背输出，先祖狂怒交队内安抚。</div>
+            <div class="why">躲压制猛击正面锥形；影裔举盾偏转正面法术，立刻切目标或绕背，狂怒交安抚。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：旋风斩满 90 秒就交星界，冷却空档补土元素</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：旋风斩满 90 秒交星界，冷却补土元素</span></div>
           <a class="next" href="#s2">下一段：黄金风蛇 ↓</a>
         </div>
       </div>
@@ -167,25 +167,25 @@
       <div class="node">1</div>
       <div class="stop-body">
         <div class="stop-head"><h3>黄金风蛇</h3><span class="kind">BOSS 1</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span><b>蛇之风</b>每 65 秒一组两吹（约 +14/+42 秒、+79/+107 秒、+144/+172 秒、+209/+237 秒起读，读条 2 秒后落地）。开打星界就绪时可排<b>第 1 → 第 4 → 第 7 吹</b>（间隔 ≥ 93 秒）；若开场末尾刚交过星界，从转好后的下一吹起按满 90 秒循环。中间无星界的高压吹风交土元素撑血（距上次满 3 分钟）。高层开打常连带门口一只活化守卫进场，先躲压制猛击顺劈收掉。</div>
+        <div class="rhythm"><span class="lbl">节奏</span><b>蛇之风</b>每 65 秒两吹。开打星界就绪排<b>第 1 / 4 / 7 吹</b>（间隔 ≥ 90 秒），未就绪则转好起按 90 秒循环；空档吹风满 3 分钟交土元素。</div>
         <div class="rows">
           <div class="row must">
             <div class="mech"><img class="ic" src="{{I:1311988}}" alt=""><div><div class="n"><span class="badge-must">必做</span>蛇之风</div><div class="s">2 秒读条 → 5 秒全团自然约 32 万/跳 + 持续击退</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">空档吹风</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
-            <div class="why">读条末预开星界（慢半拍落地补开也能压住后段跳伤），把每跳从约 32 万压到约 18 万；星界未转好的吹风——尤其是开场还叠着活化守卫重力猛击或队血偏低时——交土元素加血顶住。顶风走位避免被吹进熔化的黄金，适时开灵魂行者的恩赐边走边打。</div>
+            <div class="why">读条末开星界压至约 18 万/跳；空档轮交土元素撑血。顶风避开金水，开灵魂行者的恩赐移动打。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:265773}}" alt=""><div><div class="n">吐金</div><div class="s">2 秒读条 · 5 码火焰溅射约 48 万 + 6 秒跳伤约 42 万/跳</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:265773}}" alt=""><div><div class="n">吐金</div><div class="s">2 秒读条 · 5 码溅射约 48 万 + 6 秒跳伤约 42 万/跳</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:79206}}" alt="">灵魂行者的恩赐</span><span class="act-note">分散 5 码 · 贴边放金水</span></div>
-            <div class="why">点名远离队友 5 码，6 秒倒计时结束前贴场地外缘放下熔化的黄金（别堵场地中央与通道，防蛇之风把人吹进去或占掉活性黄金走位空间）；吐金本身裸吃靠治疗抬血即可。</div>
+            <div class="why">点名出人群 5 码，结束前贴边放熔化的黄金别堵中场，伤害本身靠治疗刷。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:265923}}" alt=""><div><div class="n">卢彻的召唤（活性黄金）</div><div class="s">每 65 秒召唤软泥移向首领 · 撞上叠金光闪闪（护盾+增伤）</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:265923}}" alt=""><div><div class="n">卢彻的召唤（活性黄金）</div><div class="s">每 65 秒软泥移向首领 · 撞上叠金光闪闪（护盾+增伤）</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:51485}}" alt="">陷地图腾</span><span class="btn-chip"><img class="ic sm" src="{{I:192058}}" alt="">电能图腾</span></div>
-            <div class="why">活性黄金一旦抵达首领会叠加<b>金光闪闪</b>（护盾与增伤），必须第一时间转火清掉；靠近首领前丢陷地图腾定身或电能图腾昏迷拖住。</div>
+            <div class="why">第一时间转火清掉防叠护盾增伤，靠近首领前插陷地或电能拖住。</div>
           </div>
         </div>
         <div class="subhead">蛇之风每一跳吃多少（持续 5 秒）</div>
@@ -194,7 +194,7 @@
           <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:58.1%">18.3 万</span></div></div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界按 ≥ 90 秒排进蛇之风（开场就绪可排 1 / 4 / 7 吹），空档吹风交土元素</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界满 90 秒排蛇之风，空档交土元素</span></div>
           <a class="next" href="#s3">下一段：陵墓大厅 ↓</a>
         </div>
       </div>
@@ -205,41 +205,47 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>黄金风蛇 → 殓尸者姆沁巴（陵墓大厅）</h3><span class="kind">TRASH · 阿库尔大王 / 血誓刺客 / 守卫队长阿图 / 拉胡艾大王 / 总管姆巴拉 / 提玛吉大王 / 沃希女王 / 帕特拉女王</span></div>
-        <div class="rhythm warn"><span class="lbl">高压段</span>大厅四组小首领按坦克路线顺序推进。<b>星界转移最优先留给阿库尔大王 + 血誓刺客的骤裂叠鲜血吸取</b>；若提玛吉大王爆破重击距阿库尔和姆沁巴均 ≥ 90 秒，才可顺手交星界（备选）。队长壁垒每放必驱，束缚灵魂与邪恶愈合零漏断。</div>
+        <div class="rhythm warn"><span class="lbl">高压段</span><b>星界最优先留给阿库尔骤裂叠鲜血吸取</b>；提玛吉爆破重击仅距阿库尔和姆沁巴均 ≥ 90 秒作备选。队长壁垒必驱，束缚灵魂与邪恶愈合零漏断。</div>
         <div class="rows">
           <div class="row must">
-            <div class="mech"><img class="ic" src="{{I:1297781}}" alt=""><div><div class="n"><span class="badge-must">必做</span>骤裂 / 鲜血吸取</div><div class="s">血誓刺客 18 秒物理流血约 18 万/跳 · 阿库尔 2.5 秒读条只抽流血目标</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1297781}}" alt=""><div><div class="n"><span class="badge-must">必做</span>骤裂 / 鲜血吸取</div><div class="s">刺客 18 秒物理流血约 18 万/跳 · 阿库尔 2.5 秒读条只抽流血目标</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
-            <div class="why"><b>鲜血吸取只打身上带着流血的目标</b>（没有骤裂不吃这一下）。阿库尔约每 24–25 秒先对坦克读<b>致死流血</b>（20% 降疗），约 <b>7 秒后</b>再读鲜血吸取——<b>身上挂着骤裂、且看到阿库尔开始读致死流血时开 12 秒星界转移</b>，正好压住后半段骤裂（约 18 万 → 12 万/跳）并完整罩住随后的鲜血吸取重击（开星界仍吃约 61 万）；备选也可等鲜血吸取起读再开（前半段骤裂先靠治疗刷）。</div>
+            <div class="why"><b>带骤裂且见阿库尔读致死流血（早吸取约 7 秒）就开星界</b>，连盖骤裂（压至约 12 万）与吸取（仍约 61 万）；备选等吸取起读再开。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1296671}}" alt=""><div><div class="n">队长壁垒</div><div class="s">守卫队长阿图 2.5 秒读条 · 给盟友挂 18 秒 −30% 减伤魔法</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1296671}}" alt=""><div><div class="n">队长壁垒</div><div class="s">守卫队长阿图 2.5 秒读条 · 盟友 18 秒 −30% 减伤魔法</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:370}}" alt="">净化术</span></div>
-            <div class="why">读完瞬间盯紧拉胡艾大王、总管姆巴拉或活化守卫身上的盾增益，第一时间净化术全驱干净。</div>
+            <div class="why">读完盯紧拉胡艾、姆巴拉或守卫身上的盾，立刻驱干净。</div>
           </div>
           <div class="row" id="k-bindsoul">
-            <div class="mech"><img class="ic" src="{{I:270920}}" alt=""><div><div class="n">束缚灵魂 / 邪恶愈合 / 灵魂之箭</div><div class="s">沃希女王 10 秒魅惑（魔法）· 总管姆巴拉读条回血魔法增益</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:270920}}" alt=""><div><div class="n">束缚灵魂 / 邪恶愈合 / 灵魂之箭</div><div class="s">沃希 10 秒魅惑（魔法）· 姆巴拉读条回血魔法增益</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="or">漏断补救</span><span class="btn-chip"><img class="ic sm" src="{{I:370}}" alt="">净化术</span></div>
-            <div class="why">沃希女王的束缚灵魂与总管姆巴拉的邪恶愈合必须在起读阶段零漏断，灵魂之箭顺手轮断挂风幕。万一漏断：<b>邪恶愈合立刻用净化术驱掉回血魔法增益</b>；<b>束缚灵魂漏断使队友变为敌对，同样直接对被魅惑者施放净化术驱散魔法</b>。提玛吉大王与沃希女王有永恒联结共享血量，双目标顺劈。</div>
+            <div class="why">前两项零漏断，灵魂之箭顺断挂风幕；漏断邪恶愈合或被魅惑队友均立刻净化术驱掉。提玛吉与沃希共享血量。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1296719}}" alt=""><div><div class="n">叉状闪电 / 过载 / 剑刃风暴 / 爆破重击</div><div class="s">拉胡艾弹射约 49 万与旋转光束 · 提玛吉盯人旋风与高额物理重击</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1296719}}" alt=""><div><div class="n">叉状闪电 / 过载</div><div class="s">拉胡艾大王 · 弹射约 49 万与旋转闪电柱</div></div></div>
             <div class="to">→</div>
-            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:192063}}" alt="">阵风</span><span class="act-note">分散躲光束 · 远拉剑刃风暴</span></div>
-            <div class="why">拉胡艾放过载时躲开旋转闪电柱并稍微分散吃叉状闪电（成功断姆巴拉挂的风幕可减伤）；提玛吉开剑刃风暴盯自己立刻用阵风或幽魂步拉开；3 秒读条高额物理爆破重击仅在距阿库尔与姆沁巴均 ≥ 90 秒时作为备选顺手开星界。</div>
+            <div class="skill"><span class="act-note">分散躲旋转光束</span></div>
+            <div class="why">过载躲开旋转柱，微分散吃叉状闪电（断姆巴拉挂的风幕可减伤）。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1306763}}" alt=""><div><div class="n">毒蛇打击 / 暗影箭雨 / 狩猎跃击</div><div class="s">帕特拉女王 8 秒中毒与地面箭雨 · 迅猛龙约 54 万扑击</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:270927}}" alt=""><div><div class="n">剑刃风暴 / 爆破重击</div><div class="s">提玛吉大王 · 盯人旋风与 3 秒读条高额物理重击</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:192063}}" alt="">阵风</span><span class="act-note">远拉剑刃风暴</span></div>
+            <div class="why">风暴盯自己立刻阵风或幽魂步拉开；爆破重击仅距阿库尔与姆沁巴 ≥ 90 秒时备选开星界。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1306763}}" alt=""><div><div class="n">毒蛇打击 / 暗影箭雨 / 狩猎跃击</div><div class="s">帕特拉 8 秒中毒与地面箭雨 · 迅猛龙约 54 万扑击</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">躲箭雨与迅猛龙正面</span></div>
-            <div class="why">毒蛇打击（中毒）交治疗驱散；躲开暗影箭雨紫圈，被迅猛龙扑中后立刻侧移避开后续正面锥形撕裂，兽性狂暴交队内安抚。</div>
+            <div class="why">中毒交治疗驱；躲箭雨紫圈，被迅猛龙扑中立刻侧移避正面撕裂，狂暴交安抚。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界留骤裂叠鲜血吸取</span><span><img class="ic sm" src="{{I:370}}" alt="">队长壁垒秒驱</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界留骤裂叠吸取</span><span><img class="ic sm" src="{{I:370}}" alt="">队长壁垒秒驱</span></div>
           <a class="next" href="#s4">下一段：木乃伊区 ↓</a>
         </div>
       </div>
@@ -250,29 +256,29 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>木乃伊走廊 → 殓尸者姆沁巴</h3><span class="kind">TRASH · 未完成的木乃伊 / 葬礼构造体 / 防腐液 / 净化构造体</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>这一段重点是<b>零漏断恶疾排放</b>与<b>第一时间开棺救人</b>。星界转移留着进姆沁巴（除非距进首领还有 90 秒以上且血线危急）。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>重点是<b>零漏断恶疾排放</b>与<b>秒点棺材救人</b>；星界留进姆沁巴（距首领 ≥ 90 秒且危急才交）。</div>
         <div class="rows">
           <div class="row" id="k-drain">
             <div class="mech"><img class="ic" src="{{I:267763}}" alt=""><div><div class="n">恶疾排放</div><div class="s">未完成的木乃伊读条 · 全团 12 秒疾病自然掉血</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
-            <div class="why">全队第一优先打断（疾病不可由清毒图腾清除），木乃伊成群刷新时设焦点卡 12 秒风剪轮流断死，成功打断顺手获得 12 秒风幕。</div>
+            <div class="why">第一必断（疾病清毒图腾驱不了），设焦点卡 12 秒轮断顺拿风幕。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:271555}}" alt=""><div><div class="n">埋葬 / 重力猛击</div><div class="s">葬礼构造体 3 秒关棺材并引导哀痛恸哭 · 平砍脉冲全团物理</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:271555}}" alt=""><div><div class="n">埋葬 / 重力猛击</div><div class="s">葬礼构造体 3 秒关棺引导哀痛恸哭 · 平砍物理脉冲约 9 万</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">秒点棺材救人</span></div>
-            <div class="why">队友被关进棺材后构造体会引导递增全团暗影哀痛恸哭，<b>开棺救人会立刻终止引导</b>——第一时间冲过去点开（动作够快可压至零跳伤）；同时注意构造体平砍带全团约 9 万物理重力猛击脉冲。</div>
+            <div class="why"><b>开棺立刻终止哀痛恸哭引导</b>，队友被关第一时间冲过去点开（够快可零跳伤）。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:270293}}" alt=""><div><div class="n">净化打击</div><div class="s">走廊入口净化构造体 2 秒读条 · 全团火焰约 88 万 + 留火圈</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:270293}}" alt=""><div><div class="n">净化打击</div><div class="s">净化构造体 2 秒读条 · 全团火焰约 88 万 + 留火圈</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">满血硬吃 · 立刻离开火圈</span></div>
-            <div class="why">落地第一时间走出脚下净化烈焰；星界优先留进姆沁巴（只有前面恰好成功断到木乃伊时才会顺带挂着风幕，不可当作必有减伤）。</div>
+            <div class="why">落地秒出脚下净化烈焰，星界留进姆沁巴（不指望风幕常驻）。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:57994}}" alt="">优先：恶疾排放零漏断 + 埋葬秒点救人，星界留进姆沁巴</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:57994}}" alt="">优先：恶疾排放零漏断 + 秒开棺，星界留姆沁巴</span></div>
           <a class="next" href="#s5">下一段：殓尸者姆沁巴 ↓</a>
         </div>
       </div>
@@ -283,36 +289,36 @@
       <div class="node">2</div>
       <div class="stop-body">
         <div class="stop-head"><h3>殓尸者姆沁巴</h3><span class="kind">BOSS 2</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>固定约 <b>67 秒</b>大循环（排干体液与燃烧腐蚀每约 33 秒各一次，觉醒猛击与埋葬每约 67 秒各一次）。<b>开场先看首轮排干体液点不点自己</b>：点自己落地后立刻补开星界转移压血线，帮治疗尽快刷过 90% 血解干枯（此时 +33 秒首轮觉醒猛击无个人星界）；若首轮未点自己，可作为备选把星界转给 +30 秒起读的觉醒猛击（67 秒后的下一轮觉醒猛击同样无个人星界，隔轮约 134 秒再交）。无个人星界的觉醒猛击轮次提前保持满血并接团队减伤或治疗外减。高层开打常连带门口防腐液进场先 A 掉，木乃伊为觉醒猛击原生召唤。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>约 <b>67 秒</b>大循环。<b>首轮排干点自己落地补星界</b>；未点自己可备选转交觉醒猛击（隔轮再交），无星界觉醒轮满血接团减/外减。</div>
         <div class="subhead">首轮 67 秒循环（以开打为 0 秒，标明起读 → 落地）</div>
         <div class="rows">
           <div class="row step must">
             <div class="when">+6 → +8 秒</div>
-            <div class="mech"><img class="ic" src="{{I:267618}}" alt=""><div><div class="n"><span class="badge-must">必做</span>排干体液 → 干枯</div><div class="s">2 秒读条（每约 33 秒）· 6 秒自然持续约 66 万/跳（非中毒，清毒图腾驱不了）· 结束必挂干枯</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:267618}}" alt=""><div><div class="n"><span class="badge-must">必做</span>排干体液 → 干枯</div><div class="s">2 秒读条（约 33 秒）· 6 秒自然持续约 66 万/跳（非中毒，清毒驱不了）</div></div></div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">冷却备选</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
-            <div class="why">星界转移<b>阻止不了干枯上身</b>（排干体液结束固定触发干枯：降伤/减速 50% 至 90% 血以上），但点名落地后补开星界可把覆盖窗口内的跳伤从约 66 万压到约 37 万/跳，帮治疗迅速刷过 90% 血解除干枯；同时躲开脚下触发的爆炸酸液。星界冷却中再被点名可备选交土元素撑血。</div>
+            <div class="why"><b>挡不住干枯</b>（需刷过 90% 血解除），落地补星界压至约 37 万/跳帮治疗速抬，同时躲脚下酸液；星界冷却备选土元素。</div>
           </div>
           <div class="row step">
             <div class="when">+20 → +24 秒</div>
-            <div class="mech"><img class="ic" src="{{I:267639}}" alt=""><div><div class="n">燃烧腐蚀</div><div class="s">4 秒读条（每约 33 秒）· 10 码火焰约 83 万并留燃烧之地</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:267639}}" alt=""><div><div class="n">燃烧腐蚀</div><div class="s">4 秒读条（约 33 秒）· 10 码火焰约 83 万并留火池</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:192063}}" alt="">阵风</span><span class="act-note">提前出人群 10 码</span></div>
-            <div class="why">点名提前远离队友 10 码，落地瞬间按阵风（或幽魂步）跳出燃烧之地避免额外跳伤；一般单吃即可，血线危急且距下次必留点 ≥ 90 秒时可兜底开星界。</div>
+            <div class="why">提前出人群 10 码，落地瞬间阵风（或幽魂步）跳出火池；常规单吃，危急且满 90 秒才兜底星界。</div>
           </div>
           <div class="row step">
             <div class="when">+30 → +33 秒</div>
-            <div class="mech"><img class="ic" src="{{I:1312146}}" alt=""><div><div class="n">觉醒猛击 → 未完成的木乃伊</div><div class="s">3 秒读条（每约 67 秒）全团暗影约 103 万 · 开棺召木乃伊读恶疾排放</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1312146}}" alt=""><div><div class="n">觉醒猛击 → 未完成的木乃伊</div><div class="s">3 秒读条（约 67 秒）全团暗影约 103 万 · 召木乃伊读恶疾排放</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="or">未中排干备选</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
-            <div class="why">木乃伊出棺后立刻盯断恶疾排放（成功打断拿 12 秒风幕）。若首轮排干体液未点自己且星界在手，可备选在觉醒猛击读条末预开星界把约 103 万暗影压到约 66 万（隔轮约 134 秒可再交）；<b>首轮星界交了排干时，第 1 轮（+33 秒）与第 2 轮（约 +99 秒，星界约 +100 秒才转好）觉醒猛击均无个人星界，上轮刚交过觉醒猛击时同理，务必提前抬满血线并按队伍安排接团减或治疗外减</b>。</div>
+            <div class="why">木乃伊出棺秒断恶疾排放。首轮未中排干可备选读条末开星界压至约 66 万（隔轮再交）；无星界轮（含排干交过的前两轮）满血接团减。</div>
           </div>
           <div class="row step">
             <div class="when">+60 → +63 秒</div>
-            <div class="mech"><img class="ic" src="{{I:267702}}" alt=""><div><div class="n">埋葬</div><div class="s">3 秒读条（每约 67 秒）关一名输出进墓穴 · 拖延会放出制成的木乃伊</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:267702}}" alt=""><div><div class="n">埋葬</div><div class="s">3 秒读条（约 67 秒）关输出进棺 · 拖延出制成的木乃伊</div></div></div>
             <div class="skill"><span class="act-note">盯晃动棺材立刻点开</span></div>
-            <div class="why">被关进棺材时按挣扎/发信号提示队友，在外面看到晃动棺材第一时间点开打断仪式，防止多刷制成的木乃伊。</div>
+            <div class="why">被关发信号，外面见晃动棺材第一时间点开防多刷怪。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：点自己排干体液落地补星界；未中排干时可备选交觉醒猛击（隔轮再交）</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：点排干落地补星界，未中备选交觉醒猛击</span></div>
           <a class="next" href="#s6">下一段：议会前走廊 ↓</a>
         </div>
       </div>
@@ -323,35 +329,35 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>殓尸者姆沁巴 → 部落议会</h3><span class="kind">TRASH · 皇家狂战士 / 幻影妖术祭司 / 幻影萨满祭司 / 荣耀迅猛龙 / 鬼魂蛮兵</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>本段节奏很快，高层末尾残怪常直接<b>连带进部落议会开场</b>。妖术必断、治疗之潮图腾必秒转；中嗜血飞斧且血线吃紧、距议会 P2 首轮翻滚还有 90 秒以上时，可顺手补开星界转移（否则留给议会翻滚）。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>妖术必断、治疗之潮图腾秒拆；嗜血飞斧血紧且距议会 P2 首轮翻滚 ≥ 90 秒可补星界，否则留给翻滚。</div>
         <div class="rows">
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1301851}}" alt=""><div><div class="n">嗜血飞斧 / 暴怒猛击</div><div class="s">皇家狂战士 · 直击约 27 万 + 12 秒物理流血约 20 万/跳</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">条件</span><span class="act-note">躲暴怒猛击落点</span></div>
-            <div class="why">被挂上嗜血飞斧且血线偏低（尤其叠冰霜震击或进议会叠斩首之斧）时，若距议会首轮翻滚 ≥ 90 秒可补开星界把流血压到约 12 万/跳；同时躲开 3 秒读条暴怒猛击防击退。</div>
+            <div class="why">挂流血血危且距议会翻滚 ≥ 90 秒补星界压至约 12 万/跳；躲 3 秒读条暴怒猛击防击退。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:270492}}" alt=""><div><div class="n">妖术 / 幽灵弹</div><div class="s">幻影妖术祭司 · 妖术变恐龙 5 秒（诅咒）</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="or">漏断补救</span><span class="btn-chip"><img class="ic sm" src="{{I:51886}}" alt="">净化灵魂</span></div>
-            <div class="why">妖术第一优先零漏断，幽灵弹高频轮断续风幕；万一妖术漏断用净化灵魂秒驱队友诅咒。</div>
+            <div class="why">妖术零漏断，幽灵弹轮断续风幕；妖术漏断秒用净化灵魂驱诅咒。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:270496}}" alt=""><div><div class="n">治疗之潮图腾 / 冰霜震击</div><div class="s">幻影萨满祭司 · 图腾每 2.5 秒给全怪回 10% 血 · 震击约 38 万冰霜减速</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:270496}}" alt=""><div><div class="n">治疗之潮图腾 / 冰霜震击</div><div class="s">幻影萨满祭司 · 图腾每 2.5 秒全怪回 10% 血 · 震击约 38 万减速</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">第一时间转火秒拆图腾</span></div>
-            <div class="why">治疗之潮图腾一落地立刻转火打掉，绝不让怪群满血；冰霜震击瞬发无读条，成功断幽灵弹后的风幕可顺带减伤。</div>
+            <div class="why">图腾一落地秒转火拆掉防满血；冰霜震击无读条，靠断弹风幕顺减。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:270514}}" alt=""><div><div class="n">地震岩层 / 狩猎跃击</div><div class="s">鬼魂蛮兵 5 秒读条物理击飞 · 迅猛龙扑击接锥形</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">躲地面圈与迅猛龙正面</span></div>
-            <div class="why">地震岩层看地面范围提前走开；迅猛龙扑击后立刻避开正面撕裂。</div>
+            <div class="why">地震岩层看地面走开，迅猛龙扑击后立刻侧移避正面撕裂。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:57994}}" alt="">优先：妖术零漏断 + 治疗之潮图腾秒拆，嗜血飞斧按 ≥ 90 秒条件交星界</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:57994}}" alt="">优先：断妖术 + 秒拆图腾，飞斧满 90 秒才交星界</span></div>
           <a class="next" href="#s7">下一段：部落议会 ↓</a>
         </div>
       </div>
@@ -362,26 +368,26 @@
       <div class="node">3</div>
       <div class="stop-body">
         <div class="stop-head"><h3>部落议会（库拉 · 阿卡阿里 · 扎纳扎尔）</h3><span class="kind">BOSS 3</span></div>
-        <div class="rhythm warn"><span class="lbl">高压段</span>固定按<b>屠夫库拉 → 征服者阿卡阿里 → 智者扎纳扎尔</b>逐一击杀；已阵亡首领的灵魂会继续放<b>旋转利斧</b>与<b>翻滚</b>。<b>P2 阿卡阿里活跃时每约 20 秒一轮翻滚，进入 P3 灵魂阶段间隔拉长至约 40 秒</b>（7 码集合分摊仍约 105 万，无视护甲），星界转移与土元素必须拆开保多轮翻滚；P3 紧盯毒性新星零漏断并优先秒拆爆裂图腾。开场常连带门前狂战士/迅猛龙进场顺劈清掉。</div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>按<b>库拉 → 阿卡阿里 → 扎纳扎尔</b>击杀；阵亡灵魂仍放旋斧与翻滚。P2 翻滚约 20 秒、P3 约 40 秒，<b>星界与土元素拆开保多轮翻滚</b>；P3 零漏断毒性新星、秒拆爆裂图腾。</div>
         <div class="subhead">三阶段推进节奏</div>
         <div class="rows">
           <div class="row step">
             <div class="when">P1 · 库拉</div>
             <div class="mech"><img class="ic" src="{{I:266231}}" alt=""><div><div class="n">斩首之斧 / 旋转利斧</div><div class="s">斩首直击约 61 万 + 8 秒流血约 44 万/跳 · 旋转 10 码击退甩双斧</div></div></div>
             <div class="skill"><span class="act-note">保持 10 码外躲旋斧</span><span class="or">危急备选</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界 / 土元</span></div>
-            <div class="why">保持 10 码外躲旋转利斧击退和飞出的双斧路径（P2/P3 灵魂版照躲）。被点斩首之斧且叠加连带小怪嗜血飞斧时可备选开星界或土元素保命；若血线安全，优先把星界留给 P2 翻滚（若此处交了星界，P2 首轮翻滚改交土元素，等满 90 秒后接后续翻滚）。</div>
+            <div class="why">保持 10 码外躲旋斧与双斧（灵魂版照躲）；斩首叠小怪流血危急才交星界或土元，血稳优先把星界留 P2 翻滚。</div>
           </div>
           <div class="row step must">
             <div class="when">P2 · 阿卡阿里</div>
-            <div class="mech"><img class="ic" src="{{I:1310761}}" alt=""><div><div class="n"><span class="badge-must">必做</span>翻滚</div><div class="s">6 秒锁定冲锋 · 7 码内全队均摊约 105 万物理（无视护甲；P2 每约 20 秒、P3 灵魂每约 40 秒）</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1310761}}" alt=""><div><div class="n"><span class="badge-must">必做</span>翻滚</div><div class="s">6 秒锁定 · 7 码均摊约 105 万无视护甲物理（P2 约 20 秒 / P3 约 40 秒）</div></div></div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">空档轮</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
-            <div class="why">全队必须集合在被点名者 7 码内分摊（单吃必死）。冲锋落地前 2–3 秒预开星界，把约 105 万物理压到约 65 万；星界转好就交。无星界轮次开土元素（距上次满 3 分钟，持续 30 秒，+15% 血量：<b>P2 每 20 秒冲锋可覆盖相邻两轮，P3 灵魂 40 秒间隔只够保一轮</b>），双牌冷却的轮次靠团队减伤与满血硬吃。</div>
+            <div class="why">7 码集合分摊（单吃必死），落地前 2–3 秒预开星界压至约 65 万；空档轮交土元素（30 秒：P2 罩两轮、P3 保一轮），双冷却满血吃团减。</div>
           </div>
           <div class="row step" id="k-nova">
             <div class="when">P3 · 扎纳扎尔</div>
-            <div class="mech"><img class="ic" src="{{I:267273}}" alt=""><div><div class="n">毒性新星 / 电弧 / 元素的召唤</div><div class="s">新星全团 12 秒中毒 · 电弧高额自然弹射 · 召唤三图腾含 8 秒瓦解</div></div></div>
-            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="act-note">优先秒拆爆裂图腾 · 瓦解前停读条</span></div>
-            <div class="why">毒性新星第一优先零漏断（成功打断挂风幕减电弧）；电弧注意与队友分散防弹射；元素的召唤出爆裂、雷鸣、洪流三图腾，<b>第一优先在「爆炸」读完前转火秒拆爆裂图腾</b>再清其余两根——雷鸣图腾 8 秒读条<b>瓦解</b>落地会打断并反制正在施法的玩家 4 秒，读条将完时停读条改打瞬发。</div>
+            <div class="mech"><img class="ic" src="{{I:267273}}" alt=""><div><div class="n">毒性新星 / 电弧 / 元素的召唤</div><div class="s">新星全团 12 秒中毒 · 电弧弹射 · 三图腾含 8 秒瓦解</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="act-note">先秒拆爆裂图腾 · 瓦解前停读条</span></div>
+            <div class="why">毒性新星零漏断顺拿风幕，电弧微分散；出三图腾<b>先秒拆爆裂图腾</b>，雷鸣图腾 8 秒<b>瓦解</b>读完前停读条改打瞬发防反制 4 秒。</div>
           </div>
         </div>
         <div class="subhead">翻滚（7 码集合分摊）单次吃多少</div>
@@ -390,7 +396,7 @@
           <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:61.8%">64.6 万</span></div></div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：翻滚集合分摊，星界与土元素错开顶</span><span><img class="ic sm" src="{{I:57994}}" alt="">P3 毒性新星零漏断 · 先拆爆裂图腾</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：翻滚集合分摊，星界土元错开</span><span><img class="ic sm" src="{{I:57994}}" alt="">P3 断新星 · 拆爆裂图腾</span></div>
           <a class="next" href="#s8">下一段：祖尔之影 ↓</a>
         </div>
       </div>
@@ -401,29 +407,29 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>部落议会 → 达萨大王（祖尔之影）</h3><span class="kind">TRASH · 祖尔之影 / 祖尔的爪牙 / 幻影萨满祭司（可选连带）</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>桥上召唤的<b>祖尔的爪牙用净化术直接秒杀</b>。每次<b>黑暗启示同时点名两名玩家</b>，两名点名者分方向与彼此及其他队友均拉开 20 码，在 5 秒倒计时剩 2–3 秒预开星界转移（前提是距尾王你打算交星界的第一个点满 90 秒；不足则靠治疗抬血或顺延尾王起手轴）。地面同时出<b>两个黑暗之池</b>，开打前分好双池主踩与补位。若路线连带幻影萨满祭司，见治疗之潮图腾同前段秒拆。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>爪牙秒净化；黑暗启示双点名分方向拉 20 码，距尾王首星界点 ≥ 90 秒时剩 2–3 秒预开星界。双黑暗之池提前分主踩与补位。</div>
         <div class="rows">
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:269935}}" alt=""><div><div class="n">暗影束缚（祖尔的爪牙）</div><div class="s">祖尔之影周期召唤 · 魔法护盾被驱散直接消灭</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:269935}}" alt=""><div><div class="n">暗影束缚（祖尔的爪牙）</div><div class="s">祖尔之影周期召唤 · 魔法盾被驱直接秒杀</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:370}}" alt="">净化术</span></div>
-            <div class="why">小怪一刷新立刻切目标净化术秒杀，不让它盯人近身也不浪费输出。</div>
+            <div class="why">刷新秒切目标净化术驱杀，不让它近身。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1298304}}" alt=""><div><div class="n">黑暗启示</div><div class="s">1.5 秒读条 → 同点两人 · 5 秒倒计时炸 20 码暗影约 79 万</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1298304}}" alt=""><div><div class="n">黑暗启示</div><div class="s">1.5 秒读条 → 同点两人 · 5 秒炸 20 码暗影约 79 万</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="act-note">双点名分方向拉 20 码</span></div>
-            <div class="why">两名被点名者朝不同方向撤离，<b>彼此以及与其他队友均保持 20 码以上单吃</b>；确认距尾王首个星界点 ≥ 90 秒时，在倒计时剩 2–3 秒预开星界把约 79 万压到约 50 万（12 秒持续还能顺带减同时落下的暗影弹幕跳伤）。</div>
+            <div class="why">两人分方向与彼此及全队拉满 20 码单吃；满足 ≥ 90 秒时剩 2–3 秒开星界压至约 50 万。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:272388}}" alt=""><div><div class="n">暗影弹幕 / 黑暗之池</div><div class="s">弹幕直击约 37 万 + 4 秒跳伤约 32 万/跳 · 双池同时出现，池内持续高额暗影伤</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:272388}}" alt=""><div><div class="n">暗影弹幕 / 黑暗之池</div><div class="s">弹幕直击约 37 万 + 跳伤约 32 万 · 每 28 秒同出双池</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">两池各一人站到消失（约 6.5 秒）</span></div>
-            <div class="why">地面每约 28 秒同时出现<b>两个黑暗之池，两池各由一人持续站到池子消失（通常约 6.5 秒）</b>，不是踩一下就走；开打前分好两池主踩（常规坦克与治疗各看一池）及远程补位顺序，防漏踩其中一池，轮到自己补站前确认血线健康。暗影弹幕常规靠治疗抬血。</div>
+            <div class="why">双池各站一人直至消失（非踩一下就走），提前分主踩与补位、满血补站；弹幕靠治疗刷。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:370}}" alt="">优先：爪牙秒净化 · 双池分工站到消失</span><span><img class="ic sm" src="{{I:108271}}" alt="">黑暗启示分方向拉 20 码，距尾王首个星界点 ≥ 90 秒时剩 2–3 秒预开</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:370}}" alt="">优先：爪牙秒净化 · 双池站到消失</span><span><img class="ic sm" src="{{I:108271}}" alt="">启示分拉 20 码满 90 秒开星界</span></div>
           <a class="next" href="#s9">下一段：达萨大王 ↓</a>
         </div>
       </div>
@@ -434,26 +440,26 @@
       <div class="node">4</div>
       <div class="stop-body">
         <div class="stop-head"><h3>达萨大王 / 提扎拉 / 莱班</h3><span class="kind">BOSS 4</span></div>
-        <div class="rhythm warn"><span class="lbl">高压段</span>P1（开打至<b>提扎拉登场</b>，约 79–94 秒）面对达萨大王 + 莱班，零漏断致命咆哮并躲天花板长矛；提扎拉登场转入 P2 固定 <b>47 秒循环</b>：0 秒<b>震地之跃</b>（4 秒起读，+4.5–7 秒连跳 4 次，8 码物理约 91 万）→ +15 秒<b>镀金毁灭</b>（6 秒读条，+21 秒落地火焰直击约 80 万 + 15 秒跳伤约 14 万/跳）。<b>12 秒星界转移盖完震地后盖不到 +21 秒落地的镀金毁灭</b>，统一按「实际交牌满 90 秒接第一轮可预开震地，随后隔轮 94 秒循环」排轴：P1 留着不开则稳交 P2 <b>第 1、3 轮震地</b>；若在 P1 首轮镀金（+30/+36 秒）先交星界，P2 从<b>第 2、4 轮震地</b>接轴；若慢 P1 在第二轮镀金（+74/+80 秒）才交星界，P2 前两轮震地都在冷却，要等到<b>第 3 轮震地</b>再接轴。<b>土元素（180 秒/30 秒）</b>按 P2 镀金毁灭时点开通常只够交一次（须距上次满 3 分钟），在镀金读条中提前 1–3 秒按出；双牌均冷却的轮次满血分散硬吃并交团队减伤。</div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>P1 零漏断致命咆哮并躲矛；P2 固定 <b>47 秒循环</b>（震地之跃 → +15 秒镀金毁灭）。<b>星界盖不到同轮镀金，按满 90 秒隔轮交 P2 震地</b>（P1 留牌交 1/3 轮，P1 交过按满 90 秒顺延）；土元素满 3 分钟于 P2 镀金读条提前交。</div>
         <div class="subhead">P1 与 P2 固定循环（P2 以每轮震地之跃起读为 0 秒）</div>
         <div class="rows">
           <div class="row step" id="k-roar">
             <div class="when">P1 · 至提扎拉登场</div>
-            <div class="mech"><img class="ic" src="{{I:269369}}" alt=""><div><div class="n">致命咆哮 / 凌空猛击 / 穿刺之矛</div><div class="s">莱班 4 秒全团恐惧（延续至 P2 首轮震地）· 达萨 4 秒读条高额物理跳跃 · 天花板落矛重击加 5 秒流血</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:269369}}" alt=""><div><div class="n">致命咆哮 / 凌空猛击 / 穿刺之矛</div><div class="s">莱班 4 秒恐惧（延续至 P2 首轮震地）· 达萨 8 码跳跃 · 天花板落矛</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="or">兜底</span><span class="btn-chip"><img class="ic sm" src="{{I:8143}}" alt="">战栗图腾</span></div>
-            <div class="why">莱班的致命咆哮必须与队友轮流零漏断——<b>提扎拉刚登场起读首轮震地后约 5 秒，莱班通常还会再读一次致命咆哮</b>，分散同时切忌放断（漏断时若点了战栗图腾可解恐惧），并避开莱班狩猎跃击正面锥形。达萨读凌空猛击时 8 码分散，天花板穿刺之矛全程看地面提示躲开。P1 约 +30 秒起读首轮镀金毁灭（慢 P1 在约 +74 秒起读/+80 秒落地还会多结算一次）；<b>无论哪轮 P1 镀金先交了星界，均按本次实际按键时间满 90 秒后接第一轮可预开的 P2 震地（首轮交接第 2 轮，+74–80 秒交则要等到第 3 轮）</b>。</div>
+            <div class="why">莱班致命咆哮轮断至击杀（<b>P2 首轮震地期间还会再读一次</b>，漏断插战栗），躲莱班锥形、达萨 8 码跳与落矛；P1 镀金若先交星界，P2 按满 90 秒顺延接震地。</div>
           </div>
           <div class="row step must">
             <div class="when">P2 · 0 → +4.5 秒</div>
-            <div class="mech"><img class="ic" src="{{I:1303327}}" alt=""><div><div class="n"><span class="badge-must">必做</span>震地之跃（每 47 秒）</div><div class="s">提扎拉 4 秒读条后于 +4.5–7 秒连续 4 次点名跳跃 · 8 码物理约 91 万</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1303327}}" alt=""><div><div class="n"><span class="badge-must">必做</span>震地之跃（每 47 秒）</div><div class="s">提扎拉 4 秒读条后连跳 4 次 · 8 码物理约 91 万</div></div></div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="act-note">立刻 8 码分散 · 首轮留断莱班</span></div>
-            <div class="why">全队分散 8 码防止吃双跳（首轮震地连跳期间留意莱班最后一发致命咆哮，及时给风剪）。物理伤害吃不到风幕，在 4 秒读条期间预开星界把单次约 91 万压到约 60 万；90 秒冷却正好隔轮（94 秒）再交。12 秒星界盖不到 +21 秒才落地的镀金毁灭；无星界也无土元素的轮次保持满血分散，配合治疗外减伤与自然守护者兜底。</div>
+            <div class="why">全队 8 码分散防吃双跳（首轮别忘断莱班咆哮）。物理不吃风幕，读条内预开星界压至约 60 万，隔轮（94 秒）再交；无牌轮满血吃团减。</div>
           </div>
           <div class="row step">
             <div class="when">P2 · +15 → +21 秒</div>
-            <div class="mech"><img class="ic" src="{{I:1303267}}" alt=""><div><div class="n">镀金毁灭（每 47 秒）</div><div class="s">6 秒读条 · +21 秒全团火焰直击约 80 万 + 15 秒火焰跳伤约 14 万/跳</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1303267}}" alt=""><div><div class="n">镀金毁灭（每 47 秒）</div><div class="s">6 秒读条 · +21 秒火焰直击约 80 万 + 15 秒跳伤约 14 万/跳</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素（≥ 3 分）</span><span class="or">重排备选</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
-            <div class="why">距上次满 3 分钟时，在<b>镀金毁灭读条中提前 1–3 秒交土元素，确认 +15% 血量上限抬起再接直击</b>（压线按出可能要到首跳才生效；30 秒持续罩完直击与 15 秒跳伤，约 +48–50 秒结束早于下轮震地落地，仅落地后补开才可能尾段搭到下轮震地但会漏掉直击）。若血线危急改在此处交 12 秒星界（只覆盖 15 秒持续跳伤中的一段），会打乱原本的隔轮震地轴——<b>直接从本次按下星界起算，满 90 秒后接第一轮能预开的震地之跃</b>。镀金毁灭后达萨获得 12 秒灼金（保持侧后方避正面火波），且<b>天花板穿刺之矛会持续贯穿 P2</b>，走位始终盯地板躲矛。</div>
+            <div class="why">满 3 分钟于读条中提前 1–3 秒交土元素抬血接直击（30 秒盖完跳伤）；危急改交星界则满 90 秒后再接震地。之后避开达萨 12 秒灼金正面火波并全程躲矛。</div>
           </div>
         </div>
         <div class="subhead">P2 震地之跃单次吃多少</div>
@@ -462,7 +468,7 @@
           <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:66.2%">60.4 万</span></div></div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：按实际按键满 90 秒接可预开震地（之后隔轮循环）</span><span><img class="ic sm" src="{{I:198103}}" alt="">土元素满 3 分钟于镀金读条中提前交</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：满 90 秒隔轮预开星界接震地</span><span><img class="ic sm" src="{{I:198103}}" alt="">土元素于镀金读条提前交</span></div>
           <a class="next" href="#talent">查看天赋 ↓</a>
         </div>
       </div>

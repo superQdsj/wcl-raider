@@ -126,13 +126,13 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>开场花园 → 莱克希前</h3><span class="kind">TRASH · 孢荒喷射者 / 光耀播法者 / 光噬鞭笞者 / 翠绿林地守护者</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>开场圣佑术转好就对准<b>喷涌之花</b>交；多只播法者同读时果断交群控，保护与圣盾留给首领一或突发合波保命（开场如交圣盾可在 8 秒无敌期内顺手挂牺牲保脆皮）。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>圣佑转好交<b>喷涌之花</b>，多只播法者同读甩群控；保护与圣盾留给首领一或突发合波。</div>
         <div class="rows">
           <div class="row must">
             <div class="mech"><img class="ic" src="{{I:1263628}}" alt=""><div><div class="n"><span class="badge-must">必做</span>喷涌之花</div><div class="s">孢荒喷射者 · 60 码每 2 秒神圣伤（6 秒）</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">全队 60 码硬吃，常与<b>拔根而起</b>重叠。读条快结束时预开圣佑，同时覆盖 8 秒减伤与 10 秒吸收盾。</div>
+            <div class="why">全队硬吃且常叠拔根而起，读条末预开圣佑连减伤带盾覆盖。</div>
           </div>
           <div class="bars">
             <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">43.1 万 / 跳</span></div></div>
@@ -142,23 +142,23 @@
             <div class="mech"><img class="ic" src="{{I:1301834}}" alt=""><div><div class="n">光箭雨 · 光芒箭</div><div class="s">光耀播法者 · 群体 / 单体神圣读条</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:115750}}" alt="">盲目之光</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:853}}" alt="">制裁之锤</span></div>
-            <div class="why"><b>光箭雨</b>漏断就是全队重伤大 AoE，优先级高于光芒箭；多只同时读光箭雨直接甩群控。</div>
+            <div class="why"><b>光箭雨</b>漏断全队重伤，优先级高于光芒箭；多只同读直接群控。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1255205}}" alt=""><div><div class="n">拔根而起</div><div class="s">翠绿林地守护者 · 69.0 万自然 + 击退</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">靠墙/柱接击退</span></div>
-            <div class="why">击退容易把近战弹进怪堆正面或未开怪区域，先看背后站位；与喷涌之花同来时一发圣佑同步盖住。</div>
+            <div class="why">先看身后站位防弹进未开怪区，叠喷涌之花时一发圣佑同盖。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1238158}}" alt=""><div><div class="n">光绽授粉 · 荆棘之刃</div><div class="s">光噬鞭笞者吸收盾 / 追猎者 8 秒流血 / 地裂打击留破裂大地</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1238158}}" alt=""><div><div class="n">光绽授粉 · 荆棘之刃</div><div class="s">鞭笞者免疫群控护盾 / 追猎者 8 秒流血 / 地裂打击留破裂大地</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:1044}}" alt="">自由祝福</span><span class="act-note">优先破盾与避开地裂</span></div>
-            <div class="why">鞭笞者开盾免疫控制并给周围怪提速回血，优先集火破盾；<b>地裂打击</b>留下的<b>破裂大地</b>会持续减速掉血，被卡身位时交自由脱出。</div>
+            <div class="why">出盾优先集火打碎防周边怪提速回血；踩到破裂大地减速可交自由脱出。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">圣佑留给喷涌之花</span><span><img class="ic sm" src="{{I:96231}}" alt="">责难专断光箭雨</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">圣佑留喷涌之花</span><span><img class="ic sm" src="{{I:96231}}" alt="">责难专断光箭雨</span></div>
           <a class="next" href="#s2">下一段：① 莱克希三人组 ↓</a>
         </div>
       </div>
@@ -168,20 +168,20 @@
       <div class="node">1</div>
       <div class="stop-body">
         <div class="stop-head"><h3>莱克希 / 科兹齐特 / 梅提克</h3><span class="kind">BOSS 1 · 密林三杰共享生命 · 45 秒周期</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>开打常带入前波残余播法者或追猎者，先清小怪并断好<b>光芒箭</b>。Boss 循环约 45 秒、圣佑冷却 63 秒，<b>基岩涌动隔轮开圣佑</b>（冷却空窗靠团队减伤或自疗稳住）；同时吃涌动与<b>荆棘之刃</b>时可交<b>圣盾术</b>全免或<b>保护祝福</b>清流血——打到鲁伊亚还有约 8–10 分钟，这里交的保护或后段交出的圣盾仅影响伊库兹前半段，进鲁伊亚前均已转好。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>约 45 秒循环，<b>基岩涌动隔轮开 63 秒圣佑</b>（空窗靠团减/自疗）；叠<b>荆棘之刃</b>可交圣盾或保护（进鲁伊亚前都能转好）。残余小怪先断光芒箭清掉。</div>
         <div class="rows">
           <div class="row" id="k-beam1">
             <div class="mech"><img class="ic" src="{{I:1235616}}" alt=""><div><div class="n">光芒箭</div><div class="s">科兹齐特（及残余播法者） · 单体神圣读条</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span></div>
-            <div class="why">全场持续读条，配合坦克近战每轮断死，减少无谓单点减员。</div>
+            <div class="why">全场高频读条，配合坦克近战每轮断死。</div>
           </div>
           <div class="subhead">45 秒技能循环（圣佑 63 秒隔轮覆盖）</div>
           <div class="row step">
             <div class="when">+5s 猛击</div>
             <div class="mech"><img class="ic" src="{{I:1276586}}" alt=""><div><div class="n">基岩涌动</div><div class="s">梅提克 · +5s 读猛击 → +8s 起 8 秒全队自然涌动</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">隔轮覆盖 · 空窗靠团减/自疗</span></div>
-            <div class="why">基岩猛击 3 秒读完地面起跳后 1–2 秒补开圣佑，覆盖后续跳伤与随后的荆棘之刃；下一轮圣佑冷却中则留圣能自疗或依赖团减。</div>
+            <div class="why">地面起跳后 1–2 秒补开圣佑，顺盖随后的荆棘之刃；冷却轮留圣能自疗。</div>
           </div>
           <div class="bars">
             <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">21.2 万 / 跳</span></div></div>
@@ -191,23 +191,23 @@
             <div class="when">+8s 点名</div>
             <div class="mech"><img class="ic" src="{{I:1235640}}" alt=""><div><div class="n">荆棘之刃</div><div class="s">莱克希 · 初始自然背刺 + 12 秒物理流血</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">清流血</span><span class="btn-chip"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福</span><span class="tgt">给自己或队友</span></div>
-            <div class="why"><b>注意双属性：初始背刺直击是自然伤，保护挡不住直击、只能免疫和清除后续 12 秒物理流血</b>；自身吃涌动+荆棘高压时可开<b>圣盾术</b>连直击与流血一并全免，队友挂流血血危时给<b>保护祝福</b>。</div>
+            <div class="why"><b>保护挡不住初始自然背刺，只能清后续物理流血</b>；自己叠涌动高压交圣盾全免，队友流血血危给保护。</div>
           </div>
           <div class="row step">
             <div class="when">+11s 出圈</div>
             <div class="mech"><img class="ic" src="{{I:1261011}}" alt=""><div><div class="n">荆棘之扇</div><div class="s">莱克希 · 15 码 3 秒自然 AoE</div></div></div>
-            <div class="skill"><span class="act-note">退到 15 码外继续远程审判与输出</span></div>
-            <div class="why">退出 15 码即可零伤输出；同时看清 +20s <b>播光急奔</b>路径让开种子点位。</div>
+            <div class="skill"><span class="act-note">退到 15 码外继续远程输出</span></div>
+            <div class="why">退 15 码外零伤输出，顺带让开 +20s 播光急奔的种子点位。</div>
           </div>
           <div class="row step">
             <div class="when">+36s 光束</div>
             <div class="mech"><img class="ic" src="{{I:1235564}}" alt=""><div><div class="n">光明之花射线</div><div class="s">科兹齐特 · 逐颗照种子 8 秒（49.8 万/跳）</div></div></div>
-            <div class="skill"><span class="act-note">按分工站进指定光束 · 低血换人</span></div>
-            <div class="why">每束光照射一颗种子，需多人按分工各自站进光束吃跳伤抑制开花，防止炸全队<b>光绽疯长</b>；轮到自己踩线时保持满血或留圣能用<b>永恒之火</b>自抬，低血立刻换队友接。</div>
+            <div class="skill"><span class="act-note">按分工站进光束 · 低血换人</span></div>
+            <div class="why">按分工挡线防开花炸全队<b>光绽疯长</b>；满血踩线配合永恒之火自抬，低血速换人。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">涌动起跳隔轮开圣佑</span><span><img class="ic sm" src="{{I:1022}}" alt="">保护只清后续物理流血</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">涌动起跳隔轮圣佑</span><span><img class="ic sm" src="{{I:1022}}" alt="">保护只清物理流血</span></div>
           <a class="next" href="#s3">下一段：过桥小怪 ↓</a>
         </div>
       </div>
@@ -217,23 +217,23 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>过桥 → 伊库兹前</h3><span class="kind">TRASH · 光羽瓣翼鸟 / 孢荒喷射者 / 翠绿林地守护者</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>高限路线过桥独立时间极短，经常直接把翼鸟、守卫者或追猎者带进二号首领一起打。<b>以进伊库兹首发唤棘者咆哮的时刻倒推 63 秒控制圣佑</b>；若桥面交过圣佑且莱克希后段交过圣盾导致两者都在冷却，进 Boss 首发咆哮前提前安排团队减伤或治疗单减；圣盾转好且距鲁伊亚目标痛击 ≥ 3.5 分钟时再作备选过渡。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>本段极短且常带怪进二号首领。<b>距伊库兹首发咆哮 &lt;63 秒留圣佑</b>；若双牌均在冷却提前要团减，圣盾仅在距鲁伊亚 ≥ 3.5 分钟时作备选。</div>
         <div class="rows">
           <div class="row" id="k-scream">
             <div class="mech"><img class="ic" src="{{I:1238294}}" alt=""><div><div class="n">迷乱尖叫</div><div class="s">光羽瓣翼鸟 · 全队迷惑 3 秒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:115750}}" alt="">盲目之光</span></div>
-            <div class="why">过桥空间窄且翼鸟常跟进二号首领战，务必盯死每条迷乱尖叫，避免迷惑期间原地吃践踏或咆哮。</div>
+            <div class="why">翼鸟常带进二号首领，盯死每条尖叫防迷惑原地吃践踏。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1263628}}" alt=""><div><div class="n">喷涌之花</div><div class="s">孢荒喷射者 · 60 码神圣 AoE（6 秒）</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">距 Boss 咆哮 &lt;63 秒时留给 Boss</span></div>
-            <div class="why">桥面单独清怪时间够长时正常交圣佑；直接连波带进 Boss 时先保好 25 秒自由祝福与打断在手。</div>
+            <div class="why">独立清怪时间够才交圣佑；直接连带进 Boss 则留好 25 秒自由与打断。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:96231}}" alt="">翼鸟带进 Boss 也要断尖叫</span><span><img class="ic sm" src="{{I:1044}}" alt="">自由留进二号首领</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:96231}}" alt="">断迷乱尖叫</span><span><img class="ic sm" src="{{I:1044}}" alt="">留自由进二号首领</span></div>
           <a class="next" href="#s4">下一段：② 圣光猎手伊库兹 ↓</a>
         </div>
       </div>
@@ -243,19 +243,19 @@
       <div class="node">2</div>
       <div class="stop-body">
         <div class="stop-head"><h3>圣光猎手伊库兹</h3><span class="kind">BOSS 2 · 约 30 秒践踏 · 约 64 秒咆哮</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>开战常连带前波守卫者/翼鸟/追猎者，先清残怪并断好<b>迷乱尖叫</b>。惩戒骑的核心职责是<b>每次青翠践踏落地 4 秒内给少自解搭档套自由祝福</b>（无拘自由双免血棘之根），以及<b>63 秒圣佑对齐约 64 秒一轮的唤棘者咆哮</b>。如咆哮时圣佑在冷却，且<b>圣盾已转好并距鲁伊亚目标痛击 ≥ 3.5 分钟</b>时，可开备选圣盾 + 牺牲保自己和脆皮（仅无敌 8 秒内免转伤，最后 4 秒恢复分担）；两者均不在则提前要团减。</div>
+        <div class="rhythm"><span class="lbl">节奏</span><b>每次践踏后 4 秒内给搭档套自由双免血棘之根</b>，63 秒圣佑对齐约 64 秒<b>唤棘者咆哮</b>。圣佑冷却且距鲁伊亚 ≥ 3.5 分钟时可交备选圣盾 + 牺牲（8 秒无敌免转伤），否则要团减。</div>
         <div class="rows">
           <div class="row must">
-            <div class="mech"><img class="ic" src="{{I:1236746}}" alt=""><div><div class="n"><span class="badge-must">必做</span>青翠践踏 → 血棘之根</div><div class="s">击退后 4 秒在玩家脚下长根定身 + 每秒自然伤</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1236746}}" alt=""><div><div class="n"><span class="badge-must">必做</span>青翠践踏 → 血棘之根</div><div class="s">约 30 秒一次 · 击退后 4 秒长根定身 + 每秒自然伤</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:1044}}" alt="">自由祝福</span><span class="tgt">给搭档</span></div>
-            <div class="why">约 30 秒一次，正好对准 25 秒<b>自由祝福</b>。<b>践踏落地出现 4 秒倒计时再丢给搭档（近战或治疗）</b>，靠无拘自由两人同步免疫生根。注意<b>唤棘者咆哮</b>同样会生根，有人被根时由队友转火打碎或治疗魔法驱散。</div>
+            <div class="why"><b>践踏落地出 4 秒倒计时丢给搭档</b>，借无拘自由双免生根；咆哮生的根由队友打碎或治疗驱魔法。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1236709}}" alt=""><div><div class="n">唤棘者咆哮</div><div class="s">约 64 秒周期 · 2 秒读条 + 6 秒全队自然伤</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">空窗备选</span><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给脆皮</span></div>
-            <div class="why">读条末尾预开<b>圣佑术</b>稳定压伤；半血后常叠<b>光狂疯乱</b>脉冲，圣佑刚好在冷却且圣盾满足冷却条件时可开圣盾顺手丢牺牲（无敌 8 秒内转伤全免，最后 4 秒注意血线）。</div>
+            <div class="why">读条末预开圣佑；半血叠光狂疯乱且圣佑冷却时，满足间隔可交圣盾 + 牺牲（盾后 4 秒留神转伤）。</div>
           </div>
           <div class="bars">
             <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">44.3 万 / 跳</span></div></div>
@@ -265,11 +265,11 @@
             <div class="mech"><img class="ic" src="{{I:1253410}}" alt=""><div><div class="n">嗜血注视 · 光狂疯乱</div><div class="s">点名追击 10 秒 + 半血常驻每 2 秒脉冲</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:190784}}" alt="">神圣马驹</span><span class="or">被追上兜底</span><span class="btn-chip"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福</span><span class="tgt">给自己</span></div>
-            <div class="why">被点嗜血注视开马驹绕场，带 Boss 经过场上残余<b>血棘之根 7 码内</b>借<b>脚步重碾</b>踩碎残根（<b>绕开队友</b>以免队友吃重碾自然伤）；实在逃不掉被追咬时开保护可免物理切裂与 5 秒昏迷（挡不住自然伤，且会影响鲁伊亚保护冷却）。</div>
+            <div class="why">开马驹绕场带 Boss 碾碎 7 码内残根（<b>绕开队友</b>）；逃不掉才开保护免物理切裂，挡不住自然伤。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:1044}}" alt="">每次践踏后 4 秒内交自由给搭档</span><span><img class="ic sm" src="{{I:403876}}" alt="">咆哮对齐 63 秒圣佑</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:1044}}" alt="">践踏后 4 秒内交自由</span><span><img class="ic sm" src="{{I:403876}}" alt="">咆哮对齐 63 秒圣佑</span></div>
           <a class="next" href="#s5">下一段：棘喉兽区 ↓</a>
         </div>
       </div>
@@ -279,23 +279,23 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>通道 → 鲁伊亚前（棘喉兽区）</h3><span class="kind">TRASH · 多叶林莽爬行者 / 发光的棘喉兽 / 脊盾甲虫 / 多刺的迅叶龙</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>本段约 1.5–2 分钟，且经常带脊盾甲虫或残余棘喉兽直接进三号首领：<b>圣盾术与保护祝福留进鲁伊亚应对凶残痛击</b>，本段靠打断、圣佑和走位处理。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>本段短且常带怪进三号首领，<b>圣盾与保护全留进鲁伊亚应对凶残痛击</b>，本段靠打断、圣佑与走位。</div>
         <div class="rows">
           <div class="row" id="k-seed">
             <div class="mech"><img class="ic" src="{{I:1238232}}" alt=""><div><div class="n">种子射击</div><div class="s">多叶林莽爬行者 · 单体约 76 万自然</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:853}}" alt="">制裁之锤</span></div>
-            <div class="why">单发极痛且爬行者常与棘喉兽同拉，盯死读条框轮流打断，残血点射不交控极易减员。</div>
+            <div class="why">单发极痛，盯死读条轮流断，防合波点秒半血脆皮。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1242180}}" alt=""><div><div class="n">护光者的荒芜 · 炽阳吐息</div><div class="s">整批小怪均有死亡 7 码炸 + 荒芜树脂池</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1242180}}" alt=""><div><div class="n">护光者的荒芜 · 炽阳吐息</div><div class="s">全批小怪死亡炸 7 码留树脂池 · 棘喉兽正面吐息</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">怪濒死提前后撤 7 码</span></div>
-            <div class="why">鲁伊亚会给整片棘喉兽区所有小怪（爬行者、甲虫、迅叶龙、棘喉兽）灌注<b>护光者的荒芜</b>，任意小怪濒死都要提前留出 7 码躲爆炸与地板；另躲<b>炽阳吐息</b>正面、<b>狩猎跃击</b>锁定锥形，甲虫开<b>尖刺盾牌</b>正常转火破盾即可。</div>
+            <div class="why">任意小怪濒死前退 7 码躲爆炸和地板；躲炽阳吐息与狩猎跃击正面，甲虫开盾正常破。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:96231}}" alt="">责难专断种子射击</span><span><img class="ic sm" src="{{I:642}}" alt="">圣盾与保护留进三号首领</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:96231}}" alt="">专断种子射击</span><span><img class="ic sm" src="{{I:642}}" alt="">圣盾与保护留三号首领</span></div>
           <a class="next" href="#s6">下一段：③ 护光者鲁伊亚 ↓</a>
         </div>
       </div>
@@ -305,26 +305,26 @@
       <div class="node">3</div>
       <div class="stop-body">
         <div class="stop-head"><h3>护光者鲁伊亚</h3><span class="kind">BOSS 3 · 三形态转场 + P3 峡谷之灵</span></div>
-        <div class="rhythm warn"><span class="lbl">高压段</span>全队高压直击与流血段（常带残余甲虫/棘喉兽进战，先清怪躲死亡炸）。P2 熊形态起（约 +76–91s 首发）读<b>凶残痛击</b>全队吃 68% 物理直击并挂 40 秒重流血，P3 还有峡谷之灵同步叠加<b>光明之火</b>。<b>主线：最险一轮预开圣盾术，另一轮按冷却交圣佑术或给无自律目标套保护祝福；备选连招：P3 两轮痛击间隔略超 30 秒自律，预开圣盾自律消完后下一轮可顺接保护。</b>期间用 1 分钟<b>牺牲祝福</b>保光明之火/痛击脆皮队友。</div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>P2（约 +80s）起<b>凶残痛击</b>全队重击 + 40 秒流血，P3 叠<b>光明之火</b>。最险轮预开<b>圣盾</b>，其余轮交<b>圣佑</b>或<b>保护</b>（无自律），期间用 1 分钟<b>牺牲</b>保脆皮。</div>
         <div class="rows">
           <div class="subhead">三形态转场轴（枭兽 → 熊形态 → 哈籁尼尔）</div>
           <div class="row step">
             <div class="when">P1 枭兽</div>
-            <div class="mech"><img class="ic" src="{{I:1239825}}" alt=""><div><div class="n">光明之火 · 守卫之怒</div><div class="s">6 秒点名光辉持续 + 结束留沉默射线 / 4 码光明坠落</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1239825}}" alt=""><div><div class="n">光明之火 · 守卫之怒</div><div class="s">6 秒点名光辉留沉默射线 · 4 码光明坠落</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给点名队友</span></div>
-            <div class="why">协作断<b>守卫之怒</b>并躲开 4 码<b>光明坠落</b>圈；被点<b>光明之火</b>开圣佑减伤（<b>首发痛击约 +76–91s 落地，想用圣佑接首发痛击需倒推 63 秒，在开打后约 13 秒内交完，错过就直接留给痛击</b>），结束前贴边排沉默射线；队友中光火高压时丢 1 分钟牺牲。</div>
+            <div class="why">协作断守卫之怒、躲 4 码圈；被点贴边放射线（想用圣佑接首发痛击需在开打 13 秒内交，否则留痛击），队友中光火给牺牲。</div>
           </div>
           <div class="row step">
             <div class="when">P2 熊形态</div>
-            <div class="mech"><img class="ic" src="{{I:1240210}}" alt=""><div><div class="n">粉碎打击</div><div class="s">标记多名目标连发 3 波锥形冲击波（88.1 万 + 易伤 +100%）</div></div></div>
-            <div class="skill"><span class="act-note">看标记与朝向横移躲避</span></div>
-            <div class="why">Boss（及 P3 幽灵熊）每 2 秒朝被标记目标方向喷一道锥形波共 3 波，吃中叠 +100% 易伤后再吃下一波或痛击极易减员，躲完 3 波再回近战位背打。</div>
+            <div class="mech"><img class="ic" src="{{I:1240210}}" alt=""><div><div class="n">粉碎打击</div><div class="s">连发 3 波锥形冲击波（88.1 万 + 易伤 100%）</div></div></div>
+            <div class="skill"><span class="act-note">看标记横移躲避 3 波</span></div>
+            <div class="why">每 2 秒一道锥形（P3 幽灵熊同），吃中易伤再吃痛击必死，躲完 3 波再回背打。</div>
           </div>
           <div class="row step must">
             <div class="when">P2/P3</div>
             <div class="mech"><img class="ic" src="{{I:1241058}}" alt=""><div><div class="n"><span class="badge-must">必做</span>凶残痛击</div><div class="s">2 秒读条 · 全队 87.2 万物理 + 40 秒流血（回满才消）</div></div></div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">另一轮</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福</span><span class="tgt">给自己或无自律队友</span></div>
-            <div class="why"><b>自保：</b>读条末尾预开<b>圣盾术</b>免疫直击且不上流血（P3 与<b>光明之火</b>紧邻时可提前 2–4 秒开盾一并罩住射线与痛击）；其余轮次读条前预开<b>圣佑术</b>硬吃直击，或用<b>保护祝福</b>免伤清流血（备选：P3 两轮痛击间隔略超 30 秒，开盾后自律一消可顺接自保保护）。<br><b>保人 / 兜底：</b>无自律队友残血面临痛击或流血抬不满时给<b>保护祝福</b>免伤清流血，也可给脆皮挂<b>牺牲祝福</b>；极端救急用<b>圣疗术</b>（给自己或无自律队友）奶满消流血（注意挂 30 秒自律）。</div>
+            <div class="why">读条末预开<b>圣盾</b>免疫直击和流血（P3 叠光火可早 2–4 秒开）；其余轮交<b>圣佑</b>或<b>保护</b>免伤清流血（无自律队友同理）。救急用圣疗奶满清流血（注意 30 秒自律）。</div>
           </div>
           <div class="bars">
             <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">87.2 万</span></div></div>
@@ -333,7 +333,7 @@
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:642}}" alt="">预开圣盾免痛击 · 另一轮交圣佑/保护</span><span><img class="ic sm" src="{{I:6940}}" alt="">1 分钟牺牲保光火/痛击队友</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:642}}" alt="">圣盾免痛击，其余轮圣佑/保护</span><span><img class="ic sm" src="{{I:6940}}" alt="">1 分钟牺牲保脆皮</span></div>
           <a class="next" href="#s7">下一段：蛤蟆区 ↓</a>
         </div>
       </div>
@@ -343,23 +343,23 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>蛤蟆区 → 兹欧凯特门前</h3><span class="kind">TRASH · 薯身蟾主母 / 光羽瓣翼鸟 / 孢荒喷射者 / 光耀播法者</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>本段持续约 4 分钟，从鲁伊亚交盾起算 210 秒，<b>圣盾术通常在清完蛤蟆区、开打兹欧凯特之前就已转好</b>；这里靠 8 秒清毒、1 分钟圣佑与 1 分钟牺牲平稳推进，把转好的圣盾留进尾王。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>本段约 4 分钟，鲁伊亚交过的圣盾进尾王前已转好；靠 8 秒清毒、圣佑与牺牲推进，<b>把圣盾留进尾王</b>。</div>
         <div class="rows">
           <div class="row must">
-            <div class="mech"><img class="ic" src="{{I:1250937}}" alt=""><div><div class="n"><span class="badge-must">必做</span>喷毒</div><div class="s">薯身蟾主母 · 41.4 万直击 + 9 秒高伤中毒</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1250937}}" alt=""><div><div class="n"><span class="badge-must">必做</span>喷毒</div><div class="s">薯身蟾主母 · 41.4 万直击 + 9 秒中毒（34.0 万/1.5 秒）</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:213644}}" alt="">清毒术</span><span class="tgt">给自己或中毒队友</span><span class="or">另补</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给中毒队友</span></div>
-            <div class="why">每 1.5 秒跳 34.0 万持续中毒，单靠治疗单驱极易倒人。优先用 8 秒<b>清毒术</b>自清或点驱脆皮，自己刚清过毒再交带正义保护的<b>牺牲祝福</b>帮扛并同步移除队友中毒；同时避开<b>薯身蟾抽击</b>击退。</div>
+            <div class="why">先用 8 秒<b>清毒术</b>自清或驱脆皮，双人中毒补带正义保护的<b>牺牲祝福</b>清队友毒；注意躲抽击击退。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1301834}}" alt=""><div><div class="n">门前播法者 · 喷射者</div><div class="s">迷乱尖叫 / 光箭雨 + 喷涌之花</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">沿用开场与过桥处理：翼鸟先断<b>迷乱尖叫</b>、门前播法者死盯<b>光箭雨</b>、喷射者读<b>喷涌之花</b>交圣佑。</div>
+            <div class="why">同前段：翼鸟断尖叫、播法者断光箭雨、喷涌之花交圣佑。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:213644}}" alt="">喷毒先交清毒</span><span><img class="ic sm" src="{{I:6940}}" alt="">双中毒补牺牲救队友</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:213644}}" alt="">喷毒交清毒</span><span><img class="ic sm" src="{{I:6940}}" alt="">双毒补牺牲</span></div>
           <a class="next" href="#s8">下一段：④ 兹欧凯特 ↓</a>
         </div>
       </div>
@@ -369,32 +369,32 @@
       <div class="node">4</div>
       <div class="stop-body">
         <div class="stop-head"><h3>兹欧凯特</h3><span class="kind">BOSS 4 · 全程神圣脉冲 · 50 秒循环</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>开打常连带门前残余棘喉兽或鞭笞者，先断清小怪防死亡炸。全战每 3 秒全队吃<b>渗流木质（神圣伤）</b>，叠加<b>光绽之力</b>跳伤后压力持续抬高。<b>鲁伊亚交完的圣盾术开怪前大多已经转好，先捏在手里留到中后段高叠层或走位危机时再开（开盾 8 秒无敌期内还可顺手挂牺牲保叠层队友，最后 4 秒恢复转伤），全程 63 秒圣佑卡轴盖高压。</b></div>
+        <div class="rhythm"><span class="lbl">节奏</span>全程每 3 秒全队<b>渗流木质</b>，叠加吃球掉血越来越痛。<b>63 秒圣佑卡轴盖叠层，转好的圣盾留中后段高压或救场</b>（8 秒无敌期内顺手给高叠层队友挂牺牲）。</div>
         <div class="rows">
           <div class="subhead">50 秒技能轴</div>
           <div class="row step" id="k-spore">
             <div class="when">+4s 唤怪</div>
             <div class="mech"><img class="ic" src="{{I:1247669}}" alt=""><div><div class="n">唤醒光绽 → 光孢射击</div><div class="s">叫醒光诞鞭笞者高频神圣齐射</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:115750}}" alt="">盲目之光</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:853}}" alt="">制裁之锤</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span></div>
-            <div class="why">成堆拉一起 A 时先手交<b>盲目之光</b>整批停读条，再补<b>制裁</b>和<b>责难</b>收尾，防止多发<b>光孢射击</b>与渗流木质齐砸。</div>
+            <div class="why">成堆 A 时先甩盲目之光整批停条，再补制裁和责难防齐射叠木质。</div>
           </div>
           <div class="row step">
             <div class="when">+14s 撞球</div>
             <div class="mech"><img class="ic" src="{{I:1247052}}" alt=""><div><div class="n">光绽精华 → 光绽之力</div><div class="s">吃球叠 +10% 伤害/治疗（每秒 10.4 万神圣可叠）</div></div></div>
             <div class="skill"><span class="act-note">按需吃球叠增伤 · 开圣盾会清层</span></div>
-            <div class="why">漏球会让首领触发全队爆伤，惩戒满血带减伤帮吃 1–2 层打输出兼清场；<b>注意开圣盾术会清除身上已有的光绽之力（一并失去 +10% 伤害/治疗增益）且无敌期间不会叠加新层数</b>，想吃增伤请避开圣盾窗口。</div>
+            <div class="why">漏球炸全队，满血带减伤帮吃 1–2 层；<b>开圣盾会清掉已有光绽之力且无敌期不叠层</b>，吃增伤避开圣盾窗。</div>
           </div>
           <div class="row step">
             <div class="when">+40s 射线</div>
-            <div class="mech"><img class="ic" src="{{I:1246607}}" alt=""><div><div class="n">凝聚光线</div><div class="s">点名坦克的持续射线 · 扫中休眠鞭笞者液化成光明树脂</div></div></div>
-            <div class="skill"><span class="act-note">避开坦克拉线路径与光明树脂池</span></div>
-            <div class="why">射线固定点名坦克，近战提前让开坦克拉线路径与液化后的高伤减速<b>光明树脂</b>；误踩进树脂池被减速时交<b>自由祝福</b>或<b>神圣马驹</b>脱身。</div>
+            <div class="mech"><img class="ic" src="{{I:1246607}}" alt=""><div><div class="n">凝聚光线</div><div class="s">点名坦克射线 · 扫中休眠鞭笞者化为光明树脂</div></div></div>
+            <div class="skill"><span class="act-note">避开坦克拉线路径与树脂池</span></div>
+            <div class="why">提前让开坦克拉线与减速高伤树脂池，误踩交自由或马驹脱身。</div>
           </div>
           <div class="row step must">
             <div class="when">全程 3s</div>
             <div class="mech"><img class="ic" src="{{I:1247644}}" alt=""><div><div class="n"><span class="badge-must">必做</span>渗流木质</div><div class="s">全战每 3 秒全队神圣脉冲</div></div></div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">高压窗</span><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给高叠层队友</span></div>
-            <div class="why">起手吃球叠加跳伤时交第一发<b>圣佑术</b>，之后每 63 秒转好配合叠层继续开；手里留好的<b>圣盾术</b>压在中后段高层掉血、躲不开树脂或救场时交出（开盾同时把牺牲丢给高叠层队友，无敌 8 秒内转伤全免，最后 4 秒注意自身血线）；保护对这里所有神圣伤害均无效。</div>
+            <div class="why">吃球起跳交圣佑，之后每 63 秒卡轴开；<b>圣盾</b>压中后段高层或救场并顺手挂牺牲（盾后 4 秒留神转伤）。保护对神圣伤无效。</div>
           </div>
           <div class="bars">
             <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">28.3 万 / 跳</span></div></div>
@@ -403,7 +403,7 @@
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">63 秒圣佑覆盖叠层+木质</span><span><img class="ic sm" src="{{I:642}}" alt="">圣盾留给中后段高压+8 秒无敌牺牲</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">63 秒圣佑盖叠层</span><span><img class="ic sm" src="{{I:642}}" alt="">圣盾压中后段高压 + 牺牲</span></div>
           <a class="next" href="#talent">查看天赋 ↓</a>
         </div>
       </div>

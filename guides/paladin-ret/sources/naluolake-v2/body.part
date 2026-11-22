@@ -120,35 +120,35 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>开场林地 → 囤宝狂人前</h3><span class="kind">TRASH · 饥渴之灵 / 地语看护者 / 锐眼掠击鹰 / 棘爪收集者 / 饥荒雕像</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>开场圣佑术转好就交在<b>苦难盛宴</b>（开跳后立即按）；保护冷却 5 分钟（强化 4 分钟），<b>想在一号首领囤宝狂人的饕餮怒吼交保护，开场第一波之后不要再交保护清俯冲</b>（确保距目标怒吼 ≥ 5 分钟或强化 4 分钟）。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>圣佑转好交<b>苦难盛宴</b>（开跳立刻按）；保护冷却 5 分钟（强化 4 分钟），<b>起手第一波后留保护进囤宝狂人饕餮怒吼</b>。</div>
         <div class="rows">
           <div class="row" id="k-earth">
             <div class="mech"><img class="ic" src="{{I:1241214}}" alt=""><div><div class="n">大地之箭 · 治疗之风</div><div class="s">地语看护者 · 单体自然 / 群回读条</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">配合</span><span class="btn-chip"><img class="ic sm" src="{{I:115750}}" alt="">盲目之光</span></div>
-            <div class="why">这只怪经常被连带进囤宝狂人开场，优先盯读条框：<b>治疗之风</b>必断，多只同读直接甩群控。</div>
+            <div class="why">常被连带进囤宝狂人，<b>治疗之风</b>必断，多只同读直接甩群控。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1238725}}" alt=""><div><div class="n">苦难盛宴</div><div class="s">饥渴之灵 · 5 秒全队暗影持续 + 吸血</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">常规高压段（27.0 万 → 19.5 万），开跳后立刻开圣佑术既保血线又顺手压缩敌方吸血量。</div>
+            <div class="why">开跳立刻开圣佑（27.0 万 → 19.5 万），兼保血线与压敌方吸血。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1238439}}" alt=""><div><div class="n">剃刀俯冲</div><div class="s">锐眼掠击鹰 · 无读条点名 10 秒物理流血</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">仅起手可选</span><span class="btn-chip"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福</span><span class="tgt">给自己</span></div>
-            <div class="why">连续被扑叠高层流血时可补开圣佑（23.9 万 → 16.8 万）；若只在起手第一波交保护清流血，到一号首领中后段饕餮怒吼还能转回，开场第 2 波起请直接留保护。</div>
+            <div class="why">高层流血交圣佑（23.9 万 → 16.8 万）；仅起手第一波可交保护清，之后留进一号首领。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1297699}}" alt=""><div><div class="n">腐烂的补给品 · 腐烂地面 · 饥肠辘辘</div><div class="s">棘爪收集者绿圈直击 27.0 万 / 地板 54.1 万/秒 / 雕像诅咒</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1297699}}" alt=""><div><div class="n">腐烂的补给品 · 腐烂地面 · 饥肠辘辘</div><div class="s">绿圈 27.0 万 / 地板 54.1 万/秒 / 雕像诅咒降血 15%</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">躲绿圈与地板 + 转火雕像 · 清毒无效</span></div>
-            <div class="why"><b>腐烂的补给品</b>落地后生成高伤<b>腐烂地面</b>需立刻移出；<b>饥肠辘辘</b>叠层降最大生命值 15%（<b>诅咒</b>，清毒术无法驱散），点杀雕像并避免误杀<b>好奇的幼崽</b>触发 40 码<b>母熊之怒</b>狂暴。</div>
+            <div class="why">速移出腐烂地面；饥肠辘辘是<b>诅咒</b>清毒驱不了，转火雕像且别误杀幼崽引母熊狂暴。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">苦难盛宴立刻交圣佑</span><span><img class="ic sm" src="{{I:1022}}" alt="">起手后留保护进一号首领</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">苦难盛宴立刻圣佑</span><span><img class="ic sm" src="{{I:1022}}" alt="">起手后留保护进一号</span></div>
           <a class="next" href="#s2">下一段：① 囤宝狂人 ↓</a>
         </div>
       </div>
@@ -158,25 +158,25 @@
       <div class="node">1</div>
       <div class="stop-body">
         <div class="stop-head"><h3>囤宝狂人</h3><span class="kind">BOSS 1 · 约 40 秒一发咆哮 · 吃肉堆解锁饕餮怒吼</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>通常带前波<b>地语看护者</b>与<b>棘爪收集者</b>进战，开打先断<b>大地之箭 / 治疗之风</b>并清残怪。咆哮每约 40 秒一发，而圣佑冷却 63 秒：<b>第 1 发贪婪咆哮预开圣佑 → 第 2 发圣佑仍在冷却，靠团队减伤与自疗硬扛 → 第 3 发（约 +88s）圣佑刚转好再交一次 → 看到 Boss 吃肉堆获饱餐并开始读饕餮怒吼后，下一发无圣佑的怒吼预开保护祝福全免（10 秒物理免疫期内顺手挂牺牲免物理转伤，最后约 2 秒恢复分担）</b>。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>咆哮约 40 秒一发：<b>第 1、3 发开 63 秒圣佑，第 2 发靠团减/自疗</b>；吃肉堆升级为<b>饕餮怒吼</b>后，在无圣佑那发预开<b>保护</b>全免（10 秒内顺挂牺牲免物理转伤）。</div>
         <div class="rows">
           <div class="row must">
-            <div class="mech"><img class="ic" src="{{I:1234734}}" alt=""><div><div class="n"><span class="badge-must">必做</span>腐坏补给 → 剧毒孢子</div><div class="s">投掷 62.3 万自然伤 + 散落蘑菇毒雾挂 12 秒中毒</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1234734}}" alt=""><div><div class="n"><span class="badge-must">必做</span>腐坏补给 → 剧毒孢子</div><div class="s">投掷 62.3 万自然 + 蘑菇毒雾挂 12 秒中毒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:213644}}" alt="">清毒术</span><span class="tgt">给自己或高层中毒队友</span><span class="or">兜底</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给中毒队友</span></div>
-            <div class="why"><b>腐坏补给</b>掷向玩家并在场内撒蘑菇，踩出或沾染毒雾的 2–4 名队友会叠<b>剧毒孢子</b>。看到实际中毒减益立刻交 8 秒<b>清毒术</b>（优先自清或驱高层脆皮）；清毒冷却时可交带正义保护的<b>牺牲祝福</b>兜底清队友毒（注意自身会承接转移伤害）。</div>
+            <div class="why">见中毒减益立刻交 8 秒<b>清毒术</b>（优先自清或脆皮）；冷却时交带正义保护的<b>牺牲</b>兜底清队友毒。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1234681}}" alt=""><div><div class="n">贪婪咆哮</div><div class="s">+6s / +46s（40 秒间隔） · 94.1 万物理直击 + 10 秒流血</div></div></div>
             <div class="to">→</div>
-            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">第 1 发交圣佑 · 第 2 发靠团减/自疗</span></div>
-            <div class="why">起手第 1 发在读条末尾开<b>圣佑术</b>（把 10 秒流血从 16.4 万压到 12.0 万/跳）；仅隔 40 秒的第 2 发圣佑尚未转好，依靠团减与永恒之火自疗撑过，留好下一轮转好的圣佑和保护。</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">第 1 发圣佑 · 第 2 发靠团减/自疗</span></div>
+            <div class="why">第 1 发读条末开圣佑（流血 16.4 万 → 12.0 万/跳）；第 2 发圣佑冷却靠团减与永恒之火硬撑。</div>
           </div>
           <div class="row must">
             <div class="mech"><img class="ic" src="{{I:1235125}}" alt=""><div><div class="n"><span class="badge-must">必做</span>饕餮怒吼（饱餐升级后）</div><div class="s">3 秒读条 · 90.8 万无视护甲物理 + 击退 + 10 秒流血</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:1022}}" alt="">保护祝福</span><span class="tgt">给自己</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给脆皮队友</span><span class="or">其余发</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">首领通过<b>资源巧用</b>吃肉堆获得<b>饱餐</b>后，咆哮会升级为带击退的<b>饕餮怒吼</b>（常见第 3 发变，先吃蘑菇堆则顺延）。<b>看清读条名变成饕餮怒吼，在圣佑冷却的那发怒吼读条结束前约 1 秒给自己套保护祝福</b>：直击、击退与后续 10 秒流血全免；保护 10 秒内给脆皮挂<b>牺牲祝福</b>物理转伤也全免（最后约 2 秒恢复分担）。躲开<b>骨刺猛击</b>正面与地面<b>骨刺扎入</b>。</div>
+            <div class="why">Boss 吃肉堆升级读条名后，<b>在无圣佑那发剩 1 秒给自己套保护</b>免直击、击退与流血，10 秒内给脆皮挂牺牲（尾 2 秒恢复分担）；躲骨刺正面与地板。</div>
           </div>
           <div class="bars">
             <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">90.8 万</span></div></div>
@@ -184,7 +184,7 @@
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:1022}}" alt="">看读条饕餮怒吼交保护 + 牺牲</span><span><img class="ic sm" src="{{I:213644}}" alt="">出剧毒孢子立刻清毒</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:1022}}" alt="">饕餮怒吼保护 + 牺牲</span><span><img class="ic sm" src="{{I:213644}}" alt="">剧毒孢子立刻清毒</span></div>
           <a class="next" href="#s3">下一段：林道小怪 ↓</a>
         </div>
       </div>
@@ -194,17 +194,17 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>一号后林道 → 冰川区前</h3><span class="kind">TRASH · 地语看护者 / 锐眼掠击鹰 / 棘爪收集者</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>约 2 分钟过渡段，打法与开场一致：责难盯死<b>大地之箭 / 治疗之风</b>，高层俯冲交圣佑，把<b>自由祝福与圣佑术</b>留进冰川区第一波。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>打法同开场：盯断<b>大地之箭 / 治疗之风</b>，高层俯冲交圣佑，把<b>自由与圣佑</b>留进冰川首波。</div>
         <div class="rows">
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1238439}}" alt=""><div><div class="n">地语 · 俯冲复盘</div><div class="s">同开场怪组</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">进冰川大门前留好 25 秒自由祝福在手，门内决意化身第一轮冰川之墓读条会立刻用到。</div>
+            <div class="why">进冰川门前留好 25 秒自由祝福，门内第一轮冰川之墓立刻要用。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:1044}}" alt="">保留自由进冰川</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:1044}}" alt="">留自由进冰川</span></div>
           <a class="next" href="#s4">下一段：冰川区 ↓</a>
         </div>
       </div>
@@ -214,29 +214,29 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>冰川区（两波冰原怪）</h3><span class="kind">TRASH · 决意化身 / 酷寒重殴者 / 撼地奔行者 / 冰川亡魂 / 寒冬暴风雪</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>高危小怪段：进风口贴岩石掩体拿<b>受到掩护。</b>防被<b>强风</b>吹退；注意<b>凛冽严冬</b>雾内外互相无法选中，给冰墓队友交自由前确认同在雾内或雾外。<b>惩戒骑的核心职责是用 25 秒自由祝福解救冰川之墓：读条期且同在雾内或雾外时可提前丢队友直接双免，漏预开或被雾遮挡冻住后再补交也能瞬间双解（或优先自解）。</b></div>
+        <div class="rhythm"><span class="lbl">节奏</span>进风口贴岩石防强风吹退；<b>凛冽严冬</b>雾内外不可互选。核心职责是用 25 秒<b>自由祝福</b>读条预交或冻后秒交双解<b>冰川之墓</b>。</div>
         <div class="rows">
           <div class="row must">
             <div class="mech"><img class="ic" src="{{I:1241463}}" alt=""><div><div class="n"><span class="badge-must">必做</span>冰川之墓</div><div class="s">决意化身 · 2 秒读条全队冰冻 + 每 2 秒 26.5 万冰伤</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:1044}}" alt="">自由祝福</span><span class="tgt">给冰墓队友</span><span class="or">冷却时</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">呼喊队友转火破墓</span></div>
-            <div class="why">看到<b>冰川之墓</b> 2 秒读条且视野未被严冬雾隔断时，提前给队友（治疗或主力输出）套<b>自由祝福</b>可借无拘自由直接双免进冰；若来不及预开已被冻住，立刻补丢自由给队友同样能瞬间双解，转头敲碎其余队友冰墓。自由冷却时喊队友优先破墓并开圣佑压跳伤；另躲决意化身 12 码<b>粉碎（4 秒昏迷）</b>。</div>
+            <div class="why">视野未被雾隔断时，<b>读条期丢自由给队友双免</b>（被冻住补交也能双解）；冷却时开圣佑喊队友破墓，另躲 12 码粉碎晕。</div>
           </div>
           <div class="row" id="k-chill">
             <div class="mech"><img class="ic" src="{{I:1309919}}" alt=""><div><div class="n">冰冷咆哮</div><div class="s">酷寒重殴者 · 15 秒全队急速与移速 -50%</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:853}}" alt="">制裁之锤</span></div>
-            <div class="why">降 50% 急速会显著拖慢打碎冰川之墓的节奏，看到重殴者读条优先责难打断。</div>
+            <div class="why">降 50% 急速严重拖慢破冰川之墓，见读条优先断。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1296519}}" alt=""><div><div class="n">隆隆结界 · 凛冽严冬 · 冰寒涌动</div><div class="s">撼地奔行者 / 暴风雪（雾内外不可互选） / 亡魂</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1296519}}" alt=""><div><div class="n">隆隆结界 · 凛冽严冬 · 冰寒涌动</div><div class="s">奔行者护盾 / 暴风雪（雾内外不可互选）/ 亡魂 4 码</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">4 码分散 + 破结界盾</span></div>
-            <div class="why">进雾吃<b>凛冽严冬</b>（26.6 万 → 19.0 万）或叠<b>隆隆结界</b>（14.0 万 → 9.7 万）时立刻交圣佑，同时转火打破奔行者护盾并用 4 码分散处理<b>冰寒涌动</b>。</div>
+            <div class="why">吃严冬（26.6 万 → 19.0 万）或叠结界（14.0 万 → 9.7 万）交圣佑，转火破盾并 4 码分散。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:1044}}" alt="">读条预交或冻后秒交自由解墓</span><span><img class="ic sm" src="{{I:96231}}" alt="">盯断冰冷咆哮</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:1044}}" alt="">自由预免或秒解冰墓</span><span><img class="ic sm" src="{{I:96231}}" alt="">盯断冰冷咆哮</span></div>
           <a class="next" href="#s5">下一段：② 寒冬哨兵 ↓</a>
         </div>
       </div>
@@ -246,30 +246,30 @@
       <div class="node">2</div>
       <div class="stop-body">
         <div class="stop-head"><h3>寒冬哨兵</h3><span class="kind">BOSS 2 · 63 秒循环（刚好对齐圣佑术）</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>经常连带前波<b>酷寒重殴者 / 奔行者 / 亡魂</b>进战，先断好冰冷咆哮清完残怪。Boss 技能整轮刚好 <b>63 秒</b>（+7s 折磨 → +13s 飑风 → +25s 粉碎冰刺出核心 → +31s 寒冬帷幕与碎霜 → +51s 暴雨），与<b>63 秒圣佑术</b>精准同轴：<b>每轮常规把圣佑留在寒冰暴雨开吹后交出</b>，冰川折磨仅在治疗来不及驱散时作应急备选。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>Boss 循环刚好 <b>63 秒</b>，与 <b>63 秒圣佑</b>同轴：<b>每轮留给寒冰暴雨开吹后交</b>（冰川折磨仅驱散真空备选）；残怪先断冰冷咆哮清掉。</div>
         <div class="rows">
           <div class="subhead">63 秒循环轴</div>
           <div class="row step">
             <div class="when">+7s / +13s</div>
             <div class="mech"><img class="ic" src="{{I:1235549}}" alt=""><div><div class="n">冰川折磨 · 狂怒的飑风</div><div class="s">点名魔法 Dot（等治疗驱） / 躲游荡旋风</div></div></div>
             <div class="skill"><span class="act-note">躲开狂怒的飑风</span><span class="or">驱散不及备选</span><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span></div>
-            <div class="why">优先绕开游荡的<b>狂怒的飑风</b>；自己中<b>冰川折磨</b>正常等治疗驱散，仅在驱散真空血危时备选开圣佑（会占用本轮暴雨圣佑）。</div>
+            <div class="why">绕开旋风；折磨等治疗驱，仅驱散真空血危才备选交圣佑（会占用本轮暴雨）。</div>
           </div>
           <div class="row step" id="k-veil">
             <div class="when">+25s/+31s</div>
-            <div class="mech"><img class="ic" src="{{I:1235829}}" alt=""><div><div class="n">寒冬帷幕 · 碎霜 → 雪流</div><div class="s">粉碎冰刺露核心（断帷幕 / 接碎霜 6 秒圈 / 死后留雪流）</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1235829}}" alt=""><div><div class="n">寒冬帷幕 · 碎霜 → 雪流</div><div class="s">粉碎冰刺露核心（断帷幕 / 接 6 秒碎霜圈 / 死后留雪流）</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="act-note">接碎霜圈 + 击杀核心站雪流</span></div>
-            <div class="why">+25s 粉碎冰刺落出<b>碎裂的震颤核心</b>：第一时间用<b>责难</b>断死<b>寒冬帷幕</b>防叠冰霜易伤；核心迸射的<b>碎霜</b> 6 秒后落地，<b>无人接圈会炸全队白霜爆破，需配合队友分头踩接</b>；打碎核心留下的<b>雪流</b>踩上去可免疫后续暴雨推人。</div>
+            <div class="why">出核心立刻断<b>寒冬帷幕</b>防冰霜易伤；分头踩<b>碎霜</b>防炸全队白霜爆破；打碎后站<b>雪流</b>免疫暴雨推人。</div>
           </div>
           <div class="row step">
             <div class="when">+51s 吹风</div>
             <div class="mech"><img class="ic" src="{{I:1235658}}" alt=""><div><div class="n">寒冰暴雨</div><div class="s">风眼内持续 20.9 万/跳 · 边线为暴风雪之怒高伤带</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">踩雪流或进风眼</span></div>
-            <div class="why">吹风起跳后 1–3 秒补开每轮转好的<b>圣佑术</b>覆盖暴雨余段（20.9 万 → 14.6 万；前 1–2 跳靠满血或团减吃下，若本轮因折磨开过圣佑则靠团减/自疗扛完），踩雪流或紧跟风眼避开外圈暴风雪之怒高伤带。</div>
+            <div class="why">起跳后 1–3 秒补开圣佑（20.9 万 → 14.6 万，无圣佑轮靠团减/自疗），踩雪流或贴风眼避外圈。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:96231}}" alt="">断寒冬帷幕 · 配合接碎霜</span><span><img class="ic sm" src="{{I:403876}}" alt="">每 63 秒圣佑稳接寒冰暴雨余段</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:96231}}" alt="">断帷幕 · 接碎霜</span><span><img class="ic sm" src="{{I:403876}}" alt="">每 63 秒圣佑接暴雨</span></div>
           <a class="next" href="#s6">下一段：图腾/纳尼亚 ↓</a>
         </div>
       </div>
@@ -279,33 +279,33 @@
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>图腾 / 战争使者区 &amp; 神灵代言人纳尼亚</h3><span class="kind">TRASH · 老练的战争使者 / 冷酷的图腾召唤者 / 雷缚秘法师 / 神灵代言人纳尼亚</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>本段压力来自<b>老练的战争使者 原始回响</b>、<b>图腾召唤者 熔岩图腾</b>与<b>纳尼亚 动荡图腾</b>。<b>倒推尾王开打时间安排冷却：距纳洛拉克目标重击 ≥ 3.5 分钟时，图腾区前段合波失控可交备选圣盾 + 牺牲保自己和队友（仅 8 秒无敌期内免转伤，最后 4 秒恢复分担）；进入尾王前 63 秒内控制好最后一发圣佑，确保进 Boss 首发回响重击手里有圣佑可用。</b></div>
+        <div class="rhythm"><span class="lbl">节奏</span>圣佑交<b>原始回响</b>与<b>动荡图腾</b>；前段合波危急且距尾王目标重击 ≥ 3.5 分钟可交备选圣盾 + 牺牲（8 秒免转伤）。<b>进尾王前 63 秒停交圣佑保首发重击。</b></div>
         <div class="rows">
           <div class="row" id="k-arc">
-            <div class="mech"><img class="ic" src="{{I:1297778}}" alt=""><div><div class="n">电弧 · 闪电箭</div><div class="s">雷缚秘法师 &amp; 神灵代言人纳尼亚 · 弹射 3 人高伤</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1297778}}" alt=""><div><div class="n">电弧 · 闪电箭</div><div class="s">雷缚秘法师 &amp; 纳尼亚 · 弹射 3 人高伤</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:96231}}" alt="">责难</span><span class="or">/</span><span class="btn-chip"><img class="ic sm" src="{{I:115750}}" alt="">盲目之光</span></div>
-            <div class="why">雷缚秘法师还会跟着尾王开怪带进去，优先断好 3 人弹射的<b>电弧</b>，减少治疗空蓝。</div>
+            <div class="why">秘法师常带进尾王开怪，优先掐断 3 人弹射的<b>电弧</b>。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1246957}}" alt=""><div><div class="n">原始回响 · 熔岩图腾</div><div class="s">战争使者 59.4 万无视护甲物理 + 3 秒持续物理 / 图腾召唤者灼热岩浆</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1246957}}" alt=""><div><div class="n">原始回响 · 熔岩图腾</div><div class="s">战争使者 59.4 万无视护甲物理 + 3 秒持续 / 图腾召唤者</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">合波备选</span><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">+</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给脆皮队友</span></div>
-            <div class="why">战争使者读条结束前开<b>圣佑术</b>压直击（59.4 万 → 41.7 万），立刻转火打掉<b>冷酷的图腾召唤者</b>拍出的<b>熔岩图腾</b>并躲开<b>毒矛乱射</b> 4 码落点圈；前段多只合波叠炸且满足 3.5 分钟交接时，备选开<b>圣盾 + 牺牲</b>一并免伤与清 3 秒持续伤（仅无敌 8 秒内免转伤）。</div>
+            <div class="why">读条末开圣佑压直击（59.4 万 → 41.7 万），速拆熔岩图腾、躲毒矛 4 码圈；合波满足 3.5 分钟可交圣盾 + 牺牲。</div>
           </div>
           <div class="bars">
             <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">59.4 万</span></div></div>
             <div class="bar-row"><span>圣佑术</span><div class="bar"><span class="mid" style="width:70%">41.7 万</span></div></div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1247366}}" alt=""><div><div class="n">动荡图腾（无常烈焰） · 地震术</div><div class="s">神灵代言人纳尼亚 · 动荡图腾每 2.5 秒 29.4 万全队火伤</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1247366}}" alt=""><div><div class="n">动荡图腾（无常烈焰） · 地震术</div><div class="s">神灵代言人纳尼亚 · 每 2.5 秒 29.4 万全队火伤</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="act-note">转火打图腾 + 躲 10 码圈</span></div>
-            <div class="why">纳尼亚拍出<b>动荡图腾</b>前预开圣佑（每跳 29.4 万 → 21.4 万）并立刻转火敲碎，同时走出 10 码<b>地震术</b>地面圈；收尾阶段看倒计时留出 63 秒圣佑进尾王。</div>
+            <div class="why">拍图腾前预开圣佑（29.4 万 → 21.4 万）速敲碎，出 10 码地震圈；收尾留好 63 秒圣佑进尾王。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">原始回响与动荡图腾交圣佑</span><span><img class="ic sm" src="{{I:642}}" alt="">末段留好圣盾与圣佑进尾王</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">回响与图腾交圣佑</span><span><img class="ic sm" src="{{I:642}}" alt="">末段留圣盾圣佑进尾王</span></div>
           <a class="next" href="#s7">下一段：③ 纳洛拉克 ↓</a>
         </div>
       </div>
@@ -315,14 +315,14 @@
       <div class="node">3</div>
       <div class="stop-body">
         <div class="stop-head"><h3>纳洛拉克（祖尔加拉协助）</h3><span class="kind">BOSS 3 · 65 秒双组循环 · 高压单点伤害</span></div>
-        <div class="rhythm warn"><span class="lbl">高压段</span>常规会把门前<b>雷缚秘法师 / 羁绊驯兽师</b>带进尾王开战，先交<b>责难</b>掐死秘法师<b>电弧 / 闪电箭</b>。Boss 每 <b>65 秒循环</b>打两组对称三连（每组隔约 25 秒）：<b>每轮第一次被点名回响重击预开 63 秒圣佑术；同轮再次被点名时用整场一次的圣盾术兜底，其余冷却空窗靠团队减伤、治疗单减或 1 分钟牺牲祝福保被点名队友。</b></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>每 <b>65 秒</b>两组三连（隔约 25 秒）：<b>每轮首点回响重击预开 63 秒圣佑，同轮再点交圣盾兜底</b>，冷却空窗靠团减/单减或 1 分钟牺牲保队友。开打先断残余秘法师电弧。</div>
         <div class="rows">
           <div class="subhead">65 秒双组循环轴（标注开读 → 落地时间）</div>
           <div class="row step must">
             <div class="when">+5s / +30s</div>
-            <div class="mech"><img class="ic" src="{{I:1242860}}" alt=""><div><div class="n"><span class="badge-must">必做</span>回响重击</div><div class="s">点名 4 秒倒计时 → +9s / +34s 炸 8 码 110.6 万（90% HP）自然伤并留回响</div></div></div>
-            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">同轮再点兜底</span><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">冷却窗保人</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给点名队友</span></div>
-            <div class="why"><b>点名后、倒计时结束前立刻远离其他点名者至少 8 码，把回响放到干净边位</b>，剩 1–2 秒时预开<b>圣佑术</b>将 110.6 万自然伤害压到 76.4 万（为减伤后、扣除吸收盾前的伤害，复仇之盾护盾还会再吸收部分伤害，实际掉血更低）；同轮再次被点名且圣佑冷却时预开<b>圣盾术</b>免疫 110.6 万伤害，但<b>开盾后脚下照样会生成回响，仍必须出人群放到指定边位</b>。圣盾冷却的冷却空窗靠团减、满血自疗或交<b>牺牲祝福</b>帮脆皮分担；保护对自然伤完全无效。</div>
+            <div class="mech"><img class="ic" src="{{I:1242860}}" alt=""><div><div class="n"><span class="badge-must">必做</span>回响重击</div><div class="s">点名 4 秒 → +9s/+34s 炸 8 码 110.6 万自然并留回响</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:403876}}" alt="">圣佑术</span><span class="or">同轮再点兜底</span><span class="btn-chip"><img class="ic sm" src="{{I:642}}" alt="">圣盾术</span><span class="or">保人</span><span class="btn-chip"><img class="ic sm" src="{{I:6940}}" alt="">牺牲祝福</span><span class="tgt">给点名队友</span></div>
+            <div class="why"><b>出人群 8 码放边位</b>，剩 1–2 秒开圣佑压至 76.4 万（盾再吸收）；同轮再点开圣盾免疫，但<b>仍会留回响须放边位</b>。冷却空窗靠团减或牺牲保脆皮；保护对自然无效。</div>
           </div>
           <div class="bars">
             <div class="bar-row"><span>不开减伤</span><div class="bar"><span class="off" style="width:100%">110.6 万</span></div></div>
@@ -331,25 +331,25 @@
           </div>
           <div class="row step">
             <div class="when">+13s / +38s</div>
-            <div class="mech"><img class="ic" src="{{I:1297792}}" alt=""><div><div class="n">压制强攻</div><div class="s">读条 7 秒 → +20s / +45s 起连跳 3 秒无视护甲物理 + 第 3 下击退</div></div></div>
-            <div class="skill"><span class="act-note">站进祖尔加拉身后拿防御姿态（减 80% 伤）</span></div>
-            <div class="why">在第一跳前站进<b>祖尔加拉</b>背后绿色扇形拿到<b>防御姿态</b>，<b>等第 3 下击退落地且祖尔加拉被昏迷后再离开</b>，提前走开吃满后两跳极易减员。</div>
+            <div class="mech"><img class="ic" src="{{I:1297792}}" alt=""><div><div class="n">压制强攻</div><div class="s">读条 7 秒 → 连跳 3 秒无视护甲物理 + 第 3 下击退</div></div></div>
+            <div class="skill"><span class="act-note">站祖尔加拉背后拿防御姿态（−80%）</span></div>
+            <div class="why">首跳前站进绿扇形，<b>等第 3 下击退落地且祖尔加拉被晕后再走</b>，早走必吃满后两跳。</div>
           </div>
           <div class="row step">
             <div class="when">+23s / +48s</div>
-            <div class="mech"><img class="ic" src="{{I:1297797}}" alt=""><div><div class="n">强力猛击</div><div class="s">读条 5 秒 → +28s / +53s 砸昏迷祖尔加拉 6 码内所有玩家</div></div></div>
-            <div class="skill"><span class="act-note">远离祖尔加拉 6 码 · 全程交给坦克单吃</span></div>
-            <div class="why">该技能对 6 码内所有玩家造成极高物理重击（<b>无分摊机制</b>），若 6 码内无人则会让<b>祖尔加拉</b>释放全队灭团技<b>挫志怒吼</b>。常规由坦克单吃，DPS 严禁留在 6 码内吃重击；坦克意外倒地按队伍应急安排处理。</div>
+            <div class="mech"><img class="ic" src="{{I:1297797}}" alt=""><div><div class="n">强力猛击</div><div class="s">读条 5 秒 → 砸昏迷祖尔加拉 6 码内所有玩家</div></div></div>
+            <div class="skill"><span class="act-note">出祖尔加拉 6 码 · 坦克单吃</span></div>
+            <div class="why"><b>无分摊</b>且 6 码无人会灭团（挫志怒吼），由坦克单吃，DPS 严禁留 6 码内。</div>
           </div>
           <div class="row step">
             <div class="when">+55s 撞线</div>
-            <div class="mech"><img class="ic" src="{{I:1243002}}" alt=""><div><div class="n">战神之怒</div><div class="s">回响冲向祖尔加拉 · 单次阻挡吃回响狂怒约 45.6 万自然伤</div></div></div>
-            <div class="skill"><span class="act-note">按分工站连线撞停 · 避免一人连撞多只</span></div>
-            <div class="why">任何漏接让回响撞到祖尔加拉都会触发灭团技<b>挫志怒吼</b>；按队内分工各自挡线，<b>避免一人短时间连撞多只回响</b>（连撞数只累计超百万必须交减伤或自疗）。<b>每个回响会在场上保留并经历 2 轮战神之怒后才消失</b>，所以重击放位务必干净。</div>
+            <div class="mech"><img class="ic" src="{{I:1243002}}" alt=""><div><div class="n">战神之怒</div><div class="s">回响冲向祖尔加拉 · 单次阻挡约 45.6 万自然</div></div></div>
+            <div class="skill"><span class="act-note">按分工撞停 · 勿连撞多只</span></div>
+            <div class="why">漏接撞上即灭团（挫志怒吼）；按分工撞停、<b>避免连撞多只</b>。每个回响留 2 轮才消，重击放位务必干净。</div>
           </div>
         </div>
         <div class="stop-foot">
-          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">每轮首点圣佑 · 同轮再点交圣盾/牺牲</span><span><img class="ic sm" src="{{I:1297792}}" alt="">压制站满 3 跳 · 强力猛击出 6 码</span></div>
+          <div class="plan"><span><img class="ic sm" src="{{I:403876}}" alt="">首点圣佑 · 再点圣盾/牺牲</span><span><img class="ic sm" src="{{I:1297792}}" alt="">压制站满 3 跳 · 猛击出 6 码</span></div>
           <a class="next" href="#talent">查看天赋 ↓</a>
         </div>
       </div>

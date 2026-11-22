@@ -190,13 +190,13 @@ def build_body(cls_zh: str, spec_zh: str, spec_en: str, dungeon: str, dungeon_en
       <div class="node">怪</div>
       <div class="stop-body">
         <div class="stop-head"><h3>开场 → 首领一</h3><span class="kind">TRASH · TODO 小怪名单</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>TODO：冷却取舍条件与未转好时的备选。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>TODO：1–2 句（建议 ≤ 90 字），写清冷却取舍结论与未转好备选。</div>
         <div class="rows">
           <div class="row" id="k-1">
             <div class="mech"><img class="ic" src="{{{{I:0}}}}" alt=""><div><div class="n">TODO 机制名</div><div class="s">怪名 · 性质与持续</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{{{I:0}}}}" alt="">技能名</span><span class="tgt">给队友（保人用，否则删）</span></div>
-            <div class="why">TODO：为什么这样按。</div>
+            <div class="why">TODO：1–2 句（建议 ≤ 45 字），写按键时机与核心原因；不复述左列属性与节奏栏。</div>
           </div>
         </div>
         <div class="stop-foot">
@@ -210,13 +210,13 @@ def build_body(cls_zh: str, spec_zh: str, spec_en: str, dungeon: str, dungeon_en
       <div class="node">1</div>
       <div class="stop-body">
         <div class="stop-head"><h3>首领一</h3><span class="kind">BOSS 1</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>TODO：首领核心轴与冷却分配。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>TODO：1–2 句（建议 ≤ 90 字，复杂首领 ≤ 130 字），写首领核心轴结论与大招分配。</div>
         <div class="rows">
           <div class="row must">
             <div class="mech"><img class="ic" src="{{{{I:0}}}}" alt=""><div><div class="n"><span class="badge-must">必做</span>TODO 必做机制</div><div class="s">性质与时机</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{{{I:0}}}}" alt="">主技能</span></div>
-            <div class="why">TODO：按键时机与收益。</div>
+            <div class="why">TODO：1–2 句（必做/步骤行建议 ≤ 70 字），写精确时机与收益；细节推演记 NOTES.md。</div>
           </div>
         </div>
         <div class="stop-foot">

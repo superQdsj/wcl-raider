@@ -12,7 +12,8 @@ Checks every machine-verifiable rule in one fast offline pass:
      bottom-of-page scroll-spy fallback, null-safe talent copy JS & guarded build.py {{TALENT}}
   7. Shared timeline geometry: uses min-width:884px + margin:0 48px + .mk.up{bottom:148px}, labels <= 8 chars,
      same-side mark spacing >= 52px
-  8. Content hygiene: banned report/stat phrases & leaked player names absent from <header>/<main>
+  8. Content hygiene & conciseness: banned report/stat phrases & leaked player names absent from <header>/<main>;
+     route .why / .rhythm length budgets and overly crammed multi-mechanism rows warned
   9. NOTES.md completeness: required 4 sections present
 
 Usage:
@@ -259,6 +260,67 @@ def check_page(page: Path, source_dir: Optional[Path], published: bool) -> Tuple
                 pri_n = blk.count("btn-chip pri")
                 if pri_n > 1:
                     warns.append(f"A must-do row has {pri_n} .btn-chip.pri chips (prefer 1 primary button per must-do row).")
+
+            # Conciseness checks inside #route (guard against defensive verbosity)
+            route_m = re.search(r'<section\s+id="route"[^>]*>(.*?)</section>', body, re.S)
+            route_html = route_m.group(1) if route_m else re.sub(
+                r'<div class="kicks-box">.*?</div>\s*</div>\s*</div>', "", body, flags=re.S
+            )
+            strip_tags = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s)).strip()
+
+            rhythm_blocks = re.findall(r'<div class="rhythm[^"]*"[^>]*>(.*?)</div>', route_html, re.S)
+            for r_raw in rhythm_blocks:
+                r_no_lbl = re.sub(r'<span class="lbl"[^>]*>.*?</span>', "", r_raw, flags=re.S)
+                r_txt = strip_tags(r_no_lbl)
+                if len(r_txt) > 130:
+                    warns.append(
+                        f"Verbose .rhythm ({len(r_txt)} chars > 130): '{r_txt[:36]}…' "
+                        f"(target <= 90 chars / 2 sentences; move full schedule derivation to NOTES.md)."
+                    )
+
+            row_why_lens: List[int] = []
+            # Split route_html by row starts to pair row class, mech title, and .why accurately
+            row_starts = list(re.finditer(r'<div class="(row(?:\s+[^"]+)?)"[^>]*>', route_html))
+            for idx, rm in enumerate(row_starts):
+                r_cls = rm.group(1).split()
+                r_end = row_starts[idx + 1].start() if idx + 1 < len(row_starts) else len(route_html)
+                r_chunk = route_html[rm.start():r_end]
+                # Trim at stop-foot or subhead so trailing blocks don't bleed into the last row
+                r_chunk = re.split(r'<div class="(?:stop-foot|subhead|bars)"', r_chunk, maxsplit=1)[0]
+
+                n_m = re.search(r'<div class="n"[^>]*>(.*?)</div>', r_chunk, re.S)
+                title = ""
+                if n_m:
+                    title = strip_tags(re.sub(r'<span class="badge-must"[^>]*>.*?</span>', "", n_m.group(1), flags=re.S))
+                    sep_count = len(re.findall(r"[/·]", title))
+                    if sep_count >= 3:
+                        warns.append(
+                            f"Overly crammed row title '{title}' ({sep_count + 1} mechanisms in one row; "
+                            f"split unrelated mechanics into separate rows or move minor ones to NOTES.md)."
+                        )
+
+                w_m = re.search(r'<div class="why"[^>]*>(.*?)</div>', r_chunk, re.S)
+                if w_m:
+                    w_txt = strip_tags(w_m.group(1))
+                    w_len = len(w_txt)
+                    row_why_lens.append(w_len)
+                    is_step = "step" in r_cls
+                    limit = 110 if is_step else 80
+                    if w_len > limit:
+                        label = f"'{title}'" if title else f"row #{idx + 1}"
+                        warns.append(
+                            f"Verbose .why in {label} ({w_len} chars > {limit}): "
+                            f"target <= 45 chars (<= 70 for must/step); avoid repeating .s/.rhythm and move edge cases to NOTES.md."
+                        )
+
+            if row_why_lens:
+                avg_why = sum(row_why_lens) / len(row_why_lens)
+                if avg_why > 48.0:
+                    warns.append(
+                        f"High average .why length across #route ({avg_why:.1f} chars > 48; "
+                        f"keep concise around <= 45 chars per row like duya-sample)."
+                    )
+
             # Cross-check comparison bar numbers against evidence/compare.md (>= 3 runs)
             cmp_p = source_dir / "evidence" / "compare.md"
             if cmp_p.is_file():
