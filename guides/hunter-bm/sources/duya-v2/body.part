@@ -5,7 +5,10 @@
     <div class="eyebrow">ALTAR OF FANGS · MYTHIC+ · BEAST MASTERY HUNTER</div>
     <h1><span class="cls">兽王猎人</span><span class="dot">·</span>毒牙祭坛 应对手册</h1>
     <p class="lede">开场用<b>逃脱</b>自解麻痹射击，拉维和扭缠盘蛇的长持续伤用<b>灵龟守护</b>挡在上身前。祖尔加拦完光束后，留<b>优胜劣汰</b>接切骨者，让流血清掉仪式毒液。</p>
-    <div class="chips"><span class="chip">英雄天赋 <b>群兽领袖</b></span></div>
+    <div class="chips">
+      <span class="chip">英雄天赋 <b>群兽领袖</b></span>
+      <span class="chip">参考 <b>+22～23 限时（国 / 欧 / 美）</b></span>
+    </div>
   </div>
 </header>
 
@@ -31,7 +34,7 @@
   <h2><span class="k">00</span>开打前速记</h2>
   <div class="cores">
     <article class="core main">
-      <div class="top"><img class="ic lg" src="{{I:186265}}" alt=""><div><div class="nm">灵龟守护</div><div class="cd">约 2 分 15 秒冷却 · 最长 8 秒</div></div></div>
+      <div class="top"><img class="ic lg" src="{{I:186265}}" alt=""><div><div class="nm">灵龟守护</div><div class="cd">2 分钟冷却 · 最长 8 秒</div></div></div>
       <p>偏转关键命中，开着时暂停攻击。等点名确定，再卡伤害落地前按。</p>
     </article>
     <article class="core">
@@ -106,7 +109,7 @@
             <div class="mech"><img class="ic" src="{{I:1294557}}" alt=""><div><div class="n"><span class="badge-must">必做</span>刺耳嘶鸣</div><div class="s">原始毒蛇读条 · 全队降急速</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
-            <div class="why">先认领一只蛇，打断空窗报队友接。落单的蛇可备选预投冰冻陷阱，让它起读后踩中。</div>
+            <div class="why">恶臭喷吐断不了，打断只留嘶鸣。反制冷却让队友接，落单可预投冰冻陷阱。</div>
           </div>
           <div class="row must">
             <div class="mech"><img class="ic" src="{{I:1294569}}" alt=""><div><div class="n"><span class="badge-must">必做</span>麻痹射击</div><div class="s">双牙蹂躏者点名 · 魔法持续伤与叠加减速</div></div></div>
@@ -131,7 +134,7 @@
       <div class="node">1</div>
       <div class="stop-body">
         <div class="stop-head"><h3>拉维</h3><span class="kind">BOSS 1</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>三重喷吐用龟壳或优胜劣汰轮换。预计能在盘蛇首发同步毒液前转好，才在拉维晚段再交龟壳。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>三重喷吐用龟壳或优胜劣汰轮换。距盘蛇首发同步毒液至少 120 秒，才在拉维晚段再交龟壳。</div>
         <div class="rows">
           <div class="row must">
             <div class="mech"><img class="ic" src="{{I:1297876}}" alt=""><div><div class="n"><span class="badge-must">必做</span>三重喷吐</div><div class="s">点名毒球 · 直击约 66 万，随后 10 秒每跳约 21 万</div></div></div>
@@ -140,10 +143,10 @@
             <div class="why">球飞来时先散开，砸中前开龟壳挡直击与减益。龟壳冷却时用优胜劣汰压前几跳。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1298221}}" alt=""><div><div class="n">嘶嘶食腐</div><div class="s">吸收盾 · 腐肉喷发可叠加</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1298221}}" alt=""><div><div class="n">嘶嘶食腐</div><div class="s">吸收盾 · 狼吞虎咽接一次约 55 万，减伤后约 33 万</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="act-note">破盾 · 接腐肉</span></div>
-            <div class="why">盾一亮就转火。去接自己负责的腐肉落点，漏接会额外引发腐肉喷发。</div>
+            <div class="why">转火破盾，漏接会引发腐肉喷发。有层数可预开优胜劣汰接狼吞虎咽。</div>
           </div>
           <div class="row">
             <div class="mech"><img class="ic" src="{{I:1307894}}" alt=""><div><div class="n">贪婪践踏</div><div class="s">全队自然直击约 74 万 · 之后掉落钟乳石</div></div></div>
@@ -171,12 +174,6 @@
             <div class="why">断自己负责的目标。反制射击冷却时让队友接，备选冰冻陷阱或宠物胁迫停条，盯住重读。</div>
           </div>
           <div class="row">
-            <div class="mech"><img class="ic" src="{{I:1307571}}" alt=""><div><div class="n">毒伤已上身</div><div class="s">紧急药膏可解中毒</div></div></div>
-            <div class="to">→</div>
-            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:5384}}" alt="">假死</span></div>
-            <div class="why">备选，自解优先用假死，灵龟守护留给后面的同步毒液。</div>
-          </div>
-          <div class="row">
             <div class="mech"><img class="ic" src="{{I:1294859}}" alt=""><div><div class="n">振响</div><div class="s">振响的扭缠蛇 · 无视护甲，持续 5 秒</div></div></div>
             <div class="to">→</div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
@@ -199,7 +196,7 @@
       <div class="node">2</div>
       <div class="stop-body">
         <div class="stop-head"><h3>扭缠盘蛇</h3><span class="kind">BOSS 2</span></div>
-        <div class="rhythm"><span class="lbl">节奏</span>同步毒液开场约 5 秒落地，之后约每 91 秒一轮。龟壳好了优先盖第一轮，第三轮转好再交。没转好的轮次进治疗覆盖。</div>
+        <div class="rhythm"><span class="lbl">节奏</span>同步毒液开场约 5 秒落地，之后约每 91 秒一轮。龟壳能盖第一、三轮。若第二轮才交，第三轮进治疗覆盖。</div>
         <div class="rows">
           <div class="row must">
             <div class="mech"><img class="ic" src="{{I:1299189}}" alt=""><div><div class="n"><span class="badge-must">必做</span>同步毒液</div><div class="s">2 秒读条 · 直击约 50 万，随后 35 秒自然持续伤</div></div></div>
@@ -213,17 +210,23 @@
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
             <div class="why">首领会连读，按轮次分断。分裂后也要盯溃散的扭缠蛇。</div>
           </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1299130}}" alt=""><div><div class="n">掘地冲锋 → 毒液喷射</div><div class="s">钻地横移 · 正面锥形单次可到约 200 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">出冲锋路径 · 绕侧面</span></div>
+            <div class="why">盘蛇钻地横移时走出路径，等它现身后再避开正面锥形。</div>
+          </div>
           <div class="row step">
             <div class="when">连线时</div>
             <div class="mech"><img class="ic" src="{{I:1299080}}" alt=""><div><div class="n">濒死喘息</div><div class="s">开怪约 50 秒起，每秒叠加物理伤害</div></div></div>
             <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:1287798}}" alt="">藤蔓之握</span><span class="btn-chip"><img class="ic sm" src="{{I:781}}" alt="">逃脱</span></div>
-            <div class="why">按藤蔓之握，背对安全外侧再逃脱，拉到距首领 10 码外。逃脱转不回来就直接跑。</div>
+            <div class="why">按藤蔓之握后朝外拉，背朝外用逃脱。全员离首领超过 10 码才断，先到就在外侧等。</div>
           </div>
           <div class="row step">
             <div class="when">拉断后</div>
             <div class="mech"><img class="ic" src="{{I:1287811}}" alt=""><div><div class="n">解除盘卷</div><div class="s">扯开连线后全队受击，约 74 万</div></div></div>
             <div class="skill"><span class="act-note">治疗覆盖 · 转小蛇</span></div>
-            <div class="why">血量稳住后转火溃散的扭缠蛇，趁同化前尽量打掉。</div>
+            <div class="why">溃散的扭缠蛇会点名追人，被点就风筝，边走边转火，尽量在同化前打掉。</div>
           </div>
         </div>
         <div class="stop-foot">
@@ -289,7 +292,7 @@
           </div>
           <div class="row step">
             <div class="when">毒液在身</div>
-            <div class="mech"><img class="ic" src="{{I:1300894}}" alt=""><div><div class="n">仪式毒液</div><div class="s">光束结束后，从最后一次刷新起倒计时 50 秒</div></div></div>
+            <div class="mech"><img class="ic" src="{{I:1300894}}" alt=""><div><div class="n">仪式毒液</div><div class="s">光束最后一次刷新后倒计时 50 秒 · 到期会爆</div></div></div>
             <div class="skill"><span class="act-note">站到斧线一侧</span></div>
             <div class="why">看切骨者点谁，优先赶上本轮首把飞斧。</div>
           </div>
@@ -297,7 +300,13 @@
             <div class="when">飞斧将落</div>
             <div class="mech"><img class="ic" src="{{I:1301508}}" alt=""><div><div class="n"><span class="badge-must">必做</span>切骨者</div><div class="s">5 秒读条 · 直击后还有 7 秒物理流血</div></div></div>
             <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
-            <div class="why">飞斧落地前最后约 1 秒开减伤，站进路径接流血。逐层清完仪式毒液就离开血池。</div>
+            <div class="why">提前约 1 秒开减伤接斧。吃到流血立刻离开脚下血池（放血），边走边等流血清仪式毒液层数。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1301111}}" alt=""><div><div class="n">碎斧</div><div class="s">飞斧会反弹 · 实测最高约 60 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">躲开反弹的碎斧</span></div>
+            <div class="why">看清反弹方向再走，避开折返的路径。</div>
           </div>
         </div>
         <div class="stop-foot">
@@ -320,11 +329,11 @@
     <p class="tal-label">优先保留的防御与功能天赋</p>
     <div class="tal-grid">
       <div class="tal key"><img class="ic" src="{{I:109215}}" alt=""><div><b>迅疾如风</b><span>逃脱解除移动限制，用于自解麻痹射击。</span></div></div>
-      <div class="tal key"><img class="ic" src="{{I:459517}}" alt=""><div><b>紧急药膏</b><span>假死和灵龟守护可自解中毒和疾病。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:459517}}" alt=""><div><b>紧急药膏</b><span>样本中部分中毒上身后约 1～2 秒自动清除。</span></div></div>
       <div class="tal key"><img class="ic" src="{{I:459450}}" alt=""><div><b>护身软甲</b><span>优胜劣汰可存两层。</span></div></div>
-      <div class="tal key"><img class="ic" src="{{I:1258485}}" alt=""><div><b>强化灵龟守护</b><span>与天生狂野一起缩短龟壳冷却。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1258485}}" alt=""><div><b>强化灵龟守护</b><span>搭配天生狂野 2/2，龟壳冷却 2 分钟。</span></div></div>
     </div>
-    <p class="tal-note">常见可换。按队伍分工，将宁神射击这条支线换成误导或束缚射击。</p>
+    <p class="tal-note">常见可换：误导 / 寻路 / 开拓者，按队伍分工和跑位需求调整。</p>
   </div>
 </section>
 

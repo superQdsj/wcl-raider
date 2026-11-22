@@ -1,15 +1,14 @@
 {
- "player": "r1_Banshers",
+ "player": "r4_Anniecpt",
  "specId": 253,
  "hero_tree": {
   "en": "Pack Leader",
   "zh": "群兽领袖"
  },
- "string": "C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGzMzs8AzYmZmZMzgZGzMMzYmZGmZGGzwyQzAAAAAAAAAzYMgZ2AGzsA2GAA",
+ "string": "C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGzMzsMzwMzMjZGMzYmhZGzMzgZGzYGMmmBAAAAAAAAzMGDYmNALmFw2AA",
  "talents": [
   "Alpha Predator",
   "Animal Companion",
-  "Aspect of the Beast",
   "Barbed Scales",
   "Barbed Shot",
   "Beast Cleave",
@@ -17,12 +16,10 @@
   "Better Together",
   "Bloodshed",
   "Born To Be Wild",
-  "Camouflage",
   "Cobra Shot",
   "Combat Experience",
   "Counter Shot",
   "Dire Summons",
-  "Disruptive Rounds",
   "Emergency Salve",
   "Frenzy",
   "Fury of the Wyvern",
@@ -39,10 +36,10 @@
   "Keen Eyesight",
   "Kill Cleave",
   "Kill Command",
-  "Kodo Tranquilizer",
   "Laceration",
   "Lethal Barbs",
   "Lone Survivor",
+  "Misdirection",
   "Natural Mending",
   "Nature's Ally",
   "No Mercy",
@@ -50,17 +47,18 @@
   "Pack Mentality",
   "Pack Tactics",
   "Padded Armor",
+  "Pathfinding",
   "Posthaste",
   "Precision Strikes",
   "Razor Sharp",
   "Rejuvenating Wind",
   "Savagery",
   "Scent of Blood",
+  "Scout's Instincts",
   "Serpentine Strikes",
   "Serrated Tips",
   "Sharpened Fangs",
   "Shell Cover",
-  "Shell Wall",
   "Slicked Shoes",
   "Snakeskin Quiver",
   "Specialized Arsenal",
@@ -71,6 +69,7 @@
   "Thrill of the Hunt",
   "Thundering Hooves",
   "Touch of Grass",
+  "Trailblazer",
   "Training Expert",
   "Tranquilizing Shot",
   "Trigger Finger",
@@ -88,10 +87,6 @@
   "Animal Companion": {
    "zh": "动物伙伴",
    "spellId": 267116
-  },
-  "Aspect of the Beast": {
-   "zh": "野兽守护",
-   "spellId": 191384
   },
   "Barbed Scales": {
    "zh": "尖刺鳞片",
@@ -121,10 +116,6 @@
    "zh": "天生狂野",
    "spellId": 266921
   },
-  "Camouflage": {
-   "zh": "伪装",
-   "spellId": 199483
-  },
   "Cobra Shot": {
    "zh": "眼镜蛇射击",
    "spellId": 193455
@@ -140,10 +131,6 @@
   "Dire Summons": {
    "zh": "凶暴召唤",
    "spellId": 472352
-  },
-  "Disruptive Rounds": {
-   "zh": "干扰弹",
-   "spellId": 343244
   },
   "Emergency Salve": {
    "zh": "紧急药膏",
@@ -209,10 +196,6 @@
    "zh": "杀戮命令",
    "spellId": 34026
   },
-  "Kodo Tranquilizer": {
-   "zh": "科多兽镇静剂",
-   "spellId": 459983
-  },
   "Laceration": {
    "zh": "裂痕",
    "spellId": 459552
@@ -225,13 +208,17 @@
    "zh": "孤独幸存者",
    "spellId": 388039
   },
+  "Misdirection": {
+   "zh": "误导",
+   "spellId": 34477
+  },
   "Natural Mending": {
    "zh": "自然治愈",
    "spellId": 270581
   },
   "Nature's Ally": {
    "zh": "自然之友",
-   "spellId": 1273126
+   "spellId": 1273043
   },
   "No Mercy": {
    "zh": "从无怜悯",
@@ -252,6 +239,10 @@
   "Padded Armor": {
    "zh": "护身软甲",
    "spellId": 459450
+  },
+  "Pathfinding": {
+   "zh": "寻路",
+   "spellId": 378002
   },
   "Posthaste": {
    "zh": "迅疾如风",
@@ -277,6 +268,10 @@
    "zh": "血之气息",
    "spellId": 193532
   },
+  "Scout's Instincts": {
+   "zh": "斥候本能",
+   "spellId": 459455
+  },
   "Serpentine Strikes": {
    "zh": "毒蛇打击",
    "spellId": 468701
@@ -292,10 +287,6 @@
   "Shell Cover": {
    "zh": "龟壳庇护",
    "spellId": 472707
-  },
-  "Shell Wall": {
-   "zh": "甲壳壁垒",
-   "spellId": 1267218
   },
   "Slicked Shoes": {
    "zh": "油滑之靴",
@@ -337,6 +328,10 @@
    "zh": "青草之触",
    "spellId": 1258402
   },
+  "Trailblazer": {
+   "zh": "开拓者",
+   "spellId": 199921
+  },
   "Training Expert": {
    "zh": "训练专家",
    "spellId": 378209
@@ -371,68 +366,57 @@
   }
  },
  "diffs": {
-  "r2_丶白浅": {
+  "r1_Banshers": {
    "removed": [
-    "野兽守护(Aspect of the Beast/191384)",
-    "伪装(Camouflage/199483)",
-    "干扰弹(Disruptive Rounds/343244)",
-    "科多兽镇静剂(Kodo Tranquilizer/459983)",
-    "甲壳壁垒(Shell Wall/1267218)",
-    "宁神射击(Tranquilizing Shot/19801)"
-   ],
-   "added": [
-    "束缚射击(Binding Shot/109248)",
-    "缰绳束缚(Horsehair Tether/472729)",
     "误导(Misdirection/34477)",
     "寻路(Pathfinding/378002)",
-    "斥候本能(Scout's Instincts/459455)"
-   ]
-  },
-  "r3_Requiescam": {
-   "removed": [
-    "野兽守护(Aspect of the Beast/191384)",
-    "伪装(Camouflage/199483)",
-    "甲壳壁垒(Shell Wall/1267218)",
-    "蛇皮箭袋(Snakeskin Quiver/468695)",
-    "巨熊之怒(Ursine Fury/472476)",
-    "双足飞龙之视(Wyvern's Gaze/1264792)"
+    "斥候本能(Scout's Instincts/459455)",
+    "开拓者(Trailblazer/199921)"
    ],
    "added": [
-    "眼镜蛇感官(Cobra Senses/378244)",
-    "低沉咆哮(Guttural Roar/1258509)",
-    "铁蹄利刃(Hoof and Blade/1264797)",
-    "寻路(Pathfinding/378002)",
-    "锋利兽爪(Sharpened Claws/472524)"
-   ]
-  },
-  "r4_Anniecpt": {
-   "removed": [
     "野兽守护(Aspect of the Beast/191384)",
     "伪装(Camouflage/199483)",
     "干扰弹(Disruptive Rounds/343244)",
     "科多兽镇静剂(Kodo Tranquilizer/459983)",
     "甲壳壁垒(Shell Wall/1267218)"
+   ]
+  },
+  "r2_丶白浅": {
+   "removed": [
+    "开拓者(Trailblazer/199921)",
+    "宁神射击(Tranquilizing Shot/19801)"
    ],
    "added": [
+    "束缚射击(Binding Shot/109248)",
+    "缰绳束缚(Horsehair Tether/472729)"
+   ]
+  },
+  "r3_Requiescam": {
+   "removed": [
     "误导(Misdirection/34477)",
-    "寻路(Pathfinding/378002)",
     "斥候本能(Scout's Instincts/459455)",
-    "开拓者(Trailblazer/199921)"
+    "蛇皮箭袋(Snakeskin Quiver/468695)",
+    "开拓者(Trailblazer/199921)",
+    "巨熊之怒(Ursine Fury/472476)",
+    "双足飞龙之视(Wyvern's Gaze/1264792)"
+   ],
+   "added": [
+    "眼镜蛇感官(Cobra Senses/378244)",
+    "干扰弹(Disruptive Rounds/343244)",
+    "低沉咆哮(Guttural Roar/1258509)",
+    "铁蹄利刃(Hoof and Blade/1264797)",
+    "科多兽镇静剂(Kodo Tranquilizer/459983)",
+    "锋利兽爪(Sharpened Claws/472524)"
    ]
   },
   "r5_Чикенмакаут": {
    "removed": [
-    "野兽守护(Aspect of the Beast/191384)",
-    "伪装(Camouflage/199483)",
-    "干扰弹(Disruptive Rounds/343244)",
-    "甲壳壁垒(Shell Wall/1267218)",
-    "油滑之靴(Slicked Shoes/472719)"
+    "油滑之靴(Slicked Shoes/472719)",
+    "开拓者(Trailblazer/199921)"
    ],
    "added": [
-    "娴熟召唤(Masterful Call/1268705)",
-    "误导(Misdirection/34477)",
-    "寻路(Pathfinding/378002)",
-    "斥候本能(Scout's Instincts/459455)"
+    "科多兽镇静剂(Kodo Tranquilizer/459983)",
+    "娴熟召唤(Masterful Call/1268705)"
    ]
   }
  }
