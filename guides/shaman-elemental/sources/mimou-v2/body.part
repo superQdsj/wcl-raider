@@ -1,0 +1,507 @@
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">MURDER ROW · MYTHIC+ · ELEMENTAL SHAMAN</div>
+    <h1><span class="cls">元素萨满</span><span class="dot">·</span>密谋小径 应对手册</h1>
+    <p class="lede">密谋小径汇集<b>高频全团邪火、无视护甲物理弹幕与致死诅咒</b>。元素萨满没有免疫，靠 90 秒<b>星界转移</b>盯紧固定点：巨大浮龙波、凯斯媞亚混沌爆裂、赞恩影舞步、破坏魔惩罚者魔化狂乱、萨祖克斯地狱火碾压连魔化狂怒与尾王古尔丹之指；<b>净化灵魂</b>秒驱术士厄运诅咒，<b>清毒图腾</b>清街头扒手断心药膏，<b>妖术</b>开赞恩前控监工，<b>土元素</b>（3 分钟）补星界空档。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+24 限时元素萨满（国 / 欧 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>先知</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap">
+    <div class="nav-scroll">
+      <a href="#prep" class="on">速记</a>
+      <a href="#timeline">时间轴</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#s1">开场</a>
+      <a href="#s2"><span class="n">①</span>凯斯媞亚</a>
+      <a href="#s3">酒馆</a>
+      <a href="#s4"><span class="n">②</span>赞恩</a>
+      <a href="#s5">邪能街</a>
+      <a href="#s6"><span class="n">③</span>萨祖克斯</a>
+      <a href="#s7">小鬼傀儡</a>
+      <a href="#s8"><span class="n">④</span>利希尔</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#talent">天赋</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <p class="sub">四张手牌管住全本，外加一条机制硬限制与五组必断读条。</p>
+
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="{{I:108271}}" alt=""><div><div class="nm">星界转移</div><div class="cd">90 秒（位面旅行者）· 持续 12 秒</div></div></div>
+      <p>所有伤害 −40%。全本唯一大减伤，按固定高压点预留，在萨祖克斯可一牌同盖碾压与狂怒。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:198103}}" alt=""><div><div class="nm">土元素</div><div class="cd">3 分钟 · 持续 30 秒</div></div></div>
+      <p>配始源羁绊不再嘲讽，改为最大生命值 +15%。专门补星界空档：赞恩、邪能街、萨祖克斯与尾王。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:51886}}" alt=""><div><div class="nm">净化灵魂</div><div class="cd">8 秒 · 移除全部诅咒</div></div></div>
+      <p>专驱腐化的术士<b>厄运诅咒</b>（10 秒到期 4 码暗影分摊），上身优先驱，未好喊队友补驱。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:57994}}" alt=""><div><div class="nm">风剪</div><div class="cd">12 秒 · 风幕：受到法伤 −15%</div></div></div>
+      <p>打断后 12 秒受法术伤害 −15%（物理弹幕与流血吃不到）。盯紧下方必断读条与可断引导。</p>
+    </article>
+  </div>
+
+  <div class="limit">
+    <div class="h">没有免疫 · 认清物理弹幕与驱散边界</div>
+    赞恩的<b>影舞步</b>与流血（妙手空空、锋利之甲、剥离）均为<b>物理伤害</b>，风幕减不了；<b>清毒图腾</b>（2 分钟，脚下 30 码每 1.5 秒清一人）清街头扒手挂给坦克的<b>断心药膏</b>（中毒），清不了流血和厄运诅咒（须用净化灵魂），也驱不了魔法腐蚀唾液。
+  </div>
+
+  <div class="kicks-box">
+    <div class="kicks-head">
+      <img class="ic" src="{{I:57994}}" alt="风剪">
+      <h3>全本必断读条与引导</h3>
+      <span>点击跳到对应战斗</span>
+    </div>
+    <div class="kicks">
+      <a class="kick" href="#k-missiles">
+        <div class="meta"><span class="idx">01</span><span>凶邪的法师 · 开场小怪</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">邪能飞弹</div>
+        <div class="why">可断引导，起手立刻打断防吃多跳并续 12 秒风幕。</div>
+      </a>
+      <a class="kick" href="#k-storm">
+        <div class="meta"><span class="idx">02</span><span>凯斯媞亚镜像 · 首领一</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">邪能风暴</div>
+        <div class="why">镜像可断引导，刷出立刻风剪或补群控停掉。</div>
+      </a>
+      <a class="kick" href="#k-fury">
+        <div class="meta"><span class="idx">03</span><span>愤怒卫士掠夺者 · 邪能街</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">邪能之怒</div>
+        <div class="why">3.5 秒读条，漏断减伤 60% 且免控 1 分钟，第一必断。</div>
+      </a>
+      <a class="kick" href="#k-funnel">
+        <div class="meta"><span class="idx">04</span><span>祈求者 / 萨亚德 · 邪能街</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">生命通道 / 诱惑</div>
+        <div class="why">生命通道立刻断防满血；诱惑 3 秒读条漏断魅惑 6 秒。</div>
+      </a>
+      <a class="kick" href="#k-cbolt">
+        <div class="meta"><span class="idx">05</span><span>利希尔·烬怒 · 尾王</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">混乱之箭</div>
+        <div class="why">3 秒高伤混乱读条，按分工轮断，轮到就风剪。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>一场里减伤和清毒交在哪</h2>
+  <p class="sub">一场 +24 限时实录（展示真实冷却节奏，非每波强制照搬；具体取舍见下方路线）。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>星界转移 · 固定点</span>
+      <span><i class="e"></i>土元素</span>
+      <span><i class="v"></i>清毒图腾</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">看到什么 → 按什么 → 为什么。带「必做」标签的高亮行是每把必做的关键动作。伤害数字是 +24 实测（含被吸收的部分），层数越高越大。</p>
+
+  <div class="route">
+
+    <!-- 开场 -->
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 凯斯媞亚·魔力之心</h3><span class="kind">TRASH · 凶邪的法师 / 径巷流氓 / 街头扒手 / 诱惑的萨亚德 / 巨大的邪能浮龙 / 受贿的队长</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span><b>巨大浮龙波叠上流血后交星界</b>（从开星界算到老一混沌爆裂须 ≥ 90 秒，不够就留给首领）；坦克中扒手毒进 30 码插清毒图腾。</div>
+        <div class="rows">
+          <div class="row" id="k-missiles">
+            <div class="mech"><img class="ic" src="{{I:1216571}}" alt=""><div><div class="n">邪能飞弹</div><div class="s">凶邪的法师 · 可断引导 5 秒 · 每跳约 11 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">看到引导立刻打断，顺手续 12 秒风幕；同波萨亚德优先断诱惑。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1216300}}" alt=""><div><div class="n">妙手空空 / 燃烧邪能</div><div class="s">流氓 8 秒物理流血约 13 万/跳 · 大浮龙全团火约 20 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">大浮龙波吃流血叠加燃烧邪能后补开（同压腐蚀唾液），未好喊治疗。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1216590}}" alt=""><div><div class="n">断心药膏</div><div class="s">街头扒手 · 8 秒中毒 · 每层降最大生命 5%</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:383013}}" alt="">清毒图腾</span><span class="tgt">保坦克</span></div>
+            <div class="why">坦克叠上扒手毒时进 30 码插下；未转好报给治疗。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1214966}}" alt=""><div><div class="n">邪能灌注 / 深度腐败</div><div class="s">浮龙死后 4 码炸火 / 队长光环增伤 25% 范围减伤 25%</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">离浮龙 4 码，压队长血</span></div>
+            <div class="why">浮龙残血拉开 4 码防亡语炸死；拉队长波次先集火压掉光环。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界交巨大浮龙波，清毒图腾给坦克清断心药膏</span></div>
+          <a class="next" href="#s2">下一段：凯斯媞亚 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 1 凯斯媞亚·魔力之心 -->
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>凯斯媞亚·魔力之心 / 咬咬</h3><span class="kind">BOSS 1 · 双目标</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>开战常连带门前流氓与扒手：远离近战防吃混沌弹幕，镜像刷出立刻断邪能风暴，插清毒图腾帮坦克清扒手毒。<b>星界转移死留给收尾光明灌注后的混沌爆裂</b>。</div>
+        <div class="rows">
+          <div class="row" id="k-storm">
+            <div class="mech"><img class="ic" src="{{I:1264106}}" alt=""><div><div class="n">镜像 · 邪能风暴</div><div class="s">约 +18/+51/+84 秒刷出 · 可断引导全团火焰</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span><span class="or">补控</span><span class="btn-chip"><img class="ic sm" src="{{I:51490}}" alt="">雷霆风暴</span></div>
+            <div class="why">镜像落位立刻风剪打断，人近顺手雷霆风暴或电能图腾一起停。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1230298}}" alt=""><div><div class="n">混沌弹幕 / 邪能新星</div><div class="s">3 秒读条链跳附近玩家 / 3.5 秒闪现击退</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">远程远离近战，躲新星与锥形</span></div>
+            <div class="why">远离坦克与近战避开弹幕链跳；闪现走开新星并躲咬咬邪能飞溅。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1216590}}" alt=""><div><div class="n">连带扒手 · 断心药膏</div><div class="s">带进战的街头扒手给坦克叠中毒（同前段）</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:383013}}" alt="">清毒图腾</span><span class="tgt">保坦克</span></div>
+            <div class="why">清毒图腾转好就给坦克插下；咬咬腐蚀唾液为魔法，交治疗驱散。</div>
+          </div>
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1214959}}" alt=""><div><div class="n"><span class="badge-must">必做</span>混沌爆裂</div><div class="s">光明灌注触发 · 凯斯媞亚易伤 115% 并全团炸 20 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">光明灌注结束、爆裂开始跳伤时开星界压前段团伤；未转好提前喊治疗。</div>
+          </div>
+        </div>
+        <div class="subhead">混沌爆裂每秒吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">24.7 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:53%">13.0 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界死留混沌爆裂，风剪镜像，清毒图腾保坦克</span></div>
+          <a class="next" href="#s3">下一段：非法降雨酒馆 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 酒馆过渡 -->
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>非法降雨酒馆 → 赞恩门前</h3><span class="kind">EVENT · 走红的评论家 / 敏锐的监工 / 仓库工人</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>完成酒馆分工拿 5 分钟「五星好评！」（伤害与治疗 +10%）；连带仓库工人开赞恩前用<b>妖术控一只敏锐的监工</b>，星界留进赞恩开场。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1257877}}" alt=""><div><div class="n">恶意评价</div><div class="s">走红的评论家 · 10 秒可断读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">看到读条立刻风剪打断，法术反噬直接请走评论家并避开洒落物减速。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1216970}}" alt=""><div><div class="n">敏锐的监工 · 回去干活！</div><div class="s">3 秒激怒读条 · 使 40 码仓库工人攻速 +200%</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:51514}}" alt="">妖术</span></div>
+            <div class="why">开赞恩前脱战先妖术一只监工，减少连带仓库工人进战后的团队压力。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:51514}}" alt="">优先：风剪断评论家，进赞恩前妖术控一只监工</span></div>
+          <a class="next" href="#s4">下一段：赞恩·刃悲 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 2 赞恩·刃悲 -->
+    <article class="stop boss" id="s4">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>赞恩·刃悲</h3><span class="kind">BOSS 2</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>约 <b>42 秒</b>一轮（开场连带 6 只仓库工人进战）：+8 秒影舞步 → +18 秒火焰炸弹 → +36 秒绝命凶径。<b>星界首轮（+8 秒）预开，通常第四轮（+134 秒）再开</b>（第三轮距首轮仅 84 秒），错过就留下一轮；空档挑一轮交<b>土元素</b>。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:474483}}" alt=""><div><div class="n"><span class="badge-must">必做</span>影舞步</div><div class="s">+8/+50/+92/+134 秒 · 3 秒内 7 跳无视护甲物理</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">空档</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why">落地前约 1 秒预开星界，首轮同压仓库工人<b>锋利之甲</b>流血；空档轮满 3 分钟交土元素或喊治疗。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1214355}}" alt=""><div><div class="n">火焰炸弹 / 邪能灌注货物</div><div class="s">6 秒后炸 6 码约 61 万 · 留场货物每 3 秒全团约 33 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:79206}}" alt="">灵魂行者的恩赐</span><span class="act-note">炸清货物</span></div>
+            <div class="why">先躲当日送达砸箱，带炸弹贴货物炸毁减漏伤，随即撤出 5 秒货物爆炸。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:474545}}" alt=""><div><div class="n">绝命凶径</div><div class="s">每 42 秒瞄准 5 秒 · 视线内致死物理加 15 秒流血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">卡货物或障碍断视线</span></div>
+            <div class="why">5 秒瞄准结束前务必卡住视线，顺手让枪线穿毁多余货物，绝不硬吃。</div>
+          </div>
+        </div>
+        <div class="subhead">影舞步每 0.5 秒吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">23.1 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:61%">14.0 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：星界交第 1、4 轮影舞步，土元素补空档，卡视线躲绝命凶径</span></div>
+          <a class="next" href="#s5">下一段：邪能街 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 老二到老三小怪：邪能街 -->
+    <article class="stop trash" id="s5">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>赞恩 → 歼灭者萨祖克斯（邪能街）</h3><span class="kind">TRASH · 破坏魔惩罚者 / 腐化的术士 / 愤怒卫士掠夺者 / 邪能祈求者 / 诱惑的萨亚德 / 魔蝇 / 邪能主宰鲁科西</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>长达 5 分钟连续大波。<b>净化灵魂秒驱厄运诅咒</b>，<b>星界转移（90 秒）交魔化狂乱与点名吸取生命</b>，空档满 3 分钟交土元素；末波距萨祖克斯首轮碾压 ≥ 90 秒再交星界。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1217973}}" alt=""><div><div class="n"><span class="badge-must">必做</span>厄运诅咒</div><div class="s">腐化的术士 1.5 秒读条 · 10 秒到期 4 码暗影分摊</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:51886}}" alt="">净化灵魂</span><span class="tgt">给中诅咒队友</span></div>
+            <div class="why">上身优先用净化灵魂驱掉（8 秒冷却够用），未转好立刻喊队友补驱。</div>
+          </div>
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1294774}}" alt=""><div><div class="n"><span class="badge-must">必做</span>魔化狂乱</div><div class="s">破坏魔惩罚者 · 约 20–30 秒全团每秒火焰</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">空档</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why">起跳后数秒叠上魔蝇邪能冲刺或剥离时补开星界压中段，冷却时交土元素或喊治疗。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1297683}}" alt=""><div><div class="n">吸取生命</div><div class="s">腐化的术士 2 秒读条 · 7 秒持续吸血约 29 万/秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">空档</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why">被点且距下波惩罚者或老三 ≥ 90 秒立刻交星界（压至约 18 万/秒），否则交土元素。</div>
+          </div>
+          <div class="row" id="k-fury">
+            <div class="mech"><img class="ic" src="{{I:1214922}}" alt=""><div><div class="n">邪能之怒 / 剥离</div><div class="s">愤怒卫士掠夺者 3.5 秒读条 / 瞬发冲锋 3 秒物理流血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">邪能之怒必须断，漏断后减伤 60% 且免控 1 分钟；剥离流血靠治疗与顺带星界压。</div>
+          </div>
+          <div class="row" id="k-funnel">
+            <div class="mech"><img class="ic" src="{{I:1214980}}" alt=""><div><div class="n">生命通道 / 诱惑</div><div class="s">祈求者可断引导回血增伤 / 萨亚德 3 秒读条魅惑 6 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">生命通道起手立刻断，停回血并续风幕；诱惑必断，并躲祈求者邪火轰炸。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1293022}}" alt=""><div><div class="n">邪能冲刺 / 刃舞</div><div class="s">魔蝇冲刺约 17 万 / 鲁科西 2 秒读条后连续全团火焰</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">靠风幕与治疗</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">刃舞非必留点，距下个留牌点 ≥ 90 秒或危急时才用星界兜底；躲惩罚者 12 码旋风斩。</div>
+          </div>
+        </div>
+        <div class="subhead">魔化狂乱每秒吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">16.0 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:60%">9.6 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:51886}}" alt="">优先：净化灵魂秒驱诅咒，星界压魔化狂乱与吸血，进老三前留好星界</span></div>
+          <a class="next" href="#s6">下一段：歼灭者萨祖克斯 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 3 歼灭者萨祖克斯 -->
+    <article class="stop boss" id="s6">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>歼灭者萨祖克斯</h3><span class="kind">BOSS 3</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>约 <b>57 秒</b>一轮：+15 秒利斧投掷 → 约 +35 秒地狱火碾压 → 紧接魔化狂怒。<b>星界从转好的那轮起隔轮留给碾压连狂怒</b>，空档轮交转好的<b>土元素</b>；坦克吃军团打击（减疗 80%）时提醒预留减伤。</div>
+        <div class="subhead">一轮技能轴（以首轮利斧投掷读条为 +15 秒，每 57 秒循环）</div>
+        <div class="rows">
+          <div class="row step">
+            <div class="when">+15 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1214663}}" alt=""><div><div class="n">利斧投掷 → 军团大斧</div><div class="s">3 秒读条，+5 秒落地全团约 98 万 + 魔能闪电约 15 万/秒</div></div></div>
+            <div class="skill"><span class="act-note">抬满血吃团盾，秒转大斧</span></div>
+            <div class="why">星界优先留给碾压；离落点 10 码保读条，落地立刻集火大斧停魔能闪电。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">碾压读条末</div>
+            <div class="mech"><img class="ic" src="{{I:1295455}}" alt=""><div><div class="n"><span class="badge-must">必做</span>地狱火碾压 → 魔化狂怒</div><div class="s">3 秒读条落地约 48 万 + 8 秒火约 14 万/秒，随后全团狂怒约 75 万</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">空档轮</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why"><b>读条结束前约 1 秒开星界</b>，一牌盖住落地、8 秒跳伤与紧接的魔化狂怒；空档轮交转好的土元素，都没好喊治疗。</div>
+          </div>
+          <div class="row step">
+            <div class="when">狂怒后</div>
+            <div class="mech"><img class="ic" src="{{I:474231}}" alt=""><div><div class="n">燃烧脚步</div><div class="s">魔化狂怒后持续 15 秒 · 脚下邪火约 65 万/跳</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:79206}}" alt="">灵魂行者的恩赐</span><span class="act-note">避开脚底邪火</span></div>
+            <div class="why">首领易伤 30% 时趁机爆发，移动躲开燃烧脚步，需要走位就开恩赐续读条。</div>
+          </div>
+        </div>
+        <div class="subhead">魔化狂怒每次吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">75.0 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:70%">52.2 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：隔轮星界一牌盖碾压与狂怒，土元素补空档轮，落地秒转大斧</span></div>
+          <a class="next" href="#s7">下一段：小鬼与傀儡 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 老三到老四小怪：小鬼术士与傀儡 -->
+    <article class="stop trash" id="s7">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>萨祖克斯 → 利希尔·烬怒（小鬼与傀儡）</h3><span class="kind">TRASH · 不羁的小鬼 / 腐化的术士 / 愤怒卫士掠夺者 / 邪能祈求者 / 亵渎傀儡（选打）</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>小鬼群靠<b>电能图腾</b>轮控减邪火爆裂，术士继续<b>秒驱厄运诅咒</b>、点名吸血转好交星界。打<b>亵渎傀儡</b>时预开星界吃满三连猛击；进尾王前距首轮古尔丹之指落地 ≥ 90 秒才再交星界。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1223204}}" alt=""><div><div class="n">邪火爆裂</div><div class="s">不羁的小鬼 1.5 秒读条 · 单发火焰约 23 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:192058}}" alt="">电能图腾</span><span class="or">补断</span><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">成群读条时插电能图腾群晕，同波大怪优先断邪能之怒与生命通道。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1217973}}" alt=""><div><div class="n">厄运诅咒 / 吸取生命</div><div class="s">腐化的术士（同前段）· 另读 1.5 秒黑暗契约护盾</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:51886}}" alt="">净化灵魂</span><span class="tgt">给中诅咒队友</span><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span></div>
+            <div class="why">诅咒上身就驱；被点吸血且距尾王 ≥ 90 秒才交星界；快速打穿黑暗契约防久战。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1294827}}" alt=""><div><div class="n">亵渎猛击（打傀儡路线）</div><div class="s">亵渎傀儡 2 秒读条 · 0/+4/+8 秒三连砸约 79 万/次</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">空档</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why">首砸前约 1 秒预开星界，12 秒刚好盖满三砸（单次压至约 49 万）；被点邪能光束远离人群。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:192058}}" alt="">优先：电能控小鬼，秒驱术士诅咒，打傀儡预开星界盖三砸</span></div>
+          <a class="next" href="#s8">下一段：利希尔·烬怒 ↓</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 首领 4 利希尔·烬怒 -->
+    <article class="stop boss" id="s8">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>利希尔·烬怒</h3><span class="kind">BOSS 4</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>全程常驻<b>灼热邪焰</b>（约 10 万/秒），每 <b>57 秒</b>一轮：+11 秒召邪犬 → +16 秒古尔丹之指 → +21 秒传送门 → +25 秒灾厄浪潮。<b>星界从转好的那轮起隔轮交古尔丹之指</b>，空档轮土元素转好就补，按分工轮断混乱之箭。</div>
+        <div class="subhead">一轮技能轴（以开打为 0 秒，每 57 秒循环）</div>
+        <div class="rows">
+          <div class="row step" id="k-cbolt">
+            <div class="when">全程穿插</div>
+            <div class="mech"><img class="ic" src="{{I:474375}}" alt=""><div><div class="n">混乱之箭 / 灼热邪焰</div><div class="s">3 秒高伤混乱读条 · 全程光环每秒约 10 万火焰</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:57994}}" alt="">风剪</span></div>
+            <div class="why">按分工轮断混乱之箭，轮到你就风剪，借风幕压后续灼热邪焰；邪犬尽快顺劈。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">+16 秒</div>
+            <div class="mech"><img class="ic" src="{{I:474457}}" alt=""><div><div class="n"><span class="badge-must">必做</span>古尔丹之指（开始读条）</div><div class="s">5 秒读条 → +21 秒炸 6 码暗影烈焰并刷野生小鬼</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:108271}}" alt="">星界转移</span><span class="or">空档轮</span><span class="btn-chip"><img class="ic sm" src="{{I:198103}}" alt="">土元素</span></div>
+            <div class="why">彼此分开 6 码，<b>落地前约 2–3 秒开星界</b>；星界未好交转好的土元素，都没好提前喊治疗。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+21 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1223204}}" alt=""><div><div class="n">野生小鬼落地</div><div class="s">从古尔丹之指落点涌出 · 齐读 1.5 秒邪火爆裂</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:192058}}" alt="">电能图腾</span></div>
+            <div class="why">图腾 2 秒后才晕，预判落点提前插；小鬼已起读先风剪，图腾接后续。</div>
+          </div>
+          <div class="row step">
+            <div class="when">+25 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1217345}}" alt=""><div><div class="n">灾厄浪潮 → 恶魔传送门</div><div class="s">10 秒读条推出邪火波 · 首领同时开 10 秒 50% 减伤盾</div></div></div>
+            <div class="skill"><span class="act-note">读条结束再点门</span></div>
+            <div class="why">等读条结束、浪潮逼近再点门穿波，3 秒免疫浪潮初始伤害与火焰易伤。</div>
+          </div>
+        </div>
+        <div class="subhead">古尔丹之指每次吃多少</div>
+        <div class="bars">
+          <div class="bar-row"><span>不开</span><div class="bar"><span class="off" style="width:100%">56.5 万</span></div></div>
+          <div class="bar-row"><span>星界转移</span><div class="bar"><span class="mid" style="width:64%">36.0 万</span></div></div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span><img class="ic sm" src="{{I:108271}}" alt="">优先：隔轮星界交古尔丹之指，落地电能晕小鬼，卡点过门穿浪潮</span></div>
+          <a class="next" href="#talent">查看天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">取自 +24 限时录像的元素天赋，英雄天赋先知。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">这四个防御与功能天赋不要动</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:381647}}" alt=""><div><b>位面旅行者</b><span>星界转移冷却缩到 90 秒，老二影舞步、老三碾压狂怒与尾王古尔丹之指才能隔轮排开。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:1279819}}" alt=""><div><b>始源羁绊</b><span>土元素不再嘲讽，改为最大生命值 +15%，专门补星界转移空档轮。</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:51886}}" alt=""><div><b>净化灵魂</b><span>8 秒冷却，邪能街与尾王前秒驱腐化的术士厄运诅咒。</span></div></div>
+      <div class="tal"><img class="ic" src="{{I:355630}}" alt=""><div><b>风幕</b><span>风剪打断后 12 秒受到的法术伤害 −15%，全程大量邪火与混乱读条都能吃到。</span></div></div>
+    </div>
+    <p class="tal-note">常见可换：<b>阵风</b> ↔ <b>幽魂步</b>；<b>静电充能</b> ↔ <b>巫毒掌握</b>；<b>喷流、奥拉基尔之风、图腾集中、先祖狼魂亲和、首席升腾者</b> ↔ <b>图腾投射、冰霜震击、飞升卓越、升涌气流、大地之盾、塞拉赞恩的韧性、治疗链</b>；另常驻配有<b>清毒图腾、妖术、电能图腾、自然守护者、元素防护、生机盎然、恩赐之魂、狂风图腾</b>。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>元素萨满 · 密谋小径 应对手册 · 2026-11</div>
+    <div class="refs">参考录像：
+      <a href="https://www.warcraftlogs.com/reports/1AWhVvdLbpy2gPak#fight=59">一期一会 +24 31:17</a>
+      <a href="https://www.warcraftlogs.com/reports/31F8rbhd7VtWTxCH#fight=1">孤独咩 +24 31:41</a>
+      <a href="https://www.warcraftlogs.com/reports/rzqHwMk6V8XbJgL9#fight=16">Kullingen +24 32:18</a>
+      <a href="https://www.warcraftlogs.com/reports/kftdmGnDvNATxyCM#fight=9">Stoveteacher +24 33:03</a>
+      <a href="https://www.warcraftlogs.com/reports/zZkY1ajqf9x3XmyM#fight=11">Corysham +24 33:10</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>
