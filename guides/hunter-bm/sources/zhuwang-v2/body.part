@@ -1,0 +1,529 @@
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">KINGS' REST · MYTHIC+ · BEAST MASTERY HUNTER</div>
+    <h1><span class="cls">兽王猎人</span><span class="dot">·</span>诸王之眠 应对手册</h1>
+    <p class="lede">宁神射击留给爪牙护盾和敌方减伤、激怒，反制射击优先断木乃伊和议会的全团读条。灵龟守护卡暗影旋风斩和镀金毁灭落地前，优胜劣汰接蛇之风、排干体液和龟壳空档。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+23 / +22 限时（国 / 欧 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>群兽领袖</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap">
+    <div class="nav-scroll">
+      <a href="#prep" class="on">速记</a>
+      <a href="#timeline">时间轴</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#s1">开场</a>
+      <a href="#s2"><span class="n">①</span>黄金风蛇</a>
+      <a href="#s3">陵墓大厅</a>
+      <a href="#s4">木乃伊走廊</a>
+      <a href="#s5"><span class="n">②</span>姆沁巴</a>
+      <a href="#s6">议会前</a>
+      <a href="#s7"><span class="n">③</span>部落议会</a>
+      <a href="#s8">祖尔之影</a>
+      <a href="#s9"><span class="n">④</span>达萨大王</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#talent">天赋</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="{{I:186265}}" alt=""><div><div class="nm">灵龟守护</div><div class="cd">基础 3 分钟 · 导入天赋按 2 分 15 秒预留 · 最长 8 秒</div></div></div>
+      <p>偏转能挡的命中，并降低仍会吃到的伤害。需要挡直击时，等读条将完再开。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:264735}}" alt=""><div><div class="nm">优胜劣汰</div><div class="cd">90 秒恢复一层 · 2 层 · 持续 8 秒</div></div></div>
+      <p>保留一层接下一次大伤害。空档先把血量抬回来，并提前叫团减。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:19801}}" alt=""><div><div class="nm">宁神射击</div><div class="cd">10 秒 · 敌方魔法与激怒</div></div></div>
+      <p>同一个目标各移除一项。点科多兽镇静剂后，还会驱附近至多两个目标的魔法。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="{{I:147362}}" alt=""><div><div class="nm">反制射击</div><div class="cd">24 秒 · 锁系 5 秒</div></div></div>
+      <p>和队友轮断。自己冷却时先报给下一棒，宠物在位才考虑用胁迫补控。</p>
+    </article>
+  </div>
+
+  <div class="limit">
+    <div class="h">龟壳开晚仍会跳伤</div>
+    <b>灵龟守护须在镀金毁灭命中前生效。</b> 已经挂在身上的持续伤会继续跳，别把它当驱散。
+  </div>
+
+  <div class="kicks-box">
+    <div class="kicks-head">
+      <img class="ic" src="{{I:147362}}" alt="">
+      <h3>全本必断读条</h3>
+      <span>点击跳到对应战斗</span>
+    </div>
+    <div class="kicks">
+      <a class="kick" href="#k-shadowbolt">
+        <div class="meta"><span class="idx">01</span><span>复活的妖术师 · 开场</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">暗影箭</div>
+        <div class="why">留一个焦点打断，妖术齐射出现时优先齐射。</div>
+      </a>
+      <a class="kick" href="#k-disease">
+        <div class="meta"><span class="idx">02</span><span>未完成的木乃伊 · 走廊与二王</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">恶疾排放</div>
+        <div class="why">多只木乃伊重叠时分目标，避免全团染病。</div>
+      </a>
+      <a class="kick" href="#k-nova">
+        <div class="meta"><span class="idx">03</span><span>智者扎纳扎尔 · 议会</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">毒性新星</div>
+        <div class="why">接自己的棒，避免全团中毒。</div>
+      </a>
+      <a class="kick" href="#k-roar">
+        <div class="meta"><span class="idx">04</span><span>莱班 · 尾王</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">致命咆哮</div>
+        <div class="why">按顺序轮断，提扎拉登场后继续盯莱班。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>灵龟、减伤与功能按键</h2>
+  <p class="sub">单场 +23 限时实录，展示实际按键节奏。打本时按读条和冷却决定。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+{{TIMELINE}}
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>灵龟守护</span>
+      <span><i class="e"></i>优胜劣汰</span>
+      <span><i class="v"></i>宁神射击 · 反制射击</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">看到什么 → 按什么 → 为什么。先看带「必做」标签的高亮行。伤害数字取自 +22 / +23 实测（含吸收），更高层伤害更大。</p>
+
+  <div class="route">
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 黄金风蛇</h3><span class="kind">祖尔的爪牙 / 影裔勇士 / 复活的妖术师 / 活化守卫</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>第一轮大斩用优胜劣汰；没层数就用灵龟守护，后续重斩再按技能亮起与团减排。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:269935}}" alt=""><div><div class="n"><span class="badge-must">必做</span>暗影束缚</div><div class="s">祖尔的爪牙带魔法吸收盾 · 队友被锁定</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:19801}}" alt="">宁神射击</span></div>
+            <div class="why">先驱追人的那只。剥掉盾会直接消灭爪牙，随即解除该只爪牙的追击。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:269976}}" alt=""><div><div class="n">先祖狂怒</div><div class="s">影裔勇士读完后获得激怒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:19801}}" alt="">宁神射击</span></div>
+            <div class="why">增益一出现就驱，压低它接下来的伤害；宁神冷却时喊队友驱激怒。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1305945}}" alt=""><div><div class="n">暗影旋风斩</div><div class="s">影裔勇士读条 · 暗影直击约 86 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:186265}}" alt="">灵龟守护</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
+            <div class="why">读条末开灵龟偏转直击；用优胜替代时在落地前交。</div>
+          </div>
+          <div class="row" id="k-shadowbolt">
+            <div class="mech"><img class="ic" src="{{I:1258431}}" alt=""><div><div class="n">暗影箭 / 妖术齐射</div><div class="s">复活的妖术师读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
+            <div class="why">守分到的打断；有齐射时给齐射，挡住后续全团诅咒。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>宁神驱盾和激怒，打断留给妖术师。</span></div>
+          <a class="next" href="#s2">下一段 黄金风蛇 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>黄金风蛇</h3><span class="kind">BOSS 1</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>蛇之风留优胜劣汰。只剩一层时优先留给叠着吐金的风，无层数就先抬血并叫团减。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1306736}}" alt=""><div><div class="n">吐金</div><div class="s">点名后砸 5 码 · 随后持续烧 6 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">靠边放金</span></div>
+            <div class="why">去外沿落金，离开人群；持续伤结束后离开金池，给中场留站位。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1311987}}" alt=""><div><div class="n">蛇之风</div><div class="s">全团自然跳伤 · 每跳约 29 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
+            <div class="why">读条将完或首跳刚到时开，压住后半段；背朝安全处接击退。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:265923}}" alt=""><div><div class="n">卢彻的召唤</div><div class="s">地上的金池变成活性黄金</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">转火活性黄金</span></div>
+            <div class="why">宠物跟着转火，优先处理靠近首领的活性黄金。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>靠边落金，回身打活性黄金。</span></div>
+          <a class="next" href="#s3">下一段 陵墓大厅 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>陵墓大厅</h3><span class="kind">守卫队长阿图 / 拉胡艾大王 / 总管姆巴拉 / 阿库尔大王 / 血誓刺客 / 沃希女王 / 帕特拉女王</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>宁神优先清集火目标的壁垒，再驱激怒；两者撞在同一轮且宁神没转好时，让队友补另一种。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="{{I:1296671}}" alt=""><div><div class="n"><span class="badge-must">必做</span>队长壁垒</div><div class="s">守卫队长阿图给盟友上魔法减伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:19801}}" alt="">宁神射击</span></div>
+            <div class="why">驱正在集火的怪，尤其是长时间压血线的拉胡艾大王。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:270901}}" alt=""><div><div class="n">邪恶愈合 / 束缚灵魂</div><div class="s">总管姆巴拉引导回血 · 沃希女王魅惑</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
+            <div class="why">按分工起手拦读条，先保魅惑和回血，再补灵魂之箭。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1297781}}" alt=""><div><div class="n">骤裂 / 鲜血吸取</div><div class="s">已挂流血 · 阿库尔大王准备抽血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
+            <div class="why">有流血且读条开始时再交一层优胜，压住后续跳伤和吸血重叠。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1296719}}" alt=""><div><div class="n">叉状闪电</div><div class="s">拉胡艾大王读条 · 自然伤害会弹跳</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">提前分散</span></div>
+            <div class="why">拉开彼此距离，离开过载的旋转光束。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1297763}}" alt=""><div><div class="n">兽性狂暴</div><div class="s">帕特拉女王给自己和盟友上激怒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:19801}}" alt="">宁神射击</span></div>
+            <div class="why">先驱仍在出伤害的集火目标，压下攻速和施法加速。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1306763}}" alt=""><div><div class="n">毒蛇打击</div><div class="s">帕特拉女王上中毒与减速 · 持续 8 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:5384}}" alt="">假死</span><span class="act-note">兜底 · 须点紧急药膏</span></div>
+            <div class="why">治疗接清毒；拖到危险血线时，点了紧急药膏可用假死自驱。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>阿库尔看流血，帕特拉看激怒和中毒。</span></div>
+          <a class="next" href="#s4">下一段 木乃伊走廊 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s4">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>木乃伊走廊</h3><span class="kind">未完成的木乃伊 / 葬礼构造体 / 净化构造体</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>先分木乃伊打断。反制没转好且队友没接时，宠物在旁就用胁迫控停那只木乃伊。</div>
+        <div class="rows">
+          <div class="row must" id="k-disease">
+            <div class="mech"><img class="ic" src="{{I:267763}}" alt=""><div><div class="n"><span class="badge-must">必做</span>恶疾排放</div><div class="s">未完成的木乃伊读条 · 漏断会挂全团疾病</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span><span class="or">补控</span><span class="btn-chip"><img class="ic sm" src="{{I:19577}}" alt="">胁迫</span></div>
+            <div class="why">用反制射击锁系。胁迫是宠物昏迷，控停后继续盯下一条。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:271555}}" alt=""><div><div class="n">埋葬 / 哀痛恸哭</div><div class="s">葬礼构造体埋人后开始越来越痛的引导</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">开正确的墓穴</span></div>
+            <div class="why">开被困队友所在的墓穴，解救成功就停引导。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:270293}}" alt=""><div><div class="n">净化打击</div><div class="s">净化构造体读条 · 冲击点会留火</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">出落点</span></div>
+            <div class="why">离开落点和后续火区，留灵龟给已排好的重击。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>解救被埋队友，打断木乃伊。</span></div>
+          <a class="next" href="#s5">下一段 殓尸者姆沁巴 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s5">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>殓尸者姆沁巴</h3><span class="kind">BOSS 2</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>优胜劣汰留给排干体液上身后的跳伤。没层数先报治疗，干枯上身后继续抬血。</div>
+        <div class="rows">
+          <div class="row step">
+            <div class="when">减益上身后</div>
+            <div class="mech"><img class="ic" src="{{I:267618}}" alt=""><div><div class="n">排干体液</div><div class="s">点名落地后跳 6 秒 · 每跳约 68 万</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
+            <div class="why">看见减益上身或首跳后补开，压后续跳伤；同时离开爆炸酸液。</div>
+          </div>
+          <div class="row step">
+            <div class="when">引导结束后</div>
+            <div class="mech"><img class="ic" src="{{I:267626}}" alt=""><div><div class="n">干枯</div><div class="s">引导结束后降低输出和移速，生命值超过 90% 才消失</div></div></div>
+            <div class="skill"><span class="act-note">报治疗抬血</span></div>
+            <div class="why">留在治疗范围内，尽快恢复输出和移速。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">埋葬生效后</div>
+            <div class="mech"><img class="ic" src="{{I:267702}}" alt=""><div><div class="n"><span class="badge-must">必做</span>埋葬</div><div class="s">首领埋人后开始逐个开墓</div></div></div>
+            <div class="skill"><span class="act-note">开摇动的墓穴</span></div>
+            <div class="why">看队友摇动的墓穴，第一时间开对，阻止首领释放更多木乃伊。</div>
+          </div>
+          <div class="row step">
+            <div class="when">读条与落地后</div>
+            <div class="mech"><img class="ic" src="{{I:1312146}}" alt=""><div><div class="n">觉醒猛击</div><div class="s">全团暗影冲击 · 砸完开墓放出木乃伊</div></div></div>
+            <div class="skill"><span class="act-note">满血接团伤 · 转火断条</span></div>
+            <div class="why">首领亮读条就让治疗准备接团伤，木乃伊出来后照走廊分工转火断条。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:267639}}" alt=""><div><div class="n">燃烧腐蚀</div><div class="s">随机点名火焰 · 落点会留火</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">出火区</span></div>
+            <div class="why">移出冲击点，给下一次开墓留出走位。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>干枯靠抬血，觉醒猛击后接木乃伊。</span></div>
+          <a class="next" href="#s6">下一段 议会前小怪 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s6">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>议会前小怪</h3><span class="kind">幻影萨满祭司 / 幻影妖术祭司 / 皇家狂战士 / 荣耀迅猛龙</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>反制留给分到的妖术或幽灵弹，转不过来就换下一棒。进议会前把追你的迅猛龙引离队友。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:270499}}" alt=""><div><div class="n">冰霜震击</div><div class="s">幻影萨满祭司点名 · 15 秒魔法减速</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:781}}" alt="">逃脱</span></div>
+            <div class="why">点迅疾如风时用逃脱解自己的减速；先看后跳落点有没有飞斧。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:270492}}" alt=""><div><div class="n">妖术 / 幽灵弹</div><div class="s">幻影妖术祭司读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
+            <div class="why">同轮优先拦妖术，余下幽灵弹再按分工补断。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:270495}}" alt=""><div><div class="n">治疗之潮图腾</div><div class="s">幻影萨满祭司召唤 · 给附近敌人回血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">转火图腾</span></div>
+            <div class="why">图腾落下就让宠物一起转火，及时停掉回血。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1301851}}" alt=""><div><div class="n">嗜血飞斧</div><div class="s">皇家狂战士 · 最多两人被追踪 · 流血 12 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">错开飞斧路径</span></div>
+            <div class="why">与另一名被追的人拉开，别让两把斧子的路径交叉扫到队友。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>逃脱解冰霜减速，后跳先看脚下。</span></div>
+          <a class="next" href="#s7">下一段 部落议会 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s7">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>部落议会</h3><span class="kind">BOSS 3 · 屠夫库拉 / 征服者阿卡阿里 / 智者扎纳扎尔</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>省下反制射击接毒性新星；自己的棒还在冷却就提前报换。翻滚先保证分摊人数，血线不稳叫团减。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:266206}}" alt=""><div><div class="n">旋转利斧</div><div class="s">库拉近身旋转 · 飞斧向外扫</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">离开近身圈，侧移</span></div>
+            <div class="why">保持远程距离，绕开飞斧的路径。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:267494}}" alt=""><div><div class="n">翻滚</div><div class="s">阿卡阿里锁定目标 6 秒 · 冲击点 7 码分摊</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">到点名身边分摊</span></div>
+            <div class="why">点名原地定点，队友在冲锋落点集合分摊，结算后散开。</div>
+          </div>
+          <div class="row must" id="k-nova">
+            <div class="mech"><img class="ic" src="{{I:267273}}" alt=""><div><div class="n"><span class="badge-must">必做</span>毒性新星</div><div class="s">扎纳扎尔读条 · 全团中毒 12 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
+            <div class="why">按打断排班接这一条；保住队伍血线，别把断交给图腾。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1309499}}" alt=""><div><div class="n">元素图腾</div><div class="s">扎纳扎尔召出爆裂、洪流和雷鸣图腾</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">先拆爆裂图腾</span></div>
+            <div class="why">爆裂图腾起读就转火；雷鸣图腾的瓦解将落地时避免卡在读条中。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1305810}}" alt=""><div><div class="n">电弧</div><div class="s">扎纳扎尔点名 · 会弹射</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">分摊后散开</span></div>
+            <div class="why">分摊结算后拉开距离，避免把闪电带到队友身上。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>翻滚集合，结算就散。</span></div>
+          <a class="next" href="#s8">下一段 祖尔之影 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s8">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>祖尔之影</h3><span class="kind">祖尔之影 / 祖尔的爪牙</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>宁神继续驱爪牙。优胜有两层可用一层压弹幕；只剩一层时，距尾王首个镀金不足 90 秒就留牌。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:269935}}" alt=""><div><div class="n">暗影束缚</div><div class="s">爪牙再刷 · 同开场</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:19801}}" alt="">宁神射击</span></div>
+            <div class="why">优先解正在追人的那只，给踩池的队友让出路。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1298304}}" alt=""><div><div class="n">黑暗启示</div><div class="s">读条落地点名 · 5 秒后炸 20 码</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">分开带出 20 码</span></div>
+            <div class="why">两名点名分方向离团，倒计时结束再回，别穿过踩池的人。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:1309385}}" alt=""><div><div class="n">黑暗之池</div><div class="s">双池生成 · 进池会承受黑暗吸收</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">各踩一池</span></div>
+            <div class="why">按事先分工一人一池，站到池子消失再走。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="{{I:272388}}" alt=""><div><div class="n">暗影弹幕</div><div class="s">点名直击后还有 4 秒跳伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
+            <div class="why">有余量就用优胜接，来不及预开也可补在跳伤段。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>点名炸出人群，脚下有池先分踩。</span></div>
+          <a class="next" href="#s9">下一段 达萨大王 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s9">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>达萨大王</h3><span class="kind">BOSS 4 · 达萨大王 / 莱班 / 提扎拉</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>提扎拉登场后约 47 秒一轮，隔一轮也赶不上灵龟冷却。龟壳留给镀金，转好再交；空档用优胜预接直击，无层数提前要团减。</div>
+        <div class="rows">
+          <div class="row step" id="k-roar">
+            <div class="when">莱班在场</div>
+            <div class="mech"><img class="ic" src="{{I:269369}}" alt=""><div><div class="n">致命咆哮</div><div class="s">莱班读条 · 漏断会全团恐惧 4 秒</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:147362}}" alt="">反制射击</span></div>
+            <div class="why">十秒内可能再读一次，24 秒反制交完就换人。莱班倒地再撤焦点。</div>
+          </div>
+          <div class="row step">
+            <div class="when">全程看落点</div>
+            <div class="mech"><img class="ic" src="{{I:1303115}}" alt=""><div><div class="n">凌空猛击 / 穿刺之矛</div><div class="s">达萨跃击 8 码 · 落矛范围 7 码</div></div></div>
+            <div class="skill"><span class="act-note">分散躲地面</span></div>
+            <div class="why">一直给彼此留距离，避开首领正面的灼金火波。</div>
+          </div>
+          <div class="row step">
+            <div class="when">提扎拉起读 · 第 0 秒</div>
+            <div class="mech"><img class="ic" src="{{I:1303324}}" alt=""><div><div class="n">震地之跃</div><div class="s">提扎拉起读约 4 秒 · 连跳的冲击半径 8 码</div></div></div>
+            <div class="skill"><span class="act-note">立刻 8 码分散</span></div>
+            <div class="why">先散开避开彼此的落点。留住镀金的牌，同轮两个伤害隔得太远。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">读条末 · 同轮震地起读后约 21 秒落地</div>
+            <div class="mech"><img class="ic" src="{{I:1303267}}" alt=""><div><div class="n"><span class="badge-must">必做</span>镀金毁灭</div><div class="s">读条约 6 秒 · 火焰直击约 78 万</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="{{I:186265}}" alt="">灵龟守护</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span></div>
+            <div class="why">读条还剩约 1 秒时开灵龟，偏转直击并挡下该轮持续伤上身。龟壳没好就预开优胜。</div>
+          </div>
+          <div class="row step">
+            <div class="when">落地后 · 已挂减益</div>
+            <div class="mech"><img class="ic" src="{{I:1303267}}" alt=""><div><div class="n">镀金毁灭持续伤</div><div class="s">直击后有 15 秒火焰跳伤 · 每跳约 12 万</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="{{I:264735}}" alt="">优胜劣汰</span><span class="or">自疗兜底</span><span class="btn-chip"><img class="ic sm" src="{{I:109304}}" alt="">意气风发</span></div>
+            <div class="why">落地才想起时，补优胜压后续跳伤。掉血过快就自疗，保持在治疗范围内。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>镀金读条末开龟壳，两次交牌按实际冷却。</span></div>
+          <a class="next" href="#talent">查看天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">群兽领袖。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">{{TALENT}}</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">保留的防御与功能天赋</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="{{I:1258485}}" alt=""><div><b>强化灵龟守护</b><span>龟壳冷却缩短 30 秒，方便赶上尾王后续的镀金毁灭。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:459450}}" alt=""><div><b>护身软甲</b><span>优胜劣汰多一层充能，便于保留一层接下一个高压点。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:109215}}" alt=""><div><b>迅疾如风</b><span>逃脱会解除身上的移动限制，并加速 4 秒。</span></div></div>
+      <div class="tal key"><img class="ic" src="{{I:459983}}" alt=""><div><b>科多兽镇静剂</b><span>宁神射击还能驱附近至多两个敌人的魔法，爪牙扎堆时优先瞄中间。</span></div></div>
+    </div>
+    <p class="tal-note">常见调整是按路线取舍<b>寻路</b>与<b>伪装</b>，分别用于常驻移速和绕怪。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>兽王猎人 · 诸王之眠 应对手册 · 2026-11</div>
+    <div class="refs">参考录像
+      <a href="https://www.warcraftlogs.com/reports/vNBDr3yAXtnVCQKw#fight=3">Banshers +23 31:09</a>
+      <a href="https://www.warcraftlogs.com/reports/yc3jBxM9JWmVvQXa#fight=6">Talent +23 31:56</a>
+      <a href="https://www.warcraftlogs.com/reports/6GW8tcxTmLb9rQnN#fight=7">月神扳机 +23 32:00</a>
+      <a href="https://www.warcraftlogs.com/reports/vfrFWa8ZktNKXhTp#fight=10">木碗 +23 32:13</a>
+      <a href="https://www.warcraftlogs.com/reports/ZdJv8TBb2KG3y7Wn#fight=1">Nextberserk +22 29:51</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>

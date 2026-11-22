@@ -66,6 +66,16 @@ PALETTES: Dict[str, Dict[str, str]] = {
         "--hero-a": "rgba(216,173,126,.14)", "--hero-b": "rgba(143,174,196,.09)",
         "--tl-e": "#8faec4", "--tl-v": "#e49d6e",
     },
+    "hunter-bm": {
+        "theme_name": "猎人绿暗底", "cls_zh": "兽王猎人", "spec_en": "BEAST MASTERY HUNTER", "spec_zh": "兽王",
+        "--bg": "#0e1310", "--nav-bg": "rgba(14,19,16,.92)",
+        "--panel": "#151d17", "--panel-2": "#1b261e", "--line": "#2a3a2e", "--line-2": "#3e5142",
+        "--ink": "#e9eddf", "--ink-2": "#cdd6c8", "--mute": "#a4b4a6", "--faint": "#8b9b8d",
+        "--gold": "#aad372", "--gold-dim": "#839f61", "--on-gold": "#11180b",
+        "--gold-bg": "rgba(170,211,114,.08)", "--gold-chip": "rgba(170,211,114,.15)", "--gold-band": "rgba(170,211,114,.13)",
+        "--hero-a": "rgba(170,211,114,.14)", "--hero-b": "rgba(127,181,227,.09)",
+        "--tl-e": "#88b7e9", "--tl-v": "#e1a778",
+    },
     "shaman-elemental": {
         "theme_name": "萨满雷蓝暗底", "cls_zh": "元素萨满", "spec_en": "ELEMENTAL SHAMAN", "spec_zh": "元素",
         "--bg": "#0d1014", "--nav-bg": "rgba(13,16,20,.92)",

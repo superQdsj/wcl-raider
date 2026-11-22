@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>兽王猎人 · 诸王之眠 应对手册</title>
+<style>
+/* 兽王猎人 · 诸王之眠（猎人绿暗底）：一条路线讲到底，顶部速记 + 高频职责跳转 + 阶段导航。
+   换职业只改 :root 变量即可，:root 之外零硬编码色值。
+   路线内主强调色（--gold）严格只表达「必做」；次色（--tl-e / --tl-v）仅用于时间轴副手牌标记；红（--blood）仅用于硬限制与高压警示。
+   纯系统字体，无外部资源依赖。 */
+:root{
+  --bg:#0e1310; --nav-bg:rgba(14,19,16,.92);
+  --panel:#151d17; --panel-2:#1b261e; --line:#2a3a2e; --line-2:#3e5142;
+  --tint-1:rgba(255,255,255,.018); --tint-2:rgba(255,255,255,.045); --ic-edge:#000;
+  --ink:#e9eddf; --ink-2:#cdd6c8; --mute:#a4b4a6; --faint:#8b9b8d;
+  --gold:#aad372; --gold-dim:#839f61; --on-gold:#11180b;
+  --gold-bg:rgba(170,211,114,.08); --gold-chip:rgba(170,211,114,.15); --gold-band:rgba(170,211,114,.13);
+  --hero-a:rgba(170,211,114,.14); --hero-b:rgba(127,181,227,.09);
+  --tl-e:#88b7e9; --tl-v:#e1a778;
+  --bar-off:#848e88; --bar-mid:#b8c4bc; --on-bar:#141916;
+  --blood:#eb7a6e; --blood-bg:rgba(235,122,110,.09); --blood-line:rgba(235,122,110,.34);
+  --display:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",Georgia,serif;
+  --body:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:68px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.68 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+img.ic{width:28px;height:28px;border-radius:6px;border:1px solid var(--ic-edge);box-shadow:0 0 0 1px var(--line-2);flex:none;display:block}
+img.ic.lg{width:38px;height:38px;border-radius:8px}
+img.ic.sm{width:20px;height:20px;border-radius:5px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.01em}
+h2{font-size:23px;font-weight:900;display:flex;align-items:baseline;gap:12px}
+h2 .k{font:700 12px var(--mono);color:var(--mute);letter-spacing:.12em}
+.sub{color:var(--mute);font-size:14px;margin:6px 0 0}
+section{padding:40px 0 6px}
+
+/* hero */
+header{border-bottom:1px solid var(--line);background:
+  radial-gradient(900px 320px at 88% -40%,var(--hero-a),transparent 70%),
+  radial-gradient(700px 260px at 0% 130%,var(--hero-b),transparent 70%)}
+header .wrap{padding-top:42px;padding-bottom:30px;display:grid;gap:16px}
+.eyebrow{font:700 12px var(--mono);letter-spacing:.16em;color:var(--mute)}
+h1{font-size:clamp(30px,5.6vw,48px);font-weight:900;line-height:1.12}
+h1 .cls{color:var(--gold)}
+h1 .dot{color:var(--faint);margin:0 .2em}
+.lede{max-width:66ch;color:var(--ink-2);font-size:16px;margin:0;line-height:1.75}
+.lede b{color:var(--ink);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--mute)}
+.chip b{color:var(--ink);font-weight:500}
+
+/* sticky stage nav (outer wrap reserves 124px so scrolled links never slide under ← 全部手册) */
+.nav{position:sticky;top:0;z-index:20;background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{padding-top:8px;padding-bottom:8px;padding-right:124px}
+.nav-scroll{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav a{flex:none;font-size:13px;font-weight:500;color:var(--mute);padding:6px 10px;border-radius:7px;white-space:nowrap;transition:color .15s,background .15s}
+.nav a .n{font:700 11px var(--mono);color:var(--faint);margin-right:4px}
+.nav a:hover{color:var(--ink);background:var(--panel)}
+.nav a.on{color:var(--on-gold);background:var(--gold);font-weight:700}
+.nav a.on .n{color:var(--on-gold)}
+.nav .sep{flex:none;width:1px;height:14px;background:var(--line);margin:0 4px}
+
+/* prep: core skills + hard limit + duty checklist */
+.cores{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.core{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 15px;display:grid;gap:8px;align-content:start}
+.core.main{border-color:var(--gold-dim);background:linear-gradient(180deg,var(--gold-bg),var(--panel) 55%)}
+.core .top{display:flex;gap:10px;align-items:center}
+.core .nm{font-weight:700;font-size:15.5px;line-height:1.25}
+.core .cd{font:500 12px var(--mono);color:var(--mute);margin-top:2px}
+.core.main .nm{color:var(--gold)}
+.core p{margin:0;font-size:13.5px;line-height:1.6;color:var(--ink-2)}
+
+.limit{margin-top:12px;background:var(--blood-bg);border:1px solid var(--blood-line);border-left:3px solid var(--blood);
+  border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink-2);line-height:1.65}
+.limit .h{font:700 12.5px var(--body);color:var(--blood);letter-spacing:.04em;margin-bottom:4px}
+.limit b{color:var(--ink);font-weight:700}
+
+.kicks-box{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.kicks-head{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel-2)}
+.kicks-head h3{font-size:16px;font-weight:700}
+.kicks-head span{font-size:13px;color:var(--mute);margin-left:auto}
+.kicks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--panel)}
+.kick{display:grid;gap:4px;padding:14px 16px;background:var(--panel);box-shadow:0 0 0 1px var(--line);transition:background .15s;position:relative}
+.kick:hover{background:var(--panel-2)}
+.kick .meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--mute)}
+.kick .idx{font:700 11.5px var(--mono);color:var(--ink-2)}
+.kick .go{margin-left:auto;color:var(--faint);font-size:12px}
+.kick:hover .go{color:var(--ink)}
+.kick .cast{font:700 16px/1.35 var(--display);color:var(--ink)}
+.kick .why{font-size:13.5px;color:var(--ink-2);line-height:1.55}
+
+/* timeline (shared single-track timeline) */
+.tl-card{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px 12px}
+.tl-scroll{overflow-x:auto;padding-bottom:6px}
+.tl{position:relative;min-width:884px;height:232px;margin:0 48px}
+.band{position:absolute;top:84px;z-index:0;height:30px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;overflow:hidden}
+.band.trash{background:var(--panel-2);color:var(--mute);border:1px dashed var(--line)}
+.band.boss{background:var(--gold-band,rgba(242,210,75,.12));color:var(--gold);border:1px solid var(--gold-dim);font-weight:700}
+.axis{position:absolute;top:212px;font:500 11px var(--mono);color:var(--faint);transform:translateX(-50%)}
+.mk{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;width:96px;z-index:1}
+.mk .stem{width:2px;background:var(--gold)}
+.mk img{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);background:var(--ic-edge,#000)}
+.mk .lab{font-size:12px;line-height:1.3;text-align:center;color:var(--ink);white-space:nowrap}
+.mk .t{font:500 11px/1.25 var(--mono);color:var(--mute)}
+.mk.up{bottom:148px}
+.mk.up .lab{order:0}.mk.up .t{order:1}.mk.up img{order:2}.mk.up .stem{order:3;height:24px}
+.mk.dn{top:114px}
+.mk.dn .stem{order:0}.mk.dn img{order:1}.mk.dn .t{order:2}.mk.dn .lab{order:3}
+.mk.dn .stem{height:14px}
+.mk.v .stem{background:var(--tl-v,var(--shadow))}.mk.v img{border-color:var(--tl-v,var(--shadow))}
+.mk.e .stem{background:var(--tl-e,var(--nature))}.mk.e img{border-color:var(--tl-e,var(--nature))}
+.mk.muted .stem{background:var(--faint)}.mk.muted img{border-color:var(--faint);filter:grayscale(.7)}.mk.muted .lab{color:var(--mute)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--mute);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+.legend i.pri{border:2px solid var(--gold);border-radius:50%}
+.legend i.e{border:2px solid var(--tl-e,var(--nature));border-radius:50%}
+.legend i.v{border:2px solid var(--tl-v,var(--shadow));border-radius:50%}
+.legend i.muted{border:2px solid var(--faint);border-radius:50%}
+.legend i.boss{background:var(--gold-band,rgba(242,210,75,.12));border:1px solid var(--gold-dim)}
+.legend i.trash{background:var(--panel-2);border:1px dashed var(--line)}
+
+
+/* route */
+.route{margin-top:20px;position:relative;display:grid;gap:18px}
+.route::before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.stop{display:grid;grid-template-columns:40px 1fr;gap:14px}
+.node{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:900 16px var(--display);position:relative;z-index:1}
+.stop.boss .node{background:var(--panel-2);border:2px solid var(--ink-2);color:var(--ink)}
+.stop.trash .node{background:var(--panel-2);border:1px solid var(--line-2);color:var(--mute);font-size:12px;font-weight:700}
+.stop-body{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.stop.boss .stop-body{border-color:var(--line-2)}
+.stop-head{padding:13px 16px;display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:var(--panel-2)}
+.stop-head h3{font-size:18px;font-weight:900}
+.stop.trash .stop-head h3{font-size:16.5px;font-weight:700;color:var(--ink)}
+.stop-head .kind{font:700 11px var(--mono);letter-spacing:.1em;color:var(--mute)}
+.stop.boss .stop-head .kind{color:var(--ink-2)}
+
+.rhythm{padding:10px 16px;font-size:13.5px;color:var(--ink-2);background:var(--tint-1);border-bottom:1px solid var(--line);line-height:1.65}
+.rhythm .lbl{font:700 11.5px var(--body);color:var(--ink);margin-right:8px;letter-spacing:.04em}
+.rhythm b{color:var(--ink);font-weight:700}
+.rhythm.warn{background:var(--blood-bg);color:var(--ink)}
+.rhythm.warn .lbl{color:var(--blood)}
+
+.rows{display:grid}
+.row{display:grid;grid-template-columns:minmax(190px,1.15fr) 20px minmax(150px,.95fr) minmax(180px,1.25fr);gap:10px 12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row.must{background:var(--gold-bg);border-left:3px solid var(--gold);padding-left:13px}
+.row:target{outline:2px solid var(--ink-2);outline-offset:-2px;background:var(--tint-2)}
+.mech{display:flex;gap:10px;align-items:center;min-width:0}
+.mech .n{font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mech .s{font-size:12.5px;color:var(--mute);margin-top:1px}
+.badge-must{font:700 11px/1 var(--body);color:var(--on-gold);background:var(--gold);padding:3px 6px;border-radius:4px;letter-spacing:.02em}
+.row .to{color:var(--faint);text-align:center;font-weight:700}
+.row.must .to{color:var(--gold)}
+.skill{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.btn-chip{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--ink);
+  background:var(--panel-2);border:1px solid var(--line-2);border-radius:7px;padding:3px 9px 3px 4px;white-space:nowrap}
+.row.must .btn-chip.pri{border-color:var(--gold-dim);background:var(--gold-chip);color:var(--gold)}
+.tgt{font-size:12.5px;color:var(--mute);font-weight:500}
+.act-note{font-size:13px;color:var(--mute)}
+.or{font-size:12px;color:var(--faint)}
+.row .why{font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.row .why b{color:var(--ink);font-weight:700}
+
+/* step sequence inside boss stop */
+.subhead{padding:10px 16px 6px;font:700 12px var(--body);color:var(--mute);letter-spacing:.04em;border-top:1px solid var(--line);background:var(--tint-1)}
+.row.step{grid-template-columns:minmax(72px,auto) minmax(150px,1fr) minmax(160px,1fr) minmax(180px,1.25fr)}
+.row.step .when{font:700 12.5px var(--mono);color:var(--mute);white-space:nowrap}
+.row.step.must .when{color:var(--gold)}
+.row.step .mech{gap:8px}
+
+/* soak comparison bars */
+.bars{padding:8px 16px 14px;display:grid;gap:8px}
+.bar-row{display:grid;grid-template-columns:108px 1fr;gap:12px;align-items:center;font-size:13px;color:var(--mute)}
+.bar{height:24px;background:var(--panel-2);border-radius:6px;position:relative;overflow:hidden}
+.bar span{position:absolute;inset:0 auto 0 0;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font:700 12px var(--mono);color:var(--on-bar);white-space:nowrap;min-width:52px}
+.bar .off{background:var(--bar-off)}
+.bar .mid{background:var(--bar-mid)}
+.bar .zero{background:none;color:var(--ink);justify-content:flex-start;padding-left:8px}
+
+.stop-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 16px;
+  border-top:1px solid var(--line);background:var(--panel-2);font-size:13px;color:var(--mute)}
+.stop-foot .plan{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.stop-foot .plan img{vertical-align:-4px;margin-right:4px}
+.stop-foot .next{color:var(--ink-2);font-weight:500}
+.stop-foot .next:hover{color:var(--ink);text-decoration:underline}
+
+/* talents */
+.talent{margin-top:18px;background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:18px;display:grid;gap:16px}
+.code-row{display:flex;gap:10px;align-items:stretch}
+.code-row code{flex:1;min-width:0;font:500 13px/1.5 var(--mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;word-break:break-all;user-select:all}
+.code-row button{flex:none;font:700 14px var(--body);color:var(--on-gold);background:var(--gold);border:0;border-radius:8px;padding:0 20px;cursor:pointer}
+.code-row button:hover{filter:brightness(1.08)}
+.tal-label{font-size:13px;font-weight:700;color:var(--mute);margin:0}
+.tal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tal{display:flex;gap:10px;align-items:center;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);font-size:13.5px}
+.tal.key{border-color:var(--line-2)}
+.tal b{font-size:14px;color:var(--ink);display:block;margin-bottom:2px}
+.tal span{display:block;color:var(--ink-2);line-height:1.5}
+.tal-note{font-size:13.5px;color:var(--mute);margin:0;line-height:1.6}
+.tal-note b{color:var(--ink);font-weight:600}
+
+footer{padding:36px 0 54px;border-top:1px solid var(--line);margin-top:44px;color:var(--mute);font-size:13px}
+.refs{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
+.refs a{color:var(--ink-2);border-bottom:1px dotted var(--faint)}
+.refs a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .row,.row.step{grid-template-columns:1fr;gap:6px}
+  .row .to{display:none}
+  .route::before{left:15px}
+  .stop{grid-template-columns:32px 1fr;gap:10px}
+  .node{width:32px;height:32px;font-size:14px}
+  .tal-grid{grid-template-columns:1fr}
+  .code-row{flex-direction:column}
+  .code-row button{padding:10px 20px}
+  .bar-row{grid-template-columns:88px 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">KINGS' REST · MYTHIC+ · BEAST MASTERY HUNTER</div>
+    <h1><span class="cls">兽王猎人</span><span class="dot">·</span>诸王之眠 应对手册</h1>
+    <p class="lede">宁神射击留给爪牙护盾和敌方减伤、激怒，反制射击优先断木乃伊和议会的全团读条。灵龟守护卡暗影旋风斩和镀金毁灭落地前，优胜劣汰接蛇之风、排干体液和龟壳空档。</p>
+    <div class="chips">
+      <span class="chip">参考 <b>+23 / +22 限时（国 / 欧 / 美）</b></span>
+      <span class="chip">英雄天赋 <b>群兽领袖</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="阶段导航">
+  <div class="wrap">
+    <div class="nav-scroll">
+      <a href="#prep" class="on">速记</a>
+      <a href="#timeline">时间轴</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#s1">开场</a>
+      <a href="#s2"><span class="n">①</span>黄金风蛇</a>
+      <a href="#s3">陵墓大厅</a>
+      <a href="#s4">木乃伊走廊</a>
+      <a href="#s5"><span class="n">②</span>姆沁巴</a>
+      <a href="#s6">议会前</a>
+      <a href="#s7"><span class="n">③</span>部落议会</a>
+      <a href="#s8">祖尔之影</a>
+      <a href="#s9"><span class="n">④</span>达萨大王</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="#talent">天赋</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="prep">
+  <h2><span class="k">00</span>开打前速记</h2>
+  <div class="cores">
+    <article class="core main">
+      <div class="top"><img class="ic lg" src="../icons/fc38901d4be6.jpg" alt=""><div><div class="nm">灵龟守护</div><div class="cd">基础 3 分钟 · 导入天赋按 2 分 15 秒预留 · 最长 8 秒</div></div></div>
+      <p>偏转能挡的命中，并降低仍会吃到的伤害。需要挡直击时，等读条将完再开。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/a6aed8aed400.jpg" alt=""><div><div class="nm">优胜劣汰</div><div class="cd">90 秒恢复一层 · 2 层 · 持续 8 秒</div></div></div>
+      <p>保留一层接下一次大伤害。空档先把血量抬回来，并提前叫团减。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/40fa6c655244.jpg" alt=""><div><div class="nm">宁神射击</div><div class="cd">10 秒 · 敌方魔法与激怒</div></div></div>
+      <p>同一个目标各移除一项。点科多兽镇静剂后，还会驱附近至多两个目标的魔法。</p>
+    </article>
+    <article class="core">
+      <div class="top"><img class="ic lg" src="../icons/efba0b57fcd2.jpg" alt=""><div><div class="nm">反制射击</div><div class="cd">24 秒 · 锁系 5 秒</div></div></div>
+      <p>和队友轮断。自己冷却时先报给下一棒，宠物在位才考虑用胁迫补控。</p>
+    </article>
+  </div>
+
+  <div class="limit">
+    <div class="h">龟壳开晚仍会跳伤</div>
+    <b>灵龟守护须在镀金毁灭命中前生效。</b> 已经挂在身上的持续伤会继续跳，别把它当驱散。
+  </div>
+
+  <div class="kicks-box">
+    <div class="kicks-head">
+      <img class="ic" src="../icons/efba0b57fcd2.jpg" alt="">
+      <h3>全本必断读条</h3>
+      <span>点击跳到对应战斗</span>
+    </div>
+    <div class="kicks">
+      <a class="kick" href="#k-shadowbolt">
+        <div class="meta"><span class="idx">01</span><span>复活的妖术师 · 开场</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">暗影箭</div>
+        <div class="why">留一个焦点打断，妖术齐射出现时优先齐射。</div>
+      </a>
+      <a class="kick" href="#k-disease">
+        <div class="meta"><span class="idx">02</span><span>未完成的木乃伊 · 走廊与二王</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">恶疾排放</div>
+        <div class="why">多只木乃伊重叠时分目标，避免全团染病。</div>
+      </a>
+      <a class="kick" href="#k-nova">
+        <div class="meta"><span class="idx">03</span><span>智者扎纳扎尔 · 议会</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">毒性新星</div>
+        <div class="why">接自己的棒，避免全团中毒。</div>
+      </a>
+      <a class="kick" href="#k-roar">
+        <div class="meta"><span class="idx">04</span><span>莱班 · 尾王</span><span class="go">跳转 ↘</span></div>
+        <div class="cast">致命咆哮</div>
+        <div class="why">按顺序轮断，提扎拉登场后继续盯莱班。</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2><span class="k">01</span>灵龟、减伤与功能按键</h2>
+  <p class="sub">单场 +23 限时实录，展示实际按键节奏。打本时按读条和冷却决定。</p>
+  <div class="tl-card">
+    <div class="tl-scroll">
+<div class="tl">
+  <div class="band trash" style="left:1.00%;width:9.93%">开场</div>
+  <div class="band boss" style="left:11.68%;width:11.30%">黄金风蛇</div>
+  <div class="band trash" style="left:24.02%;width:15.70%">陵墓大厅</div>
+  <div class="band trash" style="left:41.86%;width:5.81%">木乃伊走廊</div>
+  <div class="band boss" style="left:47.73%;width:11.39%">殓尸者姆沁巴</div>
+  <div class="band trash" style="left:60.17%;width:6.60%">议会前小怪</div>
+  <div class="band boss" style="left:66.78%;width:14.42%">部落议会</div>
+  <div class="band trash" style="left:82.68%;width:4.30%">祖尔之影</div>
+  <div class="band boss" style="left:87.69%;width:12.31%">达萨大王</div>
+  <div class="axis" style="left:0;transform:none">0:00</div>
+  <div class="axis" style="left:15.93%">5:00</div>
+  <div class="axis" style="left:31.86%">10:00</div>
+  <div class="axis" style="left:47.79%">15:00</div>
+  <div class="axis" style="left:63.71%">20:00</div>
+  <div class="axis" style="left:79.64%">25:00</div>
+  <div class="axis" style="left:95.57%">30:00</div>
+  <div class="mk up v" style="left:1.14%"><span class="lab">驱爪牙护盾</span><span class="t">0:21</span><span class="stem"></span><img src="../icons/40fa6c655244.jpg" alt=""></div>
+  <div class="mk dn" style="left:5.86%"><span class="lab">龟壳免旋风斩</span><span class="t">1:50</span><span class="stem"></span><img src="../icons/fc38901d4be6.jpg" alt=""></div>
+  <div class="mk up v" style="left:10.25%"><span class="lab">断暗影箭</span><span class="t">3:13</span><span class="stem"></span><img src="../icons/efba0b57fcd2.jpg" alt=""></div>
+  <div class="mk dn e" style="left:19.44%"><span class="lab">减伤抗蛇风</span><span class="t">6:06</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk up v" style="left:24.57%"><span class="lab">驱队长壁垒</span><span class="t">7:42</span><span class="stem"></span><img src="../icons/40fa6c655244.jpg" alt=""></div>
+  <div class="mk dn e" style="left:33.52%"><span class="lab">减伤扛骤裂</span><span class="t">10:31</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk up v" style="left:43.78%"><span class="lab">断恶疾排放</span><span class="t">13:44</span><span class="stem"></span><img src="../icons/efba0b57fcd2.jpg" alt=""></div>
+  <div class="mk dn e" style="left:51.70%"><span class="lab">减伤扛排干</span><span class="t">16:13</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk up v" style="left:79.57%"><span class="lab">断毒性新星</span><span class="t">24:58</span><span class="stem"></span><img src="../icons/efba0b57fcd2.jpg" alt=""></div>
+  <div class="mk dn e" style="left:85.30%"><span class="lab">减伤抗弹幕</span><span class="t">26:46</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk up" style="left:89.57%"><span class="lab">龟壳免镀金</span><span class="t">28:07</span><span class="stem"></span><img src="../icons/fc38901d4be6.jpg" alt=""></div>
+  <div class="mk dn e" style="left:96.32%"><span class="lab">压镀金跳伤</span><span class="t">30:14</span><span class="stem"></span><img src="../icons/a6aed8aed400.jpg" alt=""></div>
+  <div class="mk up" style="left:98.75%"><span class="lab">龟壳免镀金</span><span class="t">30:59</span><span class="stem"></span><img src="../icons/fc38901d4be6.jpg" alt=""></div>
+</div>
+    </div>
+    <div class="legend">
+      <span><i class="pri"></i>灵龟守护</span>
+      <span><i class="e"></i>优胜劣汰</span>
+      <span><i class="v"></i>宁神射击 · 反制射击</span>
+      <span><i class="boss"></i>首领战</span>
+      <span><i class="trash"></i>小怪段</span>
+    </div>
+  </div>
+</section>
+
+<section id="route">
+  <h2><span class="k">02</span>按路线逐段</h2>
+  <p class="sub">看到什么 → 按什么 → 为什么。先看带「必做」标签的高亮行。伤害数字取自 +22 / +23 实测（含吸收），更高层伤害更大。</p>
+
+  <div class="route">
+    <article class="stop trash" id="s1">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>开场 → 黄金风蛇</h3><span class="kind">祖尔的爪牙 / 影裔勇士 / 复活的妖术师 / 活化守卫</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>第一轮大斩用优胜劣汰；没层数就用灵龟守护，后续重斩再按技能亮起与团减排。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/5cc1bf9da071.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>暗影束缚</div><div class="s">祖尔的爪牙带魔法吸收盾 · 队友被锁定</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/40fa6c655244.jpg" alt="">宁神射击</span></div>
+            <div class="why">先驱追人的那只。剥掉盾会直接消灭爪牙，随即解除该只爪牙的追击。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/fbe07bcb56a4.jpg" alt=""><div><div class="n">先祖狂怒</div><div class="s">影裔勇士读完后获得激怒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/40fa6c655244.jpg" alt="">宁神射击</span></div>
+            <div class="why">增益一出现就驱，压低它接下来的伤害；宁神冷却时喊队友驱激怒。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/1dbb6f151c5e.jpg" alt=""><div><div class="n">暗影旋风斩</div><div class="s">影裔勇士读条 · 暗影直击约 86 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/fc38901d4be6.jpg" alt="">灵龟守护</span><span class="or">或</span><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">读条末开灵龟偏转直击；用优胜替代时在落地前交。</div>
+          </div>
+          <div class="row" id="k-shadowbolt">
+            <div class="mech"><img class="ic" src="../icons/d7d266261634.jpg" alt=""><div><div class="n">暗影箭 / 妖术齐射</div><div class="s">复活的妖术师读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span></div>
+            <div class="why">守分到的打断；有齐射时给齐射，挡住后续全团诅咒。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>宁神驱盾和激怒，打断留给妖术师。</span></div>
+          <a class="next" href="#s2">下一段 黄金风蛇 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s2">
+      <div class="node">1</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>黄金风蛇</h3><span class="kind">BOSS 1</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>蛇之风留优胜劣汰。只剩一层时优先留给叠着吐金的风，无层数就先抬血并叫团减。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/53910a8bc95b.jpg" alt=""><div><div class="n">吐金</div><div class="s">点名后砸 5 码 · 随后持续烧 6 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">靠边放金</span></div>
+            <div class="why">去外沿落金，离开人群；持续伤结束后离开金池，给中场留站位。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/d7c752a9d528.jpg" alt=""><div><div class="n">蛇之风</div><div class="s">全团自然跳伤 · 每跳约 29 万</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">读条将完或首跳刚到时开，压住后半段；背朝安全处接击退。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/7476888a49c7.jpg" alt=""><div><div class="n">卢彻的召唤</div><div class="s">地上的金池变成活性黄金</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">转火活性黄金</span></div>
+            <div class="why">宠物跟着转火，优先处理靠近首领的活性黄金。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>靠边落金，回身打活性黄金。</span></div>
+          <a class="next" href="#s3">下一段 陵墓大厅 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s3">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>陵墓大厅</h3><span class="kind">守卫队长阿图 / 拉胡艾大王 / 总管姆巴拉 / 阿库尔大王 / 血誓刺客 / 沃希女王 / 帕特拉女王</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>宁神优先清集火目标的壁垒，再驱激怒；两者撞在同一轮且宁神没转好时，让队友补另一种。</div>
+        <div class="rows">
+          <div class="row must">
+            <div class="mech"><img class="ic" src="../icons/e2edc1df947f.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>队长壁垒</div><div class="s">守卫队长阿图给盟友上魔法减伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/40fa6c655244.jpg" alt="">宁神射击</span></div>
+            <div class="why">驱正在集火的怪，尤其是长时间压血线的拉胡艾大王。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/000bb76e7e84.jpg" alt=""><div><div class="n">邪恶愈合 / 束缚灵魂</div><div class="s">总管姆巴拉引导回血 · 沃希女王魅惑</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span></div>
+            <div class="why">按分工起手拦读条，先保魅惑和回血，再补灵魂之箭。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/70c5af16f9aa.jpg" alt=""><div><div class="n">骤裂 / 鲜血吸取</div><div class="s">已挂流血 · 阿库尔大王准备抽血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">有流血且读条开始时再交一层优胜，压住后续跳伤和吸血重叠。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/a8bebfbd2298.jpg" alt=""><div><div class="n">叉状闪电</div><div class="s">拉胡艾大王读条 · 自然伤害会弹跳</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">提前分散</span></div>
+            <div class="why">拉开彼此距离，离开过载的旋转光束。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/a9c7177fbd54.jpg" alt=""><div><div class="n">兽性狂暴</div><div class="s">帕特拉女王给自己和盟友上激怒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/40fa6c655244.jpg" alt="">宁神射击</span></div>
+            <div class="why">先驱仍在出伤害的集火目标，压下攻速和施法加速。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/9d089343fe28.jpg" alt=""><div><div class="n">毒蛇打击</div><div class="s">帕特拉女王上中毒与减速 · 持续 8 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/01d5563c623d.jpg" alt="">假死</span><span class="act-note">兜底 · 须点紧急药膏</span></div>
+            <div class="why">治疗接清毒；拖到危险血线时，点了紧急药膏可用假死自驱。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>阿库尔看流血，帕特拉看激怒和中毒。</span></div>
+          <a class="next" href="#s4">下一段 木乃伊走廊 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s4">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>木乃伊走廊</h3><span class="kind">未完成的木乃伊 / 葬礼构造体 / 净化构造体</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>先分木乃伊打断。反制没转好且队友没接时，宠物在旁就用胁迫控停那只木乃伊。</div>
+        <div class="rows">
+          <div class="row must" id="k-disease">
+            <div class="mech"><img class="ic" src="../icons/f18920d36344.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>恶疾排放</div><div class="s">未完成的木乃伊读条 · 漏断会挂全团疾病</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span><span class="or">补控</span><span class="btn-chip"><img class="ic sm" src="../icons/10b40aa70196.jpg" alt="">胁迫</span></div>
+            <div class="why">用反制射击锁系。胁迫是宠物昏迷，控停后继续盯下一条。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/bc809903930f.jpg" alt=""><div><div class="n">埋葬 / 哀痛恸哭</div><div class="s">葬礼构造体埋人后开始越来越痛的引导</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">开正确的墓穴</span></div>
+            <div class="why">开被困队友所在的墓穴，解救成功就停引导。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/409530000ad0.jpg" alt=""><div><div class="n">净化打击</div><div class="s">净化构造体读条 · 冲击点会留火</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">出落点</span></div>
+            <div class="why">离开落点和后续火区，留灵龟给已排好的重击。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>解救被埋队友，打断木乃伊。</span></div>
+          <a class="next" href="#s5">下一段 殓尸者姆沁巴 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s5">
+      <div class="node">2</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>殓尸者姆沁巴</h3><span class="kind">BOSS 2</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>优胜劣汰留给排干体液上身后的跳伤。没层数先报治疗，干枯上身后继续抬血。</div>
+        <div class="rows">
+          <div class="row step">
+            <div class="when">减益上身后</div>
+            <div class="mech"><img class="ic" src="../icons/221331288b8d.jpg" alt=""><div><div class="n">排干体液</div><div class="s">点名落地后跳 6 秒 · 每跳约 68 万</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">看见减益上身或首跳后补开，压后续跳伤；同时离开爆炸酸液。</div>
+          </div>
+          <div class="row step">
+            <div class="when">引导结束后</div>
+            <div class="mech"><img class="ic" src="../icons/20169a2ece38.jpg" alt=""><div><div class="n">干枯</div><div class="s">引导结束后降低输出和移速，生命值超过 90% 才消失</div></div></div>
+            <div class="skill"><span class="act-note">报治疗抬血</span></div>
+            <div class="why">留在治疗范围内，尽快恢复输出和移速。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">埋葬生效后</div>
+            <div class="mech"><img class="ic" src="../icons/bc809903930f.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>埋葬</div><div class="s">首领埋人后开始逐个开墓</div></div></div>
+            <div class="skill"><span class="act-note">开摇动的墓穴</span></div>
+            <div class="why">看队友摇动的墓穴，第一时间开对，阻止首领释放更多木乃伊。</div>
+          </div>
+          <div class="row step">
+            <div class="when">读条与落地后</div>
+            <div class="mech"><img class="ic" src="../icons/dbb34c7acc02.jpg" alt=""><div><div class="n">觉醒猛击</div><div class="s">全团暗影冲击 · 砸完开墓放出木乃伊</div></div></div>
+            <div class="skill"><span class="act-note">满血接团伤 · 转火断条</span></div>
+            <div class="why">首领亮读条就让治疗准备接团伤，木乃伊出来后照走廊分工转火断条。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/b9acd201e5f2.jpg" alt=""><div><div class="n">燃烧腐蚀</div><div class="s">随机点名火焰 · 落点会留火</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">出火区</span></div>
+            <div class="why">移出冲击点，给下一次开墓留出走位。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>干枯靠抬血，觉醒猛击后接木乃伊。</span></div>
+          <a class="next" href="#s6">下一段 议会前小怪 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s6">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>议会前小怪</h3><span class="kind">幻影萨满祭司 / 幻影妖术祭司 / 皇家狂战士 / 荣耀迅猛龙</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>反制留给分到的妖术或幽灵弹，转不过来就换下一棒。进议会前把追你的迅猛龙引离队友。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/74f0c2d4a5c9.jpg" alt=""><div><div class="n">冰霜震击</div><div class="s">幻影萨满祭司点名 · 15 秒魔法减速</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/277b75bf8722.jpg" alt="">逃脱</span></div>
+            <div class="why">点迅疾如风时用逃脱解自己的减速；先看后跳落点有没有飞斧。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/8dd26e18bbe0.jpg" alt=""><div><div class="n">妖术 / 幽灵弹</div><div class="s">幻影妖术祭司读条</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span></div>
+            <div class="why">同轮优先拦妖术，余下幽灵弹再按分工补断。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/e55001eb5726.jpg" alt=""><div><div class="n">治疗之潮图腾</div><div class="s">幻影萨满祭司召唤 · 给附近敌人回血</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">转火图腾</span></div>
+            <div class="why">图腾落下就让宠物一起转火，及时停掉回血。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/a64a2a4b930f.jpg" alt=""><div><div class="n">嗜血飞斧</div><div class="s">皇家狂战士 · 最多两人被追踪 · 流血 12 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">错开飞斧路径</span></div>
+            <div class="why">与另一名被追的人拉开，别让两把斧子的路径交叉扫到队友。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>逃脱解冰霜减速，后跳先看脚下。</span></div>
+          <a class="next" href="#s7">下一段 部落议会 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s7">
+      <div class="node">3</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>部落议会</h3><span class="kind">BOSS 3 · 屠夫库拉 / 征服者阿卡阿里 / 智者扎纳扎尔</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>省下反制射击接毒性新星；自己的棒还在冷却就提前报换。翻滚先保证分摊人数，血线不稳叫团减。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/66d55cb01a95.jpg" alt=""><div><div class="n">旋转利斧</div><div class="s">库拉近身旋转 · 飞斧向外扫</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">离开近身圈，侧移</span></div>
+            <div class="why">保持远程距离，绕开飞斧的路径。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/003d44a12039.jpg" alt=""><div><div class="n">翻滚</div><div class="s">阿卡阿里锁定目标 6 秒 · 冲击点 7 码分摊</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">到点名身边分摊</span></div>
+            <div class="why">点名原地定点，队友在冲锋落点集合分摊，结算后散开。</div>
+          </div>
+          <div class="row must" id="k-nova">
+            <div class="mech"><img class="ic" src="../icons/8157f8308df9.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>毒性新星</div><div class="s">扎纳扎尔读条 · 全团中毒 12 秒</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span></div>
+            <div class="why">按打断排班接这一条；保住队伍血线，别把断交给图腾。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/7fafd3370d54.jpg" alt=""><div><div class="n">元素图腾</div><div class="s">扎纳扎尔召出爆裂、洪流和雷鸣图腾</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">先拆爆裂图腾</span></div>
+            <div class="why">爆裂图腾起读就转火；雷鸣图腾的瓦解将落地时避免卡在读条中。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/90cc508ea71b.jpg" alt=""><div><div class="n">电弧</div><div class="s">扎纳扎尔点名 · 会弹射</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">分摊后散开</span></div>
+            <div class="why">分摊结算后拉开距离，避免把闪电带到队友身上。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>翻滚集合，结算就散。</span></div>
+          <a class="next" href="#s8">下一段 祖尔之影 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop trash" id="s8">
+      <div class="node">怪</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>祖尔之影</h3><span class="kind">祖尔之影 / 祖尔的爪牙</span></div>
+        <div class="rhythm"><span class="lbl">节奏</span>宁神继续驱爪牙。优胜有两层可用一层压弹幕；只剩一层时，距尾王首个镀金不足 90 秒就留牌。</div>
+        <div class="rows">
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/5cc1bf9da071.jpg" alt=""><div><div class="n">暗影束缚</div><div class="s">爪牙再刷 · 同开场</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/40fa6c655244.jpg" alt="">宁神射击</span></div>
+            <div class="why">优先解正在追人的那只，给踩池的队友让出路。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/4f982292820f.jpg" alt=""><div><div class="n">黑暗启示</div><div class="s">读条落地点名 · 5 秒后炸 20 码</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">分开带出 20 码</span></div>
+            <div class="why">两名点名分方向离团，倒计时结束再回，别穿过踩池的人。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/2e0e67439617.jpg" alt=""><div><div class="n">黑暗之池</div><div class="s">双池生成 · 进池会承受黑暗吸收</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="act-note">各踩一池</span></div>
+            <div class="why">按事先分工一人一池，站到池子消失再走。</div>
+          </div>
+          <div class="row">
+            <div class="mech"><img class="ic" src="../icons/e85bf5a9c0ab.jpg" alt=""><div><div class="n">暗影弹幕</div><div class="s">点名直击后还有 4 秒跳伤</div></div></div>
+            <div class="to">→</div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">有余量就用优胜接，来不及预开也可补在跳伤段。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>点名炸出人群，脚下有池先分踩。</span></div>
+          <a class="next" href="#s9">下一段 达萨大王 ↓</a>
+        </div>
+      </div>
+    </article>
+    <article class="stop boss" id="s9">
+      <div class="node">4</div>
+      <div class="stop-body">
+        <div class="stop-head"><h3>达萨大王</h3><span class="kind">BOSS 4 · 达萨大王 / 莱班 / 提扎拉</span></div>
+        <div class="rhythm warn"><span class="lbl">高压段</span>提扎拉登场后约 47 秒一轮，隔一轮也赶不上灵龟冷却。龟壳留给镀金，转好再交；空档用优胜预接直击，无层数提前要团减。</div>
+        <div class="rows">
+          <div class="row step" id="k-roar">
+            <div class="when">莱班在场</div>
+            <div class="mech"><img class="ic" src="../icons/e705bddf7fd9.jpg" alt=""><div><div class="n">致命咆哮</div><div class="s">莱班读条 · 漏断会全团恐惧 4 秒</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/efba0b57fcd2.jpg" alt="">反制射击</span></div>
+            <div class="why">十秒内可能再读一次，24 秒反制交完就换人。莱班倒地再撤焦点。</div>
+          </div>
+          <div class="row step">
+            <div class="when">全程看落点</div>
+            <div class="mech"><img class="ic" src="../icons/d3fd605ed4be.jpg" alt=""><div><div class="n">凌空猛击 / 穿刺之矛</div><div class="s">达萨跃击 8 码 · 落矛范围 7 码</div></div></div>
+            <div class="skill"><span class="act-note">分散躲地面</span></div>
+            <div class="why">一直给彼此留距离，避开首领正面的灼金火波。</div>
+          </div>
+          <div class="row step">
+            <div class="when">提扎拉起读 · 第 0 秒</div>
+            <div class="mech"><img class="ic" src="../icons/97438f77ad5a.jpg" alt=""><div><div class="n">震地之跃</div><div class="s">提扎拉起读约 4 秒 · 连跳的冲击半径 8 码</div></div></div>
+            <div class="skill"><span class="act-note">立刻 8 码分散</span></div>
+            <div class="why">先散开避开彼此的落点。留住镀金的牌，同轮两个伤害隔得太远。</div>
+          </div>
+          <div class="row step must">
+            <div class="when">读条末 · 同轮震地起读后约 21 秒落地</div>
+            <div class="mech"><img class="ic" src="../icons/e70de9be5e71.jpg" alt=""><div><div class="n"><span class="badge-must">必做</span>镀金毁灭</div><div class="s">读条约 6 秒 · 火焰直击约 78 万</div></div></div>
+            <div class="skill"><span class="btn-chip pri"><img class="ic sm" src="../icons/fc38901d4be6.jpg" alt="">灵龟守护</span><span class="or">备选</span><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span></div>
+            <div class="why">读条还剩约 1 秒时开灵龟，偏转直击并挡下该轮持续伤上身。龟壳没好就预开优胜。</div>
+          </div>
+          <div class="row step">
+            <div class="when">落地后 · 已挂减益</div>
+            <div class="mech"><img class="ic" src="../icons/e70de9be5e71.jpg" alt=""><div><div class="n">镀金毁灭持续伤</div><div class="s">直击后有 15 秒火焰跳伤 · 每跳约 12 万</div></div></div>
+            <div class="skill"><span class="btn-chip"><img class="ic sm" src="../icons/a6aed8aed400.jpg" alt="">优胜劣汰</span><span class="or">自疗兜底</span><span class="btn-chip"><img class="ic sm" src="../icons/1747c1619fd8.jpg" alt="">意气风发</span></div>
+            <div class="why">落地才想起时，补优胜压后续跳伤。掉血过快就自疗，保持在治疗范围内。</div>
+          </div>
+        </div>
+        <div class="stop-foot">
+          <div class="plan"><span>镀金读条末开龟壳，两次交牌按实际冷却。</span></div>
+          <a class="next" href="#talent">查看天赋 ↓</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="talent">
+  <h2><span class="k">03</span>天赋</h2>
+  <p class="sub">群兽领袖。复制字符串，在游戏天赋界面点「导入」。</p>
+  <div class="talent">
+    <div class="code-row">
+      <code id="talent-code">C0PAAAAAAAAAAAAAAAAAAAAAAAMmxwCsAzwQDbAAYGzMzs8AzYmZmZMzgZGzMMzYmZGmZGGzwyQzAAAAAAAAAzYMgZ2AGzsA2GAA</code>
+      <button type="button" id="copy-btn">复制</button>
+    </div>
+    <p class="tal-label">保留的防御与功能天赋</p>
+    <div class="tal-grid">
+      <div class="tal key"><img class="ic" src="../icons/fc38901d4be6.jpg" alt=""><div><b>强化灵龟守护</b><span>龟壳冷却缩短 30 秒，方便赶上尾王后续的镀金毁灭。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/553b533f95d4.jpg" alt=""><div><b>护身软甲</b><span>优胜劣汰多一层充能，便于保留一层接下一个高压点。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/97a56b8afe17.jpg" alt=""><div><b>迅疾如风</b><span>逃脱会解除身上的移动限制，并加速 4 秒。</span></div></div>
+      <div class="tal key"><img class="ic" src="../icons/4beb7fa1c7d6.jpg" alt=""><div><b>科多兽镇静剂</b><span>宁神射击还能驱附近至多两个敌人的魔法，爪牙扎堆时优先瞄中间。</span></div></div>
+    </div>
+    <p class="tal-note">常见调整是按路线取舍<b>寻路</b>与<b>伪装</b>，分别用于常驻移速和绕怪。</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>兽王猎人 · 诸王之眠 应对手册 · 2026-11</div>
+    <div class="refs">参考录像
+      <a href="https://www.warcraftlogs.com/reports/vNBDr3yAXtnVCQKw#fight=3">Banshers +23 31:09</a>
+      <a href="https://www.warcraftlogs.com/reports/yc3jBxM9JWmVvQXa#fight=6">Talent +23 31:56</a>
+      <a href="https://www.warcraftlogs.com/reports/6GW8tcxTmLb9rQnN#fight=7">月神扳机 +23 32:00</a>
+      <a href="https://www.warcraftlogs.com/reports/vfrFWa8ZktNKXhTp#fight=10">木碗 +23 32:13</a>
+      <a href="https://www.warcraftlogs.com/reports/ZdJv8TBb2KG3y7Wn#fight=1">Nextberserk +22 29:51</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var btn=document.getElementById("copy-btn"), code=document.getElementById("talent-code");
+  if(btn&&code){
+    btn.addEventListener("click",function(){
+      var t=code.textContent.trim();
+      function done(){btn.textContent="已复制";setTimeout(function(){btn.textContent="复制";},1600);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(code);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(r);try{document.execCommand("copy");done();}catch(e){btn.textContent="已选中，按 Ctrl+C";}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  }
+
+  var links={};
+  document.querySelectorAll(".nav a[href^='#']").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function spy(){
+    var y=window.scrollY+110, cur=targets[0]?targets[0].id:null;
+    targets.forEach(function(el){if(el.getBoundingClientRect().top+window.scrollY<=y) cur=el.id;});
+    if(targets.length&&window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4) cur=targets[targets.length-1].id;
+    Object.keys(links).forEach(function(id){links[id].classList.toggle("on",id===cur);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>
