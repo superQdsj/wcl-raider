@@ -37,7 +37,10 @@ DUNGEON_INFO = [
     ("诸王之眠", "Kings' Rest", "kingsrest"),
 ]
 DUNGEONS = [d[0] for d in DUNGEON_INFO]
+HEADER = re.compile(r"<header\b[^>]*>(.*?)</header>", re.S)
 LEDE = re.compile(r'<p class="lede">(.*?)</p>', re.S)
+LEVEL = re.compile(r"\+\d{2}(?:[～~-]\d{2})?")
+SITE_ICON = re.compile(r"/guides/icons/([0-9a-f]{12}\.jpg)")
 TAG = re.compile(r"<[^>]+>")
 # Guides are standalone pages with no way back; the published copy gets this link.
 HOME_LINK = ('<a href="/" style="position:fixed;z-index:50;top:12px;right:12px;padding:5px 12px;border-radius:999px;'
@@ -54,15 +57,20 @@ def _dungeon(path):
 
 
 def _meta(path):
-    """Date, dungeon and lede of a guide."""
+    """Date, dungeon, keystone level and lede of a guide."""
     parts = path.stem.split("-")
     html_text = path.read_text(encoding="utf-8")
     m = LEDE.search(html_text)
     lede = _text(m.group(1)) if m else ""
-    return {"date": "-".join(parts[:3]),
+    hm = HEADER.search(html_text)
+    lm = LEVEL.search(_text(hm.group(1))) if hm else None
+    meta = {"date": "-".join(parts[:3]),
             "dungeon": _dungeon(path),
             "lede": lede,
             "href": "/" + quote(path.relative_to(ROOT).as_posix())}
+    if lm:
+        meta["level"] = lm.group(0)
+    return meta
 
 
 def site_data(guides):
@@ -134,6 +142,13 @@ def main():
                     or not asset.is_file()):
                 raise SystemExit(f"Unsupported or missing local link: {page.relative_to(ROOT)} -> {link}")
             files.add(asset)
+    for tpl_name in ("index.html", "site.js"):
+        tpl_text = (TEMPLATE / tpl_name).read_text(encoding="utf-8")
+        for icon_name in SITE_ICON.findall(tpl_text):
+            icon_file = (ICONS / icon_name).resolve()
+            if not icon_file.is_file():
+                raise SystemExit(f"Missing shared icon referenced by site/{tpl_name}: {icon_name}")
+            files.add(icon_file)
     if OUTPUT.exists():
         shutil.rmtree(OUTPUT)
     OUTPUT.mkdir(parents=True)
