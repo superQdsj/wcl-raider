@@ -3,41 +3,370 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>大秘境作战手册</title>
-<meta name="description" content="按专精和副本整理的魔兽世界大秘境应对手册：每个首领和小怪技能该交什么、什么时候交，按路线从头讲到尾。">
-<meta name="theme-color" content="#100e0d">
-<link rel="icon" href="/img/icons/inv_relics_hourglass.jpg" type="image/jpeg">
+<title>wcl-raider｜魔兽世界大秘境实战作战手册</title>
+<meta name="description" content="从 Warcraft Logs 高层限时录像交叉取证的魔兽世界大秘境职业作战手册：按推进路线拆解每个首领与小怪波次的「看到什么 → 按什么 → 为什么」，含单轨冷却时间轴与国服校验天赋码。">
+<meta name="theme-color" content="#0c0b0a">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/img/icons/inv_relics_hourglass.jpg" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/site.css">
 </head>
 <body>
 
-<header class="top">
-  <div class="wrap">
-    <nav class="specs" aria-label="选择专精"></nav>
-    <div class="eyebrow">MYTHIC+ · <span id="spec-en"></span> · FIELD MANUALS</div>
-    <h1 id="spec-name">大秘境作战手册</h1>
-    <p class="lede">每个首领和小怪技能该交什么、什么时候交，按路线从头讲到尾。选好专精，打开这周要打的副本。</p>
-    <div class="chips"></div>
+<header class="navbar">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="wcl-raider 首页">
+      <img src="/assets/icon.svg" width="30" height="30" alt="">
+      <span class="brand-word">wcl-raider</span>
+      <span class="brand-sep" aria-hidden="true"></span>
+      <span class="brand-sub">大秘境作战手册</span>
+    </a>
+
+    <nav class="nav-links" aria-label="站点主导航">
+      <a href="#manuals">手册大厅</a>
+      <a href="#anatomy">内页拆解</a>
+      <a href="#matrix">全本矩阵</a>
+      <a href="#method">取证标准</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button type="button" class="nav-search-btn" id="jump-search" aria-label="跳转到手册搜索">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-3.8-3.8"/></svg>
+        <span>搜副本 / 机制</span>
+        <kbd>/</kbd>
+      </button>
+      <a class="nav-cta" href="#manuals">选本开打 ↓</a>
+    </div>
   </div>
 </header>
 
-<main class="wrap">
-  <section aria-labelledby="board-title">
-    <h2 id="board-title"><span class="k">DUNGEONS</span>副本手册</h2>
-    <p class="sub">内容整理自 Warcraft Logs 上的限时高分记录。</p>
-    <ol class="grid"></ol>
+<section class="hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="wrap hero-layout">
+    <div class="hero-copy">
+      <div class="hero-badge">
+        <span class="pulse" aria-hidden="true"></span>
+        <span>WARCRAFT LOGS EVIDENCE-BASED · MYTHIC+ FIELD MANUALS</span>
+      </div>
+      <h1 class="hero-title">
+        把高层限时的减伤与打断，<br>写成打本能瞄一眼的<span class="hero-accent">作战手册</span>。
+      </h1>
+      <p class="hero-lede">
+        拒绝空泛的职业概论与冗长的数据报表。我们从国、欧、美服 <b>+22～+24 限时录像</b>中交叉取证，按地下城真实路线逐波拆解「<b>看到什么 → 按什么 → 为什么</b>」——开打前五分钟定好大招轴，战斗中瞄一眼副屏就能确认动作。
+      </p>
+
+      <div class="hero-cta-row">
+        <a class="btn-pri" href="#manuals" id="cta-spec">
+          <span>进入手册大厅</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+        <button type="button" class="btn-sec" id="cta-dungeon">
+          <span>按副本查全队职责</span>
+        </button>
+      </div>
+
+      <dl class="telemetry" aria-label="站点收录概况">
+        <div class="tel-item">
+          <dt>已发布实战手册</dt>
+          <dd><b id="stat-total">52</b><span>篇</span></dd>
+        </div>
+        <div class="tel-item">
+          <dt>覆盖职业专精</dt>
+          <dd><b id="stat-specs">7</b><span>专精</span></dd>
+        </div>
+        <div class="tel-item">
+          <dt>赛季地下城</dt>
+          <dd><b id="stat-dungeons">8</b><span>全本</span></dd>
+        </div>
+        <div class="tel-item">
+          <dt>取证样本基准</dt>
+          <dd><b>+22~24</b><span>限时实录</span></dd>
+        </div>
+      </dl>
+    </div>
+
+    <aside class="showcase" aria-label="实战手册内页交互预览">
+      <div class="sc-bar">
+        <div class="sc-title">
+          <span class="sc-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="mono">LIVE SAMPLE · 毒牙祭坛</span>
+        </div>
+        <div class="sc-tabs" role="tablist" aria-label="切换预览专精"></div>
+      </div>
+
+      <div class="sc-body" id="sc-body"></div>
+
+      <div class="sc-foot">
+        <span class="sc-note" id="sc-note">取自 5 场 +22～23 限时实录交叉比对</span>
+        <a class="sc-link" id="sc-open" href="#manuals">阅读完整手册 →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<main>
+  <!-- 01: 手册大厅 -->
+  <section id="manuals" class="sec sec-hub" aria-labelledby="hub-heading">
+    <div class="wrap">
+      <div class="sec-head hub-head">
+        <div>
+          <div class="sec-kicker"><span class="num">01</span> MANUAL DIRECTORY</div>
+          <h2 id="hub-heading">大秘境作战手册大厅</h2>
+          <p class="sub">按专精锁定你的常驻职业，或切换副本视角一次查看全队各位置职责。</p>
+        </div>
+
+        <div class="hub-controls">
+          <div class="view-switch" role="tablist" aria-label="浏览维度">
+            <button type="button" role="tab" class="vtab" id="tab-mode-spec" data-mode="spec" aria-selected="true">按专精选本</button>
+            <button type="button" role="tab" class="vtab" id="tab-mode-dungeon" data-mode="dungeon" aria-selected="false">按副本看全队</button>
+          </div>
+
+          <label class="search-wrap" for="manual-search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-3.8-3.8"/></svg>
+            <input id="manual-search" type="search" autocomplete="off" spellcheck="false" placeholder="搜副本、专精或机制词（如：龟壳、圣盾、毒牙）…">
+            <button type="button" class="search-clear" id="search-clear" hidden aria-label="清空搜索">清空</button>
+          </label>
+        </div>
+      </div>
+
+      <!-- 专精模式控制栏 -->
+      <div id="spec-mode-pane">
+        <div class="role-bar" role="group" aria-label="按定位筛选专精"></div>
+        <nav class="specs" aria-label="选择职业专精"></nav>
+
+        <div class="active-banner" id="spec-banner">
+          <div class="ab-main">
+            <img class="ab-icon" id="spec-banner-icon" src="/img/icons/classicon_demonhunter_void.jpg" width="48" height="48" alt="">
+            <div>
+              <div class="eyebrow">MYTHIC+ · <span id="spec-en"></span> · FIELD MANUALS</div>
+              <h3 id="spec-name">大秘境作战手册</h3>
+            </div>
+          </div>
+          <div class="chips" id="spec-chips"></div>
+        </div>
+      </div>
+
+      <!-- 副本模式控制栏 -->
+      <div id="dungeon-mode-pane" hidden>
+        <nav class="dungeon-Wall" id="dungeon-tabs" aria-label="选择赛季副本"></nav>
+        <div class="active-banner dungeon-banner" id="dungeon-banner">
+          <div class="db-copy">
+            <div class="eyebrow" id="dungeon-en-label">ALTAR OF FANGS · ALL SPECS</div>
+            <h3 id="dungeon-title-label">毒牙祭坛 · 全职业应对总览</h3>
+            <p class="db-sub" id="dungeon-sub-label">对比同一副本下各职业专精的核心减伤排轴、控制打断与保人分工。</p>
+          </div>
+          <div class="chips" id="dungeon-chips"></div>
+        </div>
+      </div>
+
+      <!-- 搜索结果提示栏 -->
+      <div class="search-status" id="search-status" hidden>
+        <span id="search-count"></span>
+        <button type="button" class="link-btn" id="search-reset">退出搜索，返回目录</button>
+      </div>
+
+      <ol class="grid" id="manual-grid"></ol>
+    </div>
+  </section>
+
+  <!-- 02: 内页结构拆解 -->
+  <section id="anatomy" class="sec sec-alt" aria-labelledby="anatomy-heading">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-kicker"><span class="num">02</span> INSIDE EVERY MANUAL</div>
+          <h2 id="anatomy-heading">为什么开打前看五分钟就够用</h2>
+          <p class="sub">废除多板块来回抄写的冗余说明书。每篇手册统一浓缩为四块实战视图，同一条机制知识只讲一次。</p>
+        </div>
+      </div>
+
+      <div class="bento">
+        <article class="bento-card">
+          <div class="bc-head">
+            <span class="bc-idx">BLOCK 00</span>
+            <h3>核心手牌速记 &amp; 致死硬限制</h3>
+            <p>提炼 3～4 张决定生死的防御与功能牌，单独标出最容易误判暴毙的职业铁律，并附上点击可直跳波次的全本必断/必驱清单。</p>
+          </div>
+          <div class="bc-mock">
+            <div class="mock-limit">
+              <span class="ml-tag">职业硬限制</span>
+              <span><b>30 秒自律</b>：圣盾术与保护祝福共享自律窗口；暗影斗篷清不掉纯物理流血。</span>
+            </div>
+            <div class="mock-kicks">
+              <span class="mk-pill"><i>01</i> 原始毒蛇 · <b>刺耳嘶鸣</b> <em>跳转 ↘</em></span>
+              <span class="mk-pill"><i>02</i> 高阶进化者 · <b>毒伤</b> <em>跳转 ↘</em></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bento-card">
+          <div class="bc-head">
+            <span class="bc-idx">BLOCK 01</span>
+            <h3>单轨实录冷却时间轴</h3>
+            <p>精选一场最具代表性的高层限时录像，把 25 分钟地下城推进压缩进一条单轨轴，主免疫牌、副减伤与保人牌的交点一目了然。</p>
+          </div>
+          <div class="bc-mock">
+            <div class="mock-tl">
+              <div class="mtl-pins">
+                <span class="mpin pri" style="left:14%"><i></i>0:48 龟壳</span>
+                <span class="mpin sub1" style="left:44%"><i></i>4:12 优胜</span>
+                <span class="mpin pri" style="left:74%"><i></i>8:05 龟壳</span>
+              </div>
+              <div class="mtl-bar">
+                <span class="seg trash" style="width:18%">开场</span>
+                <span class="seg boss" style="width:22%">① 首领一</span>
+                <span class="seg trash" style="width:24%">通道小怪</span>
+                <span class="seg boss" style="width:36%">② 首领二</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="bento-card bento-wide">
+          <div class="bc-head">
+            <span class="bc-idx">BLOCK 02</span>
+            <h3>按推进路线逐段：看到什么 → 按什么 → 为什么</h3>
+            <p>从插钥匙第一波小怪一直讲到尾王。全页主强调色严格只留给带「必做」标签的高亮动作行——打本瞄一眼副屏，一秒锁定当前波次该交哪张牌、卡读条还是卡落地、没转好时交什么备选。</p>
+          </div>
+          <div class="bc-mock">
+            <div class="mock-route-row">
+              <div class="mrr-mech">
+                <img class="ic" src="/guides/icons/0ce35a8aaef7.jpg" width="28" height="28" alt="">
+                <div>
+                  <div class="mrr-n"><span class="badge-must">必做</span>同步毒液</div>
+                  <div class="mrr-s">扭缠盘蛇 2 秒读条 · 直击约 50 万 + 35 秒自然持续伤</div>
+                </div>
+              </div>
+              <div class="mrr-arrow">→</div>
+              <div class="mrr-act">
+                <span class="mrr-chip"><img class="ic sm" src="/guides/icons/fc38901d4be6.jpg" width="20" height="20" alt="">灵龟守护</span>
+              </div>
+              <div class="mrr-why">卡第一下落地前开龟壳，<b>35 秒持续掉血整段不上身</b>；冷却中提前靠治疗并留意气风发。</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="bento-card bento-wide">
+          <div class="bc-head">
+            <span class="bc-idx">BLOCK 03</span>
+            <h3>国服节点校验天赋码 &amp; 关键生存点</h3>
+            <p>自动提取五场限时录像的多数派构筑，经国服天赋树节点逐一回解实现零误差校验；一键复制导入游戏，并明确标出 3～4 个绝不能改动的保命与控制天赋。</p>
+          </div>
+          <div class="bc-mock mock-talent-row">
+            <code class="mock-code">C0PAAAAAAAAAAAAAAAAAAAAAAYstNwAGwswWgZBAAAAA...</code>
+            <span class="mock-copy-badge">一键复制导入</span>
+            <span class="mock-talent-note">锁死核心生存节点 · 严禁机翻天赋名</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03: 全专精 × 8 副本覆盖矩阵 & 最近更新 -->
+  <section id="matrix" class="sec" aria-labelledby="matrix-heading">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-kicker"><span class="num">03</span> SEASON COVERAGE MATRIX</div>
+          <h2 id="matrix-heading">全专精 × 赛季副本覆盖总览</h2>
+          <p class="sub">点击任意已点亮单元格即可直达对应专精的副本手册；下方同步展示最近更新的实战手册。</p>
+        </div>
+        <div class="matrix-summary" id="matrix-summary"></div>
+      </div>
+
+      <div class="matrix-shell">
+        <table class="matrix-table" id="coverage-matrix" aria-label="全专精与赛季副本覆盖矩阵"></table>
+      </div>
+
+      <div class="recent-block">
+        <div class="recent-head">
+          <h3><span class="mono">LATEST RELEASES</span> 最近发布与修订</h3>
+          <span class="recent-hint">随构建自动同步最新手册版本</span>
+        </div>
+        <div class="recent-grid" id="recent-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04: 取证方法论 -->
+  <section id="method" class="sec sec-alt" aria-labelledby="method-heading">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-kicker"><span class="num">04</span> EVIDENCE PIPELINE</div>
+          <h2 id="method-heading">每一条结论背后的三层证据门槛</h2>
+          <p class="sub">不凭脑补写机制，也不把单场偶发操作写成常规推荐。每篇手册从原始战斗日志到上线均经过固定流水线核验。</p>
+        </div>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <div class="step-top">
+            <span class="step-num">STEP 01</span>
+            <span class="step-tag">WCL API · 多服采样</span>
+          </div>
+          <h3>五场高层限时录像交叉提取</h3>
+          <p>按副本与专精检索国服、欧服、美服 +22～+24 限时公开日志，自动拉取五名高分玩家的施法序列、承伤窗口、全队打断链、敌方增益与路线波次切分。</p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-top">
+            <span class="step-num">STEP 02</span>
+            <span class="step-tag">承伤拆解 · 属性核实</span>
+          </div>
+          <h3>直击与跳伤分离、窗口前后比对</h3>
+          <p>将敌方技能的首击与后续持续伤害彻底拆开统计，比对开减伤后 4 秒窗口内的实测承伤与免疫记录，并交叉核对 Wowhead 法术学派与驱散判定边界。</p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-top">
+            <span class="step-num">STEP 03</span>
+            <span class="step-tag">check.py · 6 问自检</span>
+          </div>
+          <h3>多数派准入与自动化双门禁</h3>
+          <p>至少 3/5 场样本一致验证的打法才进入主轴推荐，低样本应急处理明标「备选」；发布前通过离线图标完整性、WCAG AA 对比度与冷却算术逻辑门禁。</p>
+        </article>
+      </div>
+    </div>
   </section>
 </main>
 
-<footer class="wrap foot">
-  <p>技能数值以游戏内为准。副本截图与图标来自 Wowhead，版权归暴雪娱乐所有。</p>
-  <p class="mono">wcl-raider</p>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/">
+          <img src="/assets/icon.svg" width="28" height="28" alt="">
+          <span class="brand-word">wcl-raider</span>
+        </a>
+        <p class="foot-desc">基于 Warcraft Logs 高分限时实录构建的魔兽世界大秘境实战手册站。一条路线讲到底，让你把精力留给走位与输出。</p>
+        <div class="foot-links-inline">
+          <a href="https://github.com/superQdsj/wcl-raider" target="_blank" rel="noopener noreferrer">GitHub 开源仓库 ↗</a>
+          <a href="https://cn.warcraftlogs.com/" target="_blank" rel="noopener noreferrer">Warcraft Logs ↗</a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>已收录专精</h4>
+        <ul id="foot-specs"></ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>赛季地下城</h4>
+        <ul id="foot-dungeons"></ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p>技能数值与机制判定以游戏内现行版本为准。副本截图与技能图标来自 Wowhead，相关版权归暴雪娱乐（Blizzard Entertainment）所有。</p>
+      <p class="mono">wcl-raider · Mythic+ Field Manuals</p>
+    </div>
+  </div>
 </footer>
 
-<noscript><style>.top .wrap>*:not(h1):not(.lede),main{display:none}</style>__NOSCRIPT__</noscript>
+<noscript><style>.navbar .nav-actions,.hero,.sec:not(.sec-hub),.hub-controls,#spec-mode-pane,#dungeon-mode-pane{display:none}</style>__NOSCRIPT__</noscript>
 <script id="guide-data" type="application/json">__DATA__</script>
 <script src="/site.js"></script>
 </body>
