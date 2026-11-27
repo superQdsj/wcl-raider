@@ -1,0 +1,192 @@
+{
+  "dungeon": "塞塔里斯神庙",
+  "encounter_id": 61877,
+  "class": "圣骑士-惩戒",
+  "levels": [
+    24,
+    23
+  ],
+  "count": 15,
+  "runs": [
+    {
+      "code": "BLmWKxty6VMNvhR4",
+      "fid": 1,
+      "level": 24,
+      "bonus": 1,
+      "player": "欧鳇打鸡",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1870186,
+      "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1",
+      "tag": "r01"
+    },
+    {
+      "code": "q6mAK3DwvBV2FtGT",
+      "fid": 22,
+      "level": 24,
+      "bonus": 1,
+      "player": "哦毕爷",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1879735,
+      "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22",
+      "tag": "r02"
+    },
+    {
+      "code": "14mrYRDaCVQ378Pj",
+      "fid": 12,
+      "level": 23,
+      "bonus": 1,
+      "player": "Âra",
+      "spec": "圣骑士-惩戒",
+      "region": "EU",
+      "duration_ms": 1799424,
+      "url": "https://www.warcraftlogs.com/reports/14mrYRDaCVQ378Pj#fight=12",
+      "tag": "r03"
+    },
+    {
+      "code": "JM6KG3CWqjBZHAyw",
+      "fid": 1,
+      "level": 23,
+      "bonus": 1,
+      "player": "Khumi",
+      "spec": "圣骑士-惩戒",
+      "region": "US",
+      "duration_ms": 1780485,
+      "url": "https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1",
+      "tag": "r04"
+    },
+    {
+      "code": "PFnYKkZxRgDVhqW1",
+      "fid": 14,
+      "level": 23,
+      "bonus": 1,
+      "player": "没点东西丷",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1819230,
+      "url": "https://www.warcraftlogs.com/reports/PFnYKkZxRgDVhqW1#fight=14",
+      "tag": "r05"
+    },
+    {
+      "code": "PqkhAdRaTgcZjMr6",
+      "fid": 38,
+      "level": 23,
+      "bonus": 1,
+      "player": "洛雯",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1805194,
+      "url": "https://www.warcraftlogs.com/reports/PqkhAdRaTgcZjMr6#fight=38",
+      "tag": "r06"
+    },
+    {
+      "code": "KP7k1TCHX6WcaZMv",
+      "fid": 12,
+      "level": 23,
+      "bonus": 1,
+      "player": "Tracer",
+      "spec": "圣骑士-惩戒",
+      "region": "US",
+      "duration_ms": 1853803,
+      "url": "https://www.warcraftlogs.com/reports/KP7k1TCHX6WcaZMv#fight=12",
+      "tag": "r07"
+    },
+    {
+      "code": "wqNRdB964Q2LzCcv",
+      "fid": 449,
+      "level": 23,
+      "bonus": 1,
+      "player": "Primarîus",
+      "spec": "圣骑士-惩戒",
+      "region": "EU",
+      "duration_ms": 1830545,
+      "url": "https://www.warcraftlogs.com/reports/wqNRdB964Q2LzCcv#fight=449",
+      "tag": "r08"
+    },
+    {
+      "code": "81Mm23LfpDNFBtrR",
+      "fid": 1,
+      "level": 23,
+      "bonus": 1,
+      "player": "聚光灯下",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1861097,
+      "url": "https://www.warcraftlogs.com/reports/81Mm23LfpDNFBtrR#fight=1",
+      "tag": "r09"
+    },
+    {
+      "code": "ByLmahjfWtKzQ8Np",
+      "fid": 33,
+      "level": 23,
+      "bonus": 1,
+      "player": "隼大人",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1849294,
+      "url": "https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33",
+      "tag": "r10"
+    },
+    {
+      "code": "ZVGCPLvwyBj7XdJW",
+      "fid": 16,
+      "level": 23,
+      "bonus": 1,
+      "player": "粉红泰伦斯",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1841211,
+      "url": "https://www.warcraftlogs.com/reports/ZVGCPLvwyBj7XdJW#fight=16",
+      "tag": "r11"
+    },
+    {
+      "code": "Qav83tRg1ZpD4hNn",
+      "fid": 2,
+      "level": 23,
+      "bonus": 1,
+      "player": "丶小月光",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1856647,
+      "url": "https://www.warcraftlogs.com/reports/Qav83tRg1ZpD4hNn#fight=2",
+      "tag": "r12"
+    },
+    {
+      "code": "vwJc2Hd6jQChxp71",
+      "fid": 1,
+      "level": 23,
+      "bonus": 1,
+      "player": "卿語",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1872333,
+      "url": "https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1",
+      "tag": "r13"
+    },
+    {
+      "code": "9kJ4vp1PMxdKzaLm",
+      "fid": 24,
+      "level": 23,
+      "bonus": 1,
+      "player": "请你叫我小猴",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1812340,
+      "url": "https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24",
+      "tag": "r14"
+    },
+    {
+      "code": "GmjDn46rYhbKHzfw",
+      "fid": 5,
+      "level": 23,
+      "bonus": 1,
+      "player": "安爪啦",
+      "spec": "圣骑士-惩戒",
+      "region": "CN",
+      "duration_ms": 1815761,
+      "url": "https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5",
+      "tag": "r15"
+    }
+  ]
+}

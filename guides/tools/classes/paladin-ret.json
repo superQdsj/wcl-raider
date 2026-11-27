@@ -1,6 +1,6 @@
 {
  "class": "圣骑士（惩戒）",
- "note": "defensives：用来分组承伤的防御技能。cast=施法 ID，buff=身上增益 ID，dur=没有增益事件时的兜底秒数。always=不论频率都列进 uses.md 的技能。",
+ "note": "defensives：防御技能，tier=normal（常规减伤，计入反例A就绪分母）或 major（免疫/战略大牌，单列）；cd=标称冷却秒数（脚本会用15场实测最小间隔动态校准）；blocked_by_debuff=受阻的减益ID（如自律25771只限制保护/圣疗，圣光决断下不限制圣盾术）。utilities：清除/应急/功能牌。",
  "defensives": [
   {
    "name": "圣佑术",
@@ -8,23 +8,9 @@
    "buff": [
     403876
    ],
-   "dur": 8
-  },
-  {
-   "name": "圣盾术",
-   "cast": 642,
-   "buff": [
-    642
-   ],
-   "dur": 8
-  },
-  {
-   "name": "保护祝福",
-   "cast": 1022,
-   "buff": [
-    1022
-   ],
-   "dur": 10
+   "dur": 8,
+   "cd": 63,
+   "tier": "normal"
   },
   {
    "name": "复仇之盾",
@@ -32,7 +18,80 @@
    "buff": [
     184662
    ],
-   "dur": 10
+   "dur": 10,
+   "cd": 90,
+   "tier": "normal"
+  },
+  {
+   "name": "圣盾术",
+   "cast": 642,
+   "buff": [
+    642
+   ],
+   "dur": 8,
+   "cd": 210,
+   "tier": "major",
+   "cleanse_immune": true
+  },
+  {
+   "name": "保护祝福",
+   "cast": 1022,
+   "buff": [
+    1022
+   ],
+   "dur": 10,
+   "cd": 240,
+   "tier": "major",
+   "cleanse_immune": true,
+   "blocked_by_debuff": [
+    25771
+   ]
+  }
+ ],
+ "utilities": [
+  {
+   "name": "圣疗术",
+   "cast": 633,
+   "cd": 420,
+   "blocked_by_debuff": [
+    25771
+   ]
+  },
+  {
+   "name": "自由祝福",
+   "cast": 1044,
+   "buff": [
+    1044
+   ],
+   "dur": 8,
+   "cd": 25,
+   "cleanse_immune": true
+  },
+  {
+   "name": "清毒术",
+   "cast": 213644,
+   "cd": 8,
+   "cleanse_immune": true
+  },
+  {
+   "name": "牺牲祝福",
+   "cast": 6940,
+   "cd": 120
+  },
+  {
+   "name": "责难",
+   "cast": 96231,
+   "cd": 15
+  },
+  {
+   "name": "制裁之锤",
+   "cast": 853,
+   "cd": 60
+  },
+  {
+   "name": "盲目之光",
+   "cast": 115750,
+   "cd": 90
   }
  ],
  "always": [
