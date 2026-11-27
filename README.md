@@ -16,14 +16,7 @@
 | 敏锐潜行者 | [`guides/rogue/`](guides/rogue/README.md) | 第一版 7 本（可离线重建）；新版已完成诸王之眠、夺目谷、毒牙祭坛 |
 | 惩戒圣骑士（烈日先驱） | [`guides/paladin-ret/`](guides/paladin-ret/README.md) | 密谋小径、毒牙祭坛、诸王之眠（3 本，均有证据包） |
 
-## 制作流程与数据工具
-
-详细制作流程与派发模板见 [`guides/tools/README.md`](guides/tools/README.md)。整体为两段式流程（不使用 Claude Code skill）：
-
-1. **采集证据包**：用 `guides/tools/wcl.py find` 选出 5 场高分限时录像，再跑 `guides/tools/evidence.py` 生成结构化证据表（窗口内外承伤对比、技能使用情境、全队承伤、减益、波次、Wowhead 技能说明、天赋数据）。
-2. **分析与成稿**：阅读证据包，必要时用 `guides/tools/wcl.py events` / `spell` 补查，编写页面源码与单轨时间轴（`guides/tools/timeline.py`），生成独立 HTML 并通过 `guides/tools/icons.py` 外置共享技能图标到 `guides/icons/`。
-
-### WCL API 凭据配置（优先 v1）
+## WCL API 凭据配置（优先 v1）
 
 仅需 Python 3.9+ 标准库，无第三方依赖。**工具默认优先使用 WCL v1 API**（v2 GraphQL API 的每小时点数限额较紧，v1 REST API 限额更宽松且可获取同类数据）；未配置 v1 密钥时自动回退到 v2，仅 `wcl.py query`（任意 GraphQL 调试）需要 v2。
 
@@ -63,8 +56,7 @@ guides/
 ├── tools/                   # 攻略制作工具
 │   ├── wcl.py               # WCL / Wowhead 数据查询 CLI（find / events / spell / query / points）
 │   ├── wclr/                # WCL API 客户端（优先 v1，兼容 v2）、事件拉取、Wowhead 解析底层模块
-│   ├── evidence.py          # 多场录像证据包生成器
-│   ├── timeline.py          # 单轨技能时间轴组件
+│   ├── enc.py               # 天赋字符串编码/校验工具
 │   ├── icons.py             # 攻略图标外置工具（提取到 guides/icons/）
 │   └── classes/             # 各职业防御技能配置文件（JSON）
 ├── icons/                   # 所有攻略共享的外置技能图标
