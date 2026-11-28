@@ -197,6 +197,31 @@ def _explain(messages: str) -> str:
 
 # ---------------------------------------------------------------- client
 
+# v1 限流：遇到 429 时等待重试，而不是直接退出。总等待上限可用环境变量 WCL_429_MAX_WAIT（秒）调整，0 表示不等。
+V1_429_MAX_WAIT = float(os.environ.get("WCL_429_MAX_WAIT", "3600"))
+V1_429_STEP = 60.0
+
+
+def _v1_429_delay(headers: Any, waited: float) -> Optional[float]:
+    """返回下一次重试前应等待的秒数；超过总等待上限时返回 None。"""
+    if waited >= V1_429_MAX_WAIT:
+        return None
+    delay = V1_429_STEP
+    lower = {str(k).lower(): v for k, v in (headers.items() if headers else [])}
+    for name in ("retry-after", "x-ratelimit-reset"):
+        raw = lower.get(name)
+        try:
+            val = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if val > 1e9:  # 绝对时间戳
+            val = val - time.time()
+        if val > 0:
+            delay = val + 1.0
+            break
+    return max(1.0, min(delay, V1_429_MAX_WAIT - waited))
+
+
 class Client:
     """WCL API 客户端（优先 v1 REST，兼容 v2 GraphQL），带磁盘缓存和限额统计。"""
 
@@ -329,7 +354,10 @@ class Client:
         query_params["api_key"] = key
         url = f"https://{host}/v1/{path.lstrip('/')}?{urllib.parse.urlencode(query_params)}"
         last_exc: Optional[BaseException] = None
-        for attempt in range(4):
+        waited_429 = 0.0
+        attempt = -1
+        while attempt < 3:
+            attempt += 1
             req = urllib.request.Request(
                 url,
                 headers={"Accept": "application/json", "User-Agent": USER_AGENT},
@@ -343,7 +371,17 @@ class Client:
                 if exc.code == 401:
                     raise WCLError("WCL v1 API 密钥无效（WCL_V1_API_KEY）。\n\n" + SETUP_HELP) from None
                 if exc.code == 429:
-                    raise WCLError("WCL v1 API 请求触发限流（HTTP 429），请稍后再试。") from None
+                    delay = _v1_429_delay(exc.headers, waited_429)
+                    if delay is None:
+                        raise WCLError(
+                            f"WCL v1 API 限流（HTTP 429），已累计等待 {int(waited_429)}s 仍未恢复，"
+                            "请稍后再试；已拉取的数据都在缓存里，重跑会接着抓。") from None
+                    stderr(f"[wcl] v1 限流（HTTP 429），{int(delay)}s 后重试（已等 {int(waited_429)}s，"
+                           f"上限 {int(V1_429_MAX_WAIT)}s）({path})")
+                    time.sleep(delay)
+                    waited_429 += delay
+                    attempt -= 1  # 限流等待不消耗重试次数
+                    continue
                 if exc.code in (400, 403, 404):
                     try:
                         msg = json.loads(detail).get("error") or detail
