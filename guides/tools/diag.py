@@ -614,6 +614,8 @@ def load_boss_pack(
         run, data_type="Deaths", start=win_start, end=win_end,
         hostility="Friendlies", target=player.id, limit=200,
     )
+    # v1 的 Deaths 不认 target 参数，会返回全队死亡，必须本地再按本人过滤
+    death_evs = [e for e in death_evs if e.get("targetID") == player.id]
     if trunc_dt:
         stderr(f"[warn] {sample.tag} DamageTaken 事件达到上限被截断")
 
@@ -1948,6 +1950,8 @@ def load_trash_pack(
         run, data_type="Deaths", start=run.start, end=run.end,
         hostility="Friendlies", target=player.id, limit=200,
     )
+    # v1 的 Deaths 不认 target 参数，会返回全队死亡，必须本地再按本人过滤
+    death_evs = [e for e in death_evs if e.get("targetID") == player.id]
     if trunc_dt:
         stderr(f"[warn] {sample.tag} trash DamageTaken 达到上限被截断")
     if trunc_ec:
