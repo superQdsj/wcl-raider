@@ -20,6 +20,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import statistics
 import sys
 from collections import Counter, defaultdict
@@ -498,7 +499,7 @@ def cmd_sample(client: Client, args: argparse.Namespace) -> str:
             stderr(f"[sample] 跳过 {c['code']}#fight={c['fid']} ({c['player']}): {exc}")
             return None
 
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=FETCH_WORKERS) as pool:
         results = list(pool.map(check_one, candidates))
 
     for r in results:
@@ -553,6 +554,34 @@ def load_samples(runs_path: Path) -> Tuple[Dict[str, Any], List[RunSample]]:
     return raw, samples
 
 
+# 同时拉取的样本场数。WCL 对单 IP 有频率限制（v1/v2 共享），默认 2；可用环境变量 WCL_FETCH_WORKERS 调整。
+FETCH_WORKERS = max(1, int(os.environ.get("WCL_FETCH_WORKERS", "2")))
+
+
+# 每场每类事件只按整场（run.start..run.end）拉一次，各节在本地按时间窗切片。
+# 整场查询的参数在 boss 1-4 / trash 之间完全相同，第二次起都命中磁盘缓存。
+FULL_RUN_LIMIT = 200_000
+
+
+def full_events(
+    run: Run, data_type: str, *, hostility: str = "Friendlies",
+    source: Optional[int] = None, target: Optional[int] = None,
+    expr: str = "", include_resources: bool = False,
+) -> List[Dict[str, Any]]:
+    evs, trunc = data.events(
+        run, data_type=data_type, start=run.start, end=run.end,
+        hostility=hostility, source=source, target=target, expr=expr,
+        limit=FULL_RUN_LIMIT, include_resources=include_resources,
+    )
+    if trunc:
+        stderr(f"[warn] {run.code} 整场 {data_type} 事件达到上限 {FULL_RUN_LIMIT} 被截断")
+    return evs
+
+
+def in_range(evs: List[Dict[str, Any]], start: float, end: float) -> List[Dict[str, Any]]:
+    return [e for e in evs if start <= float(e.get("timestamp") or 0) <= end]
+
+
 def load_boss_pack(
     client: Client,
     sample: RunSample,
@@ -579,45 +608,19 @@ def load_boss_pack(
         run, data_type="Casts", start=run.start, end=run.end,
         hostility="Friendlies", source=player.id, expr=cast_expr, limit=2000,
     )
-    p_buffs, _ = data.events(
-        run, data_type="Buffs", start=buff_start, end=win_end,
-        hostility="Friendlies", target=player.id, limit=5000,
-    )
+    p_buffs = in_range(full_events(run, "Buffs", target=player.id), buff_start, win_end)
     # WCL v1 的 buffs 接口带 targetid 时可能只返回自施放增益，单独按外减 ID 补拉全队外减/团减事件
     ext_expr = "ability.id in (%s)" % ", ".join(str(x) for x in sorted(EXTERNAL_DEF_BUFF_IDS))
-    ext_buff_evs, _ = data.events(
-        run, data_type="Buffs", start=buff_start, end=win_end,
-        hostility="Friendlies", expr=ext_expr, limit=2000,
-    )
+    ext_buff_evs = in_range(full_events(run, "Buffs", expr=ext_expr), buff_start, win_end)
     p_buffs = p_buffs + [e for e in ext_buff_evs if e.get("targetID") == player.id]
-    f_dt, trunc_dt = data.events(
-        run, data_type="DamageTaken", start=win_start, end=win_end,
-        hostility="Friendlies", limit=8000, include_resources=True,
-    )
-    f_deb, _ = data.events(
-        run, data_type="Debuffs", start=max(run.start, win_start - 15_000), end=win_end,
-        hostility="Friendlies", limit=5000,
-    )
-    e_casts, _ = data.events(
-        run, data_type="Casts", start=win_start, end=win_end,
-        hostility="Enemies", limit=5000,
-    )
-    p_heals, _ = data.events(
-        run, data_type="Healing", start=win_start, end=win_end,
-        hostility="Friendlies", target=player.id, limit=5000,
-    )
-    dispels_evs, _ = data.events(
-        run, data_type="Dispels", start=win_start, end=win_end,
-        hostility="Friendlies", limit=1000,
-    )
-    death_evs, _ = data.events(
-        run, data_type="Deaths", start=win_start, end=win_end,
-        hostility="Friendlies", target=player.id, limit=200,
-    )
+    f_dt = in_range(full_events(run, "DamageTaken", include_resources=True), win_start, win_end)
+    f_deb = in_range(full_events(run, "Debuffs"), max(run.start, win_start - 15_000), win_end)
+    e_casts = in_range(full_events(run, "Casts", hostility="Enemies"), win_start, win_end)
+    p_heals = in_range(full_events(run, "Healing", target=player.id), win_start, win_end)
+    dispels_evs = in_range(full_events(run, "Dispels"), win_start, win_end)
     # v1 的 Deaths 不认 target 参数，会返回全队死亡，必须本地再按本人过滤
-    death_evs = [e for e in death_evs if e.get("targetID") == player.id]
-    if trunc_dt:
-        stderr(f"[warn] {sample.tag} DamageTaken 事件达到上限被截断")
+    death_evs = [e for e in in_range(full_events(run, "Deaths", target=player.id), win_start, win_end)
+                 if e.get("targetID") == player.id]
 
     def in_pulls(ts: float, pad_pre: float = 0.0, pad_post: float = 0.0) -> bool:
         return any(p.start - pad_pre <= ts <= p.end + pad_post for p in pulls)
@@ -1835,7 +1838,7 @@ def run_boss_load(
     all_cast_ids = [s.cast for s in all_skills]
     fallback_dur = {bid: s.dur_ms for s in all_skills for bid in s.buff}
 
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=FETCH_WORKERS) as pool:
         futs = [
             pool.submit(load_boss_pack, client, smp, boss_spec, all_cast_ids, fallback_dur)
             for smp in samples
@@ -1915,47 +1918,24 @@ def load_trash_pack(
         run, data_type="Casts", start=run.start, end=run.end,
         hostility="Friendlies", source=player.id, expr=cast_expr, limit=2000,
     )
-    p_buffs, _ = data.events(
-        run, data_type="Buffs", start=run.start, end=run.end,
-        hostility="Friendlies", target=player.id, expr=own_buff_expr, limit=3000,
-    )
-    ext_buff_evs, _ = data.events(
-        run, data_type="Buffs", start=run.start, end=run.end,
-        hostility="Friendlies", expr=ext_expr, limit=3000,
-    )
+    # 与 boss 共用同一组整场查询（命中缓存），服务端过滤改为本地过滤
+    own_ids = set(own_buff_ids or [])
+    p_buffs = [e for e in full_events(run, "Buffs", target=player.id)
+               if not own_ids or e.get("abilityGameID") in own_ids]
+    ext_buff_evs = full_events(run, "Buffs", expr=ext_expr)
     p_buffs = p_buffs + [e for e in ext_buff_evs if e.get("targetID") == player.id]
 
-    tgt_expr = f'target.name = "{esc(player.name)}"'
-    p_dt, trunc_dt = data.events(
-        run, data_type="DamageTaken", start=run.start, end=run.end,
-        hostility="Friendlies", expr=tgt_expr, limit=12000, include_resources=True,
-    )
-    p_deb, _ = data.events(
-        run, data_type="Debuffs", start=run.start, end=run.end,
-        hostility="Friendlies", expr=tgt_expr, limit=6000,
-    )
-    e_casts, trunc_ec = data.events(
-        run, data_type="Casts", start=run.start, end=run.end,
-        hostility="Enemies", expr='type = "cast"', limit=15000,
-    )
-    dispels_evs, _ = data.events(
-        run, data_type="Dispels", start=run.start, end=run.end,
-        hostility="Friendlies", limit=2000,
-    )
+    p_dt = [e for e in full_events(run, "DamageTaken", include_resources=True)
+            if e.get("targetID") == player.id]
+    p_deb = [e for e in full_events(run, "Debuffs") if e.get("targetID") == player.id]
+    e_casts = [e for e in full_events(run, "Casts", hostility="Enemies") if e.get("type") == "cast"]
+    dispels_evs = full_events(run, "Dispels")
     int_evs, _ = data.events(
         run, data_type="Interrupts", start=run.start, end=run.end,
         hostility="Friendlies", source=player.id, limit=1000,
     )
-    death_evs, _ = data.events(
-        run, data_type="Deaths", start=run.start, end=run.end,
-        hostility="Friendlies", target=player.id, limit=200,
-    )
     # v1 的 Deaths 不认 target 参数，会返回全队死亡，必须本地再按本人过滤
-    death_evs = [e for e in death_evs if e.get("targetID") == player.id]
-    if trunc_dt:
-        stderr(f"[warn] {sample.tag} trash DamageTaken 达到上限被截断")
-    if trunc_ec:
-        stderr(f"[warn] {sample.tag} trash Enemy Casts 达到上限被截断")
+    death_evs = [e for e in full_events(run, "Deaths", target=player.id) if e.get("targetID") == player.id]
 
     def in_trash(ts: float) -> bool:
         if any(bp.start <= ts <= bp.end for bp in boss_pulls):
@@ -2340,7 +2320,7 @@ def run_trash_load(
     own_buff_ids = [bid for s in all_skills for bid in s.buff]
     fallback_dur = {bid: s.dur_ms for s in all_skills for bid in s.buff}
 
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=FETCH_WORKERS) as pool:
         futs = [
             pool.submit(load_trash_pack, client, smp, all_cast_ids, own_buff_ids, fallback_dur)
             for smp in samples
