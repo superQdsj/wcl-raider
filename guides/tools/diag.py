@@ -1607,7 +1607,7 @@ def format_one_screen(
     out.append(f"# {meta_runs.get('dungeon')} · {boss_name}（encounter {boss_eid}）· {cls_name} 极简五维诊断")
     out.append(
         f"> 样本：{n_runs} 场高分限时（{lv_str}，不同报告/玩家）| 中位战斗时长 {fmt.clock(med_dur * 1000)} "
-        f"| 惩戒骑中位血量 {fmt.num(med_hp)} | 拉入小怪合波 {trash_runs}/{n_runs} 场"
+        f"| {cls_name}中位血量 {fmt.num(med_hp)} | 拉入小怪合波 {trash_runs}/{n_runs} 场"
     )
 
     boss_keys, trash_keys = select_key_skills(metas, waves, n_runs)
@@ -1646,7 +1646,7 @@ def format_one_screen(
         elif m.party_raw_dmgs:
             p_dmg = statistics.median(m.party_raw_dmgs)
             p_pct = (100.0 * p_dmg / med_hp) if med_hp else 0.0
-            dmg_str = f"本专精0掉血（全队命中中位 {fmt.num(p_dmg)} ≈{p_pct:.0f}%惩戒HP）"
+            dmg_str = f"本专精0掉血（全队命中中位 {fmt.num(p_dmg)} ≈{p_pct:.0f}%本专精HP）"
         else:
             dmg_str = "本专精0直接承伤"
 
@@ -1812,11 +1812,11 @@ def format_one_screen(
     if cleanse_lines:
         out.extend(cleanse_lines)
     else:
-        out.append("- 清除实锤：15 场内未检测到提前清除敌方 Debuff 的实锤。")
+        out.append(f"- 清除实锤：{n_runs} 场内未检测到提前清除敌方 Debuff 的实锤。")
     if imm_lines:
         out.extend(imm_lines)
     else:
-        out.append("- 免疫实锤：15 场内未检测到无敌/保护期间的直接伤害交互事件。")
+        out.append(f"- 免疫实锤：{n_runs} 场内未检测到免疫大牌期间的直接伤害交互事件。")
 
     return "\n".join(out)
 
@@ -2391,7 +2391,7 @@ def format_trash_screen(
     out.append(f"# {meta_runs.get('dungeon')} · 全本小怪（非 Boss）· {cls_name} 极简五维诊断")
     out.append(
         f"> 样本：{n_runs} 场高分限时（{lv_str}）| 小怪中位总时长 {fmt.clock(med_dur * 1000)}（中位 {med_pulls:.0f} 波）"
-        f"| 惩戒骑中位血量 {fmt.num(med_hp)}"
+        f"| {cls_name}中位血量 {fmt.num(med_hp)}"
     )
 
     by_skill: Dict[str, List[WaveRecord]] = defaultdict(list)
@@ -2577,15 +2577,15 @@ def format_trash_screen(
     if dispel_lines:
         out.extend(dispel_lines)
     else:
-        out.append("- 驱散实锤：15 场小怪战未检测到玩家主动驱散。")
+        out.append(f"- 驱散实锤：{n_runs} 场小怪战未检测到玩家主动驱散。")
     if cleanse_lines:
         out.extend(cleanse_lines)
     else:
-        out.append("- 清除/解控实锤：15 场小怪战未检测到提前清除敌方 Debuff 的实锤。")
+        out.append(f"- 清除/解控实锤：{n_runs} 场小怪战未检测到提前清除敌方 Debuff 的实锤。")
     if imm_lines:
         out.extend(imm_lines[:15])
     else:
-        out.append("- 免疫实锤：15 场小怪战未检测到无敌/保护期间的直接伤害交互事件。")
+        out.append(f"- 免疫实锤：{n_runs} 场小怪战未检测到免疫大牌期间的直接伤害交互事件。")
 
     return "\n".join(out)
 
