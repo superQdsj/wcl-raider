@@ -1,0 +1,135 @@
+# 塞塔里斯神庙 · 全本小怪（非 Boss）· 圣骑士（惩戒） 极简五维诊断
+> 样本：15 场高分限时（+24×2 / +23×13）| 小怪中位总时长 13:54（中位 5 波）| 惩戒骑中位血量 1.28M
+
+## ① 高频致死 / 高伤小怪技速览（按「怪物名 · 威胁技能」聚合）
+- **暴怒云气 · 释放电荷**（ID:1293475，直伤）：纯裸吃中位 822K (64%HP) | 中113 / 免疫4 / 未中0（覆盖15/15场） | **2s内死1次** — *释放由积攒电荷积聚的所有能量，对所有玩家造成145474点自然伤害。*
+- **闪电毒蛇 · 萦绕风暴**（ID:1293133，DoT）：纯裸吃中位 0 (0%HP) | 中183 / 免疫34 / 未中0（覆盖15/15场） — *每1.5秒造成96982点自然伤害。*
+- **剧毒蝰蛇 · 细胞毒素**（ID:1308148，DoT）：纯裸吃中位 607K (48%HP)(2跳合) | 中92 / 免疫0 / 未中262（覆盖15/15场） | **2s内死2次** — *施法者向一名玩家注射细胞毒素，造成72737点自然伤害，并且每1秒额外造成38793点自然伤…*
+- **群聚三叶虫 · 锯齿冲锋**（ID:1291399，DoT）：纯裸吃中位 1.15M (90%HP)(4跳合) | 中92 / 免疫1 / 未中0（覆盖15/15场） — *该生物向一名敌人冲锋，造成58189点物理伤害，并使其流血，在6秒内每1秒额外造成38793…*
+- **宝珠守望者 · 蚀骨践踏**（ID:1303486，DoT）：纯裸吃中位 2.28M (178%HP)(10跳合) | 中71 / 免疫1 / 未中4（覆盖15/15场） — *该生物猛踏地面，喷发出一股烈毒新星，对60码范围内的玩家造成116379点自然伤害，并且每1…*
+- **沙怒石拳战士 · 震地**（ID:265966，直伤）：纯裸吃中位 913K (72%HP) | 中34 / 免疫14 / 未中0（覆盖15/15场） — *施法者猛击地面，其巨大的力量会将60码范围内的所有敌人击退，并造成156627点物理伤害。*
+- **倒刺三叶虫 · 锯齿冲锋**（ID:1291399，DoT）：纯裸吃中位 920K (72%HP)(3跳合) | 中35 / 免疫4 / 未中83（覆盖15/15场） — *该生物向一名敌人冲锋，造成58189点物理伤害，并使其流血，在6秒内每1秒额外造成38793…*
+- **流沙猎手 · 箭雨**（ID:1308113/1308116，Debuff）：纯裸吃中位 523K (41%HP)(3跳合) | 中61 / 免疫3 / 未中172（覆盖15/15场） — *施法者朝一名玩家发射连珠箭，每0.8秒造成43642点物理伤害，持续9秒。*
+- **火花引导者 · 不羁的火花**（ID:267483，直伤）：纯裸吃中位 934K (73%HP) | 中1 / 免疫0 / 未中0（覆盖1/15场） | **2s内死1次** — *不羁的火花闪动着能量，对击中的玩家造成290947点自然伤害，并使其昏迷6秒。*
+- **隐秘之牙 · 蜿蜒打击**（ID:1295610/1295635，直伤）：纯裸吃中位 441K (35%HP) | 中47 / 免疫1 / 未中160（覆盖15/15场） — *施法者传送到一名玩家处并发动打击，造成67888点自然伤害。*
+- **环境 · 极化力场**（ID:273274，Debuff）：纯裸吃中位 0 (0%HP) | 中4 / 免疫12 / 未中0（覆盖12/15场） — *极化力场兽周围的力场会使附近敌人的移动速度降低35%。*
+- **风暴能手 · 闪电箭**（ID:1291262，直伤）：纯裸吃中位 751K (59%HP) | 中6 / 免疫0 / 未中16（覆盖3/15场） — *Inflicts 116379 Nature damage to an enemy.*
+- **塞塔里斯之眼 · 能量虹吸**（ID:1303596，DoT）：纯裸吃中位 0 (0%HP) | 中54 / 免疫0 / 未中0（覆盖14/15场） — *塞塔里斯之眼从60码内最近的玩家身上汲取能量，每1秒造成4点自然伤害。*
+- **静电异常体 · 火花步**（ID:264763，直伤）：纯裸吃中位 325K (25%HP) | 中23 / 免疫1 / 未中142（覆盖5/15场） — *该生物闪现至一名玩家的位置，对目标玩家5码范围内的玩家造成58189点自然伤害。*
+- **灌注能量的唤雷者 · 灌能传导**（ID:1296045/1296052，DoT）：纯裸吃中位 270K (21%HP) | 中30 / 免疫0 / 未中95（覆盖14/15场） — *施法者向玩家体内输送电流，在20秒内每1秒造成42672点自然伤害。 如果灌能传导结束，传导…*
+
+## ② 小怪手牌与控断预算账
+- **圣佑术**（常规）：实际CD 63s(实测最小63.0s) | 小怪场均 7.27次（共109次，15/15场；全本共239次）
+- **复仇之盾**（常规）：实际CD 90s(标称) | 小怪场均 0.00次（共0次，0/15场；全本共0次） 【全本0次主动施放，已排除分母（被动盾归入其他覆盖）】
+- **圣盾术**（大牌）：实际CD 210s(实测最小210.1s) | 小怪场均 1.47次（共22次，11/15场；全本共50次）
+- **保护祝福**（大牌）：实际CD 247s(实测最小247.9s) | 小怪场均 1.47次（共22次，13/15场；全本共28次）
+- 功能/应急/控断牌（小怪战）：圣疗术 0.73次/场(共11次,8/15场) | 自由祝福 2.27次/场(共34次,11/15场) | 清毒术 12.27次/场(共184次,15/15场) | 牺牲祝福 2.27次/场(共34次,11/15场) | 责难 19.67次/场(共295次,15/15场) | 制裁之锤 3.47次/场(共52次,14/15场) | 盲目之光 1.47次/场(共22次,11/15场)
+- 打断实锤（共 251 次，场均 16.7 次）：`灌注能量的唤雷者:闪电箭(1291262)` ×98 | `育巢者:毒箭(1310683)` ×60 | `风暴能手:闪电箭(1291262)` ×48 | `无信征服者:扰乱心智(1293307)` ×38 | `扭曲的妖术师:烈焰震击(268013)` ×6 | `隐秘之牙:涂毒偷袭(1308100)` ×1
+
+## ③ 正例 vs 反例对照（Top 12 高威胁小怪技，含被动盾与外减隔离 + WCL 锚点）
+- **暴怒云气 · 释放电荷**（中/免疫117，未中0）
+  - 正例·常规(圣佑术×23)：23次 | 起手100%(低100%) → 剩血78%(低22%) | 叠伤2/23
+  - 正例·大牌(圣盾术×4)：4次 | 起手— → 剩血— | 免疫4次
+  - 其他覆盖(集结呐喊×8/灵魂链接×6/反魔法领域×3)：17次 | 起手100%(低97%) → 剩血36%(低13%) | **2s内死1次**
+  - 反例A·纯裸吃就绪未交：30次 | 起手100%(低87%) → 剩血25%(低10%) | 叠伤1/30，最危:[r10@16:33.4](https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=26182130&end=26188130) (100%→10%[无外减])
+  - 反例B·纯裸吃CD未交：43次 | 起手100%(低97%) → 剩血28%(低3%) | 叠伤2/43，最危:[r13@16:40.7](https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1&view=events&start=1066736&end=1072736) (100%→3%[无外减])
+- **闪电毒蛇 · 萦绕风暴**（中/免疫217，未中0）
+  - 正例·常规(圣佑术×25)：25次 | 起手75%(低75%) → 剩血34%(低34%) | 叠伤1/25
+  - 正例·大牌(圣盾术×24/圣佑术+圣盾术×11/保护祝福×3/圣佑术+保护祝福×1)：39次 | 起手— → 剩血— | 免疫34次，叠伤4/39
+  - 其他覆盖(集结呐喊×5/灵魂链接×1)：6次 | 起手— → 剩血—
+  - 反例A·纯裸吃就绪未交：84次 | 起手100%(低100%) → 剩血40%(低34%) | 最危:[r15@8:22.8](https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=1637369&end=1643369) (100%→34%[无外减])
+  - 反例B·纯裸吃CD未交：63次 | 起手100%(低100%) → 剩血33%(低33%) | 最危:[r09@11:44.4](https://www.warcraftlogs.com/reports/81Mm23LfpDNFBtrR#fight=1&view=events&start=1015854&end=1021854) (100%→33%[无外减])
+- **剧毒蝰蛇 · 细胞毒素**（中/免疫92，未中262）
+  - 正例·常规(圣佑术×11)：11次 | 起手100%(低41%) → 剩血60%(低16%) | 叠伤4/11
+  - 正例·大牌(保护祝福×1)：1次 | 起手100%(低100%) → 剩血59%(低59%)
+  - 其他覆盖(灵魂链接×1/反魔法领域×1/集结呐喊×1/集结呐喊+灵魂链接×1)：4次 | 起手100%(低68%) → 剩血58%(低2%) | 叠伤1/4
+  - 反例A·纯裸吃就绪未交：35次 | 起手100%(低41%) → 剩血55%(低0%) | **2s内死2次**，叠伤8/35，最危:[r11@10:41.5](https://www.warcraftlogs.com/reports/ZVGCPLvwyBj7XdJW#fight=16&view=events&start=6033175&end=6039175) (54%→14%[无外减])
+  - 反例B·纯裸吃CD未交：41次 | 起手100%(低55%) → 剩血57%(低17%) | 叠伤9/41，最危:[r07@8:16.2](https://www.warcraftlogs.com/reports/KP7k1TCHX6WcaZMv#fight=12&view=events&start=8548908&end=8554908) (55%→17%[无外减])
+- **群聚三叶虫 · 锯齿冲锋**（中/免疫93，未中0）
+  - 正例·常规(圣佑术×29)：29次 | 起手100%(低55%) → 剩血48%(低16%) | 叠伤5/29
+  - 正例·大牌(圣盾术×1/保护祝福×1)：2次 | 起手100%(低100%) → 剩血63%(低63%) | 免疫1次
+  - 其他覆盖(集结呐喊×3/灵魂链接×2/集结呐喊+灵魂链接×1)：6次 | 起手100%(低100%) → 剩血39%(低16%) | 叠伤2/6
+  - 反例A·纯裸吃就绪未交：24次 | 起手100%(低71%) → 剩血47%(低17%) | 叠伤4/24，最危:[r08@11:26.4](https://www.warcraftlogs.com/reports/wqNRdB964Q2LzCcv#fight=449&view=events&start=461331045&end=461337045) (71%→17%[无外减])
+  - 反例B·纯裸吃CD未交：32次 | 起手100%(低54%) → 剩血36%(低16%) | 叠伤9/32，最危:[r13@7:24.8](https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1&view=events&start=510811&end=516811) (96%→16%[无外减])
+- **宝珠守望者 · 蚀骨践踏**（中/免疫72，未中4）
+  - 正例·常规(圣佑术×27)：27次 | 起手100%(低90%) → 剩血42%(低3%) | 叠伤4/27
+  - 正例·大牌(圣盾术×1)：1次 | 起手— → 剩血— | 免疫1次
+  - 其他覆盖(灵魂链接×4/集结呐喊×3/反魔法领域+灵魂链接×1)：8次 | 起手100%(低100%) → 剩血34%(低20%)
+  - 反例A·纯裸吃就绪未交：11次 | 起手100%(低61%) → 剩血33%(低8%) | 最危:[r15@23:36.6](https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=2551200&end=2557200) (61%→8%[盾吸1.20M])
+  - 反例B·纯裸吃CD未交：25次 | 起手100%(低100%) → 剩血36%(低25%) | 最危:[r10@25:31.0](https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=26719731&end=26725731) (100%→25%[无外减])
+- **沙怒石拳战士 · 震地**（中/免疫48，未中0）
+  - 正例·常规(圣佑术×17)：17次 | 起手100%(低82%) → 剩血68%(低22%) | 叠伤6/17
+  - 正例·大牌(保护祝福×12/圣盾术×2)：14次 | 起手— → 剩血— | 免疫14次，叠伤4/14
+  - 其他覆盖(集结呐喊×5/灵魂链接×3/灵魂链接+集结呐喊×2/牺牲祝福×1)：11次 | 起手100%(低87%) → 剩血32%(低20%) | 叠伤3/11
+  - 反例A·纯裸吃就绪未交：2次 | 起手100%(低100%) → 剩血13%(低10%) | 叠伤1/2，最危:[r01@0:45.5](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8980603&end=8986603) (100%→10%[无外减])
+  - 反例B·纯裸吃CD未交：4次 | 起手100%(低97%) → 剩血25%(低14%) | 最危:[r10@1:18.4](https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=25267070&end=25273070) (100%→14%[无外减])
+- **倒刺三叶虫 · 锯齿冲锋**（中/免疫39，未中83）
+  - 正例·常规(圣佑术×9)：9次 | 起手100%(低81%) → 剩血44%(低27%) | 叠伤6/9
+  - 正例·大牌(保护祝福×3/圣盾术×1/圣佑术+保护祝福×1)：5次 | 起手94%(低94%) → 剩血45%(低45%) | 免疫4次
+  - 其他覆盖(灵魂链接×1/集结呐喊×1)：2次 | 起手95%(低90%) → 剩血46%(低41%)
+  - 反例A·纯裸吃就绪未交：14次 | 起手100%(低61%) → 剩血57%(低23%) | 叠伤1/14，最危:[r06@6:45.0](https://www.warcraftlogs.com/reports/PqkhAdRaTgcZjMr6#fight=38&view=events&start=17899844&end=17905844) (61%→23%[无外减])
+  - 反例B·纯裸吃CD未交：9次 | 起手95%(低51%) → 剩血30%(低11%) | 叠伤3/9，最危:[r07@0:42.7](https://www.warcraftlogs.com/reports/KP7k1TCHX6WcaZMv#fight=12&view=events&start=8095443&end=8101443) (51%→11%[无外减])
+- **流沙猎手 · 箭雨**（中/免疫64，未中172）
+  - 正例·常规(圣佑术×5)：5次 | 起手95%(低89%) → 剩血71%(低29%) | 免疫1次，叠伤2/5
+  - 正例·大牌(圣佑术+保护祝福×1)：1次 | 起手77%(低77%) → 剩血24%(低24%) | 叠伤1/1
+  - 其他覆盖(集结呐喊×5/灵魂链接×1)：6次 | 起手100%(低39%) → 剩血70%(低15%) | 叠伤2/6
+  - 反例A·纯裸吃就绪未交：34次 | 起手100%(低72%) → 剩血64%(低22%) | 免疫2次，叠伤6/34，最危:[r02@7:38.6](https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6375975&end=6381975) (100%→22%[无外减])
+  - 反例B·纯裸吃CD未交：18次 | 起手100%(低56%) → 剩血65%(低7%) | 叠伤4/18，最危:[r10@0:49.8](https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=25238521&end=25244521) (100%→7%[无外减])
+- **火花引导者 · 不羁的火花**（中/免疫1，未中0）
+  - 反例A·纯裸吃就绪未交：0次
+  - 反例B·纯裸吃CD未交：1次 | 起手93%(低93%) → 剩血0%(低0%) | **2s内死1次**，最危:[r15@23:26.5](https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=2541123&end=2547123) (93%→0%[无外减])
+- **隐秘之牙 · 蜿蜒打击**（中/免疫48，未中160）
+  - 正例·常规(圣佑术×3)：3次 | 起手92%(低84%) → 剩血60%(低58%) | 叠伤2/3
+  - 正例·大牌(保护祝福×8/圣盾术×1)：9次 | 起手100%(低100%) → 剩血60%(低53%) | 免疫1次，叠伤1/9
+  - 其他覆盖(集结呐喊×8/灵魂链接×1)：9次 | 起手100%(低60%) → 剩血60%(低28%) | 叠伤4/9
+  - 反例A·纯裸吃就绪未交：16次 | 起手100%(低65%) → 剩血60%(低21%) | 叠伤3/16，最危:[r13@0:24.0](https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1&view=events&start=89966&end=95966) (100%→21%[无外减])
+  - 反例B·纯裸吃CD未交：11次 | 起手92%(低64%) → 剩血52%(低24%) | 叠伤4/11，最危:[r07@0:46.1](https://www.warcraftlogs.com/reports/KP7k1TCHX6WcaZMv#fight=12&view=events&start=8098824&end=8104824) (64%→24%[无外减])
+- **环境 · 极化力场**（中/免疫16，未中0）
+  - 反例A·纯裸吃就绪未交：10次 | 起手— → 剩血— | 免疫6次
+  - 反例B·纯裸吃CD未交：6次 | 起手— → 剩血— | 免疫6次，叠伤1/6
+- **风暴能手 · 闪电箭**（中/免疫6，未中16）
+  - 反例A·纯裸吃就绪未交：3次 | 起手100%(低100%) → 剩血32%(低32%) | 叠伤1/3，最危:[r04@6:19.8](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=374790&end=380790) (100%→32%[无外减])
+  - 反例B·纯裸吃CD未交：3次 | 起手100%(低84%) → 剩血25%(低14%) | 叠伤2/3，最危:[r02@7:01.1](https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6338433&end=6344433) (84%→14%[无外减])
+
+## ④ 小怪死点 & 残血（<20% HP）前 5 秒连招
+- 总计：**死亡 10 次 / 残血(<20%) 46 次**（覆盖 15 场）
+- 高频连招模式：`释放电荷` ×17 | `未知` ×5 | `锯齿冲锋` ×5 | `蚀骨践踏` ×3 | `锯齿冲锋 + 细胞毒素` ×3 | `细胞毒素 + 锯齿冲锋` ×2
+  - [r01@5:56.8](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9291887&end=9297887) 欧鳇打鸡 **死亡(0%)** [纯裸吃 | 大牌就绪:保护祝福]：（无伤害记录）
+  - [r02@11:17.3](https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6594708&end=6600708) 哦毕爷 **死亡(0%)** [纯裸吃 | 常规就绪:圣佑术，大牌就绪:圣盾术]：-2.6s 虚空侵染外壳符文 480(吸479)→71% → -1.7s 细胞毒素 212K(吸35.7K)→56% → -1.7s 虚空侵染外壳符文 959→55% → -0.7s 细胞毒素 245K→42% → -0.7s 虚空侵染外壳符文 949→42% → -0.0s 细胞毒素 460K→0%
+  - [r04@25:33.9](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=1528946&end=1534946) Khumi **死亡(0%)** [纯裸吃 | 常规就绪:圣佑术，大牌就绪:圣盾术/保护祝福]：（无伤害记录）
+  - [r05@7:56.3](https://www.warcraftlogs.com/reports/PFnYKkZxRgDVhqW1#fight=14&view=events&start=11306705&end=11312705) 没点东西丷 **死亡(0%)** [纯裸吃 | 常规就绪:圣佑术，大牌就绪:保护祝福]：-0.0s 锯齿冲锋 390K(吸26.2K)→65%
+  - [r08@10:24.0](https://www.warcraftlogs.com/reports/wqNRdB964Q2LzCcv#fight=449&view=events&start=461268737&end=461274737) Primarîus **死亡(0%)** [纯裸吃 | 大牌就绪:圣盾术/保护祝福]：（无伤害记录）
+  - [r08@17:35.3](https://www.warcraftlogs.com/reports/wqNRdB964Q2LzCcv#fight=449&view=events&start=461699953&end=461705953) Primarîus **死亡(0%)** [纯裸吃 | 大牌就绪:圣盾术/保护祝福]：（无伤害记录）
+  - [r11@17:38.7](https://www.warcraftlogs.com/reports/ZVGCPLvwyBj7XdJW#fight=16&view=events&start=6450445&end=6456445) 粉红泰伦斯 **死亡(0%)** [身上:外减:集结呐喊 | 常规就绪:圣佑术，大牌就绪:圣盾术/保护祝福]：-0.7s 释放电荷 715K(吸86.4K)→38%
+  - [r14@18:10.4](https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=16548093&end=16554093) 请你叫我小猴 **死亡(0%)** [纯裸吃 | 大牌就绪:圣盾术/保护祝福]：-4.5s 火花步 315K(吸26.9K)→71%
+  - [r15@6:23.3](https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=1517877&end=1523877) 安爪啦 **死亡(0%)** [纯裸吃 | 常规就绪:圣佑术，大牌就绪:圣盾术/保护祝福]：-4.7s 箭雨 185K→64% → -0.0s 近战 1.00M(吸38.3K)→0%
+  - [r15@23:26.5](https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=2541144&end=2547144) 安爪啦 **死亡(0%)** [纯裸吃 | 大牌就绪:保护祝福]：-0.0s 不羁的火花 934K→0%
+  - [r13@9:26.7](https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1&view=events&start=632717&end=638717) 卿語 **残血(2%)** [身上:外减:集结呐喊 | 无牌就绪]：-1.3s 锯齿冲锋 405K→68% → -1.0s 细胞毒素 410K→35% → -0.3s 锯齿冲锋 254K→16% → +0.0s 细胞毒素 206K→2%
+  - [r13@16:40.7](https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1&view=events&start=1066736&end=1072736) 卿語 **残血(3%)** [纯裸吃 | 大牌就绪:圣盾术/保护祝福]：+0.0s 释放电荷 945K(吸26.6K)→3%
+
+## ⑤ 免疫 / 清除 / 解控 / 驱散交互实锤
+- 驱散实锤：`清毒术` → 驱散 `细胞毒素(1308148)` ×148次（自驱 57 / 驱队友 91，样本 [r01@8:46.7](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9461810&end=9467810)、[r01@9:49.8](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9524925&end=9530925)、[r01@10:09.0](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9544077&end=9550077)）
+- 驱散实锤：`牺牲祝福` → 驱散 `细胞毒素(1308148)` ×14次（自驱 0 / 驱队友 14，样本 [r01@8:07.6](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9422692&end=9428692)、[r03@6:09.2](https://www.warcraftlogs.com/reports/14mrYRDaCVQ378Pj#fight=12&view=events&start=7930239&end=7936239)、[r03@10:27.2](https://www.warcraftlogs.com/reports/14mrYRDaCVQ378Pj#fight=12&view=events&start=8188302&end=8194302)）
+- 驱散实锤：`奥术洪流` → 驱散 `积攒电荷(1310739)` ×1次（自驱 0 / 驱队友 1，样本 [r10@17:29.6](https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=26238353&end=26244353)）
+- 清除实锤：`清毒术` → 提前清掉 `细胞毒素(1308148)` ×57次（Δt中位 +0ms，已持续 1.5s / 自然10.1s，样本 [r01@8:46.7](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9461810&end=9467810)、[r01@10:09.0](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9544077&end=9550077)、[r01@11:23.7](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9618798&end=9624798)）
+- 清除实锤：`圣盾术` → 提前清掉 `锯齿冲锋(1291399)` ×9次（Δt中位 +0ms，已持续 2.4s / 自然6.0s，样本 [r02@7:15.7](https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6353027&end=6359027)、[r04@11:06.2](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=661198&end=667198)、[r05@6:30.8](https://www.warcraftlogs.com/reports/PFnYKkZxRgDVhqW1#fight=14&view=events&start=11221214&end=11227214)）
+- 清除实锤：`保护祝福` → 提前清掉 `锯齿冲锋(1291399)` ×8次（Δt中位 +0ms，已持续 2.4s / 自然6.0s，样本 [r02@8:52.9](https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6450318&end=6456318)、[r03@6:25.5](https://www.warcraftlogs.com/reports/14mrYRDaCVQ378Pj#fight=12&view=events&start=7946598&end=7952598)、[r04@9:57.3](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=592265&end=598265)）
+- 清除实锤：`圣盾术` → 提前清掉 `蚀骨践踏(1303486)` ×3次（Δt中位 +0ms，已持续 1.6s / 自然10.0s，样本 [r01@24:38.8](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=10413877&end=10419877)、[r07@24:55.3](https://www.warcraftlogs.com/reports/KP7k1TCHX6WcaZMv#fight=12&view=events&start=9547984&end=9553984)、[r14@24:52.0](https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=16949717&end=16955717)）
+- 清除实锤：`圣盾术` → 提前清掉 `细胞毒素(1308148)` ×2次（Δt中位 -1ms，已持续 1.5s / 自然10.1s，样本 [r07@10:56.8](https://www.warcraftlogs.com/reports/KP7k1TCHX6WcaZMv#fight=12&view=events&start=8709499&end=8715499)、[r12@10:48.8](https://www.warcraftlogs.com/reports/Qav83tRg1ZpD4hNn#fight=2&view=events&start=1070951&end=1076951)）
+- （已排除伪清除：`清毒术` 旁 `细胞毒素` 消失 ×3次，实为队友驱散）
+- （已排除伪清除：`保护祝福` 旁 `锯齿冲锋` 消失 ×1次，实为自然到期）
+- （已排除伪清除：`圣盾术` 旁 `萦绕风暴` 消失 ×1次，实为自然到期）
+- （已排除伪清除：`清毒术` 旁 `萦绕风暴` 消失 ×1次，实为自然到期）
+- 免疫实锤：`圣盾术` 完全免疫 `萦绕风暴(1293133)`（0伤 ×35次，样本 [r05@6:38.1](https://www.warcraftlogs.com/reports/PFnYKkZxRgDVhqW1#fight=14&view=events&start=11228480&end=11234480)、[r05@6:38.7](https://www.warcraftlogs.com/reports/PFnYKkZxRgDVhqW1#fight=14&view=events&start=11229124&end=11235124)、[r06@10:09.4](https://www.warcraftlogs.com/reports/PqkhAdRaTgcZjMr6#fight=38&view=events&start=18104233&end=18110233)）
+- 免疫实锤：`保护祝福` 完全免疫 `震地(265966)`（0伤 ×12次，样本 [r01@0:37.0](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8972102&end=8978102)、[r02@0:35.8](https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=5953200&end=5959200)、[r02@0:43.1](https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=5960478&end=5966478)）
+- 穿透实锤：`保护祝福` **不免疫** `蜿蜒打击(1295635)`（仍吃中位 442K ×9次，样本 [r01@0:44.2](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8979282&end=8985282)、[r04@0:39.2](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=34237&end=40237)、[r04@0:45.7](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=40735&end=46735)）
+- 免疫实锤：`圣盾术` 完全免疫 `释放电荷(1293475)`（0伤 ×4次，样本 [r01@17:02.4](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9957495&end=9963495)、[r04@16:35.3](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=990320&end=996320)、[r10@17:17.1](https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=26225818&end=26231818)）
+- 免疫实锤：`保护祝福` 完全免疫 `锯齿冲锋(1291399)`（0伤 ×3次，样本 [r01@0:40.3](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8975383&end=8981383)、[r10@6:52.3](https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=25600977&end=25606977)、[r15@0:43.7](https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=1178271&end=1184271)）
+- 免疫实锤：`圣盾术` 完全免疫 `火花步(264763)`（0伤 ×2次，样本 [r01@17:04.7](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9959770&end=9965770)、[r04@16:37.5](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=992549&end=998549)）
+- 免疫实锤：`圣盾术` 完全免疫 `锯齿冲锋(1291399)`（0伤 ×2次，样本 [r08@6:41.0](https://www.warcraftlogs.com/reports/wqNRdB964Q2LzCcv#fight=449&view=events&start=461045672&end=461051672)、[r12@6:41.0](https://www.warcraftlogs.com/reports/Qav83tRg1ZpD4hNn#fight=2&view=events&start=823226&end=829226)）
+- 穿透实锤：`保护祝福` **不免疫** `细胞毒素(1308148)`（仍吃中位 253K ×2次，样本 [r11@7:18.3](https://www.warcraftlogs.com/reports/ZVGCPLvwyBj7XdJW#fight=16&view=events&start=5830007&end=5836007)、[r11@7:19.3](https://www.warcraftlogs.com/reports/ZVGCPLvwyBj7XdJW#fight=16&view=events&start=5831004&end=5837004)）
+- 免疫实锤：`圣盾术` 完全免疫 `震地(265966)`（0伤 ×2次，样本 [r13@1:10.6](https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1&view=events&start=136637&end=142637)、[r14@0:45.2](https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=15502901&end=15508901)）
+- 免疫实锤：`圣盾术` 完全免疫 `蚀骨践踏(1303486)`（0伤 ×1次，样本 [r02@24:36.4](https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=7393802&end=7399802)）
+- 穿透实锤：`保护祝福` **不免疫** `毒箭(1310683)`（仍吃中位 735K ×1次，样本 [r04@10:00.5](https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=595508&end=601508)）
+- 免疫实锤：`圣盾术` 完全免疫 `蜿蜒打击(1295635)`（0伤 ×1次，样本 [r14@0:42.3](https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=15499965&end=15505965)）
+— WCL API (v1)：实时请求 0 次，缓存命中 180 次

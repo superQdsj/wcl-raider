@@ -1,0 +1,1077 @@
+{
+  "name": "塞塔里斯神庙",
+  "slug": "saitalisi",
+  "banner": "site/img/dungeons/sethraliss.jpg",
+  "intro": "按你的专精看每个首领该按什么。伤害数字来自 15 场 +23/+24 限时记录，含吸收盾。",
+  "src_note": "src 写法：wowhead:<技能ID> 指 evidence/wowhead.json；diag-bN 指 evidence/diag-bN.md；ret-guide:L<行> 指 evidence/ret-guide.md；user 指用户口述确认。 mdt:<NPC ID> 指 evidence/mdt.lua；trash-route 指 evidence/trash-route.md（每种怪出现在哪段）；diag-trash 指 evidence/diag-trash.md。",
+  "bosses": [
+    {
+      "id": "b1",
+      "kicker": "第一个首领",
+      "name": "阿斯匹克斯与阿德里斯",
+      "short": "阿斯匹克斯与阿德里斯",
+      "portraits": [
+        83552,
+        83550
+      ],
+      "summary": "两个首领一起打，大约 4 分 10 秒，全程自然伤害。",
+      "summary_em": "跟着风暴祝福转火，先打死阿德里斯，最后约 40 秒收掉狂乱的阿斯匹克斯。",
+      "src": [
+        "ret-guide:L9",
+        "diag-b1",
+        "wowhead:1310311",
+        "wowhead:1292035"
+      ],
+      "loop": {
+        "title": "整场约 4 分钟",
+        "sub": "风暴祝福让一个首领免疫伤害，打另一个；它挨打时祝福会换到对方身上。",
+        "sub_src": [
+          "wowhead:1310311",
+          "ret-guide:L9"
+        ],
+        "segments": [
+          {
+            "w": 213,
+            "label": "两个一起打，先打死阿德里斯",
+            "tone": "mech"
+          },
+          {
+            "w": 40,
+            "label": "狂乱 约 40 秒",
+            "tone": "hot"
+          }
+        ],
+        "ticks": [
+          [
+            0,
+            "0"
+          ],
+          [
+            213,
+            "约 3 分 30 秒"
+          ],
+          [
+            253,
+            "约 4 分 10 秒"
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "id": 1288087,
+          "name": "电闪雷鸣",
+          "lethal": true,
+          "what": "阿德里斯向前冲刺，8 码内的人一起分摊；约 5 秒后再引导一记惊雷，打 20 码内所有人",
+          "src": [
+            "wowhead:1288087",
+            "ret-guide:L13"
+          ],
+          "num": "59",
+          "cap": "第一段分摊后，每人吃到的伤害",
+          "num_src": "diag-b1",
+          "note": {
+            "text": "第二段惊雷 20 码内约 192 万，跑出 20 码，或者开无敌",
+            "src": [
+              "diag-b1",
+              "wowhead:1288087"
+            ]
+          },
+          "all": {
+            "text": "**身上挂着阵风去分摊最危险。**15 场里唯一一次死亡就是这样。",
+            "src": [
+              "ret-guide:L16"
+            ]
+          }
+        },
+        {
+          "id": 1288457,
+          "name": "阵风",
+          "what": "阿斯匹克斯爆破一个人，之后 4 秒持续掉血",
+          "src": [
+            "wowhead:1288457"
+          ],
+          "num": "95",
+          "cap": "一次的总伤害，含 4 秒持续",
+          "num_src": "diag-b1"
+        },
+        {
+          "id": 1311808,
+          "name": "暴风",
+          "what": "阿斯匹克斯锁定玩家，落点 8 码内的人吃伤害，地上留下暴风区域，进去会被沉默缴械 4 秒",
+          "src": [
+            "wowhead:1311808"
+          ],
+          "num": "61",
+          "cap": "每次",
+          "num_src": "diag-b1"
+        },
+        {
+          "id": 1310712,
+          "name": "狂风之力",
+          "what": "阿斯匹克斯对所有人放狂风之力，打一下并击退",
+          "src": [
+            "wowhead:1310712",
+            "diag-b1"
+          ],
+          "num": "48",
+          "cap": "每次",
+          "num_src": "diag-b1",
+          "all": {
+            "text": "注意站位，别被吹进暴风区域。",
+            "src": [
+              "ret-guide:L11"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "kicker": "第二个首领",
+      "name": "米利克萨",
+      "short": "米利克萨",
+      "portraits": [
+        88585
+      ],
+      "summary": "单体，大约 4 分钟，除了蛇群和小怪平砍全是自然伤害。约 103 秒一轮：",
+      "summary_em": "地面阶段连放雷霆喷吐和毒蛇风暴，然后钻地，进入约 50 秒的钻地阶段清小蛇。",
+      "src": [
+        "ret-guide:L23",
+        "diag-b2"
+      ],
+      "loop": {
+        "title": "一轮约 103 秒",
+        "sub": "两段交替。每段下面列出这段要处理的技能。",
+        "layout": "grouped",
+        "segments": [
+          {
+            "w": 53,
+            "label": "地面阶段",
+            "tone": "mech",
+            "abilities": [
+              263958,
+              1289109,
+              1293048
+            ]
+          },
+          {
+            "w": 50,
+            "label": "钻地阶段 约 50 秒",
+            "tone": "calm",
+            "abilities": [
+              264206,
+              1300227,
+              267027
+            ]
+          }
+        ],
+        "ticks": [
+          [
+            0,
+            "0"
+          ],
+          [
+            53,
+            "约 53 秒"
+          ],
+          [
+            103,
+            "约 103 秒"
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "id": 263958,
+          "name": "缠绕的蛇群",
+          "what": "一群小蛇缠住玩家，被缠的人动不了；打它或控它就能放人",
+          "src": [
+            "wowhead:263958"
+          ],
+          "num": "20",
+          "cap": "被缠一次吃到的伤害",
+          "num_src": "diag-b2",
+          "all": {
+            "text": "队友被缠住，顺手打一下蛇群就能放出来。",
+            "src": [
+              "wowhead:263958",
+              "ret-guide:L27"
+            ]
+          }
+        },
+        {
+          "id": 1289109,
+          "name": "雷霆喷吐",
+          "lethal": true,
+          "what": "点 2 个人，之后 4 秒每秒往他脚下劈一道闪电，并留下电池",
+          "src": [
+            "wowhead:1289109",
+            "diag-b2"
+          ],
+          "num": "181",
+          "cap": "被点名后 4 秒的总伤害",
+          "num_src": "diag-b2",
+          "all": {
+            "text": "被点名就一直移动，躲开脚下的雷击。",
+            "src": [
+              "ret-guide:L26"
+            ]
+          }
+        },
+        {
+          "id": 1293048,
+          "name": "毒蛇风暴",
+          "what": "全团击退并打一下，之后 8 秒持续掉血，驱散不掉",
+          "src": [
+            "wowhead:1293048",
+            "ret-guide:L28"
+          ],
+          "num": "176",
+          "cap": "击退加 8 秒持续的总伤害",
+          "num_src": "diag-b2"
+        },
+        {
+          "id": 264206,
+          "name": "钻地",
+          "lethal": true,
+          "what": "首领钻进地下冲过去，路径上的人被击飞，昏迷 4 秒",
+          "src": [
+            "wowhead:264206"
+          ],
+          "num": "156",
+          "cap": "被撞到一次",
+          "num_src": "diag-b2",
+          "all": {
+            "text": "看好路径，躲开。",
+            "src": [
+              "ret-guide:L28"
+            ]
+          }
+        },
+        {
+          "id": 1300227,
+          "name": "钻地之震",
+          "what": "钻地阶段全程，所有人每秒掉血",
+          "src": [
+            "wowhead:1300227"
+          ],
+          "num": "10",
+          "cap": "每秒，整个钻地阶段不停",
+          "num_src": "ret-guide:L25",
+          "note": {
+            "text": "这时别再踩进风暴飞蛇留下的电池：一边掉血一边被电，实战里被打到只剩 10% 血。",
+            "src": [
+              "ret-guide:L30"
+            ]
+          }
+        },
+        {
+          "id": 267027,
+          "name": "毒素喷吐",
+          "what": "剧毒蝰蛇的读条，打一个人并中毒 8 秒，中毒可以驱散",
+          "src": [
+            "wowhead:267027"
+          ],
+          "num": "72",
+          "cap": "漏断一次的总伤害",
+          "num_src": "ret-guide:L27",
+          "all": {
+            "text": "**钻地阶段最该断的读条。**",
+            "src": [
+              "ret-guide:L27"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "kicker": "第三个首领",
+      "name": "加瓦兹特",
+      "short": "加瓦兹特",
+      "portraits": [
+        147355
+      ],
+      "summary": "单体木桩战，大约 3 分 40 秒，全程自然伤害。每 23 秒一轮：",
+      "summary_em": "先有人站进闪电线里挡充能，然后全团吃一次诱导。",
+      "src": [
+        "ret-guide:L37",
+        "diag-b3"
+      ],
+      "loop": {
+        "title": "一轮 23 秒",
+        "sub": "三段从左往右循环。上面是机制，虚线下面是你要按的。",
+        "layout": "aligned",
+        "segments": [
+          {
+            "w": 8,
+            "label": "镀流：站线挡充能",
+            "tone": "mech",
+            "abilities": [
+              266923
+            ]
+          },
+          {
+            "w": 6,
+            "label": "空档",
+            "tone": "calm",
+            "split": {
+              "at": 0.5,
+              "label": "诱导读条",
+              "tone": "cast"
+            },
+            "abilities": [
+              1290531
+            ]
+          },
+          {
+            "w": 9,
+            "label": "出电水",
+            "tone": "hot",
+            "fill": 0.26,
+            "abilities": [
+              1291815
+            ]
+          }
+        ],
+        "ticks": [
+          [
+            0,
+            "0 秒"
+          ],
+          [
+            8,
+            "8 秒"
+          ],
+          [
+            14,
+            "约 14 秒"
+          ],
+          [
+            23,
+            "23 秒"
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "id": 266923,
+          "name": "镀流",
+          "what": "闪电尖塔往首领身上连线，站进线里挡住它充能",
+          "src": [
+            "wowhead:266923",
+            "ret-guide:L37"
+          ],
+          "num": "240",
+          "cap": "一个人挡满 8 秒的总伤害，每 0.5 秒一跳约 15 万",
+          "num_src": "diag-b3",
+          "note": {
+            "icon": 266512,
+            "text": "每条线都要有人挡。漏挡让首领充满会放电，全团每人约 87 万。",
+            "src": [
+              "wowhead:266512",
+              "diag-b3"
+            ]
+          }
+        },
+        {
+          "id": 1290531,
+          "name": "诱导",
+          "what": "线结束约 6 秒后，首领读条打全团",
+          "src": [
+            "wowhead:1290531",
+            "ret-guide:L39"
+          ],
+          "num": "76",
+          "cap": "每人一次，打得高的时候 93 万",
+          "num_src": "diag-b3",
+          "note": {
+            "text": "这 6 秒空档是全场唯一的抬血时间，读条结束前尽量回满。",
+            "src": [
+              "ret-guide:L39"
+            ]
+          }
+        },
+        {
+          "id": 1291815,
+          "name": "诱导力场",
+          "lethal": true,
+          "what": "和诱导差不多同时，首领脚下铺开一大滩电水",
+          "src": [
+            "wowhead:1290531",
+            "user",
+            "diag-b3"
+          ],
+          "num": "24–58",
+          "cap": "每秒一跳",
+          "num_src": "diag-b3",
+          "all": {
+            "text": "**坦克把首领拖出电水，近战马上跟着走。**诱导刚把血打残，在水里多站一秒就会被补死。15 场里唯一一次死亡就是这样。",
+            "src": [
+              "user",
+              "diag-b3"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "kicker": "第四个首领",
+      "name": "塞塔里斯的化身",
+      "short": "塞塔里斯的化身",
+      "portraits": [
+        83203
+      ],
+      "summary": "大约 3 分 40 秒，打两轮。",
+      "summary_em": "先杀堕落的守护者，再杀精华污染者解开禁疗；打断扭曲的妖术师，转阶段控住无信折磨者，把化身奶起来。",
+      "src": [
+        "ret-guide:L51",
+        "diag-b4"
+      ],
+      "abilities": [
+        {
+          "id": 1300877,
+          "name": "腐化",
+          "lethal": true,
+          "what": "3 个人各领 1 层，15 秒内每秒掉血，治疗降低 33%，可以叠加",
+          "src": [
+            "wowhead:1300877",
+            "ret-guide:L51"
+          ],
+          "num": "309",
+          "cap": "领 1 层，15 秒的总伤害",
+          "num_src": "ret-guide:L54",
+          "all": {
+            "text": "**每人只领 1 层。**叠到 2–3 层，每秒 53–89 万，两三秒就倒。",
+            "src": [
+              "ret-guide:L54",
+              "ret-guide:L59"
+            ]
+          }
+        },
+        {
+          "id": 1302618,
+          "name": "邪恶冲锋",
+          "what": "堕落的守护者冲向一个人，打一下，之后 8 秒持续掉血",
+          "src": [
+            "wowhead:1302618"
+          ],
+          "num": "241",
+          "cap": "一次冲锋的总伤害",
+          "num_src": "diag-b4"
+        },
+        {
+          "id": 1302761,
+          "name": "不稳定腐化",
+          "what": "堕落的守护者死时爆炸，20 码内的人都吃伤害",
+          "src": [
+            "wowhead:1302761"
+          ],
+          "all": {
+            "text": "守护者快死时跑出 20 码。",
+            "src": [
+              "ret-guide:L51"
+            ]
+          }
+        },
+        {
+          "id": 1301199,
+          "name": "污染之秽",
+          "what": "精华污染者让化身不能被治疗",
+          "src": [
+            "wowhead:1301199"
+          ],
+          "all": {
+            "text": "转火精华污染者，打死就解开。",
+            "src": [
+              "ret-guide:L51"
+            ]
+          }
+        },
+        {
+          "id": 1302158,
+          "name": "烈焰震击",
+          "what": "扭曲的妖术师的读条，烧一个人 8 秒",
+          "src": [
+            "wowhead:1302158"
+          ],
+          "note": {
+            "icon": 1300684,
+            "text": "妖术师的潜藏妖术总是点治疗，移除时在治疗脚下留一滩妖术淤泥，踩进去会变青蛙。",
+            "src": [
+              "wowhead:1311979",
+              "wowhead:1300684",
+              "ret-guide:L56"
+            ]
+          }
+        },
+        {
+          "id": 1300704,
+          "name": "锁定",
+          "what": "转阶段出现的无信折磨者锁定最近的治疗，打中会让治疗量降低，可以叠加",
+          "src": [
+            "wowhead:1300704",
+            "ret-guide:L51"
+          ],
+          "all": {
+            "text": "控住、杀掉，别让它们围着治疗打。",
+            "src": [
+              "ret-guide:L51",
+              "ret-guide:L57"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "route": [
+    "t0",
+    "b1",
+    "t1",
+    "b2",
+    "t2",
+    "b3",
+    "t3",
+    "b4"
+  ],
+  "trash_legend": {
+    "text": "钢条：打断不了，只能晕或者控住。免控：打断不了，这只怪也控不住。",
+    "src": [
+      "mdt:134990",
+      "mdt:134991"
+    ]
+  },
+  "trash": [
+    {
+      "id": "t0",
+      "title": "老 1 之前",
+      "short": "小怪",
+      "summary": "一路物理伤害为主。",
+      "summary_em": "最疼的是沙怒石拳战士的震地，和三叶虫的流血叠在一起。",
+      "src": [
+        "ret-guide:L66",
+        "trash-route"
+      ],
+      "mobs": [
+        {
+          "name": "沙怒石拳战士",
+          "npc": 134991,
+          "portrait": 84207,
+          "src": [
+            "mdt:134991",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 265966,
+              "name": "震地",
+              "type": "unstoppable",
+              "lethal": true,
+              "what": "猛击地面，60 码内所有人被击退",
+              "src": [
+                "wowhead:265966",
+                "mdt:134991"
+              ],
+              "num": "91",
+              "cap": "每次",
+              "num_src": "diag-trash"
+            }
+          ]
+        },
+        {
+          "name": "倒刺三叶虫",
+          "npc": 134616,
+          "portrait": 83787,
+          "src": [
+            "mdt:134616",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1291399,
+              "name": "锯齿冲锋",
+              "what": "冲向一个人打一下，再流血 6 秒",
+              "src": [
+                "wowhead:1291399"
+              ],
+              "num": "92",
+              "cap": "冲锋加流血的总伤害",
+              "num_src": "diag-trash"
+            }
+          ]
+        },
+        {
+          "name": "流沙猎手",
+          "npc": 134600,
+          "portrait": 83780,
+          "src": [
+            "mdt:134600",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1308113,
+              "name": "箭雨",
+              "type": "bar",
+              "what": "朝一个人连射 9 秒",
+              "src": [
+                "wowhead:1308113",
+                "mdt:134600",
+                "ret-guide:L72"
+              ],
+              "num": "52",
+              "cap": "被点名一次吃到的伤害",
+              "num_src": "diag-trash"
+            }
+          ]
+        },
+        {
+          "name": "风暴能手",
+          "npc": 134990,
+          "portrait": 84024,
+          "src": [
+            "mdt:134990",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1291262,
+              "name": "闪电箭",
+              "type": "kick",
+              "what": "读条打一个人",
+              "src": [
+                "wowhead:1291262",
+                "mdt:134990"
+              ],
+              "num": "75",
+              "cap": "漏断一发",
+              "num_src": "diag-trash"
+            }
+          ]
+        },
+        {
+          "name": "隐秘之牙",
+          "npc": 134602,
+          "portrait": 83782,
+          "src": [
+            "mdt:134602",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1295635,
+              "name": "蜿蜒打击",
+              "what": "传送到一个人身边打一下",
+              "src": [
+                "wowhead:1295635"
+              ],
+              "num": "44",
+              "cap": "每次",
+              "num_src": "diag-trash"
+            }
+          ]
+        }
+      ],
+      "quiet": {
+        "text": "游荡三叶虫没有要处理的技能。",
+        "src": [
+          "trash-route"
+        ]
+      }
+    },
+    {
+      "id": "t1",
+      "title": "老 1 → 老 2",
+      "summary": "毒和流血多。",
+      "summary_em": "最危险的是锯齿冲锋的流血和细胞毒素叠在一起。",
+      "src": [
+        "ret-guide:L66",
+        "trash-route"
+      ],
+      "mobs": [
+        {
+          "name": "剧毒蝰蛇",
+          "npc": 135562,
+          "portrait": 78250,
+          "src": [
+            "mdt:135562",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1308148,
+              "name": "细胞毒素",
+              "type": "kick",
+              "lethal": true,
+              "what": "打一个人并中毒，之后 10 秒持续掉血",
+              "src": [
+                "wowhead:1308148",
+                "mdt:135562"
+              ],
+              "num": "61",
+              "cap": "被点一次吃到的伤害",
+              "num_src": "diag-trash",
+              "all": {
+                "text": "**残血时连中两发会直接倒。**15 场里惩戒骑有一次 41% 血刚驱完，又被点一发就死了。",
+                "src": [
+                  "ret-guide:L73",
+                  "diag-trash"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "群聚三叶虫",
+          "npc": 264785,
+          "portrait": 83787,
+          "src": [
+            "mdt:264785",
+            "trash-route",
+            "diag-trash"
+          ],
+          "skills": [
+            {
+              "id": 1291399,
+              "name": "锯齿冲锋",
+              "what": "冲向一个人打一下，再流血 6 秒",
+              "src": [
+                "wowhead:1291399",
+                "diag-trash"
+              ],
+              "num": "115",
+              "cap": "冲锋加流血的总伤害",
+              "num_src": "diag-trash",
+              "note": {
+                "icon": 1292990,
+                "text": "砂誓骑兵和尽职的驯兽师读三叶虫群，召出这些三叶虫。",
+                "src": [
+                  "wowhead:1292990",
+                  "mdt:134629",
+                  "mdt:139422"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "育巢者",
+          "npc": 139425,
+          "portrait": 83444,
+          "src": [
+            "mdt:139425",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1310683,
+              "name": "毒箭",
+              "type": "kick",
+              "what": "读条打一个人",
+              "src": [
+                "wowhead:1310683",
+                "mdt:139425"
+              ],
+              "num": "74",
+              "cap": "漏断一发",
+              "num_src": "ret-guide:L72"
+            }
+          ]
+        },
+        {
+          "name": "无信征服者",
+          "npc": 134364,
+          "portrait": 86510,
+          "src": [
+            "mdt:134364",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1293307,
+              "name": "扰乱心智",
+              "type": "kick",
+              "what": "引导，让一个人迷惑 5 秒",
+              "src": [
+                "wowhead:1293307",
+                "mdt:134364"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "闪电毒蛇",
+          "npc": 135846,
+          "portrait": 78247,
+          "src": [
+            "mdt:135846",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1293133,
+              "name": "萦绕风暴",
+              "what": "毒蛇唤雷结束时在它脚下留一滩电池，站在里面每 1.5 秒掉血",
+              "src": [
+                "wowhead:1310396",
+                "wowhead:1293133"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三叶虫主母",
+          "npc": 134686,
+          "portrait": 75595,
+          "src": [
+            "mdt:134686",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 272654,
+              "name": "撞头",
+              "what": "打当前目标一下，物理伤害很高",
+              "src": [
+                "wowhead:272654"
+              ],
+              "all": {
+                "text": "**别抢它的仇恨。**15 场里有一次惩戒骑被它一下普攻打掉 100 万，直接倒地。",
+                "src": [
+                  "ret-guide:L73",
+                  "diag-trash"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "seen": {
+        "mobs": [
+          {
+            "name": "倒刺三叶虫",
+            "portrait": 83787
+          },
+          {
+            "name": "流沙猎手",
+            "portrait": 83780
+          },
+          {
+            "name": "风暴能手",
+            "portrait": 84024
+          }
+        ],
+        "from": "t0",
+        "src": [
+          "trash-route"
+        ]
+      }
+    },
+    {
+      "id": "t2",
+      "title": "老 2 → 老 3",
+      "summary": "几乎全是自然伤害。",
+      "summary_em": "暴怒云气的释放电荷是全本小怪里最常把人打残的技能。",
+      "src": [
+        "ret-guide:L66",
+        "diag-trash"
+      ],
+      "mobs": [
+        {
+          "name": "暴怒云气",
+          "npc": 136076,
+          "portrait": 65631,
+          "src": [
+            "mdt:136076",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1293475,
+              "name": "释放电荷",
+              "type": "unstoppable",
+              "lethal": true,
+              "what": "把积攒电荷攒下的能量一次放出来，打所有人",
+              "src": [
+                "wowhead:1293475",
+                "mdt:136076"
+              ],
+              "num": "82",
+              "cap": "每次",
+              "num_src": "diag-trash",
+              "note": {
+                "icon": 1293464,
+                "text": "云气身上的积攒电荷是魔法效果，可以进攻驱散。",
+                "src": [
+                  "mdt:136076",
+                  "ret-guide:L72"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "灌注能量的唤雷者",
+          "npc": 134599,
+          "portrait": 83779,
+          "src": [
+            "mdt:134599",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1291262,
+              "name": "闪电箭",
+              "type": "kick",
+              "what": "读条打一个人",
+              "src": [
+                "wowhead:1291262",
+                "mdt:134599"
+              ],
+              "num": "75",
+              "cap": "漏断一发",
+              "num_src": "diag-trash"
+            },
+            {
+              "id": 1296052,
+              "name": "灌能传导",
+              "what": "20 秒内持续掉血，结束时被闪电劈中并击晕",
+              "src": [
+                "wowhead:1296052"
+              ],
+              "num": "27",
+              "cap": "被点一次吃到的伤害",
+              "num_src": "diag-trash"
+            }
+          ]
+        },
+        {
+          "name": "静电充能",
+          "npc": 134691,
+          "portrait": 81655,
+          "src": [
+            "mdt:134691",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 264763,
+              "name": "火花步",
+              "what": "闪现到一个人身边，5 码内的人都吃伤害",
+              "src": [
+                "wowhead:264763",
+                "mdt:134691"
+              ],
+              "num": "33",
+              "cap": "每次",
+              "num_src": "diag-trash"
+            }
+          ]
+        }
+      ],
+      "quiet": {
+        "text": "火花引导者没有要处理的技能。",
+        "src": [
+          "trash-route"
+        ]
+      }
+    },
+    {
+      "id": "t3",
+      "title": "老 3 → 老 4",
+      "summary": "要搬球过走廊。",
+      "summary_em": "最疼的是宝珠守望者的蚀骨践踏，10 秒持续掉血，驱散不掉。",
+      "src": [
+        "ret-guide:L69",
+        "ret-guide:L71",
+        "ret-guide:L73",
+        "trash-route"
+      ],
+      "mobs": [
+        {
+          "name": "宝珠守望者",
+          "npc": 135007,
+          "portrait": 84503,
+          "src": [
+            "mdt:135007",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 1303486,
+              "name": "蚀骨践踏",
+              "lethal": true,
+              "what": "猛踏地面，60 码内所有人吃一下，之后 10 秒持续掉血",
+              "src": [
+                "wowhead:1303486"
+              ],
+              "num": "228",
+              "cap": "10 秒的总伤害",
+              "num_src": "diag-trash"
+            }
+          ]
+        },
+        {
+          "name": "不羁的火花",
+          "npc": 139108,
+          "portrait": 51418,
+          "src": [
+            "mdt:139108",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 267483,
+              "name": "不羁的火花",
+              "lethal": true,
+              "what": "撞到人就打一下，并昏迷 6 秒",
+              "src": [
+                "wowhead:267483",
+                "mdt:139108"
+              ],
+              "num": "93",
+              "cap": "被撞到一次",
+              "num_src": "diag-trash",
+              "all": {
+                "text": "**离火花远一点。**15 场里有一次惩戒骑在走廊被它一下打死。",
+                "src": [
+                  "ret-guide:L73",
+                  "diag-trash"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "扭曲的妖术师",
+          "npc": 136250,
+          "portrait": 84676,
+          "src": [
+            "mdt:136250",
+            "trash-route"
+          ],
+          "skills": [
+            {
+              "id": 268013,
+              "name": "烈焰震击",
+              "type": "kick",
+              "what": "读条烧一个人，之后 8 秒持续掉血",
+              "src": [
+                "wowhead:268013",
+                "mdt:136250"
+              ]
+            }
+          ]
+        }
+      ],
+      "quiet": {
+        "text": "无信援兵没有要处理的技能；无信折磨者的锁定见老 4。",
+        "src": [
+          "trash-route",
+          "mdt:268317"
+        ]
+      }
+    }
+  ]
+}
