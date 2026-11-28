@@ -238,3 +238,34 @@ MDT.dungeonEnemies[dungeonIndex] = {
         self.assertIn('| 可打断；驱散：中毒；吃控：晕（MDT） |', text)
         self.assertIn('| 不可打断；不吃硬控（MDT） |', text)
         self.assertIn('| MDT 无此技能 |', text)
+
+
+class MdtLogConflictTests(unittest.TestCase):
+    from collections import Counter as _C
+    TABLE = {1: {'interruptible': True, 'dispel': set(), 'cc': {'Stun'}},
+             2: {'interruptible': False, 'dispel': set(), 'cc': None}}
+
+    def logs(self, casts=0, begins=0, kicked=0, sid=1):
+        C = self._C
+        return {'casts': C({sid: casts}), 'begins': C({sid: begins}), 'kicked': C({sid: kicked}), 'n': 15}
+
+    def test_log_overrides_mdt_interruptible(self):
+        cell = cc.mdt_cell(self.TABLE, '1', self.logs(casts=354))
+        self.assertTrue(cell.startswith('不可打断'))
+        self.assertIn('以日志为准：354 次施放、0 次读条、0 次被打断', cell)
+
+    def test_too_few_casts_keeps_mdt(self):
+        self.assertTrue(cc.mdt_cell(self.TABLE, '1', self.logs(casts=5)).startswith('可打断'))
+
+    def test_channel_that_got_kicked_keeps_interruptible(self):
+        cell = cc.mdt_cell(self.TABLE, '1', self.logs(casts=40, kicked=3))
+        self.assertTrue(cell.startswith('可打断'))
+
+    def test_log_kicks_override_mdt_uninterruptible(self):
+        cell = cc.mdt_cell(self.TABLE, '2', self.logs(kicked=4, sid=2))
+        self.assertTrue(cell.startswith('可打断'))
+        self.assertIn('MDT 标不可打断', cell)
+
+    def test_missing_in_mdt_but_kicked(self):
+        self.assertEqual(cc.mdt_cell(self.TABLE, '9', self.logs(kicked=2, sid=9)),
+                         '可打断（日志：被打断 2 次；MDT 无此技能）')

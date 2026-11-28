@@ -517,17 +517,58 @@ def load_mdt(path):
     return mdt.by_spell(mdt.parse(Path(path)))
 
 
-def mdt_cell(table, ids):
-    if table is None:
+LOG_MIN_CASTS = 20   # 至少这么多次施放才敢用"0 读条 0 打断"推翻 MDT 的可打断
+
+
+def log_interrupt_stats(src):
+    """从样本日志统计每个敌方技能：施放次数、读条次数、被友方打断次数。只走 diag 的整场查询（命中缓存）。"""
+    import diag  # noqa: E402（同目录）
+    from collections import Counter
+    client = diag.Client(api_version='auto', refresh=False)
+    _meta, samples = diag.load_samples(Path(src) / 'runs.json')
+    casts, begins, kicked = Counter(), Counter(), Counter()
+    for smp in samples:
+        run = diag.load_run(client, f"{smp.code}#fight={smp.fid}")
+        for e in diag.full_events(run, 'Casts', hostility='Enemies'):
+            sid = e.get('abilityGameID')
+            if e.get('type') == 'cast':
+                casts[sid] += 1
+            elif e.get('type') == 'begincast':
+                begins[sid] += 1
+        for e in diag.full_events(run, 'Interrupts'):
+            kicked[e.get('extraAbilityGameID')] += 1
+    return {'casts': casts, 'begins': begins, 'kicked': kicked, 'n': len(samples)}
+
+
+def mdt_cell(table, ids, logs=None):
+    """MDT 标记 + 日志核对；冲突时以日志为准，并写明证据。"""
+    id_list = [int(i) for i in ids.split('/')]
+    hits = [table[i] for i in id_list if i in table] if table is not None else []
+    n_cast = n_begin = n_kick = 0
+    if logs:
+        n_cast = sum(logs['casts'][i] for i in id_list)
+        n_begin = sum(logs['begins'][i] for i in id_list)
+        n_kick = sum(logs['kicked'][i] for i in id_list)
+    if table is None and not logs:
         return '<待补>'
-    hits = [table[int(i)] for i in ids.split('/') if int(i) in table]
     if not hits:
+        if n_kick:
+            return f'可打断（日志：被打断 {n_kick} 次；MDT 无此技能）'
         return 'MDT 无此技能'
     merged = {'interruptible': any(h['interruptible'] for h in hits),
               'dispel': set().union(*[h['dispel'] for h in hits]),
               'cc': None if all(h['cc'] is None for h in hits)
               else set().union(*[h['cc'] for h in hits if h['cc'] is not None])}
-    return mdt_note(merged) + '（MDT）'
+    note = mdt_note(merged) + '（MDT）'
+    if logs and merged['interruptible'] and n_kick == 0 and n_begin == 0 and n_cast + n_begin >= LOG_MIN_CASTS:
+        note = note.replace('可打断', '不可打断', 1)
+        note += f'；以日志为准：{n_cast} 次施放、0 次读条、0 次被打断，MDT 标可打断'
+    elif logs and not merged['interruptible'] and n_kick:
+        note = note.replace('不可打断', '可打断', 1)
+        note += f'；以日志为准：被打断 {n_kick} 次，MDT 标不可打断'
+    elif logs and n_kick:
+        note += f'；日志被打断 {n_kick} 次'
+    return note
 
 
 def cmd_mechanics(args):
@@ -540,6 +581,12 @@ def cmd_mechanics(args):
     out = Path(args.out) if args.out else TOOLS / 'mechanics' / f'{dungeon}.draft.md'
     mdt_path = Path(args.mdt) if args.mdt else TOOLS / 'mechanics' / f'{dungeon}.mdt.lua'
     mdt_table = load_mdt(mdt_path) if mdt_path.is_file() else None
+    logs = None
+    if not args.no_log and (src / 'runs.json').is_file():
+        try:
+            logs = log_interrupt_stats(src)
+        except Exception as exc:  # 联网失败也能出草稿，只是不做日志核对
+            print(f'WARN 日志核对跳过：{exc}', file=sys.stderr)
     if out.exists() and not args.force:
         print(f'FAIL {rel(out)} 已存在，加 --force 覆盖', file=sys.stderr)
         return 1
@@ -552,7 +599,7 @@ def cmd_mechanics(args):
         f'> 由 `check_claims.py mechanics` 从 `{rel(src)}/diag/` 的「① 机制速览」自动抽取，样本 {n_runs} 场。',
         '> 只有日志能统计出来的部分：技能、ID、施放者、目标形态、周期、伤害绝对值、命中/躲避次数。',
         '> 伤害是样本专精承受的数值，换专精会有出入；已去掉占本专精血量的百分比。',
-        '> 「打断 / 驱散 / 吃控」来自 MDT 快照 `<dungeon>.mdt.lua`：MDT 没数据 ≠ 免控；与日志冲突时以日志为准。',
+        '> 「打断 / 驱散 / 吃控」来自 MDT 快照 `<dungeon>.mdt.lua`，并用样本日志核对能否打断：冲突时以日志为准，格内写明证据。MDT 没数据 ≠ 免控。',
         '> 「<待补>」处（流程、场地、走位）日志看不出来，由用户补。',
         '> 用户确认后改名为 `<dungeon>.md`，删掉本段，并写变更记录。', '',
     ]
@@ -574,7 +621,7 @@ def cmd_mechanics(args):
                     continue
                 g = m.groupdict()
                 lines.append(f"| {g['mob']} | {g['skill']} | {g['ids']} | {g['kind']} | {neutral_damage(g['dmg'])} "
-                             f"| {g['hit']} / {g['imm']} / {g['miss']} | {g['cov']}/{g['n']} | {mdt_cell(mdt_table, g['ids'])} |")
+                             f"| {g['hit']} / {g['imm']} / {g['miss']} | {g['cov']}/{g['n']} | {mdt_cell(mdt_table, g['ids'], logs)} |")
         else:
             title = boss_title(text, name)
             lines += [f'## 老 {name[-1]}：{title}', '', '- 流程 / 阶段 / 场地 / 走位：<待补>', '',
@@ -588,7 +635,7 @@ def cmd_mechanics(args):
                 g = m.groupdict()
                 skill = re.sub(r'^\[小怪:[^\]]+\]\s*', '', g['name'])
                 lines.append(f"| {skill} | {g['caster']} | {g['ids']} | {g['shape'].strip()} | {g['period'].strip()} "
-                             f"| {neutral_damage(g['dmg'])} | {g['waves']} / {g['hit']} / {g['imm']} / {g['miss']} | {mdt_cell(mdt_table, g['ids'])} |")
+                             f"| {neutral_damage(g['dmg'])} | {g['waves']} / {g['hit']} / {g['imm']} / {g['miss']} | {mdt_cell(mdt_table, g['ids'], logs)} |")
         lines.append('')
     lines += ['## 变更记录', '', '- <日期> 由 check_claims.py mechanics 生成草稿。']
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -640,6 +687,7 @@ def main(argv=None):
     p = common(sub.add_parser('mechanics', help='从 diag ① 抽副本机制卡骨架'))
     p.add_argument('--out', help='输出路径，默认 guides/tools/mechanics/<dungeon>.draft.md')
     p.add_argument('--force', action='store_true', help='覆盖已存在的输出')
+    p.add_argument('--no-log', action='store_true', help='不用样本日志核对 MDT（离线时用）')
     p.add_argument('--mdt', help='MDT 快照，默认 guides/tools/mechanics/<dungeon>.mdt.lua（不存在就留 <待补>）')
 
     args = ap.parse_args(argv)
