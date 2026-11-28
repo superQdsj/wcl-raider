@@ -6,6 +6,7 @@
   inspect  跑一次 diag.py inspect 并落盘到 <src>/diag/inspect-*.txt，同时打印到 stdout
   check    逐条 PASS/FAIL 核对 boss1-4.md、trash.md（以及 claims.json），有 FAIL 则退出码 1
   merge    把 boss1-4.md + trash.md 拼成 guide.md（不经模型改写）
+  mechanics  从 diag/*.txt 的「① 机制速览」抽出副本机制卡骨架（新副本的阶段 0 用）
 
 典型用法：
   python3 guides/tools/check_claims.py dump    guides/hunter-bm/sources/saitalisi-v3
@@ -452,6 +453,112 @@ def cmd_merge(args):
 
 # ---------------------------------------------------------------- main
 
+# ---------------------------------------------------------------------------
+# mechanics：从 diag ① 抽副本机制卡骨架（只含日志统计，去掉本专精相关的血量占比）
+
+BOSS_MECH = re.compile(
+    r'^\s*- \*\*(?P<name>.+?)\*\*（(?P<caster>.+?), ID:(?P<ids>[\d/]+)）：(?P<shape>[^|]+?)\s*\|'
+    r'\s*周期 (?P<period>[^|]+?)\s*\|\s*(?P<dmg>[^|]+?)\s*\|\s*共(?P<waves>\d+)波（中(?P<hit>\d+) / 免疫(?P<imm>\d+) / 躲避未中(?P<miss>\d+)）')
+TRASH_MECH = re.compile(
+    r'^\s*- \*\*(?P<mob>.+?) · (?P<skill>.+?)\*\*（ID:(?P<ids>[\d/]+)，(?P<kind>.+?)）：(?P<dmg>[^|]+?)\s*\|'
+    r'\s*中(?P<hit>\d+) / 免疫(?P<imm>\d+) / 未中(?P<miss>\d+)（覆盖(?P<cov>\d+)/(?P<n>\d+)场）')
+
+
+def neutral_damage(text):
+    """去掉占本专精血量的百分比，只留绝对值。"""
+    t = text.strip()
+    m = re.search(r'全队命中中位 ([\d.]+[KM]?)', t)
+    if t.startswith('本专精0掉血') and m:
+        return f'样本专精未中招；全队命中中位 {m.group(1)}'
+    if t.startswith('本专精0直接承伤'):
+        return '样本专精未直接承伤'
+    t = re.sub(r'\s*\(\d+%HP\)', '', t)
+    t = re.sub(r'\s*≈\d+%本专精HP', '', t)
+    t = t.replace('纯裸吃中位', '裸吃中位')
+    t = re.sub(r'\((\d+)跳合\)', r'（\1 跳合计）', t)
+    return t
+
+
+def section_one(text):
+    m = re.search(r'^## ①.*?$(.*?)^## ②', text, re.S | re.M)
+    return m.group(1) if m else ''
+
+
+def boss_title(text, fallback):
+    first = text.splitlines()[1] if text.startswith('$ ') else text.splitlines()[0]
+    for line in text.splitlines()[:3]:
+        if line.startswith('# '):
+            first = line
+            break
+    parts = [x.strip() for x in first.lstrip('# ').split('·')]
+    name = parts[1] if len(parts) > 1 else fallback
+    return re.sub(r'（encounter \d+）', '', name).strip()
+
+
+def cmd_mechanics(args):
+    src = Path(args.src)
+    files = load_diag(diag_dir(args))
+    if not files:
+        print(f'FAIL {rel(diag_dir(args))} 下没有 diag 输出，先跑 dump', file=sys.stderr)
+        return 1
+    dungeon = re.sub(r'-v\d+$', '', src.name)
+    out = Path(args.out) if args.out else TOOLS / 'mechanics' / f'{dungeon}.draft.md'
+    if out.exists() and not args.force:
+        print(f'FAIL {rel(out)} 已存在，加 --force 覆盖', file=sys.stderr)
+        return 1
+    try:
+        n_runs = len(load_runs(src))
+    except Exception:
+        n_runs = '?'
+    lines = [
+        f'# {dungeon} · 共享机制源（草稿，待用户确认）', '',
+        f'> 由 `check_claims.py mechanics` 从 `{rel(src)}/diag/` 的「① 机制速览」自动抽取，样本 {n_runs} 场。',
+        '> 只有日志能统计出来的部分：技能、ID、施放者、目标形态、周期、伤害绝对值、命中/躲避次数。',
+        '> 伤害是样本专精承受的数值，换专精会有出入；已去掉占本专精血量的百分比。',
+        '> 「<待补>」处（流程、场地、开门条件、几波怪、走位、能否驱散/打断）日志看不出来，由用户或 MDT 补。',
+        '> 用户确认后改名为 `<dungeon>.md`，删掉本段，并写变更记录。', '',
+    ]
+    unparsed = 0
+    for name in SECTIONS:
+        text = files.get(f'{name}.txt')
+        if text is None:
+            lines += [f'## {name}', '', '（缺少 diag 输出）', '']
+            continue
+        body = section_one(text)
+        if name == 'trash':
+            lines += ['## 全本小怪', '', '- 流程 / 几波 / 走廊与开门条件：<待补>', '',
+                      '| 怪物 | 技能 | ID | 类型 | 伤害 | 中 / 免疫 / 未中 | 出现场次 | 驱散 / 打断 |',
+                      '|---|---|---|---|---|---|---|---|']
+            for raw in body.splitlines():
+                m = TRASH_MECH.match(raw)
+                if not m:
+                    unparsed += raw.strip().startswith('- **')
+                    continue
+                g = m.groupdict()
+                lines.append(f"| {g['mob']} | {g['skill']} | {g['ids']} | {g['kind']} | {neutral_damage(g['dmg'])} "
+                             f"| {g['hit']} / {g['imm']} / {g['miss']} | {g['cov']}/{g['n']} | <待补> |")
+        else:
+            title = boss_title(text, name)
+            lines += [f'## 老 {name[-1]}：{title}', '', '- 流程 / 阶段 / 场地 / 走位：<待补>', '',
+                      '| 技能 | 施放者 | ID | 目标形态 | 周期 | 伤害 | 共 / 中 / 免疫 / 躲避未中 | 驱散 / 打断 |',
+                      '|---|---|---|---|---|---|---|---|']
+            for raw in body.splitlines():
+                m = BOSS_MECH.match(raw)
+                if not m:
+                    unparsed += raw.strip().startswith('- **') or raw.strip().startswith('  - **')
+                    continue
+                g = m.groupdict()
+                skill = re.sub(r'^\[小怪:[^\]]+\]\s*', '', g['name'])
+                lines.append(f"| {skill} | {g['caster']} | {g['ids']} | {g['shape'].strip()} | {g['period'].strip()} "
+                             f"| {neutral_damage(g['dmg'])} | {g['waves']} / {g['hit']} / {g['imm']} / {g['miss']} | <待补> |")
+        lines.append('')
+    lines += ['## 变更记录', '', '- <日期> 由 check_claims.py mechanics 生成草稿。']
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    print(f'PASS 写出 {rel(out)}' + (f'（{unparsed} 行 ① 条目没能解析，请人工核对 diag 原文）' if unparsed else ''))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -491,8 +598,13 @@ def main(argv=None):
     p.add_argument('--out', help='输出路径，默认 <src>/guide.md')
     p.add_argument('--diff', action='store_true', help='只比较不写入，一致则退出码 0')
 
+    p = common(sub.add_parser('mechanics', help='从 diag ① 抽副本机制卡骨架'))
+    p.add_argument('--out', help='输出路径，默认 guides/tools/mechanics/<dungeon>.draft.md')
+    p.add_argument('--force', action='store_true', help='覆盖已存在的输出')
+
     args = ap.parse_args(argv)
-    return {'dump': cmd_dump, 'inspect': cmd_inspect, 'check': cmd_check, 'merge': cmd_merge}[args.cmd](args)
+    return {'dump': cmd_dump, 'inspect': cmd_inspect, 'check': cmd_check, 'merge': cmd_merge,
+            'mechanics': cmd_mechanics}[args.cmd](args)
 
 
 if __name__ == '__main__':
