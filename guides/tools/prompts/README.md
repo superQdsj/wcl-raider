@@ -9,6 +9,15 @@
 - 碰到 429，客户端会按 `retry-after` 等待后重试，最多等 1 小时（环境变量 `WCL_429_MAX_WAIT`）。
 - `check_claims.py dump` 默认一节一节地跑，**不要加大 `--jobs`**。diag 内部同时拉 2 场（环境变量 `WCL_FETCH_WORKERS`）。
 - 多个专精一起做时，抓数要排队一个一个来。写稿和审判不发请求，可以同时开多个会话。
+- 只有阶段 1 会联网。已经结束的报告缓存 30 天，阶段 2–5 的 `inspect` 隔多久跑都走缓存。
+
+## 要不要开 worktree
+
+- **做攻略内容（新专精、新副本）**：不用，留在 `t3/dps-guide-v3`。每个专精只写自己的目录和 `classes/<spec>.json`，互不冲突。
+  - 提交时只 `git add` 自己的路径，不要用 `git add -A`。
+  - 两个会话同时提交时，可能报 `index.lock` 已存在，等几秒重试即可。
+- **改工具代码（`diag.py`、`check_claims.py`、`wclr/`）**：要开 worktree，验证通过后再合并，避免影响正在跑的会话。
+- 缓存（`~/.cache/wcl-raider`）所有 worktree 共用。
 
 ## 四种情况
 
