@@ -13,15 +13,24 @@
 
 1. 抽样：`python3 guides/tools/diag.py sample --dungeon <副本名> --class <专精中文名> --levels 24,23,22,21 --want 15 --out $S/runs.json`
    验收：12–15 场、报告和玩家都不重复。不足 12 场就停下来告诉用户。
-2. 配置：按 `guides/tools/classes/paladin-ret.json` 的字段升级或新建 `$C`（`defensives` 的 `tier: normal|major`、`cd`、`dur`、`cleanse_immune`、`blocked_by_debuff`；`utilities`）。技能 ID 只从日志取，不凭记忆。
+2. 配置：
+   - `$C` 已经是 v3 格式（`defensives` 带 `tier`）：**沿用**，不重建。职业卡和副本无关，换副本只核对差异。
+   - 否则按 `guides/tools/classes/paladin-ret.json` 的字段升级或新建 `$C`（`defensives` 的 `tier: normal|major`、`cd`、`dur`、`cleanse_immune`、`blocked_by_debuff`；`utilities`）。技能 ID 只从日志取，不凭记忆。
 3. 落盘：`CK dump $S --wowhead`（并行跑 boss 1–4 和 trash，写到 `$S/diag/*.txt`，每份首行是命令原文）。之后一律不带 `--wowhead`。
 4. 写 `$S/calibration.md`（不超过 40 行），从 `diag/*.txt` 的「② 手牌预算账」逐项抄：
    - 常规减伤和大牌各是哪些技能，「分母口径」一行原文；
    - 施法 ID 和 Buff ID 不同的技能、被动护盾、锁牌 Debuff、宠物施法；
    - 0 施放的技能（必须列出，没有就写"无"）；
-   - 疑点（例如 ④ 死亡数和玩家名对不上）。
-5. **⏸ 人工确认点**：把 calibration.md 发给用户，得到确认后才进入阶段 2。用户要求改配置时，改完重跑第 3 步。
-   确认后 commit：`runs.json`、`$C`、`diag/`、`calibration.md`。
+   - 疑点；
+   - `$C` 是沿用的：只写和该专精上一个副本 `calibration.md` 的差异（新出现的施放、新的 0 施放、新需要驱散或免疫的 Debuff），没有差异就写"无"。
+5. 机制卡（**只在 `guides/tools/mechanics/<dungeon>.md` 不存在时做**，即这个副本的第一个专精）：
+   - `CK mechanics $S` → 生成 `guides/tools/mechanics/<dungeon>.draft.md`：从 diag「① 机制速览」抽出的技能、ID、施放者、目标形态、周期、伤害绝对值、命中/躲避次数。
+   - 协调者只能补 Wowhead 说明里写明的内容（伤害属性、可否驱散），并注明来源；流程、场地、开门条件、几波怪、走位留「<待补>」，**不猜**。
+   - 同时写一份 `<dungeon>.banned.txt`（可以为空，只有注释行）。
+6. **⏸ 人工确认点**：把 calibration.md（以及第 5 步的机制卡草稿）发给用户，得到确认后才进入阶段 2。
+   - 用户要求改配置时，改完重跑第 3 步。
+   - 用户补完并确认机制卡后，草稿改名为 `<dungeon>.md`，删掉草稿说明段，写变更记录。
+   确认后 commit：`runs.json`、`$C`、`diag/`、`calibration.md`，以及机制卡（如有）。
 
 ## 阶段 2　写稿（一个写手，顺序 boss1 → boss2 → boss3 → boss4 → trash，可用便宜模型）
 
@@ -35,7 +44,7 @@
 3. 按格式卡写 `$S/<节>.md`，同时往 `$S/claims.json` 加这一节的条目（结构见下）。
 4. 写完跑 `CK check $S --allow-no-claims --quiet`，确认这一节没有 FAIL 再写下一节。
 
-机制文字（场地、点名、走位、几波怪）只能来自 `guides/tools/mechanics/<dungeon>.md`、MDT、Wowhead、diag「① 机制速览」或用户，不能抄其他专精的稿子，也不能猜。写手只写本专精的应对。
+机制文字（场地、点名、走位、几波怪）只能来自 `guides/tools/mechanics/<dungeon>.md`、MDT、Wowhead、diag「① 机制速览」或用户，不能抄其他专精的稿子，也不能猜。写手只写本专精的应对。发现卡上没有的机制：不写进稿子，记进 calibration.md 的「机制待补」，由协调者交用户确认后补进机制卡。
 
 发现配置错误（漏了技能 ID、tier 分错、施法 ID 和 Buff ID 混了）：停笔，把问题写进 calibration.md 的「待修」，交回协调者。协调者改 `$C` → 重跑 `CK dump` → 已写的节重新 check。写手自己不改 `$C`、`runs.json`、`diag.py`。
 
@@ -75,7 +84,6 @@
 - 「不交」的分母有没有混进起手血线不到 80% 的样本；
 - 减伤持续时间盖不盖得住 DoT 全程（尾跳风险）；
 - 免疫 / 清除三种情况有没有分清；
-- 死亡归属：diag ④ 可能把队友的死亡算进来，要按 inspect 的 `hit(死)` 和玩家名核对；
 - 机制文字有没有来源。
 
 退出条件：写手按 review.md 修改 → 重跑阶段 3 → 审判官**只复审被打回的条目**。最多 2 轮。之后仍有争议的条目，在 md 里该条口诀的标签前加【待定】，在 review.md 里列明双方证据，交用户决定。
