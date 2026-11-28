@@ -50,7 +50,7 @@ b{font-weight:700}
 .kit{display:flex;flex-wrap:wrap;gap:6px 22px;padding-block:10px 22px;color:var(--muted);font-size:13.5px}
 .kit span{display:flex;align-items:center;gap:7px}
 .kit b{color:var(--fg);font-weight:600}
-.kit .warn b{color:var(--ember)}
+.kit .warn b{color:var(--gold)}
 
 /* ---------- route ---------- */
 .route{position:sticky;top:0;z-index:5;background:rgba(33,29,40,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -115,6 +115,7 @@ b{font-weight:700}
 .t-calm{background:var(--bg-3);color:var(--muted)}
 .t-cast{background:rgba(170,140,255,.30);color:var(--fg)}
 .t-hot{background:rgba(239,90,79,.40);color:var(--fg)}
+.bar-key{display:none}
 .ticks{position:relative;height:18px;margin-top:4px;font-size:12px;color:var(--faint)}
 .ticks span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
 .ticks span.l{transform:none}
@@ -189,6 +190,8 @@ details.src ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:col
 .route li.gap.has{flex:1 0 56px;min-width:56px}
 .route .tdot{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:1px 8px;border-radius:999px;background:var(--bg-3);border:1px solid var(--faint);font-size:11.5px;color:var(--muted);line-height:1.5;white-space:nowrap}
 .route .tdot[aria-current="true"]{border-color:var(--jade);color:var(--fg)}
+.route .tdot em{font-style:normal;color:var(--faint)}
+.route .lbl-m{display:none}
 .trash-head h2{font:900 clamp(26px,4vw,34px)/1.2 var(--serif);margin:2px 0 8px;letter-spacing:.03em}
 .trash-head .sum{margin:0;max-width:40em;font-size:16px}
 .trash-head .sum em{font-style:normal;color:var(--jade)}
@@ -223,7 +226,12 @@ details.src ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:col
 .mskill{display:flex;flex-direction:column;gap:12px}
 .mskill+.mskill{border-top:1px solid var(--line);padding-top:14px}
 .mrow{display:grid;grid-template-columns:32px minmax(0,1fr) auto;column-gap:12px;row-gap:3px;align-items:baseline}
-.mrow .ic{width:32px;height:32px;border-radius:6px;grid-row:span 2;align-self:start}
+.mrow .ic{width:32px;height:32px;border-radius:6px;grid-column:1;grid-row:1/3;align-self:start}
+.mrow .mname{grid-column:2;grid-row:1}
+.mrow .mnum{grid-column:3;grid-row:1}
+.mrow .mmeta{grid-column:2;grid-row:2}
+.mrow .mcap{grid-column:3;grid-row:2}
+.mrow.nonum .mname,.mrow.nonum .mmeta{grid-column:2/-1}
 .mname{font-size:15.5px;font-weight:700}
 .mnum{font:900 22px/1 var(--serif);white-space:nowrap;text-align:right}
 .mnum i{font-style:normal;font-size:12px;font-weight:600;margin-left:2px;color:var(--muted)}
@@ -271,25 +279,55 @@ button.face{padding:0;border:0;font:inherit;color:inherit;cursor:help;position:r
 [data-spec="dh"] [data-for]:not([data-for="dh"]),
 [data-spec="bm"] [data-for]:not([data-for="bm"]){display:none!important}
 
+/* ---------- talents ---------- */
+.tstring{display:flex;gap:8px;margin-top:22px;max-width:720px}
+.tstring input{flex:1;min-width:0;height:44px;padding:0 14px;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);
+  color:var(--muted);font:13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;text-overflow:ellipsis}
+.tstring input:focus{color:var(--fg);border-color:color-mix(in srgb,var(--spec) 60%,transparent);outline:0}
+.tstring .copy{flex:none;height:44px;padding:0 20px;border-radius:8px;border:1px solid color-mix(in srgb,var(--spec) 50%,transparent);
+  background:color-mix(in srgb,var(--spec) 16%,var(--bg-2));color:var(--fg);font:600 14px/1 var(--sans);cursor:pointer}
+.tstring .copy:hover{background:color-mix(in srgb,var(--spec) 26%,var(--bg-2))}
+.tstring .copy.ok{border-color:var(--jade);color:var(--jade)}
+.tals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.tal{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line)}
+.tal b{display:block;font-size:16px;line-height:1.4}
+.tal p{margin:4px 0 0;font-size:14px;line-height:1.6}
+.tal .where{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tal .where a{font-size:12px;line-height:1.6;padding:1px 9px;border-radius:999px;background:var(--bg-3);color:var(--muted);text-decoration:none}
+.tal .where a:hover{color:var(--jade)}
+
 @media (max-width:760px){
   .head{grid-template-columns:120px minmax(0,1fr);gap:16px}
   .head .sum{font-size:15px}
   .plan{grid-template-columns:1fr}
   .slot{flex-direction:row;align-items:center;gap:14px;padding:14px 16px}
   .slot+.slot{border-left:0;border-top:1px solid color-mix(in srgb,var(--spec) 16%,transparent)}
-  .slot .icons{flex:none;width:118px}
+  .slot .icons{flex:none;width:132px;gap:8px}
+  .slot .duo .big+.big{margin-left:-18px}
+  .slot .to{width:16px}
   .slot .big{width:44px;height:44px}
   .slot .tgt{width:30px;height:30px}
   .steps{grid-template-columns:1fr!important;gap:0}
   .step,.steps .step.first{padding:22px 0 0;border-left:0}
   .step+.step{border-top:1px solid var(--line);margin-top:22px}
   .ticks span:not(.l):not(.r){display:none}
+  .bar{height:14px}
   .bar .seg span{font-size:0;padding:0}
-  .bar .seg:first-child span:first-child{font-size:12px;padding:0 8px}
+  .bar-key{display:flex;flex-wrap:wrap;gap:4px 14px;list-style:none;margin:6px 0 0;padding:0;font-size:12.5px;color:var(--muted)}
+  .bar-key li{display:flex;align-items:center;gap:6px}
+  .bar-key i{width:10px;height:10px;border-radius:3px;flex:none}
   .trick,.donts{grid-template-columns:1fr}
   .mobs{grid-template-columns:1fr}
   .mt-r{grid-template-columns:7.5em minmax(0,1fr)}
   .route .lbl{display:none}
-  .route a[aria-current="true"] .lbl{display:inline}
+  .route .lbl-m{display:inline;font-size:12px}
+  .route a{gap:5px;padding:2px 4px}
+  .route .face{width:30px;height:30px}
+  .route li.gap{flex-basis:14px;min-width:14px}
+  .route li.gap.has{flex:1 0 44px;min-width:44px}
+  .route .tdot{padding:1px 6px}
+  .route .tdot em{display:none}
+  .route ol{-webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);mask-image:linear-gradient(90deg,#000 90%,transparent)}
+  .tals{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}

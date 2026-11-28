@@ -421,7 +421,7 @@
           "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6667729&end=6673729"
         },
         {
-          "text": "钻地之震叠电池，剩 10% 血",
+          "text": "钻地之震叠雷池，剩 10% 血",
           "label": "r14 3:19.7",
           "url": "https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=16338238&end=16344238"
         },
@@ -878,7 +878,7 @@
           ],
           "cross": true,
           "title": "别多领腐化",
-          "text": "15 场里惩戒骑仅有的两次死亡，都是叠了 2–3 层腐化。",
+          "text": "叠到 2–3 层腐化就会死，只领自己那 1 层。",
           "src": [
             "ret-guide:L59"
           ]

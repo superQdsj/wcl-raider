@@ -361,12 +361,28 @@ def render_bar(loop: dict) -> str:
             inner = f'<span class="t-{tone}" style="flex:1">{html.escape(s["label"])}</span>'
         segs.append(f'<div class="seg" style="flex:{s["w"]} 1 0">{inner}</div>')
     total = sum(s["w"] for s in loop["segments"])
-    return f'<div class="bar" aria-hidden="true">{"".join(segs)}</div>' + ticks(loop.get("ticks", []), total)
+    # Phones hide the labels inside narrow segments, so the same labels are listed under the bar there.
+    keys = []
+    for s in loop["segments"]:
+        keys.append((s.get("tone", "mech"), s["label"]))
+        if sp := s.get("split"):
+            keys.append((sp.get("tone", "cast"), sp["label"]))
+    key = "".join(f'<li><i class="t-{tone}"></i>{html.escape(lb)}</li>' for tone, lb in keys if lb)
+    return (f'<div class="bar" aria-hidden="true">{"".join(segs)}</div>' + ticks(loop.get("ticks", []), total)
+            + f'<ol class="bar-key">{key}</ol>')
+
+
+KIND_ORDER = {"do": 0, "plain": 1, "skip": 2}
+
+
+def by_kind(items: list[dict]) -> list[dict]:
+    """What to press first, then notes, then the greyed-out "不用开" rows (stable within each group)."""
+    return sorted(items, key=lambda it: KIND_ORDER.get(it.get("kind", "do"), 1))
 
 
 def render_mine(sid: str, items: list[dict]) -> str:
     rows = []
-    for it in items:
+    for it in by_kind(items):
         kind = it.get("kind", "do")
         icon = ic(it["icon"], "ic sm", dim=(kind == "skip")) if it.get("icon") else '<span class="dot"></span>'
         label = f'<b>{html.escape(it["label"])}</b>：' if it.get("label") else ""
@@ -402,7 +418,7 @@ def xref(s: str, refs: dict, skip: str = "") -> str:
 def render_mine_table(sid: str, items: list[dict], refs: dict | None = None, skip: str = "") -> str:
     tx = (lambda s: xref(s, refs, skip)) if refs else t
     rows = []
-    for it in items:
+    for it in by_kind(items):
         kind = it.get("kind", "do")
         icon = ic(it["icon"], "ic sm", dim=(kind == "skip")) if it.get("icon") else ""
         if it.get("label"):
@@ -551,19 +567,19 @@ def render_mob(m: dict, specs, tid: str, idx: int, refs: dict) -> str:
             extra += f'<div class="all">{xref(al["text"], refs, a["name"])}</div>'
         rows.append(
             f'<div class="mskill{" hot" if a.get("lethal") else ""}">'
-            f'<div class="mrow">{ic(a["id"], "ic sm")}<b class="mname">{html.escape(a["name"])}{skull}</b>{num}'
+            f'<div class="mrow{"" if a.get("num") else " nonum"}">{ic(a["id"], "ic sm")}<b class="mname">{html.escape(a["name"])}{skull}</b>{num}'
             f'<p class="mmeta">{t(a["what"])}{chip}{school_tags(a["id"])}</p>{cap}</div>{extra}{mine}</div>')
     return (f'<article class="mob" id="{tid}-m{idx}"><div class="mob-head">{zoom_face(m["portrait"], m["name"])}'
             f'<h3>{html.escape(m["name"])}</h3></div>{"".join(rows)}</article>')
 
 
-def render_trash(tr: dict, d: dict, specs) -> str:
+def render_trash(tr: dict, d: dict, specs, legend: bool = True) -> str:
     parts = [f'<section class="boss trash" id="{tr["id"]}"><div class="trash-head"><p class="kicker">小怪</p>'
              f'<h2>{html.escape(tr["title"])}</h2><p class="sum">{t(tr["summary"])}<em>{t(tr.get("summary_em", ""))}</em></p></div>']
     for sp in specs:
         if plan := sp.get("trash", {}).get(tr["id"], {}).get("plan"):
             parts.append(render_plan(sp["spec"], plan))
-    if lg := d.get("trash_legend"):
+    if legend and (lg := d.get("trash_legend")):
         parts.append(f'<p class="legend"><span class="chip k-kick">打断</span><span class="chip k-bar">钢条</span><span class="chip k-stop">免控</span>{t(lg["text"])}</p>')
     parts.append('<div class="mobs">' + "".join(render_mob(m, specs, tr["id"], i, mob_refs(d, tr["id"])) for i, m in enumerate(tr["mobs"])) + "</div>")
     if sn := tr.get("seen"):
@@ -664,6 +680,16 @@ def tip_data(page: str, d: dict, ddir: Path) -> dict:
     return tips
 
 
+def trash_tag(title: str) -> str:
+    """Short route label for a trash section: 「老 1 之前」→「1 前」，「老 1 → 老 2」→「1→2」."""
+    n = re.findall(r"\d+", title)
+    if len(n) == 2:
+        return f"{n[0]}→{n[1]}"
+    if len(n) == 1 and "前" in title:
+        return f"{n[0]} 前"
+    return title
+
+
 def render_page(d: dict, specs: list[dict], css: str) -> str:
     have = {s["spec"]: s for s in specs}
     banner = ensure_copy(ROOT / d["banner"], f"dungeon-{Path(d['banner']).name}")
@@ -683,18 +709,23 @@ def render_page(d: dict, specs: list[dict], css: str) -> str:
     tmap = {x["id"]: x for x in d.get("trash", [])}
     route = d.get("route") or list(bmap)
     nav, sections = [], []
+    first_trash, nboss = True, 0
     for i, rid in enumerate(route):
         if rid in tmap:
-            nav.append(f'<li class="gap has"><a class="tdot" href="#{rid}" aria-label="{html.escape(tmap[rid]["title"])}小怪"><span>小怪</span></a></li>')
-            sections.append(render_trash(tmap[rid], d, specs))
+            nav.append(f'<li class="gap has"><a class="tdot" href="#{rid}" aria-label="{html.escape(tmap[rid]["title"])}小怪">'
+                       f'<span><em>小怪 </em>{html.escape(trash_tag(tmap[rid]["title"]))}</span></a></li>')
+            sections.append(render_trash(tmap[rid], d, specs, legend=first_trash))
+            first_trash = False
             continue
         b = bmap[rid]
+        nboss += 1
         if i and route[i - 1] not in tmap:
             nav.append('<li class="gap" aria-hidden="true"></li>')
         faces = "".join(f'<span class="face"><img src="{npc(p)}" alt=""></span>' for p in b["portraits"])
         if len(b["portraits"]) > 1:
             faces = f'<span class="pair">{faces}</span>'
-        nav.append(f'<li><a href="#{b["id"]}">{faces}<span class="lbl">{html.escape(b["short"])}</span></a></li>')
+        nav.append(f'<li><a href="#{b["id"]}" aria-label="{html.escape(b["short"])}">{faces}<span class="lbl">{html.escape(b["short"])}</span>'
+                   f'<span class="lbl-m">老 {nboss}</span></a></li>')
         sections.append(render_boss(b, specs))
     titles = {x["id"]: x["title"] for x in tmap.values()} | {x["id"]: x["short"] for x in bmap.values()}
     for sp in specs:
@@ -810,9 +841,26 @@ JS = """
     document.addEventListener('click',zhide);
     window.addEventListener('scroll',zhide,{passive:true});
   }
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var inp=document.getElementById(b.dataset.copy), label=b.textContent;
+      function done(t){b.textContent=t; b.classList.add('ok'); setTimeout(function(){b.textContent=label; b.classList.remove('ok');},1600);}
+      function fallback(){inp.focus(); inp.select(); var ok=false; try{ok=document.execCommand('copy');}catch(e){} done(ok?'已复制':'已选中，请手动复制');}
+      if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(inp.value).then(function(){done('已复制');},fallback);}
+      else{fallback();}
+    });
+  });
+  var routeOl=document.querySelector('.route ol');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
-      if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].setAttribute('aria-current',String(k===e.target.id));});}
+      if(e.isIntersecting){
+        Object.keys(links).forEach(function(k){links[k].setAttribute('aria-current',String(k===e.target.id));});
+        var a=links[e.target.id];
+        if(a&&routeOl&&routeOl.scrollWidth>routeOl.clientWidth){
+          var r=a.getBoundingClientRect(), o=routeOl.getBoundingClientRect();
+          routeOl.scrollBy({left:r.left+r.width/2-(o.left+o.width/2),behavior:'smooth'});
+        }
+      }
     });},{rootMargin:'-40% 0px -55% 0px'});
     document.querySelectorAll('section.boss').forEach(function(s){io.observe(s);});
   }
