@@ -1,0 +1,21 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 2 --ability 263958 --only-hit --only-bare --limit 50
+# 双向反查明细（Boss 2）：263958（共 16 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r08@0:17.0](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9663814&end=9669814) | 啊晴丶 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 187K(吸35.6K) | 100%→79% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 50.7K |
+| [r01@3:39.5](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8678502&end=8684502) | 天涯墨丶客 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 1/1 | 180K(吸202K) | 100%→81% | 纯裸吃 | 佯攻/*闪避 | 无 | 234K |
+| [r14@1:52.3](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5258468&end=5264468) | 风为为 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 143K(吸90.9K) | 100%→84% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 234K |
+| [r07@3:25.4](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=2159005&end=2165005) | 驱夜断愁 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 101K(吸79.0K) | 100%→89% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 91.9K |
+| [r06@1:55.1](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3725669&end=3731669) | 阿鼠 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 95.6K(吸116K) | 100%→89% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 146K |
+| [r07@0:17.0](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1970645&end=1976645) | 驱夜断愁 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 88.4K(吸136K) | 100%→90% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 137K |
+| [r08@3:44.1](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9870931&end=9876931) | 啊晴丶 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 70.9K(吸118K) | 100%→92% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 186K |
+| [r09@0:17.1](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11493390&end=11499390) | 斗篷小王子 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 69.8K(吸122K) | 100%→92% | 纯裸吃 | 佯攻/*暗影斗篷 | 无 | 192K |
+| [r06@0:17.0](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3627621&end=3633621) | 阿鼠 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 67.8K(吸145K) | 100%→93% | 纯裸吃 | 佯攻/*闪避 | 无 | 159K |
+| [r12@0:17.0](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15398374&end=15404374) | 叮呤灵 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 60.2K(吸121K) | 100%→93% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 135K |
+| [r13@0:17.0](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1004684&end=1010684) | Paparan | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 23.0K(吸169K) | 100%→97% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 192K |
+| [r02@3:38.5](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6431444&end=6437444) | Speedamn | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 13.9K(吸170K) | 100%→98% | 纯裸吃 | 佯攻/*闪避 | 无 | 184K |
+| [r07@1:54.6](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=2068247&end=2074247) | 驱夜断愁 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 0(吸200K) | —→— | 纯裸吃 | 佯攻/*闪避 | 无 | 200K |
+| [r10@0:17.0](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13718982&end=13724982) | 弋江水 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 0(吸212K) | —→— | 纯裸吃 | 佯攻 | 无 | 212K |
+| [r10@1:57.5](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13819417&end=13825417) | 弋江水 | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 0(吸191K) | —→— | 纯裸吃 | 佯攻/*暗影斗篷 | 无 | 191K |
+| [r11@0:17.0](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=8334287&end=8340287) | Serog | [小怪:缠绕的蛇群] 缠绕的蛇群 | hit | 2/2 | 0(吸202K) | —→— | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 202K |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次

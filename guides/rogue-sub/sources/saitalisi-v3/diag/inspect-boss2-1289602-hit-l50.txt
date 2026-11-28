@@ -1,0 +1,27 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 2 --ability 1289602 --only-hit --limit 50
+# 双向反查明细（Boss 2）：1289602（共 22 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r15@3:52.4](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10773238&end=10779238) | 等一只七影蝶 | 雷霆喷吐 | hit | 2/2 | 1.01M(吸432K) | —→33% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.44M |
+| [r14@0:28.5](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5174690&end=5180690) | 风为为 | 雷霆喷吐 | hit | 2/2 | 1.31M(吸311K) | 100%→35% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.63M |
+| [r13@0:28.5](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1016192&end=1022192) | Paparan | 雷霆喷吐 | hit | 2/2 | 865K(吸211K) | 100%→36% | 佯攻+闪避 | *暗影斗篷 | 无 | 894K |
+| [r03@0:28.5](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1100968&end=1106968) | 叶落初冬 | 雷霆喷吐 | hit | 2/2 | 1.18M(吸630K) | —→37% | 纯裸吃 | 佯攻/*暗影斗篷 | 无 | 1.82M |
+| [r09@0:28.5](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11504886&end=11510886) | 斗篷小王子 | 雷霆喷吐 | hit | 2/2 | 1.02M(吸474K) | 100%→44% | 佯攻 | *暗影斗篷 | 无 | 1.21M |
+| [r04@3:49.6](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14193828&end=14199828) | 黑川茜贼贼 | 雷霆喷吐 | hit | 2/2 | 542K(吸148K) | —→46% | 暗影斗篷 | 佯攻/*闪避 | 无 | 690K |
+| [r13@3:45.8](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1213425&end=1219425) | Paparan | 雷霆喷吐 | hit | 2/2 | 1.12M(吸320K) | 100%→46% | 佯攻 | *闪避 | 无 | 1.44M |
+| [r06@3:45.7](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3836280&end=3842280) | 阿鼠 | 雷霆喷吐 | hit | 2/2 | 950K(吸392K) | 100%→51% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.22M |
+| [r08@2:13.4](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9780171&end=9786171) | 啊晴丶 | 雷霆喷吐 | hit | 2/2 | 1.22M(吸154K) | 100%→53% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.15M |
+| [r02@0:28.5](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6241474&end=6247474) | Speedamn | 雷霆喷吐 | hit | 2/2 | 1.28M(吸330K) | 100%→54% | 纯裸吃 | 佯攻/*闪避 | 无 | 1.44M |
+| [r11@3:57.7](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=8554907&end=8560907) | Serog | 雷霆喷吐 | hit | 2/2 | 1.53M(吸131K) | 100%→57% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.40M |
+| [r12@0:28.5](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15409884&end=15415884) | 叮呤灵 | 雷霆喷吐 | hit | 2/2 | 1.13M(吸274K) | 100%→62% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.40M |
+| [r02@3:50.0](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6442964&end=6448964) | Speedamn | 雷霆喷吐 | hit | 2/2 | 900K(吸355K) | 100%→63% | 佯攻 | *闪避 | 无 | 1.08M |
+| [r01@3:51.0](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8690036&end=8696036) | 天涯墨丶客 | 雷霆喷吐 | hit | 2/2 | 1.12M(吸388K) | 100%→66% | 佯攻 | *闪避 | 无 | 1.24M |
+| [r11@0:28.5](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=8345790&end=8351790) | Serog | 雷霆喷吐 | hit | 2/2 | 882K(吸611K) | —→68% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.39M |
+| [r02@2:07.8](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6340726&end=6346726) | Speedamn | 雷霆喷吐 | hit | 2/2 | 923K(吸685K) | 100%→68% | 纯裸吃 | 佯攻/*闪避 | 无 | 1.61M |
+| [r12@3:51.6](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15612925&end=15618925) | 叮呤灵 | 雷霆喷吐 | hit | 2/2 | 544K(吸242K) | 100%→69% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 519K |
+| [r10@0:28.5](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13730487&end=13736487) | 弋江水 | 雷霆喷吐 | hit | 2/2 | 438K(吸628K) | —→77% | 佯攻+闪避 | 全CD | 无 | 1.01M |
+| [r15@2:08.4](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10669281&end=10675281) | 等一只七影蝶 | 雷霆喷吐 | hit | 2/2 | 85.6K(吸1.30M) | —→91% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.38M |
+| [r03@2:13.1](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1205493&end=1211493) | 叶落初冬 | 雷霆喷吐 | hit | 2/2 | 57.2K(吸1.67M) | —→94% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.72M |
+| [r03@3:50.0](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1302401&end=1308401) | 叶落初冬 | 雷霆喷吐 | hit | 0/2 | 0 | —→— | 纯裸吃 | 佯攻/*闪避 | 无 | — |
+| [r09@3:56.5](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11712796&end=11718796) | 斗篷小王子 | 雷霆喷吐 | hit | 0/2 | 0 | —→— | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | — |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次

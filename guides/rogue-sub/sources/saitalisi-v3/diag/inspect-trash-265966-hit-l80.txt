@@ -1,0 +1,57 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --trash --ability 265966 --only-hit --limit 80
+# 双向反查明细（全本小怪）：265966（共 52 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r08@1:07.3](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9002435&end=9008435) | 啊晴丶 | 沙怒石拳战士 · 震地 | hit | 1/0 | 844K(吸100K) | 97%→12% | 外减:灵魂链接 | 佯攻/*暗影斗篷 | 无 | — |
+| [r04@1:15.4](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13318983&end=13324983) | 黑川茜贼贼 | 沙怒石拳战士 · 震地 | hit | 1/0 | 776K(吸48.6K) | 100%→14% | 纯裸吃 | 佯攻/*暗影斗篷 | 无 | — |
+| [r15@0:37.5](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=9861598&end=9867598) | 等一只七影蝶 | 沙怒石拳战士 · 震地 | hit | 1/0 | 527K(吸1.84K) | 85%→27% | 佯攻 | *暗影斗篷/*闪避 | 138K(蜿蜒打击) | — |
+| [r12@0:44.4](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=14707280&end=14713280) | 叮呤灵 | 沙怒石拳战士 · 震地 | hit | 1/0 | 623K(吸188K) | 100%→31% | 闪避 | 佯攻/*暗影斗篷 | 无 | — |
+| [r04@0:42.7](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13286193&end=13292193) | 黑川茜贼贼 | 沙怒石拳战士 · 震地 | hit | 1/0 | 606K(吸200K) | 100%→33% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | — |
+| [r09@1:10.2](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=10833164&end=10839164) | 斗篷小王子 | 沙怒石拳战士 · 震地 | hit | 1/0 | 547K(吸24.5K) | 87%→36% | 佯攻+外减:集结呐喊 | *暗影斗篷 | 247K(蜿蜒打击) | — |
+| [r03@0:41.2](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=405322&end=411322) | 叶落初冬 | 沙怒石拳战士 · 震地 | hit | 1/0 | 527K(吸1.35K) | 96%→38% | 佯攻 | *暗影斗篷/*闪避 | 31.9K(蜿蜒打击) | — |
+| [r14@0:47.3](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=4478813&end=4484813) | 风为为 | 沙怒石拳战士 · 震地 | hit | 1/0 | 535K(吸90.9K) | 100%→41% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r15@1:15.1](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=9899201&end=9905201) | 等一只七影蝶 | 沙怒石拳战士 · 震地 | hit | 1/0 | 608K(吸130K) | 100%→43% | 闪避+外减:集结呐喊 | 佯攻/*暗影斗篷 | 无 | — |
+| [r04@1:47.0](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13350509&end=13356509) | 黑川茜贼贼 | 沙怒石拳战士 · 震地 | hit | 1/0 | 501K(吸76.8K) | 100%→44% | 佯攻 | *暗影斗篷 | 无 | — |
+| [r11@1:51.9](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7679818&end=7685818) | Serog | 沙怒石拳战士 · 震地 | hit | 1/0 | 504K(吸90.8K) | 100%→45% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r09@0:41.1](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=10804027&end=10810027) | 斗篷小王子 | 沙怒石拳战士 · 震地 | hit | 1/0 | 343K(吸1.89K) | 85%→47% | 佯攻+闪避 | *暗影斗篷 | 197K(锯齿冲锋) | — |
+| [r05@1:45.5](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3409868&end=3415868) | 霸天横刀 | 沙怒石拳战士 · 震地 | hit | 1/0 | 470K(吸90.9K) | 100%→48% | 佯攻 | 全CD | 无 | — |
+| [r11@0:34.2](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7602121&end=7608121) | Serog | 沙怒石拳战士 · 震地 | hit | 1/0 | 446K(吸90.8K) | 100%→51% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r11@1:21.6](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7649485&end=7655485) | Serog | 沙怒石拳战士 · 震地 | hit | 1/0 | 441K(吸77.4K) | 100%→51% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r07@0:39.0](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1323891&end=1329891) | 驱夜断愁 | 沙怒石拳战士 · 震地 | hit | 1/0 | 439K(吸117K) | 100%→52% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r06@0:44.6](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=2923164&end=2929164) | 阿鼠 | 沙怒石拳战士 · 震地 | hit | 1/0 | 430K | 100%→53% | 佯攻 | *暗影斗篷/*闪避 | 266K(锯齿冲锋) | — |
+| [r07@0:45.1](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1329995&end=1335995) | 驱夜断愁 | 沙怒石拳战士 · 震地 | hit | 1/0 | 427K(吸129K) | 100%→53% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r01@0:44.8](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7794041&end=7800041) | 天涯墨丶客 | 沙怒石拳战士 · 震地 | hit | 1/0 | 417K(吸144K) | 100%→54% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r14@1:18.9](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=4510358&end=4516358) | 风为为 | 沙怒石拳战士 · 震地 | hit | 1/0 | 487K(吸90.9K) | 100%→54% | 佯攻+外减:集结呐喊 | *暗影斗篷/*闪避 | 无 | — |
+| [r13@0:46.4](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=320009&end=326009) | Paparan | 沙怒石拳战士 · 震地 | hit | 1/0 | 412K(吸147K) | 100%→55% | 佯攻+暗影斗篷 | 全CD | 无 | — |
+| [r01@1:45.6](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7854779&end=7860779) | 天涯墨丶客 | 沙怒石拳战士 · 震地 | hit | 1/0 | 410K(吸146K) | 100%→55% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r15@0:44.8](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=9868869&end=9874869) | 等一只七影蝶 | 沙怒石拳战士 · 震地 | hit | 1/0 | 387K(吸127K) | 100%→57% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r07@1:18.0](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1362825&end=1368825) | 驱夜断愁 | 沙怒石拳战士 · 震地 | hit | 1/0 | 374K(吸113K) | 100%→59% | 佯攻 | *暗影斗篷/*闪避 | 141K(箭雨) | — |
+| [r06@0:34.9](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=2913469&end=2919469) | 阿鼠 | 沙怒石拳战士 · 震地 | hit | 1/0 | 364K(吸127K) | 100%→60% | 佯攻 | *暗影斗篷/*闪避 | 226K(蜿蜒打击) | — |
+| [r13@1:17.9](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=351563&end=357563) | Paparan | 沙怒石拳战士 · 震地 | hit | 1/0 | 362K(吸139K) | 100%→60% | 佯攻 | 全CD | 无 | — |
+| [r02@1:09.4](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=5551239&end=5557239) | Speedamn | 沙怒石拳战士 · 震地 | hit | 1/0 | 416K(吸72.4K) | 100%→61% | 佯攻+外减:集结呐喊 | *暗影斗篷/*闪避 | 无 | — |
+| [r05@1:13.9](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3378263&end=3384263) | 霸天横刀 | 沙怒石拳战士 · 震地 | hit | 1/0 | 355K(吸159K) | 100%→61% | 佯攻 | 全CD | 无 | — |
+| [r09@1:40.6](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=10863495&end=10869495) | 斗篷小王子 | 沙怒石拳战士 · 震地 | hit | 1/0 | 355K(吸164K) | 100%→61% | 佯攻 | *暗影斗篷 | 无 | — |
+| [r08@0:45.5](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8980603&end=8986603) | 啊晴丶 | 沙怒石拳战士 · 震地 | hit | 1/0 | 387K(吸100K) | 100%→61% | 佯攻+闪避 | *暗影斗篷 | 无 | — |
+| [r15@1:07.8](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=9891926&end=9897926) | 等一只七影蝶 | 沙怒石拳战士 · 震地 | hit | 1/0 | 386K(吸81.6K) | 100%→64% | 佯攻+闪避+外减:集结呐喊 | *暗影斗篷 | 无 | — |
+| [r04@0:36.6](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13280136&end=13286136) | 黑川茜贼贼 | 沙怒石拳战士 · 震地 | hit | 1/0 | 322K(吸125K) | 100%→64% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r03@0:46.4](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=410568&end=416568) | 叶落初冬 | 沙怒石拳战士 · 震地 | hit | 1/0 | 299K(吸289K) | 100%→67% | 佯攻 | *暗影斗篷/*闪避 | 373K(蜿蜒打击) | — |
+| [r02@0:45.1](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=5526947&end=5532947) | Speedamn | 沙怒石拳战士 · 震地 | hit | 1/0 | 275K(吸207K) | 100%→70% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r06@1:15.0](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=2953525&end=2959525) | 阿鼠 | 沙怒石拳战士 · 震地 | hit | 1/0 | 265K(吸144K) | 100%→71% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r02@0:39.1](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=5520882&end=5526882) | Speedamn | 沙怒石拳战士 · 震地 | hit | 1/0 | 259K(吸226K) | 100%→71% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r05@0:43.6](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3347942&end=3353942) | 霸天横刀 | 沙怒石拳战士 · 震地 | hit | 1/0 | 252K(吸173K) | 100%→72% | 佯攻+闪避 | *暗影斗篷 | 无 | — |
+| [r10@0:47.2](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13030739&end=13036739) | 弋江水 | 沙怒石拳战士 · 震地 | hit | 1/0 | 234K(吸347K) | 100%→74% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r08@0:37.0](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8972102&end=8978102) | 啊晴丶 | 沙怒石拳战士 · 震地 | hit | 1/0 | 231K(吸208K) | 100%→75% | 佯攻+闪避 | *暗影斗篷 | 183K(蜿蜒打击) | — |
+| [r01@1:14.0](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7823171&end=7829171) | 天涯墨丶客 | 沙怒石拳战士 · 震地 | hit | 1/0 | 265K(吸129K) | 100%→75% | 佯攻+外减:集结呐喊 | *暗影斗篷/*闪避 | 308K(蜿蜒打击) | — |
+| [r02@1:15.5](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=5557296&end=5563296) | Speedamn | 沙怒石拳战士 · 震地 | hit | 1/0 | 254K(吸226K) | 100%→76% | 佯攻+外减:集结呐喊 | *暗影斗篷/*闪避 | 无 | — |
+| [r14@0:38.0](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=4469477&end=4475477) | 风为为 | 沙怒石拳战士 · 震地 | hit | 1/0 | 210K(吸369K) | 100%→77% | 佯攻 | *暗影斗篷/*闪避 | 205K(蜿蜒打击) | — |
+| [r04@1:07.0](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13310494&end=13316494) | 黑川茜贼贼 | 沙怒石拳战士 · 震地 | hit | 1/0 | 204K(吸258K) | 100%→77% | 佯攻+闪避 | *暗影斗篷 | 无 | — |
+| [r10@0:41.5](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13025071&end=13031071) | 弋江水 | 沙怒石拳战士 · 震地 | hit | 1/0 | 204K(吸318K) | 100%→77% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r05@0:36.3](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3340679&end=3346679) | 霸天横刀 | 沙怒石拳战士 · 震地 | hit | 1/0 | 171K(吸301K) | 100%→81% | 佯攻+闪避 | *暗影斗篷 | 无 | — |
+| [r03@1:19.6](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=443742&end=449742) | 叶落初冬 | 沙怒石拳战士 · 震地 | hit | 1/0 | 198K(吸326K) | 100%→81% | 佯攻+外减:集结呐喊 | *闪避 | 110K(箭雨) | — |
+| [r12@0:39.2](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=14702030&end=14708030) | 叮呤灵 | 沙怒石拳战士 · 震地 | hit | 1/0 | 151K(吸190K) | 100%→83% | 佯攻+闪避 | *暗影斗篷 | 162K(蜿蜒打击) | — |
+| [r12@1:16.0](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=14738827&end=14744827) | 叮呤灵 | 沙怒石拳战士 · 震地 | hit | 1/0 | 149K(吸294K) | 100%→84% | 佯攻 | *暗影斗篷 | 无 | — |
+| [r01@0:38.0](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7787193&end=7793193) | 天涯墨丶客 | 沙怒石拳战士 · 震地 | hit | 1/0 | 140K(吸365K) | 100%→85% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r10@1:11.9](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13055426&end=13061426) | 弋江水 | 沙怒石拳战士 · 震地 | hit | 1/0 | 126K(吸488K) | 100%→86% | 佯攻 | *暗影斗篷/*闪避 | 无 | — |
+| [r13@0:37.1](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=310716&end=316716) | Paparan | 沙怒石拳战士 · 震地 | hit | 1/0 | 91.7K(吸270K) | 100%→90% | 佯攻+闪避 | *暗影斗篷 | 无 | — |
+| [r09@0:35.9](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=10798777&end=10804777) | 斗篷小王子 | 沙怒石拳战士 · 震地 | hit | 1/0 | 78.1K(吸337K) | 100%→91% | 佯攻+闪避 | *暗影斗篷 | 364K(锯齿冲锋) | — |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次

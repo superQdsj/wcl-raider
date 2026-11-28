@@ -1,0 +1,6 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 2 --ability 264206 --only-hit --limit 20
+# 双向反查明细（Boss 2）：264206（共 1 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r14@2:32.5](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5298652&end=5304652) | 风为为 | 钻地 | hit(死) | 1/0 | 462K | 51%→0% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 295K(钻地之震) | 6.81K |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次

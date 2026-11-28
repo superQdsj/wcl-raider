@@ -1,0 +1,335 @@
+{
+  "boss1": [
+    {
+      "rule": 1,
+      "type": "不交",
+      "ability": ["1310712"],
+      "source": "inspect-boss1-1310712-hit-bare-l100.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 0,
+      "m": 54,
+      "min_hp": 40,
+      "links": [
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=480148&end=486148"
+      ]
+    },
+    {
+      "rule": 2,
+      "type": "必交",
+      "ability": ["1311808"],
+      "source": "inspect-boss1-1311808-hit-l100.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 3,
+      "m": 7,
+      "min_hp": 0,
+      "links": [
+        "https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3038578&end=3044578",
+        "https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10112466&end=10118466"
+      ]
+    },
+    {
+      "rule": 2,
+      "type": "必交",
+      "ability": ["1288092"],
+      "source": "inspect-boss1-1288092-hit-l100.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 1,
+      "m": 4,
+      "min_hp": 14,
+      "links": [
+        "https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3576526&end=3582526"
+      ]
+    },
+    {
+      "rule": 3,
+      "type": "贪输出",
+      "ability": ["1314051"],
+      "source": "inspect-boss1-1314051-hit-l50.txt",
+      "where": {"status": "immune"},
+      "n": 14,
+      "m": 14,
+      "links": [
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7879116&end=7885116",
+        "https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=5650328&end=5656328",
+        "https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1487151&end=1493151"
+      ]
+    },
+    {
+      "rule": 4,
+      "type": "交互",
+      "ability": ["1288457"],
+      "source": "boss1.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13132294&end=13138294",
+        "https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=2973243&end=2979243",
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=580271&end=586271"
+      ],
+      "quote": ["清除实锤：`暗影斗篷` → 提前清掉 `阵风(1288457)` ×4次"]
+    },
+    {
+      "rule": 5,
+      "type": "避坑",
+      "ability": ["1288457", "1311808", "1288092"],
+      "source": "boss1.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3576772&end=3582772",
+        "https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3038606&end=3044606",
+        "https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1487168&end=1493168"
+      ],
+      "quote": ["总计：**死亡 3 次 / 残血(<20%) 13 次**"]
+    }
+  ],
+  "boss2": [
+    {
+      "rule": 1,
+      "type": "不交",
+      "ability": ["263958"],
+      "source": "inspect-boss2-263958-hit-bare-l50.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 0,
+      "m": 16,
+      "min_hp": 79,
+      "links": [
+        "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9663814&end=9669814"
+      ]
+    },
+    {
+      "rule": 2,
+      "type": "必交",
+      "ability": ["1293048"],
+      "source": "inspect-boss2-1293048-hit-l50.txt",
+      "where": {"cover": "纯裸吃", "status": "hit"},
+      "m": 5,
+      "min_hp": 31,
+      "links": [
+        "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14105257&end=14111257"
+      ]
+    },
+    {
+      "rule": 3,
+      "type": "交互",
+      "ability": ["1293048", "1300227", "1298329", "1289589"],
+      "source": "boss2.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1126647&end=1132647",
+        "https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6352214&end=6358214",
+        "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14193828&end=14199828",
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1254491&end=1260491",
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8626634&end=8632634",
+        "https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13730487&end=13736487"
+      ],
+      "quote": ["穿透实锤：`暗影斗篷` **不免疫** `钻地之震(1300227)`"]
+    },
+    {
+      "rule": 4,
+      "type": "避坑",
+      "ability": ["264206"],
+      "source": "inspect-boss2-264206-hit-l20.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5298652&end=5304652"
+      ],
+      "quote": ["hit(死)"]
+    }
+  ],
+  "boss3": [
+    {
+      "rule": 1,
+      "type": "必交",
+      "ability": ["1290531"],
+      "source": "inspect-boss3-1290531-hit-l200.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 3,
+      "m": 9,
+      "min_hp": 0,
+      "links": [
+        "https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15890893&end=15896893",
+        "https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6680587&end=6686587",
+        "https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6657493&end=6663493"
+      ]
+    },
+    {
+      "rule": 2,
+      "type": "不交",
+      "ability": ["266923"],
+      "source": "inspect-boss3-266923-hit-bare-l100.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 1,
+      "m": 64,
+      "min_hp": 19,
+      "links": [
+        "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14634307&end=14640307"
+      ]
+    },
+    {
+      "rule": 3,
+      "type": "交互",
+      "ability": ["266512", "1290531", "1291815", "266923"],
+      "source": "boss3.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=4474979&end=4480979",
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9100109&end=9106109",
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9100650&end=9106650",
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8932445&end=8938445",
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8939008&end=8945008"
+      ],
+      "quote": ["清除实锤：`暗影斗篷` → 提前清掉 `放电(266512)` ×1次"]
+    },
+    {
+      "rule": 4,
+      "type": "避坑",
+      "ability": ["266923"],
+      "source": "boss3.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1462850&end=1468850",
+        "https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6716501&end=6722501"
+      ],
+      "quote": ["总计：**死亡 2 次 / 残血(<20%) 4 次**"]
+    }
+  ],
+  "boss4": [
+    {
+      "rule": 1,
+      "type": "必交",
+      "ability": ["1302618"],
+      "source": "inspect-boss4-1302618-hit-l50.txt",
+      "where": {"cover": "纯裸吃", "status": "hit"},
+      "m": 1,
+      "min_hp": 27,
+      "links": [
+        "https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=14649640&end=14655640",
+        "https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=6270749&end=6276749"
+      ]
+    },
+    {
+      "rule": 2,
+      "type": "不交",
+      "ability": ["1312214"],
+      "source": "inspect-boss4-1312214-hit-l150.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 0,
+      "m": 5,
+      "min_hp": 29,
+      "links": [
+        "https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=6104403&end=6110403"
+      ]
+    },
+    {
+      "rule": 3,
+      "type": "贪输出",
+      "ability": ["1302761"],
+      "source": "inspect-boss4-1302761-hit-l20.txt",
+      "where": {"status": "immune"},
+      "n": 9,
+      "m": 9,
+      "links": [
+        "https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=7257939&end=7263939",
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=2011593&end=2017593"
+      ]
+    },
+    {
+      "rule": 4,
+      "type": "交互",
+      "ability": ["1302618", "1312214", "1300684"],
+      "source": "boss4.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=11501652&end=11507652",
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9519783&end=9525783",
+        "https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=14794171&end=14800171",
+        "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=15036352&end=15042352",
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9407817&end=9413817"
+      ],
+      "quote": ["清除实锤：`暗影斗篷` → 提前清掉 `邪恶冲锋(1302618)` ×2次"]
+    },
+    {
+      "rule": 5,
+      "type": "避坑",
+      "ability": ["1302618", "1312214"],
+      "source": "boss4.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=6276774&end=6282774"
+      ],
+      "quote": ["总计：**死亡 1 次 / 残血(<20%) 5 次**"]
+    }
+  ],
+  "trash": [
+    {
+      "rule": 1,
+      "type": "必交",
+      "ability": ["265966"],
+      "source": "inspect-trash-265966-hit-l80.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 1,
+      "m": 2,
+      "min_hp": 14,
+      "links": [
+        "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13318983&end=13324983"
+      ]
+    },
+    {
+      "rule": 1,
+      "type": "必交",
+      "ability": ["1303486"],
+      "source": "inspect-trash-1303486-hit-l100.txt",
+      "where": {"cover": "纯裸吃", "status": "hit"},
+      "m": 1,
+      "min_hp": 42,
+      "links": [
+        "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14814409&end=14820409",
+        "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14785273&end=14791273"
+      ]
+    },
+    {
+      "rule": 2,
+      "type": "免疫",
+      "ability": ["1303486", "1293475", "1308148", "1291399", "1308113"],
+      "source": "trash.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9226931&end=9232931",
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1373485&end=1379485",
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=791763&end=797763",
+        "https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=4388564&end=4394564",
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=861344&end=867344",
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=794629&end=800629"
+      ],
+      "quote": ["免疫实锤：`暗影斗篷` 完全免疫 `蚀骨践踏(1303486)`（0伤 ×13次"]
+    },
+    {
+      "rule": 3,
+      "type": "不交",
+      "ability": ["1303596"],
+      "source": "inspect-trash-1303596-hit-bare-l100.txt",
+      "where": {"cover": "纯裸吃", "status": "hit", "remaining_lt": 20},
+      "n": 0,
+      "m": 70,
+      "min_hp": 42,
+      "links": [
+        "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=10340772&end=10346772"
+      ]
+    },
+    {
+      "rule": 4,
+      "type": "控断",
+      "ability": ["1291262", "1310683", "1293307"],
+      "source": "trash.txt",
+      "quote": ["打断实锤（共 265 次，场均 17.7 次）"]
+    },
+    {
+      "rule": 5,
+      "type": "功能",
+      "ability": ["1308148", "1293475"],
+      "source": "trash.txt",
+      "quote": ["驱散实锤：15 场小怪战未检测到玩家主动驱散。"]
+    },
+    {
+      "rule": 6,
+      "type": "避坑",
+      "ability": ["1303486", "3"],
+      "source": "trash.txt",
+      "links": [
+        "https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=12224907&end=12230907",
+        "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1756687&end=1762687"
+      ],
+      "quote": ["总计：**死亡 2 次 / 残血(<20%) 17 次**"]
+    }
+  ]
+}

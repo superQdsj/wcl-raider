@@ -1,0 +1,14 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 4 --ability 1302761 --only-hit --limit 20
+# 双向反查明细（Boss 4）：1302761（共 9 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r02@2:27.3](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=7257939&end=7263939) | Speedamn | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r03@0:33.5](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=2011593&end=2017593) | 叶落初冬 | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r04@0:46.5](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14944105&end=14950105) | 黑川茜贼贼 | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻 | 无 | — |
+| [r05@0:34.8](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=4962306&end=4968306) | 霸天横刀 | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r06@0:34.3](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=4555290&end=4561290) | 阿鼠 | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻 | 无 | — |
+| [r07@0:43.1](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=2929817&end=2935817) | 驱夜断愁 | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r09@0:35.9](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=12434155&end=12440155) | 斗篷小王子 | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻 | 无 | — |
+| [r11@0:37.2](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=9285683&end=9291683) | Serog | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r14@0:39.1](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=6086058&end=6092058) | 风为为 | [小怪:堕落的守护者] 不稳定腐化 | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻 | 无 | — |
+— WCL API (v1)：实时请求 2 次，缓存命中 206 次；v1 限额剩余 789/800 次

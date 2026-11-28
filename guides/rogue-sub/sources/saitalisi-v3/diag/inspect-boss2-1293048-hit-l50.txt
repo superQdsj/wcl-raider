@@ -1,0 +1,41 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 2 --ability 1293048 --only-hit --limit 50
+# 双向反查明细（Boss 2）：1293048（共 36 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r15@0:40.0](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10580883&end=10586883) | 等一只七影蝶 | 毒蛇风暴 | hit | 5/5 | 1.36M(吸209K) | 100%→30% | 佯攻 | *闪避 | 无 | 1.57M |
+| [r04@2:21.0](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14105257&end=14111257) | 黑川茜贼贼 | 毒蛇风暴 | hit | 5/5 | 1.70M(吸218K) | 100%→31% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.85M |
+| [r08@2:24.9](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9791663&end=9797663) | 啊晴丶 | 毒蛇风暴 | hit | 5/5 | 1.88M(吸373K) | 100%→37% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 2.24M |
+| [r03@2:24.6](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1217000&end=1223000) | 叶落初冬 | 毒蛇风暴 | hit | 5/5 | 1.68M(吸317K) | 100%→40% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.99M |
+| [r15@2:19.9](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10680786&end=10686786) | 等一只七影蝶 | 毒蛇风暴 | hit | 5/5 | 1.35M(吸213K) | 100%→48% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.56M |
+| [r13@0:40.0](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1027689&end=1033689) | Paparan | 毒蛇风暴 | hit | 5/4 | 1.00M(吸396K) | 100%→50% | 佯攻 | *暗影斗篷 | 无 | 1.40M |
+| [r08@0:40.0](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9686828&end=9692828) | 啊晴丶 | 毒蛇风暴 | hit | 5/5 | 1.34M(吸175K) | 100%→50% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.33M |
+| [r12@2:23.0](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15524397&end=15530397) | 叮呤灵 | 毒蛇风暴 | hit | 5/5 | 1.14M(吸243K) | 100%→50% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.22M |
+| [r06@3:57.1](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3847739&end=3853739) | 阿鼠 | 毒蛇风暴 | hit | 5/5 | 600K(吸61.8K) | 100%→56% | 佯攻 | *暗影斗篷/*闪避 | 无 | 596K |
+| [r03@0:40.0](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1112471&end=1118471) | 叶落初冬 | 毒蛇风暴 | hit | 5/5 | 1.71M(吸394K) | 100%→56% | 纯裸吃 | 佯攻/*暗影斗篷 | 无 | 2.09M |
+| [r06@2:18.1](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3748679&end=3754679) | 阿鼠 | 毒蛇风暴 | hit | 5/5 | 1.31M(吸211K) | 100%→56% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.24M |
+| [r14@0:40.0](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5186181&end=5192181) | 风为为 | 毒蛇风暴 | hit | 5/5 | 1.37M(吸319K) | 100%→58% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.69M |
+| [r10@2:20.4](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13842396&end=13848396) | 弋江水 | 毒蛇风暴 | hit | 5/5 | 926K(吸553K) | 100%→58% | 佯攻 | *暗影斗篷 | 无 | 1.36M |
+| [r05@2:17.4](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=4147317&end=4153317) | 霸天横刀 | 毒蛇风暴 | hit | 5/5 | 1.10M(吸282K) | 100%→59% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.04M |
+| [r01@2:20.5](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8599574&end=8605574) | 天涯墨丶客 | 毒蛇风暴 | hit | 5/5 | 733K(吸597K) | —→59% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.34M |
+| [r14@2:15.3](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5281471&end=5287471) | 风为为 | 毒蛇风暴 | hit | 5/5 | 1.41M(吸395K) | 100%→60% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.81M |
+| [r12@0:40.0](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15421368&end=15427368) | 叮呤灵 | 毒蛇风暴 | hit | 5/5 | 1.24M(吸737K) | 100%→62% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.72M |
+| [r04@0:40.0](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14004242&end=14010242) | 黑川茜贼贼 | 毒蛇风暴 | hit | 5/5 | 1.02M(吸508K) | 100%→62% | 佯攻 | 全CD | 无 | 1.37M |
+| [r09@0:40.0](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11516363&end=11522363) | 斗篷小王子 | 毒蛇风暴 | hit | 5/5 | 961K(吸356K) | 100%→63% | 佯攻 | *暗影斗篷 | 无 | 1.22M |
+| [r01@0:40.0](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8499046&end=8505046) | 天涯墨丶客 | 毒蛇风暴 | hit | 5/5 | 1.04M(吸396K) | 100%→63% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.40M |
+| [r11@4:09.1](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=8566395&end=8572395) | Serog | 毒蛇风暴 | hit | 5/5 | 604K(吸153K) | 100%→66% | 佯攻 | *暗影斗篷/*闪避 | 无 | 451K |
+| [r10@3:55.8](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13937707&end=13943707) | 弋江水 | 毒蛇风暴 | hit | 5/5 | 290K(吸145K) | 100%→68% | 佯攻 | *暗影斗篷/*闪避 | 无 | 202K |
+| [r09@2:28.0](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11624374&end=11630374) | 斗篷小王子 | 毒蛇风暴 | hit | 5/5 | 801K(吸777K) | 100%→69% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.58M |
+| [r15@4:03.9](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10784721&end=10790721) | 等一只七影蝶 | 毒蛇风暴 | hit | 5/5 | 739K(吸295K) | 100%→71% | 佯攻 | *暗影斗篷/*闪避 | 无 | 891K |
+| [r07@2:17.7](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=2091274&end=2097274) | 驱夜断愁 | 毒蛇风暴 | hit | 5/5 | 1.15M(吸237K) | 100%→72% | 佯攻 | *闪避 | 无 | 1.39M |
+| [r04@4:01.1](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14205305&end=14211305) | 黑川茜贼贼 | 毒蛇风暴 | hit | 5/5 | 830K(吸652K) | 100%→72% | 佯攻 | *闪避 | 无 | 1.48M |
+| [r13@2:18.3](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1125955&end=1131955) | Paparan | 毒蛇风暴 | hit | 5/5 | 228K(吸146K) | 100%→75% | 佯攻 | *暗影斗篷 | 无 | 295K |
+| [r10@0:40.0](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13741955&end=13747955) | 弋江水 | 毒蛇风暴 | hit | 5/5 | 1.02M(吸468K) | 100%→76% | 佯攻 | 全CD | 无 | 1.36M |
+| [r05@0:40.0](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=4049999&end=4055999) | 霸天横刀 | 毒蛇风暴 | hit | 5/5 | 627K(吸964K) | 100%→76% | 佯攻 | *闪避 | 无 | 1.53M |
+| [r13@3:57.2](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1224896&end=1230896) | Paparan | 毒蛇风暴 | hit | 5/5 | 451K(吸165K) | 100%→81% | 佯攻 | *闪避 | 无 | 485K |
+| [r02@0:40.0](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6252964&end=6258964) | Speedamn | 毒蛇风暴 | hit | 5/5 | 610K(吸775K) | 100%→83% | 佯攻 | *闪避 | 无 | 1.27M |
+| [r06@0:40.0](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3650615&end=3656615) | 阿鼠 | 毒蛇风暴 | hit | 5/5 | 588K(吸695K) | 100%→84% | 佯攻 | *闪避 | 无 | 1.25M |
+| [r02@2:19.3](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6352214&end=6358214) | Speedamn | 毒蛇风暴 | immune | 5/4 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r07@0:40.0](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1993635&end=1999635) | 驱夜断愁 | 毒蛇风暴 | immune | 5/4 | 0 | —→— | 佯攻+暗影斗篷 | *闪避 | 无 | — |
+| [r11@0:40.0](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=8357273&end=8363273) | Serog | 毒蛇风暴 | hit | 5/5 | 0(吸1.49M) | —→— | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.49M |
+| [r11@2:25.2](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=8462474&end=8468474) | Serog | 毒蛇风暴 | hit | 5/5 | 0(吸1.49M) | —→— | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.49M |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次

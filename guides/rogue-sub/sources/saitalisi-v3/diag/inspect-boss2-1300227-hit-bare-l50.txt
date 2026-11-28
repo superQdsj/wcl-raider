@@ -1,0 +1,29 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 2 --ability 1300227 --only-hit --only-bare --limit 50
+# 双向反查明细（Boss 2）：1300227（共 24 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r12@0:53.1](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15434472&end=15440472) | 叮呤灵 | 钻地之震 | hit | 5/5 | 1.09M(吸117K) | 93%→39% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.15M |
+| [r12@2:36.1](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15537492&end=15543492) | 叮呤灵 | 钻地之震 | hit | 5/5 | 1.09M(吸96.5K) | 100%→42% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.08M |
+| [r07@2:30.7](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=2104306&end=2110306) | 驱夜断愁 | 钻地之震 | hit | 5/5 | 1.29M(吸104K) | 100%→45% | 纯裸吃 | 佯攻/*闪避 | 无 | 1.53M |
+| [r02@2:32.3](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6365263&end=6371263) | Speedamn | 钻地之震 | hit | 5/5 | 784K(吸428K) | —→47% | 纯裸吃 | 佯攻/*闪避 | 无 | 1.02M |
+| [r01@2:33.6](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8612635&end=8618635) | 天涯墨丶客 | 钻地之震 | hit | 5/5 | 810K(吸340K) | 100%→50% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.15M |
+| [r14@2:28.4](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5294541&end=5300541) | 风为为 | 钻地之震 | hit(死) | 5/5 | 680K(吸74.6K) | 100%→51% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 462K(钻地) | 308K |
+| [r08@2:37.9](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9804716&end=9810716) | 啊晴丶 | 钻地之震 | hit | 5/5 | 1.25M(吸52.5K) | 100%→53% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.36M |
+| [r01@0:53.1](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8512173&end=8518173) | 天涯墨丶客 | 钻地之震 | hit | 5/5 | 1.03M(吸175K) | 100%→55% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.12M |
+| [r07@0:53.1](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=2006671&end=2012671) | 驱夜断愁 | 钻地之震 | hit | 5/5 | 823K(吸492K) | 100%→55% | 纯裸吃 | 佯攻/*闪避 | 无 | 1.45M |
+| [r14@0:53.1](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5199205&end=5205205) | 风为为 | 钻地之震 | hit | 5/5 | 972K(吸507K) | 100%→56% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.44M |
+| [r08@0:53.1](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9699870&end=9705870) | 啊晴丶 | 钻地之震 | hit | 5/5 | 941K(吸444K) | 100%→57% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.20M |
+| [r13@0:53.2](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1040821&end=1046821) | Paparan | 钻地之震 | hit | 5/5 | 1.08M(吸241K) | 100%→61% | 纯裸吃 | 佯攻/*暗影斗篷 | 无 | 1.26M |
+| [r15@0:53.1](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10593901&end=10599901) | 等一只七影蝶 | 钻地之震 | hit | 5/5 | 1.02M(吸133K) | 100%→62% | 纯裸吃 | 佯攻/*闪避 | 无 | 1.26M |
+| [r13@2:31.4](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1139031&end=1145031) | Paparan | 钻地之震 | hit | 5/5 | 1.02M(吸250K) | 100%→64% | 纯裸吃 | 佯攻/*闪避 | 无 | 1.30M |
+| [r11@2:38.3](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=8475584&end=8481584) | Serog | 钻地之震 | hit | 5/5 | 1.12M(吸133K) | 100%→64% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.29M |
+| [r15@2:33.0](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10693809&end=10699809) | 等一只七影蝶 | 钻地之震 | hit | 5/5 | 1.02M(吸176K) | 100%→65% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.27M |
+| [r03@0:53.0](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1125479&end=1131479) | 叶落初冬 | 钻地之震 | hit | 5/5 | 874K(吸259K) | 100%→66% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.26M |
+| [r03@2:37.6](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1230077&end=1236077) | 叶落初冬 | 钻地之震 | hit | 5/5 | 867K(吸331K) | 100%→68% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.09M |
+| [r14@2:39.6](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5305749&end=5311749) | 风为为 | 钻地之震 | hit | 1/1 | 1.08M(吸173K) | 74%→69% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.63M |
+| [r11@0:53.1](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=8370308&end=8376308) | Serog | 钻地之震 | hit | 5/5 | 1.21M(吸56.3K) | 100%→69% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.15M |
+| [r02@0:53.1](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6266022&end=6272022) | Speedamn | 钻地之震 | hit | 5/5 | 959K(吸208K) | 100%→69% | 纯裸吃 | 佯攻/*闪避 | 无 | 934K |
+| [r09@0:53.1](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11529425&end=11535425) | 斗篷小王子 | 钻地之震 | hit | 5/5 | 1.01M(吸129K) | 100%→71% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.24M |
+| [r09@2:41.1](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11637441&end=11643441) | 斗篷小王子 | 钻地之震 | hit | 5/5 | 1.23M(吸128K) | 100%→74% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.28M |
+| [r10@2:33.5](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13855467&end=13861467) | 弋江水 | 钻地之震 | hit | 5/5 | 972K(吸177K) | 100%→76% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 1.27M |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次

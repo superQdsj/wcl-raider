@@ -1,0 +1,48 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 1 --ability 1311808 --only-hit --limit 100
+# 双向反查明细（Boss 1）：1311808（共 43 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r06@1:23.7](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3038578&end=3044578) | 阿鼠 | 暴风 | hit(死) | 2/0 | 485K | 28%→0% | 纯裸吃 | 佯攻 | 423K(蜿蜒打击) | 19.6K |
+| [r15@3:05.2](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10112466&end=10118466) | 等一只七影蝶 | 暴风 | hit | 2/0 | 772K(吸36.2K) | 100%→15% | 纯裸吃 | 佯攻 | 无 | 772K |
+| [r05@0:38.1](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3452346&end=3458346) | 霸天横刀 | 暴风 | hit | 2/0 | 735K(吸28.0K) | 100%→19% | 纯裸吃 | 佯攻 | 无 | 435K |
+| [r13@3:05.3](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=539396&end=545396) | Paparan | 暴风 | hit | 2/0 | 714K(吸54.6K) | 100%→21% | 纯裸吃 | 佯攻 | 290K(阵风) | 290K |
+| [r06@3:02.1](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3136968&end=3142968) | 阿鼠 | 暴风 | hit | 2/0 | 673K(吸86.2K) | 100%→26% | 佯攻 | *暗影斗篷/*闪避 | 无 | 743K |
+| [r14@1:23.0](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=4595760&end=4601760) | 风为为 | 暴风 | hit | 2/0 | 402K | 76%→32% | 佯攻 | *暗影斗篷/*闪避 | 368K(阵风) | 513K |
+| [r11@2:14.0](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7815756&end=7821756) | Serog | 暴风 | hit | 2/0 | 446K | 87%→38% | 佯攻 | 全CD | 452K(阵风) | 502K |
+| [r04@3:53.5](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13598622&end=13604622) | 黑川茜贼贼 | 暴风 | hit | 3/0 | 542K(吸71.8K) | 100%→40% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 71.8K |
+| [r13@1:23.3](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=437383&end=443383) | Paparan | 暴风 | hit | 2/0 | 438K(吸1.50K) | 89%→41% | 佯攻+闪避 | 全CD | 386K(阵风) | 419K |
+| [r11@3:36.7](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7898449&end=7904449) | Serog | 暴风 | hit | 2/0 | 419K(吸1.44K) | 89%→43% | 佯攻 | *闪避 | 500K(阵风) | 497K |
+| [r13@4:20.5](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=614609&end=620609) | Paparan | 暴风 | hit | 2/0 | 413K(吸1.23K) | 92%→46% | 佯攻 | *闪避 | 164K(阵风) | 74.4K |
+| [r10@3:48.6](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13298115&end=13304115) | 弋江水 | 暴风 | hit | 2/0 | 383K | 90%→47% | 佯攻 | *暗影斗篷/*闪避 | 369K(阵风) | 559K |
+| [r07@3:05.1](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1555794&end=1561794) | 驱夜断愁 | 暴风 | hit | 2/0 | 414K(吸47.7K) | 100%→54% | 佯攻 | *暗影斗篷/*闪避 | 无 | 64.7K |
+| [r04@0:38.0](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13403101&end=13409101) | 黑川茜贼贼 | 暴风 | hit | 2/0 | 274K(吸115K) | 87%→56% | 佯攻 | 全CD | 479K(阵风) | 294K |
+| [r05@3:35.3](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3629569&end=3635569) | 霸天横刀 | 暴风 | hit | 2/0 | 395K(吸230K) | 100%→57% | 纯裸吃 | 佯攻/*闪避 | 无 | 625K |
+| [r08@3:04.8](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9194548&end=9200548) | 啊晴丶 | 暴风 | hit | 2/0 | 429K | 100%→57% | 佯攻 | *暗影斗篷 | 无 | 40.0K |
+| [r07@1:26.7](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1457480&end=1463480) | 驱夜断愁 | 暴风 | hit | 2/0 | 369K(吸46.8K) | 100%→59% | 佯攻 | *暗影斗篷 | 323K(阵风) | 57.1K |
+| [r11@0:38.1](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7719848&end=7725848) | Serog | 暴风 | hit | 3/0 | 360K(吸18.2K) | 100%→60% | 佯攻+外减:牺牲祝福 | 全CD | 无 | 378K |
+| [r01@0:38.3](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7898027&end=7904027) | 天涯墨丶客 | 暴风 | hit | 2/0 | 358K(吸36.2K) | 100%→61% | 佯攻 | *闪避 | 无 | 137K |
+| [r06@4:32.0](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3226857&end=3232857) | 阿鼠 | 暴风 | hit | 2/0 | 348K(吸83.7K) | 100%→62% | 佯攻 | *暗影斗篷 | 304K(阵风) | 104K |
+| [r09@1:23.4](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=10956102&end=10962102) | 斗篷小王子 | 暴风 | hit | 2/0 | 346K(吸62.6K) | 100%→62% | 佯攻 | *闪避 | 无 | 122K |
+| [r06@4:12.6](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3207436&end=3213436) | 阿鼠 | 暴风 | hit | 2/0 | 345K(吸1.58K) | 100%→62% | 佯攻+闪避 | *暗影斗篷 | 374K(阵风) | 254K |
+| [r04@2:13.9](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13499067&end=13505067) | 黑川茜贼贼 | 暴风 | hit | 3/0 | 340K(吸54.0K) | 100%→62% | 佯攻 | *闪避 | 无 | 143K |
+| [r04@3:34.0](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13579176&end=13585176) | 黑川茜贼贼 | 暴风 | hit | 3/0 | 338K(吸54.0K) | 100%→62% | 佯攻 | *暗影斗篷/*闪避 | 163K(阵风) | 478K |
+| [r12@3:04.9](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=14958168&end=14964168) | 叮呤灵 | 暴风 | hit | 2/0 | 279K(吸71.6K) | 93%→63% | 佯攻 | *暗影斗篷/*闪避 | 428K(阵风) | 577K |
+| [r14@3:05.0](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=4697772&end=4703772) | 风为为 | 暴风 | hit | 2/0 | 333K(吸97.5K) | 100%→63% | 佯攻 | *闪避 | 无 | 333K |
+| [r15@4:15.6](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10182880&end=10188880) | 等一只七影蝶 | 暴风 | hit | 2/0 | 316K(吸80.8K) | 100%→65% | 佯攻 | 全CD | 306K(阵风) | 168K |
+| [r08@1:23.3](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9093030&end=9099030) | 啊晴丶 | 暴风 | hit | 2/0 | 343K(吸136K) | 100%→66% | 佯攻 | *闪避 | 无 | 479K |
+| [r03@3:05.1](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=655765&end=661765) | 叶落初冬 | 暴风 | hit | 2/0 | 311K(吸105K) | 100%→66% | 佯攻 | *暗影斗篷 | 无 | 232K |
+| [r15@1:23.1](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10010462&end=10016462) | 等一只七影蝶 | 暴风 | hit | 3/0 | 295K(吸145K) | 100%→67% | 佯攻 | *闪避 | 无 | 402K |
+| [r08@4:21.3](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9271018&end=9277018) | 啊晴丶 | 暴风 | hit | 2/1 | 324K(吸104K) | 100%→68% | 佯攻 | *暗影斗篷 | 无 | 159K |
+| [r09@3:05.4](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11058041&end=11064041) | 斗篷小王子 | 暴风 | hit | 2/0 | 291K(吸145K) | 100%→68% | 佯攻 | *暗影斗篷/*闪避 | 无 | 202K |
+| [r12@1:23.0](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=14856208&end=14862208) | 叮呤灵 | 暴风 | hit | 2/1 | 277K(吸57.4K) | 100%→69% | 佯攻 | *闪避 | 无 | 82.5K |
+| [r10@0:38.1](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13107538&end=13113538) | 弋江水 | 暴风 | hit | 2/0 | 274K(吸93.5K) | 100%→70% | 佯攻 | *暗影斗篷 | 395K(蜿蜒打击+阵风) | 610K |
+| [r11@3:56.1](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7917893&end=7923893) | Serog | 暴风 | hit | 3/1 | 266K(吸175K) | 100%→71% | 佯攻 | *闪避 | 无 | 192K |
+| [r03@4:05.8](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=716462&end=722462) | 叶落初冬 | 暴风 | hit | 2/0 | 254K(吸101K) | 100%→72% | 佯攻 | *暗影斗篷/*闪避 | 无 | 179K |
+| [r02@3:05.1](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=5770052&end=5776052) | Speedamn | 暴风 | hit | 2/0 | 254K(吸110K) | 100%→72% | 佯攻 | *暗影斗篷/*闪避 | 无 | 219K |
+| [r03@1:23.1](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=553811&end=559811) | 叶落初冬 | 暴风 | hit | 2/0 | 249K(吸145K) | 100%→73% | 佯攻 | *闪避 | 274K(阵风) | 295K |
+| [r02@1:23.2](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=5668082&end=5674082) | Speedamn | 暴风 | hit | 2/0 | 235K(吸399K) | 100%→74% | 纯裸吃 | 佯攻/*闪避 | 258K(蜿蜒打击) | 955K |
+| [r10@2:13.9](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13203418&end=13209418) | 弋江水 | 暴风 | hit | 2/0 | 226K(吸145K) | 100%→75% | 佯攻 | *闪避 | 无 | 260K |
+| [r01@3:42.8](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8082521&end=8088521) | 天涯墨丶客 | 暴风 | hit | 2/0 | 220K(吸199K) | 100%→76% | 佯攻 | *暗影斗篷/*闪避 | 257K(阵风) | 451K |
+| [r01@2:14.1](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7993897&end=7999897) | 天涯墨丶客 | 暴风 | hit | 2/0 | 180K(吸159K) | 100%→80% | 佯攻 | *闪避 | 256K(阵风) | 339K |
+| [r05@2:14.0](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3548240&end=3554240) | 霸天横刀 | 暴风 | hit | 2/0 | 144K(吸320K) | 100%→84% | 佯攻 | 全CD | 281K(蜿蜒打击) | 464K |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次

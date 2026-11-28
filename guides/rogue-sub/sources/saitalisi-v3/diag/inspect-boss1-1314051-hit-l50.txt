@@ -1,0 +1,20 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 1 --ability 1314051 --only-hit --limit 50
+# 双向反查明细（Boss 1）：1314051（共 15 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r07@1:56.4](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1487151&end=1493151) | 驱夜断愁 | 电闪雷鸣(1314051) | hit(死) | 2/0 | 909K(吸498K) | 2%→0% | 纯裸吃 | 佯攻/*暗影斗篷 | 无 | 498K |
+| [r01@0:19.3](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7879116&end=7885116) | 天涯墨丶客 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r02@1:05.4](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=5650328&end=5656328) | Speedamn | 电闪雷鸣(1314051) | immune | 1/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r03@1:05.4](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=536132&end=542132) | 叶落初冬 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r04@0:19.0](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13384185&end=13390185) | 黑川茜贼贼 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 佯攻+暗影斗篷 | 全CD | 无 | — |
+| [r05@1:56.3](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3530532&end=3536532) | 霸天横刀 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻 | 无 | 40.2K |
+| [r06@0:19.9](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=2974722&end=2980722) | 阿鼠 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r09@0:19.7](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=10892333&end=10898333) | 斗篷小王子 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻 | 无 | — |
+| [r10@1:05.3](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13134805&end=13140805) | 弋江水 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻 | 无 | 1.67K |
+| [r11@0:19.2](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7700960&end=7706960) | Serog | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r11@2:47.4](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=7849142&end=7855142) | Serog | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | — |
+| [r12@0:19.1](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=14792358&end=14798358) | 叮呤灵 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻 | 无 | — |
+| [r14@2:43.8](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=4676490&end=4682490) | 风为为 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷 | 佯攻/*闪避 | 无 | 1.66K |
+| [r15@0:19.3](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=9946580&end=9952580) | 等一只七影蝶 | 电闪雷鸣(1314051) | immune | 1/0 | 0 | —→— | 佯攻+暗影斗篷 | 全CD | 无 | — |
+| [r15@2:43.8](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=10091104&end=10097104) | 等一只七影蝶 | 电闪雷鸣(1314051) | immune | 2/0 | 0 | —→— | 暗影斗篷+闪避 | 佯攻 | 无 | — |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次

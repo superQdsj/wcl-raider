@@ -1,0 +1,31 @@
+$ python3 guides/tools/diag.py inspect --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 4 --ability 1302618 --only-hit --limit 50
+# 双向反查明细（Boss 4）：1302618（共 26 条，按最低剩血升序）
+| 样本@时间 | 玩家 | 技能键 | 状态 | 队中/deb | 伤害 | 起手→剩血 | 减伤/其他覆盖 | 就绪牌(*大牌) | ±2s叠伤 | 窗内抬血 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| [r14@3:43.8](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=6270749&end=6276749) | 风为为 | [小怪:堕落的守护者] 邪恶冲锋 | hit(死) | 1/1 | 1.43M(吸156K) | 100%→0% | 佯攻 | *闪避 | 无 | 685K |
+| [r13@1:55.5](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=2030190&end=2036190) | Paparan | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 2.12M(吸175K) | 100%→6% | 佯攻 | *暗影斗篷/*闪避 | 无 | 2.24M |
+| [r10@2:02.4](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=14759625&end=14765625) | 弋江水 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.77M(吸273K) | 100%→11% | 佯攻 | *暗影斗篷 | 无 | 2.05M |
+| [r08@2:14.6](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=10690975&end=10696975) | 啊晴丶 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.89M(吸486K) | 100%→15% | 佯攻+外减:牺牲祝福 | *暗影斗篷 | 无 | 2.02M |
+| [r05@0:23.4](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=4950926&end=4956926) | 霸天横刀 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.56M(吸485K) | 100%→25% | 佯攻 | *暗影斗篷 | 无 | 1.71M |
+| [r13@0:12.5](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1927145&end=1933145) | Paparan | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.63M(吸385K) | 100%→27% | 佯攻 | *暗影斗篷/*闪避 | 无 | 2.02M |
+| [r10@0:12.4](https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=14649640&end=14655640) | 弋江水 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.97M(吸288K) | 100%→27% | 纯裸吃 | 佯攻/*暗影斗篷/*闪避 | 无 | 2.26M |
+| [r04@2:14.8](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=15032343&end=15038343) | 黑川茜贼贼 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.61M(吸154K) | 100%→29% | 佯攻+闪避 | 全CD | 无 | 1.77M |
+| [r15@0:33.2](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=11520809&end=11526809) | 等一只七影蝶 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.77M(吸406K) | 100%→33% | 佯攻 | *闪避 | 138K(腐化) | 2.12M |
+| [r07@2:24.6](https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=3031348&end=3037348) | 驱夜断愁 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.97M(吸198K) | 100%→33% | 佯攻 | 全CD | 无 | 1.64M |
+| [r13@0:23.0](https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1937664&end=1943664) | Paparan | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.76M(吸144K) | 100%→36% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.67M |
+| [r12@2:19.8](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=16447933&end=16453933) | 叮呤灵 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.71M(吸408K) | 100%→37% | 佯攻 | 全CD | 无 | 2.11M |
+| [r08@2:25.4](https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=10701735&end=10707735) | 啊晴丶 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.86M(吸558K) | 100%→37% | 外减:牺牲祝福 | 佯攻/*暗影斗篷 | 无 | 1.62M |
+| [r04@0:23.0](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14920581&end=14926581) | 黑川茜贼贼 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.86M(吸247K) | 100%→40% | 佯攻 | *暗影斗篷 | 无 | 2.11M |
+| [r11@2:11.0](https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=9379462&end=9385462) | Serog | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.57M(吸576K) | 100%→41% | 佯攻 | 全CD | 无 | 2.15M |
+| [r12@0:34.0](https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=16342072&end=16348072) | 叮呤灵 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.65M(吸594K) | 100%→41% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.74M |
+| [r04@1:53.1](https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=15010676&end=15016676) | 黑川茜贼贼 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.88M(吸205K) | 100%→42% | 佯攻 | *闪避 | 无 | 1.82M |
+| [r01@2:06.4](https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9484696&end=9490696) | 天涯墨丶客 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.46M(吸540K) | —→43% | 佯攻 | *暗影斗篷 | 无 | 2.01M |
+| [r03@0:22.8](https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=2000917&end=2006917) | 叶落初冬 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.73M(吸282K) | 100%→46% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.84M |
+| [r06@0:12.6](https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=4533684&end=4539684) | 阿鼠 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.56M(吸567K) | 100%→49% | 佯攻 | *暗影斗篷 | 无 | 2.13M |
+| [r15@2:18.9](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=11626535&end=11632535) | 等一只七影蝶 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 459K(吸147K) | 100%→50% | 佯攻 | *暗影斗篷 | 无 | 606K |
+| [r15@0:12.5](https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=11500079&end=11506079) | 等一只七影蝶 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 698K(吸75.1K) | 100%→52% | 佯攻 | *暗影斗篷/*闪避 | 无 | 773K |
+| [r14@2:27.1](https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=6194122&end=6200122) | 风为为 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.60M(吸767K) | 100%→55% | 佯攻 | 全CD | 246K(腐化) | 2.37M |
+| [r05@2:09.1](https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=5056573&end=5062573) | 霸天横刀 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.71M(吸332K) | 100%→55% | 佯攻 | *闪避 | 无 | 1.93M |
+| [r09@2:08.2](https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=12526395&end=12532395) | 斗篷小王子 | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.68M(吸470K) | 100%→59% | 佯攻 | 全CD | 无 | 1.91M |
+| [r02@2:12.4](https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=7243010&end=7249010) | Speedamn | [小怪:堕落的守护者] 邪恶冲锋 | hit | 1/1 | 1.20M(吸718K) | 100%→70% | 佯攻 | *暗影斗篷/*闪避 | 无 | 1.90M |
+— WCL API (v1)：实时请求 0 次，缓存命中 208 次
