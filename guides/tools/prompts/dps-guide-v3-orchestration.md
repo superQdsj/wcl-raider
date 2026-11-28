@@ -3,7 +3,7 @@
 参数：`<spec-slug>`（如 `hunter-bm`）、`<专精中文名>`（如 兽王猎）、`<dungeon>`（目录 slug，如 `saitalisi`）、`<副本名>`（如 塞塔里斯）。
 下文 `$S` = `guides/<spec-slug>/sources/<dungeon>-v3`，`$C` = `guides/tools/classes/<spec-slug>.json`，`CK` = `python3 guides/tools/check_claims.py`。
 
-原则：数据并行（脚本跑），写作串行（一个写手），审判独立（一个全新上下文）。只有"多个专精一次各出一本"时才每个专精开一路并行。
+原则：数据交给脚本（串行抓取，WCL 有单 IP 频率限制），写作串行（一个写手），审判独立（一个全新上下文）。只有"多个专精一次各出一本"时才每个专精开一路并行。
 
 禁读：`guides/<职业>/*.html`、`dist/`、`sources/*/icons.json`、`guides/tools/diag.py` 全文（用法看 `--help`）、其他专精的成稿（用本文末尾的格式卡代替）。读 diag 输出用 `grep -n` 取需要的段落。
 
@@ -16,7 +16,7 @@
 2. 配置：
    - `$C` 已经是 v3 格式（`defensives` 带 `tier`）：**沿用**，不重建。职业卡和副本无关，换副本只核对差异。
    - 否则按 `guides/tools/classes/paladin-ret.json` 的字段升级或新建 `$C`（`defensives` 的 `tier: normal|major`、`cd`、`dur`、`cleanse_immune`、`blocked_by_debuff`；`utilities`）。技能 ID 只从日志取，不凭记忆。
-3. 落盘：`CK dump $S --wowhead`（并行跑 boss 1–4 和 trash，写到 `$S/diag/*.txt`，每份首行是命令原文）。之后一律不带 `--wowhead`。
+3. 落盘：`CK dump $S --wowhead`（依次跑 boss 1–4 和 trash，不要加大 `--jobs`，写到 `$S/diag/*.txt`，每份首行是命令原文）。之后一律不带 `--wowhead`。
 4. 写 `$S/calibration.md`（不超过 40 行），从 `diag/*.txt` 的「② 手牌预算账」逐项抄：
    - 常规减伤和大牌各是哪些技能，「分母口径」一行原文；
    - 施法 ID 和 Buff ID 不同的技能、被动护盾、锁牌 Debuff、宠物施法；

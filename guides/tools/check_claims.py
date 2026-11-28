@@ -2,7 +2,7 @@
 """v3 攻略稿的机械闸门：落盘 diag 输出、按结构化证据核对稿件、脚本拼接 guide.md。
 
 子命令（仅用标准库）：
-  dump     并行跑 diag.py boss 1-4 + trash，输出落盘到 <src>/diag/（每份首行是命令原文）
+  dump     依次跑 diag.py boss 1-4 + trash，输出落盘到 <src>/diag/（每份首行是命令原文）
   inspect  跑一次 diag.py inspect 并落盘到 <src>/diag/inspect-*.txt，同时打印到 stdout
   check    逐条 PASS/FAIL 核对 boss1-4.md、trash.md（以及 claims.json），有 FAIL 则退出码 1
   merge    把 boss1-4.md + trash.md 拼成 guide.md（不经模型改写）
@@ -568,10 +568,11 @@ def main(argv=None):
         p.add_argument('--diag-dir', help='diag 落盘目录，默认 <src>/diag')
         return p
 
-    p = common(sub.add_parser('dump', help='并行落盘 boss1-4 + trash 诊断'))
+    p = common(sub.add_parser('dump', help='落盘 boss1-4 + trash 诊断（默认串行）'))
     p.add_argument('--class-json')
     p.add_argument('--wowhead', action='store_true', help='带 Wowhead 说明（默认 --no-wowhead）')
-    p.add_argument('--jobs', type=int, default=5)
+    p.add_argument('--jobs', type=int, default=1,
+                   help='同时跑几节（默认 1：各节共用整场查询，串行时后几节全命中缓存；并发高还会触发 WCL 的 IP 限流）')
     p.add_argument('--only', help='只跑部分，如 boss2,trash')
 
     p = common(sub.add_parser('inspect', help='跑 diag inspect 并落盘'))
