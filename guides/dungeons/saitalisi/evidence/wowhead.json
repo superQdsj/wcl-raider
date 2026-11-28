@@ -649,5 +649,215 @@
   "aura": "",
   "dispel": null,
   "icon": "spell_holy_sealofprotection"
+ },
+ "408": {
+  "name": "肾击",
+  "desc": "终结技，使目标昏迷。根据连击点数决定持续时间，最多8秒：\n1点：4秒\n2点：5秒\n3点：6秒\n4点：7秒\n5点：8秒",
+  "aura": "昏迷。\n持续3秒",
+  "dispel": null,
+  "icon": "ability_rogue_kidneyshot"
+ },
+ "1725": {
+  "name": "扰乱",
+  "desc": "投掷物体吸引附近所有怪物的注意力，持续10秒。可在潜行状态下使用。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_distract"
+ },
+ "1766": {
+  "name": "脚踢",
+  "desc": "快速用脚踢目标，打断其正在施放的法术，并使其在6秒内无法施放该系的任何法术。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_kick"
+ },
+ "1833": {
+  "name": "偷袭",
+  "desc": "使目标昏迷6秒。\n奖励1个连击点数。",
+  "aura": "昏迷。\n持续6秒",
+  "dispel": null,
+  "icon": "ability_cheapshot"
+ },
+ "1856": {
+  "name": "消失",
+  "desc": "使你从敌人的视野中消失，在战斗中进入潜行模式。消失后的最初3秒内，受到伤害和有害效果影响都不会脱离潜行。同时解除一切移动限制效果。",
+  "aura": "强化潜行。",
+  "dispel": null,
+  "icon": "ability_vanish"
+ },
+ "1966": {
+  "name": "佯攻",
+  "desc": "做出闪避动作，使你在6秒内因范围攻击而受到的伤害降低40%。",
+  "aura": "受到的范围攻击伤害降低40%[，受到的所有其他伤害减少0%。][。]\n持续6秒",
+  "dispel": null,
+  "icon": "ability_rogue_feint"
+ },
+ "2094": {
+  "name": "致盲",
+  "desc": "天赋 使目标失明并迷惑地乱转，持续1分钟。任何伤害都可能打断此效果。只能对一个目标使用。",
+  "aura": "迷惑。\n持续1分钟",
+  "dispel": null,
+  "icon": "spell_shadow_mindsteal"
+ },
+ "2983": {
+  "name": "疾跑",
+  "desc": "使你的移动速度提高70%，持续8秒。可在潜行状态下使用。 [疾跑: 使你可以在水上奔跑。]",
+  "aura": "移动速度提高70%。 [疾跑: 你可以在水上奔跑。]\n持续8秒",
+  "dispel": null,
+  "icon": "ability_rogue_sprint"
+ },
+ "5277": {
+  "name": "闪避",
+  "desc": "天赋 躲闪几率提高100%，持续10秒。",
+  "aura": "躲闪几率提高100%。\n持续10秒",
+  "dispel": null,
+  "icon": "spell_shadow_shadowward"
+ },
+ "5938": {
+  "name": "毒刃",
+  "desc": "天赋 使用你的 [强化毒刃: 淬毒利刃 / 副手]进行攻击，造成([125.4% of Attack Power])%点物理伤害，驱散所有激怒效果，并对目标施放浓缩形态的激活的非致命药膏。\n奖励1个连击点数。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_throwingknife_04"
+ },
+ "6770": {
+  "name": "闷棍",
+  "desc": "使一个非作战状态下的目标瘫痪1分钟，只能作用于人型生物、野兽、恶魔和龙类。任何伤害都会使其苏醒。同一时间内只能对一个目标使用。",
+  "aura": "瘫痪。\n[受到的伤害提高0%。]\n持续1分钟",
+  "dispel": null,
+  "icon": "ability_sap"
+ },
+ "31224": {
+  "name": "暗影斗篷",
+  "desc": "天赋 提供短暂的魔法免疫，并立即移除所有的有害法术效果。斗篷激活期间，抵抗所有有害法术效果，持续5秒。",
+  "aura": "抵抗所有有害法术。\n持续5秒",
+  "dispel": null,
+  "icon": "spell_shadow_nethercloak"
+ },
+ "36554": {
+  "name": "暗影步",
+  "desc": "在阴影中穿行，出现在目标身后，并使你的移动速度提高70%，持续2秒。 [ 敏锐: 如果你已经习得了暗影步，则暗影步会获得额外1次使用次数。]",
+  "aura": "移动速度提高70%。\n持续2秒",
+  "dispel": null,
+  "icon": "ability_rogue_shadowstep"
+ },
+ "57934": {
+  "name": "嫁祸诀窍",
+  "desc": "天赋 从30秒内的下一次伤害性攻击开始， [偷天换日: 使目标的伤害提高15%，并将你产生的所有威胁值转移 / 将你产生的所有威胁值转移]给选中的小队或团队成员，持续6秒。",
+  "aura": "潜行者产生的威胁值转移到了别人身上。\n持续30秒",
+  "dispel": null,
+  "icon": "ability_rogue_tricksofthetrade"
+ },
+ "79008": {
+  "name": "飘忽不定",
+  "desc": "天赋 闪避还会使受到的伤害降低20%。佯攻还会使受到的非范围类伤害降低20%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_turnthetables"
+ },
+ "114018": {
+  "name": "潜伏帷幕",
+  "desc": "用阴影披风笼罩30码范围内的小队和团队成员，使其在15秒内潜行。",
+  "aura": "使30码范围内的盟友遁入阴影之中。\n持续15秒",
+  "dispel": null,
+  "icon": "ability_rogue_shroudofconcealment"
+ },
+ "185311": {
+  "name": "猩红之瓶",
+  "desc": "喝下一瓶炼金混合物，在4秒内为你恢复20%的最大生命值。",
+  "aura": "每1秒恢复5%的最大生命值。\n持续4秒",
+  "dispel": null,
+  "icon": "ability_rogue_crimsonvial"
+ },
+ "200733": {
+  "name": "刺激弥散",
+  "desc": "天赋 致盲的冷却时间缩短50%，持续时间缩短70%，并会对周围的所有敌人生效。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_bloodyeye"
+ },
+ "231691": {
+  "name": "强化疾跑",
+  "desc": "天赋 使疾跑的冷却时间缩短60秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_sprint"
+ },
+ "231719": {
+  "name": "麻木神经",
+  "desc": "天赋 受到的物理伤害降低5%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_nervesofsteel"
+ },
+ "280716": {
+  "name": "吸血药膏",
+  "desc": "天赋 为你的致命药膏添加吸血效果，使你的吸血提高3.0%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "rogue_leeching_poison"
+ },
+ "378427": {
+  "name": "心灵手巧",
+  "desc": "天赋 佯攻和猩红之瓶的能量消耗降低10点。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_crimsonvial"
+ },
+ "378807": {
+  "name": "暗影奔行者",
+  "desc": "天赋 潜行或暗影之舞激活时，你的移动速度提高20%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_stealth"
+ },
+ "378996": {
+  "name": "休养疗伤",
+  "desc": "天赋 切割激活时，每3秒为你恢复最多1%的最大生命值。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_gizmo_runichealthinjector"
+ },
+ "381637": {
+  "name": "萎缩药膏",
+  "desc": "天赋 使用非致命药膏给你的武器浸毒，效果持续1小时。每次攻击都有30%的几率使敌人中毒，使其造成的伤害降低(4 *- 1)%，持续1分钟。",
+  "aura": "每次攻击都有一定几率使敌人中毒，使其造成的伤害降低(4 *- 1)%，持续1分钟。\n持续1小时",
+  "dispel": null,
+  "icon": "ability_rogue_nervesofsteel"
+ },
+ "423683": {
+  "name": "轻若鸿毛",
+  "desc": "天赋 疾跑使移动速度额外提高30%，持续时间延长4秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_magic_featherfall"
+ },
+ "441247": {
+  "name": "烟雾",
+  "desc": "天赋 惊慌的目标对你造成的伤害降低5%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "rogue_dirtytricks"
+ },
+ "441429": {
+  "name": "云雾笼罩",
+  "desc": "天赋 狂徒\n激活冲动会创造出一片持续6秒的烟雾，使你在烟雾中发动的攻击可以施加惊慌效果，最多额外叠加1次。\n离开烟雾后，该效果仍可维持6秒。\n敏锐\n激活暗影之刃会创造出一片持续6秒的烟雾，使你在烟雾中发动的攻击可以施加惊慌效果，最多额外叠加2次。\n离开烟雾后，该效果仍可维持6秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_smoke"
+ },
+ "1224098": {
+  "name": "嫁祸诀窍",
+  "desc": "从30秒内的下一次伤害性攻击开始， [偷天换日: 使目标的伤害提高15%，并将你产生的所有威胁值转移 / 将你产生的所有威胁值转移]给选中的小队或团队成员，持续6秒。",
+  "aura": "潜行者产生的威胁值转移到了别人身上。\n持续30秒",
+  "dispel": null,
+  "icon": "ability_rogue_tricksofthetrade"
+ },
+ "1267220": {
+  "name": "危险感知",
+  "desc": "天赋 你有20%的几率部分闪避任何对你造成的伤害，使其造成的伤害降低20%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_wrongfullyaccused"
  }
 }

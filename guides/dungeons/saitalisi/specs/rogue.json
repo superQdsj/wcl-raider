@@ -1,0 +1,1277 @@
+{
+  "spec": "rogue",
+  "name": "敏锐贼",
+  "color": "#fff468",
+  "icon": "ability_stealth",
+  "kit": [
+    {
+      "icon": 1966,
+      "name": "佯攻",
+      "text": "6 秒主力减伤，长持续伤害中途要续"
+    },
+    {
+      "icon": 31224,
+      "name": "暗影斗篷",
+      "text": "2 分钟，5 秒免并清法术，不挡物理"
+    },
+    {
+      "icon": 5277,
+      "name": "闪避",
+      "text": "2 分钟，近战躲闪；法术仅减 20%",
+      "warn": true
+    },
+    {
+      "icon": 185311,
+      "name": "猩红之瓶",
+      "text": "30 秒，4 秒回 20% 血，补尾跳和双毒"
+    },
+    {
+      "icon": 2094,
+      "name": "致盲",
+      "text": "1 分钟群盲，停读条和钢条"
+    }
+  ],
+  "kit_src": [
+    "wowhead:1966",
+    "wowhead:31224",
+    "wowhead:5277",
+    "wowhead:79008",
+    "wowhead:185311",
+    "wowhead:200733",
+    "rogue-guide:L12",
+    "rogue-guide:L14",
+    "rogue-guide:L70"
+  ],
+  "bosses": {
+    "b1": {
+      "plan": [
+        {
+          "use": [
+            1966
+          ],
+          "on": {
+            "spell": 1288087
+          },
+          "name": "佯攻",
+          "text": "分摊、暴风和合波叠伤前提前开",
+          "src": [
+            "rogue-guide:L12"
+          ]
+        },
+        {
+          "use": [
+            31224
+          ],
+          "on": {
+            "spell": 1288087
+          },
+          "name": "暗影斗篷",
+          "text": "顶二段惊雷贴脸打，或直接清阵风",
+          "src": [
+            "rogue-guide:L13",
+            "rogue-guide:L14"
+          ]
+        },
+        {
+          "use": [
+            5277,
+            185311
+          ],
+          "on": {
+            "spell": 1288457
+          },
+          "name": "闪避 + 猩红之瓶",
+          "text": "合波阵风叠小怪伤时补减伤稳血",
+          "src": [
+            "rogue-guide:L15"
+          ]
+        }
+      ],
+      "do": {
+        "1288087": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "一段分摊前提前开，裸吃叠伤容易暴毙。",
+            "src": [
+              "rogue-guide:L12"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "二段惊雷开斗篷贴脸 0 伤，斗篷在冷却就跑出 20 码。",
+            "src": [
+              "rogue-guide:L13"
+            ]
+          },
+          {
+            "icon": 5277,
+            "kind": "skip",
+            "label": "别交闪避",
+            "text": "法术会穿透闪避，只减 20%，顶不住二段惊雷。",
+            "src": [
+              "rogue-guide:L14"
+            ]
+          }
+        ],
+        "1288457": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "合波叠震地或锯齿冲锋时必须保持佯攻，必要时补闪避或猩红之瓶。",
+            "src": [
+              "rogue-guide:L15"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "叠分摊或暴风时开，能立刻清掉阵风持续伤害。",
+            "src": [
+              "rogue-guide:L14"
+            ]
+          }
+        ],
+        "1311808": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "被点名提前开，纯裸吃容易残血，叠小怪伤会秒人。",
+            "src": [
+              "rogue-guide:L12"
+            ]
+          }
+        ],
+        "1310712": [
+          {
+            "icon": 1966,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血单吃，注意站位别被吹进暴风圈。",
+            "src": [
+              "rogue-guide:L11"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            1966
+          ],
+          "cross": true,
+          "title": "别在佯攻就绪时裸吃暴风或分摊",
+          "text": "实测死亡全发生在纯裸吃且佯攻没交，合波叠伤时更不能省。",
+          "src": [
+            "rogue-guide:L9",
+            "rogue-guide:L15"
+          ]
+        },
+        {
+          "icons": [
+            5277
+          ],
+          "cross": true,
+          "title": "别拿闪避硬顶二段惊雷",
+          "text": "闪避对法术只靠天赋减伤 20%，斗篷在冷却时必须老实跑出 20 码。",
+          "src": [
+            "rogue-guide:L13",
+            "rogue-guide:L14"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "裸吃阵风叠电闪雷鸣和箭雨，佯攻未交死亡",
+          "label": "r05 2:42.5",
+          "url": "https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=3576772&end=3582772"
+        },
+        {
+          "text": "裸吃蜿蜒打击叠暴风死亡",
+          "label": "r06 1:23.8",
+          "url": "https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=3038606&end=3044606"
+        },
+        {
+          "text": "裸吃二段惊雷直接秒杀",
+          "label": "r07 1:56.4",
+          "url": "https://www.warcraftlogs.com/reports/vwJN42fQXTk9Am83#fight=4&view=events&start=1487151&end=1493151"
+        },
+        {
+          "text": "暗影斗篷贴脸 0 伤免疫二段惊雷",
+          "label": "r01 0:19.3",
+          "url": "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=7879116&end=7885116"
+        },
+        {
+          "text": "暗影斗篷立刻清掉阵风持续伤害",
+          "label": "r10 1:02.8",
+          "url": "https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13132294&end=13138294"
+        },
+        {
+          "text": "满血裸吃狂风之力，稳稳吃下",
+          "label": "r03 0:09.4",
+          "url": "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=480148&end=486148"
+        }
+      ]
+    },
+    "b2": {
+      "plan": [
+        {
+          "use": [
+            1966
+          ],
+          "on": {
+            "spell": 1293048
+          },
+          "name": "佯攻",
+          "text": "毒蛇风暴和雷霆喷吐都提前开，尾跳可续",
+          "src": [
+            "rogue-guide:L27"
+          ]
+        },
+        {
+          "use": [
+            31224
+          ],
+          "on": {
+            "spell": 1293048
+          },
+          "name": "暗影斗篷",
+          "text": "免雷霆喷吐，或直接清掉毒蛇风暴",
+          "src": [
+            "rogue-guide:L28"
+          ]
+        },
+        {
+          "use": [
+            1766,
+            2094
+          ],
+          "on": {
+            "spell": 267027
+          },
+          "name": "脚踢 + 致盲",
+          "text": "转阶段全留给剧毒蝰蛇的毒素喷吐",
+          "src": [
+            "rogue-guide:L29"
+          ]
+        }
+      ],
+      "do": {
+        "263958": [
+          {
+            "icon": 1966,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "伤害很低，等队友顺劈或群控救出即可。",
+            "src": [
+              "rogue-guide:L26"
+            ]
+          }
+        ],
+        "1289109": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "被点名边移动躲雷击边开。",
+            "src": [
+              "rogue-guide:L27"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "紧急时可完全免疫雷霆喷吐。",
+            "src": [
+              "rogue-guide:L28"
+            ]
+          }
+        ],
+        "1293048": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "提前开；持续 8 秒会漏最后 2 秒尾跳，血低就补第二发。",
+            "src": [
+              "rogue-guide:L27"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "能直接免疫，也能立刻清掉不可驱散的持续伤害。",
+            "src": [
+              "rogue-guide:L28"
+            ]
+          }
+        ],
+        "1300227": [
+          {
+            "icon": 31224,
+            "kind": "skip",
+            "label": "别交斗篷",
+            "text": "钻地之震会穿透暗影斗篷，免疫不了。",
+            "src": [
+              "rogue-guide:L28"
+            ]
+          }
+        ],
+        "267027": [
+          {
+            "icon": 1766,
+            "kind": "do",
+            "label": "脚踢",
+            "text": "盯着断，漏断叠钻地之震会直接打残。",
+            "src": [
+              "rogue-guide:L29"
+            ]
+          },
+          {
+            "icon": 2094,
+            "kind": "do",
+            "label": "致盲",
+            "text": "脚踢在冷却时补控，锁死读条。",
+            "src": [
+              "rogue-guide:L29"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            31224
+          ],
+          "cross": true,
+          "title": "别用暗影斗篷去顶钻地之震",
+          "text": "钻地之震会穿透斗篷照常掉血，斗篷留给毒蛇风暴、雷霆喷吐或雷池。",
+          "src": [
+            "rogue-guide:L28"
+          ]
+        },
+        {
+          "icons": [
+            1289205
+          ],
+          "cross": true,
+          "title": "小蛇孵化时别抢在坦克前面打",
+          "text": "避免抢仇恨吃平砍，钻地阶段专心躲钻地路径并锁死毒素喷吐。",
+          "src": [
+            "rogue-guide:L29"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "钻地之震压到半血后吃钻地撞击死亡",
+          "label": "r14 2:32.5",
+          "url": "https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=5298652&end=5304652"
+        },
+        {
+          "text": "漏断毒素喷吐叠钻地之震，剩 7% 血",
+          "label": "r01 2:45.6",
+          "url": "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8624631&end=8630631"
+        },
+        {
+          "text": "暗影斗篷立刻清掉毒蛇风暴持续伤害",
+          "label": "r13 2:19.0",
+          "url": "https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1126647&end=1132647"
+        },
+        {
+          "text": "暗影斗篷完全免疫雷霆喷吐",
+          "label": "r04 3:49.6",
+          "url": "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=14193828&end=14199828"
+        },
+        {
+          "text": "钻地之震穿透暗影斗篷，照常掉血",
+          "label": "r01 2:47.6",
+          "url": "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=8626634&end=8632634"
+        }
+      ]
+    },
+    "b3": {
+      "plan": [
+        {
+          "use": [
+            1966
+          ],
+          "on": {
+            "spell": 1290531
+          },
+          "name": "佯攻",
+          "text": "每轮诱导都提前开，绝不裸吃",
+          "src": [
+            "rogue-guide:L40"
+          ]
+        },
+        {
+          "use": [
+            31224
+          ],
+          "on": {
+            "spell": 266923
+          },
+          "name": "暗影斗篷",
+          "text": "应急挡长线、免诱导，或清放电减伤",
+          "src": [
+            "rogue-guide:L42",
+            "rogue-guide:L43"
+          ]
+        },
+        {
+          "use": [
+            185311
+          ],
+          "on": {
+            "spell": 266923
+          },
+          "name": "猩红之瓶",
+          "text": "需要长挡镀流、血线过半时稳血",
+          "src": [
+            "rogue-guide:L43"
+          ]
+        }
+      ],
+      "do": {
+        "266923": [
+          {
+            "icon": 1966,
+            "kind": "skip",
+            "label": "短挡不开",
+            "text": "满血短挡 1–2 秒换人即可，大牌留给长挡波次。",
+            "src": [
+              "rogue-guide:L41"
+            ]
+          },
+          {
+            "icon": 185311,
+            "kind": "do",
+            "label": "自疗/斗篷",
+            "text": "单人长挡血过半要及时换人，或交猩红之瓶、暗影斗篷。",
+            "src": [
+              "rogue-guide:L43"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "plain",
+            "text": "漏挡触发放电后，开暗影斗篷能立刻清掉 20 秒减伤效果。",
+            "src": [
+              "rogue-guide:L42"
+            ]
+          }
+        ],
+        "1290531": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "每轮诱导前必开，纯裸吃可能被直接秒杀。",
+            "src": [
+              "rogue-guide:L40"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "可 0 伤免疫诱导，连同随后的诱导力场一起免掉。",
+            "src": [
+              "rogue-guide:L42"
+            ]
+          }
+        ],
+        "1291815": [
+          {
+            "icon": 31224,
+            "kind": "plain",
+            "text": "诱导落地后立刻移出电水；开着暗影斗篷期间可免疫跳伤。",
+            "src": [
+              "rogue-guide:L42",
+              "rogue-guide:L43"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            1966
+          ],
+          "cross": true,
+          "title": "别裸吃诱导",
+          "text": "诱导约 23 秒一轮，佯攻每轮都够用，纯裸吃会被直接打残甚至秒杀。",
+          "src": [
+            "rogue-guide:L40"
+          ]
+        },
+        {
+          "icons": [
+            5277
+          ],
+          "cross": true,
+          "title": "别指望佯攻加闪避单人吃满整根镀流",
+          "text": "闪避对镀流仅减伤 20%，单人硬吃多跳会被打穿，血过半必须换人或交斗篷。",
+          "src": [
+            "rogue-guide:L42",
+            "rogue-guide:L43"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "92% 血裸吃诱导直接秒杀",
+          "label": "r12 1:09.5",
+          "url": "https://www.warcraftlogs.com/reports/7N92JyPbGhRMrKCQ#fight=1&view=events&start=15890893&end=15896893"
+        },
+        {
+          "text": "满血裸吃诱导掉到 5% 血",
+          "label": "r02 0:47.0",
+          "url": "https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=6680587&end=6686587"
+        },
+        {
+          "text": "开着佯攻和闪避连续硬吃 6 跳镀流被打死",
+          "label": "r13 0:36.6",
+          "url": "https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=1462850&end=1468850"
+        },
+        {
+          "text": "暗影斗篷 0 伤免疫诱导和诱导力场",
+          "label": "r01 3:26.9",
+          "url": "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9100109&end=9106109"
+        },
+        {
+          "text": "暗影斗篷立刻清掉放电减伤效果",
+          "label": "r05 0:21.3",
+          "url": "https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=4474979&end=4480979"
+        }
+      ]
+    },
+    "b4": {
+      "plan": [
+        {
+          "use": [
+            1966
+          ],
+          "on": {
+            "spell": 1300877
+          },
+          "name": "佯攻",
+          "text": "邪恶冲锋和腐化全程续档，防尾跳断档",
+          "src": [
+            "rogue-guide:L54",
+            "rogue-guide:L55"
+          ]
+        },
+        {
+          "use": [
+            31224
+          ],
+          "on": {
+            "spell": 1302761
+          },
+          "name": "暗影斗篷",
+          "text": "贴脸免死爆，或直接清掉邪恶冲锋",
+          "src": [
+            "rogue-guide:L56",
+            "rogue-guide:L57"
+          ]
+        },
+        {
+          "use": [
+            5277,
+            185311
+          ],
+          "on": {
+            "spell": 1300877
+          },
+          "name": "闪避 + 猩红之瓶",
+          "text": "腐化中段或冲锋尾跳告急时补上",
+          "src": [
+            "rogue-guide:L54",
+            "rogue-guide:L55"
+          ]
+        }
+      ],
+      "do": {
+        "1300877": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "续满佯攻",
+            "text": "腐化持续 15 秒，中途续 2–3 发佯攻，告急补猩红之瓶或闪避。",
+            "src": [
+              "rogue-guide:L55"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "plain",
+            "text": "暗影斗篷只免 5 秒伤害、清不掉腐化，结束后剩下几秒仍会掉血。",
+            "src": [
+              "rogue-guide:L57"
+            ]
+          }
+        ],
+        "1302618": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "续佯攻",
+            "text": "持续 8 秒超单发佯攻 6 秒，中途必须续第二发，或补闪避、猩红之瓶。",
+            "src": [
+              "rogue-guide:L54"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "血线吃紧时可直接清掉邪恶冲锋的持续伤害。",
+            "src": [
+              "rogue-guide:L54",
+              "rogue-guide:L57"
+            ]
+          }
+        ],
+        "1302761": [
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "开斗篷贴脸 0 伤免疫，不用跑出 20 码，立刻接领腐化。",
+            "src": [
+              "rogue-guide:L56"
+            ]
+          }
+        ],
+        "1302158": [
+          {
+            "icon": 1766,
+            "kind": "do",
+            "label": "脚踢",
+            "text": "顺手打断烈焰震击，同时躲开治疗脚下的妖术淤泥。",
+            "src": [
+              "rogue-guide:L58"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            1302618
+          ],
+          "cross": true,
+          "title": "中了邪恶冲锋别只交一发佯攻就不管",
+          "text": "持续 8 秒会漏最后 2 秒尾跳，实测唯一死亡就是没续牌被尾跳跳死。",
+          "src": [
+            "rogue-guide:L54",
+            "rogue-guide:L58"
+          ]
+        },
+        {
+          "icons": [
+            31224
+          ],
+          "cross": true,
+          "title": "别以为暗影斗篷能清掉腐化",
+          "text": "斗篷只能免 5 秒伤害，清不掉 15 秒腐化，斗篷结束必须接上佯攻。",
+          "src": [
+            "rogue-guide:L57"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "邪恶冲锋只交一发佯攻未补牌，尾跳死亡",
+          "label": "r14 3:49.8",
+          "url": "https://www.warcraftlogs.com/reports/MVHjbrKhkRTBxvgz#fight=8&view=events&start=6276774&end=6282774"
+        },
+        {
+          "text": "暗影斗篷立刻清掉邪恶冲锋持续伤害",
+          "label": "r15 0:14.0",
+          "url": "https://www.warcraftlogs.com/reports/Xra2gck8z4dD1VvF#fight=1&view=events&start=11501652&end=11507652"
+        },
+        {
+          "text": "暗影斗篷贴脸 0 伤免疫不稳定腐化死爆",
+          "label": "r02 2:27.3",
+          "url": "https://www.warcraftlogs.com/reports/F1vmzABpngjq4rw2#fight=1&view=events&start=7257939&end=7263939"
+        },
+        {
+          "text": "暗影斗篷免掉腐化 5 秒但清不掉，结束后照常掉血",
+          "label": "r01 2:41.5",
+          "url": "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9519783&end=9525783"
+        },
+        {
+          "text": "腐化期间单佯攻断档，被打到 11% 血",
+          "label": "r11 0:54.3",
+          "url": "https://www.warcraftlogs.com/reports/kam927fpDT8KRhVM#fight=12&view=events&start=9302785&end=9308785"
+        }
+      ]
+    }
+  },
+  "trash": {
+    "t0": {
+      "plan": [
+        {
+          "use": [
+            1966
+          ],
+          "on": {
+            "spell": 265966
+          },
+          "name": "佯攻",
+          "text": "每次震地提前开，裸吃容易打残",
+          "src": [
+            "rogue-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            5277
+          ],
+          "on": {
+            "spell": 1308113
+          },
+          "name": "闪避",
+          "text": "能 0 伤免疫箭雨，但挡不住震地和流血",
+          "src": [
+            "rogue-guide:L70"
+          ]
+        },
+        {
+          "use": [
+            2094,
+            1766
+          ],
+          "on": {
+            "spell": 1308113
+          },
+          "name": "致盲 + 脚踢",
+          "text": "致盲停箭雨，脚踢断风暴能手闪电箭",
+          "src": [
+            "rogue-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "265966": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "每次震地前提前开，裸吃容易打残。",
+            "src": [
+              "rogue-guide:L69"
+            ]
+          },
+          {
+            "icon": 5277,
+            "kind": "skip",
+            "label": "别交闪避",
+            "text": "震地会穿透闪避，只减伤 20%。",
+            "src": [
+              "rogue-guide:L70"
+            ]
+          }
+        ],
+        "1291399": [
+          {
+            "icon": 31224,
+            "kind": "skip",
+            "label": "别交斗篷",
+            "text": "物理流血会穿透斗篷，免疫不了。",
+            "src": [
+              "rogue-guide:L70",
+              "rogue-guide:L74"
+            ]
+          },
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "流血叠震地或其他技能时必须开。",
+            "src": [
+              "rogue-guide:L15",
+              "rogue-guide:L69"
+            ]
+          }
+        ],
+        "1308113": [
+          {
+            "icon": 2094,
+            "kind": "do",
+            "label": "致盲",
+            "text": "直接停掉流沙猎手的箭雨引导。",
+            "src": [
+              "rogue-guide:L72"
+            ]
+          },
+          {
+            "icon": 5277,
+            "kind": "do",
+            "label": "闪避",
+            "text": "被点名且没控住时，闪避可 0 伤免疫箭雨。",
+            "src": [
+              "rogue-guide:L70"
+            ]
+          }
+        ],
+        "1291262": [
+          {
+            "icon": 1766,
+            "kind": "do",
+            "label": "脚踢",
+            "text": "必断。",
+            "src": [
+              "rogue-guide:L72"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "裸吃震地掉到 14% 血",
+          "label": "r04 1:15.4",
+          "url": "https://www.warcraftlogs.com/reports/nJWT6jHVAXvCwYym#fight=24&view=events&start=13318983&end=13324983"
+        },
+        {
+          "text": "闪避 0 伤免疫流沙猎手箭雨",
+          "label": "r03 8:17.2",
+          "url": "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=861344&end=867344"
+        },
+        {
+          "text": "暗影斗篷挡不住物理锯齿冲锋",
+          "label": "r03 7:10.5",
+          "url": "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=794629&end=800629"
+        }
+      ]
+    },
+    "t1": {
+      "plan": [
+        {
+          "use": [
+            31224
+          ],
+          "on": {
+            "spell": 1308148
+          },
+          "name": "暗影斗篷",
+          "text": "紧急时立刻清掉细胞毒素",
+          "src": [
+            "rogue-guide:L70",
+            "rogue-guide:L73"
+          ]
+        },
+        {
+          "use": [
+            185311
+          ],
+          "on": {
+            "spell": 1291399
+          },
+          "name": "猩红之瓶",
+          "text": "锯齿冲锋叠细胞毒素双持续伤害时稳血",
+          "src": [
+            "rogue-guide:L73"
+          ]
+        },
+        {
+          "use": [
+            1766
+          ],
+          "on": {
+            "spell": 1310683
+          },
+          "name": "脚踢",
+          "text": "毒箭、扰乱心智、闪电箭必断",
+          "src": [
+            "rogue-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "1308148": [
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "没有主动驱散；治疗忙不过来或叠流血时，开斗篷立刻自清。",
+            "src": [
+              "rogue-guide:L70",
+              "rogue-guide:L73"
+            ]
+          },
+          {
+            "icon": 185311,
+            "kind": "do",
+            "label": "猩红之瓶",
+            "text": "叠锯齿冲锋时交，配合佯攻稳血。",
+            "src": [
+              "rogue-guide:L73"
+            ]
+          }
+        ],
+        "1291399": [
+          {
+            "icon": 31224,
+            "kind": "skip",
+            "label": "别交斗篷",
+            "text": "物理流血会穿透斗篷，免疫不了。",
+            "src": [
+              "rogue-guide:L70",
+              "rogue-guide:L74"
+            ]
+          },
+          {
+            "icon": 185311,
+            "kind": "do",
+            "label": "猩红之瓶",
+            "text": "流血叠细胞毒素时立刻开，防止血线崩掉。",
+            "src": [
+              "rogue-guide:L73"
+            ]
+          }
+        ],
+        "1310683": [
+          {
+            "icon": 1766,
+            "kind": "do",
+            "label": "脚踢",
+            "text": "必断，漏断叠伤会直接打残。",
+            "src": [
+              "rogue-guide:L72",
+              "rogue-guide:L78"
+            ]
+          }
+        ],
+        "1293307": [
+          {
+            "icon": 1766,
+            "kind": "do",
+            "label": "脚踢",
+            "text": "必断。",
+            "src": [
+              "rogue-guide:L72"
+            ]
+          }
+        ],
+        "1293133": [
+          {
+            "icon": 31224,
+            "kind": "plain",
+            "text": "暗影斗篷期间可 0 伤免疫雷池。",
+            "src": [
+              "rogue-guide:L28"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "暗影斗篷立刻清掉细胞毒素",
+          "label": "r03 7:07.6",
+          "url": "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=791763&end=797763"
+        },
+        {
+          "text": "锯齿冲锋叠伤被打到 5% 血",
+          "label": "r09 6:33.9",
+          "url": "https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11156825&end=11162825"
+        },
+        {
+          "text": "漏断毒箭叠锯齿冲锋被打到 14% 血",
+          "label": "r13 11:01.3",
+          "url": "https://www.warcraftlogs.com/reports/DTNp3wMR7jdCnKWr#fight=3&view=events&start=934933&end=940933"
+        }
+      ]
+    },
+    "t2": {
+      "plan": [
+        {
+          "use": [
+            1966
+          ],
+          "on": {
+            "spell": 1293475
+          },
+          "name": "佯攻",
+          "text": "每次释放电荷都提前开",
+          "src": [
+            "rogue-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            31224
+          ],
+          "on": {
+            "spell": 1293475
+          },
+          "name": "暗影斗篷",
+          "text": "高压波次直接 0 伤免疫释放电荷",
+          "src": [
+            "rogue-guide:L70"
+          ]
+        },
+        {
+          "use": [
+            1766,
+            2094
+          ],
+          "on": {
+            "spell": 1291262
+          },
+          "name": "脚踢 + 致盲",
+          "text": "锁死唤雷者闪电箭，致盲补停读条",
+          "src": [
+            "rogue-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "1293475": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "开佯攻",
+            "text": "每次释放电荷前提前开，靠队友驱散积攒电荷减压。",
+            "src": [
+              "rogue-guide:L69",
+              "rogue-guide:L73"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "血线低或连爆时开，完全免疫伤害。",
+            "src": [
+              "rogue-guide:L70"
+            ]
+          }
+        ],
+        "1291262": [
+          {
+            "icon": 1766,
+            "kind": "do",
+            "label": "脚踢",
+            "text": "必断。",
+            "src": [
+              "rogue-guide:L72"
+            ]
+          },
+          {
+            "icon": 2094,
+            "kind": "do",
+            "label": "致盲",
+            "text": "脚踢在冷却时停唤雷者读条。",
+            "src": [
+              "rogue-guide:L72"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "释放电荷被打到 15% 血",
+          "label": "r09 17:05.9",
+          "url": "https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=11788827&end=11794827"
+        },
+        {
+          "text": "暗影斗篷 0 伤免疫释放电荷",
+          "label": "r03 16:49.3",
+          "url": "https://www.warcraftlogs.com/reports/JR9FpGthrn3CmcAk#fight=1&view=events&start=1373485&end=1379485"
+        },
+        {
+          "text": "释放电荷残血 15%",
+          "label": "r10 16:39.3",
+          "url": "https://www.warcraftlogs.com/reports/fap9JHybDMvNTcgZ#fight=19&view=events&start=13982813&end=13988813"
+        }
+      ]
+    },
+    "t3": {
+      "plan": [
+        {
+          "use": [
+            1966
+          ],
+          "on": {
+            "spell": 1303486
+          },
+          "name": "佯攻",
+          "text": "蚀骨践踏提前开，中途必须续第二发",
+          "src": [
+            "rogue-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            31224
+          ],
+          "on": {
+            "spell": 1303486
+          },
+          "name": "暗影斗篷",
+          "text": "0 伤免疫蚀骨践踏，也能直接清掉",
+          "src": [
+            "rogue-guide:L70"
+          ]
+        },
+        {
+          "use": [
+            2094
+          ],
+          "on": {
+            "npc": 80961
+          },
+          "name": "致盲",
+          "text": "停走廊神庙干扰者，大牌留给两波守望者",
+          "src": [
+            "rogue-guide:L71",
+            "rogue-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "1303486": [
+          {
+            "icon": 1966,
+            "kind": "do",
+            "label": "续佯攻",
+            "text": "持续 10 秒，单发佯攻只盖 6 秒，中途必须续第二发或补闪避、猩红之瓶。",
+            "src": [
+              "rogue-guide:L69",
+              "rogue-guide:L73"
+            ]
+          },
+          {
+            "icon": 31224,
+            "kind": "do",
+            "label": "暗影斗篷",
+            "text": "提前开可 0 伤免疫，挂上后开也能立刻清掉。",
+            "src": [
+              "rogue-guide:L70"
+            ]
+          }
+        ],
+        "268013": [
+          {
+            "icon": 1766,
+            "kind": "do",
+            "label": "脚踢",
+            "text": "必断。",
+            "src": [
+              "rogue-guide:L72"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "蚀骨践踏压到 47% 后吃近战平砍死亡",
+          "label": "r09 24:22.0",
+          "url": "https://www.warcraftlogs.com/reports/4PZxpvB9dMcD8Jgw#fight=1&view=events&start=12224907&end=12230907"
+        },
+        {
+          "text": "蚀骨践踏被打到 6% 血",
+          "label": "r05 24:05.3",
+          "url": "https://www.warcraftlogs.com/reports/catLdGMDyhBCJ3RQ#fight=9&view=events&start=4749634&end=4755634"
+        },
+        {
+          "text": "暗影斗篷 0 伤免疫蚀骨践踏",
+          "label": "r01 24:37.7",
+          "url": "https://www.warcraftlogs.com/reports/HG7dTNB6MDVf8hzq#fight=1&view=events&start=9226931&end=9232931"
+        },
+        {
+          "text": "暗影斗篷立刻清掉蚀骨践踏",
+          "label": "r06 25:10.0",
+          "url": "https://www.warcraftlogs.com/reports/tBKM3YnmzZFhaLbc#fight=7&view=events&start=4388564&end=4394564"
+        },
+        {
+          "text": "塞塔里斯之眼能量虹吸满血裸吃稳住",
+          "label": "r08 23:25.7",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=10340772&end=10346772"
+        }
+      ]
+    }
+  },
+  "talents": {
+    "hero": "欺诈者",
+    "string_from": "evidence/tstring-rogue.json",
+    "sub": "高分记录里最常见的一套，导入就能用。下面几个天赋这本用得上，别换掉。",
+    "src": [
+      "talents-rogue"
+    ],
+    "keys": [
+      {
+        "id": 79008,
+        "name": "飘忽不定",
+        "text": "让佯攻对单体也减伤 20%，闪避对法术减伤 20%，全程保命核心。",
+        "where": [
+          "b1",
+          "b2",
+          "b3",
+          "b4"
+        ],
+        "src": [
+          "wowhead:79008",
+          "rogue-guide:L14",
+          "rogue-guide:L42"
+        ]
+      },
+      {
+        "id": 200733,
+        "name": "刺激弥散",
+        "text": "致盲冷却减半且变成群体致盲，用来停剧毒蝰蛇、箭雨和神庙干扰者。",
+        "where": [
+          "b2",
+          "t0",
+          "t3"
+        ],
+        "src": [
+          "wowhead:200733",
+          "rogue-guide:L29",
+          "rogue-guide:L72"
+        ]
+      },
+      {
+        "id": 378427,
+        "name": "心灵手巧",
+        "text": "降低佯攻和猩红之瓶的能量消耗，高频续佯攻不卡手。",
+        "where": [
+          "b3",
+          "b4",
+          "t3"
+        ],
+        "src": [
+          "wowhead:378427",
+          "rogue-guide:L40",
+          "rogue-guide:L55"
+        ]
+      },
+      {
+        "id": 381637,
+        "name": "萎缩药膏",
+        "text": "让目标造成的伤害降低 4%，高压首领和小怪全程常驻。",
+        "where": [
+          "b1",
+          "b3",
+          "t2"
+        ],
+        "src": [
+          "wowhead:381637",
+          "talents-rogue"
+        ]
+      }
+    ]
+  }
+}

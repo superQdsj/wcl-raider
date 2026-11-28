@@ -1,0 +1,453 @@
+{
+ "player": "r01_天涯墨丶客",
+ "specId": 261,
+ "hero_tree": {
+  "en": "Trickster",
+  "zh": "欺诈者"
+ },
+ "string": "CUQAAAAAAAAAAAAAAAAAAAAAAAgx2MAAAAAwsMGLTMbLjxMMjhZmZGzMbzYmZbZMzMzMjBjZ2GAAAAGMGwYWMMwAzCL0iNMDYmBzYA",
+ "talents": [
+  "Airborne Irritant",
+  "Alacrity",
+  "Ancient Arts",
+  "Atrophic Poison",
+  "Blind",
+  "Clever Combatant",
+  "Cloak of Shadows",
+  "Cloud Cover",
+  "Cold Blooded Killer",
+  "Coup de Grace",
+  "Danger Sense",
+  "Danse Macabre",
+  "Dark Shadow",
+  "Deadened Nerves",
+  "Deadly Precision",
+  "Death Perception",
+  "Deep Cuts",
+  "Deepening Shadows",
+  "Deeper Daggers",
+  "Deeper Stratagem",
+  "Devious Distractions",
+  "Disorienting Strikes",
+  "Double Dance",
+  "Elusiveness",
+  "Evasion",
+  "Exhilarating Execution",
+  "Fade to Nothing",
+  "Featherfoot",
+  "Find Weakness",
+  "Flashing Steel",
+  "Flawless Form",
+  "Fleet Footed",
+  "Forced Induction",
+  "Goremaw's Bite",
+  "Graceful Guile",
+  "Hoodwink",
+  "Improved Ambush",
+  "Improved Backstab",
+  "Improved Find Weakness",
+  "Improved Secret Technique",
+  "Improved Shuriken Storm",
+  "Improved Sprint",
+  "Leeching Poison",
+  "Lethality",
+  "Lingering Shadow",
+  "Master Poisoner",
+  "Master of Shadows",
+  "Nimble Fingers",
+  "Nimble Flurry",
+  "Planned Execution",
+  "Potent Powder",
+  "Premeditation",
+  "Quick Fingers",
+  "Recuperator",
+  "Relentless Strikes",
+  "Replicating Shadows",
+  "Secret Stratagem",
+  "Shadow Blades",
+  "Shadow Focus",
+  "Shadowcraft",
+  "Shadowed Finishers",
+  "Shadowrunner",
+  "Shiv",
+  "Silent Storm",
+  "Smoke",
+  "So Tricky",
+  "Supercharger",
+  "Surprising Strikes",
+  "Swift Slasher",
+  "Thousand Cuts",
+  "Thrill Seeking",
+  "Tricks of the Trade",
+  "Trickster",
+  "Umbral Edge",
+  "Unseen Blade",
+  "Virulent Poisons"
+ ],
+ "talents_zh": {
+  "Airborne Irritant": {
+   "zh": "刺激弥散",
+   "spellId": 200733
+  },
+  "Alacrity": {
+   "zh": "敏锐",
+   "spellId": 193539
+  },
+  "Ancient Arts": {
+   "zh": "诡谋承袭",
+   "spellId": 1268939
+  },
+  "Atrophic Poison": {
+   "zh": "萎缩药膏",
+   "spellId": 381637
+  },
+  "Blind": {
+   "zh": "致盲",
+   "spellId": 2094
+  },
+  "Clever Combatant": {
+   "zh": "灵巧争斗者",
+   "spellId": 1276679
+  },
+  "Cloak of Shadows": {
+   "zh": "暗影斗篷",
+   "spellId": 31224
+  },
+  "Cloud Cover": {
+   "zh": "云雾笼罩",
+   "spellId": 441429
+  },
+  "Cold Blooded Killer": {
+   "zh": "冷血杀手",
+   "spellId": 382245
+  },
+  "Coup de Grace": {
+   "zh": "致命一击",
+   "spellId": 441423
+  },
+  "Danger Sense": {
+   "zh": "危险感知",
+   "spellId": 1267220
+  },
+  "Danse Macabre": {
+   "zh": "断魂之舞",
+   "spellId": 382528
+  },
+  "Dark Shadow": {
+   "zh": "黑暗之影",
+   "spellId": 245687
+  },
+  "Deadened Nerves": {
+   "zh": "麻木神经",
+   "spellId": 231719
+  },
+  "Deadly Precision": {
+   "zh": "致命精准",
+   "spellId": 381542
+  },
+  "Death Perception": {
+   "zh": "死亡感知",
+   "spellId": 469642
+  },
+  "Deep Cuts": {
+   "zh": "深可见骨",
+   "spellId": 1267216
+  },
+  "Deepening Shadows": {
+   "zh": "侵蚀之影",
+   "spellId": 185314
+  },
+  "Deeper Daggers": {
+   "zh": "深刺匕首",
+   "spellId": 382517
+  },
+  "Deeper Stratagem": {
+   "zh": "深邃诡计",
+   "spellId": 193531
+  },
+  "Devious Distractions": {
+   "zh": "调虎离山",
+   "spellId": 441263
+  },
+  "Disorienting Strikes": {
+   "zh": "惊惑突袭",
+   "spellId": 441274
+  },
+  "Double Dance": {
+   "zh": "舞影成双",
+   "spellId": 394930
+  },
+  "Elusiveness": {
+   "zh": "飘忽不定",
+   "spellId": 79008
+  },
+  "Evasion": {
+   "zh": "闪避",
+   "spellId": 5277
+  },
+  "Exhilarating Execution": {
+   "zh": "振奋处刑",
+   "spellId": 428486
+  },
+  "Fade to Nothing": {
+   "zh": "隐匿无踪",
+   "spellId": 382514
+  },
+  "Featherfoot": {
+   "zh": "轻若鸿毛",
+   "spellId": 423683
+  },
+  "Find Weakness": {
+   "zh": "洞悉弱点",
+   "spellId": 91023
+  },
+  "Flashing Steel": {
+   "zh": "闪刃",
+   "spellId": 1276630
+  },
+  "Flawless Form": {
+   "zh": "无瑕之形",
+   "spellId": 441321
+  },
+  "Fleet Footed": {
+   "zh": "健步如飞",
+   "spellId": 378813
+  },
+  "Forced Induction": {
+   "zh": "强制增压",
+   "spellId": 470668
+  },
+  "Goremaw's Bite": {
+   "zh": "赤喉之咬",
+   "spellId": 426591
+  },
+  "Graceful Guile": {
+   "zh": "优雅诡谋",
+   "spellId": 423647
+  },
+  "Hoodwink": {
+   "zh": "欺瞒",
+   "spellId": 1276626
+  },
+  "Improved Ambush": {
+   "zh": "强化伏击",
+   "spellId": 381620
+  },
+  "Improved Backstab": {
+   "zh": "强化背刺",
+   "spellId": 319949
+  },
+  "Improved Find Weakness": {
+   "zh": "强化洞悉弱点",
+   "spellId": 382512
+  },
+  "Improved Secret Technique": {
+   "zh": "强化影分身",
+   "spellId": 1279444
+  },
+  "Improved Shuriken Storm": {
+   "zh": "强化袖剑风暴",
+   "spellId": 319951
+  },
+  "Improved Sprint": {
+   "zh": "强化疾跑",
+   "spellId": 231691
+  },
+  "Leeching Poison": {
+   "zh": "吸血药膏",
+   "spellId": 280716
+  },
+  "Lethality": {
+   "zh": "致命偷袭",
+   "spellId": 382238
+  },
+  "Lingering Shadow": {
+   "zh": "纠缠暗影",
+   "spellId": 382524
+  },
+  "Master Poisoner": {
+   "zh": "毒物大师",
+   "spellId": 378436
+  },
+  "Master of Shadows": {
+   "zh": "暗影大师",
+   "spellId": 196976
+  },
+  "Nimble Fingers": {
+   "zh": "心灵手巧",
+   "spellId": 378427
+  },
+  "Nimble Flurry": {
+   "zh": "身轻如燕",
+   "spellId": 441367
+  },
+  "Planned Execution": {
+   "zh": "处决谋划",
+   "spellId": 382508
+  },
+  "Potent Powder": {
+   "zh": "强效火药",
+   "spellId": 1265952
+  },
+  "Premeditation": {
+   "zh": "预谋",
+   "spellId": 343160
+  },
+  "Quick Fingers": {
+   "zh": "迅捷之手",
+   "spellId": 1267210
+  },
+  "Recuperator": {
+   "zh": "休养疗伤",
+   "spellId": 378996
+  },
+  "Relentless Strikes": {
+   "zh": "无情打击",
+   "spellId": 58423
+  },
+  "Replicating Shadows": {
+   "zh": "暗影增生",
+   "spellId": 382506
+  },
+  "Secret Stratagem": {
+   "zh": "隐秘诡计",
+   "spellId": 394320
+  },
+  "Shadow Blades": {
+   "zh": "暗影之刃",
+   "spellId": 121471
+  },
+  "Shadow Focus": {
+   "zh": "暗影集中",
+   "spellId": 108209
+  },
+  "Shadowcraft": {
+   "zh": "迅影",
+   "spellId": 426594
+  },
+  "Shadowed Finishers": {
+   "zh": "影武终结",
+   "spellId": 382511
+  },
+  "Shadowrunner": {
+   "zh": "暗影奔行者",
+   "spellId": 378807
+  },
+  "Shiv": {
+   "zh": "毒刃",
+   "spellId": 5938
+  },
+  "Silent Storm": {
+   "zh": "静默风暴",
+   "spellId": 385722
+  },
+  "Smoke": {
+   "zh": "烟雾",
+   "spellId": 441247
+  },
+  "So Tricky": {
+   "zh": "诡计多端",
+   "spellId": 441403
+  },
+  "Supercharger": {
+   "zh": "超荷充能",
+   "spellId": 470347
+  },
+  "Surprising Strikes": {
+   "zh": "出其不意",
+   "spellId": 441273
+  },
+  "Swift Slasher": {
+   "zh": "迅猛挥砍",
+   "spellId": 381988
+  },
+  "Thousand Cuts": {
+   "zh": "千刀万剐",
+   "spellId": 441346
+  },
+  "Thrill Seeking": {
+   "zh": "蹈厉奋发",
+   "spellId": 394931
+  },
+  "Tricks of the Trade": {
+   "zh": "嫁祸诀窍",
+   "spellId": 57934
+  },
+  "Trickster": {
+   "zh": "欺诈者",
+   "spellId": null
+  },
+  "Umbral Edge": {
+   "zh": "幽影之锋",
+   "spellId": 1281468
+  },
+  "Unseen Blade": {
+   "zh": "隐秘之刃",
+   "spellId": 441146
+  },
+  "Virulent Poisons": {
+   "zh": "恶毒药膏",
+   "spellId": 381543
+  }
+ },
+ "diffs": {
+  "r02_Speedamn": "IDENTICAL",
+  "r03_叶落初冬": "IDENTICAL",
+  "r04_黑川茜贼贼": {
+   "removed": [
+    "振奋处刑(Exhilarating Execution/428486)"
+   ],
+   "added": [
+    "黑暗帷幕(Shrouded in Darkness/382507)"
+   ]
+  },
+  "r05_霸天横刀": "IDENTICAL",
+  "r06_阿鼠": {
+   "removed": [
+    "强效火药(Potent Powder/1265952)"
+   ],
+   "added": [
+    "虚帷之触(Veiltouched/382017)"
+   ]
+  },
+  "r07_驱夜断愁": {
+   "removed": [
+    "暗影奔行者(Shadowrunner/378807)"
+   ],
+   "added": [
+    "剧毒短匕(Toxic Stiletto/1267182)"
+   ]
+  },
+  "r08_啊晴丶": {
+   "removed": [
+    "毒刃(Shiv/5938)"
+   ],
+   "added": [
+    "静影遮蔽(Stillshroud/423662)"
+   ]
+  },
+  "r09_斗篷小王子": "IDENTICAL",
+  "r10_弋江水": "IDENTICAL",
+  "r11_Serog": "IDENTICAL",
+  "r12_叮呤灵": {
+   "removed": [
+    "轻若鸿毛(Featherfoot/423683)",
+    "烟雾(Smoke/441247)"
+   ],
+   "added": [
+    "铜肠铁胃(Iron Stomach/193546)",
+    "镜影(Mirrors/441250)"
+   ]
+  },
+  "r13_Paparan": "IDENTICAL",
+  "r14_风为为": {
+   "removed": [
+    "毒刃(Shiv/5938)"
+   ],
+   "added": [
+    "铜肠铁胃(Iron Stomach/193546)"
+   ]
+  },
+  "r15_等一只七影蝶": "IDENTICAL"
+ }
+}

@@ -263,7 +263,13 @@ button.face{padding:0;border:0;font:inherit;color:inherit;cursor:help;position:r
 .tip p{margin:4px 0 0;color:var(--muted)}
 .tip p.tv{color:var(--fg)}
 
-[data-spec="none"] [data-for]{display:none!important}
+[data-spec="none"] [data-for],
+[data-spec="ret"] [data-for]:not([data-for="ret"]),
+[data-spec="arms"] [data-for]:not([data-for="arms"]),
+[data-spec="rogue"] [data-for]:not([data-for="rogue"]),
+[data-spec="ele"] [data-for]:not([data-for="ele"]),
+[data-spec="dh"] [data-for]:not([data-for="dh"]),
+[data-spec="bm"] [data-for]:not([data-for="bm"]){display:none!important}
 
 @media (max-width:760px){
   .head{grid-template-columns:120px minmax(0,1fr);gap:16px}
