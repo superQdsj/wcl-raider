@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT / "guides" / "tools"))
 from wclr.api import Client, RATE  # noqa: E402
 
 runs_path, slug, spec = sys.argv[1:4]
-ev = ROOT / "guides" / "dungeons" / slug / "evidence"
+ev = ROOT / "guides" / "v3" / slug / "evidence"
 runs = json.loads(Path(runs_path).read_text(encoding="utf-8"))["runs"]
 q = ("query($c:String!,$f:[Int]){ %s reportData{ report(code:$c){ "
      "playerDetails(fightIDs:$f, includeCombatantInfo:true) } } }" % RATE)

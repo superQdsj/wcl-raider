@@ -1,0 +1,1353 @@
+{
+  "spec": "bm",
+  "name": "兽王猎",
+  "color": "#aad372",
+  "icon": "ability_hunter_bestialdiscipline",
+  "kit": [
+    {
+      "icon": 264735,
+      "name": "优胜劣汰",
+      "text": "两层充能，每层 8 秒，全本主力减伤"
+    },
+    {
+      "icon": 186265,
+      "name": "灵龟守护",
+      "text": "落地前预开、免掉就取消；挂上的持续伤害它挡不住",
+      "warn": true
+    },
+    {
+      "icon": 109304,
+      "name": "意气风发",
+      "text": "回 30% 血，减伤交完还掉得快时补"
+    },
+    {
+      "icon": 781,
+      "name": "逃脱",
+      "text": "拉回站位，顺带解除减速"
+    },
+    {
+      "icon": 147362,
+      "name": "反制射击",
+      "text": "主力打断，胁迫和冰冻陷阱补控"
+    }
+  ],
+  "kit_src": [
+    "wowhead:264735",
+    "wowhead:186265",
+    "wowhead:109304",
+    "wowhead:781",
+    "wowhead:147362",
+    "wowhead:109215",
+    "bm-guide:L11",
+    "bm-guide:L14",
+    "bm-guide:L70",
+    "bm-guide:L71",
+    "bm-guide:L72"
+  ],
+  "bosses": {
+    "b1": {
+      "plan": [
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 1288457
+          },
+          "name": "优胜劣汰",
+          "text": "叠伤或血低接阵风时交",
+          "src": [
+            "bm-guide:L12"
+          ]
+        },
+        {
+          "use": [
+            109304
+          ],
+          "on": {
+            "spell": 1288457
+          },
+          "name": "意气风发",
+          "text": "交完还跌破 40% 就补",
+          "src": [
+            "bm-guide:L12"
+          ]
+        },
+        {
+          "use": [
+            781
+          ],
+          "on": {
+            "spell": 1310712
+          },
+          "name": "逃脱",
+          "text": "被击退后秒拉回，别进风圈",
+          "src": [
+            "bm-guide:L13"
+          ]
+        }
+      ],
+      "do": {
+        "1288087": [
+          {
+            "icon": 264735,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血只吃一段分摊就别交，留给叠伤。",
+            "src": [
+              "bm-guide:L11"
+            ]
+          },
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "身上挂着阵风或锯齿流血时吃分摊，必须交。",
+            "src": [
+              "bm-guide:L12"
+            ]
+          },
+          {
+            "icon": 781,
+            "kind": "plain",
+            "label": "边走边打",
+            "text": "二段惊雷边走边打跑出 20 码，猎人能全躲。",
+            "src": [
+              "bm-guide:L13"
+            ]
+          }
+        ],
+        "1288457": [
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "血线低于 80% 接阵风，或阵风叠别的伤害时交。",
+            "src": [
+              "bm-guide:L12"
+            ]
+          },
+          {
+            "icon": 186265,
+            "kind": "skip",
+            "label": "别交灵龟",
+            "text": "灵龟清不掉也免不了已挂身的阵风，每跳照吃约 7 万。",
+            "src": [
+              "bm-guide:L14",
+              "bm-guide:L17"
+            ]
+          }
+        ],
+        "1311808": [
+          {
+            "icon": 264735,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血单吃稳，不用交。",
+            "src": [
+              "bm-guide:L11"
+            ]
+          },
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "身上挂着阵风或锯齿流血时吃暴风，要交。",
+            "src": [
+              "bm-guide:L12"
+            ]
+          }
+        ],
+        "1310712": [
+          {
+            "icon": 781,
+            "kind": "do",
+            "label": "逃脱",
+            "text": "被击退后用逃脱秒拉回，别被吹进暴风区。",
+            "src": [
+              "bm-guide:L13"
+            ]
+          },
+          {
+            "icon": 264735,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血单吃稳，不用交。",
+            "src": [
+              "bm-guide:L11"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            186265
+          ],
+          "cross": true,
+          "title": "别指望灵龟清阵风",
+          "text": "灵龟不清也不免已挂身的阵风，开着还打不了，留给极端叠伤或小怪。",
+          "src": [
+            "bm-guide:L14"
+          ]
+        },
+        {
+          "icons": [
+            264735
+          ],
+          "cross": true,
+          "title": "别在单吃时交掉优胜劣汰",
+          "text": "单层冷却 90 秒，单吃狂风之力、暴风都稳，要留给合波叠伤。",
+          "src": [
+            "bm-guide:L11"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "震地叠阵风，血掉到 2%",
+          "label": "r10 0:30.1",
+          "url": "https://www.warcraftlogs.com/reports/ZKGXRJwCxnvD4ytL#fight=7&view=events&start=5969670&end=5975670"
+        },
+        {
+          "text": "锯齿流血叠暴风，剩 5% 血",
+          "label": "r08 3:05.5",
+          "url": "https://www.warcraftlogs.com/reports/mty8v7KBjLpJRbP4#fight=16&view=events&start=24265797&end=24271797"
+        },
+        {
+          "text": "46% 血接阵风，掉到 16%",
+          "label": "r06 1:51.8",
+          "url": "https://www.warcraftlogs.com/reports/vtQrhmG1dgp87wMY#fight=2&view=events&start=447768&end=453768"
+        },
+        {
+          "text": "满血单吃狂风之力，最低也剩 44%",
+          "label": "r07 3:45.8",
+          "url": "https://www.warcraftlogs.com/reports/FgVvtdNHMbR2pPGY#fight=5&view=events&start=774020&end=780020"
+        },
+        {
+          "text": "开着灵龟，阵风照样每跳约 7 万",
+          "label": "r01 1:53.4",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=9773399&end=9779399"
+        },
+        {
+          "text": "漏断风暴能手闪电箭，一发约 73 万",
+          "label": "r15 0:44.5",
+          "url": "https://www.warcraftlogs.com/reports/9MarxmXNzvR1HLWw#fight=25&view=events&start=12812968&end=12818968"
+        }
+      ]
+    },
+    "b2": {
+      "plan": [
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 1289109
+          },
+          "name": "优胜劣汰",
+          "text": "被点雷霆喷吐就交",
+          "src": [
+            "bm-guide:L26"
+          ]
+        },
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 1293048
+          },
+          "name": "优胜劣汰",
+          "text": "奶不上时吃毒蛇风暴交第二层",
+          "src": [
+            "bm-guide:L26"
+          ]
+        },
+        {
+          "use": [
+            147362
+          ],
+          "on": {
+            "spell": 267027
+          },
+          "name": "反制射击",
+          "text": "转阶段死盯蝰蛇的毒素喷吐",
+          "src": [
+            "bm-guide:L27"
+          ]
+        }
+      ],
+      "do": {
+        "263958": [
+          {
+            "icon": 781,
+            "kind": "skip",
+            "label": "逃脱解不了",
+            "text": "伤害很低，队友顺劈或控一下就出来。",
+            "src": [
+              "bm-guide:L25",
+              "bm-guide:L28"
+            ]
+          }
+        ],
+        "1289109": [
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "4 秒连劈，裸吃能打掉约 163 万，被点就交。",
+            "src": [
+              "bm-guide:L26"
+            ]
+          },
+          {
+            "icon": 781,
+            "kind": "plain",
+            "label": "边走边打",
+            "text": "边走边打躲开落雷。",
+            "src": [
+              "bm-guide:L27"
+            ]
+          }
+        ],
+        "1293048": [
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "治疗跟不上就交；和雷霆隔约 12 秒，两层能连着交。",
+            "src": [
+              "bm-guide:L26"
+            ]
+          },
+          {
+            "icon": 186265,
+            "kind": "skip",
+            "label": "别交灵龟",
+            "text": "灵龟免不了首跳，也清不掉之后的持续伤害。",
+            "src": [
+              "bm-guide:L28"
+            ]
+          }
+        ],
+        "264206": [
+          {
+            "icon": 781,
+            "kind": "plain",
+            "label": "边走边打",
+            "text": "路径上被撞约 172 万还晕 4 秒，猎人能全躲。",
+            "src": [
+              "bm-guide:L27"
+            ]
+          }
+        ],
+        "1300227": [
+          {
+            "icon": 109304,
+            "kind": "do",
+            "label": "意气风发",
+            "text": "每秒约 10 万，血掉破 35% 交意气风发自救。",
+            "src": [
+              "bm-guide:L25"
+            ]
+          }
+        ],
+        "267027": [
+          {
+            "icon": 147362,
+            "kind": "do",
+            "label": "反制射击",
+            "text": "盯着断；漏一发约 63 万，还带中毒。",
+            "src": [
+              "bm-guide:L27"
+            ]
+          },
+          {
+            "icon": 19577,
+            "kind": "do",
+            "label": "胁迫",
+            "text": "反制在冷却时用胁迫补控蝰蛇。",
+            "src": [
+              "bm-guide:L27"
+            ]
+          },
+          {
+            "icon": 34477,
+            "kind": "do",
+            "label": "误导",
+            "text": "出小怪前给坦克挂误导，别抢仇恨。",
+            "src": [
+              "bm-guide:L27"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            186265
+          ],
+          "cross": true,
+          "title": "别指望灵龟挡毒蛇风暴",
+          "text": "提前开也吃首跳，中途开清不掉持续伤害，开着还不能打。",
+          "src": [
+            "bm-guide:L28"
+          ]
+        },
+        {
+          "icons": [
+            264735
+          ],
+          "cross": true,
+          "title": "别裸吃雷霆喷吐",
+          "text": "两层优胜劣汰都在却裸吃，最危一次从 89% 掉到 3%。",
+          "src": [
+            "bm-guide:L26",
+            "bm-guide:L30"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "裸吃雷霆喷吐，89% 掉到 3%",
+          "label": "r12 2:05.1",
+          "url": "https://www.warcraftlogs.com/reports/rMj1DR4Jc7knBvXY#fight=11&view=events&start=4226970&end=4232970"
+        },
+        {
+          "text": "断奶裸吃毒蛇风暴，掉到 14%",
+          "label": "r11 4:07.6",
+          "url": "https://www.warcraftlogs.com/reports/c2wB9tvFMrqm3yJg#fight=29&view=events&start=16263020&end=16269020"
+        },
+        {
+          "text": "两层优胜劣汰连着交，雷霆和毒蛇都盖住",
+          "label": "r05 2:08.5",
+          "url": "https://www.warcraftlogs.com/reports/8axZjYzCmTfqk2QL#fight=1&view=events&start=12053876&end=12059876"
+        },
+        {
+          "text": "提前开灵龟，毒蛇风暴首跳照吃",
+          "label": "r06 2:16.4",
+          "url": "https://www.warcraftlogs.com/reports/vtQrhmG1dgp87wMY#fight=2&view=events&start=1127289&end=1133289"
+        },
+        {
+          "text": "裸吃缠绕的蛇群，最低也剩 78%",
+          "label": "r12 1:53.6",
+          "url": "https://www.warcraftlogs.com/reports/rMj1DR4Jc7knBvXY#fight=11&view=events&start=4215469&end=4221469"
+        }
+      ]
+    },
+    "b3": {
+      "plan": [
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 266923
+          },
+          "name": "优胜劣汰",
+          "text": "长挡一整根线就交，正好盖满",
+          "src": [
+            "bm-guide:L40"
+          ]
+        },
+        {
+          "use": [
+            186265
+          ],
+          "on": {
+            "spell": 266923
+          },
+          "name": "灵龟守护",
+          "text": "要一人挡两根线时开，全程 0 伤",
+          "src": [
+            "bm-guide:L41"
+          ]
+        },
+        {
+          "use": [
+            109304
+          ],
+          "on": {
+            "spell": 1290531
+          },
+          "name": "意气风发",
+          "text": "诱导前血不满先补满",
+          "src": [
+            "bm-guide:L39"
+          ]
+        }
+      ],
+      "do": {
+        "266923": [
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "单人长挡一整轮就进线交，8 秒正好盖满。",
+            "src": [
+              "bm-guide:L40"
+            ]
+          },
+          {
+            "icon": 186265,
+            "kind": "do",
+            "label": "灵龟守护",
+            "text": "开着灵龟挡线照样拦住充能且 0 伤，结束前半秒出线。",
+            "src": [
+              "bm-guide:L41"
+            ]
+          },
+          {
+            "icon": 264735,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "和队友短触换挡、2 秒内出线就不用交。",
+            "src": [
+              "bm-guide:L39"
+            ]
+          }
+        ],
+        "1290531": [
+          {
+            "icon": 264735,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血单吃诱导稳；读条结束前血没满，先补意气风发。",
+            "src": [
+              "bm-guide:L39"
+            ]
+          }
+        ],
+        "1291815": [
+          {
+            "icon": 781,
+            "kind": "do",
+            "label": "逃脱",
+            "text": "诱导落地后 1 秒内走出电水，来不及就逃脱或开猎豹。",
+            "src": [
+              "bm-guide:L42"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            186257
+          ],
+          "cross": true,
+          "title": "诱导后别原地站",
+          "text": "电水每秒一跳约 57 万，站满 1 秒就是全本唯一一次被补死。",
+          "src": [
+            "bm-guide:L42",
+            "bm-guide:L44"
+          ]
+        },
+        {
+          "icons": [
+            186265
+          ],
+          "cross": true,
+          "title": "没开灵龟别站两根线的交点",
+          "text": "同时吃两根线，一下掉 25% 以上的血。",
+          "src": [
+            "bm-guide:L42"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "诱导后站满 1 秒电水，被补死",
+          "label": "r10 3:30.1",
+          "url": "https://www.warcraftlogs.com/reports/ZKGXRJwCxnvD4ytL#fight=7&view=events&start=7208735&end=7214735"
+        },
+        {
+          "text": "误穿两根线交点，38% 掉到 14%",
+          "label": "r10 2:09.3",
+          "url": "https://www.warcraftlogs.com/reports/ZKGXRJwCxnvD4ytL#fight=7&view=events&start=7127863&end=7133863"
+        },
+        {
+          "text": "长挡 17 跳开优胜劣汰，最低剩 24%",
+          "label": "r13 3:37.4",
+          "url": "https://www.warcraftlogs.com/reports/6vqwKjN1W27rXVbP#fight=6&view=events&start=6193381&end=6199381"
+        },
+        {
+          "text": "没交减伤长挡，掉到 2%",
+          "label": "r01 1:41.5",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=10900143&end=10906143"
+        },
+        {
+          "text": "灵龟同时挡两根线，全程 0 伤",
+          "label": "r01 2:04.5",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=10923135&end=10929135"
+        }
+      ]
+    },
+    "b4": {
+      "plan": [
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 1300877
+          },
+          "name": "优胜劣汰",
+          "text": "领腐化就交，8 秒后再续一层",
+          "src": [
+            "bm-guide:L54"
+          ]
+        },
+        {
+          "use": [
+            109304,
+            186265
+          ],
+          "on": {
+            "spell": 1300877
+          },
+          "name": "意气风发 + 灵龟",
+          "text": "只交一层就在后 7 秒补上",
+          "src": [
+            "bm-guide:L54"
+          ]
+        },
+        {
+          "use": [
+            147362
+          ],
+          "on": {
+            "spell": 1302158
+          },
+          "name": "反制射击",
+          "text": "死盯妖术师的烈焰震击",
+          "src": [
+            "bm-guide:L56"
+          ]
+        }
+      ],
+      "do": {
+        "1300877": [
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "领到就交，隔 7 到 11 秒再交第二层，盖满 15 秒。",
+            "src": [
+              "bm-guide:L54"
+            ]
+          },
+          {
+            "icon": 109304,
+            "kind": "do",
+            "label": "意气风发",
+            "text": "只交了一层时，8 秒后伤害翻倍，这时补意气风发。",
+            "src": [
+              "bm-guide:L54"
+            ]
+          },
+          {
+            "icon": 186265,
+            "kind": "do",
+            "label": "灵龟守护",
+            "text": "残血断奶开灵龟，8 秒内腐化 0 伤，出龟后还会掉。",
+            "src": [
+              "bm-guide:L55"
+            ]
+          }
+        ],
+        "1302618": [
+          {
+            "icon": 264735,
+            "kind": "skip",
+            "label": "尽量省着",
+            "text": "满血且奶得上就别交，留给后面的腐化。",
+            "src": [
+              "bm-guide:L53"
+            ]
+          },
+          {
+            "icon": 109304,
+            "kind": "do",
+            "label": "意气风发",
+            "text": "跌破 50% 先交意气风发，优胜劣汰最多交一层。",
+            "src": [
+              "bm-guide:L53"
+            ]
+          }
+        ],
+        "1302761": [
+          {
+            "icon": 781,
+            "kind": "plain",
+            "label": "走开",
+            "text": "守护者快死时跑出 20 码，猎人能全躲。",
+            "src": [
+              "bm-guide:L57"
+            ]
+          }
+        ],
+        "1302158": [
+          {
+            "icon": 147362,
+            "kind": "do",
+            "label": "反制射击",
+            "text": "盯着断，全队配合能一发都不放出来。",
+            "src": [
+              "bm-guide:L56"
+            ]
+          }
+        ],
+        "1300704": [
+          {
+            "icon": 19577,
+            "kind": "do",
+            "label": "胁迫",
+            "text": "用胁迫或束缚射击帮忙控无信折磨者。",
+            "src": [
+              "bm-guide:L56"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            264735
+          ],
+          "cross": true,
+          "title": "别连按两层优胜劣汰",
+          "text": "隔 1.5 秒连按只会刷新，不会叠成 16 秒，等第一层快完再交。",
+          "src": [
+            "bm-guide:L55"
+          ]
+        },
+        {
+          "icons": [
+            264735
+          ],
+          "cross": true,
+          "title": "别多领腐化",
+          "text": "非坦克叠到两三层的全死了，只领一层。",
+          "src": [
+            "bm-guide:L54"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "只交一层优胜劣汰，腐化后半段暴毙",
+          "label": "r12 1:05.0",
+          "url": "https://www.warcraftlogs.com/reports/rMj1DR4Jc7knBvXY#fight=11&view=events&start=5081673&end=5087673"
+        },
+        {
+          "text": "硬吃塞塔里斯的痛楚，约 105 万秒杀",
+          "label": "r13 1:43.6",
+          "url": "https://www.warcraftlogs.com/reports/6vqwKjN1W27rXVbP#fight=6&view=events&start=6562615&end=6568615"
+        },
+        {
+          "text": "单层优胜劣汰，后半段掉到 7%",
+          "label": "r01 2:52.8",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=11637715&end=11643715"
+        },
+        {
+          "text": "隔 7.5 秒交两层，最低 47%",
+          "label": "r05 0:42.6",
+          "url": "https://www.warcraftlogs.com/reports/8axZjYzCmTfqk2QL#fight=1&view=events&start=12874214&end=12880214"
+        },
+        {
+          "text": "灵龟里腐化 8 跳全 0 伤",
+          "label": "r10 4:04.3",
+          "url": "https://www.warcraftlogs.com/reports/ZKGXRJwCxnvD4ytL#fight=7&view=events&start=7710330&end=7716330"
+        }
+      ]
+    }
+  },
+  "trash": {
+    "t0": {
+      "plan": [
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 265966
+          },
+          "name": "优胜劣汰",
+          "text": "吃震地就交",
+          "src": [
+            "bm-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            186265
+          ],
+          "on": {
+            "spell": 265966
+          },
+          "name": "灵龟守护",
+          "text": "落地前半秒预开，免掉就取消",
+          "src": [
+            "bm-guide:L70"
+          ]
+        },
+        {
+          "use": [
+            147362,
+            19577
+          ],
+          "on": {
+            "spell": 1291262
+          },
+          "name": "反制射击 + 胁迫",
+          "text": "断风暴能手的闪电箭",
+          "src": [
+            "bm-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "265966": [
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "裸吃一下约 84 万，最低剩 19%，吃之前交。",
+            "src": [
+              "bm-guide:L69"
+            ]
+          },
+          {
+            "icon": 186265,
+            "kind": "do",
+            "label": "灵龟守护",
+            "text": "落地前半秒到一秒开，免掉马上取消，几乎不丢输出。",
+            "src": [
+              "bm-guide:L70"
+            ]
+          }
+        ],
+        "1291399": [
+          {
+            "icon": 264735,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "倒刺三叶虫两跳，满血有奶裸吃也稳。",
+            "src": [
+              "bm-guide:L68"
+            ]
+          }
+        ],
+        "1308113": [
+          {
+            "icon": 187650,
+            "kind": "do",
+            "label": "冰冻陷阱",
+            "text": "用冰冻陷阱或胁迫停流沙猎手的箭雨。",
+            "src": [
+              "bm-guide:L72"
+            ]
+          }
+        ],
+        "1291262": [
+          {
+            "icon": 147362,
+            "kind": "do",
+            "label": "反制射击",
+            "text": "必断。",
+            "src": [
+              "bm-guide:L72"
+            ]
+          }
+        ],
+        "1295635": [
+          {
+            "icon": 264735,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血单吃约 42 万，不用交。",
+            "src": [
+              "bm-guide:L68"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "裸吃震地，剩 19%",
+          "label": "r13 1:24.4",
+          "url": "https://www.warcraftlogs.com/reports/6vqwKjN1W27rXVbP#fight=6&view=events&start=4897568&end=4903568"
+        },
+        {
+          "text": "预开灵龟，0 伤免疫震地",
+          "label": "r03 0:36.3",
+          "url": "https://www.warcraftlogs.com/reports/q34DNjVBPxznT7Yr#fight=9&view=events&start=7351973&end=7357973"
+        },
+        {
+          "text": "预开灵龟，0 伤免疫箭雨",
+          "label": "r09 1:23.8",
+          "url": "https://www.warcraftlogs.com/reports/YzFTRXVKZQPNpgtG#fight=1&view=events&start=1393181&end=1399181"
+        }
+      ]
+    },
+    "t1": {
+      "plan": [
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 1308148
+          },
+          "name": "优胜劣汰",
+          "text": "锯齿叠细胞毒素必须交",
+          "src": [
+            "bm-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            147362
+          ],
+          "on": {
+            "spell": 1293307
+          },
+          "name": "反制射击",
+          "text": "断扰乱心智和育巢者毒箭",
+          "src": [
+            "bm-guide:L72"
+          ]
+        },
+        {
+          "use": [
+            34477
+          ],
+          "on": {
+            "spell": 272654
+          },
+          "name": "误导",
+          "text": "开怪前给坦克挂误导",
+          "src": [
+            "bm-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "1308148": [
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "身上同时有锯齿流血就交，这样叠死过两次。",
+            "src": [
+              "bm-guide:L69"
+            ]
+          },
+          {
+            "icon": 5384,
+            "kind": "do",
+            "label": "假死",
+            "text": "配合紧急药膏，按假死清掉身上的毒。",
+            "src": [
+              "wowhead:459517",
+              "diag-bm-trash"
+            ]
+          }
+        ],
+        "1291399": [
+          {
+            "icon": 109304,
+            "kind": "do",
+            "label": "意气风发",
+            "text": "群聚三叶虫的锯齿 7 跳约 164 万，跌破 40% 就补。",
+            "src": [
+              "bm-guide:L68"
+            ]
+          }
+        ],
+        "1310683": [
+          {
+            "icon": 147362,
+            "kind": "do",
+            "label": "反制射击",
+            "text": "必断，漏一发约 71 万。",
+            "src": [
+              "bm-guide:L72"
+            ]
+          }
+        ],
+        "1293307": [
+          {
+            "icon": 147362,
+            "kind": "do",
+            "label": "反制射击",
+            "text": "必断，不然一个人迷惑 5 秒。",
+            "src": [
+              "bm-guide:L72"
+            ]
+          }
+        ],
+        "272654": [
+          {
+            "icon": 34477,
+            "kind": "do",
+            "label": "误导",
+            "text": "开怪前给坦克挂误导，别抢仇恨。",
+            "src": [
+              "bm-guide:L72"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "锯齿叠细胞毒素裸吃，被叠死",
+          "label": "r04 7:21.5",
+          "url": "https://www.warcraftlogs.com/reports/4bkHAZT9Bhfntamr#fight=17&view=events&start=11178561&end=11184561"
+        },
+        {
+          "text": "同样的双持续伤害，又一次叠死",
+          "label": "r08 6:39.4",
+          "url": "https://www.warcraftlogs.com/reports/mty8v7KBjLpJRbP4#fight=16&view=events&start=24379347&end=24385347"
+        },
+        {
+          "text": "紧急药膏清掉细胞毒素",
+          "label": "r01 11:48.2",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=10274129&end=10280129"
+        }
+      ]
+    },
+    "t2": {
+      "plan": [
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 1293475
+          },
+          "name": "优胜劣汰",
+          "text": "吃释放电荷就交",
+          "src": [
+            "bm-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            19801
+          ],
+          "on": {
+            "spell": 1293475
+          },
+          "name": "宁神射击",
+          "text": "卡冷却驱掉积攒电荷",
+          "src": [
+            "bm-guide:L71"
+          ]
+        },
+        {
+          "use": [
+            186265
+          ],
+          "on": {
+            "spell": 264763
+          },
+          "name": "灵龟守护",
+          "text": "火花步接电荷时预开再取消",
+          "src": [
+            "bm-guide:L70"
+          ]
+        }
+      ],
+      "do": {
+        "1293475": [
+          {
+            "icon": 19801,
+            "kind": "do",
+            "label": "宁神射击",
+            "text": "驱掉暴怒云气的积攒电荷，全队少吃伤害。",
+            "src": [
+              "bm-guide:L71"
+            ]
+          },
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "裸吃一下约 80 万，最危时剩 6%。",
+            "src": [
+              "bm-guide:L69"
+            ]
+          },
+          {
+            "icon": 1022,
+            "kind": "skip",
+            "label": "别靠外减",
+            "text": "队友的保护祝福挡不住，这是自然伤害。",
+            "src": [
+              "bm-guide:L73"
+            ]
+          }
+        ],
+        "264763": [
+          {
+            "icon": 186265,
+            "kind": "do",
+            "label": "灵龟守护",
+            "text": "火花步接释放电荷的连招，落地前预开灵龟。",
+            "src": [
+              "bm-guide:L69",
+              "bm-guide:L70"
+            ]
+          }
+        ],
+        "1291262": [
+          {
+            "icon": 147362,
+            "kind": "do",
+            "label": "反制射击",
+            "text": "唤雷者的闪电箭第一优先断。",
+            "src": [
+              "bm-guide:L72"
+            ]
+          }
+        ],
+        "1296052": [
+          {
+            "icon": 186265,
+            "kind": "skip",
+            "label": "别交灵龟",
+            "text": "挂上之后再开灵龟没用，照样掉血。",
+            "src": [
+              "bm-guide:L73",
+              "bm-guide:L76"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "火花步叠释放电荷，外部保护也被打穿",
+          "label": "r05 17:46.0",
+          "url": "https://www.warcraftlogs.com/reports/8axZjYzCmTfqk2QL#fight=1&view=events&start=12287394&end=12293394"
+        },
+        {
+          "text": "裸吃释放电荷约 101 万，剩 6%",
+          "label": "r14 18:15.2",
+          "url": "https://www.warcraftlogs.com/reports/Xf3rJT9kAWn7cBj1#fight=1&view=events&start=1090167&end=1096167"
+        },
+        {
+          "text": "预开灵龟，0 伤免疫释放电荷",
+          "label": "r02 18:03.4",
+          "url": "https://www.warcraftlogs.com/reports/fAvBRtjbKxGqdMWL#fight=185&view=events&start=235131143&end=235137143"
+        },
+        {
+          "text": "宁神射击驱掉积攒电荷",
+          "label": "r01 17:37.9",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=10623837&end=10629837"
+        }
+      ]
+    },
+    "t3": {
+      "plan": [
+        {
+          "use": [
+            264735
+          ],
+          "on": {
+            "spell": 1303486
+          },
+          "name": "优胜劣汰",
+          "text": "蚀骨践踏落地时交，别太早",
+          "src": [
+            "bm-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            186265
+          ],
+          "on": {
+            "spell": 267483
+          },
+          "name": "灵龟守护",
+          "text": "走廊开满 8 秒穿过火花",
+          "src": [
+            "bm-guide:L70"
+          ]
+        },
+        {
+          "use": [
+            781
+          ],
+          "on": {
+            "spell": 267483
+          },
+          "name": "逃脱",
+          "text": "踩到减速就逃脱解掉",
+          "src": [
+            "bm-guide:L71"
+          ]
+        }
+      ],
+      "do": {
+        "1303486": [
+          {
+            "icon": 186265,
+            "kind": "do",
+            "label": "灵龟守护",
+            "text": "落地前预开 0 伤；挂上再开没用，有人这样被跳死。",
+            "src": [
+              "bm-guide:L70",
+              "bm-guide:L73"
+            ]
+          },
+          {
+            "icon": 264735,
+            "kind": "do",
+            "label": "开优胜劣汰",
+            "text": "没灵龟就交，只盖 8 秒，别提前开，尾跳会翻倍。",
+            "src": [
+              "bm-guide:L69"
+            ]
+          },
+          {
+            "icon": 109304,
+            "kind": "do",
+            "label": "意气风发",
+            "text": "优胜劣汰结束后掉得快，补意气风发。",
+            "src": [
+              "bm-guide:L69"
+            ]
+          }
+        ],
+        "267483": [
+          {
+            "icon": 186265,
+            "kind": "do",
+            "label": "灵龟守护",
+            "text": "走廊开满灵龟直接穿过去，0 伤。",
+            "src": [
+              "bm-guide:L70"
+            ]
+          },
+          {
+            "icon": 781,
+            "kind": "plain",
+            "label": "躲开",
+            "text": "没灵龟就躲开，一下约 105 万还会晕。",
+            "src": [
+              "bm-guide:L73"
+            ]
+          }
+        ],
+        "268013": [
+          {
+            "icon": 147362,
+            "kind": "do",
+            "label": "反制射击",
+            "text": "必断。",
+            "src": [
+              "bm-guide:L72"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "挂上蚀骨践踏 5 秒后才开灵龟，被跳死",
+          "label": "r01 27:06.5",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=11192442&end=11198442"
+        },
+        {
+          "text": "裸吃蚀骨践踏，剩 15%",
+          "label": "r15 25:39.2",
+          "url": "https://www.warcraftlogs.com/reports/9MarxmXNzvR1HLWw#fight=25&view=events&start=14202662&end=14208662"
+        },
+        {
+          "text": "预开灵龟，0 伤免疫蚀骨践踏",
+          "label": "r02 23:12.9",
+          "url": "https://www.warcraftlogs.com/reports/fAvBRtjbKxGqdMWL#fight=185&view=events&start=235440622&end=235446622"
+        },
+        {
+          "text": "走廊裸吃不羁的火花，被秒",
+          "label": "r09 23:41.8",
+          "url": "https://www.warcraftlogs.com/reports/YzFTRXVKZQPNpgtG#fight=1&view=events&start=2731226&end=2737226"
+        },
+        {
+          "text": "开满灵龟穿过火花",
+          "label": "r01 24:43.6",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=11049496&end=11055496"
+        },
+        {
+          "text": "逃脱秒解极化力场的减速",
+          "label": "r01 24:42.4",
+          "url": "https://www.warcraftlogs.com/reports/LWVXMkN8n3hACQrt#fight=10&view=events&start=11048257&end=11054257"
+        }
+      ]
+    }
+  },
+  "talents": {
+    "hero": "群兽领袖",
+    "string_from": "evidence/tstring-bm.json",
+    "sub": "高分记录里最常见的一套，导入就能用。下面几个天赋这本用得上，别换掉。",
+    "src": [
+      "talents-bm"
+    ],
+    "keys": [
+      {
+        "id": 472707,
+        "name": "龟壳庇护",
+        "text": "优胜劣汰的减伤再提高 10%，全本主力减伤更硬。",
+        "where": [
+          "b1",
+          "b2",
+          "b3",
+          "b4"
+        ],
+        "src": [
+          "wowhead:472707",
+          "talents-bm"
+        ]
+      },
+      {
+        "id": 459517,
+        "name": "紧急药膏",
+        "text": "假死会清掉身上的中毒，老 1 到老 2 的细胞毒素靠它。",
+        "where": [
+          "t1"
+        ],
+        "src": [
+          "wowhead:459517",
+          "diag-bm-trash"
+        ]
+      },
+      {
+        "id": 19801,
+        "name": "宁神射击",
+        "text": "驱掉暴怒云气的积攒电荷，老 2 后的小怪少吃团伤。",
+        "where": [
+          "t2"
+        ],
+        "src": [
+          "wowhead:19801",
+          "bm-guide:L71"
+        ]
+      },
+      {
+        "id": 109215,
+        "name": "迅疾如风",
+        "text": "逃脱顺带解除减速，走廊踩到极化力场马上解。",
+        "where": [
+          "t3"
+        ],
+        "src": [
+          "wowhead:109215",
+          "bm-guide:L71"
+        ]
+      }
+    ]
+  }
+}

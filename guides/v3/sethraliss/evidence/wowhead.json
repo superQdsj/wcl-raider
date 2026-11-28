@@ -859,5 +859,152 @@
   "aura": "",
   "dispel": null,
   "icon": "ability_rogue_wrongfullyaccused"
+ },
+ "781": {
+  "name": "逃脱",
+  "desc": "向后跳跃 [迅疾如风: ，解除移动限制效果，并使你在4秒内移动速度提高0%] [险境求生: ，并激活一个蛛网陷阱，使8码范围内的所有目标都被黏黏的蛛网缠住且无法移动，持续8秒]。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_feint"
+ },
+ "19577": {
+  "name": "胁迫",
+  "desc": "天赋 命令你的宠物胁迫目标，使其昏迷5秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_devour"
+ },
+ "19801": {
+  "name": "宁神射击",
+  "desc": "天赋 从一个敌方目标身上移除1个激怒效果和1个魔法效果。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_drowsy"
+ },
+ "34477": {
+  "name": "误导",
+  "desc": "天赋 在30秒内，你接下来造成的所有威胁值会误导给指定的小队或团队成员，持续8秒。",
+  "aura": "猎人产生的威胁值转移到了别人身上。\n持续30秒",
+  "dispel": null,
+  "icon": "ability_hunter_misdirection"
+ },
+ "109215": {
+  "name": "迅疾如风",
+  "desc": "天赋 逃脱还会移除所有移动限制效果，并使你的移动速度提高50%，持续4秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_hunter_posthaste"
+ },
+ "109248": {
+  "name": "束缚射击",
+  "desc": "天赋 射出一支魔法箭矢，束缚敌人及其5码范围内的其他任意敌人，持续10秒。如果目标离开箭矢5码范围外，则会昏迷3秒。 [束缚镣铐: 被束缚射击昏迷的目标在效果结束后对你造成的伤害降低10%，持续8秒。]",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_shaman_bindelemental"
+ },
+ "109304": {
+  "name": "意气风发",
+  "desc": "为你恢复30%的最大生命值，并为你的宠物恢复100%的最大生命值。 [春回大地: 意气风发在8秒内额外恢复你最大生命值的12.0%。]",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_hunter_onewithnature"
+ },
+ "147362": {
+  "name": "反制射击",
+  "desc": "天赋 打断目标施法，并使其在5秒内无法施放任何该系法术。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_ammo_arrow_03"
+ },
+ "186257": {
+  "name": "猎豹守护",
+  "desc": "使你的移动速度提高90%，持续3秒。效果结束时，在接下来的9秒内使你的移动速度提高30%。",
+  "aura": "移动速度提高90%。\n持续3秒",
+  "dispel": null,
+  "icon": "ability_mount_jungletiger"
+ },
+ "186265": {
+  "name": "灵龟守护",
+  "desc": "偏转所有法术和攻击，使你受到的所有伤害降低30%，持续8秒，但你无法攻击。",
+  "aura": "指向$auracaster的攻击和法术将无法命中。\n受到的伤害降低30%。\n持续8秒",
+  "dispel": null,
+  "icon": "ability_hunter_pet_turtle"
+ },
+ "187650": {
+  "name": "冰冻陷阱",
+  "desc": "向目标位置发射一个冰冻陷阱，使第一个靠近的敌人瘫痪1分钟。任何伤害都可能打破该效果。同一时刻只能施放一个。陷阱可存在1分钟。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_frost_chainsofice"
+ },
+ "264735": {
+  "name": "优胜劣汰",
+  "desc": "天赋 使你和你的宠物受到的所有伤害降低30%，持续6秒。",
+  "aura": "受到的所有伤害降低30%。\n持续6秒",
+  "dispel": null,
+  "icon": "spell_nature_spiritarmor"
+ },
+ "266921": {
+  "name": "天生狂野",
+  "desc": "天赋 野兽控制, 射击\n猎豹守护和灵龟守护的冷却时间缩短15秒。\n生存\n雄鹰守护、猎豹守护和灵龟守护的冷却时间缩短15秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_hunter_aspectoftheviper"
+ },
+ "270581": {
+  "name": "自然治愈",
+  "desc": "天赋 意气风发的冷却时间缩短30秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_hunter_onewithnature"
+ },
+ "459517": {
+  "name": "紧急药膏",
+  "desc": "天赋 假死和灵龟守护会移除你身上的中毒和疾病效果。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_potion_29"
+ },
+ "1258407": {
+  "name": "强化猎豹守护",
+  "desc": "天赋 猎豹守护的冷却时间缩短30秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_mount_jungletiger"
+ },
+ "1258485": {
+  "name": "强化灵龟守护",
+  "desc": "天赋 灵龟守护的冷却时间缩短30秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_hunter_pet_turtle"
+ },
+ "472707": {
+  "name": "龟壳庇护",
+  "desc": "天赋 优胜劣汰现在会召唤一只乌龟来援助你，使其伤害减免效果额外提高10%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_babyturtle2"
+ },
+ "1267218": {
+  "name": "甲壳壁垒",
+  "desc": "天赋 灵龟守护期间受到的伤害额外降低20%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_cape_special_turtleshell_c_01"
+ },
+ "1272094": {
+  "name": "守护者之皮",
+  "desc": "天赋 你的宠物时刻保护着你，使你受到的伤害降低3%。你的宠物承受其减免伤害的100%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_druid_bristlingfur"
+ },
+ "5384": {
+  "name": "假死",
+  "desc": "装死，可能使敌人忽略你。持续最多6分钟。",
+  "aura": "装死。\n持续6分钟",
+  "dispel": null,
+  "icon": "ability_rogue_feigndeath"
  }
 }
