@@ -51,6 +51,7 @@ BANNED = [
     (r"场均", "统计词「场均」"),
     (r"Δt", "统计符号 Δt"),
     (r"%\s*HP|\bHP\b", "用 HP 百分比写伤害"),
+    (r"(掉|扣|打掉|吃掉)\s*\d+(\.\d+)?\s*%", "用百分比写伤害（如「掉 25% 的血」），写绝对值；血线阈值「血不到 80%」可以"),
     (r"中位", "统计词「中位」"),
     (r"\d(\.\d+)?\s*[MK]\b", "用 M/K 写数字，改成「万」"),
     (r"[一二三四五六七八九两几]成血", "「几成血」，写绝对值"),
@@ -220,6 +221,9 @@ def check(d: dict, specs: list[dict], ck: Checker) -> None:
     for sp in specs:
         sid = sp["spec"]
         ck.src(f"{sid}.kit", sp.get("kit_src"))
+        for spell, tn in sp.get("tip_notes", {}).items():
+            ck.src(f"{sid}.tip_notes.{spell}", tn.get("src"))
+            ck.text(f"{sid}.tip_notes.{spell}", tn["text"], "note")
         for bid, sb in sp.get("bosses", {}).items():
             w0 = f"{sid}.{bid}"
             if bid not in bosses:
@@ -645,10 +649,11 @@ def clean_desc(desc: str) -> str:
     s = re.split(r"\s+防护\s+", s)[0]
     s = re.sub(r"^(神圣|惩戒|防护)(, (神圣|惩戒|防护))*\s+", "", s)
     s = re.sub(r"\d{4,}点", "", s)
+    s = re.sub(r"\((\d+(?:\.\d+)?)\s*\*\s*-\s*1\)", r"\1", s)  # Wowhead 公式残留：「降低(4 *- 1)%」→「降低4%」
     return re.sub(r"\s+", " ", s).strip()
 
 
-def tip_data(page: str, d: dict, ddir: Path) -> dict:
+def tip_data(page: str, d: dict, ddir: Path, specs: list[dict] = ()) -> dict:
     wh = json.loads((ddir / "evidence" / "wowhead.json").read_text(encoding="utf-8"))
     ours = {}
     for b in d["bosses"]:
@@ -658,6 +663,8 @@ def tip_data(page: str, d: dict, ddir: Path) -> dict:
         for m in tr["mobs"]:
             for a in m["skills"]:
                 ours[a["id"]] = (a, m["name"])
+    # A spec can add one line under a player spell's Wowhead text, e.g. a talent that changes its duration.
+    notes = {int(k): v["text"] for sp in specs for k, v in sp.get("tip_notes", {}).items()}
     tips = {}
     for sid in sorted({int(x) for x in re.findall(r'data-tip="(\d+)"', page)}):
         w = wh.get(str(sid)) or {}
@@ -676,6 +683,8 @@ def tip_data(page: str, d: dict, ddir: Path) -> dict:
             tip["s"] = "、".join(sch) + "伤害"
         if deb := debuffs(sid):
             tip["s"] = ("、".join(deb) + "效果" + ("，" + tip["s"] if tip.get("s") else ""))
+        if sid in notes:
+            tip["v"] = notes[sid]
         tips[str(sid)] = tip
     return tips
 
@@ -907,7 +916,7 @@ def main() -> int:
     css = (HERE / "_shared" / "page.css").read_text(encoding="utf-8")
     out = ddir / f"{a.slug}.html"
     page = render_page(d, specs, css)
-    tips = json.dumps(tip_data(page, d, ddir), ensure_ascii=False).replace("</", "<\\/")
+    tips = json.dumps(tip_data(page, d, ddir, specs), ensure_ascii=False).replace("</", "<\\/")
     page = page.replace("__TIPS__", tips)
     page, n, fetched = inject_icons(page, out)
     out.write_text(page, encoding="utf-8")

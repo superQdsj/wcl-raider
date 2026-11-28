@@ -521,6 +521,27 @@
               "ret-guide:L57"
             ]
           }
+        },
+        {
+          "id": 1301253,
+          "name": "塞塔里斯的痛楚",
+          "lethal": true,
+          "what": "房间往地上劈电，冲击点 4.5 码内的人吃自然伤害",
+          "src": [
+            "wowhead:1301253",
+            "diag-b4",
+            "diag-bm-b4"
+          ],
+          "num": "105",
+          "cap": "被劈中一次",
+          "num_src": "diag-bm-b4",
+          "all": {
+            "text": "**别站在落点附近。**残血时被劈中一下就会倒。",
+            "src": [
+              "diag-bm-b4",
+              "bm-guide:L57"
+            ]
+          }
         }
       ]
     }

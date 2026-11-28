@@ -1006,5 +1006,12 @@
   "aura": "装死。\n持续6分钟",
   "dispel": null,
   "icon": "ability_rogue_feigndeath"
+ },
+ "388039": {
+  "name": "孤独幸存者",
+  "desc": "天赋 优胜劣汰的持续时间延长2.0秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_hunter_huntervswild"
  }
 }
