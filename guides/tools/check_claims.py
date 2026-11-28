@@ -540,6 +540,107 @@ def log_interrupt_stats(src):
     return {'casts': casts, 'begins': begins, 'kicked': kicked, 'n': len(samples)}
 
 
+def _mmss(ms):
+    s = int(round(ms / 1000))
+    return f'{s // 60}:{s % 60:02d}'
+
+
+def _median(vals):
+    import statistics
+    return statistics.median(vals) if vals else None
+
+
+SEG_NAMES = ['老 1 之前', '老 1 → 老 2', '老 2 → 老 3', '老 3 → 老 4', '老 4 之后']
+
+
+def log_flow(src, boss_ids):
+    """从样本日志推出每个首领的流程事实和小怪分段。boss_ids: {'1': {技能 ID, ...}, ...}。
+    只用战斗列表、敌方施法（整场查询，命中缓存）和敌方死亡（整场查询）。"""
+    import diag  # noqa: E402
+    from collections import Counter, defaultdict
+    client = diag.Client(api_version='auto', refresh=False)
+    _meta, samples = diag.load_samples(Path(src) / 'runs.json')
+    n = len(samples)
+    boss = {b: {'dur': [], 'units': defaultdict(list), 'bosses': set(), 'death': defaultdict(list),
+                'first': defaultdict(list)} for b in boss_ids}
+    seg_runs, seg_cnt = defaultdict(Counter), defaultdict(lambda: defaultdict(list))
+    for smp in samples:
+        run = diag.load_run(client, f"{smp.code}#fight={smp.fid}")
+        casts = diag.full_events(run, 'Casts', hostility='Enemies')
+        deaths = diag.full_events(run, 'Deaths', hostility='Enemies')
+        for b, ids in boss_ids.items():
+            pulls = diag.find_boss_pulls(run, b)
+            if not pulls:
+                continue
+            p = ([x for x in pulls if x.kill] or pulls)[-1]
+            rec = boss[b]
+            rec['dur'].append(p.dur)
+            rec['bosses'] |= set(p.boss_names)
+            for name, cnt in p.mobs:
+                rec['units'][name].append(cnt)
+            seen = {}
+            for e in deaths:
+                ts = float(e.get('timestamp') or 0)
+                if p.start <= ts <= p.end + 1000:
+                    nm = run.actor_name(e.get('targetID'))
+                    seen.setdefault(nm, ts - p.start)
+            for nm, off in seen.items():
+                rec['death'][nm].append(off)
+            first = {}
+            for e in casts:
+                sid = e.get('abilityGameID')
+                ts = float(e.get('timestamp') or 0)
+                if sid in ids and p.start <= ts <= p.end and e.get('type') in ('cast', 'begincast'):
+                    first.setdefault(sid, (ts - p.start, (e.get('ability') or {}).get('name') or str(sid)))
+            for sid, (off, nm) in first.items():
+                rec['first'][(sid, nm)].append(off)
+        kills = []
+        for p in sorted((x for x in run.pulls if x.is_boss and x.kill), key=lambda x: x.end):
+            if p.encounter_id not in [k for _, k in kills]:
+                kills.append((p.end, p.encounter_id))
+        seen_seg = defaultdict(set)
+        for p in run.pulls:
+            if p.is_boss:
+                continue
+            seg = sum(1 for end, _ in kills if end <= p.start)
+            for name, cnt in p.mobs:
+                seen_seg[seg].add(name)
+                seg_cnt[seg][name].append(cnt)
+        for seg, names in seen_seg.items():
+            for nm in names:
+                seg_runs[seg][nm] += 1
+
+    half = n / 2
+    out = {}
+    for b, rec in boss.items():
+        if not rec['dur']:
+            continue
+        lines = [f"中位时长 {_mmss(_median(rec['dur']))}（{len(rec['dur'])}/{n} 场）"]
+        units = [(nm, len(v), _median(v)) for nm, v in rec['units'].items() if len(v) >= half]
+        units.sort(key=lambda x: (x[0] not in rec['bosses'], -x[2]))
+        if units:
+            lines.append('同场敌方单位（每场中位数量）：' + '、'.join(
+                f"{nm}{'（首领）' if nm in rec['bosses'] else ''} ×{cnt:g}" for nm, _r, cnt in units))
+        order = sorted(((nm, _median(v)) for nm, v in rec['death'].items()
+                        if len(v) >= half and (nm in rec['bosses'] or _median(rec['units'].get(nm, [9])) <= 3)),
+                       key=lambda x: x[1])
+        if len(order) >= 2:
+            lines.append('击杀顺序（中位首次死亡时刻）：' + ' → '.join(f'{nm} +{_mmss(off)}' for nm, off in order[:8]))
+        first = sorted(((nm, _median(v)) for (sid, nm), v in rec['first'].items() if len(v) >= half),
+                       key=lambda x: x[1])
+        if first:
+            lines.append('开怪后首次施放（中位）：' + ' → '.join(f'{nm} +{_mmss(off)}' for nm, off in first[:8]))
+        out[b] = lines
+    segs = []
+    for seg in sorted(seg_runs):
+        mobs = [(nm, r, _median(seg_cnt[seg][nm])) for nm, r in seg_runs[seg].most_common() if r >= half]
+        if mobs:
+            label = SEG_NAMES[seg] if seg < len(SEG_NAMES) else f'段 {seg}'
+            segs.append(f'{label}：' + '、'.join(f'{nm} ×{c:g}（{r}/{n} 场）' for nm, r, c in mobs))
+    out['trash'] = segs
+    return out
+
+
 def mdt_cell(table, ids, logs=None):
     """MDT 标记 + 日志核对；冲突时以日志为准，并写明证据。"""
     id_list = [int(i) for i in ids.split('/')]
@@ -587,6 +688,22 @@ def cmd_mechanics(args):
             logs = log_interrupt_stats(src)
         except Exception as exc:  # 联网失败也能出草稿，只是不做日志核对
             print(f'WARN 日志核对跳过：{exc}', file=sys.stderr)
+    flow = {}
+    if logs is not None:
+        boss_ids = {}
+        for i in range(1, 5):
+            text = files.get(f'boss{i}.txt')
+            if text:
+                ids = set()
+                for raw in section_one(text).splitlines():
+                    m = BOSS_MECH.match(raw)
+                    if m:
+                        ids |= {int(x) for x in m.group('ids').split('/')}
+                boss_ids[str(i)] = ids
+        try:
+            flow = log_flow(src, boss_ids)
+        except Exception as exc:
+            print(f'WARN 流程推导跳过：{exc}', file=sys.stderr)
     if out.exists() and not args.force:
         print(f'FAIL {rel(out)} 已存在，加 --force 覆盖', file=sys.stderr)
         return 1
@@ -600,7 +717,8 @@ def cmd_mechanics(args):
         '> 只有日志能统计出来的部分：技能、ID、施放者、目标形态、周期、伤害绝对值、命中/躲避次数。',
         '> 伤害是样本专精承受的数值，换专精会有出入；已去掉占本专精血量的百分比。',
         '> 「打断 / 驱散 / 吃控」来自 MDT 快照 `<dungeon>.mdt.lua`，并用样本日志核对能否打断：冲突时以日志为准，格内写明证据。MDT 没数据 ≠ 免控。',
-        '> 「<待补>」处（流程、场地、走位）日志看不出来，由用户补。',
+        '> 流程（时长、同场单位、击杀顺序、首次施放、小怪分段）由样本日志推出；场地、走位、开门条件这类日志看不出来的不写。',
+        '> 用户只需挑错：数据和印象不符的地方指出来，以日志为准核对后修正。',
         '> 用户确认后改名为 `<dungeon>.md`，删掉本段，并写变更记录。', '',
     ]
     unparsed = 0
@@ -611,7 +729,13 @@ def cmd_mechanics(args):
             continue
         body = section_one(text)
         if name == 'trash':
-            lines += ['## 全本小怪', '', '- 流程 / 几波 / 走廊与开门条件：<待补>', '',
+            segs = flow.get('trash') or []
+            lines += ['## 全本小怪', '']
+            if segs:
+                lines += [f'- 小怪分段（日志，段 = 开打时已击杀的首领数，只列一半以上场次出现的怪）：']
+                lines += [f'  - {x}' for x in segs]
+                lines.append('')
+            lines += [
                       '| 怪物 | 技能 | ID | 类型 | 伤害 | 中 / 免疫 / 未中 | 出现场次 | 打断 / 驱散 / 吃控 |',
                       '|---|---|---|---|---|---|---|---|']
             for raw in body.splitlines():
@@ -624,7 +748,12 @@ def cmd_mechanics(args):
                              f"| {g['hit']} / {g['imm']} / {g['miss']} | {g['cov']}/{g['n']} | {mdt_cell(mdt_table, g['ids'], logs)} |")
         else:
             title = boss_title(text, name)
-            lines += [f'## 老 {name[-1]}：{title}', '', '- 流程 / 阶段 / 场地 / 走位：<待补>', '',
+            lines += [f'## 老 {name[-1]}：{title}', '']
+            for x in flow.get(name[-1]) or []:
+                lines.append(f'- {x}')
+            if flow.get(name[-1]):
+                lines.append('')
+            lines += [
                       '| 技能 | 施放者 | ID | 目标形态 | 周期 | 伤害 | 共 / 中 / 免疫 / 躲避未中 | 打断 / 驱散 / 吃控 |',
                       '|---|---|---|---|---|---|---|---|']
             for raw in body.splitlines():

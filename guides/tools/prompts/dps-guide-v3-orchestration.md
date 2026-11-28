@@ -26,11 +26,12 @@
 5. 机制卡（**只在 `guides/tools/mechanics/<dungeon>.md` 不存在时做**，即这个副本的第一个专精）：
    - 先下载 MDT 快照：`python3 guides/tools/mdt.py --en "<副本英文名>" --out guides/tools/mechanics/<dungeon>.mdt.lua`（已存在就不要重新下载，它是固定版本）。
    - `CK mechanics $S` → 生成 `guides/tools/mechanics/<dungeon>.draft.md`：从 diag「① 机制速览」抽出的技能、ID、施放者、目标形态、周期、伤害绝对值、命中/躲避次数。「打断 / 驱散 / 吃控」一栏自动取自 MDT；和日志冲突的（例如 MDT 标可打断、日志里是瞬发）在 calibration.md 的疑点里列出。
-   - 协调者只能补 Wowhead 说明里写明的内容（伤害属性、可否驱散），并注明来源；流程、场地、开门条件、几波怪、走位留「<待补>」，**不猜**。
+   - 流程（中位时长、同场单位、击杀顺序、首次施放、小怪分段）由脚本从样本日志推出，协调者不改写。
+   - 协调者只能补 Wowhead 说明里写明的内容（伤害属性、可否驱散），并注明来源；场地、走位、开门条件这类日志看不出来的**不写**，不猜。
    - 同时写一份 `<dungeon>.banned.txt`（可以为空，只有注释行）。
 6. **⏸ 人工确认点**：把 calibration.md（以及第 5 步的机制卡草稿）发给用户，得到确认后才进入阶段 2。
    - 用户要求改配置时，改完重跑第 3 步。
-   - 用户补完并确认机制卡后，草稿改名为 `<dungeon>.md`，删掉草稿说明段，写变更记录。
+   - 用户只挑错，不填空。用户指出的问题先用日志核对（以日志为准），再修正。确认后草稿改名为 `<dungeon>.md`，删掉草稿说明段，写变更记录。
    确认后 commit：`runs.json`、`$C`、`diag/`、`calibration.md`，以及机制卡（如有）。
 
 ## 阶段 2　写稿（一个写手，顺序 boss1 → boss2 → boss3 → boss4 → trash，可用便宜模型）

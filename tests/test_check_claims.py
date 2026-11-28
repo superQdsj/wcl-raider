@@ -269,3 +269,34 @@ class MdtLogConflictTests(unittest.TestCase):
     def test_missing_in_mdt_but_kicked(self):
         self.assertEqual(cc.mdt_cell(self.TABLE, '9', self.logs(kicked=2, sid=9)),
                          '可打断（日志：被打断 2 次；MDT 无此技能）')
+
+
+class LogFlowTests(unittest.TestCase):
+    def test_flow_from_fake_logs(self):
+        from types import SimpleNamespace as NS
+        from unittest import mock
+        import diag
+
+        def pull(enc, start, end, mobs, bosses=(), kill=True):
+            return NS(encounter_id=enc, start=start, end=end, dur=end - start, kill=kill,
+                      mobs=list(mobs), boss_names=list(bosses), is_boss=enc > 0)
+        boss1 = pull(1, 100_000, 340_000, [('A', 1), ('B', 1), ('小怪', 2)], bosses=('A', 'B'))
+        trash = [pull(0, 0, 50_000, [('游荡三叶虫', 4)]), pull(0, 400_000, 450_000, [('宝珠守望者', 2)])]
+        names = {1: 'A', 2: 'B', 3: '小怪'}
+        run = NS(pulls=trash + [boss1], actor_name=lambda i, inst=None: names.get(i, '?'))
+        casts = [{'abilityGameID': 11, 'type': 'cast', 'timestamp': 105_000, 'ability': {'name': '阵风'}},
+                 {'abilityGameID': 12, 'type': 'begincast', 'timestamp': 110_000, 'ability': {'name': '电闪雷鸣'}}]
+        deaths = [{'targetID': 2, 'timestamp': 300_000}, {'targetID': 1, 'timestamp': 340_000}]
+        samples = [NS(code='c%d' % i, fid=1) for i in range(3)]
+        with mock.patch.object(diag, 'Client'), \
+                mock.patch.object(diag, 'load_samples', return_value=({}, samples)), \
+                mock.patch.object(diag, 'load_run', return_value=run), \
+                mock.patch.object(diag, 'find_boss_pulls', return_value=[boss1]), \
+                mock.patch.object(diag, 'full_events',
+                                  side_effect=lambda r, kind, **k: casts if kind == 'Casts' else deaths):
+            flow = cc.log_flow('x', {'1': {11, 12}})
+        text = '\n'.join(flow['1'])
+        self.assertIn('中位时长 4:00（3/3 场）', text)
+        self.assertIn('击杀顺序（中位首次死亡时刻）：B +3:20 → A +4:00', text)
+        self.assertIn('开怪后首次施放（中位）：阵风 +0:05 → 电闪雷鸣 +0:10', text)
+        self.assertEqual(flow['trash'], ['老 1 之前：游荡三叶虫 ×4（3/3 场）', '老 1 → 老 2：宝珠守望者 ×2（3/3 场）'])
