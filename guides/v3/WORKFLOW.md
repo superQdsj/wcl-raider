@@ -1,18 +1,18 @@
 # 给副本页加一个专精：操作流程
 
-样板：`saitalisi/`（塞塔里斯神庙），惩戒骑 `specs/ret.json` 是做好的范例。
+样板：`sethraliss/`（塞塔里斯神庙），惩戒骑 `specs/ret.json` 是做好的范例。
 这份文档写给接手某个专精的 agent。照着做完，副本页上就多一个可切换的专精。
 
 ## 0. 开工前
 
 **你要准备的输入**
-- 这个专精在这本的 v3 攻略 `guide.md` 和样本 `runs.json`，例如 `guides/paladin-ret/sources/saitalisi-v3/`。
+- 这个专精在这本的 v3 攻略 `guide.md` 和样本 `runs.json`，例如 `guides/v3/sethraliss/drafts/paladin-retribution/`。
   - 如果还没有：先用 `diag.py sample` 抽样本，再用 `boss` / `trash` / `inspect` 诊断，写出 guide.md。这是上游流程，不在本文范围。
 - 职业配置 `guides/tools/classes/<专精>.json`，diag.py 要用它。缺了就仿照 `paladin-ret.json` 写一份。
 
 **你只改这几个文件**
-- `guides/dungeons/<副本>/specs/<专精>.json`：新建，主要工作量在这里。
-- `guides/dungeons/<副本>/evidence/` 下以 `<专精>` 命名的新文件。
+- `guides/v3/<副本>/specs/<专精>.json`：新建，主要工作量在这里。
+- `guides/v3/<副本>/evidence/` 下以 `<专精>` 命名的新文件。
 
 **不要改**
 - `dungeon.json`：副本层是所有专精共用的，可能有别的 agent 同时在读写。需要补机制时，见第 3 步末尾。
@@ -28,7 +28,7 @@
 | `<专精>-guide.md` | 把 guide.md 原样复制过来。复制后别再改，行号就是出处 | `<专精>-guide:L<行号>` |
 | `diag-<专精>-b1.md` … `-b4.md`、`diag-<专精>-trash.md` | `python3 guides/tools/diag.py boss --runs <runs.json> --class <配置> --boss N`，trash 同理 | `diag-<专精>-b1`、`diag-<专精>-trash` |
 | `wowhead.json`（追加） | 你的专精技能和天赋的说明，用 `wclr.wowhead.spells([...])` 拉，追加进去，别删已有条目 | `wowhead:<技能ID>` |
-| `talents-<专精>.json`、`tstring-<专精>.json` | `python3 guides/dungeons/tools/talents.py <runs.json> <副本> <专精>`，会自动反向解码核对 | `talents-<专精>` |
+| `talents-<专精>.json`、`tstring-<专精>.json` | `python3 guides/v3/tools/talents.py <runs.json> <副本> <专精>`，会自动反向解码核对 | `talents-<专精>` |
 
 已经有的共用依据：`guides/tools/mechanics/<副本>.mdt.lua`（`mdt:<NPC ID>`）、`trash-route.md`（`trash-route`），以及惩戒骑的 `diag-b*.md`（`diag-bN`）。可以引用，但别改。
 
@@ -67,11 +67,11 @@
 ## 4. 生成和检查
 
 ```
-python3 guides/dungeons/build.py saitalisi
+python3 guides/v3/build.py sethraliss
 ```
 
 - 检查没过会列出每一处问题，逐条修掉再跑。
-- 通过后会生成 `saitalisi/saitalisi.html`。打开时在链接后加 `#<专精>` 就直接是你的专精视图。
+- 通过后会生成 `sethraliss/sethraliss.html`。打开时在链接后加 `#<专精>` 就直接是你的专精视图。
 - 截图自查（headless Chrome）：桌面宽 1280，手机用 390 宽的 iframe 包一层。只看一遍，修一轮，不要反复截。
 - 别的 agent 同时也会跑 build。生成的 HTML 每次都是由所有专精文件重新拼出来的，互相覆盖没关系。如果检查报的是别人那份 JSON 的错，等一下再跑。
 

@@ -7,7 +7,7 @@ MDT 的 Midnight/<副本>.lua 是社区实测维护的怪物表：每只怪吃�
 
 快照放在 guides/tools/mechanics/<dungeon>.mdt.lua，当作固定版本：不要随手重新下载，
 更新时单独做，并重建引用了 mdt:<NPC ID> 的副本页核对出处。
-  python3 guides/tools/mdt.py --en "Temple of Sethraliss" --out guides/tools/mechanics/saitalisi.mdt.lua
+  python3 guides/tools/mdt.py --en "Temple of Sethraliss" --out guides/tools/mechanics/sethraliss.mdt.lua
 
 已知局限：吃控数据不全（塞塔里斯 45 个怪只有 18 个有），没有数据 ≠ 免控；
 个别标记和实战不符（细胞毒素标了可打断，日志里是瞬发），与日志冲突时以日志为准。

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Which trash mobs (and which of their casts) show up in which route segment.
 
-    python3 guides/dungeons/tools/trash_route.py <runs.json>  > evidence/trash-route.md
+    python3 guides/v3/tools/trash_route.py <runs.json>  > evidence/trash-route.md
 
 Segment = number of bosses already killed when the trash pull starts (0 = before boss 1).
 Uses the same cached WCL queries as diag.py trash.

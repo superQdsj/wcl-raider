@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Fetch a spec's talents from the sample runs and encode the most common build.
 
-    python3 guides/dungeons/tools/talents.py <runs.json> <dungeon slug> <spec id>
-    e.g. python3 guides/dungeons/tools/talents.py guides/paladin-ret/sources/saitalisi-v3/runs.json saitalisi ret
+    python3 guides/v3/tools/talents.py <runs.json> <dungeon slug> <spec id>
+    e.g. python3 guides/v3/tools/talents.py guides/v3/sethraliss/drafts/paladin-retribution/runs.json sethraliss ret
 
-Writes guides/dungeons/<slug>/evidence/talents-<spec>.json (raw WCL playerDetails with combatantInfo)
+Writes guides/v3/<slug>/evidence/talents-<spec>.json (raw WCL playerDetails with combatantInfo)
 and tstring-<spec>.json (import string, round-trip checked by guides/tools/enc.py, plus per-run diffs).
 """
 import json

@@ -3,8 +3,8 @@
 给副本加一个专精的完整步骤见 [WORKFLOW.md](WORKFLOW.md)。
 
 ```
-python3 guides/dungeons/build.py saitalisi          # 检查 + 生成 saitalisi/saitalisi.html
-python3 guides/dungeons/build.py saitalisi --check  # 只检查
+python3 guides/v3/build.py sethraliss          # 检查 + 生成 sethraliss/sethraliss.html
+python3 guides/v3/build.py sethraliss --check  # 只检查
 ```
 
 每个副本一个目录：

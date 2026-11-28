@@ -1,4 +1,4 @@
-$ python3 guides/tools/diag.py boss --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json --boss 3
+$ python3 guides/tools/diag.py boss --runs guides/v3/sethraliss/drafts/rogue-subtlety/runs.json --class guides/tools/classes/rogue-sub.json --boss 3
 # 塞塔里斯神庙 · 加瓦兹特（encounter 2126）· 潜行者（敏锐） 极简五维诊断
 > 样本：15 场高分限时（+24×15，不同报告/玩家）| 中位战斗时长 3:53 | 潜行者（敏锐）中位血量 1.05M | 拉入小怪合波 15/15 场
 

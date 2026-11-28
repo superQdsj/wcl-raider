@@ -1,7 +1,7 @@
 # 塞塔里斯神庙 · 共享机制源（v3）
 
 > 只收和专精无关的机制事实：流程、阶段、周期、伤害属性、能否驱散、该断的读条、该躲的技能、走位。
-> 来源：惩戒骑 v3 分稿 `guides/paladin-ret/sources/saitalisi-v3/{boss1..4,trash}.md`（用户已校验，含 commit f834b6c 的走廊修正）。
+> 来源：惩戒骑 v3 分稿 `guides/v3/sethraliss/drafts/paladin-retribution/{boss1..4,trash}.md`（用户已校验，含 commit f834b6c 的走廊修正）。
 > 本专精的减伤、血线、分母不写在这里。各专精稿子的机制文字从这里引用，不能互相抄。
 > 新增或修改条目必须有 MDT / Wowhead / 日志 / 用户的来源，并写进变更记录。
 

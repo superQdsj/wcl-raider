@@ -1,6 +1,6 @@
 {
   "name": "塞塔里斯神庙",
-  "slug": "saitalisi",
+  "slug": "sethraliss",
   "banner": "site/img/dungeons/sethraliss.jpg",
   "intro": "按你的专精看每个首领该按什么。伤害数字来自 15 场 +23/+24 限时记录，含吸收盾。",
   "src_note": "src 写法：wowhead:<技能ID> 指 evidence/wowhead.json；diag-bN 指 evidence/diag-bN.md；ret-guide:L<行> 指 evidence/ret-guide.md；user 指用户口述确认。 mdt:<NPC ID> 指 evidence/mdt.lua；trash-route 指 evidence/trash-route.md（每种怪出现在哪段）；diag-trash 指 evidence/diag-trash.md。",

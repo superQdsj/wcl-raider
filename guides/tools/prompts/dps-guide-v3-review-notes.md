@@ -43,14 +43,14 @@
 ## 脚本用法
 
 ```bash
-CK="python3 guides/tools/check_claims.py"; S=guides/<spec-slug>/sources/<dungeon>-v3
+CK="python3 guides/tools/check_claims.py"; S=guides/v3/<dungeon>/drafts/<spec>
 $CK dump    $S [--wowhead]                    # 并行跑 boss1-4 + trash，写到 $S/diag/
 $CK inspect $S --boss 2 --ability 1293048 --only-bare [--limit 200]   # 跑完落盘并打印
 $CK check   $S [--banned 禁用说法.txt] [--quiet] [--strict-numbers]   # 有 FAIL 时退出码为 1
 $CK merge   $S --spec-name 兽王猎 [--diff]    # 拼接 guide.md；--diff 只比较不写入
 ```
 
-职业配置默认按目录推断为 `classes/<spec-slug>.json`。`--diag-dir` 可以把 diag 指向别的目录。
+职业配置默认按目录推断为 `classes/<spec-slug>.json`（`<spec>` 到 `<spec-slug>` 的对照见 `check_claims.py` 的 `CLASS_JSON`）。`--diag-dir` 可以把 diag 指向别的目录。
 
 `check` 逐条输出 PASS / FAIL / WARN / INFO：
 - **(a) 链接**：每条 WCL 链接必须逐字出现在 `diag/*.txt` 里；报告 code 必须在 runs.json 中；`[rNN@…]` 标签必须和 runs.json 的 code、fight 对应。

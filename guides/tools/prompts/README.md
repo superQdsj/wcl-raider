@@ -27,7 +27,7 @@
 | **新副本**（没有机制卡） | ③ 先建机制卡 | ④ 两样都建 |
 
 - **v3 职业卡**：`guides/tools/classes/<spec-slug>.json`，`defensives` 里带 `tier` 字段。目前有 `paladin-ret`、`hunter-bm`；`rogue-sub` 已经建好，还在等确认。
-- **机制卡**：目前只有塞塔里斯（`saitalisi.md`，以及 MDT 快照 `saitalisi.mdt.lua`、禁用说法清单 `saitalisi.banned.txt`）。
+- **机制卡**：目前只有塞塔里斯（`sethraliss.md`，以及 MDT 快照 `sethraliss.mdt.lua`、禁用说法清单 `sethraliss.banned.txt`）。
 
 这些不用自己判断：提示词第 2 步会检查职业卡，第 5 步会检查机制卡，存在就沿用，不存在就新建。所以四种情况用的是**同一份提示词**，只有参数不同。
 
@@ -37,15 +37,16 @@
 
 ```
 按 guides/tools/prompts/dps-guide-v3-orchestration.md 执行。
-参数：<spec-slug>=XXX，<专精中文名>=XXX，<dungeon>=XXX，<副本名>=XXX，<副本英文名>=XXX。
+参数：<spec>=XXX，<spec-slug>=XXX，<专精中文名>=XXX，<dungeon>=XXX，<副本名>=XXX，<副本英文名>=XXX。
 先只做阶段 1，到人工确认点停下，把 calibration.md（以及机制卡草稿，如果有）给我看。
 ```
 
 | 参数 | 含义 | 例子 |
 |---|---|---|
-| `<spec-slug>` | 专精目录名 | `hunter-bm` |
+| `<spec>` | 草稿目录名，专精英文全称 | `hunter-beastmastery` |
+| `<spec-slug>` | 职业卡文件名（沿用 v2 的旧名，对照见 `check_claims.py` 的 `CLASS_JSON`） | `hunter-bm` |
 | `<专精中文名>` | 抽样时用来识别专精 | `兽王猎` |
-| `<dungeon>` | 副本目录名：沿用仓库里已有的（`duya`、`zhuwang` 等），全新副本用中文名的拼音 | `saitalisi` |
+| `<dungeon>` | 副本目录名，用英文：取 `scripts/build_site.py` 里 `DUNGEON_INFO` 的短名（`sethraliss`、`kingsrest` 等） | `sethraliss` |
 | `<副本名>` | 能在 WCL 副本列表里唯一认出这个副本的名称片段 | `塞塔里斯` |
 | `<副本英文名>` | 用来下载 MDT 快照（只有新副本会用到） | `Temple of Sethraliss` |
 
@@ -77,4 +78,4 @@ $CK merge     <src> --spec-name <专精中文名>
 python3 guides/tools/mdt.py --en "<副本英文名>" --out guides/tools/mechanics/<dungeon>.mdt.lua   # 已存在就不要重下
 ```
 
-`<src>` = `guides/<spec-slug>/sources/<dungeon>-v3`。
+`<src>` = `guides/v3/<dungeon>/drafts/<spec>`。

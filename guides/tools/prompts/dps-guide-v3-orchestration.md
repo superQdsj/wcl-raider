@@ -1,7 +1,7 @@
 # DPS 攻略 v3 编排提示词（参数化）
 
-参数：`<spec-slug>`（如 `hunter-bm`）、`<专精中文名>`（如 兽王猎）、`<dungeon>`（目录 slug，如 `saitalisi`）、`<副本名>`（如 塞塔里斯）。
-下文 `$S` = `guides/<spec-slug>/sources/<dungeon>-v3`，`$C` = `guides/tools/classes/<spec-slug>.json`，`CK` = `python3 guides/tools/check_claims.py`。
+参数：`<spec>`（草稿目录名，专精英文全称，如 `hunter-beastmastery`）、`<spec-slug>`（职业卡文件名，如 `hunter-bm`）、`<专精中文名>`（如 兽王猎）、`<dungeon>`（目录 slug，副本英文名，如 `sethraliss`）、`<副本名>`（如 塞塔里斯）。
+下文 `$S` = `guides/v3/<dungeon>/drafts/<spec>`，`$C` = `guides/tools/classes/<spec-slug>.json`，`CK` = `python3 guides/tools/check_claims.py`。
 
 原则：数据交给脚本（串行抓取，WCL 有单 IP 频率限制），写作串行（一个写手），审判独立（一个全新上下文）。多个专精同时做时，抓数也要排队一个一个来，只有模型写稿的部分可以并行。
 

@@ -1,4 +1,4 @@
-$ python3 guides/tools/diag.py trash --runs guides/rogue-sub/sources/saitalisi-v3/runs.json --class guides/tools/classes/rogue-sub.json
+$ python3 guides/tools/diag.py trash --runs guides/v3/sethraliss/drafts/rogue-subtlety/runs.json --class guides/tools/classes/rogue-sub.json
 # 塞塔里斯神庙 · 全本小怪（非 Boss）· 潜行者（敏锐） 极简五维诊断
 > 样本：15 场高分限时（+24×15）| 小怪中位总时长 14:01（中位 5 波）| 潜行者（敏锐）中位血量 1.06M
 

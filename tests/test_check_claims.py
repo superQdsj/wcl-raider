@@ -188,6 +188,20 @@ class MechanicsDraftTests(unittest.TestCase):
             self.assertEqual(out.read_text(encoding='utf-8'), 'keep')
 
 
+class PathInferenceTests(unittest.TestCase):
+    """v3 目录 guides/v3/<dungeon>/drafts/<spec> 和 v2 旧目录 sources/<dungeon>-v3 都要能推断。"""
+
+    def test_v3_drafts_layout(self):
+        src = cc.ROOT / 'guides' / 'v3' / 'sethraliss' / 'drafts' / 'hunter-beastmastery'
+        self.assertEqual(cc.guess_dungeon(src), 'sethraliss')
+        self.assertEqual(cc.guess_class_json(src).name, 'hunter-bm.json')
+
+    def test_legacy_sources_layout(self):
+        src = cc.ROOT / 'guides' / 'hunter-bm' / 'sources' / 'saitalisi-v3'
+        self.assertEqual(cc.guess_dungeon(src), 'saitalisi')
+        self.assertEqual(cc.guess_class_json(src).name, 'hunter-bm.json')
+
+
 class MechanicsMdtTests(unittest.TestCase):
     LUA = '''
 MDT.dungeonEnemies[dungeonIndex] = {

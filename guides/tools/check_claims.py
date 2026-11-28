@@ -9,12 +9,13 @@
   mechanics  从 diag/*.txt 的「① 机制速览」抽出副本机制卡骨架（新副本的阶段 0 用）
 
 典型用法：
-  python3 guides/tools/check_claims.py dump    guides/hunter-bm/sources/saitalisi-v3
-  python3 guides/tools/check_claims.py inspect guides/hunter-bm/sources/saitalisi-v3 --boss 2 --ability 1293048 --only-bare
-  python3 guides/tools/check_claims.py check   guides/hunter-bm/sources/saitalisi-v3 --banned guides/tools/mechanics/saitalisi.banned.txt
-  python3 guides/tools/check_claims.py merge   guides/hunter-bm/sources/saitalisi-v3 --spec-name 兽王猎
+  python3 guides/tools/check_claims.py dump    guides/v3/sethraliss/drafts/hunter-beastmastery
+  python3 guides/tools/check_claims.py inspect guides/v3/sethraliss/drafts/hunter-beastmastery --boss 2 --ability 1293048 --only-bare
+  python3 guides/tools/check_claims.py check   guides/v3/sethraliss/drafts/hunter-beastmastery --banned guides/tools/mechanics/sethraliss.banned.txt
+  python3 guides/tools/check_claims.py merge   guides/v3/sethraliss/drafts/hunter-beastmastery --spec-name 兽王猎
 
-职业配置默认按目录推断：guides/<spec-slug>/sources/... → guides/tools/classes/<spec-slug>.json。
+目录约定：guides/v3/<dungeon>/drafts/<spec>/，副本名和专精名都由路径推断。
+职业配置：drafts/<spec> → guides/tools/classes/<CLASS_JSON[spec]>.json（v2 的旧目录 guides/<slug>/sources/... 仍然可用）。
 """
 import argparse
 import json
@@ -64,10 +65,31 @@ def rel(p):
         return str(p)
 
 
+# v3 草稿目录用英文全称，职业配置文件沿用 v2 的旧名（v2 工具也在用）。
+CLASS_JSON = {
+    'rogue-subtlety': 'rogue-sub',
+    'paladin-retribution': 'paladin-ret',
+    'hunter-beastmastery': 'hunter-bm',
+}
+
+
+def guess_dungeon(src):
+    """guides/v3/<dungeon>/drafts/<spec> → <dungeon>；旧目录 sources/<dungeon>-v3 → <dungeon>。"""
+    src = Path(src).resolve()
+    if src.parent.name == 'drafts':
+        return src.parent.parent.name
+    return re.sub(r'-v\d+$', '', src.name)
+
+
 def guess_class_json(src):
     parts = Path(src).resolve().parts
-    if 'sources' in parts:
+    slug = None
+    if 'drafts' in parts and parts.index('drafts') + 1 < len(parts):
+        slug = parts[parts.index('drafts') + 1]
+        slug = CLASS_JSON.get(slug, slug)
+    elif 'sources' in parts:
         slug = parts[parts.index('sources') - 1]
+    if slug:
         cand = TOOLS / 'classes' / f'{slug}.json'
         if cand.exists():
             return cand
@@ -678,7 +700,7 @@ def cmd_mechanics(args):
     if not files:
         print(f'FAIL {rel(diag_dir(args))} 下没有 diag 输出，先跑 dump', file=sys.stderr)
         return 1
-    dungeon = re.sub(r'-v\d+$', '', src.name)
+    dungeon = guess_dungeon(src)
     out = Path(args.out) if args.out else TOOLS / 'mechanics' / f'{dungeon}.draft.md'
     mdt_path = Path(args.mdt) if args.mdt else TOOLS / 'mechanics' / f'{dungeon}.mdt.lua'
     mdt_table = load_mdt(mdt_path) if mdt_path.is_file() else None
@@ -778,7 +800,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest='cmd', required=True)
 
     def common(p):
-        p.add_argument('src', help='sources/<dungeon>-v3 目录（含 runs.json 与 *.md）')
+        p.add_argument('src', help='guides/v3/<dungeon>/drafts/<spec> 目录（含 runs.json 与 *.md）')
         p.add_argument('--diag-dir', help='diag 落盘目录，默认 <src>/diag')
         return p
 

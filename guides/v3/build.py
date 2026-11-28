@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Build one multi-spec dungeon page from data.
 
-    python3 guides/dungeons/build.py saitalisi          # check + build
-    python3 guides/dungeons/build.py saitalisi --check  # check only
+    python3 guides/v3/build.py sethraliss          # check + build
+    python3 guides/v3/build.py sethraliss --check  # check only
 
-Inputs (guides/dungeons/<slug>/):
+Inputs (guides/v3/<slug>/):
   dungeon.json     shared layer: bosses, abilities, numbers, each mechanic with its source
   specs/*.json     one file per DPS spec: cooldown plan, what to press, trick, don'ts, log links
   evidence/        sources the `src` fields point at (wowhead.json, diag-bN.md, <spec>-guide.md)
-Output: guides/dungeons/<slug>/<slug>.html (spec blocks are all in the page; the picker shows/hides them).
+Output: guides/v3/<slug>/<slug>.html (spec blocks are all in the page; the picker shows/hides them).
 """
 from __future__ import annotations
 
