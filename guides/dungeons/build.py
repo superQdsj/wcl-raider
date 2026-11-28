@@ -24,6 +24,11 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 GUIDES = HERE.parent
 ROOT = GUIDES.parent
+
+
+def mdt_path(ddir: Path) -> Path:
+    """MDT 快照只保留一份：guides/tools/mechanics/<副本>.mdt.lua（机制卡生成器也用它）。"""
+    return GUIDES / "tools" / "mechanics" / f"{ddir.name}.mdt.lua"
 ICONS = GUIDES / "icons"
 sys.path.insert(0, str(GUIDES / "tools"))
 from icons import inject_icons  # noqa: E402
@@ -83,7 +88,7 @@ class Checker:
                 continue
             if s.startswith("mdt:"):
                 if f'["id"] = {s[4:]},' not in self._mdt():
-                    self.err(where, f"{s} 不在 evidence/mdt.lua")
+                    self.err(where, f"{s} 不在 guides/tools/mechanics/<副本>.mdt.lua")
                 continue
             if s.startswith("wowhead:"):
                 if s[8:] not in self.wowhead:
@@ -101,7 +106,7 @@ class Checker:
 
     def _mdt(self) -> str:
         if not hasattr(self, "_mdt_text"):
-            p = self.ev / "mdt.lua"
+            p = mdt_path(self.ev.parent)
             self._mdt_text = p.read_text(encoding="utf-8") if p.is_file() else ""
         return self._mdt_text
 
@@ -828,8 +833,8 @@ def main() -> int:
     order = [s[0] for s in SPEC_CATALOG]
     specs.sort(key=lambda s: order.index(s["spec"]) if s["spec"] in order else 99)
     WOWHEAD.update(json.loads((ddir / "evidence" / "wowhead.json").read_text(encoding="utf-8")))
-    if (ddir / "evidence" / "mdt.lua").is_file():
-        MDT_FLAGS.update(load_mdt_flags((ddir / "evidence" / "mdt.lua").read_text(encoding="utf-8")))
+    if mdt_path(ddir).is_file():
+        MDT_FLAGS.update(load_mdt_flags(mdt_path(ddir).read_text(encoding="utf-8")))
     ck = Checker(ddir)
     check(d, specs, ck)
     if ck.errors:

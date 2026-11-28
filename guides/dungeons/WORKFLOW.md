@@ -30,7 +30,7 @@
 | `wowhead.json`（追加） | 你的专精技能和天赋的说明，用 `wclr.wowhead.spells([...])` 拉，追加进去，别删已有条目 | `wowhead:<技能ID>` |
 | `talents-<专精>.json`、`tstring-<专精>.json` | `python3 guides/dungeons/tools/talents.py <runs.json> <副本> <专精>`，会自动反向解码核对 | `talents-<专精>` |
 
-已经有的共用依据：`mdt.lua`（`mdt:<NPC ID>`）、`trash-route.md`（`trash-route`），以及惩戒骑的 `diag-b*.md`（`diag-bN`）。可以引用，但别改。
+已经有的共用依据：`guides/tools/mechanics/<副本>.mdt.lua`（`mdt:<NPC ID>`）、`trash-route.md`（`trash-route`），以及惩戒骑的 `diag-b*.md`（`diag-bN`）。可以引用，但别改。
 
 ## 2. 先读懂副本层
 
@@ -101,7 +101,7 @@ python3 guides/dungeons/build.py saitalisi
 ## 新副本（不是新专精）时多做的事
 
 由一个会话先做好副本层，再分给各专精：
-1. 从 MDT 仓库 `Nnoggie/MythicDungeonTools` 的 `Midnight/<副本>.lua` 下载到 `evidence/mdt.lua`。
+1. 从 MDT 仓库 `Nnoggie/MythicDungeonTools` 的 `Midnight/<副本>.lua` 下载到 `guides/tools/mechanics/<副本>.mdt.lua`（用 `python3 guides/tools/mdt.py`；已存在就不要重下）。
 2. 跑 `tools/trash_route.py <runs.json> > evidence/trash-route.md`。
 3. 收集首领和小怪技能的 Wowhead 说明。
 4. 用日志核对 NPC 名字。
