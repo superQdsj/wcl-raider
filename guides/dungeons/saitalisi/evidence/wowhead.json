@@ -1,0 +1,653 @@
+{
+ "1288457": {
+  "name": "阵风",
+  "desc": "阿斯匹克斯爆破一名玩家，造成58189点自然伤害，此后每1秒额外造成24246点自然伤害，持续4秒。",
+  "aura": "每1秒造成24246点自然伤害。\n持续4秒",
+  "dispel": null,
+  "icon": "ability_skyreach_wind"
+ },
+ "1310712": {
+  "name": "狂风之力",
+  "desc": "阿斯匹克斯向玩家释放狂风之力，造成77586点自然伤害并将其击退。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_skyreach_four_wind"
+ },
+ "1289062": {
+  "name": "狂风之力",
+  "desc": "阿斯匹克斯向玩家释放狂风之力，造成77586点自然伤害并将其击退。",
+  "aura": "成为狂风之力的目标。",
+  "dispel": null,
+  "icon": "ability_skyreach_four_wind"
+ },
+ "1288092": {
+  "name": "电闪雷鸣",
+  "desc": "阿德里斯挥舞着闪烁电弧的利刃向前冲刺，造成581895点自然伤害（由8码范围内的所有玩家均摊）。\n随后他会引导一记震耳欲聋的惊雷，对20码范围内的所有敌人造成387930点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "warrior_talent_icon_thunderstruck"
+ },
+ "1288087": {
+  "name": "电闪雷鸣",
+  "desc": "阿德里斯挥舞着闪烁电弧的利刃向前冲刺，造成581895点自然伤害（由8码范围内的所有玩家均摊）。\n随后他会引导一记震耳欲聋的惊雷，对20码范围内的所有敌人造成387930点自然伤害。",
+  "aura": "阿德里斯挥舞着闪烁电弧的利刃向前冲刺，造成581895点自然伤害（由8码范围内的所有玩家均摊）。\n随后他会引导一记震耳欲聋的惊雷，对20码范围内的所有敌人造成387930点自然伤害。",
+  "dispel": null,
+  "icon": "warrior_talent_icon_thunderstruck"
+ },
+ "1314051": {
+  "name": "电闪雷鸣",
+  "desc": "阿德里斯挥舞着闪烁电弧的利刃向前冲刺，造成581895点自然伤害（由8码范围内的所有玩家均摊）。\n随后他会引导一记震耳欲聋的惊雷，对20码范围内的所有敌人造成387930点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_unrelentingstorm"
+ },
+ "1288864": {
+  "name": "暴风",
+  "desc": "阿斯匹克斯用狂风锁定玩家，对冲击点8码范围内的玩家造成116379点自然伤害。\n这些狂风会随时间不断增强，汇聚成暴风区域，持续2分钟，使身处其中的任何玩家被沉默并缴械，持续4秒。",
+  "aura": "成为暴风的目标",
+  "dispel": null,
+  "icon": "achievement_raidprimalist_windelemental"
+ },
+ "1311808": {
+  "name": "暴风",
+  "desc": "阿斯匹克斯用狂风锁定玩家，对冲击点8码范围内的玩家造成116379点自然伤害。\n这些狂风会随时间不断增强，汇聚成暴风区域，持续2分钟，使身处其中的任何玩家被沉默并缴械，持续4秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "achievement_raidprimalist_windelemental"
+ },
+ "1288428": {
+  "name": "过载",
+  "desc": "阿德里斯注入力量而发生过载，持续8秒，使他的攻击速度提高100%，并使他的每次近战攻击造成相当于其伤害25%的额外自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_thunderking_overcharge"
+ },
+ "1310311": {
+  "name": "风暴祝福",
+  "desc": "阿德里斯和阿斯匹克斯召唤风暴的力量，使他们免疫伤害。\n这对搭档在受伤时会将这个祝福在他们之间进行转移。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_lightningshield"
+ },
+ "1292035": {
+  "name": "狂乱",
+  "desc": "失去一个同伴会使另一个陷入彻底的狂乱，不计后果地施放技能。",
+  "aura": "狂乱。",
+  "dispel": null,
+  "icon": "ability_fixated_state_red"
+ },
+ "1293048": {
+  "name": "毒蛇风暴",
+  "desc": "米利克萨喷吐毒液，击退所有玩家并造成116379点自然伤害，随后在8秒内每1秒额外造成29095点自然伤害。\n风暴打击会出现在房间各处。",
+  "aura": "每1秒造成29095点自然伤害。\n持续8秒",
+  "dispel": null,
+  "icon": "spell_nature_lightningoverload"
+ },
+ "1300227": {
+  "name": "钻地之震",
+  "desc": "米利克萨在地下穿行，导致地面剧烈震颤，每1秒对所有玩家造成24246点自然伤害。",
+  "aura": "每1秒造成24246点自然伤害。",
+  "dispel": null,
+  "icon": "spell_shaman_earthquake"
+ },
+ "1289109": {
+  "name": "雷霆喷吐",
+  "desc": "米利克萨向玩家喷吐不稳定的能量，造成58189点自然伤害，并使闪电每1秒劈向其所在位置，持续4秒。\n每次雷击对冲击区域内的所有玩家造成290947点自然伤害并留下萦绕风暴。",
+  "aura": "成为雷霆喷吐的目标。\n持续3秒",
+  "dispel": null,
+  "icon": "ability_thunderking_thunderstruck"
+ },
+ "1289588": {
+  "name": "雷霆喷吐",
+  "desc": "米利克萨向玩家喷吐不稳定的能量，造成58189点自然伤害，并使闪电每1秒劈向其所在位置，持续4秒。\n每次雷击对冲击区域内的所有玩家造成290947点自然伤害并留下萦绕风暴。",
+  "aura": "每1秒造成58189点自然伤害。\n持续4秒",
+  "dispel": null,
+  "icon": "ability_thunderking_thunderstruck"
+ },
+ "1289589": {
+  "name": "萦绕风暴",
+  "desc": "闪电之池每1秒造成96982点自然伤害。",
+  "aura": "每1秒造成96982点自然伤害。",
+  "dispel": null,
+  "icon": "spell_nature_stormreach"
+ },
+ "264172": {
+  "name": "钻地",
+  "desc": "米利克萨钻入地下，对路径上的任何玩家造成290947点自然伤害。受害者会被击飞并昏迷4秒。\n在米利克萨钻地时会发生钻地之震。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_shaman_earthquake"
+ },
+ "264206": {
+  "name": "钻地",
+  "desc": "米利克萨钻入地下，对路径上的任何玩家造成290947点自然伤害。受害者会被击飞并昏迷4秒。\n在米利克萨钻地时会发生钻地之震。",
+  "aura": "昏迷。\n持续4秒",
+  "dispel": null,
+  "icon": "ability_gift_of_earth"
+ },
+ "1290797": {
+  "name": "闪电撕咬",
+  "desc": "米利克萨将闪烁着电光的毒牙刺入当前目标体内，造成533403点物理伤害，并在7秒内每1秒额外造成58189点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_thunderking_balllightning"
+ },
+ "1290030": {
+  "name": "缠绕蛇群",
+  "desc": "众多小蛇将目标死死缠住，使其无法采取任何行动并缓慢窒息，每1秒造成29095点物理伤害。\n攻击或瘫痪这群毒蛇即可解救受害者，导致蛇群散开并攻击玩家。",
+  "aura": "成为缠绕蛇群的目标！\n持续4秒",
+  "dispel": null,
+  "icon": "ability_hunter_snaketrap"
+ },
+ "263958": {
+  "name": "缠绕的蛇群",
+  "desc": "众多小蛇将目标死死缠住，使其无法采取任何行动并缓慢窒息，每1秒造成29095点物理伤害。\n攻击或瘫痪这群毒蛇即可解救受害者，导致蛇群散开并攻击玩家。",
+  "aura": "昏迷。\n每1秒造成29095点物理伤害。\n持续20秒",
+  "dispel": null,
+  "icon": "ability_hunter_snaketrap"
+ },
+ "1289205": {
+  "name": "孵化",
+  "desc": "毒蛇从米利克萨房间内的卵中孵化出来并攻击玩家。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_egg_03"
+ },
+ "267027": {
+  "name": "毒素喷吐",
+  "desc": "剧毒蝰蛇向一名玩家喷吐毒液，造成116379点自然伤害，此后每1秒额外造成29095点自然伤害，持续8秒。",
+  "aura": "每1秒造成29095点自然伤害。\n持续8秒",
+  "dispel": "中毒",
+  "icon": "ability_hunter_cobrastrikes"
+ },
+ "1291622": {
+  "name": "风暴触媒",
+  "desc": "风暴飞蛇在它的位置召唤一道闪电，对冲击区域4码范围内的所有玩家造成290947点自然伤害并留下萦绕风暴。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_unrelentingstorm"
+ },
+ "266923": {
+  "name": "镀流",
+  "desc": "加瓦兹特的尖塔每0.5秒造成24246点自然伤害，但无法对加瓦兹特施加充能。\n受此影响时，受害者受到的物理伤害提高250%。",
+  "aura": "每0.5秒造成24246点自然伤害。\n受到的物理伤害提高250%。",
+  "dispel": null,
+  "icon": "spell_shaman_staticshock"
+ },
+ "1290531": {
+  "name": "诱导",
+  "desc": "加瓦兹特释放出一道电能脉冲，对所有敌人造成145474点自然伤害，并产生一个诱导力场。",
+  "aura": "静电场每1秒对站在其中的玩家造成96982点自然伤害。\n持续1分钟",
+  "dispel": null,
+  "icon": "ability_thunderking_overcharge"
+ },
+ "1291815": {
+  "name": "诱导力场",
+  "desc": "静电场每1秒对站在其中的玩家造成96982点自然伤害。",
+  "aura": "每1秒造成96982点自然伤害。",
+  "dispel": null,
+  "icon": "ability_vehicle_electrocharge"
+ },
+ "266512": {
+  "name": "放电",
+  "desc": "加瓦兹特消耗能量电击所有玩家，造成164870点自然伤害并使其造成的伤害降低50%，持续20秒。\n消耗能量还会使加瓦兹特获得一层电容。",
+  "aura": "造成的伤害降低50%。\n持续20秒",
+  "dispel": null,
+  "icon": "spell_nature_unrelentingstorm"
+ },
+ "1312214": {
+  "name": "腐化",
+  "desc": "黑暗能量每1秒造成4点暗影伤害，使造成的治疗效果降低33%，并使受到的物理伤害提高250%，持续15秒。此效果可叠加。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_nullstone_shadow"
+ },
+ "1300877": {
+  "name": "腐化",
+  "desc": "黑暗能量每1秒造成38793点暗影伤害，使造成的治疗效果降低33%，并使受到的物理伤害提高250%，持续15秒。此效果可叠加。",
+  "aura": "每1秒造成38793点暗影伤害。\n造成的治疗效果降低33%。\n受到的物理伤害提高250%。\n持续15秒",
+  "dispel": null,
+  "icon": "inv_nullstone_shadow"
+ },
+ "1302618": {
+  "name": "邪恶冲锋",
+  "desc": "堕落的守护者冲向一名玩家并打击他们，造成67888点暗影伤害，并在接下来的8秒内每1秒额外造成38793点暗影伤害。",
+  "aura": "每1秒造成38793点暗影伤害。\n持续8秒",
+  "dispel": null,
+  "icon": "ability_rogue_shadowstep"
+ },
+ "1302616": {
+  "name": "邪恶冲锋",
+  "desc": "堕落的守护者冲向一名玩家并打击他们，造成67888点暗影伤害，并在接下来的8秒内每1秒额外造成38793点暗影伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_shadowstep"
+ },
+ "1300803": {
+  "name": "污秽打击",
+  "desc": "堕落的守护者用残暴的挥砍攻击其当前目标，造成484912点物理伤害，并每1秒额外造成29095点暗影伤害，持续25秒。该效果可叠加。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_ironmaidens_convulsiveshadows"
+ },
+ "1300684": {
+  "name": "妖术淤泥",
+  "desc": "一团妖术魔法泥沼将其中的玩家变成青蛙，使其无法攻击或施法，并每2秒造成96982点自然伤害。",
+  "aura": "被变形，无法攻击或施法。\n每2秒造成96982点自然伤害。",
+  "dispel": null,
+  "icon": "spell_shaman_hex"
+ },
+ "1311979": {
+  "name": "潜藏妖术",
+  "desc": "该生物折磨一名玩家，持续4秒，每1秒造成31519点暗影伤害。\n被移除时，暗影能量会对受害者10码范围内的玩家造成77586点暗影伤害，并释放出妖术淤泥。",
+  "aura": "被移除时，对附近的玩家造成77586点暗影伤害并形成妖术淤泥。\n每1秒造成31519点暗影伤害。\n持续4秒",
+  "dispel": null,
+  "icon": "inv_shoulder_armor_hextroll_d_01"
+ },
+ "1302153": {
+  "name": "潜藏妖术",
+  "desc": "该生物折磨一名玩家，持续4秒，每1秒造成31519点暗影伤害。\n被移除时，暗影能量会对受害者10码范围内的玩家造成77586点暗影伤害，并释放出妖术淤泥。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_shoulder_armor_hextroll_d_01"
+ },
+ "1301253": {
+  "name": "塞塔里斯的痛楚",
+  "desc": "塞塔里斯的房间释放电击，对冲击点4.5码范围内的玩家造成242456点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_lightningoverload"
+ },
+ "1302761": {
+  "name": "不稳定腐化",
+  "desc": "污浊的能量从堕落的守护者体内爆发，对20码范围内的玩家造成484664点暗影伤害，并形成腐蚀生命力。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_mage_supernova_nightborne"
+ },
+ "1301199": {
+  "name": "污染之秽",
+  "desc": "精华污染者将黑暗能量注入塞塔里斯的化身，使其无法受到任何外部治疗。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_creature_disease_05"
+ },
+ "1302158": {
+  "name": "烈焰震击",
+  "desc": "该生物用烈火灼烧一名玩家，造成242456点火焰伤害，并且每1秒额外造成77586点火焰伤害，持续8秒。",
+  "aura": "每1秒造成77586点火焰伤害。\n持续8秒",
+  "dispel": null,
+  "icon": "spell_fire_flameshock"
+ },
+ "1300704": {
+  "name": "锁定",
+  "desc": "该生物试图锁定最近的敌方治疗者，并在击中时使其造成的治疗量降低5%。该效果可叠加。",
+  "aura": "被无信折磨者锁定！\n持续7天",
+  "dispel": null,
+  "icon": "ability_fixated_state_purple"
+ },
+ "265966": {
+  "name": "震地",
+  "desc": "施法者猛击地面，其巨大的力量会将60码范围内的所有敌人击退，并造成156627点物理伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_smash"
+ },
+ "1291468": {
+  "name": "破甲猛击",
+  "desc": "造成387930点物理伤害，并使其受到的物理伤害提高50%，持续10秒。该效果可叠加。",
+  "aura": "受到的物理伤害提高50%。\n持续10秒",
+  "dispel": null,
+  "icon": "ability_warrior_shieldbreak"
+ },
+ "1291399": {
+  "name": "锯齿冲锋",
+  "desc": "该生物向一名敌人冲锋，造成58189点物理伤害，并使其流血，在6秒内每1秒额外造成38793点物理伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_artifact_bloodoftheassassinated"
+ },
+ "1308113": {
+  "name": "箭雨",
+  "desc": "施法者朝一名玩家发射连珠箭，每0.8秒造成43642点物理伤害，持续9秒。",
+  "aura": "每0.8秒造成43642点物理伤害。\n持续9秒",
+  "dispel": null,
+  "icon": "inv_misc_ammo_arrow_05"
+ },
+ "1308116": {
+  "name": "箭雨",
+  "desc": "施法者朝一名玩家发射连珠箭，每0.8秒造成43642点物理伤害，持续9秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_misc_ammo_arrow_05"
+ },
+ "1292585": {
+  "name": "沙爆箭",
+  "desc": "射出一支附魔的箭矢，它会在地面上不安地颤动，随后轰然爆炸，对5码内的敌人造成290947点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_sandexplosion"
+ },
+ "1295635": {
+  "name": "蜿蜒打击",
+  "desc": "施法者传送到一名玩家处并发动打击，造成67888点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_knife_1h_snakeman_c_01"
+ },
+ "1295610": {
+  "name": "蜿蜒打击",
+  "desc": "施法者传送到一名玩家处并发动打击，造成67888点自然伤害。",
+  "aura": "施法者传送到一名玩家处并发动打击，造成67888点自然伤害。",
+  "dispel": null,
+  "icon": "inv_knife_1h_snakeman_c_01"
+ },
+ "1308100": {
+  "name": "涂毒偷袭",
+  "desc": "施法者用一记涂毒偷袭令目标中毒，将其击晕，每1秒造成96982点自然伤害，持续5秒。需要潜行。",
+  "aura": "昏迷。\n每1秒造成96982点自然伤害。\n持续5秒",
+  "dispel": "中毒",
+  "icon": "ability_cheapshot"
+ },
+ "1291262": {
+  "name": "闪电箭",
+  "desc": "Inflicts 116379 Nature damage to an enemy.",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_lightning"
+ },
+ "1310683": {
+  "name": "毒箭",
+  "desc": "施法者对一名玩家造成116379点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_ability_poison_missile"
+ },
+ "1308148": {
+  "name": "细胞毒素",
+  "desc": "施法者向一名玩家注射细胞毒素，造成72737点自然伤害，并且每1秒额外造成38793点自然伤害，持续10秒。",
+  "aura": "每1秒造成38793点自然伤害。\n持续10秒",
+  "dispel": "中毒",
+  "icon": "ability_hunter_cobrastrikes"
+ },
+ "1293307": {
+  "name": "扰乱心智",
+  "desc": "引导能够扭曲心智的能量，使敌人的心智陷入迷惑，持续5秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_shadow_mindflay"
+ },
+ "1292990": {
+  "name": "三叶虫群",
+  "desc": "施法者召唤三叶虫同伴在战斗中协助他们。",
+  "aura": "",
+  "dispel": null,
+  "icon": "achievement_dungeon_thesandqueen"
+ },
+ "272655": {
+  "name": "黄沙冲刷",
+  "desc": "施法者呼出一片锥形的沙尘，对前方锥形范围内的玩家造成290947点自然伤害并使其迷惑4秒。",
+  "aura": "被迷惑。\n持续4秒",
+  "dispel": null,
+  "icon": "spell_sandexplosion"
+ },
+ "272654": {
+  "name": "撞头",
+  "desc": "该生物对其当前目标造成727368点物理伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_trilobitemount_black"
+ },
+ "1310396": {
+  "name": "毒蛇唤雷",
+  "desc": "该生物召唤风暴的力量，使其近战攻击造成额外的自然伤害，持续8秒。\n效果结束时，会在该生物脚下形成一滩萦绕风暴。",
+  "aura": "该生物的近战攻击会造成额外的自然伤害。\n效果结束时，会在该生物脚下形成一滩萦绕风暴。\n持续8秒",
+  "dispel": null,
+  "icon": "spell_nature_unrelentingstorm"
+ },
+ "1293475": {
+  "name": "释放电荷",
+  "desc": "释放由积攒电荷积聚的所有能量，对所有玩家造成145474点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_chargenegative"
+ },
+ "1293464": {
+  "name": "积攒电荷",
+  "desc": "施法者积蓄能量，使其造成的伤害提高8%。\n此效果可叠加。最多叠加3层。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_chargepositive"
+ },
+ "1293650": {
+  "name": "召唤闪电",
+  "desc": "施法者召唤闪电，对冲击点6码范围内的所有敌人造成290947点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_unrelentingstorm"
+ },
+ "1296045": {
+  "name": "灌能传导",
+  "desc": "施法者向玩家体内输送电流，在20秒内每1秒造成42672点自然伤害。\n如果灌能传导结束，传导闪电将劈中受害者。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_lightning"
+ },
+ "1296052": {
+  "name": "灌能传导",
+  "desc": "施法者向玩家体内输送电流，在20秒内每1秒造成42672点自然伤害。\n如果灌能传导结束，传导闪电将劈中受害者。",
+  "aura": "每1秒造成42672点自然伤害。\n效果结束时击晕目标。\n持续20秒",
+  "dispel": "魔法",
+  "icon": "spell_nature_stormreach"
+ },
+ "269116": {
+  "name": "吸取能量",
+  "desc": "施法者从附近的能量源吸收能量，使造成的所有伤害提高50%。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_nature_lightningshield"
+ },
+ "264763": {
+  "name": "火花步",
+  "desc": "该生物闪现至一名玩家的位置，对目标玩家5码范围内的玩家造成58189点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_shaman_crashlightning"
+ },
+ "267483": {
+  "name": "不羁的火花",
+  "desc": "不羁的火花闪动着能量，对击中的玩家造成290947点自然伤害，并使其昏迷6秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_thunderking_lightningwhip"
+ },
+ "1303486": {
+  "name": "蚀骨践踏",
+  "desc": "该生物猛踏地面，喷发出一股烈毒新星，对60码范围内的玩家造成116379点自然伤害，并且每1秒额外造成33459点自然伤害，持续10秒。",
+  "aura": "每1秒造成33459点自然伤害。\n持续10秒",
+  "dispel": null,
+  "icon": "inv_ability_poison_nova"
+ },
+ "1303443": {
+  "name": "毒刃斩击",
+  "desc": "该生物猛击当前目标，造成581895点物理伤害，并在接下来的10秒内每1秒额外造成58189点自然伤害。\n毒液弹片自打击处向外迸射。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_rogue_disembowel"
+ },
+ "273274": {
+  "name": "极化力场",
+  "desc": "极化力场兽周围的力场会使附近敌人的移动速度降低35%。",
+  "aura": "移动速度降低35%。",
+  "dispel": null,
+  "icon": "spell_chargenegative"
+ },
+ "1303596": {
+  "name": "能量虹吸",
+  "desc": "塞塔里斯之眼从60码内最近的玩家身上汲取能量，每1秒造成4点自然伤害。",
+  "aura": "每1秒对最近的一名玩家造成4点自然伤害。",
+  "dispel": null,
+  "icon": "inv_nature_beam"
+ },
+ "403876": {
+  "name": "圣佑术",
+  "desc": "使你受到的所有伤害降低20%，持续8秒 [复仇之盾: ，并施放复仇之盾]。能够在昏迷中使用。",
+  "aura": "受到的伤害降低20%。\n持续8秒",
+  "dispel": null,
+  "icon": "spell_holy_divineprotection"
+ },
+ "642": {
+  "name": "圣盾术",
+  "desc": "你对所有的伤害、有害效果、击退和强制移动效果免疫，持续8秒。\n带有自律效果时无法使用。造成自律效果，持续30秒。",
+  "aura": "免疫一切攻击和有害效果。\n持续8秒",
+  "dispel": "魔法",
+  "icon": "spell_holy_divineshield"
+ },
+ "6940": {
+  "name": "牺牲祝福",
+  "desc": "天赋 祝福一名小队或团队成员，使其所受伤害降低30%，降低伤害的100%由你来承担。\n持续12秒，或直到转移的伤害使你的生命值降至20%以下为止。",
+  "aura": "[受到伤害的30%被转移给$auracaster。][承受目标盟友所受伤害的30%。]\n持续12秒",
+  "dispel": null,
+  "icon": "spell_holy_sealofsacrifice"
+ },
+ "1022": {
+  "name": "保护祝福",
+  "desc": "天赋 神圣, 惩戒\n祝福一名小队或团队成员，使其免疫所有物理伤害和有害效果，持续10秒。\n无法对有自律效果的目标使用。造成自律，持续30秒。\n防护\n祝福一名小队或团队成员，使其免疫所有物理伤害和有害效果，持续10秒。\n无法对有自律效果的目标使用。造成自律，持续30秒。\n与破咒祝福共享冷却时间。",
+  "aura": "免疫物理攻击与有害效果。\n持续10秒",
+  "dispel": "魔法",
+  "icon": "spell_holy_sealofprotection"
+ },
+ "633": {
+  "name": "圣疗术",
+  "desc": "天赋 治疗一个友方目标，数值相当于你的最大生命值的100%。\n无法对有自律效果的目标使用。造成自律效果，持续30秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_holy_layonhands"
+ },
+ "96231": {
+  "name": "责难",
+  "desc": "天赋 打断施法并使该系法术在5秒内无法施放。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_holy_rebuke"
+ },
+ "853": {
+  "name": "制裁之锤",
+  "desc": "使目标昏迷6秒。",
+  "aura": "昏迷。\n持续6秒",
+  "dispel": "魔法",
+  "icon": "spell_holy_sealofmight"
+ },
+ "115750": {
+  "name": "盲目之光",
+  "desc": "天赋 向四面八方发出耀眼的光芒，使10码范围内的敌人暂时失明，并使其迷惑地游荡，持续6秒。伤害可能取消该效果。",
+  "aura": "",
+  "dispel": null,
+  "icon": "ability_paladin_blindinglight"
+ },
+ "213644": {
+  "name": "清毒术",
+  "desc": "天赋 净化一个友方目标，移除所有中毒效果和疾病效果。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_holy_renew"
+ },
+ "269896": {
+  "name": "胚胎精华",
+  "desc": "施法者在吸收了卵中的胚胎生命力后显得精力充沛。\n施法者会恢复10%的最大生命值，并且造成的所有伤害提高30%，持续直到主动取消。",
+  "aura": "[造成的伤害提高30%。][法术的冷却时间缩短50%。]",
+  "dispel": null,
+  "icon": "achievement_halloween_rottenegg_01"
+ },
+ "1310739": {
+  "name": "积攒电荷",
+  "desc": "施法者积蓄能量，使其造成的伤害提高8%。\n此效果可叠加。最多叠加3层。",
+  "aura": "造成的伤害提高8%。\n持续25秒",
+  "dispel": "魔法",
+  "icon": "spell_chargepositive"
+ },
+ "1303452": {
+  "name": "毒液弹片",
+  "desc": "毒液飞弹如雨倾泻，对4码内的玩家造成290947点自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_ability_poison_missile"
+ },
+ "268013": {
+  "name": "烈焰震击",
+  "desc": "该生物用烈火灼烧一名玩家，造成242456点火焰伤害，并且每1秒额外造成77586点火焰伤害，持续8秒。",
+  "aura": "每1秒造成77586点火焰伤害。\n持续8秒",
+  "dispel": null,
+  "icon": "spell_fire_flameshock"
+ },
+ "1310693": {
+  "name": "静电冲击",
+  "desc": "该生物的近战攻击会造成额外的自然伤害。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_shaman_crashlightning"
+ },
+ "1300666": {
+  "name": null,
+  "desc": null,
+  "aura": null,
+  "dispel": null,
+  "icon": null
+ },
+ "1311980": {
+  "name": "潜藏妖术",
+  "desc": "该生物折磨一名玩家，持续5秒，每1秒造成31519点暗影伤害。\n被移除时，暗影能量会对受害者10码范围内的玩家造成77586点暗影伤害，并释放出妖术淤泥。",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_shoulder_armor_hextroll_d_01"
+ },
+ "1044": {
+  "name": "自由祝福",
+  "desc": "天赋 祝福一名小队或团队成员，使其免疫任何移动限制效果， [无拘自由: 并使其移动速度提高30%，]持续8秒。",
+  "aura": "对一切移动限制效果免疫。 [无拘自由: 移动速度提高30%]\n持续8秒",
+  "dispel": "魔法",
+  "icon": "spell_holy_sealofvalor"
+ },
+ "262046": {
+  "name": "近战",
+  "desc": "Inflicts Physical damage to an enemy.",
+  "aura": "",
+  "dispel": null,
+  "icon": "inv_trilobitemount_yellow"
+ },
+ "1293133": {
+  "name": "萦绕风暴",
+  "desc": "每1.5秒造成96982点自然伤害。",
+  "aura": "每1.5秒造成96982点自然伤害。",
+  "dispel": null,
+  "icon": "spell_nature_stormreach"
+ },
+ "146956": {
+  "name": "圣光决断",
+  "desc": "天赋 圣盾术每移除一个有害效果，就会为你恢复10%的生命值。该治疗的治疗量不会超过你最大生命值的30%。\n处于自律效果时仍可施放圣盾术。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_holy_divineshield"
+ },
+ "469321": {
+  "name": "正义保护",
+  "desc": "天赋 牺牲祝福现在会移除并防止所有中毒和疾病效果。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_holy_blessingofprotection"
+ },
+ "384820": {
+  "name": "正义牺牲",
+  "desc": "天赋 牺牲祝福的冷却时间缩短60秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_holy_sealofsacrifice"
+ },
+ "384909": {
+  "name": "强化保护祝福",
+  "desc": "天赋 防护\n保护祝福和破咒祝福的冷却时间缩短60秒。\n神圣, 惩戒\n保护祝福的冷却时间缩短60秒。",
+  "aura": "",
+  "dispel": null,
+  "icon": "spell_holy_sealofprotection"
+ }
+}

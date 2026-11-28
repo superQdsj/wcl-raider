@@ -1,0 +1,1601 @@
+{
+  "spec": "ret",
+  "name": "惩戒骑",
+  "color": "#f48cba",
+  "icon": "spell_holy_auraoflight",
+  "kit": [
+    {
+      "icon": 403876,
+      "name": "圣佑术",
+      "text": "约 1 分钟一次，主力减伤"
+    },
+    {
+      "icon": 642,
+      "name": "圣盾术",
+      "text": "3.5 分钟"
+    },
+    {
+      "icon": 6940,
+      "name": "牺牲祝福",
+      "text": "1 分钟，给队友"
+    },
+    {
+      "icon": 633,
+      "name": "圣疗术",
+      "text": "救命，老四用来奶化身"
+    },
+    {
+      "icon": 1022,
+      "name": "保护祝福",
+      "text": "只挡物理，四个首领全是法术伤害",
+      "warn": true
+    }
+  ],
+  "kit_src": [
+    "ret-guide:L11",
+    "ret-guide:L14",
+    "ret-guide:L28",
+    "ret-guide:L42",
+    "ret-guide:L57",
+    "diag-b3"
+  ],
+  "bosses": {
+    "b1": {
+      "plan": [
+        {
+          "use": [
+            403876
+          ],
+          "on": {
+            "spell": 1288087
+          },
+          "name": "圣佑术",
+          "text": "分摊时挂着阵风，或血不到 80%",
+          "src": [
+            "ret-guide:L12"
+          ]
+        },
+        {
+          "use": [
+            642
+          ],
+          "on": {
+            "spell": 1288087
+          },
+          "name": "圣盾术",
+          "text": "第一段落地前 0.5–1 秒开，一次免掉三样",
+          "src": [
+            "ret-guide:L13"
+          ]
+        },
+        {
+          "use": [
+            1022
+          ],
+          "on": {
+            "spell": 265966
+          },
+          "name": "保护祝福",
+          "text": "只给合波小怪的物理技能",
+          "src": [
+            "ret-guide:L14"
+          ]
+        }
+      ],
+      "do": {
+        "1288087": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "身上挂着阵风、血不到 80%，或者分摊的人少，进分摊前开。",
+            "src": [
+              "ret-guide:L12"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血、身上没有阵风，单吃第一段。",
+            "src": [
+              "ret-guide:L11"
+            ]
+          }
+        ],
+        "1288457": [
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "单吃阵风，圣佑留给分摊。",
+            "src": [
+              "ret-guide:L11"
+            ]
+          }
+        ],
+        "1311808": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "身上挂着阵风又要吃暴风。",
+            "src": [
+              "ret-guide:L12"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血单吃。",
+            "src": [
+              "ret-guide:L11"
+            ]
+          }
+        ],
+        "1310712": [
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "单吃狂风之力。",
+            "src": [
+              "ret-guide:L11"
+            ]
+          }
+        ]
+      },
+      "trick": {
+        "title": "绝活：一个圣盾免掉三样",
+        "sub": "清阵风、免分摊、站着吃惊雷，都在这 8 秒里。",
+        "steps": [
+          {
+            "icon": 642,
+            "text": "阿德里斯冲刺，第一段落地前 0.5–1 秒开圣盾术。身上的阵风同时被清掉。"
+          },
+          {
+            "text": "第一段分摊你吃 0 伤害。"
+          },
+          {
+            "text": "约 5 秒后第二段惊雷，你还在无敌里，原地继续打，不用跑出 20 码。"
+          }
+        ],
+        "chart": {
+          "scale": 8,
+          "rows": [
+            {
+              "label": "圣盾术",
+              "segs": [
+                {
+                  "from": 0,
+                  "to": 8,
+                  "tone": "bubble",
+                  "text": "8 秒无敌"
+                }
+              ]
+            },
+            {
+              "label": "电闪雷鸣",
+              "marks": [
+                {
+                  "at": 0.75,
+                  "text": "第一段"
+                },
+                {
+                  "at": 5.75,
+                  "text": "惊雷"
+                }
+              ]
+            }
+          ],
+          "ticks": [
+            [
+              0,
+              "开圣盾"
+            ],
+            [
+              8,
+              "8 秒"
+            ]
+          ],
+          "caption": "别等第一段落地再开，那时分摊已经打在你身上了。"
+        },
+        "src": [
+          "ret-guide:L13",
+          "ret-guide:L17"
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            1022
+          ],
+          "cross": true,
+          "title": "别在首领战给自己交保护祝福",
+          "text": "首领全是自然伤害，保护挡不住，还会让你 30 秒内用不了圣疗术。",
+          "src": [
+            "ret-guide:L14",
+            "ret-guide:L17"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "分摊时挂着阵风，唯一一次死亡",
+          "label": "r06 1:00.0",
+          "url": "https://www.warcraftlogs.com/reports/PqkhAdRaTgcZjMr6#fight=38&view=events&start=17628382&end=17634382"
+        },
+        {
+          "text": "阵风叠暴风，剩 1% 血",
+          "label": "r14 0:38.5",
+          "url": "https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=15573364&end=15579364"
+        },
+        {
+          "text": "圣盾里原地吃第二段惊雷，0 伤害",
+          "label": "r02 1:51.0",
+          "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6134464&end=6140464"
+        },
+        {
+          "text": "开圣盾的同时清掉阵风",
+          "label": "r04 2:38.3",
+          "url": "https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=235344&end=241344"
+        },
+        {
+          "text": "保护祝福挡不住首领的自然伤害",
+          "label": "r05 1:00.0",
+          "url": "https://www.warcraftlogs.com/reports/PFnYKkZxRgDVhqW1#fight=14&view=events&start=10973459&end=10979459"
+        }
+      ]
+    },
+    "b2": {
+      "plan": [
+        {
+          "use": [
+            403876
+          ],
+          "on": {
+            "spell": 1289109
+          },
+          "name": "圣佑术",
+          "text": "被点雷霆喷吐就开；没被点，留给毒蛇风暴",
+          "src": [
+            "ret-guide:L26"
+          ]
+        },
+        {
+          "use": [
+            633
+          ],
+          "on": {
+            "spell": 1289109
+          },
+          "name": "圣疗术",
+          "text": "雷霆喷吐没奶、血掉到一半以下时救自己",
+          "src": [
+            "ret-guide:L26"
+          ]
+        },
+        {
+          "use": [
+            96231,
+            853
+          ],
+          "on": {
+            "spell": 267027
+          },
+          "name": "责难 + 制裁之锤",
+          "text": "打断和控制都留给毒素喷吐",
+          "src": [
+            "ret-guide:L27"
+          ]
+        }
+      ],
+      "do": {
+        "263958": [
+          {
+            "icon": 115750,
+            "kind": "do",
+            "label": "盲目之光",
+            "text": "一次能放出两个被缠住的队友。",
+            "src": [
+              "ret-guide:L27",
+              "ret-guide:L31"
+            ]
+          }
+        ],
+        "1289109": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "被点名就开。",
+            "src": [
+              "ret-guide:L26"
+            ]
+          },
+          {
+            "icon": 633,
+            "kind": "do",
+            "label": "备好圣疗术",
+            "text": "前两三跳没奶、血掉到一半以下。",
+            "src": [
+              "ret-guide:L26"
+            ]
+          }
+        ],
+        "1293048": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "这一轮没被点雷霆喷吐，圣佑就交在这里。",
+            "src": [
+              "ret-guide:L26"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "可以硬吃",
+            "text": "圣佑在冷却、满血又有治疗。",
+            "src": [
+              "ret-guide:L25"
+            ]
+          },
+          {
+            "icon": 213644,
+            "kind": "skip",
+            "label": "别用清毒术",
+            "text": "驱不掉。",
+            "src": [
+              "ret-guide:L28"
+            ]
+          }
+        ],
+        "1300227": [
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "有治疗就不用交减伤。",
+            "src": [
+              "ret-guide:L25"
+            ]
+          }
+        ],
+        "267027": [
+          {
+            "icon": 96231,
+            "kind": "do",
+            "label": "责难",
+            "text": "盯着断。",
+            "src": [
+              "ret-guide:L27"
+            ]
+          },
+          {
+            "icon": 853,
+            "kind": "do",
+            "label": "制裁之锤",
+            "text": "责难没好就用它，盲目之光也行。",
+            "src": [
+              "ret-guide:L27"
+            ]
+          }
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            1022
+          ],
+          "cross": true,
+          "title": "别给自己交保护祝福",
+          "text": "首领的技能全是自然伤害，保护挡不住，还会让你 30 秒内用不了圣疗术。",
+          "src": [
+            "ret-guide:L28"
+          ]
+        },
+        {
+          "icons": [
+            1289205
+          ],
+          "cross": true,
+          "title": "小蛇孵出来时别抢在坦克前面打",
+          "text": "剧毒蝰蛇会转过来砍你。",
+          "src": [
+            "ret-guide:L28"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "雷霆喷吐没开减伤，剩 2% 血",
+          "label": "r02 4:01.5",
+          "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6876702&end=6882702"
+        },
+        {
+          "text": "开了圣佑但没奶，剩 7% 血，靠圣疗活下来",
+          "label": "r02 0:32.5",
+          "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6667729&end=6673729"
+        },
+        {
+          "text": "钻地之震叠电池，剩 10% 血",
+          "label": "r14 3:19.7",
+          "url": "https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=16338238&end=16344238"
+        },
+        {
+          "text": "盲目之光一次放出两个被缠的队友",
+          "label": "r14 1:57.0",
+          "url": "https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=16255483&end=16261483"
+        },
+        {
+          "text": "责难打断毒素喷吐",
+          "label": "r01 1:03.3",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9710085&end=9716085"
+        }
+      ]
+    },
+    "b3": {
+      "plan": [
+        {
+          "use": [
+            403876
+          ],
+          "on": {
+            "spell": 266923
+          },
+          "name": "圣佑术",
+          "text": "一个人挡满整根镀流",
+          "src": [
+            "ret-guide:L40"
+          ]
+        },
+        {
+          "use": [
+            642,
+            6940
+          ],
+          "on": {
+            "spell": 266923
+          },
+          "name": "圣盾术 + 牺牲祝福",
+          "text": "挡线时一起开，两条线都 0 伤",
+          "src": [
+            "ret-guide:L41"
+          ]
+        },
+        {
+          "use": [
+            633
+          ],
+          "name": "圣疗术",
+          "text": "挡线的人残血时救命",
+          "src": [
+            "ret-guide:L40",
+            "ret-guide:L45"
+          ]
+        }
+      ],
+      "do": {
+        "266923": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "轮到你一个人挡满一整根。8 秒减伤刚好盖住整根线。",
+            "src": [
+              "ret-guide:L40"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "只是换手时碰一下，2 秒以内。",
+            "src": [
+              "ret-guide:L39"
+            ]
+          },
+          {
+            "icon": 633,
+            "kind": "plain",
+            "text": "圣佑没转好又必须你挡：跟队友换着挡，或留圣疗术兜底。",
+            "src": [
+              "ret-guide:L40"
+            ]
+          }
+        ],
+        "1290531": [
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "满血不用开",
+            "text": "圣佑留给下一根线。吃完一般剩 30% 左右，治疗来得及。",
+            "src": [
+              "ret-guide:L39",
+              "diag-b3"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "读条快结束时你还不到 90% 血。",
+            "src": [
+              "ret-guide:L39"
+            ]
+          }
+        ]
+      },
+      "trick": {
+        "title": "绝活：圣盾挡线，顺手保住另一条线",
+        "sub": "圣盾术期间照样能挡线，而且一点伤害都不吃。",
+        "steps": [
+          {
+            "icon": 6940,
+            "text": "先给挡另一条线的队友挂牺牲祝福。"
+          },
+          {
+            "icon": 642,
+            "text": "紧接着开圣盾术进线。8 秒内你挡的线、牺牲转给你的伤害，全是 0。"
+          },
+          {
+            "text": "圣盾结束后牺牲还剩 4 秒。这 4 秒别撞上诱导，诱导前把血补满。"
+          }
+        ],
+        "chart": {
+          "scale": 12,
+          "rows": [
+            {
+              "label": "牺牲祝福",
+              "segs": [
+                {
+                  "from": 0,
+                  "to": 12,
+                  "tone": "spec",
+                  "text": "12 秒"
+                }
+              ]
+            },
+            {
+              "label": "圣盾术",
+              "segs": [
+                {
+                  "from": 0,
+                  "to": 8,
+                  "tone": "bubble",
+                  "text": "8 秒，全部免疫"
+                },
+                {
+                  "from": 8,
+                  "to": 12,
+                  "tone": "risk",
+                  "text": "没有无敌了"
+                }
+              ]
+            }
+          ],
+          "ticks": [
+            [
+              0,
+              "0"
+            ],
+            [
+              8,
+              "8 秒"
+            ],
+            [
+              12,
+              "12 秒"
+            ]
+          ],
+          "caption": "牺牲比圣盾晚挂多少，斜线这段就长多少。实战里只慢了 0.8 秒，尾巴撞上诱导吃了 20 万。"
+        },
+        "src": [
+          "ret-guide:L41",
+          "ret-guide:L45"
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            1022
+          ],
+          "cross": true,
+          "title": "别给自己交保护祝福",
+          "text": "这场全是自然伤害，保护挡不住，还会让你 30 秒内用不了圣疗术。",
+          "src": [
+            "ret-guide:L42"
+          ]
+        },
+        {
+          "icons": [
+            633,
+            642
+          ],
+          "seq": true,
+          "title": "两个救命技能都要用，先圣疗再圣盾",
+          "text": "先开圣盾的话，圣疗术会被锁住。",
+          "src": [
+            "ret-guide:L42",
+            "ret-guide:L45"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "一个人挡满整根线、没开减伤，剩 10% 血",
+          "label": "r15 1:45.9",
+          "url": "https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=2378712&end=2384712"
+        },
+        {
+          "text": "诱导后在电水里多站一秒，唯一一次死亡",
+          "label": "r15 3:29.7",
+          "url": "https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=2482568&end=2488568"
+        },
+        {
+          "text": "满血吃诱导，最低剩 15%",
+          "label": "r02 2:42.4",
+          "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=7262251&end=7268251"
+        },
+        {
+          "text": "圣盾挡线加牺牲，两条线全程 0 伤害",
+          "label": "r02 0:32.3",
+          "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=7132093&end=7138093"
+        },
+        {
+          "text": "牺牲晚挂，尾巴撞上诱导吃了 20 万",
+          "label": "r11 3:05.0",
+          "url": "https://www.warcraftlogs.com/reports/ZVGCPLvwyBj7XdJW#fight=16&view=events&start=6748526&end=6754526"
+        }
+      ]
+    },
+    "b4": {
+      "plan": [
+        {
+          "use": [
+            403876,
+            642
+          ],
+          "on": {
+            "spell": 1300877
+          },
+          "name": "圣佑术 或 圣盾术",
+          "text": "每次领腐化都开一个",
+          "src": [
+            "ret-guide:L54"
+          ]
+        },
+        {
+          "use": [
+            633
+          ],
+          "on": {
+            "npc": 83203
+          },
+          "name": "圣疗术",
+          "text": "开场 15 秒内奶化身一口，转好再奶一口",
+          "src": [
+            "ret-guide:L56"
+          ]
+        },
+        {
+          "use": [
+            96231,
+            853
+          ],
+          "name": "责难 + 制裁之锤",
+          "text": "责难断烈焰震击，制裁之锤控无信折磨者",
+          "src": [
+            "ret-guide:L56"
+          ]
+        }
+      ],
+      "do": {
+        "1300877": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "领腐化就开，圣佑没好就开圣盾。",
+            "src": [
+              "ret-guide:L54"
+            ]
+          },
+          {
+            "kind": "plain",
+            "text": "减伤只有 8 秒，腐化有 15 秒。后 7 秒要自己补血，或者接队友的团队减伤。",
+            "src": [
+              "ret-guide:L54"
+            ]
+          }
+        ],
+        "1302618": [
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "尽量不开",
+            "text": "冲锋后 10 到 40 秒往往就轮到腐化，圣佑要留给它。",
+            "src": [
+              "ret-guide:L53"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "下一轮腐化不归你领，或者血掉到 40% 以下又没奶。",
+            "src": [
+              "ret-guide:L53"
+            ]
+          }
+        ],
+        "1301199": [
+          {
+            "icon": 633,
+            "kind": "do",
+            "label": "圣疗术",
+            "text": "开场约 15 秒污染之秽落地，在这之前先给化身一口。",
+            "src": [
+              "ret-guide:L56"
+            ]
+          }
+        ],
+        "1302158": [
+          {
+            "icon": 96231,
+            "kind": "do",
+            "label": "责难",
+            "text": "全留给它。",
+            "src": [
+              "ret-guide:L56"
+            ]
+          }
+        ],
+        "1300704": [
+          {
+            "icon": 853,
+            "kind": "do",
+            "label": "制裁之锤",
+            "text": "控住无信折磨者。",
+            "src": [
+              "ret-guide:L56"
+            ]
+          },
+          {
+            "icon": 1022,
+            "kind": "do",
+            "label": "保护祝福",
+            "text": "治疗被一群折磨者围住时，给治疗套上。",
+            "src": [
+              "ret-guide:L57"
+            ]
+          }
+        ]
+      },
+      "trick": {
+        "title": "绝活：圣盾领腐化，顺手帮另一个人扛",
+        "sub": "圣盾里腐化 0 伤害，牺牲转过来的伤害也是 0。",
+        "steps": [
+          {
+            "icon": 642,
+            "text": "领腐化时开圣盾术，前 8 秒不掉血。"
+          },
+          {
+            "icon": 6940,
+            "text": "开完马上给另一个领腐化的队友挂牺牲祝福。"
+          },
+          {
+            "text": "圣盾不会清掉腐化。8 秒后剩下的 7 秒照常掉血，提前补血。"
+          }
+        ],
+        "chart": {
+          "scale": 15,
+          "rows": [
+            {
+              "label": "腐化",
+              "segs": [
+                {
+                  "from": 0,
+                  "to": 15,
+                  "tone": "mech",
+                  "text": "15 秒"
+                }
+              ]
+            },
+            {
+              "label": "圣盾术",
+              "segs": [
+                {
+                  "from": 0,
+                  "to": 8,
+                  "tone": "bubble",
+                  "text": "8 秒，0 伤害"
+                },
+                {
+                  "from": 8,
+                  "to": 15,
+                  "tone": "risk",
+                  "text": "腐化还在掉血"
+                }
+              ]
+            },
+            {
+              "label": "牺牲祝福",
+              "segs": [
+                {
+                  "from": 0,
+                  "to": 12,
+                  "tone": "spec",
+                  "text": "12 秒"
+                }
+              ]
+            }
+          ],
+          "ticks": [
+            [
+              0,
+              "0"
+            ],
+            [
+              8,
+              "8 秒"
+            ],
+            [
+              12,
+              "12 秒"
+            ],
+            [
+              15,
+              "15 秒"
+            ]
+          ],
+          "caption": "没开圣盾、自己又背着腐化时，别给人挂牺牲。转过来的伤害会把你打到 20% 以下。"
+        },
+        "src": [
+          "ret-guide:L55",
+          "ret-guide:L60"
+        ]
+      },
+      "donts": [
+        {
+          "icons": [
+            1022
+          ],
+          "cross": true,
+          "title": "别给自己交保护祝福",
+          "text": "腐化、邪恶冲锋、不稳定腐化都是暗影伤害，保护挡不住，还会让你 30 秒内用不了圣疗术。",
+          "src": [
+            "ret-guide:L57",
+            "ret-guide:L60"
+          ]
+        },
+        {
+          "icons": [
+            1300877
+          ],
+          "cross": true,
+          "title": "别多领腐化",
+          "text": "15 场里惩戒骑仅有的两次死亡，都是叠了 2–3 层腐化。",
+          "src": [
+            "ret-guide:L59"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "text": "3 层腐化，2 秒内倒地",
+          "label": "r01 2:43.3",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=10719646&end=10725646"
+        },
+        {
+          "text": "2 层腐化，3 秒内倒地",
+          "label": "r12 2:35.8",
+          "url": "https://www.warcraftlogs.com/reports/Qav83tRg1ZpD4hNn#fight=2&view=events&start=2183102&end=2189102"
+        },
+        {
+          "text": "冲锋提前交了圣佑，领腐化时没东西开，剩 5% 血",
+          "label": "r14 0:53.6",
+          "url": "https://www.warcraftlogs.com/reports/9kJ4vp1PMxdKzaLm#fight=24&view=events&start=17101216&end=17107216"
+        },
+        {
+          "text": "圣盾里腐化全部 0 伤害，但没被清掉",
+          "label": "r02 0:40.6",
+          "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=7604528&end=7610528"
+        },
+        {
+          "text": "圣盾里给队友挂牺牲，0 伤害",
+          "label": "r03 2:55.3",
+          "url": "https://www.warcraftlogs.com/reports/14mrYRDaCVQ378Pj#fight=12&view=events&start=9280682&end=9286682"
+        },
+        {
+          "text": "圣疗术开场和末期各奶化身一口",
+          "label": "r02 0:00.5",
+          "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=7564404&end=7570404"
+        }
+      ]
+    }
+  },
+  "trash": {
+    "t0": {
+      "plan": [
+        {
+          "use": [
+            403876
+          ],
+          "on": {
+            "spell": 265966
+          },
+          "name": "圣佑术",
+          "text": "每次震地都开",
+          "src": [
+            "ret-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            1022
+          ],
+          "on": {
+            "spell": 1291399
+          },
+          "name": "保护祝福",
+          "text": "免疫震地，或清掉锯齿流血",
+          "src": [
+            "ret-guide:L70"
+          ]
+        },
+        {
+          "use": [
+            853
+          ],
+          "on": {
+            "spell": 1308113
+          },
+          "name": "制裁之锤",
+          "text": "晕住流沙猎手，停下箭雨",
+          "src": [
+            "ret-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "265966": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "每次都开，裸吃约 91 万。",
+            "src": [
+              "ret-guide:L69"
+            ]
+          },
+          {
+            "icon": 1022,
+            "kind": "do",
+            "label": "保护祝福",
+            "text": "圣佑没好，给自己交保护，震地 0 伤害。",
+            "src": [
+              "ret-guide:L70"
+            ]
+          }
+        ],
+        "1291399": [
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血、身上没有别的伤害，单吃。",
+            "src": [
+              "ret-guide:L68"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "流血还没走完，又要吃震地或闪电箭。",
+            "src": [
+              "ret-guide:L69"
+            ]
+          },
+          {
+            "icon": 1022,
+            "kind": "do",
+            "label": "保护祝福",
+            "text": "流血已经挂上，交保护直接清掉。",
+            "src": [
+              "ret-guide:L70"
+            ]
+          }
+        ],
+        "1308113": [
+          {
+            "icon": 853,
+            "kind": "do",
+            "label": "制裁之锤",
+            "text": "晕住流沙猎手。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          },
+          {
+            "icon": 115750,
+            "kind": "do",
+            "label": "盲目之光",
+            "text": "几只一起读的时候用。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血被点名，单吃。",
+            "src": [
+              "ret-guide:L68"
+            ]
+          }
+        ],
+        "1291262": [
+          {
+            "icon": 96231,
+            "kind": "do",
+            "label": "责难",
+            "text": "必断。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          }
+        ],
+        "1295635": [
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血单吃。",
+            "src": [
+              "ret-guide:L68"
+            ]
+          },
+          {
+            "icon": 1022,
+            "kind": "skip",
+            "label": "别交保护",
+            "text": "自然伤害，挡不住。",
+            "src": [
+              "ret-guide:L73"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "裸吃震地剩 10% 血，身上还带着自律",
+          "label": "r01 0:45.5",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8980603&end=8986603"
+        },
+        {
+          "text": "保护祝福免疫震地",
+          "label": "r01 0:37.0",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8972102&end=8978102"
+        },
+        {
+          "text": "保护祝福免疫锯齿冲锋",
+          "label": "r01 0:40.3",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8975383&end=8981383"
+        },
+        {
+          "text": "保护祝福挡不住蜿蜒打击",
+          "label": "r01 0:44.2",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=8979282&end=8985282"
+        }
+      ]
+    },
+    "t1": {
+      "plan": [
+        {
+          "use": [
+            213644
+          ],
+          "on": {
+            "spell": 1308148
+          },
+          "name": "清毒术",
+          "text": "自己和队友中毒，马上驱",
+          "src": [
+            "ret-guide:L71"
+          ]
+        },
+        {
+          "use": [
+            403876
+          ],
+          "on": {
+            "spell": 1291399
+          },
+          "name": "圣佑术",
+          "text": "冲锋流血没走完又中细胞毒素时开",
+          "src": [
+            "ret-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            96231
+          ],
+          "on": {
+            "spell": 1310683
+          },
+          "name": "责难",
+          "text": "毒箭、扰乱心智、闪电箭必断",
+          "src": [
+            "ret-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "1308148": [
+          {
+            "icon": 213644,
+            "kind": "do",
+            "label": "清毒术",
+            "text": "中了就驱，自己和队友都驱。",
+            "src": [
+              "ret-guide:L71"
+            ]
+          },
+          {
+            "icon": 6940,
+            "kind": "do",
+            "label": "牺牲祝福",
+            "text": "清毒术在冷却，给中毒的队友挂牺牲也能驱掉（要点正义保护）。",
+            "src": [
+              "ret-guide:L71"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "血不到 55% 又被点，别只靠驱散硬扛。",
+            "src": [
+              "ret-guide:L73"
+            ]
+          },
+          {
+            "icon": 1022,
+            "kind": "skip",
+            "label": "别交保护",
+            "text": "自然伤害，挡不住。",
+            "src": [
+              "ret-guide:L73"
+            ]
+          }
+        ],
+        "1291399": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "流血还没走完，又中了细胞毒素。",
+            "src": [
+              "ret-guide:L69"
+            ]
+          },
+          {
+            "icon": 1022,
+            "kind": "do",
+            "label": "保护祝福",
+            "text": "流血已经挂上，交保护直接清掉。",
+            "src": [
+              "ret-guide:L70"
+            ]
+          },
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血、身上没有别的伤害，单吃。",
+            "src": [
+              "ret-guide:L68"
+            ]
+          }
+        ],
+        "1310683": [
+          {
+            "icon": 96231,
+            "kind": "do",
+            "label": "责难",
+            "text": "必断。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          },
+          {
+            "icon": 1022,
+            "kind": "skip",
+            "label": "别交保护",
+            "text": "挡不住。",
+            "src": [
+              "ret-guide:L73"
+            ]
+          }
+        ],
+        "1293307": [
+          {
+            "icon": 96231,
+            "kind": "do",
+            "label": "责难",
+            "text": "必断。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          }
+        ],
+        "1293133": [
+          {
+            "icon": 403876,
+            "kind": "skip",
+            "label": "不用开",
+            "text": "满血单吃。",
+            "src": [
+              "ret-guide:L68"
+            ]
+          },
+          {
+            "icon": 642,
+            "kind": "do",
+            "label": "圣盾术",
+            "text": "圣盾里完全不吃。",
+            "src": [
+              "ret-guide:L70",
+              "diag-trash"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "41% 血驱完毒，又被点一发细胞毒素，死亡",
+          "label": "r02 11:17.3",
+          "url": "https://www.warcraftlogs.com/reports/q6mAK3DwvBV2FtGT#fight=22&view=events&start=6594708&end=6600708"
+        },
+        {
+          "text": "锯齿冲锋的流血还在，又中细胞毒素，剩 2% 血",
+          "label": "r13 9:26.7",
+          "url": "https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1&view=events&start=632717&end=638717"
+        },
+        {
+          "text": "被三叶虫主母一下普攻打死",
+          "label": "r15 6:23.3",
+          "url": "https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=1517877&end=1523877"
+        },
+        {
+          "text": "清毒术驱掉细胞毒素",
+          "label": "r01 8:46.7",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9461810&end=9467810"
+        },
+        {
+          "text": "牺牲祝福同时驱掉队友的细胞毒素",
+          "label": "r01 8:07.6",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9422692&end=9428692"
+        },
+        {
+          "text": "保护祝福挡不住毒箭",
+          "label": "r04 10:00.5",
+          "url": "https://www.warcraftlogs.com/reports/JM6KG3CWqjBZHAyw#fight=1&view=events&start=595508&end=601508"
+        }
+      ]
+    },
+    "t2": {
+      "plan": [
+        {
+          "use": [
+            403876
+          ],
+          "on": {
+            "spell": 1293475
+          },
+          "name": "圣佑术",
+          "text": "每次释放电荷都开",
+          "src": [
+            "ret-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            642
+          ],
+          "on": {
+            "spell": 1293475
+          },
+          "name": "圣盾术",
+          "text": "圣佑没好就开，完全免疫",
+          "src": [
+            "ret-guide:L70"
+          ]
+        },
+        {
+          "use": [
+            96231,
+            853
+          ],
+          "on": {
+            "spell": 1291262
+          },
+          "name": "责难 + 制裁之锤",
+          "text": "唤雷者的闪电箭必须停下",
+          "src": [
+            "ret-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "1293475": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "每次都开，裸吃约 82 万。",
+            "src": [
+              "ret-guide:L69"
+            ]
+          },
+          {
+            "icon": 642,
+            "kind": "do",
+            "label": "圣盾术",
+            "text": "圣佑没好就开，完全免疫。",
+            "src": [
+              "ret-guide:L70"
+            ]
+          },
+          {
+            "kind": "plain",
+            "text": "血精灵可以用奥术洪流驱掉云气的积攒电荷。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          }
+        ],
+        "1291262": [
+          {
+            "icon": 96231,
+            "kind": "do",
+            "label": "责难",
+            "text": "必断。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          },
+          {
+            "icon": 853,
+            "kind": "do",
+            "label": "制裁之锤",
+            "text": "责难没好就晕住唤雷者。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          }
+        ],
+        "264763": [
+          {
+            "icon": 642,
+            "kind": "do",
+            "label": "圣盾术",
+            "text": "圣盾里完全不吃。",
+            "src": [
+              "ret-guide:L70"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "裸吃释放电荷，剩 3% 血",
+          "label": "r13 16:40.7",
+          "url": "https://www.warcraftlogs.com/reports/vwJc2Hd6jQChxp71#fight=1&view=events&start=1066736&end=1072736"
+        },
+        {
+          "text": "裸吃释放电荷，剩 10% 血",
+          "label": "r10 16:33.4",
+          "url": "https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=26182130&end=26188130"
+        },
+        {
+          "text": "圣盾术免疫释放电荷",
+          "label": "r01 17:02.4",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=9957495&end=9963495"
+        },
+        {
+          "text": "奥术洪流驱掉积攒电荷",
+          "label": "r10 17:29.6",
+          "url": "https://www.warcraftlogs.com/reports/ByLmahjfWtKzQ8Np#fight=33&view=events&start=26238353&end=26244353"
+        }
+      ]
+    },
+    "t3": {
+      "plan": [
+        {
+          "use": [
+            403876
+          ],
+          "on": {
+            "spell": 1303486
+          },
+          "name": "圣佑术",
+          "text": "蚀骨践踏有圣佑就开",
+          "src": [
+            "ret-guide:L69"
+          ]
+        },
+        {
+          "use": [
+            1044
+          ],
+          "on": {
+            "spell": 273274
+          },
+          "name": "自由祝福",
+          "text": "给推进的坦克或自己，免疫减速",
+          "src": [
+            "ret-guide:L71"
+          ]
+        },
+        {
+          "use": [
+            853
+          ],
+          "on": {
+            "npc": 80961
+          },
+          "name": "制裁之锤",
+          "text": "控住神庙干扰者",
+          "src": [
+            "ret-guide:L72"
+          ]
+        }
+      ],
+      "do": {
+        "1303486": [
+          {
+            "icon": 403876,
+            "kind": "do",
+            "label": "开圣佑术",
+            "text": "有就开。血不到 70%、或者走廊推进时治疗断奶，必开。",
+            "src": [
+              "ret-guide:L69"
+            ]
+          },
+          {
+            "kind": "plain",
+            "text": "圣佑只盖住前 8 秒，最后两跳没奶时自己补血。",
+            "src": [
+              "ret-guide:L69"
+            ]
+          },
+          {
+            "icon": 642,
+            "kind": "do",
+            "label": "圣盾术",
+            "text": "能直接清掉它。",
+            "src": [
+              "ret-guide:L70",
+              "diag-trash"
+            ]
+          },
+          {
+            "icon": 213644,
+            "kind": "skip",
+            "label": "别用清毒术",
+            "text": "驱不掉。",
+            "src": [
+              "ret-guide:L73"
+            ]
+          }
+        ],
+        "268013": [
+          {
+            "icon": 96231,
+            "kind": "do",
+            "label": "责难",
+            "text": "必断。",
+            "src": [
+              "ret-guide:L72"
+            ]
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "text": "低血吃蚀骨践踏，61% 掉到 8%",
+          "label": "r15 23:36.6",
+          "url": "https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=2551200&end=2557200"
+        },
+        {
+          "text": "开了圣佑，最后两跳没奶，掉到 3%",
+          "label": "r07 23:53.1",
+          "url": "https://www.warcraftlogs.com/reports/KP7k1TCHX6WcaZMv#fight=12&view=events&start=9485756&end=9491756"
+        },
+        {
+          "text": "圣盾术清掉蚀骨践踏",
+          "label": "r01 24:38.8",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=10413877&end=10419877"
+        },
+        {
+          "text": "走廊被不羁的火花一下打死",
+          "label": "r15 23:26.5",
+          "url": "https://www.warcraftlogs.com/reports/GmjDn46rYhbKHzfw#fight=5&view=events&start=2541144&end=2547144"
+        },
+        {
+          "text": "自由祝福免疫极化力场",
+          "label": "r01 23:18.7",
+          "url": "https://www.warcraftlogs.com/reports/BLmWKxty6VMNvhR4#fight=1&view=events&start=10333782&end=10339782"
+        }
+      ]
+    }
+  },
+  "talents": {
+    "hero": "烈日先驱",
+    "string_from": "evidence/tstring-ret.json",
+    "sub": "高分记录里最常见的一套，导入就能用。下面几个天赋这本用得上，别换掉。",
+    "src": [
+      "talents-ret"
+    ],
+    "keys": [
+      {
+        "id": 469321,
+        "name": "正义保护",
+        "text": "牺牲祝福顺手驱掉队友身上的中毒。细胞毒素那段，清毒术在冷却时全靠它。",
+        "where": [
+          "t1"
+        ],
+        "src": [
+          "wowhead:469321",
+          "ret-guide:L71"
+        ]
+      },
+      {
+        "id": 384820,
+        "name": "正义牺牲",
+        "text": "牺牲祝福变成 1 分钟一次，加瓦兹特挡线、化身领腐化都能多给几次。",
+        "where": [
+          "b3",
+          "b4"
+        ],
+        "src": [
+          "wowhead:384820",
+          "ret-guide:L41",
+          "ret-guide:L55"
+        ]
+      },
+      {
+        "id": 146956,
+        "name": "圣光决断",
+        "text": "有自律时也能开圣盾。所以救命时先圣疗、再圣盾，两个都能用上。",
+        "where": [
+          "b3"
+        ],
+        "src": [
+          "wowhead:146956",
+          "ret-guide:L42"
+        ]
+      },
+      {
+        "id": 213644,
+        "name": "清毒术",
+        "text": "驱中毒。老 1 到老 2 的细胞毒素要靠它。",
+        "where": [
+          "t1"
+        ],
+        "src": [
+          "wowhead:213644",
+          "ret-guide:L71"
+        ]
+      }
+    ]
+  }
+}
