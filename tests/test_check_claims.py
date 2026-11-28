@@ -186,3 +186,55 @@ class MechanicsDraftTests(unittest.TestCase):
             with contextlib.redirect_stderr(io.StringIO()):
                 self.assertEqual(cc.main(['mechanics', str(src), '--out', str(out)]), 1)
             self.assertEqual(out.read_text(encoding='utf-8'), 'keep')
+
+
+class MechanicsMdtTests(unittest.TestCase):
+    LUA = '''
+MDT.dungeonEnemies[dungeonIndex] = {
+  [1] = {
+    ["name"] = "Poisonous Viper";
+    ["id"] = 134389;
+    ["characteristics"] = {
+      ["Taunt"] = true;
+      ["Stun"] = true;
+    };
+    ["spells"] = {
+      [1308148] = {
+        ["interruptible"] = true;
+        ["poison"] = true;
+      };
+    };
+  };
+  [2] = {
+    ["name"] = "Agitated Nimbus";
+    ["id"] = 135000;
+    ["characteristics"] = {
+      ["Taunt"] = true;
+    };
+    ["spells"] = {
+      [1293475] = {
+      };
+    };
+  };
+};
+'''
+
+    def test_mdt_column(self):
+        trash = ("# x · 全本小怪\n## ① 速览\n"
+                 "- **剧毒蝰蛇 · 细胞毒素**（ID:1308148，DoT）：纯裸吃中位 607K (48%HP) | 中92 / 免疫0 / 未中262（覆盖15/15场）\n"
+                 "- **暴怒云气 · 释放电荷**（ID:1293475，直伤）：纯裸吃中位 822K (64%HP) | 中113 / 免疫4 / 未中0（覆盖15/15场）\n"
+                 "- **某怪 · 某技能**（ID:999999，直伤）：纯裸吃中位 1K (1%HP) | 中1 / 免疫0 / 未中0（覆盖1/15场）\n"
+                 "## ② x\n")
+        with tempfile.TemporaryDirectory() as d:
+            src = Path(d) / 'x-v3'
+            (src / 'diag').mkdir(parents=True)
+            (src / 'diag' / 'trash.txt').write_text(trash, encoding='utf-8')
+            lua = Path(d) / 'x.mdt.lua'
+            lua.write_text(self.LUA, encoding='utf-8')
+            out = Path(d) / 'draft.md'
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(cc.main(['mechanics', str(src), '--out', str(out), '--mdt', str(lua)]), 0)
+            text = out.read_text(encoding='utf-8')
+        self.assertIn('| 可打断；驱散：中毒；吃控：晕（MDT） |', text)
+        self.assertIn('| 不可打断；不吃硬控（MDT） |', text)
+        self.assertIn('| MDT 无此技能 |', text)

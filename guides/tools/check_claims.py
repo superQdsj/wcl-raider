@@ -495,6 +495,41 @@ def boss_title(text, fallback):
     return re.sub(r'（encounter \d+）', '', name).strip()
 
 
+def mdt_note(info):
+    """MDT 一个技能的打断 / 驱散 / 施法者吃控，写成一格。"""
+    import mdt  # noqa: E402（同目录）
+    if not info:
+        return 'MDT 无此技能'
+    parts = ['可打断' if info['interruptible'] else '不可打断']
+    if info['dispel']:
+        parts.append('驱散：' + '、'.join(sorted(info['dispel'])))
+    cc = info['cc']
+    if cc is None:
+        parts.append('吃控：MDT 无数据')
+    else:
+        hard = [c for c in cc if c in mdt.HARD_CC]
+        parts.append('吃控：' + mdt.cc_zh(set(hard)) if hard else '不吃硬控')
+    return '；'.join(parts)
+
+
+def load_mdt(path):
+    import mdt  # noqa: E402
+    return mdt.by_spell(mdt.parse(Path(path)))
+
+
+def mdt_cell(table, ids):
+    if table is None:
+        return '<待补>'
+    hits = [table[int(i)] for i in ids.split('/') if int(i) in table]
+    if not hits:
+        return 'MDT 无此技能'
+    merged = {'interruptible': any(h['interruptible'] for h in hits),
+              'dispel': set().union(*[h['dispel'] for h in hits]),
+              'cc': None if all(h['cc'] is None for h in hits)
+              else set().union(*[h['cc'] for h in hits if h['cc'] is not None])}
+    return mdt_note(merged) + '（MDT）'
+
+
 def cmd_mechanics(args):
     src = Path(args.src)
     files = load_diag(diag_dir(args))
@@ -503,6 +538,8 @@ def cmd_mechanics(args):
         return 1
     dungeon = re.sub(r'-v\d+$', '', src.name)
     out = Path(args.out) if args.out else TOOLS / 'mechanics' / f'{dungeon}.draft.md'
+    mdt_path = Path(args.mdt) if args.mdt else TOOLS / 'mechanics' / f'{dungeon}.mdt.lua'
+    mdt_table = load_mdt(mdt_path) if mdt_path.is_file() else None
     if out.exists() and not args.force:
         print(f'FAIL {rel(out)} 已存在，加 --force 覆盖', file=sys.stderr)
         return 1
@@ -515,7 +552,8 @@ def cmd_mechanics(args):
         f'> 由 `check_claims.py mechanics` 从 `{rel(src)}/diag/` 的「① 机制速览」自动抽取，样本 {n_runs} 场。',
         '> 只有日志能统计出来的部分：技能、ID、施放者、目标形态、周期、伤害绝对值、命中/躲避次数。',
         '> 伤害是样本专精承受的数值，换专精会有出入；已去掉占本专精血量的百分比。',
-        '> 「<待补>」处（流程、场地、开门条件、几波怪、走位、能否驱散/打断）日志看不出来，由用户或 MDT 补。',
+        '> 「打断 / 驱散 / 吃控」来自 MDT 快照 `<dungeon>.mdt.lua`：MDT 没数据 ≠ 免控；与日志冲突时以日志为准。',
+        '> 「<待补>」处（流程、场地、走位）日志看不出来，由用户补。',
         '> 用户确认后改名为 `<dungeon>.md`，删掉本段，并写变更记录。', '',
     ]
     unparsed = 0
@@ -527,7 +565,7 @@ def cmd_mechanics(args):
         body = section_one(text)
         if name == 'trash':
             lines += ['## 全本小怪', '', '- 流程 / 几波 / 走廊与开门条件：<待补>', '',
-                      '| 怪物 | 技能 | ID | 类型 | 伤害 | 中 / 免疫 / 未中 | 出现场次 | 驱散 / 打断 |',
+                      '| 怪物 | 技能 | ID | 类型 | 伤害 | 中 / 免疫 / 未中 | 出现场次 | 打断 / 驱散 / 吃控 |',
                       '|---|---|---|---|---|---|---|---|']
             for raw in body.splitlines():
                 m = TRASH_MECH.match(raw)
@@ -536,11 +574,11 @@ def cmd_mechanics(args):
                     continue
                 g = m.groupdict()
                 lines.append(f"| {g['mob']} | {g['skill']} | {g['ids']} | {g['kind']} | {neutral_damage(g['dmg'])} "
-                             f"| {g['hit']} / {g['imm']} / {g['miss']} | {g['cov']}/{g['n']} | <待补> |")
+                             f"| {g['hit']} / {g['imm']} / {g['miss']} | {g['cov']}/{g['n']} | {mdt_cell(mdt_table, g['ids'])} |")
         else:
             title = boss_title(text, name)
             lines += [f'## 老 {name[-1]}：{title}', '', '- 流程 / 阶段 / 场地 / 走位：<待补>', '',
-                      '| 技能 | 施放者 | ID | 目标形态 | 周期 | 伤害 | 共 / 中 / 免疫 / 躲避未中 | 驱散 / 打断 |',
+                      '| 技能 | 施放者 | ID | 目标形态 | 周期 | 伤害 | 共 / 中 / 免疫 / 躲避未中 | 打断 / 驱散 / 吃控 |',
                       '|---|---|---|---|---|---|---|---|']
             for raw in body.splitlines():
                 m = BOSS_MECH.match(raw)
@@ -550,7 +588,7 @@ def cmd_mechanics(args):
                 g = m.groupdict()
                 skill = re.sub(r'^\[小怪:[^\]]+\]\s*', '', g['name'])
                 lines.append(f"| {skill} | {g['caster']} | {g['ids']} | {g['shape'].strip()} | {g['period'].strip()} "
-                             f"| {neutral_damage(g['dmg'])} | {g['waves']} / {g['hit']} / {g['imm']} / {g['miss']} | <待补> |")
+                             f"| {neutral_damage(g['dmg'])} | {g['waves']} / {g['hit']} / {g['imm']} / {g['miss']} | {mdt_cell(mdt_table, g['ids'])} |")
         lines.append('')
     lines += ['## 变更记录', '', '- <日期> 由 check_claims.py mechanics 生成草稿。']
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -602,6 +640,7 @@ def main(argv=None):
     p = common(sub.add_parser('mechanics', help='从 diag ① 抽副本机制卡骨架'))
     p.add_argument('--out', help='输出路径，默认 guides/tools/mechanics/<dungeon>.draft.md')
     p.add_argument('--force', action='store_true', help='覆盖已存在的输出')
+    p.add_argument('--mdt', help='MDT 快照，默认 guides/tools/mechanics/<dungeon>.mdt.lua（不存在就留 <待补>）')
 
     args = ap.parse_args(argv)
     return {'dump': cmd_dump, 'inspect': cmd_inspect, 'check': cmd_check, 'merge': cmd_merge,
