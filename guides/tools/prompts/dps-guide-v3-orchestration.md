@@ -24,7 +24,8 @@
    - 疑点；
    - `$C` 是沿用的：只写和该专精上一个副本 `calibration.md` 的差异（新出现的施放、新的 0 施放、新需要驱散或免疫的 Debuff），没有差异就写"无"。
 5. 机制卡（**只在 `guides/tools/mechanics/<dungeon>.md` 不存在时做**，即这个副本的第一个专精）：
-   - `CK mechanics $S` → 生成 `guides/tools/mechanics/<dungeon>.draft.md`：从 diag「① 机制速览」抽出的技能、ID、施放者、目标形态、周期、伤害绝对值、命中/躲避次数。
+   - 先下载 MDT 快照：`python3 guides/tools/mdt.py --en "<副本英文名>" --out guides/tools/mechanics/<dungeon>.mdt.lua`（已存在就不要重新下载，它是固定版本）。
+   - `CK mechanics $S` → 生成 `guides/tools/mechanics/<dungeon>.draft.md`：从 diag「① 机制速览」抽出的技能、ID、施放者、目标形态、周期、伤害绝对值、命中/躲避次数。「打断 / 驱散 / 吃控」一栏自动取自 MDT；和日志冲突的（例如 MDT 标可打断、日志里是瞬发）在 calibration.md 的疑点里列出。
    - 协调者只能补 Wowhead 说明里写明的内容（伤害属性、可否驱散），并注明来源；流程、场地、开门条件、几波怪、走位留「<待补>」，**不猜**。
    - 同时写一份 `<dungeon>.banned.txt`（可以为空，只有注释行）。
 6. **⏸ 人工确认点**：把 calibration.md（以及第 5 步的机制卡草稿）发给用户，得到确认后才进入阶段 2。
