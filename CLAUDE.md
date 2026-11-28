@@ -14,3 +14,7 @@
 `build.py` 末尾会调用 `guides/tools/icons.py` 的 `externalize(out)`，自动把内嵌图标换成文件链接。
 手写或别处拼出来的页面，跑一次 `python3 guides/tools/icons.py <页面>` 即可。
 `scripts/build_site.py` 允许页面引用 `guides/icons/` 下的图片，并会一起发布。
+
+## 制作 v3 攻略
+
+起头和确认点见 `guides/tools/prompts/README.md`，完整流程见同目录的 `dps-guide-v3-orchestration.md`。WCL 有单 IP 频率限制：抓数（`check_claims.py dump`、`diag.py`）一次只跑一个专精，不要并发。

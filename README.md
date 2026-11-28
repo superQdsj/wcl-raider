@@ -41,6 +41,10 @@
 
 默认通过 `cn.warcraftlogs.com` 获取中文技能/怪物/副本名（可用 `--lang en` 或 `WCL_LANG=en` 切换英文）；API 响应会缓存在 `~/.cache/wcl-raider/`，重复查询不消耗限额/点数。
 
+## 制作 v3 攻略
+
+新专精或新副本的 v3 攻略怎么起头、要确认什么，见 [`guides/tools/prompts/README.md`](guides/tools/prompts/README.md)。WCL 抓数一次只跑一个专精。
+
 ## 构建与发布站点
 
 ```bash
