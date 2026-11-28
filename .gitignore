@@ -10,3 +10,5 @@ __pycache__/
 dist/
 .wrangler/
 guides/icons/.by-spell.lock
+# WCL 原始抓数（可重新抓取，结论已写进 evidence/*.md）
+**/evidence/raw/
