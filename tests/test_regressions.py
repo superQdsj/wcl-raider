@@ -150,7 +150,7 @@ class CacheTests(unittest.TestCase):
         self.assertEqual(client.gql.call_args.kwargs['ttl'], 300)
 
     def test_recent_and_old_report_ttls(self):
-        for end, expected in [(999000, 300), (0, api.DAY)]:
+        for end, expected in [(999000, 300), (0, 30 * api.DAY)]:
             client = Mock(last_age=1)
             client.gql.return_value = {'reportData': {'report': dict(endTime=end, fights=[])}}
             with patch('wclr.context.time.time', return_value=1000 if end else 20000):

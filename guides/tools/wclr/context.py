@@ -514,13 +514,18 @@ def _v1_pulls(raw_fight: Dict[str, Any]) -> List[Dict[str, Any]]:
     return pulls
 
 
+# 已结束超过 3 小时的报告内容不会再变，事件缓存保留 30 天（以前是 1 天，过期后写稿阶段的 inspect 会整本重抓）。
+# 仍在记录或刚结束的报告仍只缓存 5 分钟。
+FINISHED_TTL = 30 * DAY
+
+
 def load_meta(client: Client, code: str) -> Tuple[Dict[str, Any], float]:
     if getattr(client, "use_v1", False) is True:
-        raw = client.v1_get(f"report/fights/{code}", {"translate": "true"}, ttl=DAY)
+        raw = client.v1_get(f"report/fights/{code}", {"translate": "true"}, ttl=FINISHED_TTL)
         if not isinstance(raw, dict):
             raise WCLError(f"报告 {code} 不存在或无权访问。")
         report = _v1_to_meta(code, raw)
-        ttl = DAY
+        ttl = FINISHED_TTL
         end = report.get("endTime") or 0
         live = any(f.get("inProgress") for f in report.get("fights") or [])
         if live or (time.time() * 1000 - end) < 3 * HOUR * 1000:
@@ -529,11 +534,11 @@ def load_meta(client: Client, code: str) -> Tuple[Dict[str, Any], float]:
                 raw = client.v1_get(f"report/fights/{code}", {"translate": "true"}, ttl=ttl)
                 report = _v1_to_meta(code, raw)
         return report, ttl
-    data = client.gql(Q_META, {"code": code}, ttl=DAY)
+    data = client.gql(Q_META, {"code": code}, ttl=FINISHED_TTL)
     report = (data.get("reportData") or {}).get("report")
     if not report:
         raise WCLError(f"报告 {code} 不存在或无权访问。")
-    ttl = DAY
+    ttl = FINISHED_TTL
     end = report.get("endTime") or 0
     live = any(f.get("inProgress") for f in report.get("fights") or [])
     if live or (time.time() * 1000 - end) < 3 * HOUR * 1000:
